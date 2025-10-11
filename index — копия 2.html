@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>West East Real Estate — Phuket Marketplace</title>
+  <meta name="description" content="West East Real Estate — data-driven property marketplace for Phuket. GIDR-powered analysis, standardized property passports, and clean purchase funnel."/>
+  <link rel="icon" href="/images/favicon.png"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Passport micro-UI */
+    .pp-tabs button{padding:.6rem 1rem;border-bottom:2px solid transparent}
+    .pp-tabs button.active{border-color:#111;color:#111}
+    .pp-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
+    .pp-kpi .k{background:#f7f7f7;border:1px solid #eee;border-radius:.75rem;padding:.75rem;text-align:center}
+    .pp-kpi .k .v{font-weight:700;font-size:1.1rem}
+    .badge{display:inline-block;padding:.15rem .5rem;border-radius:.5rem;font-size:.75rem}
+    .badge-free{background:#e7f8ee;color:#197a42}
+    .badge-lease{background:#fff7e6;color:#9a5a00}
+    .pp-doc{border:1px dashed #e5e7eb;border-radius:.75rem;padding:.75rem}
+    .pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media (max-width: 768px){.pp-grid{grid-template-columns:1fr}}
+    /* Modal */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none}
+    .modal.open{display:flex}
+  </style>
+</head>
+
+<body class="antialiased text-gray-900 bg-white">
+  <!-- HEADER / HERO -->
+  <header class="border-b">
+    <div class="max-w-7xl mx-auto px-4 py-8 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="/images/logo_we.png" class="h-8" alt="West East Real Estate"/>
+        <span class="font-semibold">West East Real Estate</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#market" class="hover:underline">Marketplace</a>
+        <a href="#gidr" class="hover:underline">GIDR Model</a>
+        <a href="#buy" class="hover:underline">Buy property</a>
+      </nav>
+    </div>
+
+    <section class="bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8">
+        <div>
+          <h1 class="text-4xl font-bold leading-tight">Phuket property, <span class="text-gray-700">decoded by data</span></h1>
+          <p class="mt-4 text-gray-600">We’re a young, stealth real-estate startup. Our edge is digitalization and AI forecasting from the Hong Kong Institute of Digital Research (GIDR). Buy with standardized property passports and clear metrics.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#market" class="px-5 py-3 bg-gray-900 text-white rounded-lg">Browse projects</a>
+            <a href="#buy" class="px-5 py-3 border rounded-lg">Buy property</a>
+          </div>
+          <p class="mt-3 text-xs text-gray-500">Projects shown are those under agency agreements with developers.</p>
+        </div>
+        <div class="rounded-xl border bg-white p-5">
+          <img src="/images/hero_map_bw.jpg" class="w-full rounded-lg object-cover" alt="Phuket map"/>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- GIDR BLOCK -->
+  <section id="gidr" class="py-16 border-b">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-3">Hong Kong Institute of Digital Research (GIDR)</h2>
+          <p class="text-lg text-gray-700 mb-2 italic">“Understanding value before it’s visible.”</p>
+          <p class="text-gray-600">GIDR is an applied-science unit focused on neural analytics, AI forecasting, and market digitalization. Our proprietary neural-weighting engine processes millions of signals — transactions, rental yields, infrastructure, and tourism — to forecast IRR, liquidity, and stability for Phuket assets.</p>
+          <ul class="mt-4 grid sm:grid-cols-3 gap-3 text-sm text-gray-700">
+            <li class="border rounded-lg p-3">Neural weighting system</li>
+            <li class="border rounded-lg p-3">Location heatmaps</li>
+            <li class="border rounded-lg p-3">Scenario scoring</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border p-5 bg-gray-50">
+          <img src="/images/gidr_visual.jpg" class="rounded-lg w-full" alt="GIDR visualization"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETPLACE GRID -->
+  <section id="market" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between mb-6">
+        <h3 class="text-2xl font-semibold">Featured projects (agency agreements)</h3>
+        <div class="text-sm text-gray-500">Click a card to open the Property Passport</div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 1. Halo 1 -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('halo1')">
+          <img src="/images/halo1_cover.jpg" class="w-full h-48 object-cover" alt="The Title Halo 1"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Halo 1</h4>
+            <p class="text-sm text-gray-600">Naiyang • 329 units • 7 floors</p>
+            <div class="mt-2 text-xs text-gray-500">~350 m to beach • Completed 2024</div>
+          </div>
+        </article>
+
+        <!-- 2. Legendary -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('legendary')">
+          <img src="/images/legendary_cover.jpg" class="w-full h-48 object-cover" alt="The Title Legendary"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Legendary</h4>
+            <p class="text-sm text-gray-600">Bang Tao • 637 units</p>
+            <div class="mt-2 text-xs text-gray-500">~700 m to beach • ETA ~Jan 2026</div>
+          </div>
+        </article>
+
+        <!-- 3. Heritage -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('heritage')">
+          <img src="/images/heritage_cover.jpg" class="w-full h-48 object-cover" alt="The Title Heritage"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Heritage</h4>
+            <p class="text-sm text-gray-600">Bang Tao • 889 units</p>
+            <div class="mt-2 text-xs text-gray-500">Near National Park • ETA 2025–26</div>
+          </div>
+        </article>
+
+        <!-- 4. Serenity -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('serenity')">
+          <img src="/images/serenity_cover.jpg" class="w-full h-48 object-cover" alt="The Title Serenity"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Serenity</h4>
+            <p class="text-sm text-gray-600">Naiyang • 814 units</p>
+            <div class="mt-2 text-xs text-gray-500">~400 m to beach • ETA 2026</div>
+          </div>
+        </article>
+
+        <!-- 5. Cielo -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('cielo')">
+          <img src="/images/cielo_cover.jpg" class="w-full h-48 object-cover" alt="The Title Cielo Rawai"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Cielo</h4>
+            <p class="text-sm text-gray-600">Rawai • 171 units</p>
+            <div class="mt-2 text-xs text-gray-500">~50 m to beach • ETA Sep 2026</div>
+          </div>
+        </article>
+
+        <!-- 6. Modeva -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('modeva')">
+          <img src="/images/modeva_cover.jpg" class="w-full h-48 object-cover" alt="The Modeva Bang Tao"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Modeva</h4>
+            <p class="text-sm text-gray-600">Bang Tao • 589–859 units</p>
+            <div class="mt-2 text-xs text-gray-500">~500–600 m to beach • ETA 2026</div>
+          </div>
+        </article>
+
+        <!-- 7. Atrio -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('atrio')">
+          <img src="/images/atrio_cover.jpg" class="w-full h-48 object-cover" alt="The Title Atrio"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Atrio</h4>
+            <p class="text-sm text-gray-600">Bang Tao • 435 units</p>
+            <div class="mt-2 text-xs text-gray-500">~700 m to beach • Under construction</div>
+          </div>
+        </article>
+
+        <!-- 8. Adora -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('adora')">
+          <img src="/images/adora_cover.jpg" class="w-full h-48 object-cover" alt="The Title Adora Rawai"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Adora Rawai</h4>
+            <p class="text-sm text-gray-600">Rawai • 210 units</p>
+            <div class="mt-2 text-xs text-gray-500">~400 m to beach • ETA 2027</div>
+          </div>
+        </article>
+
+        <!-- 9. Villa Kirara -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('kirara')">
+          <img src="/images/kirara_cover.jpg" class="w-full h-48 object-cover" alt="Villa Kirara"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">Villa Kirara</h4>
+            <p class="text-sm text-gray-600">Cherng Talay • 37 villas</p>
+            <div class="mt-2 text-xs text-gray-500">Luxury villas • ETA Jun 2026</div>
+          </div>
+        </article>
+
+        <!-- 10. Katabello -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('katabello')">
+          <img src="/images/katabello_cover.jpg" class="w-full h-48 object-cover" alt="The Title Katabello"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">The Title Katabello</h4>
+            <p class="text-sm text-gray-600">Kata/Karon • 760 units</p>
+            <div class="mt-2 text-xs text-gray-500">8 buildings • ETA Q4 2027</div>
+          </div>
+        </article>
+
+        <!-- 11. VIVI -->
+        <article class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="openPassport('vivi')">
+          <img src="/images/vivi_cover.jpg" class="w-full h-48 object-cover" alt="VIVI Bang Tao"/>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">VIVI</h4>
+            <p class="text-sm text-gray-600">Bang Tao • ~181 units</p>
+            <div class="mt-2 text-xs text-gray-500">~400 m to beach • ETA ~2027</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUY FORM (single) -->
+  <section id="buy" class="py-16 bg-gray-50 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-6">Buy property</h3>
+      <form onsubmit="return sendBuyLead(this)" class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white border rounded-xl p-5 md:col-span-2">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input name="name" class="w-full border rounded px-3 py-2" placeholder="Full name" required>
+            <input name="email" type="email" class="w-full border rounded px-3 py-2" placeholder="Email" required>
+            <input name="phone" class="w-full border rounded px-3 py-2" placeholder="Phone / WhatsApp">
+            <input name="budget" type="number" min="0" class="w-full border rounded px-3 py-2" placeholder="Budget (USD)">
+            <select name="project" class="w-full border rounded px-3 py-2" required>
+              <option value="">Select project</option>
+              <option>The Title Halo 1</option>
+              <option>The Title Legendary</option>
+              <option>The Title Heritage</option>
+              <option>The Title Serenity</option>
+              <option>The Title Cielo</option>
+              <option>The Modeva</option>
+              <option>The Title Atrio</option>
+              <option>The Title Adora Rawai</option>
+              <option>Villa Kirara</option>
+              <option>The Title Katabello</option>
+              <option>VIVI</option>
+            </select>
+            <select name="tenure" class="w-full border rounded px-3 py-2">
+              <option value="">Tenure</option>
+              <option>Freehold</option>
+              <option>Leasehold</option>
+              <option>Any</option>
+            </select>
+            <input name="area" class="w-full border rounded px-3 py-2" placeholder="Preferred area (Bang Tao, Kata...)">
+          </div>
+          <textarea name="msg" rows="4" class="mt-4 w-full border rounded px-3 py-2" placeholder="Message (optional)"></textarea>
+          <label class="mt-3 inline-flex items-center gap-2 text-xs text-gray-600">
+            <input type="checkbox" required> I agree to Terms & Privacy
+          </label>
+        </div>
+        <div class="md:col-span-1 flex md:block items-center">
+          <button class="w-full px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl">Send enquiry</button>
+        </div>
+      </form>
+      <p class="mt-3 text-xs text-gray-500">Your enquiry goes directly to our team. We’ll reply with a property shortlist and passports.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t">
+    <div class="max-w-7xl mx-auto px-4 text-sm text-gray-600">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <p>© 2025 West East Real Estate. A joint initiative with GIDR (Hong Kong).</p>
+        <p>Email: <a class="underline" href="mailto:post@wegc.found">post@wegc.found</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL / PASSPORT -->
+  <div id="ppModal" class="modal items-center justify-center p-4">
+    <div class="bg-white max-w-4xl w-full rounded-2xl shadow-2xl overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b">
+        <h4 id="ppTitle" class="text-lg font-semibold">Property Passport</h4>
+        <button onclick="closePassport()" class="w-9 h-9 rounded-full hover:bg-gray-100 grid place-items-center">&times;</button>
+      </div>
+      <div id="ppContent" class="p-5"></div>
+    </div>
+  </div>
+
+  <!-- PASSPORT TEMPLATES -->
+  <!-- You’ll replace images/... and /docs/...pdf with real files. -->
+
+  <!-- HALO 1 -->
+  <template data-passport="halo1">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/halo1_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Halo 1">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Halo 1 — Naiyang</h4>
+          <div class="text-sm text-gray-600 mb-3">
+            Condo • 329 units • 7 floors • ~350 m to beach
+            <span class="badge badge-free ml-2">Freehold</span>
+          </div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">7–9%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">9/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">8.6</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Halo1_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview">
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="space-y-2">
+            <div><strong>Developer:</strong> Rhom Bho Property PLC</div>
+            <div><strong>Status:</strong> Completed (2024)</div>
+            <div><strong>Units:</strong> Mix 1–2BR</div>
+            <div><strong>Tenure:</strong> Freehold quota available</div>
+          </div>
+          <div class="space-y-2">
+            <div><strong>GIDR view:</strong> airport-adjacent demand; strong seasonal rentals</div>
+            <div><strong>Notes:</strong> professional rental management recommended</div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="docs">
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <a href="/docs/Halo1_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a>
+          <a href="/docs/Halo1_Floorplans.pdf" class="pp-doc">Unit mix & floorplates (PDF)</a>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="map">
+        <div class="rounded-xl overflow-hidden border">
+          <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,8.09,98.33,8.16&layer=mapnik" class="w-full" style="height:300px"></iframe>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- LEGENDARY -->
+  <template data-passport="legendary">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/legendary_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Legendary">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Legendary — Bang Tao</h4>
+          <div class="text-sm text-gray-600 mb-3">
+            Condo • 637 units • ~700 m to beach
+            <span class="badge badge-lease ml-2">Leasehold</span>
+          </div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–8%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">8.2</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Legendary_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> ETA ~Jan 2026</div>
+        <div><strong>Unit types:</strong> 1–2BR</div>
+        <div><strong>Tenure:</strong> Leasehold (90y structure)</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs">
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <a href="/docs/Legendary_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a>
+          <a href="/docs/Legendary_Payment_Schedule.pdf" class="pp-doc">Payment schedule (PDF)</a>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="map">
+        <div class="rounded-xl overflow-hidden border">
+          <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.98,98.34,8.05&layer=mapnik" class="w-full" style="height:300px"></iframe>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- HERITAGE -->
+  <template data-passport="heritage">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/heritage_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Heritage">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Heritage — Bang Tao</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 889 units • near Sirinat National Park <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–8%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">8.1</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Heritage_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> ETA Q4 2025 – Q1 2026</div>
+        <div><strong>Unit types:</strong> 1–2BR + variants</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs">
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <a href="/docs/Heritage_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="map">
+        <div class="rounded-xl overflow-hidden border">
+          <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.28,7.98,98.34,8.05&layer=mapnik" class="w-full" style="height:300px"></iframe>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- SERENITY -->
+  <template data-passport="serenity">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/serenity_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Serenity">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Serenity — Naiyang</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 814 units • ~400 m to beach <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–8%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">8.0</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Serenity_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> ETA Dec 2026</div>
+        <div><strong>Unit types:</strong> Studio–2BR</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs">
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <a href="/docs/Serenity_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="map">
+        <div class="rounded-xl overflow-hidden border">
+          <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,8.09,98.33,8.16&layer=mapnik" class="w-full" style="height:300px"></iframe>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- CIELO -->
+  <template data-passport="cielo">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/cielo_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Cielo">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Cielo — Rawai</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 171 units • ~50 m to beach <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–8%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">8.3</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Cielo_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> ETA Sep 2026</div>
+        <div><strong>Unit sizes:</strong> 1–2BR up to ~148 m²</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs">
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <a href="/docs/Cielo_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="map">
+        <div class="rounded-xl overflow-hidden border">
+          <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.32,7.75,98.36,7.82&layer=mapnik" class="w-full" style="height:300px"></iframe>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- MODEVA -->
+  <template data-passport="modeva">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/modeva_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Modeva Bang Tao">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Modeva — Bang Tao</h4>
+          <div class="text-sm text-gray-600 mb-3">Lifestyle condo • ~500–600 m to beach <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">~10.3%</div><div class="t text-xs text-gray-500">ROI (model)</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">10–12%</div><div class="t text-xs text-gray-500">IRR (base)</div></div>
+            <div class="k"><div class="v">8.4</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Modeva_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm grid md:grid-cols-2 gap-4">
+        <div>
+          <div><strong>Developer:</strong> Rhom Bho Property PLC</div>
+          <div><strong>Status:</strong> Under construction (ETA 2026)</div>
+          <div><strong>Units:</strong> 1–2BR • 29–95 m²</div>
+        </div>
+        <div>
+          <div><strong>Notes:</strong> pet-friendly concept; rental seasonality applies</div>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="docs">
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <a href="/docs/Modeva_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="map">
+        <div class="rounded-xl overflow-hidden border">
+          <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.98,98.34,8.05&layer=mapnik" class="w-full" style="height:300px"></iframe>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- ATRIO -->
+  <template data-passport="atrio">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/atrio_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Atrio">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Atrio — Bang Tao</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 435 units • ~700 m to beach <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–8%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">8.1</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Atrio_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> Under construction (ETA 2026)</div>
+        <div><strong>Unit types:</strong> 1BR / 1BR Plus / 2BR</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs"><a href="/docs/Atrio_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.98,98.34,8.05&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+    </div>
+  </template>
+
+  <!-- ADORA -->
+  <template data-passport="adora">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/adora_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Adora Rawai">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Adora — Rawai</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 210 units • ~400 m to beach <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–8%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">7/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">7.8</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Adora_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> Q3 2025 → Q1 2027</div>
+        <div><strong>Unit types:</strong> 1–2BR + penthouses</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs"><a href="/docs/Adora_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.32,7.75,98.36,7.82&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+    </div>
+  </template>
+
+  <!-- KIRARA -->
+  <template data-passport="kirara">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/kirara_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="Villa Kirara">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">Villa Kirara — Cherng Talay</h4>
+          <div class="text-sm text-gray-600 mb-3">Luxury villas • Phase 1: 37 units <span class="badge badge-free ml-2">Freehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–7%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">7/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">7.9</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Kirara_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> Off-plan (ETA Jun 2026)</div>
+        <div><strong>Type:</strong> 3–5BR pool villas</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs"><a href="/docs/Kirara_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.98,98.34,8.05&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+    </div>
+  </template>
+
+  <!-- KATABELLO -->
+  <template data-passport="katabello">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/katabello_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Katabello">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Katabello — Kata/Karon</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 760 units • 8 buildings × 7 floors <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">7–9%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">8.2</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/Katabello_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> Off-plan (ETA Q4 2027)</div>
+        <div><strong>Units:</strong> 1–2BR (28–33 m²+)</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs"><a href="/docs/Katabello_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.29,7.79,98.34,7.84&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+    </div>
+  </template>
+
+  <!-- VIVI -->
+  <template data-passport="vivi">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/vivi_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="VIVI Bang Tao">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">VIVI — Bang Tao</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • ~181 units • ~400 m to beach <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">6–8%</div><div class="t text-xs text-gray-500">Market yield</div></div>
+            <div class="k"><div class="v">7/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Mid</div><div class="t text-xs text-gray-500">Risk</div></div>
+            <div class="k"><div class="v">7.9</div><div class="t text-xs text-gray-500">GIDR score</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/docs/VIVI_Presentation.pdf" class="px-3 py-2 bg-gray-900 text-white rounded">Download presentation (PDF)</a>
+            <a href="#buy" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm space-y-2">
+        <div><strong>Status:</strong> Off-plan (ETA ~2027)</div>
+        <div><strong>Unit types:</strong> 1–2BR</div>
+      </div>
+      <div class="hidden" data-pp-tab="docs"><a href="/docs/VIVI_Presentation.pdf" class="pp-doc">Developer brochure (PDF)</a></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.98,98.34,8.05&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+    </div>
+  </template>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Open/close modal
+    function openPassport(key){
+      const tpl = document.querySelector(`template[data-passport="${key}"]`);
+      if(!tpl) return;
+      document.getElementById('ppTitle').textContent = 'Property Passport';
+      const node = tpl.content.cloneNode(true);
+      const host = document.getElementById('ppContent');
+      host.innerHTML = '';
+      host.appendChild(node);
+      document.getElementById('ppModal').classList.add('open');
+    }
+    function closePassport(){ document.getElementById('ppModal').classList.remove('open'); }
+
+    // Tabs inside passport
+    function ppTab(id, btn){
+      const scope = btn.closest('[data-pp]');
+      scope.querySelectorAll('[data-pp-tab]').forEach(el=>el.classList.add('hidden'));
+      scope.querySelector(`[data-pp-tab="${id}"]`).classList.remove('hidden');
+      scope.querySelectorAll('.pp-tabs button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // Single buy form mailto
+    function sendBuyLead(f){
+      const d = new FormData(f);
+      const subject = 'Buy Property Enquiry';
+      const body = 
+`Name: ${d.get('name')}
+Email: ${d.get('email')}
+Phone: ${d.get('phone')}
+Budget (USD): ${d.get('budget')}
+Project: ${d.get('project')}
+Tenure: ${d.get('tenure')}
+Preferred area: ${d.get('area')}
+Message: ${d.get('msg') || ''}`;
+      window.location.href = `mailto:post@wegc.found?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      return false;
+    }
+
+    // Close modal on backdrop click / Esc
+    document.getElementById('ppModal').addEventListener('click', e => {
+      if(e.target.id === 'ppModal') closePassport();
+    });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') closePassport(); });
+  </script>
+</body>
+</html>

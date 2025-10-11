@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>West East Real Estate — Phuket Digital Marketplace</title>
+  <meta name="description" content="West East Real Estate — data-driven real estate marketplace for Phuket. Powered by GIDR AI analytics. Browse verified projects and open property passports.">
+  <link rel="icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Property Passport styles -->
+  <style>
+    .pp-tabs button{padding:.6rem 1rem;border-bottom:2px solid transparent}
+    .pp-tabs button.active{border-color:#111;color:#111}
+    .pp-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
+    .pp-kpi .k{background:#f7f7f7;border:1px solid #eee;border-radius:.75rem;padding:.75rem;text-align:center}
+    .pp-kpi .k .v{font-weight:700;font-size:1.1rem}
+    .badge{display:inline-block;padding:.15rem .5rem;border-radius:.5rem;font-size:.75rem;white-space:nowrap}
+    .badge-free{background:#e7f8ee;color:#197a42}
+    .badge-lease{background:#fff7e6;color:#9a5a00}
+    .pp-doc{border:1px dashed #e5e7eb;border-radius:.75rem;padding:.75rem}
+    .pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media (max-width: 1024px){.pp-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width: 768px){.pp-grid{grid-template-columns:1fr}}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:1rem;z-index:50}
+    .modal.open{display:flex}
+    .modal-card{background:#fff;max-width:980px;width:100%;max-height:90vh;overflow:auto;border-radius:1rem}
+  </style>
+</head>
+
+<body class="antialiased text-gray-800">
+
+  <!-- Header / Hero -->
+  <header class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="/logo.svg" alt="West East Real Estate" class="h-8 w-auto"/>
+        <span class="font-semibold">West East Real Estate</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#marketplace" class="hover:text-gray-900">Marketplace</a>
+        <a href="#gidr" class="hover:text-gray-900">GIDR</a>
+        <a href="#tenure" class="hover:text-gray-900">Leasehold vs Freehold</a>
+        <a href="#contact" class="hover:text-gray-900">Contact</a>
+      </nav>
+      <a href="#lead" class="px-4 py-2 rounded bg-gray-900 text-white text-sm">Get property shortlist</a>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight">Phuket Real Estate, scored by AI.</h1>
+          <p class="mt-4 text-lg text-gray-600">
+            We’re a stealth real-estate agency startup focused on digital analysis and AI forecasting.
+            Backed by Hong Kong Institute of Digital Research (GIDR), we standardize data, score projects, and publish property passports.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#marketplace" class="px-5 py-3 rounded bg-emerald-600 text-white">Browse properties</a>
+            <a href="#lead" class="px-5 py-3 rounded border">Talk to an advisor</a>
+          </div>
+          <p class="mt-3 text-xs text-gray-500">Projects shown are under developer agency agreements. No investment offers are presented — this is a property marketplace.</p>
+        </div>
+        <div class="bg-gray-50 border rounded-2xl p-5">
+          <h3 class="font-semibold mb-3">Quick request</h3>
+          <form onsubmit="return sendHeroLead(this)" class="grid grid-cols-1 gap-3 text-sm">
+            <input name="name" required placeholder="Full name" class="w-full border rounded px-3 py-2">
+            <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2">
+            <div class="grid grid-cols-2 gap-3">
+              <input name="location" placeholder="Area (Bang Tao, Kata...)" class="w-full border rounded px-3 py-2">
+              <input name="budget" type="number" min="0" placeholder="Budget (USD)" class="w-full border rounded px-3 py-2">
+            </div>
+            <select name="tenure" class="w-full border rounded px-3 py-2">
+              <option value="">Tenure preference</option>
+              <option>Freehold</option>
+              <option>Leasehold</option>
+              <option>Any</option>
+            </select>
+            <label class="text-xs text-gray-600"><input type="checkbox" required> I agree to Terms & Privacy</label>
+            <button class="px-4 py-2 bg-gray-900 text-white rounded">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filters + Marketplace -->
+  <section id="marketplace" class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold">Marketplace — Phuket</h2>
+          <p class="text-gray-600 text-sm">Use filters to narrow results. Open a Property Passport to see AI score, specs, floorplans, docs.</p>
+        </div>
+        <div class="text-sm text-gray-500">Powered by GIDR AI • “Understanding value before it’s visible.”</div>
+      </div>
+
+      <!-- Filters -->
+      <div class="grid md:grid-cols-4 gap-3 mb-8">
+        <select id="f-location" class="w-full border rounded px-3 py-2 text-sm">
+          <option value="">Location</option>
+          <option value="Bang Tao">Bang Tao</option>
+          <option value="Rawai">Rawai</option>
+          <option value="Kata">Kata</option>
+          <option value="Naiyang">Naiyang</option>
+          <option value="Cherng Talay">Cherng Talay</option>
+        </select>
+        <select id="f-tenure" class="w-full border rounded px-3 py-2 text-sm">
+          <option value="">Tenure</option>
+          <option value="Freehold">Freehold</option>
+          <option value="Leasehold">Leasehold</option>
+        </select>
+        <select id="f-status" class="w-full border rounded px-3 py-2 text-sm">
+          <option value="">Status</option>
+          <option value="Completed">Completed</option>
+          <option value="Off-plan">Off-plan</option>
+          <option value="Under construction">Under construction</option>
+        </select>
+        <select id="f-type" class="w-full border rounded px-3 py-2 text-sm">
+          <option value="">Type</option>
+          <option value="Condo">Condo</option>
+          <option value="Villas">Villas</option>
+        </select>
+      </div>
+
+      <!-- Cards grid -->
+      <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- 1. The Title Halo 1 -->
+        <article class="card" data-location="Naiyang" data-tenure="Freehold" data-status="Completed" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/halo1.jpg" alt="The Title Halo 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Halo 1</h3>
+              <p class="text-sm text-gray-600">Naiyang • ~350 m to beach</p>
+              <p class="text-sm">Condo • 329 units • 7 floors</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-free">Freehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Completed 2024</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('halo1')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Villa Kirara -->
+        <article class="card" data-location="Cherng Talay" data-tenure="Freehold" data-status="Off-plan" data-type="Villas">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/villa-kirara.jpg" alt="Villa Kirara" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Villa Kirara</h3>
+              <p class="text-sm text-gray-600">Cherng Talay / Si Sunthon</p>
+              <p class="text-sm">Luxury Villas • Phase 1 — 37 units</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-free">Freehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Off-plan • ETA 2026</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('kirara')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. The Title Cielo -->
+        <article class="card" data-location="Rawai" data-tenure="Leasehold" data-status="Under construction" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/cielo-rawai.jpg" alt="The Title Cielo" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Cielo</h3>
+              <p class="text-sm text-gray-600">Rawai • ~50 m to beach</p>
+              <p class="text-sm">Condo • 171 units • ETA Sep 2026</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Under construction</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('cielo')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. The Title Modeva -->
+        <article class="card" data-location="Bang Tao" data-tenure="Leasehold" data-status="Off-plan" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/modeva-bangtao.jpg" alt="The Modeva Bang Tao" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Modeva</h3>
+              <p class="text-sm text-gray-600">Bang Tao • ~500–600 m to beach</p>
+              <p class="text-sm">Condo • 589–859 units • 7 floors (cluster)</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Off-plan • ETA 2026</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('modeva')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. The Title Adora -->
+        <article class="card" data-location="Rawai" data-tenure="Leasehold" data-status="Under construction" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/adora-rawai.jpg" alt="The Title Adora Rawai" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Adora Rawai</h3>
+              <p class="text-sm text-gray-600">Rawai • ~400 m to beach</p>
+              <p class="text-sm">Condo • 210 units • 1–2BR + penthouses</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Under construction</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('adora')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. The Title Serenity -->
+        <article class="card" data-location="Naiyang" data-tenure="Leasehold" data-status="Under construction" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/serenity-naiyang.jpg" alt="The Title Serenity Naiyang" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Serenity</h3>
+              <p class="text-sm text-gray-600">Naiyang • near National Park</p>
+              <p class="text-sm">Condo • 814 units • multi-phase</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Under construction</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('serenity')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. The Title Legendary -->
+        <article class="card" data-location="Bang Tao" data-tenure="Leasehold" data-status="Under construction" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/legendary-bangtao.jpg" alt="The Title Legendary" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Legendary</h3>
+              <p class="text-sm text-gray-600">Bang Tao • ~700 m to beach</p>
+              <p class="text-sm">Condo • 637 units • ETA 2026</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Under construction</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('legendary')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. The Title Heritage -->
+        <article class="card" data-location="Bang Tao" data-tenure="Leasehold" data-status="Under construction" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/heritage-bangtao.jpg" alt="The Title Heritage" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Heritage</h3>
+              <p class="text-sm text-gray-600">Bang Tao • near Sirinat NP</p>
+              <p class="text-sm">Condo • 889 units • ETA 2025–26</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Under construction</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('heritage')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. The Title Artrio -->
+        <article class="card" data-location="Bang Tao" data-tenure="Leasehold" data-status="Under construction" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/artrio-bangtao.jpg" alt="The Title Artrio" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Artrio</h3>
+              <p class="text-sm text-gray-600">Bang Tao • ~700 m to beach</p>
+              <p class="text-sm">Condo • 435 units • 4×7 floors</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Under construction</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('artrio')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. The Title Katabello -->
+        <article class="card" data-location="Kata" data-tenure="Leasehold" data-status="Off-plan" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/katabello.jpg" alt="The Title Katabello" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">The Title Katabello</h3>
+              <p class="text-sm text-gray-600">Kata / Karon • hillside cluster</p>
+              <p class="text-sm">Condo • ~760 units • 8×7 floors • ETA 2027</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Off-plan</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('katabello')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. VIVI (Bang Tao) -->
+        <article class="card" data-location="Bang Tao" data-tenure="Leasehold" data-status="Off-plan" data-type="Condo">
+          <div class="border rounded overflow-hidden shadow hover:shadow-lg">
+            <img src="/images/vivi-bangtao.jpg" alt="VIVI Bang Tao" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">VIVI (Bang Tao)</h3>
+              <p class="text-sm text-gray-600">Bang Tao • ~400 m to beach</p>
+              <p class="text-sm">Condo • ~181 units • ETA 2027</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="badge badge-lease">Leasehold</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100">Off-plan</span>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="px-3 py-2 border rounded text-sm" onclick="openPassport('vivi')">View passport</button>
+                <a class="px-3 py-2 bg-gray-900 text-white rounded text-sm" href="#lead">Buy enquiry</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Leasehold vs Freehold -->
+  <section id="tenure" class="py-16 bg-gray-50 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-2">Ownership in Thailand: Leasehold vs Freehold</h2>
+      <p class="text-gray-600 mb-6">Short primer for international buyers. We’ll advise case by case.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white border rounded-xl p-5">
+          <div class="flex items-center gap-2 mb-2"><span class="badge badge-free">Freehold</span><span class="text-sm text-gray-500">full ownership</span></div>
+          <ul class="list-disc pl-5 text-sm space-y-2">
+            <li>Full title to the unit + proportionate land share (condo quota up to 49% for foreigners).</li>
+            <li>Registered at Land Office; transfer taxes/fees apply.</li>
+            <li>Preferred for long-term holding and resale liquidity.</li>
+          </ul>
+        </div>
+        <div class="bg-white border rounded-xl p-5">
+          <div class="flex items-center gap-2 mb-2"><span class="badge badge-lease">Leasehold</span><span class="text-sm text-gray-500">up to 30+30+30 yrs</span></div>
+          <ul class="list-disc pl-5 text-sm space-y-2">
+            <li>Long-term lease structure; lower entry complexity and often faster transfers.</li>
+            <li>Unit rights per contract; common for foreign buyers in resort markets.</li>
+            <li>Attractive for usage + rental, depending on developer/operator program.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-4">This is general information, not legal advice. We connect you with local counsel and manage the process end to end.</p>
+    </div>
+  </section>
+
+  <!-- GIDR block -->
+  <section id="gidr" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold">Hong Kong Institute of Digital Research (GIDR)</h2>
+          <p class="mt-3 text-gray-700">Understanding value before it’s visible.</p>
+          <p class="mt-4 text-gray-600">
+            Independent applied-science unit focusing on neural analytics, AI forecasting, and market digitalization.
+            GIDR’s proprietary neural-weighting engine processes millions of data points — transactions, infrastructure, tourism flows, and socio-economic indices — to score projects by stability, liquidity, and forward potential.
+          </p>
+          <ul class="mt-4 text-sm text-gray-700 list-disc pl-5 space-y-1">
+            <li>AI scoring: IRR tendency, liquidity index, volatility (stability), rental profile.</li>
+            <li>Digital market twin: standardized data, comparable analytics, live updates.</li>
+            <li>Property Passports: a unified dossier for every object on our marketplace.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 border rounded-2xl p-5">
+          <h3 class="font-semibold">What’s inside a Property Passport?</h3>
+          <div class="mt-3 grid grid-cols-2 gap-3 text-sm">
+            <div class="p-3 bg-white border rounded">Specs & Unit mix</div>
+            <div class="p-3 bg-white border rounded">GIDR AI Score</div>
+            <div class="p-3 bg-white border rounded">Floorplans</div>
+            <div class="p-3 bg-white border rounded">Map & Area comps</div>
+            <div class="p-3 bg-white border rounded">Docs & Legal brief</div>
+            <div class="p-3 bg-white border rounded">Contact & Booking</div>
+          </div>
+          <p class="mt-3 text-xs text-gray-500">Scores and forecasts are illustrative and may change with new data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead forms -->
+  <section id="lead" class="py-16 bg-gray-50 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Get a tailored shortlist</h2>
+      <p class="text-gray-600 mb-6">Tell us your preferences — area, budget, tenure — and we’ll send a curated list with property passports.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Request shortlist -->
+        <form onsubmit="return sendShortlist(this)" class="bg-white border rounded-2xl p-5">
+          <h3 class="font-semibold mb-2">Request property shortlist (PDF)</h3>
+          <input name="name" required placeholder="Full name" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="area" placeholder="Preferred area(s)" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="budget" type="number" min="0" placeholder="Budget (USD)" class="w-full border rounded px-3 py-2 mb-2">
+          <select name="tenure" class="w-full border rounded px-3 py-2 mb-2">
+            <option value="">Tenure</option><option>Freehold</option><option>Leasehold</option><option>Any</option>
+          </select>
+          <label class="text-xs text-gray-600 mb-3 block"><input type="checkbox" required> I agree to Terms & Privacy</label>
+          <button class="px-4 py-2 bg-gray-900 text-white rounded w-full">Request</button>
+        </form>
+
+        <!-- Buy property -->
+        <form onsubmit="return sendBuyLead(this)" class="bg-white border rounded-2xl p-5">
+          <h3 class="font-semibold mb-2">Buy property</h3>
+          <input name="name" required placeholder="Full name" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="phone" placeholder="Phone / WhatsApp" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="project" placeholder="Project (optional)" class="w-full border rounded px-3 py-2 mb-2">
+          <label class="text-xs text-gray-600 mb-3 block"><input type="checkbox" required> I agree to Terms & Privacy</label>
+          <button class="px-4 py-2 bg-emerald-600 text-white rounded w-full">Send enquiry</button>
+        </form>
+
+        <!-- Partner / Co-broker -->
+        <form onsubmit="return sendPartner(this)" class="bg-white border rounded-2xl p-5">
+          <h3 class="font-semibold mb-2">Partner / Co-broker</h3>
+          <input name="name" required placeholder="Company / Name" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2 mb-2">
+          <input name="region" placeholder="Region / Market" class="w-full border rounded px-3 py-2 mb-2">
+          <label class="text-xs text-gray-600 mb-3 block"><input type="checkbox" required> I agree to Terms & Privacy</label>
+          <button class="px-4 py-2 bg-gray-900 text-white rounded w-full">Contact us</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 py-10 md:py-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <div class="flex items-center gap-2">
+            <img src="/logo.svg" class="h-7" alt="">
+            <span class="font-semibold">West East Real Estate</span>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">Stealth real-estate agency startup focused on digital analysis and AI forecasting. Marketplace operated under developer agency agreements.</p>
+        </div>
+        <div class="text-sm">
+          <h4 class="font-semibold mb-2">Contacts</h4>
+          <p>Email: <a class="text-blue-600" href="mailto:info@wegc.found">info@wegc.found</a></p>
+          <p>Singapore • Phuket • Hong Kong</p>
+        </div>
+        <div class="text-sm">
+          <h4 class="font-semibold mb-2">Legal</h4>
+          <p class="text-gray-600">No investment offerings are made on this website. Property information is provided for general guidance and may change.</p>
+          <p class="text-gray-500 mt-2 text-xs">© 2025 West East Trade Group Pte. Ltd. (Singapore). All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= PASSPORT MODAL + TEMPLATES ======= -->
+  <div id="pp-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="flex items-center justify-between px-5 py-4 border-b">
+        <h3 id="pp-title" class="font-semibold text-lg">Property Passport</h3>
+        <button onclick="closePassport()" class="p-2 rounded hover:bg-gray-100" aria-label="Close">✕</button>
+      </div>
+      <div id="pp-body" class="p-5"></div>
+      <div class="flex justify-end gap-2 px-5 pb-5">
+        <button onclick="closePassport()" class="px-4 py-2 border rounded">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLATES (fill progressively as data refines) -->
+  <template data-passport="halo1">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/halo1.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Halo 1">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Halo 1 — Naiyang</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 329 units • 7 floors • ~350 m to beach <span class="badge badge-free ml-2">Freehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">8.2</div><div class="t text-xs text-gray-500">GIDR Score</div></div>
+            <div class="k"><div class="v">High</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">—</div><div class="t text-xs text-gray-500">Yield profile</div></div>
+            <div class="k"><div class="v">2024</div><div class="t text-xs text-gray-500">Completion</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="mailto:info@wegc.found?subject=Halo%201%20Passport" class="px-3 py-2 bg-gray-900 text-white rounded">Request dossier</a>
+            <a href="#lead" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('floorplans', this)">Floorplans</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+        <button onclick="ppTab('contact', this)">Enquiry</button>
+      </div>
+      <div data-pp-tab="overview">
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="space-y-2">
+            <div><strong>Developer:</strong> Rhom Bho Property PLC</div>
+            <div><strong>Status:</strong> Completed (2024)</div>
+            <div><strong>Units:</strong> 1–2BR range</div>
+            <div><strong>Tenure:</strong> Freehold (condo quota)</div>
+          </div>
+          <div class="space-y-2">
+            <div><strong>Area:</strong> Naiyang • near beach & airport</div>
+            <div><strong>Amenities:</strong> pools, gym, gardens, security</div>
+            <div class="text-xs text-gray-500">Information is indicative and subject to change.</div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="floorplans"><div class="p-3 border rounded text-sm">Floorplans to be attached.</div></div>
+      <div class="hidden" data-pp-tab="docs"><div class="grid md:grid-cols-2 gap-3 text-sm"><a href="#" class="pp-doc">Brochure (PDF)</a><a href="#" class="pp-doc">Unit mix (PDF)</a></div></div>
+      <div class="hidden" data-pp-tab="map">
+        <div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.96,98.33,8.03&layer=mapnik" class="w-full" style="height:300px"></iframe></div>
+      </div>
+      <div class="hidden" data-pp-tab="contact">
+        <form onsubmit="return sendBuyMail(this)" class="grid md:grid-cols-2 gap-3 text-sm">
+          <input name="project" value="The Title Halo 1" type="hidden">
+          <input name="name" required placeholder="Your name" class="w-full border rounded px-3 py-2">
+          <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2">
+          <input name="phone" placeholder="Phone / WhatsApp" class="w-full border rounded px-3 py-2">
+          <input name="budget" type="number" min="0" placeholder="Budget (USD)" class="w-full border rounded px-3 py-2">
+          <div class="md:col-span-2"><textarea name="msg" rows="3" placeholder="Message" class="w-full border rounded px-3 py-2"></textarea></div>
+          <label class="text-xs text-gray-600 md:col-span-2"><input type="checkbox" required> I agree to Terms & Privacy</label>
+          <div class="md:col-span-2"><button class="px-4 py-2 bg-gray-900 text-white rounded">Send</button></div>
+        </form>
+      </div>
+    </div>
+  </template>
+
+  <!-- Modeva -->
+  <template data-passport="modeva">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/modeva-bangtao.jpg" class="w-full h-64 object-cover rounded-xl" alt="Modeva — Bang Tao">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Modeva — Bang Tao</h4>
+          <div class="text-sm text-gray-600 mb-3">1–2BR • ~500–600 m to beach • ETA 2026 <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">8.4</div><div class="t text-xs text-gray-500">GIDR Score</div></div>
+            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
+            <div class="k"><div class="v">Stable+</div><div class="t text-xs text-gray-500">Trend</div></div>
+            <div class="k"><div class="v">ETA 2026</div><div class="t text-xs text-gray-500">Status</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="mailto:info@wegc.found?subject=Modeva%20Passport" class="px-3 py-2 bg-gray-900 text-white rounded">Request dossier</a>
+            <a href="#lead" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('financials', this)">Financials</button>
+        <button onclick="ppTab('floorplans', this)">Floorplans</button>
+        <button onclick="ppTab('map', this)">Map</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('contact', this)">Enquiry</button>
+      </div>
+      <div data-pp-tab="overview">
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="space-y-2">
+            <div><strong>Developer:</strong> Rhom Bho Property PLC</div>
+            <div><strong>Status:</strong> Off-plan / Under construction</div>
+            <div><strong>Units:</strong> 1–2BR • 29–95 m² (mix)</div>
+            <div><strong>Tenure:</strong> Leasehold (up to 30+30+30)</div>
+          </div>
+          <div class="space-y-2">
+            <div><strong>Area:</strong> Bang Tao • brand cluster • walkable beach</div>
+            <div><strong>Notes:</strong> schedule risk; foreign-quota demand; rental seasonality</div>
+            <div class="text-xs text-gray-500">Illustrative info; request the latest developer pack.</div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="financials">
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="space-y-2">
+            <div><strong>Entry (illustrative):</strong> THB 100k–120k / m²</div>
+            <div><strong>Area comps (2025):</strong> THB 125k–140k / m²</div>
+            <div><strong>Rental profile:</strong> seasonal; market / pool / guaranteed (by project)</div>
+          </div>
+          <div class="space-y-2">
+            <div class="pp-doc">Download: Price List • Payment Schedule • Rental Program</div>
+            <div class="text-xs text-gray-500">Figures are indicative; verify with our advisor.</div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="floorplans"><div class="p-3 border rounded text-sm">Sample 1BR / 2BR plans to attach.</div></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.96,98.33,8.03&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+      <div class="hidden" data-pp-tab="docs"><div class="grid md:grid-cols-2 gap-3 text-sm"><a href="#" class="pp-doc">Brochure (PDF)</a><a href="#" class="pp-doc">Legal brief (PDF)</a></div></div>
+      <div class="hidden" data-pp-tab="contact">
+        <form onsubmit="return sendBuyMail(this)" class="grid md:grid-cols-2 gap-3 text-sm">
+          <input name="project" value="The Modeva — Bang Tao" type="hidden">
+          <input name="name" required placeholder="Your name" class="w-full border rounded px-3 py-2">
+          <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2">
+          <input name="phone" placeholder="Phone / WhatsApp" class="w-full border rounded px-3 py-2">
+          <input name="budget" type="number" min="0" placeholder="Budget (USD)" class="w-full border rounded px-3 py-2">
+          <div class="md:col-span-2"><textarea name="msg" rows="3" placeholder="Message" class="w-full border rounded px-3 py-2"></textarea></div>
+          <label class="text-xs text-gray-600 md:col-span-2"><input type="checkbox" required> I agree to Terms & Privacy</label>
+          <div class="md:col-span-2"><button class="px-4 py-2 bg-gray-900 text-white rounded">Send</button></div>
+        </form>
+      </div>
+    </div>
+  </template>
+
+  <!-- Kirara -->
+  <template data-passport="kirara">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/villa-kirara.jpg" class="w-full h-64 object-cover rounded-xl" alt="Villa Kirara">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">Villa Kirara — Cherng Talay</h4>
+          <div class="text-sm text-gray-600 mb-3">Luxury villas • Phase 1 — 37 units <span class="badge badge-free ml-2">Freehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">8.6</div><div class="t text-xs text-gray-500">GIDR Score</div></div>
+            <div class="k"><div class="v">Premium</div><div class="t text-xs text-gray-500">Segment</div></div>
+            <div class="k"><div class="v">ETA 2026</div><div class="t text-xs text-gray-500">Status</div></div>
+            <div class="k"><div class="v">—</div><div class="t text-xs text-gray-500">Yield</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="mailto:info@wegc.found?subject=Kirara%20Passport" class="px-3 py-2 bg-gray-900 text-white rounded">Request dossier</a>
+            <a href="#lead" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('floorplans', this)">Layouts</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+        <button onclick="ppTab('contact', this)">Enquiry</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <div><strong>Developer:</strong> Rhom Bho / Title</div>
+            <div><strong>Configuration:</strong> 3–5BR villas • private pool</div>
+            <div><strong>Tenure:</strong> Freehold (subject to structure)</div>
+          </div>
+          <div class="space-y-2">
+            <div><strong>Area:</strong> Cherng Talay / Bang Tao cluster</div>
+            <div><strong>Notes:</strong> premium land; lifestyle amenities nearby</div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="floorplans"><div class="p-3 border rounded text-sm">Layouts to be attached.</div></div>
+      <div class="hidden" data-pp-tab="docs"><div class="grid md:grid-cols-2 gap-3 text-sm"><a href="#" class="pp-doc">Brochure (PDF)</a><a href="#" class="pp-doc">Specs (PDF)</a></div></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.96,98.33,8.03&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+      <div class="hidden" data-pp-tab="contact">
+        <form onsubmit="return sendBuyMail(this)" class="grid md:grid-cols-2 gap-3 text-sm">
+          <input name="project" value="Villa Kirara" type="hidden">
+          <input name="name" required placeholder="Your name" class="w-full border rounded px-3 py-2">
+          <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2">
+          <input name="phone" placeholder="Phone / WhatsApp" class="w-full border rounded px-3 py-2">
+          <input name="budget" type="number" min="0" placeholder="Budget (USD)" class="w-full border rounded px-3 py-2">
+          <div class="md:col-span-2"><textarea name="msg" rows="3" placeholder="Message" class="w-full border rounded px-3 py-2"></textarea></div>
+          <label class="text-xs text-gray-600 md:col-span-2"><input type="checkbox" required> I agree to Terms & Privacy</label>
+          <div class="md:col-span-2"><button class="px-4 py-2 bg-gray-900 text-white rounded">Send</button></div>
+        </form>
+      </div>
+    </div>
+  </template>
+
+  <!-- Cielo -->
+  <template data-passport="cielo">
+    <div data-pp>
+      <div class="pp-grid mb-4">
+        <img src="/images/cielo-rawai.jpg" class="w-full h-64 object-cover rounded-xl" alt="The Title Cielo">
+        <div>
+          <h4 class="text-xl font-semibold mb-1">The Title Cielo — Rawai</h4>
+          <div class="text-sm text-gray-600 mb-3">Condo • 171 units • ~50 m to beach <span class="badge badge-lease ml-2">Leasehold</span></div>
+          <div class="pp-kpi mb-3">
+            <div class="k"><div class="v">8.1</div><div class="t text-xs text-gray-500">GIDR Score</div></div>
+            <div class="k"><div class="v">Coastal</div><div class="t text-xs text-gray-500">Proximity</div></div>
+            <div class="k"><div class="v">ETA 2026</div><div class="t text-xs text-gray-500">Status</div></div>
+            <div class="k"><div class="v">—</div><div class="t text-xs text-gray-500">Yield</div></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="mailto:info@wegc.found?subject=Cielo%20Passport" class="px-3 py-2 bg-gray-900 text-white rounded">Request dossier</a>
+            <a href="#lead" class="px-3 py-2 border rounded">Buy enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-tabs flex gap-4 border-b mb-3">
+        <button class="active" onclick="ppTab('overview', this)">Overview</button>
+        <button onclick="ppTab('floorplans', this)">Floorplans</button>
+        <button onclick="ppTab('docs', this)">Documents</button>
+        <button onclick="ppTab('map', this)">Map</button>
+        <button onclick="ppTab('contact', this)">Enquiry</button>
+      </div>
+      <div data-pp-tab="overview" class="text-sm">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <div><strong>Developer:</strong> Rhom Bho Property PLC</div>
+            <div><strong>Status:</strong> Under construction • ETA Sep 2026</div>
+            <div><strong>Unit sizes:</strong> ~31–148 m² (mix)</div>
+          </div>
+          <div class="space-y-2">
+            <div><strong>Amenities:</strong> pools, rooftop, gym, media room, coworking</div>
+            <div><strong>Tenure:</strong> Leasehold</div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden" data-pp-tab="floorplans"><div class="p-3 border rounded text-sm">Attach floorplans here.</div></div>
+      <div class="hidden" data-pp-tab="docs"><div class="grid md:grid-cols-2 gap-3 text-sm"><a href="#" class="pp-doc">Brochure (PDF)</a><a href="#" class="pp-doc">Unit mix (PDF)</a></div></div>
+      <div class="hidden" data-pp-tab="map"><div class="rounded-xl overflow-hidden border"><iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.96,98.33,8.03&layer=mapnik" class="w-full" style="height:300px"></iframe></div></div>
+      <div class="hidden" data-pp-tab="contact">
+        <form onsubmit="return sendBuyMail(this)" class="grid md:grid-cols-2 gap-3 text-sm">
+          <input name="project" value="The Title Cielo — Rawai" type="hidden">
+          <input name="name" required placeholder="Your name" class="w-full border rounded px-3 py-2">
+          <input name="email" type="email" required placeholder="Email" class="w-full border rounded px-3 py-2">
+          <input name="phone" placeholder="Phone / WhatsApp" class="w-full border rounded px-3 py-2">
+          <input name="budget" type="number" min="0" placeholder="Budget (USD)" class="w-full border rounded px-3 py-2">
+          <div class="md:col-span-2"><textarea name="msg" rows="3" placeholder="Message" class="w-full border rounded px-3 py-2"></textarea></div>
+          <label class="text-xs text-gray-600 md:col-span-2"><input type="checkbox" required> I agree to Terms & Privacy</label>
+          <div class="md:col-span-2"><button class="px-4 py-2 bg-gray-900 text-white rounded">Send</button></div>
+        </form>
+      </div>
+    </div>
+  </template>
+
+  <!-- Adora -->
+  <template data-passport="adora"><div class="p-4 text-sm">Adora passport: attach developer pack, unit mix, legal brief.</div></template>
+  <!-- Serenity -->
+  <template data-passport="serenity"><div class="p-4 text-sm">Serenity passport: attach specs, floorplans, status updates.</div></template>
+  <!-- Legendary -->
+  <template data-passport="legendary"><div class="p-4 text-sm">Legendary passport: cluster data, ETA, maps, rental modes.</div></template>
+  <!-- Heritage -->
+  <template data-passport="heritage"><div class="p-4 text-sm">Heritage passport: building count, mix, amenities, comps.</div></template>
+  <!-- Artrio -->
+  <template data-passport="artrio"><div class="p-4 text-sm">Artrio passport: 4×7 floors, 1BR/1+ /2BR, ~700 m to beach.</div></template>
+  <!-- Katabello -->
+  <template data-passport="katabello"><div class="p-4 text-sm">Katabello passport: 8×7 floors, hillside, amenity stack.</div></template>
+  <!-- VIVI -->
+  <template data-passport="vivi"><div class="p-4 text-sm">VIVI passport: ~181 units, ~400 m to beach, ETA 2027.</div></template>
+
+  <!-- ======= SCRIPTS ======= -->
+  <script>
+    // Simple filters
+    const filters = {
+      location: document.getElementById('f-location'),
+      tenure: document.getElementById('f-tenure'),
+      status: document.getElementById('f-status'),
+      type: document.getElementById('f-type'),
+    };
+    const cards = Array.from(document.querySelectorAll('#cards .card'));
+    Object.values(filters).forEach(el => el.addEventListener('change', applyFilters));
+    function applyFilters(){
+      cards.forEach(c=>{
+        const ok =
+          (!filters.location.value || c.dataset.location === filters.location.value) &&
+          (!filters.tenure.value || c.dataset.tenure === filters.tenure.value) &&
+          (!filters.status.value || c.dataset.status === filters.status.value) &&
+          (!filters.type.value || c.dataset.type === filters.type.value);
+        c.style.display = ok ? '' : 'none';
+      });
+    }
+
+    // Modal + passports
+    const modal = document.getElementById('pp-modal');
+    const body = document.getElementById('pp-body');
+    const title = document.getElementById('pp-title');
+    function openPassport(key){
+      const tpl = document.querySelector(`template[data-passport="${key}"]`);
+      if(!tpl){ return; }
+      title.textContent = 'Property Passport';
+      body.innerHTML = tpl.innerHTML;
+      modal.classList.add('open');
+    }
+    function closePassport(){
+      modal.classList.remove('open');
+      body.innerHTML = '';
+    }
+    modal.addEventListener('click', e => { if(e.target === modal) closePassport(); });
+
+    // Mail helpers
+    function _mailto(subject, body){
+      window.location.href = `mailto:info@wegc.found?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      return false;
+    }
+    function sendHeroLead(f){
+      const d = new FormData(f);
+      return _mailto('Quick request',
+`Name: ${d.get('name')}
+Email: ${d.get('email')}
+Area: ${d.get('location')}
+Budget: ${d.get('budget')}
+Tenure: ${d.get('tenure')}`);
+    }
+    function sendShortlist(f){
+      const d = new FormData(f);
+      return _mailto('Property shortlist request',
+`Name: ${d.get('name')}
+Email: ${d.get('email')}
+Area: ${d.get('area')}
+Budget: ${d.get('budget')}
+Tenure: ${d.get('tenure')}`);
+    }
+    function sendBuyLead(f){
+      const d = new FormData(f);
+      return _mailto('Buy property enquiry',
+`Name: ${d.get('name')}
+Email: ${d.get('email')}
+Phone: ${d.get('phone')}
+Project: ${d.get('project') || ''}`);
+    }
+    function sendPartner(f){
+      const d = new FormData(f);
+      return _mailto('Partner / Co-broker',
+`Company/Name: ${d.get('name')}
+Email: ${d.get('email')}
+Region: ${d.get('region')}`);
+    }
+    function sendBuyMail(form){
+      const fd = new FormData(form);
+      const subject = `Buy enquiry — ${fd.get('project')}`;
+      const body =
+`Project: ${fd.get('project')}
+Name: ${fd.get('name')}
+Email: ${fd.get('email')}
+Phone: ${fd.get('phone')}
+Budget: ${fd.get('budget')}
+Message:
+${fd.get('msg') || ''}`;
+      return _mailto(subject, body);
+    }
+  </script>
+</body>
+</html>

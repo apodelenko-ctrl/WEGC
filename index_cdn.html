@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>West East Gate Capital</title>
+  <!-- Tailwind v4 build output -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .card { transition: box-shadow .25s, transform .25s; }
+    .card:hover { box-shadow: 0 12px 30px rgba(0,0,0,.12); transform: translateY(-2px); }
+    .badge { font-size: .75rem; line-height: 1rem; }
+    .section-title { letter-spacing: -0.02em }
+  </style>
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-en]').forEach(el => el.style.display = (lang === 'en') ? '' : 'none');
+      document.querySelectorAll('[data-ru]').forEach(el => el.style.display = (lang === 'ru') ? '' : 'none');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    document.addEventListener('DOMContentLoaded', () => setLang('en'));
+    function calcROI(){
+      const amt = parseFloat(document.getElementById('amt').value||0);
+      const rate = parseFloat(document.getElementById('rate').value||0)/100;
+      const years = parseFloat(document.getElementById('years').value||0);
+      if(!amt || !years) return;
+      const total = amt*Math.pow(1+rate, years);
+      const eff = (Math.pow(total/amt, 1/years)-1)*100;
+      document.getElementById('roiOut').innerHTML =
+        `<div class="p-4 bg-white border rounded"><div class="text-xl font-semibold">$${total.toLocaleString(undefined,{maximumFractionDigits:2})}</div>
+          <div class="text-sm text-gray-600 mt-1" data-en>Projected portfolio value at exit</div>
+          <div class="text-sm text-gray-600 mt-1" data-ru style="display:none">Прогноз итоговой стоимости на выходе</div>
+          <div class="text-sm text-gray-800 mt-2">${eff.toFixed(2)}% p.a.</div></div>`;
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="images/logo.png" alt="WEG Capital" class="h-10">
+        <span class="font-semibold">West East Gate Capital</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6 text-sm">
+        <a href="#about" class="hover:text-blue-700">About</a>
+        <a href="#portfolio" class="hover:text-blue-700">Projects</a>
+        <a href="#methodology" class="hover:text-blue-700">Methodology</a>
+        <a href="#video" class="hover:text-blue-700">How it works</a>
+        <a href="#documents" class="hover:text-blue-700">Documents</a>
+        <a href="#faq" class="hover:text-blue-700">FAQ</a>
+        <a href="#contact" class="hover:text-blue-700">Contact</a>
+      </nav>
+      <div class="flex items-center space-x-2">
+        <button onclick="setLang('en')" class="px-3 py-1 border rounded text-sm">EN</button>
+        <button onclick="setLang('ru')" class="px-3 py-1 border rounded text-sm">RU</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="about" class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold section-title">
+        <span data-en>Real Assets. Real Stability. Real Asia.</span>
+        <span data-ru style="display:none">Реальные активы. Истинная стабильность. Настоящая Азия.</span>
+      </h1>
+      <p class="mt-4 text-lg max-w-3xl mx-auto">
+        <span data-en>Invest from USD 25,000 in premium resort real estate across Asia. 8% annual coupon + 20% success bonus at exit, 36-month horizon. Fully managed. Singapore structure.</span>
+        <span data-ru style="display:none">Инвестируйте от 25 000 USD в премиальную курортную недвижимость Азии. 8% годовых купон + 20% бонус на выходе, горизонт 36 месяцев. Полное управление. Юрисдикция Сингапура.</span>
+      </p>
+      <div class="mt-6 flex items-center justify-center space-x-3">
+        <a href="#join" class="px-6 py-3 bg-blue-600 text-white rounded">
+          <span data-en>Join the Fund</span><span data-ru style="display:none">Вступить в фонд</span>
+        </a>
+        <a href="#portfolio" class="px-6 py-3 bg-gray-900 text-white rounded">
+          <span data-en>Explore Portfolio</span><span data-ru style="display:none">Смотреть портфель</span>
+        </a>
+      </div>
+
+      <!-- Logos -->
+      <div class="mt-10 opacity-80">
+        <div class="text-sm text-gray-500 mb-3">
+          <span data-en>Selected partners & developers</span>
+          <span data-ru style="display:none">Выбранные партнёры и девелоперы</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <img src="images/partner_rhom_bho.png" class="h-10" alt="Rhom Bho">
+          <img src="images/partner_title.png" class="h-10" alt="The Title">
+          <img src="images/partner_media1.png" class="h-8" alt="Media">
+          <img src="images/partner_media2.png" class="h-8" alt="Media">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section class="py-14">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded p-6 card">
+        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M12 3l7 4v5a9 9 0 11-14 0V7l7-4z"/></svg>
+        <h3 class="font-semibold mt-3" data-en>Conservative core + tech edge</h3>
+        <h3 class="font-semibold mt-3" data-ru style="display:none">Консервативно + технологично</h3>
+        <p class="text-sm mt-2" data-en>Stable real assets enhanced by AI-driven selection and risk control.</p>
+        <p class="text-sm mt-2" data-ru style="display:none">Стабильные реальные активы, усиленные ИИ-отбором и управлением риском.</p>
+      </div>
+      <div class="bg-white border rounded p-6 card">
+        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
+        <h3 class="font-semibold mt-3" data-en>Diversified Phuket portfolio</h3>
+        <h3 class="font-semibold mt-3" data-ru style="display:none">Диверсифицированный портфель Пхукета</h3>
+        <p class="text-sm mt-2" data-en>11 premium projects across Naiyang, Bang-Tao, Rawai, Kata.</p>
+        <p class="text-sm mt-2" data-ru style="display:none">11 премиальных проектов: Найянг, Банг-Тау, Равай, Ката.</p>
+      </div>
+      <div class="bg-white border rounded p-6 card">
+        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M11 3v10H6l6 8 6-8h-5V3z"/></svg>
+        <h3 class="font-semibold mt-3" data-en>8% coupon + 20% bonus</h3>
+        <h3 class="font-semibold mt-3" data-ru style="display:none">8% купон + 20% бонус</h3>
+        <p class="text-sm mt-2" data-en>36-month cycle with clear exits: resale, rental, buybacks.</p>
+        <p class="text-sm mt-2" data-ru style="display:none">Цикл 36 месяцев, понятные выходы: перепродажа, аренда, buyback.</p>
+      </div>
+      <div class="bg-white border rounded p-6 card">
+        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M12 8c-2.21 0-4 1.79-4 4v6h8v-6c0-2.21-1.79-4-4-4zM7 10V8a5 5 0 0110 0v2"/></svg>
+        <h3 class="font-semibold mt-3" data-en>Singapore legal structure</h3>
+        <h3 class="font-semibold mt-3" data-ru style="display:none">Сингапурская структура</h3>
+        <p class="text-sm mt-2" data-en>Transparent governance with trusted developers.</p>
+        <p class="text-sm mt-2" data-ru style="display:none">Прозрачное управление и проверенные девелоперы.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>Project Portfolio</span><span data-ru style="display:none">Портфель проектов</span>
+      </h2>
+      <p class="text-center text-gray-600 mt-3 max-w-3xl mx-auto" data-en>Browse our first investment round (2025–2026). Click a project to enquire or buy directly.</p>
+      <p class="text-center text-gray-600 mt-3 max-w-3xl mx-auto" data-ru style="display:none">Портфель первого раунда (2025–2026). Нажмите на проект, чтобы отправить заявку или купить.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <!-- Cards (placeholders) -->
+        <article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/katabello.jpg" alt="Katabello, Kata Beach" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Kata</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">760 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2027</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~12%</span>
+    </div>
+    <h3 class="font-semibold">Katabello, Kata Beach</h3>
+    <p class="text-sm text-gray-600 mt-1">700 m to beach · Luxury resale/rental exit</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/modeva.jpg" alt="Modeva, Bang Tao" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Bang-Tao</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">859 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2026</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~10.3%</span>
+    </div>
+    <h3 class="font-semibold">Modeva, Bang Tao</h3>
+    <p class="text-sm text-gray-600 mt-1">~500 m to beach · Lifestyle/pet-friendly</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/serenity.jpg" alt="Serenity, Naiyang" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Naiyang</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">814 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2026</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~9%</span>
+    </div>
+    <h3 class="font-semibold">Serenity, Naiyang</h3>
+    <p class="text-sm text-gray-600 mt-1">~400 m to beach · Large green areas</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/artrio.jpg" alt="Artrio, Bang Tao" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Bang-Tao</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">435 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2026</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~11%</span>
+    </div>
+    <h3 class="font-semibold">Artrio, Bang Tao</h3>
+    <p class="text-sm text-gray-600 mt-1">~700 m to beach · 40+ amenities</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/cielo.jpg" alt="Cielo, Rawai" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Rawai</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">171 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2026</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~12%</span>
+    </div>
+    <h3 class="font-semibold">Cielo, Rawai</h3>
+    <p class="text-sm text-gray-600 mt-1">~50 m to beach · Rooftop pool & cowork</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/adora.jpg" alt="Adora, Rawai" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Rawai</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">210 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2027</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~11%</span>
+    </div>
+    <h3 class="font-semibold">Adora, Rawai</h3>
+    <p class="text-sm text-gray-600 mt-1">~400 m to beach · Low-rise</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/heritage.jpg" alt="Heritage, Bang Tao" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Bang-Tao</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">889 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2025</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~12%</span>
+    </div>
+    <h3 class="font-semibold">Heritage, Bang Tao</h3>
+    <p class="text-sm text-gray-600 mt-1">Near Sirinat NP · Onsen & sky lounge</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/legendary.jpg" alt="Legendary, Bang Tao" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Bang-Tao</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">637 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2026</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~13%</span>
+    </div>
+    <h3 class="font-semibold">Legendary, Bang Tao</h3>
+    <p class="text-sm text-gray-600 mt-1">~700 m to beach · Tourist rental + resale</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/halo1.jpg" alt="Halo 1, Naiyang" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Naiyang</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Condo</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">329 units</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completed 2024</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~12%</span>
+    </div>
+    <h3 class="font-semibold">Halo 1, Naiyang</h3>
+    <p class="text-sm text-gray-600 mt-1">~350 m to beach · Airport 5 min</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+<article class="bg-white border rounded overflow-hidden card">
+  <img src="images/projects/kirara.jpg" alt="Villa Kirara, Bang Tao" class="w-full h-56 object-cover">
+  <div class="p-5">
+    <div class="flex items-center flex-wrap gap-2 mb-2">
+      <span class="badge px-2 py-1 bg-blue-50 text-blue-700 rounded">Cherng Talay</span>
+      <span class="badge px-2 py-1 bg-green-50 text-green-700 rounded">Villas</span>
+      <span class="badge px-2 py-1 bg-gray-100 text-gray-700 rounded">Phase 1 – 37</span>
+      <span class="badge px-2 py-1 bg-yellow-50 text-yellow-700 rounded">Completion 2026</span>
+      <span class="badge px-2 py-1 bg-purple-50 text-purple-700 rounded">ROI ~10%</span>
+    </div>
+    <h3 class="font-semibold">Villa Kirara, Bang Tao</h3>
+    <p class="text-sm text-gray-600 mt-1">Luxury villas · High-flat promo scheme</p>
+    <div class="mt-4 flex items-center gap-2">
+      <a href="#buy" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Buy / Enquire</a>
+      <a href="#join" class="px-3 py-2 bg-gray-900 text-white rounded text-sm">Join Fund</a>
+    </div>
+  </div>
+</article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section id="methodology" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>Our Methodology (AI-Driven)</span><span data-ru style="display:none">Наша методология (ИИ-отбор)</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-white border rounded p-6 card">
+          <h3 class="font-semibold" data-en>1) Sourcing & Acquisition</h3>
+          <h3 class="font-semibold" data-ru style="display:none">1) Поиск и приобретение</h3>
+          <p class="text-sm mt-2" data-en>Off-plan resort assets in top growth zones (Naiyang, Bang-Tao, Rawai, Kata).</p>
+          <p class="text-sm mt-2" data-ru style="display:none">Off-plan активы в зонах роста (Найянг, Банг-Тау, Равай, Ката).</p>
+        </div>
+        <div class="bg-white border rounded p-6 card">
+          <h3 class="font-semibold" data-en>2) Due Diligence & Scoring</h3>
+          <h3 class="font-semibold" data-ru style="display:none">2) Due Diligence и скоринг</h3>
+          <p class="text-sm mt-2" data-en>Weighted metrics: IRR (25%), Liquidity (20%), Stability (20%), Yield (15%), Risk adj. (20%).</p>
+          <p class="text-sm mt-2" data-ru style="display:none">Веса метрик: IRR (25%), ликвидность (20%), стабильность (20%), доходность (15%), риск-коррекция (20%).</p>
+        </div>
+        <div class="bg-white border rounded p-6 card">
+          <h3 class="font-semibold" data-en>3) Rental Mgmt & Exit</h3>
+          <h3 class="font-semibold" data-ru style="display:none">3) Управление и выход</h3>
+          <p class="text-sm mt-2" data-en>Tourist rental, guaranteed programs, resale / buyback in ~36 months.</p>
+          <p class="text-sm mt-2" data-ru style="display:none">Туристическая аренда/гарантированные программы, перепродажа/выкуп за ~36 мес.</p>
+        </div>
+      </div>
+      <div class="mt-8 bg-blue-50 border border-blue-100 rounded p-6">
+        <p class="text-sm" data-en><strong>Score = (IRR × StabilityIndex) / RiskFactor</strong> → Projects with top percentile scores enter the fund.</p>
+        <p class="text-sm" data-ru style="display:none"><strong>Score = (IRR × StabilityIndex) / RiskFactor</strong> → В фонд попадают проекты из верхнего процента рейтинга.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>How the Fund Works</span><span data-ru style="display:none">Как работает фонд</span>
+      </h2>
+      <p class="text-center text-gray-600 mt-3" data-en>Short animated overview of our 36-month cycle and return distribution.</p>
+      <p class="text-center text-gray-600 mt-3" data-ru style="display:none">Короткая анимация цикла на 36 месяцев и распределения дохода.</p>
+      <div class="mt-8">
+        <iframe class="w-full h-96 rounded border"
+          src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+          title="WEG Capital – How it works" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI Calculator -->
+  <section id="calculator" class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>Return Simulator</span><span data-ru style="display:none">Симулятор доходности</span>
+      </h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <form oninput="calcROI()" class="bg-white border rounded p-6">
+          <label class="text-sm font-medium">
+            <span data-en>Investment amount (USD)</span><span data-ru style="display:none">Сумма инвестиций (USD)</span>
+            <input id="amt" type="number" class="mt-1 w-full border rounded px-3 py-2" placeholder="25000" />
+          </label>
+          <label class="text-sm font-medium block mt-4">
+            <span data-en>Annual return (%)</span><span data-ru style="display:none">Доходность (% год.)</span>
+            <input id="rate" type="number" class="mt-1 w-full border rounded px-3 py-2" placeholder="12" />
+          </label>
+          <label class="text-sm font-medium block mt-4">
+            <span data-en>Term (years)</span><span data-ru style="display:none">Срок (лет)</span>
+            <input id="years" type="number" class="mt-1 w-full border rounded px-3 py-2" placeholder="3" />
+          </label>
+          <button type="button" onclick="calcROI()" class="mt-5 w-full px-4 py-2 bg-blue-600 text-white rounded">
+            <span data-en>Compute</span><span data-ru style="display:none">Рассчитать</span>
+          </button>
+        </form>
+        <div id="roiOut" class="space-y-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents -->
+  <section id="documents" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>Documents & Downloads</span><span data-ru style="display:none">Документы и материалы</span>
+      </h2>
+      <ul class="mt-8 grid md:grid-cols-3 gap-4 text-sm">
+        <li class="bg-gray-100 rounded p-4 border">
+          <a href="docs/WEG_First_Investment_Round.pdf" class="text-blue-700 font-medium">First Investment Round 2025–2026 (PDF)</a>
+        </li>
+        <li class="bg-gray-100 rounded p-4 border">
+          <a href="docs/Fund_Legal_Structure.pdf" class="text-blue-700 font-medium">Fund Charter & Legal Memos (PDF)</a>
+        </li>
+        <li class="bg-gray-100 rounded p-4 border">
+          <a href="docs/Risk_Disclosure.pdf" class="text-blue-700 font-medium">Risk Disclosure Statement (PDF)</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>Risks & FAQ</span><span data-ru style="display:none">Риски и FAQ</span>
+      </h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6 text-sm">
+        <div class="bg-white border rounded p-6">
+          <h3 class="font-semibold" data-en>Minimum investment</h3>
+          <h3 class="font-semibold" data-ru style="display:none">Минимальная сумма</h3>
+          <p class="mt-2" data-en>USD 25,000 entry. Early redemption not guaranteed.</p>
+          <p class="mt-2" data-ru style="display:none">Порог входа 25 000 USD. Досрочный выкуп не гарантируется.</p>
+        </div>
+        <div class="bg-white border rounded p-6">
+          <h3 class="font-semibold" data-en>Market & developer delay risk</h3>
+          <h3 class="font-semibold" data-ru style="display:none">Риски рынка и задержек</h3>
+          <p class="mt-2" data-en>Diversification + buffers in contracts; scenario stress-tests.</p>
+          <p class="mt-2" data-ru style="display:none">Диверсификация + буферы в контрактах; стресс-тесты сценариев.</p>
+        </div>
+        <div class="bg-white border rounded p-6">
+          <h3 class="font-semibold" data-en>Currency & legal</h3>
+          <h3 class="font-semibold" data-ru style="display:none">Валютные и юридические</h3>
+          <p class="mt-2" data-en>USD-denominated; local revenues hedged where needed.</p>
+          <p class="mt-2" data-ru style="display:none">Номинал в USD; локальные доходы хеджируются при необходимости.</p>
+        </div>
+        <div class="bg-white border rounded p-6">
+          <h3 class="font-semibold" data-en>Guarantees</h3>
+          <h3 class="font-semibold" data-ru style="display:none">Гарантии</h3>
+          <p class="mt-2" data-en>8% coupon is fixed; beyond that performance is not guaranteed.</p>
+          <p class="mt-2" data-ru style="display:none">8% купон фиксирован; доход сверх этого не гарантирован.</p>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-6 text-center" data-en>All investments involve risk, including loss of principal. Past performance does not guarantee future results.</p>
+      <p class="text-xs text-gray-500 mt-6 text-center" data-ru style="display:none">Любые инвестиции связаны с риском потери капитала. Прошлые результаты не гарантируют будущих.</p>
+    </div>
+  </section>
+
+  <!-- Team & Partners -->
+  <section id="team" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>Team & Partners</span><span data-ru style="display:none">Команда и партнёры</span>
+      </h2>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-100 border rounded p-6">
+          <img src="images/team/team1.jpg" class="w-full h-40 object-cover rounded" alt="">
+          <div class="mt-3 font-semibold">[Name], CEO</div>
+          <div class="text-sm text-gray-600">15+ yrs in real estate & finance (Asia)</div>
+        </div>
+        <div class="bg-gray-100 border rounded p-6">
+          <img src="images/team/team2.jpg" class="w-full h-40 object-cover rounded" alt="">
+          <div class="mt-3 font-semibold">[Name], CIO</div>
+          <div class="text-sm text-gray-600">Private equity & asset management</div>
+        </div>
+        <div class="bg-gray-100 border rounded p-6">
+          <img src="images/team/team3.jpg" class="w-full h-40 object-cover rounded" alt="">
+          <div class="mt-3 font-semibold">[Name], Head of Investments</div>
+          <div class="text-sm text-gray-600">SE Asia real estate specialist</div>
+        </div>
+      </div>
+      <div class="mt-10 text-center opacity-80">
+        <div class="text-sm text-gray-500 mb-3" data-en>Partners & Media</div>
+        <div class="text-sm text-gray-500 mb-3" data-ru style="display:none">Партнёры и СМИ</div>
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <img src="images/partner_rhom_bho.png" class="h-10" alt="Rhom Bho">
+          <img src="images/partner_title.png" class="h-10" alt="The Title">
+          <img src="images/partner_media1.png" class="h-8" alt="Media">
+          <img src="images/partner_media2.png" class="h-8" alt="Media">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Forms -->
+  <section id="contact" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center section-title">
+        <span data-en>Get in touch</span><span data-ru style="display:none">Связаться с нами</span>
+      </h2>
+      <div class="mt-10 grid md:grid-cols-2 gap-6" id="join">
+        <form class="bg-white border rounded p-6 card" action="mailto:info@wegc.found" method="post" enctype="text/plain">
+          <h3 class="font-semibold text-lg" data-en>Join the Fund</h3>
+          <h3 class="font-semibold text-lg" data-ru style="display:none">Вступить в фонд</h3>
+          <input type="hidden" name="subject" value="Join the Fund – WEG Capital">
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <input required name="Name" class="border rounded px-3 py-2" placeholder="Name / Имя">
+            <input required type="email" name="Email" class="border rounded px-3 py-2" placeholder="Email">
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <input name="Phone" class="border rounded px-3 py-2" placeholder="Phone / Телефон">
+            <input name="Investment_Amount_USD" type="number" class="border rounded px-3 py-2" placeholder="USD 25000+">
+          </div>
+          <textarea name="Message" rows="3" class="border rounded px-3 py-2 w-full mt-3" placeholder="Message / Сообщение"></textarea>
+          <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded">Submit / Отправить</button>
+        </form>
+        <form class="bg-white border rounded p-6 card" action="mailto:info@wegc.found" method="post" enctype="text/plain" id="buy">
+          <h3 class="font-semibold text-lg" data-en>Property Enquiry / Direct Purchase</h3>
+          <h3 class="font-semibold text-lg" data-ru style="display:none">Заявка на объект / Прямая покупка</h3>
+          <input type="hidden" name="subject" value="Property Enquiry – WEG Capital">
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <input required name="Name" class="border rounded px-3 py-2" placeholder="Name / Имя">
+            <input required type="email" name="Email" class="border rounded px-3 py-2" placeholder="Email">
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-3">
+            <input name="Phone" class="border rounded px-3 py-2" placeholder="Phone / Телефон">
+            <input name="Budget_USD" type="number" class="border rounded px-3 py-2" placeholder="Budget / Бюджет">
+          </div>
+          <select name="Project" class="border rounded px-3 py-2 w-full mt-3">
+            <option value="">Select Project / Выберите проект</option>
+            <option>Katabello (Kata)</option>
+            <option>Modeva (Bang-Tao)</option>
+            <option>Serenity (Naiyang)</option>
+            <option>Artrio (Bang-Tao)</option>
+            <option>Cielo (Rawai)</option>
+            <option>Adora (Rawai)</option>
+            <option>Heritage (Bang-Tao)</option>
+            <option>Legendary (Bang-Tao)</option>
+            <option>Halo 1 (Naiyang)</option>
+            <option>Villa Kirara (Bang-Tao)</option>
+          </select>
+          <textarea name="Message" rows="3" class="border rounded px-3 py-2 w-full mt-3" placeholder="Message / Сообщение"></textarea>
+          <button class="mt-4 px-4 py-2 bg-gray-900 text-white rounded">Send / Отправить</button>
+        </form>
+      </div>
+      <div class="text-center text-sm text-gray-600 mt-8">
+        <div>Email: <a class="text-blue-700" href="mailto:info@wegc.found">info@wegc.found</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-200 text-center py-8">
+    <div class="text-sm">© 2025 West East Gate Capital. <span data-en>All rights reserved.</span><span data-ru style="display:none">Все права защищены.</span></div>
+  </footer>
+</body>
+</html>
