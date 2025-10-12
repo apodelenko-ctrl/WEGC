@@ -4,9 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>West East Real Estate — Phuket Property Marketplace</title>
-  <meta name="description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Leasehold & Freehold explained. Curated by GIDR data." />
+  <meta name="description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Leasehold & Freehold explained. Curated by GIDR data.">
+
+  <!-- Perf: preconnect to Tailwind CDN -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
+  <!-- Tailwind (можно позже заменить на скомпилированный CSS) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preload" as="image" href="/images/hero_phuket.jpg">
+
+  <!-- LCP image preload: фактический кадр из HERO -->
+  <link rel="preload" as="image" href="/images/title-vivi-exterior-1280x791.jpg" imagesrcset="/images/title-vivi-exterior-1280x791.jpg 1x" imagesizes="(min-width: 768px) 600px, 90vw">
+
   <style>
     .container-max{max-width:1200px}
     .badge{display:inline-block;padding:.25rem .5rem;border-radius:.5rem;font-size:.75rem;line-height:1}
@@ -40,9 +48,10 @@
     .thumbs{display:flex;gap:.5rem;overflow-x:auto;padding-top:.5rem}
     .thumbs img{height:64px;width:96px;object-fit:cover;border-radius:.5rem;border:1px solid #e5e7eb;cursor:pointer}
   </style>
-    <!-- Canonical -->
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://wegc.fund/">
-  
+
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
@@ -57,20 +66,23 @@
       "https://www.instagram.com/westeastgate/"
     ]
   }
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://wegc.fund/",
-  "name": "West East Real Estate",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://wegc.fund/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
   </script>
+
+  <!-- Structured Data: WebSite + SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://wegc.fund/",
+    "name": "West East Real Estate",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://wegc.fund/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="West East Real Estate">
@@ -127,7 +139,13 @@
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-lg border">
-        <img src="/images/title-vivi-exterior-1280x791.jpg" alt="Phuket hero" class="w-full h-full object-cover">
+        <img
+          src="/images/title-vivi-exterior-1280x791.jpg"
+          alt="Phuket hero"
+          class="w-full h-full object-cover"
+          width="1280" height="791"
+          decoding="async"
+          fetchpriority="high">
       </div>
     </div>
   </header>
@@ -204,7 +222,8 @@
 
         <!-- MODEVA -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-modeva-exterior-4-1.jpg" alt="The Modeva — Bang Tao" class="w-full h-48 object-cover" />
+          <img src="/images/the-modeva-exterior-4-1.jpg" alt="The Modeva — Bang Tao"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Modeva</h3>
             <p class="text-sm text-gray-600 mb-1">Bang Tao, Phuket, Thailand</p>
@@ -219,7 +238,8 @@
 
         <!-- KATABELLO -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-title-katabello-exterior-2.jpg" alt="The Title Katabello — Kata/Karon" class="w-full h-48 object-cover" />
+          <img src="/images/the-title-katabello-exterior-2.jpg" alt="The Title Katabello — Kata/Karon"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Title Katabello</h3>
             <p class="text-sm text-gray-600 mb-1">Kata / Karon, Phuket, Thailand</p>
@@ -234,7 +254,8 @@
 
         <!-- ADORA -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-title-adora-exterior-9.jpg" alt="The Title Adora — Rawai" class="w-full h-48 object-cover" />
+          <img src="/images/the-title-adora-exterior-9.jpg" alt="The Title Adora — Rawai"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Title Adora Rawai</h3>
             <p class="text-sm text-gray-600 mb-1">Rawai, Phuket, Thailand</p>
@@ -248,7 +269,8 @@
 
         <!-- ARTRIO -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-title-artrio-exterior-1.jpg" alt="The Title Artrio — Bang Tao" class="w-full h-48 object-cover" />
+          <img src="/images/the-title-artrio-exterior-1.jpg" alt="The Title Artrio — Bang Tao"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Title Artrio</h3>
             <p class="text-sm text-gray-600 mb-1">Bang Tao, Phuket, Thailand</p>
@@ -263,7 +285,8 @@
 
         <!-- VIVI -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/title-vivi-exterior-3.jpg" alt="The Title ViVi — Naiyang" class="w-full h-48 object-cover" />
+          <img src="/images/title-vivi-exterior-3.jpg" alt="The Title ViVi — Naiyang"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Title ViVi</h3>
             <p class="text-sm text-gray-600 mb-1">Naiyang, Phuket, Thailand</p>
@@ -278,7 +301,8 @@
 
         <!-- CIELO -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/cielo_cover.jpg" alt="The Title Cielo — Rawai" class="w-full h-48 object-cover" />
+          <img src="/images/cielo_cover.jpg" alt="The Title Cielo — Rawai"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Title Cielo</h3>
             <p class="text-sm text-gray-600 mb-1">Rawai, Phuket, Thailand</p>
@@ -292,7 +316,8 @@
 
         <!-- HALO 1 -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/halo1_cover.jpg" alt="The Title Halo 1 — Naiyang" class="w-full h-48 object-cover" />
+          <img src="/images/halo1_cover.jpg" alt="The Title Halo 1 — Naiyang"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Title Halo 1</h3>
             <p class="text-sm text-gray-600 mb-1">Naiyang, Phuket, Thailand</p>
@@ -306,7 +331,8 @@
 
         <!-- SERENITY -->
         <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/serenity_cover.jpg" alt="The Title Serenity — Naiyang" class="w-full h-48 object-cover" />
+          <img src="/images/serenity_cover.jpg" alt="The Title Serenity — Naiyang"
+               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-1">The Title Serenity</h3>
             <p class="text-sm text-gray-600 mb-1">Naiyang, Phuket, Thailand</p>
@@ -326,28 +352,28 @@
   <section id="contact" class="py-16 bg-white">
     <div class="container-max mx-auto px-4">
       <h2 class="text-3xl font-semibold mb-6">Buy property</h2>
-      <p class="text-gray-600 mb-6 max-w-2xl">Tell us who you are and which project you’re interested in — we’ll reply from <strong>post@wegc.found</strong> with a curated dossier and next steps.</p>
+      <p class="text-gray-600 mb-6 max-w-2xl">Tell us who you are and which project you’re interested in — we’ll reply from <strong>post@wegc.fund</strong> with a curated dossier and next steps.</p>
 
       <form id="buyForm" onsubmit="return sendBuyMail(this)" class="grid md:grid-cols-2 gap-4 max-w-3xl">
         <div>
-          <label class="block text-sm text-gray-600 mb-1">Full name</label>
-          <input name="name" required class="w-full border rounded px-3 py-2" />
+          <label class="block text-sm text-gray-600 mb-1" for="name">Full name</label>
+          <input id="name" name="name" required autocomplete="name" class="w-full border rounded px-3 py-2">
         </div>
         <div>
-          <label class="block text-sm text-gray-600 mb-1">Email</label>
-          <input name="email" type="email" required class="w-full border rounded px-3 py-2" />
+          <label class="block text-sm text-gray-600 mb-1" for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" class="w-full border rounded px-3 py-2">
         </div>
         <div>
-          <label class="block text-sm text-gray-600 mb-1">Phone / WhatsApp</label>
-          <input name="phone" class="w-full border rounded px-3 py-2" />
+          <label class="block text-sm text-gray-600 mb-1" for="phone">Phone / WhatsApp</label>
+          <input id="phone" name="phone" autocomplete="tel" class="w-full border rounded px-3 py-2">
         </div>
         <div>
-          <label class="block text-sm text-gray-600 mb-1">Budget (USD)</label>
-          <input name="budget" type="number" min="0" class="w-full border rounded px-3 py-2" />
+          <label class="block text-sm text-gray-600 mb-1" for="budget">Budget (USD)</label>
+          <input id="budget" name="budget" type="number" inputmode="numeric" min="0" class="w-full border rounded px-3 py-2">
         </div>
         <div class="md:col-span-2">
-          <label class="block text-sm text-gray-600 mb-1">Project</label>
-          <select name="project" class="w-full border rounded px-3 py-2">
+          <label class="block text-sm text-gray-600 mb-1" for="project">Project</label>
+          <select id="project" name="project" class="w-full border rounded px-3 py-2">
             <option value="The Modeva">The Modeva (Bang Tao)</option>
             <option value="The Title Katabello">The Title Katabello (Kata/Karon)</option>
             <option value="The Title Adora Rawai">The Title Adora (Rawai)</option>
@@ -359,12 +385,12 @@
           </select>
         </div>
         <div class="md:col-span-2">
-          <label class="block text-sm text-gray-600 mb-1">Message</label>
-          <textarea name="msg" rows="4" class="w-full border rounded px-3 py-2" placeholder="Any specifics (tenure, unit type, viewing dates)…"></textarea>
+          <label class="block text-sm text-gray-600 mb-1" for="msg">Message</label>
+          <textarea id="msg" name="msg" rows="4" class="w-full border rounded px-3 py-2" placeholder="Any specifics (tenure, unit type, viewing dates)…"></textarea>
         </div>
         <div class="md:col-span-2 flex items-center gap-2 text-xs text-gray-600">
-          <input type="checkbox" required>
-          I agree to Terms & Privacy.
+          <input id="agree" type="checkbox" required>
+          <label for="agree">I agree to Terms &amp; Privacy.</label>
         </div>
         <div class="md:col-span-2">
           <button class="px-5 py-3 bg-emerald-600 text-white rounded">Send enquiry</button>
@@ -388,7 +414,7 @@
     <div class="container-max mx-auto px-4 text-center">
       <p class="text-lg">West East Real Estate — stealth-mode startup real estate agency</p>
       <p class="text-sm text-gray-400 mt-1">Core edge: digitalization & AI forecasting based on research from the Hong Kong Institute of Digital Research (GIDR).</p>
-      <p class="mt-4">Email: <a class="text-blue-300" href="mailto:post@wegc.found">post@wegc.found</a></p>
+      <p class="mt-4">Email: <a class="text-blue-300" href="mailto:post@wegc.fund">post@wegc.fund</a></p>
       <p class="mt-2 text-xs text-gray-400">© 2025 West East. All rights reserved.</p>
     </div>
   </footer>
@@ -399,7 +425,7 @@
   <template data-passport="modeva">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/the-modeva-exterior-5-1.jpg" class="w-full h-64 object-cover rounded-xl" alt="Modeva — Bang Tao">
+        <img src="/images/the-modeva-exterior-5-1.jpg" class="w-full h-64 object-cover rounded-xl" alt="Modeva — Bang Tao" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">Modeva — Bang Tao</h4>
           <div class="text-sm text-gray-600 mb-3">
@@ -413,16 +439,16 @@
           </div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/modeva.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=Modeva%20Passport&body=Please%20send%20full%20dossier%20and%20price%20list." class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=Modeva%20Passport&body=Please%20send%20full%20dossier%20and%20price%20list." class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
 
       <div class="thumbs mb-3">
-        <img src="/images/the-modeva-exterior-3-1-1280x668.jpg" alt="">
-        <img src="/images/the-modeva-exterior-4-1.jpg" alt="">
-        <img src="/images/modeva-interior-1bdr-3.jpg" alt="">
-        <img src="/images/modeva-interior-1bdr-4.jpg" alt="">
+        <img src="/images/the-modeva-exterior-3-1-1280x668.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-modeva-exterior-4-1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/modeva-interior-1bdr-3.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/modeva-interior-1bdr-4.jpg" alt="" loading="lazy" decoding="async">
       </div>
 
       <div class="pp-tabs flex gap-4 border-b mb-3">
@@ -480,21 +506,21 @@
   <template data-passport="katabello">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/the-title-katabello-exterior-2.jpg" class="w-full h-64 object-cover rounded-xl" alt="Katabello">
+        <img src="/images/the-title-katabello-exterior-2.jpg" class="w-full h-64 object-cover rounded-xl" alt="Katabello" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title Katabello — Kata/Karon</h4>
           <div class="text-sm text-gray-600 mb-3">Condo • 8×7 floors • ETA 2027 <span class="badge badge-lease ml-2">Leasehold</span></div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/katabello.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=Katabello%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=Katabello%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
       <div class="thumbs mb-3">
-        <img src="/images/the-title-katabello-exterior-27-1280x720.jpg" alt="">
-        <img src="/images/the-title-katabello-exterior-26-1280x720.jpg" alt="">
-        <img src="/images/the-title-katabello-interior-1.jpg" alt="">
-        <img src="/images/the-title-katabello-interior-2.jpg" alt="">
+        <img src="/images/the-title-katabello-exterior-27-1280x720.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-katabello-exterior-26-1280x720.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-katabello-interior-1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-katabello-interior-2.jpg" alt="" loading="lazy" decoding="async">
       </div>
     </div>
   </template>
@@ -503,22 +529,22 @@
   <template data-passport="adora">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/the-title-adora-exterior-9.jpg" class="w-full h-64 object-cover rounded-xl" alt="Adora Rawai">
+        <img src="/images/the-title-adora-exterior-9.jpg" class="w-full h-64 object-cover rounded-xl" alt="Adora Rawai" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title Adora — Rawai</h4>
           <div class="text-sm text-gray-600 mb-3">1–2 BR + penthouses • ~400 m beach <span class="badge badge-lease ml-2">Leasehold</span></div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/adora.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=Adora%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=Adora%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
       <div class="thumbs mb-3">
-        <img src="/images/the-title-adora-exterior-8.jpg" alt="">
-        <img src="/images/the-title-adora-interior-3-1280x873.jpg" alt="">
-        <img src="/images/the-title-adora-interior-4-1280x825.jpg" alt="">
-        <img src="/images/the-title-adora-interior-5-1280x836.jpg" alt="">
-        <img src="/images/the-title-adora-up-1bdr-30.jpg" alt="">
+        <img src="/images/the-title-adora-exterior-8.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-adora-interior-3-1280x873.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-adora-interior-4-1280x825.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-adora-interior-5-1280x836.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-adora-up-1bdr-30.jpg" alt="" loading="lazy" decoding="async">
       </div>
     </div>
   </template>
@@ -527,24 +553,24 @@
   <template data-passport="artrio">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/the-title-artrio-exterior-1.jpg" class="w-full h-64 object-cover rounded-xl" alt="Artrio">
+        <img src="/images/the-title-artrio-exterior-1.jpg" class="w-full h-64 object-cover rounded-xl" alt="Artrio" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title Artrio — Bang Tao</h4>
           <div class="text-sm text-gray-600 mb-3">Condo • 4×7 floors • ETA 2026 <span class="badge badge-lease ml-2">Leasehold</span></div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/artrio.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=Artrio%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=Artrio%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
       <div class="thumbs mb-3">
-        <img src="/images/the-title-artrio-exterior-2-1.jpg" alt="">
-        <img src="/images/the-title-artrio-exterior-3-1.jpg" alt="">
-        <img src="/images/the-title-artrio-exterior-4-1.jpg" alt="">
-        <img src="/images/artrio-interior-2bdr-1.jpg" alt="">
-        <img src="/images/artrio-interior-2bdr-2-1.jpg" alt="">
-        <img src="/images/the-title-artrio-up-1bdr-29-s.jpg" alt="">
-        <img src="/images/the-title-artrio-up-1bdr-32-mc.jpg" alt="">
+        <img src="/images/the-title-artrio-exterior-2-1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-artrio-exterior-3-1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-artrio-exterior-4-1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/artrio-interior-2bdr-1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/artrio-interior-2bdr-2-1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-artrio-up-1bdr-29-s.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/the-title-artrio-up-1bdr-32-mc.jpg" alt="" loading="lazy" decoding="async">
       </div>
     </div>
   </template>
@@ -553,25 +579,25 @@
   <template data-passport="vivi">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/title-vivi-exterior-4.jpg" class="w-full h-64 object-cover rounded-xl" alt="ViVi">
+        <img src="/images/title-vivi-exterior-4.jpg" class="w-full h-64 object-cover rounded-xl" alt="ViVi" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title ViVi — Naiyang</h4>
           <div class="text-sm text-gray-600 mb-3">Condo • resort concept <span class="badge badge-free ml-2">Freehold</span></div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/vivi.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=ViVi%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=ViVi%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
       <div class="thumbs mb-3">
-        <img src="/images/title-vivi-exterior-2-1280x716.jpg" alt="">
-        <img src="/images/title-vivi-exterior-5.jpg" alt="">
-        <img src="/images/title-vivi-interior-27sqm.jpg" alt="">
-        <img src="/images/title-vivi-interior-27sqm-2.jpg" alt="">
-        <img src="/images/title-vivi-interior-29sqm.jpg" alt="">
-        <img src="/images/title-vivi-interior-29sqm-2.jpg" alt="">
-        <img src="/images/title-vivi-up-27.jpg" alt="">
-        <img src="/images/title-vivi-up-29.jpg" alt="">
+        <img src="/images/title-vivi-exterior-2-1280x716.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/title-vivi-exterior-5.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/title-vivi-interior-27sqm.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/title-vivi-interior-27sqm-2.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/title-vivi-interior-29sqm.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/title-vivi-interior-29sqm-2.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/title-vivi-up-27.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/title-vivi-up-29.jpg" alt="" loading="lazy" decoding="async">
       </div>
     </div>
   </template>
@@ -580,20 +606,20 @@
   <template data-passport="cielo">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/cielo_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="Cielo Rawai">
+        <img src="/images/cielo_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="Cielo Rawai" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title Cielo — Rawai</h4>
           <div class="text-sm text-gray-600 mb-3">171 units • near beach <span class="badge badge-free ml-2">Freehold</span></div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/cielo.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=Cielo%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=Cielo%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
       <div class="thumbs mb-3">
-        <img src="/images/cielo_interior_1.jpg" alt="">
-        <img src="/images/cielo_interior_2.jpg" alt="">
-        <img src="/images/cielo_exterior_1.jpg" alt="">
+        <img src="/images/cielo_interior_1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/cielo_interior_2.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/cielo_exterior_1.jpg" alt="" loading="lazy" decoding="async">
       </div>
     </div>
   </template>
@@ -602,19 +628,19 @@
   <template data-passport="halo1">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/halo1_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="Halo 1">
+        <img src="/images/halo1_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="Halo 1" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title Halo 1 — Naiyang</h4>
           <div class="text-sm text-gray-600 mb-3">329 units • 7 floors • ~350 m beach <span class="badge badge-free ml-2">Freehold</span></div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/halo1.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=Halo1%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=Halo1%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
       <div class="thumbs mb-3">
-        <img src="/images/halo1_exterior_1.jpg" alt="">
-        <img src="/images/halo1_interior_1.jpg" alt="">
+        <img src="/images/halo1_exterior_1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/halo1_interior_1.jpg" alt="" loading="lazy" decoding="async">
       </div>
     </div>
   </template>
@@ -623,19 +649,19 @@
   <template data-passport="serenity">
     <div data-pp>
       <div class="pp-grid mb-4">
-        <img src="/images/serenity_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="Serenity Naiyang">
+        <img src="/images/serenity_cover.jpg" class="w-full h-64 object-cover rounded-xl" alt="Serenity Naiyang" loading="lazy" decoding="async" width="1024" height="512">
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title Serenity — Naiyang</h4>
           <div class="text-sm text-gray-600 mb-3">814 units • ~400 m beach <span class="badge badge-lease ml-2">Leasehold</span></div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/serenity.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.found?subject=Serenity%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
+            <a href="mailto:post@wegc.fund?subject=Serenity%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
         </div>
       </div>
       <div class="thumbs mb-3">
-        <img src="/images/serenity_exterior_1.jpg" alt="">
-        <img src="/images/serenity_interior_1.jpg" alt="">
+        <img src="/images/serenity_exterior_1.jpg" alt="" loading="lazy" decoding="async">
+        <img src="/images/serenity_interior_1.jpg" alt="" loading="lazy" decoding="async">
       </div>
     </div>
   </template>
@@ -645,18 +671,18 @@
     <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border">
       <div class="flex items-center justify-between px-5 py-3 border-b">
         <div class="font-semibold">Project passport</div>
-        <button class="p-2" onclick="closeModal()">✕</button>
+        <button class="p-2" onclick="closeModal()" aria-label="Close">✕</button>
       </div>
       <div id="modal-body" class="p-5"></div>
     </div>
   </div>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <button class="lb-close" onclick="closeLb()">✕</button>
-    <button class="lb-btn lb-prev" onclick="navLb(-1)">❮</button>
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lb-close" onclick="closeLb()" aria-label="Close">✕</button>
+    <button class="lb-btn lb-prev" onclick="navLb(-1)" aria-label="Previous">❮</button>
     <img id="lb-img" class="lb-img" alt="preview">
-    <button class="lb-btn lb-next" onclick="navLb(1)">❯</button>
+    <button class="lb-btn lb-next" onclick="navLb(1)" aria-label="Next">❯</button>
   </div>
 
   <!-- SCRIPTS -->
@@ -691,8 +717,8 @@
 
     // Lightbox
     let lbList=[], lbIndex=0;
-    function openLb(list, i){ lbList=list; lbIndex=i||0; renderLb(); document.getElementById('lightbox').classList.add('open'); }
-    function closeLb(){ document.getElementById('lightbox').classList.remove('open'); }
+    function openLb(list, i){ lbList=list; lbIndex=i||0; renderLb(); document.getElementById('lightbox').classList.add('open'); document.getElementById('lightbox').setAttribute('aria-hidden', 'false'); }
+    function closeLb(){ document.getElementById('lightbox').classList.remove('open'); document.getElementById('lightbox').setAttribute('aria-hidden', 'true'); }
     function navLb(step){ if(!lbList.length) return; lbIndex=(lbIndex+step+lbList.length)%lbList.length; renderLb(); }
     function renderLb(){ document.getElementById('lb-img').src = lbList[lbIndex]; }
     document.addEventListener('keydown', e=>{
@@ -703,7 +729,7 @@
       if(e.key==='ArrowRight') navLb(1);
     });
 
-    // Single form -> mailto post@wegc.found
+    // Single form -> mailto post@wegc.fund
     function sendBuyMail(form){
       const fd = new FormData(form);
       const subject = encodeURIComponent(`Buy enquiry — ${fd.get('project')}`);
@@ -716,7 +742,7 @@ Budget: ${fd.get('budget')}
 
 Message:
 ${fd.get('msg') || ''}`);
-      window.location.href = `mailto:post@wegc.found?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:post@wegc.fund?subject=${subject}&body=${body}`;
       return false;
     }
   </script>
