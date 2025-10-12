@@ -199,39 +199,72 @@
     </p>
   </section>
 
-  <!-- OWNERSHIP LEGEND -->
-  <section id="ownership" class="py-12 bg-white">
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-16 bg-white">
     <div class="container-max mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-semibold mb-5">Leasehold vs Freehold — what’s the difference?</h2>
+      <h2 class="text-3xl font-semibold mb-8">FAQ — Property Ownership in Thailand</h2>
 
-      <div class="mb-4 flex flex-wrap items-center gap-3 text-sm">
-        <span class="text-gray-600">Ownership legend:</span>
-        <span class="badge badge-free">Freehold (foreign quota up to 49%)</span>
-        <span class="badge badge-lease">Leasehold (typically 30+30+30 yrs)</span>
-        <span class="text-xs text-gray-500">*See legal note below</span>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-5 text-sm">
-        <div class="p-5 border rounded-xl">
-          <div class="mb-2"><span class="badge badge-free">Freehold</span></div>
-          <p class="mb-2"><strong>What:</strong> Condominium ownership of unit + share in common property.</p>
-          <p class="mb-2"><strong>Foreign quota:</strong> Up to 49% of total sellable area can be registered to foreigners.</p>
-          <p><strong>Pros:</strong> Most flexible for resale and financing. <strong>Cons:</strong> Quota may be sold out in popular projects.</p>
-        </div>
-        <div class="p-5 border rounded-xl">
-          <div class="mb-2"><span class="badge badge-lease">Leasehold</span></div>
-          <p class="mb-2"><strong>What:</strong> Long-term registered lease (commonly 30 + 30 + 30 years).</p>
-          <p class="mb-2"><strong>Pros:</strong> Access to units when Freehold quota is unavailable; often simpler purchase flow.</p>
-          <p><strong>Cons:</strong> Terms vary by project; renewals/assignments per registered lease & developer policy.</p>
+      <!-- 1 -->
+      <div class="border-b py-4">
+        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center">
+          Leasehold vs Freehold — what’s the difference?
+          <span>+</span>
+        </button>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-700 space-y-3">
+          <p><strong>Freehold:</strong> Condominium ownership (up to 49% of total sellable area for foreigners).</p>
+          <p><strong>Leasehold:</strong> Registered lease, commonly 30 + 30 + 30 years.</p>
+          <p class="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded p-2">
+            Legal note: Lease renewals depend on developer policy. Always check project documentation.
+          </p>
         </div>
       </div>
 
-      <div class="mt-4 p-4 border border-amber-300/40 bg-amber-50 rounded-lg text-xs text-amber-900">
-        Legal note: Freehold availability is limited by the foreigner quota (up to 49% of condominium area). Leasehold conditions, renewals and assignments
-        depend on the registered lease and developer policy. Always rely on the latest project documentation.
+      <!-- 2 -->
+      <div class="border-b py-4">
+        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center">
+          Can foreigners own land in Thailand?
+          <span>+</span>
+        </button>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-700">
+          Foreigners cannot own land directly, but can own condos (up to 49% of area) or lease land long-term (30+30+30 years).
+        </div>
       </div>
+
+      <!-- 3 -->
+      <div class="border-b py-4">
+        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center">
+          What are common rental yields in resort areas?
+          <span>+</span>
+        </button>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-700">
+          Typical yields range from 5–9% annually in top tourist locations, depending on project and management.
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="border-b py-4">
+        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center">
+          How secure are leasehold rights in Thailand?
+          <span>+</span>
+        </button>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-700">
+          Registered leaseholds are protected by law, but renewals must be documented in the developer’s policy.
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <script>
+  document.querySelectorAll('.faq-question').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const ans = btn.nextElementSibling;
+      ans.classList.toggle('hidden');
+      btn.classList.toggle('open');
+      btn.querySelector('span').textContent = btn.classList.contains('open') ? '−' : '+';
+    });
+  });
+  </script>
 
   <!-- PORTFOLIO -->
   <section id="portfolio" class="py-14 bg-gray-50">
