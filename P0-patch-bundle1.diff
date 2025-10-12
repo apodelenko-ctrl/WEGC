@@ -1,0 +1,31 @@
+
+
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>West East Gate Capital — Phuket Real Estate Marketplace</title>
+   <meta name="description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Curated by GIDR data." />
++
++  <!-- Canonical -->
++  <link rel="canonical" href="https://wegc.fund/" />
++
++  <!-- Open Graph -->
++  <meta property="og:type" content="website" />
++  <meta property="og:site_name" content="West East Gate Capital" />
++  <meta property="og:title" content="West East Gate Capital — Phuket Property Marketplace" />
++  <meta property="og:description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Curated by GIDR data." />
++  <meta property="og:url" content="https://wegc.fund/" />
++  <meta property="og:image" content="https://wegc.fund/images/hero_phuket.jpg" />
++
++  <!-- Twitter -->
++  <meta name="twitter:card" content="summary_large_image" />
++  <meta name="twitter:title" content="West East Gate Capital — Phuket Property Marketplace" />
++  <meta name="twitter:description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Curated by GIDR data." />
++  <meta name="twitter:image" content="https://wegc.fund/images/hero_phuket.jpg" />
++
++  <!-- Icons / PWA -->
++  <link rel="manifest" href="/manifest.webmanifest" />
++  <meta name="theme-color" content="#0b0b0b" />
++  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
++  <link rel="apple-touch-icon" href="/images/icon-192.png" />
++
++  <!-- Robots -->
++  <meta name="robots" content="index,follow" />

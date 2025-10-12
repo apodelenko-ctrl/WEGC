@@ -1,0 +1,110 @@
+diff --git a/index.html b/index.html
+index 1111111..2222222 100644
+--- a/index.html
++++ b/index.html
+@@
+ </style>
+ </head>
++  <!-- Canonical -->
++  <link rel="canonical" href="https://wegc.fund/">
++
++  <!-- Open Graph -->
++  <meta property="og:type" content="website">
++  <meta property="og:site_name" content="West East Real Estate">
++  <meta property="og:title" content="West East Real Estate — Phuket Property Marketplace">
++  <meta property="og:description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Leasehold & Freehold explained. Curated by GIDR data.">
++  <meta property="og:url" content="https://wegc.fund/">
++  <meta property="og:image" content="https://wegc.fund/images/hero_phuket.jpg">
++
++  <!-- Twitter -->
++  <meta name="twitter:card" content="summary_large_image">
++  <meta name="twitter:title" content="West East Real Estate — Phuket Property Marketplace">
++  <meta name="twitter:description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Leasehold & Freehold explained. Curated by GIDR data.">
++  <meta name="twitter:image" content="https://wegc.fund/images/hero_phuket.jpg">
++
++  <!-- PWA / Icons -->
++  <meta name="theme-color" content="#0b0b0b">
++  <link rel="manifest" href="/manifest.webmanifest">
++  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
++  <link rel="apple-touch-icon" href="/images/icon-192.png">
++</head>
+diff --git a/robots.txt b/robots.txt
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/robots.txt
+@@ -0,0 +1,6 @@
++User-agent: *
++Allow: /
++
++# GitHub Pages sitemap location
++Sitemap: https://wegc.fund/sitemap.xml
++
+diff --git a/sitemap.xml b/sitemap.xml
+new file mode 100644
+index 0000000..b2c3d4e
+--- /dev/null
++++ b/sitemap.xml
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url><loc>https://wegc.fund/</loc><priority>1.0</priority></url>
++  <url><loc>https://wegc.fund/#portfolio</loc><priority>0.8</priority></url>
++  <url><loc>https://wegc.fund/#ownership</loc><priority>0.6</priority></url>
++  <url><loc>https://wegc.fund/#contact</loc><priority>0.8</priority></url>
++</urlset>
++
+diff --git a/manifest.webmanifest b/manifest.webmanifest
+new file mode 100644
+index 0000000..c3d4e5f
+--- /dev/null
++++ b/manifest.webmanifest
+@@ -0,0 +1,18 @@
++{
++  "name": "West East Real Estate — Phuket Property",
++  "short_name": "WestEast",
++  "start_url": "/",
++  "scope": "/",
++  "display": "standalone",
++  "background_color": "#0b0b0b",
++  "theme_color": "#0b0b0b",
++  "icons": [
++    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
++    { "src": "/images/icon-512.png", "sizes": "512x512", "type": "image/png" }
++  ]
++}
++
+diff --git a/404.html b/404.html
+new file mode 100644
+index 0000000..d4e5f6a
+--- /dev/null
++++ b/404.html
+@@ -0,0 +1,26 @@
++<!doctype html>
++<html lang="en">
++<meta charset="utf-8">
++<title>Not found — wegc.fund</title>
++<meta name="viewport" content="width=device-width, initial-scale=1">
++<style>
++  body {margin:0;min-height:100vh;display:grid;place-items:center;background:#0b0b0b;color:#fff;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial}
++  .card{padding:24px 28px;border:1px solid #222;border-radius:14px;background:#111;max-width:560px}
++  a{color:#8ab4ff;text-decoration:none}
++  h1{margin:0 0 .25rem 0;font-weight:700}
++</style>
++<div class="card">
++  <h1>404 — page not found</h1>
++  <p>The page may have moved. Head back to the <a href="/">homepage</a>.</p>
++</div>
++</html>
++
+diff --git a/images/favicon.svg b/images/favicon.svg
+new file mode 100644
+index 0000000..e5f6a7b
+--- /dev/null
++++ b/images/favicon.svg
+@@ -0,0 +1,9 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
++  <rect width="64" height="64" rx="12" fill="#0b0b0b"/>
++  <!-- stylized WE monogram -->
++  <path d="M14 42V22h6l6 12 6-12h6v20h-5V29l-7 13h-.5L19 29v13h-5z" fill="#fff"/>
++</svg>

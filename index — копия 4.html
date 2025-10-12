@@ -55,15 +55,6 @@
       background:linear-gradient(90deg, rgba(255,255,255,0) 70%, rgba(255,255,255,.4));
       pointer-events:none;
     }
-
-    /* Language dropdown */
-    .lang-wrap{position:relative}
-    .lang-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .6rem;border:1px solid rgba(255,255,255,.4);border-radius:.5rem;background:transparent;color:#fff}
-    .lang-menu{position:absolute;right:0;top:calc(100% + .25rem);min-width:9rem;background:#fff;color:#111;border:1px solid #e5e7eb;border-radius:.5rem;box-shadow:0 10px 30px rgba(0,0,0,.15);display:none;z-index:50}
-    .lang-menu.open{display:block}
-    .lang-menu button{display:block;width:100%;text-align:left;padding:.5rem .75rem}
-    .lang-menu button:hover{background:#f3f4f6}
-    [dir="rtl"] .text-left{text-align:right}
   </style>
 
   <!-- Canonical -->
@@ -75,29 +66,13 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "West East Real Estate",
-    "legalName": "WET SOLUTIONS PTE. LTD.",
     "url": "https://wegc.fund/",
     "logo": "https://wegc.fund/images/icon-192.png",
-    "email": "post@wegc.fund",
+    "description": "AI-driven Phuket property marketplace with data-backed investment analytics. Leasehold & Freehold explained.",
     "sameAs": [
       "https://www.linkedin.com/company/westeastcapital/",
       "https://www.instagram.com/westeastgate/"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "8 Marina View, Asia Square Tower 1",
-      "addressLocality": "Singapore",
-      "postalCode": "{{POSTAL_CODE}}",
-      "addressCountry": "SG"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "post@wegc.fund",
-      "telephone": "+66 657 658 782",
-      "areaServed": ["TH", "HK", "SG"],
-      "availableLanguage": ["en", "ru", "zh", "ar"]
-    }
+    ]
   }
   </script>
 
@@ -147,26 +122,8 @@
         <a href="#about" class="hover:text-gray-300">WEGC Fund</a>
         <a href="#contact" class="hover:text-gray-300">Contact</a>
       </div>
-
-      <div class="flex items-center gap-3">
-        <a href="#contact" class="px-4 py-1.5 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">
-          Buy property
-        </a>
-
-        <div class="lang-wrap">
-          <button id="langBtn" class="lang-btn" aria-haspopup="true" aria-expanded="false">
-            <span id="langLabel">EN</span>
-            <span aria-hidden="true">▾</span>
-          </button>
-          <div id="langMenu" class="lang-menu" role="menu" aria-label="Choose language">
-            <button type="button" data-lang="en" data-dir="ltr" role="menuitem">English (EN)</button>
-            <button type="button" data-lang="ru" data-dir="ltr" role="menuitem">Русский (RU)</button>
-            <button type="button" data-lang="zh" data-dir="ltr" role="menuitem">中文 (ZH)</button>
-            <button type="button" data-lang="ar" data-dir="rtl" role="menuitem">العربية (AR)</button>
-          </div>
-        </div>
-
-        <a href="https://wa.me/66657658782" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" aria-label="Chat on WhatsApp">
+      <div>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">
           WhatsApp
         </a>
       </div>
@@ -189,29 +146,17 @@
   <header class="hero-tech">
     <div class="container-max mx-auto px-4 py-14 md:py-18 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4" data-i18n="hero_title">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
           Most profitable & reliable Phuket properties
         </h1>
-        <p class="text-gray-700 text-lg mb-5" data-i18n="hero_sub">
+        <p class="text-gray-700 text-lg mb-5">
           Developer prices. Zero buyer commission. Curated by GIDR data.
         </p>
         <ul class="text-gray-800 grid sm:grid-cols-2 gap-2 mb-7">
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
-            <span data-i18n="b1">Best-in-class projects only — screened for rental demand & liquidity</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>
-            <span data-i18n="b2">Direct developer contracts — no agency markup</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-amber-500"></span>
-            <span data-i18n="b3">AI-assessed by the Hong Kong Institute of Digital Research (GIDR)</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
-            <span data-i18n="b4">Leasehold & Freehold routes — clearly explained</span>
-          </li>
+          <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>Best-in-class projects only — screened for rental demand & liquidity</li>
+          <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>Direct developer contracts — no agency markup</li>
+          <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-amber-500"></span>AI-assessed by the Hong Kong Institute of Digital Research (GIDR)</li>
+          <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>Leasehold & Freehold routes — clearly explained</li>
         </ul>
         <div class="flex gap-3">
           <a href="#portfolio" class="px-5 py-3 rounded-md bg-gray-900 text-white">Browse projects</a>
@@ -475,6 +420,9 @@
           Our neural model processes thousands of signals per property — geospatial and climatic layers, construction
           milestones, developer track record, price dynamics — to produce predictive ROI and liquidity ratings.
         </p>
+        <p class="text-gray-600 text-sm">
+          All analytics are conducted under <strong>WET SOLUTIONS LIMITED (Hong Kong)</strong>.
+        </p>
       </div>
       <div class="fade-right">
         <!-- Подставь своё сгенерированное изображение -->
@@ -541,6 +489,15 @@
     </div>
   </section>
 
+  <!-- Sticky call-to-action -->
+  <div class="fixed inset-x-0 bottom-0 z-50">
+    <div class="mx-auto container-max px-4 pb-4">
+      <div class="rounded-2xl shadow-xl bg-white border flex flex-col md:flex-row md:items-center md:justify-between gap-3 p-3">
+        <div class="text-sm md:text-base">Curated shortlist by email — tell us your budget & area.</div>
+        <a href="#contact" class="px-4 py-2 bg-gray-900 text-white rounded-md text-sm md:text-base">Get my shortlist</a>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-200 pt-10">
@@ -558,9 +515,9 @@
       <div class="container-max mx-auto px-4 py-5 text-xs text-gray-400">
         <div class="grid md:grid-cols-3 gap-4">
           <div>
-            <div class="font-semibold text-gray-300">WET SOLUTIONS PTE. LTD.</div>
-            <div>UEN: {{UEN}}</div>
-            <div>Registered Office: 8 Marina View, Asia Square Tower 1, Singapore {{POSTAL_CODE}}</div>
+            <div class="font-semibold text-gray-300">WET SOLUTIONS LIMITED</div>
+            <div>Hong Kong BR No.: 76458883-000-04-24-9</div>
+            <div>Registered Office: Suite C, Level 7, World Trust Tower, 50 Stanley Street, Central, Hong Kong</div>
           </div>
           <div>
             <div>Business WhatsApp: <a class="text-blue-300" href="https://wa.me/66657658782" target="_blank" rel="noopener">+66 657 658 782</a></div>
@@ -590,15 +547,6 @@
             <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
             <div class="k"><div class="v">10–12%</div><div class="t text-xs text-gray-500">IRR (base)</div></div>
             <div class="k"><div class="v">8.4</div><div class="t text-xs text-gray-500">GIDR Score</div></div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-3 mt-2 text-sm">
-            <div class="flex items-center gap-2"><span>🏖️</span><span>Beach proximity</span></div>
-            <div class="flex items-center gap-2"><span>✈️</span><span>Airport access</span></div>
-            <div class="flex items-center gap-2"><span>🛍️</span><span>Retail &amp; dining</span></div>
-            <div class="flex items-center gap-2"><span>🏥</span><span>Hospitals nearby</span></div>
-          </div>
-          <div class="mt-3 text-xs text-gray-600">
-            Yield (illustrative): <canvas class="spark align-middle" data-points="6.0,6.5,6.2,7.1,7.6,8.0"></canvas>
           </div>
           <div class="flex flex-wrap gap-2">
             <a href="/docs/modeva.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
@@ -673,16 +621,7 @@
         <div>
           <h4 class="text-xl font-semibold mb-1">The Title Katabello — Kata/Karon</h4>
           <div class="text-sm text-gray-600 mb-3">Condo • 8×7 floors • ETA 2027 <span class="badge badge-lease ml-2">Leasehold</span></div>
-          <div class="grid sm:grid-cols-2 gap-3 mt-3 text-sm">
-            <div class="flex items-center gap-2"><span>🏖️</span><span>Beach proximity</span></div>
-            <div class="flex items-center gap-2"><span>🚌</span><span>Shuttle &amp; transport</span></div>
-            <div class="flex items-center gap-2"><span>🛍️</span><span>Retail &amp; dining</span></div>
-            <div class="flex items-center gap-2"><span>🏥</span><span>Hospitals nearby</span></div>
-          </div>
-          <div class="mt-3 text-xs text-gray-600">
-            Yield (illustrative): <canvas class="spark align-middle" data-points="5.5,5.8,6.1,6.4,6.7,7.0"></canvas>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-3">
+          <div class="flex flex-wrap gap-2">
             <a href="/docs/katabello.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
             <a href="mailto:post@wegc.fund?subject=Katabello%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
           </div>
@@ -706,7 +645,7 @@
   <!-- CIELO -->
   <template data-passport="cielo">...</template>
   <!-- HALO1 -->
-  <template data-passport="halo1">...</temыplate>
+  <template data-passport="halo1">...</template>
   <!-- SERENITY -->
   <template data-passport="serenity">...</template>
 
@@ -730,43 +669,40 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Tabs inside passport
     function ppTab(id, btn){
       const scope = btn.closest('[data-pp]');
       scope.querySelectorAll('[data-pp-tab]').forEach(el=>el.classList.add('hidden'));
-      const target = scope.querySelector('[data-pp-tab="'+id+'"]');
-      if (target) target.classList.remove('hidden');
+      scope.querySelector('[data-pp-tab="'+id+'"]').classList.remove('hidden');
       scope.querySelectorAll('.pp-tabs button').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
     }
 
-    // Modal open via delegated click on [data-open]
-    document.addEventListener('click', (e)=>{
-      const t = e.target.closest('[data-open]');
-      if(!t) return;
-      const key = t.getAttribute('data-open');
-      const tpl = document.querySelector('template[data-passport="'+key+'"]');
-      if(!tpl) return;
-      const body = document.getElementById('modal-body');
-      body.innerHTML = '';
-      body.appendChild(tpl.content.cloneNode(true));
-      // attach gallery clicks for lightbox
-      body.querySelectorAll('.thumbs img').forEach((img, idx)=>{
-        img.addEventListener('click', ()=>openLb([...body.querySelectorAll('.thumbs img')].map(i=>i.src), idx));
-      });
-      // render sparklines when opening
-      renderSparklines();
-      document.getElementById('modal').classList.add('open');
-    });
+    // Passport modal open
+    document.querySelectorAll('[data-open]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const key = btn.getAttribute('data-open');
+        const tpl = document.querySelector(`template[data-passport="${key}"]`);
+        if(!tpl) return;
+        const body = document.getElementById('modal-body');
+        body.innerHTML = '';
+        body.appendChild(tpl.content.cloneNode(true));
 
+        // attach gallery clicks
+        body.querySelectorAll('.thumbs img').forEach((img, idx)=>{
+          img.addEventListener('click', ()=>openLb([...body.querySelectorAll('.thumbs img')].map(i=>i.src), idx));
+        });
+
+        document.getElementById('modal').classList.add('open');
+      });
+    });
     function closeModal(){ document.getElementById('modal').classList.remove('open'); }
 
     // Lightbox
     let lbList=[], lbIndex=0;
-    function openLb(list, i){ lbList=list; lbIndex=i||0; renderLb(); const lb=document.getElementById('lightbox'); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); }
-    function closeLb(){ const lb=document.getElementById('lightbox'); lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
+    function openLb(list, i){ lbList=list; lbIndex=i||0; renderLb(); document.getElementById('lightbox').classList.add('open'); document.getElementById('lightbox').setAttribute('aria-hidden', 'false'); }
+    function closeLb(){ document.getElementById('lightbox').classList.remove('open'); document.getElementById('lightbox').setAttribute('aria-hidden', 'true'); }
     function navLb(step){ if(!lbList.length) return; lbIndex=(lbIndex+step+lbList.length)%lbList.length; renderLb(); }
-    function renderLb(){ const img=document.getElementById('lb-img'); if(img) img.src = lbList[lbIndex]; }
+    function renderLb(){ document.getElementById('lb-img').src = lbList[lbIndex]; }
     document.addEventListener('keydown', e=>{
       const lb=document.getElementById('lightbox');
       if(!lb.classList.contains('open')) return;
@@ -775,97 +711,50 @@
       if(e.key==='ArrowRight') navLb(1);
     });
 
-    // Buy form -> Formspree JSON
-    (function(){
-      const form = document.getElementById('buyForm');
-      if(!form) return;
-      const note = document.getElementById('formNote');
-      form.addEventListener('submit', async (e)=>{
-        e.preventDefault();
-        const fd = new FormData(form);
-        const payload = {
-          project: fd.get('project'),
-          name: fd.get('name'),
-          email: fd.get('email'),
-          phone: fd.get('phone'),
-          budget: fd.get('budget'),
-          message: `Project: ${fd.get('project')}\nName: ${fd.get('name')}\nEmail: ${fd.get('email')}\nPhone: ${fd.get('phone')}\nBudget: ${fd.get('budget')}\n\nMessage:\n${fd.get('msg')||''}`
-        };
-        try{
-          const res = await fetch("https://formspree.io/f/xrbyywrr", {
-            method:"POST",
-            headers:{ "Accept":"application/json", "Content-Type":"application/json" },
-            body: JSON.stringify(payload)
-          });
-          if(res.ok){
-            form.reset();
-            note.className = "md:col-span-2 mt-2 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-3 py-2";
-            note.textContent = "Thanks! Your enquiry is submitted. We’ll reply from post@wegc.fund.";
-            note.classList.remove('hidden');
-          }else{
-            throw new Error('Formspree error');
-          }
-        }catch(err){
-          note.className = "md:col-span-2 mt-2 text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded px-3 py-2";
-          note.textContent = "Could not submit. Try again or email post@wegc.fund.";
-          note.classList.remove('hidden');
-        }
-      });
-    })();
+    // FORM: send to Formspree
+    const form = document.getElementById('buyForm');
+    const formNote = document.getElementById('formNote');
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const fd = new FormData(form);
+      // Build a readable message also sent to your email
+      const message =
+`Project: ${fd.get('project')}
+Name: ${fd.get('name')}
+Email: ${fd.get('email')}
+Phone: ${fd.get('phone')}
+Budget: ${fd.get('budget')}
 
-    // Language dropdown + i18n
-    (function(){
-      const btn = document.getElementById('langBtn');
-      const menu = document.getElementById('langMenu');
-      const label = document.getElementById('langLabel');
-      if(btn && menu){
-        btn.addEventListener('click', ()=>{
-          const isOpen = menu.classList.toggle('open');
-          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-        document.addEventListener('click', (e)=>{
-          if(!menu.contains(e.target) && !btn.contains(e.target)) menu.classList.remove('open');
-        });
-      }
-      const dict = {
-        en:{hero_title:'Most profitable & reliable Phuket properties',hero_sub:'Developer prices. Zero buyer commission. Curated by GIDR data.',b1:'Best-in-class projects only — screened for rental demand & liquidity',b2:'Direct developer contracts — no agency markup',b3:'AI-assessed by the Hong Kong Institute of Digital Research (GIDR)',b4:'Leasehold & Freehold routes — clearly explained'},
-        ru:{hero_title:'Самые прибыльные и надёжные объекты Пхукета',hero_sub:'Цены застройщика. 0% комиссии покупателя. Курация на основе данных GIDR.',b1:'Только лучшие проекты — отобраны по спросу на аренду и ликвидности',b2:'Прямые контракты с застройщиком — без наценки агентства',b3:'AI-оценка Гонконгского института цифровых исследований (GIDR)',b4:'Leasehold и Freehold — простое объяснение'},
-        zh:{hero_title:'普吉岛最具收益与可靠的房产',hero_sub:'开发商价格。买方零佣金。基于 GIDR 数据甄选。',b1:'仅甄选一流项目——基于租赁需求与流动性筛选',b2:'开发商直签——无中介加价',b3:'由香港数字研究院（GIDR）进行 AI 评估',b4:'清晰解释 Leasehold 与 Freehold'},
-        ar:{hero_title:'أفضل عقارات بوكيت ربحيةً وموثوقيةً',hero_sub:'أسعار المطوّر. عمولة المشتري 0%. مختارة ببيانات GIDR.',b1:'مشاريع من الفئة الأولى — مفحوصة لطلب الإيجار والسيولة',b2:'عقود مباشرة مع المطوّر — دون زيادة وكالات',b3:'تقييم بالذكاء الاصطناعي من معهد GIDR في هونغ كونغ',b4:'توضيح مسارات الحيازة Leasehold و Freehold'}
+Message:
+${fd.get('msg') || ''}`;
+
+      const payload = { 
+        project: fd.get('project'),
+        name: fd.get('name'),
+        email: fd.get('email'),
+        phone: fd.get('phone'),
+        budget: fd.get('budget'),
+        message
       };
-      function setLang(code, dir){
-        const d = dict[code] || dict.en;
-        document.querySelectorAll('[data-i18n]').forEach(el=>{
-          const k = el.getAttribute('data-i18n');
-          if(d[k]) el.textContent = d[k];
-        });
-        document.documentElement.setAttribute('dir', dir || 'ltr');
-        if(label) label.textContent = code.toUpperCase();
-        localStorage.setItem('lang', JSON.stringify({code, dir: dir||'ltr'}));
-      }
-      menu?.querySelectorAll('[data-lang]').forEach(item=>{
-        item.addEventListener('click', ()=>{
-          setLang(item.getAttribute('data-lang'), item.getAttribute('data-dir')||'ltr');
-          menu.classList.remove('open');
-        });
-      });
-      // Init from storage
-      try{
-        const saved = JSON.parse(localStorage.getItem('lang')||'{}');
-        if(saved.code){ setLang(saved.code, saved.dir||'ltr'); if(label) label.textContent = saved.code.toUpperCase(); }
-      }catch(_){}
-    })();
 
-    // Simple sparkline renderer
-    function renderSparklines(){
-      document.querySelectorAll('#modal-body canvas.spark').forEach(cv=>{
-        const pts=(cv.dataset.points||'').split(',').map(Number).filter(n=>!isNaN(n));
-        if(!pts.length) return;
-        const ctx=cv.getContext('2d'); const w=cv.width=150, h=cv.height=40; ctx.clearRect(0,0,w,h);
-        const min=Math.min(...pts), max=Math.max(...pts), sx=w/Math.max(1,(pts.length-1));
-        ctx.lineWidth=2; ctx.strokeStyle='#0ea5e9'; ctx.beginPath();
-        pts.forEach((v,i)=>{const x=i*sx, y=h-((v-min)/(max-min||1))*h; i?ctx.lineTo(x,y):ctx.moveTo(x,y);});
-        ctx.stroke();
-      });
-    }
+      try{
+        const res = await fetch("https://formspree.io/f/xrbyywrr", {
+          method: "POST",
+          headers: { "Accept":"application/json", "Content-Type":"application/json" },
+          body: JSON.stringify(payload)
+        });
+        if(res.ok){
+          form.reset();
+          formNote.className = "md:col-span-2 mt-2 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-3 py-2";
+          formNote.textContent = "Thanks! Your enquiry is submitted. We’ll reply from post@wegc.fund.";
+        }else{
+          throw new Error("Formspree error");
+        }
+      }catch(err){
+        formNote.className = "md:col-span-2 mt-2 text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded px-3 py-2";
+        formNote.textContent = "Could not submit. Try again or email post@wegc.fund.";
+      }
+    });
   </script>
+</body>
+</html>
