@@ -64,6 +64,8 @@
     .lang-menu button{display:block;width:100%;text-align:left;padding:.5rem .75rem}
     .lang-menu button:hover{background:#f3f4f6}
     [dir="rtl"] .text-left{text-align:right}
+    /* Navbar active link */
+    .nav a.active{ color:#93c5fd; text-decoration:underline; }
   </style>
 
   <!-- Canonical -->
@@ -139,9 +141,9 @@
 <body class="antialiased text-gray-800">
 
   <!-- Top navigation bar -->
-  <div class="bg-black text-white text-sm">
-    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-6">
+  <div class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
+    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-3">
+      <div class="flex items-center gap-4 flex-wrap">
         <a href="#" class="font-semibold text-white hover:text-gray-300">West East Real Estate</a>
         <a href="#gidr" class="hover:text-gray-300">GIDR</a>
         <a href="#about" class="hover:text-gray-300">WEGC Fund</a>
@@ -320,6 +322,27 @@
     });
   });
   </script>
+    // Active menu highlight using IntersectionObserver
+    (function(){
+      const map = new Map();
+      document.querySelectorAll('.nav a[href^="#"]').forEach(a=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(el){ map.set(el, a); }
+      });
+      if(!map.size) return;
+      const io = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          const a = map.get(e.target);
+          if(!a) return;
+          if(e.isIntersecting) {
+            document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));
+            a.classList.add('active');
+          }
+        });
+      }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
+      map.forEach((_, el)=>io.observe(el));
+    })();
 
   <!-- PORTFOLIO -->
   <section id="portfolio" class="py-14 bg-gray-50">
