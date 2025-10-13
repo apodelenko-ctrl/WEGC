@@ -66,6 +66,11 @@
     [dir="rtl"] .text-left{text-align:right}
     /* Navbar active link */
     .nav a.active{ color:#93c5fd; text-decoration:underline; }
+    .nav{position:sticky;top:0;z-index:1000}
+    @media (max-width:768px){
+      #navMenu{width:100%}
+      #navMenu a{display:block;border-bottom:1px solid rgba(255,255,255,.1);padding:.5rem 0}
+    }
   </style>
 
   <!-- Canonical -->
@@ -141,39 +146,21 @@
 <body class="antialiased text-gray-800">
 
   <!-- Top navigation bar -->
-  <div class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
-    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-3">
-      <div class="flex items-center gap-4 flex-wrap">
-        <a href="#" class="font-semibold text-white hover:text-gray-300">West East Real Estate</a>
-        <a href="#gidr" class="hover:text-gray-300">GIDR</a>
-        <a href="#about" class="hover:text-gray-300">WEGC Fund</a>
-        <a href="#contact" class="hover:text-gray-300">Contact</a>
-      </div>
-
+  <nav class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
+    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="#contact" class="px-4 py-1.5 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">
-          Buy property
-        </a>
-
-        <div class="lang-wrap">
-          <button id="langBtn" class="lang-btn" aria-haspopup="true" aria-expanded="false">
-            <span id="langLabel">EN</span>
-            <span aria-hidden="true">▾</span>
-          </button>
-          <div id="langMenu" class="lang-menu" role="menu" aria-label="Choose language">
-            <button type="button" data-lang="en" data-dir="ltr" role="menuitem">English (EN)</button>
-            <button type="button" data-lang="ru" data-dir="ltr" role="menuitem">Русский (RU)</button>
-            <button type="button" data-lang="zh" data-dir="ltr" role="menuitem">中文 (ZH)</button>
-            <button type="button" data-lang="ar" data-dir="rtl" role="menuitem">العربية (AR)</button>
-          </div>
-        </div>
-
-        <a href="https://wa.me/66657658782" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" aria-label="Chat on WhatsApp">
-          WhatsApp
-        </a>
+        <a href="#" class="font-semibold text-white hover:text-gray-300 text-base">West East Real Estate</a>
+        <button id="burgerBtn" class="md:hidden p-2 border border-white/30 rounded" aria-label="Toggle menu">☰</button>
+      </div>
+      <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
+        <a href="#gidr" class="block py-2 md:py-0 hover:text-gray-300">GIDR</a>
+        <a href="#about" class="block py-2 md:py-0 hover:text-gray-300">WEGC Fund</a>
+        <a href="#contact" class="block py-2 md:py-0 hover:text-gray-300">Contact</a>
+        <a href="#contact" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">Buy property</a>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">WhatsApp</a>
       </div>
     </div>
-  </div>
+  </nav>
 
   <!-- Top promo band -->
   <div class="bg-gradient-to-r from-gray-900 to-black text-white">
@@ -322,27 +309,29 @@
     });
   });
   </script>
-    // Active menu highlight using IntersectionObserver
-    (function(){
-      const map = new Map();
-      document.querySelectorAll('.nav a[href^="#"]').forEach(a=>{
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if(el){ map.set(el, a); }
+<script>
+  // Active menu highlight using IntersectionObserver
+  (function(){
+    const map = new Map();
+    document.querySelectorAll('.nav a[href^="#"]').forEach(a=>{
+      const id = a.getAttribute('href');
+      const el = document.querySelector(id);
+      if(el){ map.set(el, a); }
+    });
+    if(!map.size) return;
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const a = map.get(e.target);
+        if(!a) return;
+        if(e.isIntersecting) {
+          document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));
+          a.classList.add('active');
+        }
       });
-      if(!map.size) return;
-      const io = new IntersectionObserver(entries=>{
-        entries.forEach(e=>{
-          const a = map.get(e.target);
-          if(!a) return;
-          if(e.isIntersecting) {
-            document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));
-            a.classList.add('active');
-          }
-        });
-      }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
-      map.forEach((_, el)=>io.observe(el));
-    })();
+    }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
+    map.forEach((_, el)=>io.observe(el));
+  })();
+</script>
 
   <!-- PORTFOLIO -->
   <section id="portfolio" class="py-14 bg-gray-50">
@@ -567,15 +556,6 @@
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-200 pt-10">
-    <div class="container-max mx-auto px-4 text-center">
-      <p class="text-lg">West East Real Estate — stealth-mode startup real estate agency</p>
-      <p class="text-sm text-gray-400 mt-1">
-        Core edge: digitalization & AI forecasting based on research from the Hong Kong Institute of Digital Research (GIDR).
-        GIDR and WER are projects of West East Gate Capital (WEGC).
-      </p>
-      <p class="mt-4">Email: <a class="text-blue-300" href="mailto:post@wegc.fund">post@wegc.fund</a></p>
-    </div>
-
     <!-- Compliance strip -->
     <div class="mt-8 bg-black/40">
       <div class="container-max mx-auto px-4 py-5 text-xs text-gray-400">
@@ -911,3 +891,13 @@
   document.getElementById('postal')?.textContent = COMPANY.postal;
 </script>
 </html>
+
+</body>
+<script>
+  const burger = document.getElementById('burgerBtn');
+  const menu = document.getElementById('navMenu');
+  burger?.addEventListener('click', ()=>{
+    menu.classList.toggle('hidden');
+    burger.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
+  });
+</script>
