@@ -3,14 +3,18 @@
     {
       "id": "modeva",
       "name": "The Modeva",
+      "subtitle": "Спеццены. Застройщик №1. Премия 2024 года.",
       "location": "Bang Tao, Phuket, Thailand",
+      "description": "Новый проект. Банг Тао. 500 м до моря. Легендарный застройщик. Обладатель премии - Лучший застройщик 2024 года.",
       "developer": "Rhom Bho / The Title",
       "type": "Lifestyle condo",
-      "distance_to_beach": "~500 m",
+      "distance_to_beach": "500 метров",
       "eta": "2026",
-      "tenure": "Leasehold (30+30+30)",
+      "tenure": "Freehold/Leasehold",
       "units": "1–2BR • 29–95 m²",
       "badge": "lease",
+      "price_per_sqm": "150 тыс бат м²",
+      "capitalization_forecast": "Высокий (из-за уникальных свойств локации и эксклюзивности проекта)",
       "images": {
         "cover": "/images/the-modeva-exterior-4-1.jpg",
         "gallery": [
@@ -20,34 +24,71 @@
           "/images/modeva-interior-1bdr-4.jpg"
         ]
       },
-      "kpis": {
-        "roi": "~10.3%",
-        "liquidity": "8/10",
-        "irr": "10–12%",
-        "gidr_score": "8.4"
+      "unique_features": {
+        "location": "500 метров от моря, рядом с 5* отелями Saii, Dusit Thani, Angsana, Banyan Tree",
+        "nature": "Крупный проект в пешей доступности от моря",
+        "infrastructure": "Магазины, салоны, рестораны. В центре оживленной инфраструктуры",
+        "prestige": "Престижный район, Самая дорогая земля на Банг Тао"
       },
-      "features": [
-        "🏖️ Beach proximity",
-        "✈️ Airport access", 
-        "🛍️ Retail & dining",
-        "🏥 Hospitals nearby"
+      "characteristics": {
+        "region": "Bang Tao",
+        "construction_deferral": "Отсрочка на период строительства",
+        "category": "5 звезд - Оценка Экспертов",
+        "ownership": "Freehold/Leasehold",
+        "security": "Закрытый, охрана",
+        "distance_to_sea": "500 метров",
+        "price": "150 тыс бат м кв",
+        "capitalization": "Высокий"
+      },
+      "infrastructure": [
+        "ретрит бассейн",
+        "джакузи и акваджоггинг", 
+        "ВОДНЫЙ ИГРОВОЙ ЦЕНТР",
+        "парк для животных",
+        "КОРАЛЛОВЫЙ ПАВИЛЬОН",
+        "лаундж на крыше",
+        "лобби лаундж",
+        "BEAUTY CLUB",
+        "бар",
+        "ЧАЙНАЯ ГОСТИНАЯ",
+        "СОВМЕСТНАЯ КУХНЯ",
+        "коворкинг",
+        "ЧАСТНЫЙ ОНСЕН",
+        "ЧАСТНЫЙ спа",
+        "тренажерный зал",
+        "симулятор гольфа",
+        "детский клуб",
+        "Охрана 24/7"
+      ],
+      "distances": {
+        "Банг Тао": "500 м",
+        "Catch Beach Сlub": "5 минут",
+        "Lemonade Сlub": "7 минут", 
+        "Boat Avenue": "5 минут",
+        "Laguna Phuket": "5 минут"
+      },
+      "apartments": [
+        {
+          "size": "41 м²",
+          "bedrooms": "1 спальня",
+          "price": "$130 473"
+        },
+        {
+          "size": "55 м²", 
+          "bedrooms": "1 спальня",
+          "price": "$277 934"
+        },
+        {
+          "size": "105 м²",
+          "bedrooms": "2 спальни", 
+          "price": "$578 403"
+        }
       ],
       "documents": {
         "brochure": "/docs/modeva.pdf",
         "pricelist": "/docs/modeva_pricelist.pdf",
         "rental": "/docs/modeva_rental.pdf",
         "legal": "/docs/modeva_legal.pdf"
-      },
-      "overview": {
-        "developer": "Rhom Bho Property PLC",
-        "status": "Under construction (ETA 2026)",
-        "forecast": "Stable-to-positive",
-        "risks": "schedule; foreign-quota demand; rental seasonality"
-      },
-      "financials": {
-        "entry_price": "THB 100k–120k / m²",
-        "area_comps": "THB 125k–140k / m²",
-        "rental_yield": "6–8% p.a."
       }
     },
     {

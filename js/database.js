@@ -66,99 +66,139 @@ class ProjectDatabase {
     `;
   }
 
-  // Generate passport content
+  // Generate passport content in Acora style
   generatePassportContent(project) {
-    const kpis = project.kpis || {};
-    const features = project.features || [];
     const documents = project.documents || {};
+    const uniqueFeatures = project.unique_features || {};
+    const characteristics = project.characteristics || {};
+    const infrastructure = project.infrastructure || [];
+    const distances = project.distances || {};
+    const apartments = project.apartments || [];
     
     return `
-      <div data-pp>
-        <div class="pp-grid mb-4">
-          <img src="${project.images.cover}" class="w-full h-64 object-cover rounded-xl" 
-               alt="${project.name}" loading="lazy" decoding="async" width="1024" height="512">
-          <div>
-            <h4 class="text-xl font-semibold mb-1">${project.name} — ${project.location}</h4>
-            <div class="text-sm text-gray-600 mb-3">
-              ${project.units || ''} 
-              ${project.distance_to_beach ? `• ${project.distance_to_beach} to beach` : ''}
-              ${project.eta ? `• ETA ${project.eta}` : ''}
-              <span class="badge badge-${project.badge} ml-2">${project.badge === 'free' ? 'Freehold' : 'Leasehold'}</span>
-            </div>
-            ${Object.keys(kpis).length > 0 ? `
-              <div class="pp-kpi mb-3">
-                ${kpis.roi ? `<div class="k"><div class="v">${kpis.roi}</div><div class="t text-xs text-gray-500">ROI (model)</div></div>` : ''}
-                ${kpis.liquidity ? `<div class="k"><div class="v">${kpis.liquidity}</div><div class="t text-xs text-gray-500">Liquidity</div></div>` : ''}
-                ${kpis.irr ? `<div class="k"><div class="v">${kpis.irr}</div><div class="t text-xs text-gray-500">IRR (base)</div></div>` : ''}
-                ${kpis.gidr_score ? `<div class="k"><div class="v">${kpis.gidr_score}</div><div class="t text-xs text-gray-500">GIDR Score</div></div>` : ''}
-              </div>
-            ` : ''}
-            ${features.length > 0 ? `
-              <div class="grid sm:grid-cols-2 gap-3 mt-2 text-sm">
-                ${features.map(feature => `<div class="flex items-center gap-2"><span>${feature}</span></div>`).join('')}
-              </div>
-            ` : ''}
-            <div class="flex flex-wrap gap-2 mt-3">
-              ${documents.brochure ? `<a href="${documents.brochure}" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>` : ''}
-              ${documents.pricelist ? `<a href="${documents.pricelist}" class="pp-doc">Price list & payment schedule (PDF)</a>` : ''}
-              ${documents.rental ? `<a href="${documents.rental}" class="pp-doc">Rental program (PDF)</a>` : ''}
-            </div>
+      <div data-pp class="max-w-6xl mx-auto">
+        <!-- Hero Section -->
+        <div class="mb-8">
+          <div class="text-4xl font-bold mb-2">🔥 ${project.name}</div>
+          <div class="text-xl text-gray-600 mb-4">${project.subtitle || ''}</div>
+          <div class="text-lg text-gray-700 mb-6">${project.description || ''}</div>
+          
+          <div class="flex gap-4 mb-6">
+            <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+              Показать на карте
+            </button>
+            <button class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+              Онлайн покупка
+            </button>
           </div>
         </div>
 
+        <!-- Image Slider -->
         ${project.images.gallery ? `
-          <div class="thumbs mb-3">
-            ${project.images.gallery.map(img => 
-              `<img src="${img}" alt="" loading="lazy" decoding="async">`
-            ).join('')}
+          <div class="mb-8">
+            <div class="grid grid-cols-4 gap-2 mb-4">
+              ${project.images.gallery.slice(0, 4).map(img => 
+                `<img src="${img}" alt="" class="w-full h-32 object-cover rounded-lg cursor-pointer hover:opacity-80 transition">`
+              ).join('')}
+            </div>
+            <div class="text-center">
+              <a href="${documents.brochure || '#'}" class="text-blue-600 hover:underline">
+                Посмотрите полную Презентацию объекта
+              </a>
+            </div>
           </div>
         ` : ''}
 
-        <div class="pp-tabs flex gap-4 border-b mb-3">
-          <button class="active" onclick="ppTab('overview', this)" type="button">Overview</button>
-          <button onclick="ppTab('financials', this)" type="button">Financials</button>
-          <button onclick="ppTab('map', this)" type="button">Map</button>
-          <button onclick="ppTab('docs', this)" type="button">Documents</button>
-        </div>
-
-        <div data-pp-tab="overview">
-          <div class="grid md:grid-cols-2 gap-4 text-sm">
-            <div class="space-y-2">
-              ${project.overview ? Object.entries(project.overview).map(([key, value]) => 
-                `<div><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</div>`
-              ).join('') : ''}
+        <!-- Unique Features -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4">Уникальные особенности объекта</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold mb-2">Расположение</h4>
+              <p class="text-gray-700">${uniqueFeatures.location || ''}</p>
             </div>
-            <div class="space-y-2">
-              ${project.overview?.forecast ? `<div><strong>GIDR Forecast:</strong> ${project.overview.forecast}</div>` : ''}
-              ${project.overview?.risks ? `<div><strong>Risks:</strong> ${project.overview.risks}</div>` : ''}
+            <div>
+              <h4 class="font-semibold mb-2">Природа</h4>
+              <p class="text-gray-700">${uniqueFeatures.nature || ''}</p>
             </div>
-          </div>
-        </div>
-
-        <div class="hidden" data-pp-tab="financials">
-          <div class="grid md:grid-cols-2 gap-4 text-sm">
-            <div class="space-y-2">
-              ${project.financials ? Object.entries(project.financials).map(([key, value]) => 
-                `<div><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</div>`
-              ).join('') : ''}
+            <div>
+              <h4 class="font-semibold mb-2">Инфраструктура</h4>
+              <p class="text-gray-700">${uniqueFeatures.infrastructure || ''}</p>
             </div>
-            <div class="space-y-2">
-              ${documents.pricelist ? `<a href="${documents.pricelist}" class="pp-doc">Price list & payment schedule (PDF)</a>` : ''}
-              ${documents.rental ? `<a href="${documents.rental}" class="pp-doc">Rental program (PDF)</a>` : ''}
+            <div>
+              <h4 class="font-semibold mb-2">Престижность</h4>
+              <p class="text-gray-700">${uniqueFeatures.prestige || ''}</p>
             </div>
           </div>
         </div>
 
-        <div class="hidden" data-pp-tab="map">
-          <div class="rounded-xl overflow-hidden border">
-            <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.96,98.33,8.03&layer=mapnik" class="w-full" style="height:300px"></iframe>
+        <!-- Characteristics -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4">Характеристики</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            ${Object.entries(characteristics).map(([key, value]) => `
+              <div class="text-center p-4 border rounded-lg">
+                <div class="text-sm text-gray-600 mb-1">${key.replace('_', ' ').toUpperCase()}</div>
+                <div class="font-semibold">${value}</div>
+              </div>
+            `).join('')}
           </div>
         </div>
 
-        <div class="hidden" data-pp-tab="docs">
-          <div class="grid md:grid-cols-2 gap-3 text-sm">
-            ${documents.brochure ? `<a href="${documents.brochure}" class="pp-doc">Developer brochure (PDF)</a>` : ''}
-            ${documents.legal ? `<a href="${documents.legal}" class="pp-doc">Legal brief (tenure/quota) (PDF)</a>` : ''}
+        <!-- Infrastructure -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4">Инфраструктура</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            ${infrastructure.map((item, index) => `
+              <div class="text-center p-3 border rounded-lg">
+                <div class="text-xs text-gray-500 mb-1">${String(index + 1).padStart(2, '0')}/</div>
+                <div class="text-sm font-medium">${item}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Distances -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4">Расстояние до</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            ${Object.entries(distances).map(([place, time]) => `
+              <div class="flex justify-between items-center p-3 border rounded-lg">
+                <span class="font-medium">${place}</span>
+                <span class="text-blue-600 font-semibold">${time}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Apartments -->
+        ${apartments.length > 0 ? `
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold mb-4">Виды апартаментов</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              ${apartments.map(apt => `
+                <div class="border rounded-lg p-4 text-center">
+                  <div class="text-2xl font-bold text-blue-600 mb-2">${apt.size}</div>
+                  <div class="text-gray-600 mb-2">${apt.bedrooms}</div>
+                  <div class="text-xl font-semibold mb-4">${apt.price}</div>
+                  <button class="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    Получить консультацию эксперта
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Documents -->
+        <div class="mb-8">
+          <div class="flex gap-4">
+            <button class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
+              Прайс-лист
+            </button>
+            <button class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+              Консультация эксперта
+            </button>
           </div>
         </div>
       </div>
