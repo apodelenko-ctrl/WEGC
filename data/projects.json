@@ -1,0 +1,83 @@
+{
+  "projects": [
+    {
+      "id": "modeva",
+      "name": "The Modeva",
+      "location": "Bang Tao, Phuket, Thailand",
+      "developer": "Rhom Bho / The Title",
+      "type": "Lifestyle condo",
+      "distance_to_beach": "~500 m",
+      "eta": "2026",
+      "tenure": "Leasehold (30+30+30)",
+      "units": "1–2BR • 29–95 m²",
+      "badge": "lease",
+      "images": {
+        "cover": "/images/the-modeva-exterior-4-1.jpg",
+        "gallery": [
+          "/images/the-modeva-exterior-3-1-1280x668.jpg",
+          "/images/the-modeva-exterior-4-1.jpg",
+          "/images/modeva-interior-1bdr-3.jpg",
+          "/images/modeva-interior-1bdr-4.jpg"
+        ]
+      },
+      "kpis": {
+        "roi": "~10.3%",
+        "liquidity": "8/10",
+        "irr": "10–12%",
+        "gidr_score": "8.4"
+      },
+      "features": [
+        "🏖️ Beach proximity",
+        "✈️ Airport access", 
+        "🛍️ Retail & dining",
+        "🏥 Hospitals nearby"
+      ],
+      "documents": {
+        "brochure": "/docs/modeva.pdf",
+        "pricelist": "/docs/modeva_pricelist.pdf",
+        "rental": "/docs/modeva_rental.pdf",
+        "legal": "/docs/modeva_legal.pdf"
+      },
+      "overview": {
+        "developer": "Rhom Bho Property PLC",
+        "status": "Under construction (ETA 2026)",
+        "forecast": "Stable-to-positive",
+        "risks": "schedule; foreign-quota demand; rental seasonality"
+      },
+      "financials": {
+        "entry_price": "THB 100k–120k / m²",
+        "area_comps": "THB 125k–140k / m²",
+        "rental_yield": "6–8% p.a."
+      }
+    },
+    {
+      "id": "katabello",
+      "name": "The Title Katabello",
+      "location": "Kata / Karon, Phuket, Thailand",
+      "developer": "Rhom Bho / AssetWise",
+      "type": "Condo",
+      "floors": "8×7 floors",
+      "eta": "2027",
+      "tenure": "Leasehold",
+      "badge": "lease",
+      "images": {
+        "cover": "/images/the-title-katabello-exterior-2.jpg",
+        "gallery": [
+          "/images/the-title-katabello-exterior-27-1280x720.jpg",
+          "/images/the-title-katabello-exterior-26-1280x720.jpg",
+          "/images/the-title-katabello-interior-1.jpg",
+          "/images/the-title-katabello-interior-2.jpg"
+        ]
+      },
+      "features": [
+        "🏖️ Beach proximity",
+        "🚌 Shuttle & transport",
+        "🛍️ Retail & dining",
+        "🏥 Hospitals nearby"
+      ],
+      "documents": {
+        "brochure": "/docs/katabello.pdf"
+      }
+    }
+  ]
+}
