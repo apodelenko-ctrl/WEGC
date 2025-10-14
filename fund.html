@@ -474,7 +474,6 @@
   </footer>
 
   <!-- SCRIPТЫ -->
-  <script src="/js/i18n.js"></script>
   <script>
     // burger
     const burger = document.getElementById('burgerBtn');
@@ -921,8 +920,10 @@
 
       document.querySelectorAll('#langMenu [data-lang]').forEach(item=>{
         item.addEventListener('click', ()=>{
-          setLang(item.getAttribute('data-lang'), item.getAttribute('data-dir')||'ltr');
-          document.getElementById('langMenu').classList.add('hidden');
+          const lang = item.getAttribute('data-lang');
+          const url = new URL(window.location);
+          url.searchParams.set('lang', lang);
+          window.location.href = url.toString();
         });
       });
 
