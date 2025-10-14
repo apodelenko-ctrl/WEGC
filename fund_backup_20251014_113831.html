@@ -25,7 +25,6 @@
   <meta property="og:description" data-i18n="og_desc" content="Two strategies: 6.5% coupon pool (income) and growth pool (~30% over 3 years). Backed by concrete, data-curated projects.">
   <meta property="og:url" content="https://wegc.fund/fund.html">
   <meta property="og:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
-  <meta property="og:image:alt" content="WEGC Fund — Phuket resort real estate analytics and projects">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:locale:alternate" content="zh_CN">
@@ -38,6 +37,7 @@
   <meta name="twitter:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
 
   <!-- PWA / Icons -->
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/images/icon-192.png">
@@ -126,10 +126,9 @@
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-lg border border-white/10">
-        <div class="w-full" style="aspect-ratio:16/9">
-          <div class="w-full h-full bg-black/40 flex items-center justify-center">
-            <div class="text-white/70 text-sm" data-i18n="video_placeholder">Здесь будет видео-презентация фонда</div>
-          </div>
+        <!-- место под видео об фонде -->
+        <div class="aspect-video bg-black/40 flex items-center justify-center">
+          <div class="text-white/70 text-sm" data-i18n="video_placeholder">Здесь будет видео-презентация фонда</div>
         </div>
       </div>
     </div>
@@ -259,18 +258,18 @@
 
       <div class="grid md:grid-cols-2 gap-6">
         <div class="rounded-xl border overflow-hidden">
-          <img src="/images/analytics/occ_yield.png" alt="Phuket resort occupancy vs yield (conservative range)" class="w-full h-64 object-cover" loading="lazy">
+          <img src="/images/analytics/occ_yield.png" alt="Occupancy vs Yield" class="w-full h-64 object-cover">
         </div>
         <div class="rounded-xl border overflow-hidden">
-          <img src="/images/analytics/price_trend.png" alt="Phuket real estate price trends and growth patterns" class="w-full h-64 object-cover" loading="lazy">
+          <img src="/images/analytics/price_trend.png" alt="Price trends" class="w-full h-64 object-cover">
         </div>
       </div>
 
       <div class="mt-6 flex flex-wrap gap-3 text-sm">
-        <a href="/docs/analytics_overview.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_overview" rel="nofollow">Обзор рынка (PDF)</a>
-        <a href="/docs/analytics_hotels.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_hotels" rel="nofollow">Отели и аренда (PDF)</a>
-        <a href="/docs/analytics_dev.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_dev" rel="nofollow">Девелопмент (PDF)</a>
-        <a href="/docs/analytics_fx.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_fx" rel="nofollow">Валюты и доходность (PDF)</a>
+        <a href="/docs/analytics_overview.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_overview">Обзор рынка (PDF)</a>
+        <a href="/docs/analytics_hotels.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_hotels">Отели и аренда (PDF)</a>
+        <a href="/docs/analytics_dev.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_dev">Девелопмент (PDF)</a>
+        <a href="/docs/analytics_fx.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_fx">Валюты и доходность (PDF)</a>
       </div>
     </div>
   </section>
@@ -477,13 +476,8 @@
   <script src="/js/i18n.js"></script>
   <script>
     // burger
-    const burger = document.getElementById('burgerBtn');
-    const menu = document.getElementById('navMenu');
-    burger?.addEventListener('click', ()=>{
-      const hidden = menu.classList.toggle('hidden');
-      burger.textContent = hidden ? '☰' : '✕';
-      burger.setAttribute('aria-expanded', hidden ? 'false' : 'true');
-    });
+    const burger=document.getElementById('burgerBtn'); const menu=document.getElementById('navMenu');
+    burger?.addEventListener('click', ()=>{ menu.classList.toggle('hidden'); burger.textContent=menu.classList.contains('hidden')?'☰':'✕'; burger.setAttribute('aria-pressed', menu.classList.contains('hidden')?'false':'true'); });
 
     // FAQ toggles
     document.querySelectorAll('.faq-question').forEach((btn)=>{
