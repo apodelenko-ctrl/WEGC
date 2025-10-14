@@ -63,12 +63,12 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-gray-900">
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="text-xl font-bold text-white bg-blue-600 px-4 py-2 rounded">West East Real Estate</a>
+                    <a href="/" class="text-xl font-bold text-white">West East Real Estate</a>
                 </div>
                 
                 <!-- Navigation Links -->
@@ -82,15 +82,15 @@
                 
                 <!-- Action Buttons -->
                 <div class="flex items-center space-x-4">
-                    <button class="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-900 transition">
+                    <button class="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition">
                         Buy property
                     </button>
                     <a href="https://wa.me/66812345678" target="_blank" rel="noopener noreferrer" 
-                       class="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-900 transition">
+                       class="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition">
                         WhatsApp
                     </a>
                     <div class="relative">
-                        <button class="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-900 transition">
+                        <button class="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition">
                             RU ▼
                         </button>
                     </div>
@@ -99,89 +99,116 @@
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
-    <div class="pt-16 pb-4 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center space-x-2 text-sm text-gray-600">
-                <a href="/" class="hover:text-gray-900">Главная</a>
-                <span>/</span>
-                <span class="text-gray-900">Sudara. Банг Тао. 500 м от моря. 90% прибыли Вам.</span>
-            </nav>
+    <!-- Hero Section with Big Image Slider -->
+    <section class="relative pt-16">
+        <!-- Main Image Slider -->
+        <div class="relative h-96 md:h-[500px] overflow-hidden">
+            <img src="/images/the-modeva-exterior-3-1-1280x668.jpg" alt="Sudara exterior view" 
+                 class="w-full h-full object-cover">
+            
+            <!-- Navigation Arrows -->
+            <button class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
         </div>
-    </div>
 
-    <!-- Hero Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Title and Description -->
-            <div class="text-center mb-8">
-                <h1 class="text-4xl font-bold mb-4 text-gray-900">
-                    Sudara. Банг Тао. 500 м от моря. 90% прибыли Вам.
-                </h1>
-                <p class="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-                    Крупный престижный проект в центре Банг Тао. 500 м до моря. 90% прибыли Вам.
-                </p>
-                
-                <!-- Action Buttons -->
-                <div class="flex justify-center space-x-4">
-                    <button class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
-                        Показать на карте
-                    </button>
-                    <button class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
-                        Онлайн покупка
-                    </button>
+        <!-- Thumbnail Gallery -->
+        <div class="bg-white py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex space-x-2 overflow-x-auto">
+                    <img src="/images/the-modeva-exterior-3-1-1280x668.jpg" alt="Sudara exterior 1" 
+                         class="w-20 h-16 object-cover rounded cursor-pointer hover:opacity-80 transition">
+                    <img src="/images/the-modeva-exterior-4-1.jpg" alt="Sudara exterior 2" 
+                         class="w-20 h-16 object-cover rounded cursor-pointer hover:opacity-80 transition">
+                    <img src="/images/modeva-interior-1bdr-3.jpg" alt="Sudara interior bedroom" 
+                         class="w-20 h-16 object-cover rounded cursor-pointer hover:opacity-80 transition">
+                    <img src="/images/modeva-interior-1bdr-4.jpg" alt="Sudara interior living room" 
+                         class="w-20 h-16 object-cover rounded cursor-pointer hover:opacity-80 transition">
+                    <img src="/images/the-modeva-exterior-5-1.jpg" alt="Sudara exterior 3" 
+                         class="w-20 h-16 object-cover rounded cursor-pointer hover:opacity-80 transition">
+                </div>
+            </div>
+        </div>
+
+        <!-- Title and Description -->
+        <div class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl font-bold mb-4 text-black">
+                        Sudara. Банг Тао. 500 м от моря. 90% прибыли Вам.
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
+                        Крупный престижный проект в центре Банг Тао. 500 м до моря. 90% прибыли Вам.
+                    </p>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex justify-center space-x-4">
+                        <button class="px-8 py-4 bg-black hover:bg-gray-800 text-white rounded-lg font-semibold transition">
+                            Показать на карте
+                        </button>
+                        <button class="px-8 py-4 bg-black hover:bg-gray-800 text-white rounded-lg font-semibold transition">
+                            Онлайн покупка
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Unique Features -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">УНИКАЛЬНЫЕ ОСОБЕННОСТИ ОБЪЕКТА</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">УНИКАЛЬНЫЕ ОСОБЕННОСТИ ОБЪЕКТА</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Location -->
                 <div class="feature-card rounded-lg p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-blue-600">РАСПОЛОЖЕНИЕ</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-black">РАСПОЛОЖЕНИЕ</h3>
                     <p class="text-gray-600">500 метров от моря, рядом с 5* отелями Saii, Dusit Thani, Angsana, Banyan Tree</p>
                 </div>
 
                 <!-- Nature -->
                 <div class="feature-card rounded-lg p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75S7 14 17 8z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-green-600">ПРИРОДА</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-black">ПРИРОДА</h3>
                     <p class="text-gray-600">Бассейны. Тропический сад</p>
                 </div>
 
                 <!-- Infrastructure -->
                 <div class="feature-card rounded-lg p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-purple-600">ИНФРАСТРУКТУРА</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-black">ИНФРАСТРУКТУРА</h3>
                     <p class="text-gray-600">Магазины, рестораны салоны в пешей доступности</p>
                 </div>
 
                 <!-- Prestige -->
                 <div class="feature-card rounded-lg p-6 text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-yellow-600">ПРЕСТИЖНОСТЬ</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-black">ПРЕСТИЖНОСТЬ</h3>
                     <p class="text-gray-600">Престижный элитный район</p>
                 </div>
             </div>
@@ -189,18 +216,18 @@
     </section>
 
     <!-- Video Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">ВИДЕО ОБ ОБЪЕКТЕ</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">ВИДЕО ОБ ОБЪЕКТЕ</h2>
             <div class="relative aspect-video bg-gray-100 rounded-lg overflow-hidden border">
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <button class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                    <button class="w-20 h-20 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition">
                         <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </button>
                 </div>
-                <div class="absolute bottom-4 left-4 text-gray-900">
+                <div class="absolute bottom-4 left-4 text-black">
                     <h3 class="text-xl font-semibold">Sudara Phuket - Видео презентация</h3>
                     <p class="text-gray-600">Длительность: 3:45</p>
                 </div>
@@ -209,25 +236,25 @@
     </section>
 
     <!-- Characteristics -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">ХАРАКТЕРИСТИКИ</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">ХАРАКТЕРИСТИКИ</h2>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-white rounded-lg border">
-                    <div class="text-2xl font-bold text-blue-600 mb-2">Bang Tao</div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg border">
+                    <div class="text-2xl font-bold text-black mb-2">Bang Tao</div>
                     <div class="text-gray-600">Регион</div>
                 </div>
-                <div class="text-center p-6 bg-white rounded-lg border">
-                    <div class="text-2xl font-bold text-green-600 mb-2">2026</div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg border">
+                    <div class="text-2xl font-bold text-black mb-2">2026</div>
                     <div class="text-gray-600">Год сдачи</div>
                 </div>
-                <div class="text-center p-6 bg-white rounded-lg border">
-                    <div class="text-2xl font-bold text-yellow-600 mb-2">500м</div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg border">
+                    <div class="text-2xl font-bold text-black mb-2">500м</div>
                     <div class="text-gray-600">До моря</div>
                 </div>
-                <div class="text-center p-6 bg-white rounded-lg border">
-                    <div class="text-2xl font-bold text-purple-600 mb-2">90%</div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg border">
+                    <div class="text-2xl font-bold text-black mb-2">90%</div>
                     <div class="text-gray-600">Прибыль Вам</div>
                 </div>
             </div>
@@ -235,9 +262,9 @@
     </section>
 
     <!-- Map Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">РАСПОЛОЖЕНИЕ</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">РАСПОЛОЖЕНИЕ</h2>
             
             <!-- Map Container -->
             <div class="map-container mb-8">
@@ -252,33 +279,53 @@
             </div>
 
             <!-- Distance Tags -->
-            <div class="bg-gray-50 rounded-lg p-6 border">
-                <h3 class="text-xl font-semibold mb-4 text-gray-900">РАССТОЯНИЕ ДО</h3>
+            <div class="bg-white rounded-lg p-6 border">
+                <h3 class="text-xl font-semibold mb-4 text-black">РАССТОЯНИЕ ДО</h3>
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
                     <div class="distance-tag rounded-lg p-4 text-center">
-                        <div class="text-2xl mb-2">🏖️</div>
-                        <div class="font-semibold text-gray-900">Банг Тао</div>
-                        <div class="text-blue-600 font-bold">500 М</div>
+                        <div class="w-8 h-8 mx-auto mb-2 bg-gray-100 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-black">Банг Тао</div>
+                        <div class="text-black font-bold">500 М</div>
                     </div>
                     <div class="distance-tag rounded-lg p-4 text-center">
-                        <div class="text-2xl mb-2">⭐</div>
-                        <div class="font-semibold text-gray-900">Catch Beach Club</div>
-                        <div class="text-blue-600 font-bold">5 МИНУТ</div>
+                        <div class="w-8 h-8 mx-auto mb-2 bg-gray-100 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-black">Catch Beach Club</div>
+                        <div class="text-black font-bold">5 МИНУТ</div>
                     </div>
                     <div class="distance-tag rounded-lg p-4 text-center">
-                        <div class="text-2xl mb-2">⭐</div>
-                        <div class="font-semibold text-gray-900">Lemonade Club</div>
-                        <div class="text-blue-600 font-bold">7 МИНУТ</div>
+                        <div class="w-8 h-8 mx-auto mb-2 bg-gray-100 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-black">Lemonade Club</div>
+                        <div class="text-black font-bold">7 МИНУТ</div>
                     </div>
                     <div class="distance-tag rounded-lg p-4 text-center">
-                        <div class="text-2xl mb-2">🛍️</div>
-                        <div class="font-semibold text-gray-900">Boat Avenue</div>
-                        <div class="text-blue-600 font-bold">5 МИНУТ</div>
+                        <div class="w-8 h-8 mx-auto mb-2 bg-gray-100 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-black">Boat Avenue</div>
+                        <div class="text-black font-bold">5 МИНУТ</div>
                     </div>
                     <div class="distance-tag rounded-lg p-4 text-center">
-                        <div class="text-2xl mb-2">⭐</div>
-                        <div class="font-semibold text-gray-900">Laguna Phuket</div>
-                        <div class="text-blue-600 font-bold">5 МИНУТ</div>
+                        <div class="w-8 h-8 mx-auto mb-2 bg-gray-100 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-black">Laguna Phuket</div>
+                        <div class="text-black font-bold">5 МИНУТ</div>
                     </div>
                 </div>
             </div>
