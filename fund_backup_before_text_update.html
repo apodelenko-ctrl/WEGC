@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="head_title">WEGC Fund — Asian Real Estate Income & Growth</title>
+  <meta name="description" data-i18n="head_desc" content="Fractional investing from $5k in income-producing and development-stage real estate across Phuket and Asia. Two strategies: 6.5% coupon pool and growth pool targeting ~30% over 3 years.">
+
+  <!-- Tailwind CSS CDN (temporary fix) -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Canonical / hreflang -->
+  <link rel="canonical" href="https://wegc.fund/fund.html">
+  <link rel="alternate" hreflang="en" href="https://wegc.fund/fund.html" />
+  <link rel="alternate" hreflang="ru" href="https://wegc.fund/fund.html?lang=ru" />
+  <link rel="alternate" hreflang="zh" href="https://wegc.fund/fund.html?lang=zh" />
+  <link rel="alternate" hreflang="ar" href="https://wegc.fund/fund.html?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://wegc.fund/fund.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="West East Real Estate">
+  <meta property="og:title" data-i18n="og_title" content="WEGC Fund — Fractional real estate investing from $5k">
+  <meta property="og:description" data-i18n="og_desc" content="Two strategies: 6.5% coupon pool (income) and growth pool (~30% over 3 years). Backed by concrete, data-curated projects.">
+  <meta property="og:url" content="https://wegc.fund/fund.html">
+  <meta property="og:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="ar_AE">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n="og_title" content="WEGC Fund — Fractional real estate investing from $5k">
+  <meta name="twitter:description" data-i18n="og_desc" content="Two strategies: 6.5% coupon pool (income) and growth pool (~30% over 3 years). Backed by concrete, data-curated projects.">
+  <meta name="twitter:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
+
+  <!-- PWA / Icons -->
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/icon-192.png">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#0b0b0b">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0b">
+
+  <style>
+    .container-max{max-width:1200px}
+    .badge{display:inline-block;padding:.25rem .5rem;border-radius:.5rem;font-size:.75rem;line-height:1}
+    .badge-dark{background:#0b0b0b;color:#fff;border:1px solid #111}
+    .badge-emerald{background:#e7f8ee;color:#197a42}
+    .badge-amber{background:#fff7e6;color:#9a5a00}
+    .nav a.active{ color:#93c5fd; text-decoration:underline; }
+  </style>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"West East Real Estate",
+    "legalName":"WEST EAST TRADE GROUP PTE. LTD.",
+    "url":"https://wegc.fund/",
+    "logo":"https://wegc.fund/images/icon-192.png",
+    "email":"post@wegc.fund",
+    "sameAs":[
+      "https://www.linkedin.com/company/westeastcapital/",
+      "https://www.instagram.com/westeastgate/"
+    ],
+    "address":{"@type":"PostalAddress",
+      "streetAddress":"7 Temasek Boulevard, #12-07, Suntec Tower One",
+      "addressLocality":"Singapore","postalCode":"038987","addressCountry":"SG"}
+  }
+  </script>
+</head>
+<body class="antialiased text-gray-800">
+
+  <!-- NAV (копия с главной; добавлен пункт Fund) -->
+  <nav class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
+    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="font-semibold text-white hover:text-gray-300 text-base">West East Real Estate</a>
+        <button id="burgerBtn" class="md:hidden p-2 border border-white/30 rounded" aria-label="Toggle menu">☰</button>
+      </div>
+      <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
+        <a href="/#gidr" class="block py-2 md:py-0 hover:text-gray-300">GIDR</a>
+        <a href="/#portfolio" class="block py-2 md:py-0 hover:text-gray-300">Portfolio</a>
+        <a href="/fund.html" class="block py-2 md:py-0 hover:text-gray-300 active">WEGC Fund</a>
+        <a href="/#contact" class="block py-2 md:py-0 hover:text-gray-300">Contact</a>
+        <a href="#contact" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" data-i18n="nav_buy">Apply to fund</a>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">WhatsApp</a>
+
+        <!-- Language -->
+        <div class="lang-wrap relative">
+          <button id="langBtn" class="lang-btn inline-flex items-center gap-1.5 px-2 py-1 border border-white/40 rounded" aria-expanded="false" aria-haspopup="true">
+            <span id="langLabel">EN</span><span>▼</span>
+          </button>
+          <div id="langMenu" class="lang-menu absolute right-0 top-[calc(100%+4px)] min-w-[9rem] bg-white text-black border border-gray-200 rounded shadow-lg hidden z-50">
+            <button data-lang="en" data-dir="ltr" class="w-full text-left px-3 py-2">English</button>
+            <button data-lang="ru" data-dir="ltr" class="w-full text-left px-3 py-2">Русский</button>
+            <button data-lang="zh" data-dir="ltr" class="w-full text-left px-3 py-2">中文</button>
+            <button data-lang="ar" data-dir="rtl" class="w-full text-left px-3 py-2">العربية</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-gradient-to-r from-gray-900 to-black text-white">
+    <div class="container-max mx-auto px-4 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="text-3xl md:text-5xl font-extrabold tracking-tight" data-i18n="hero_title">
+          Инвестируйте в реальный бетон с $5k: доход и рост без покупки квартиры
+        </div>
+        <p class="text-white/70 mt-4 max-w-2xl" data-i18n="hero_sub">
+          Два трека: купонный пул 6.5% годовых и ростовой пул (~30% за 3 года). Проекты отобраны GIDR и связаны с нашим брокериджем на Пхукете.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#products" class="px-5 py-3 rounded-md bg-white text-black" data-i18n="cta_explore">Посмотреть продукты</a>
+          <a href="/docs/fund_memorandum.pdf" class="px-5 py-3 rounded-md border border-white/40" data-i18n="cta_memorandum">Скачать меморандум (PDF)</a>
+        </div>
+        <div class="mt-4 text-xs text-white/60" data-i18n="hero_notice">
+          * Показатели иллюстративны и не являются гарантией доходности. Условия зависят от документов и законодательства.
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-white/10">
+        <!-- место под видео об фонде -->
+        <div class="aspect-video bg-black/40 flex items-center justify-center">
+          <div class="text-white/70 text-sm" data-i18n="video_placeholder">Здесь будет видео-презентация фонда</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- USP: Fractional -->
+  <section class="bg-white">
+    <div class="container-max mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
+      <div class="rounded-xl border p-6">
+        <div class="text-sm text-emerald-700 mb-1" data-i18n="usp1_tag">ФРАКЦИОННО</div>
+        <div class="text-xl font-semibold mb-2" data-i18n="usp1_title">Вход от $5k</div>
+        <p class="text-gray-700 text-sm" data-i18n="usp1_txt">
+          Не нужно покупать виллу за $1M: фонд агрегирует капитал пайщиков и вкладывает в понятные объекты.
+        </p>
+      </div>
+      <div class="rounded-xl border p-6">
+        <div class="text-sm text-emerald-700 mb-1" data-i18n="usp2_tag">ДОХОД + РОСТ</div>
+        <div class="text-xl font-semibold mb-2" data-i18n="usp2_title">Два пула</div>
+        <p class="text-gray-700 text-sm" data-i18n="usp2_txt">
+          Купон 6.5% от арендного пула и ростовой трек на этапе строительства с целевым ~30% за 3 года.
+        </p>
+      </div>
+      <div class="rounded-xl border p-6">
+        <div class="text-sm text-emerald-700 mb-1" data-i18n="usp3_tag">DATA-DRIVEN</div>
+        <div class="text-xl font-semibold mb-2" data-i18n="usp3_title">Курация GIDR</div>
+        <p class="text-gray-700 text-sm" data-i18n="usp3_txt">
+          Отбор на основе моделей GIDR: локация, спрос, застройщик, цена/качество, ликвидность.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="py-14 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-2" data-i18n="prod_h2">Продукты фонда</h2>
+      <p class="text-gray-600 mb-6" data-i18n="prod_intro">
+        Оба инструмента доступны фракционно. Детали — в меморандумах и в договорной документации.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Coupon -->
+        <div class="rounded-xl bg-white border p-6">
+          <div class="mb-2">
+            <span class="badge badge-emerald" data-i18n="badge_income">Доход</span>
+          </div>
+          <h3 class="text-2xl font-semibold mb-2" data-i18n="coupon_title">Купонный пул — 6.5% годовых</h3>
+          <p class="text-sm text-gray-700 mb-4" data-i18n="coupon_txt">
+            Бэкенд — пул готовых и сдаваемых объектов (арендный поток в THB/USD). Выплата купона по графику, средства распределяются пропорционально доле.
+          </p>
+          <ul class="text-sm text-gray-800 space-y-2 mb-4">
+            <li data-i18n="coupon_li1">Выплаты: раз в квартал</li>
+            <li data-i18n="coupon_li2">База: действующие договоры аренды</li>
+            <li data-i18n="coupon_li3">Хедж: валютная структура пула</li>
+          </ul>
+          <a href="/docs/fund_coupon.pdf" class="px-4 py-2 rounded-md bg-gray-900 text-white" data-i18n="btn_coupon_pdf">Меморандум (PDF)</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="rounded-xl bg-white border p-6">
+          <div class="mb-2">
+            <span class="badge badge-amber" data-i18n="badge_growth">Рост</span>
+          </div>
+          <h3 class="text-2xl font-semibold mb-2" data-i18n="growth_title">Ростовой пул — цель ~30% за 3 года</h3>
+          <p class="text-sm text-gray-700 mb-4" data-i18n="growth_txt">
+            Объекты на этапе котлована/строительства, выгрузка через 3–4 года за счёт выхода в эксплуатацию/перепродажи.
+          </p>
+          <ul class="text-sm text-gray-800 space-y-2 mb-4">
+            <li data-i18n="growth_li1">Девелоперский дисконт на входе</li>
+            <li data-i18n="growth_li2">Реализация по мере сдачи очередей</li>
+            <li data-i18n="growth_li3">Переоценка при выходе</li>
+          </ul>
+          <a href="/docs/fund_growth.pdf" class="px-4 py-2 rounded-md bg-gray-900 text-white" data-i18n="btn_growth_pdf">Меморандум (PDF)</a>
+        </div>
+      </div>
+
+      <!-- Round -->
+      <div class="rounded-xl border bg-white p-6 mt-8">
+        <div class="text-sm text-gray-500 mb-2" data-i18n="round_tag">Текущий раунд</div>
+        <div class="grid sm:grid-cols-3 gap-4 text-sm">
+          <div>
+            <div class="text-gray-500" data-i18n="round_size">Размер:</div>
+            <div class="text-xl font-semibold">$2,000,000</div>
+          </div>
+          <div>
+            <div class="text-gray-500" data-i18n="round_window">Окно подписки:</div>
+            <div class="text-xl font-semibold" data-i18n="round_window_val">Январь 2031</div>
+          </div>
+          <div>
+            <div class="text-gray-500" data-i18n="round_min">Минимум на инвестора:</div>
+            <div class="text-xl font-semibold">$5,000</div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <a href="#contact" class="px-5 py-3 rounded-md bg-emerald-600 text-white" data-i18n="cta_join">Подать заявку</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYTICS (плейсхолдеры под графики) -->
+  <section id="analytics" class="py-14 bg-white">
+    <div class="container-max mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-2" data-i18n="an_h2">Аналитика рынка (Phuket / Resort RE)</h2>
+      <p class="text-gray-600 mb-6" data-i18n="an_intro">
+        Консервативные ориентиры. Конкретные цифры и источники — в PDF-приложениях; графики вы загрузите как SVG/PNG.
+      </p>
+
+      <div class="grid md:grid-cols-4 gap-4 mb-6">
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi1_t">Загрузка (Resort)</div>
+          <div class="text-2xl font-semibold"><span id="kpi_occ">72–78%</span></div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi2_t">ADR (US$)</div>
+          <div class="text-2xl font-semibold"><span id="kpi_adr">135–165</span></div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi3_t">Yield (нетто)</div>
+          <div class="text-2xl font-semibold"><span id="kpi_yield">5–7%</span></div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi4_t">Темпы цен</div>
+          <div class="text-2xl font-semibold"><span id="kpi_price">+3–6% г/г</span></div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl border overflow-hidden">
+          <img src="/images/analytics/occ_yield.png" alt="Occupancy vs Yield" class="w-full h-64 object-cover">
+        </div>
+        <div class="rounded-xl border overflow-hidden">
+          <img src="/images/analytics/price_trend.png" alt="Price trends" class="w-full h-64 object-cover">
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-3 text-sm">
+        <a href="/docs/analytics_overview.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_overview">Обзор рынка (PDF)</a>
+        <a href="/docs/analytics_hotels.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_hotels">Отели и аренда (PDF)</a>
+        <a href="/docs/analytics_dev.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_dev">Девелопмент (PDF)</a>
+        <a href="/docs/analytics_fx.pdf" class="px-4 py-2 rounded-md border" data-i18n="pdf_fx">Валюты и доходность (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS / RISKS -->
+  <section class="py-14 bg-gray-50">
+    <div class="container-max mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-2xl font-semibold mb-3" data-i18n="how_h2">Как работает фонд</h2>
+        <ul class="text-sm text-gray-800 space-y-2">
+          <li data-i18n="how_li1">Агрегация вкладов пайщиков (от $5k) → инвестиции в пул объектов.</li>
+          <li data-i18n="how_li2">Купонный пул — денежный поток от аренды, квартальные выплаты.</li>
+          <li data-i18n="how_li3">Ростовой пул — дисконт на этапе строительства, выход через 3–4 года.</li>
+          <li data-i18n="how_li4">Селекция проектов — по GIDR-моделям (спрос, локация, девелопер).</li>
+          <li data-i18n="how_li5">Отчётность и документы — через защищённый кабинет / email.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold mb-3" data-i18n="risk_h2">Риски (основные)</h2>
+        <ul class="text-sm text-gray-800 space-y-2">
+          <li data-i18n="risk_li1">Рыночные: сезонность, occupancy/ADR, изменение спроса.</li>
+          <li data-i18n="risk_li2">Девелоперские: сроки, разрешения, подрядчики.</li>
+          <li data-i18n="risk_li3">Валютные: THB/USD, конвертация, распределение потоков.</li>
+          <li data-i18n="risk_li4">Правовые: форма участия, регистрация, налоговые режимы.</li>
+        </ul>
+        <p class="text-xs text-gray-500 mt-3" data-i18n="risk_note">
+          Полный перечень рисков и структур — в меморандумах. Показатели — иллюстративные.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-14 bg-white">
+    <div class="container-max mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-6" data-i18n="faq_h2">FAQ — участие в фонде</h2>
+
+      <div class="border-b py-4">
+        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center" type="button" aria-expanded="false">
+          <span data-i18n="q1">Чем фонд отличается от покупки квартиры?</span><span>+</span>
+        </button>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-700" aria-hidden="true" data-i18n="a1">
+          Ниже чек, диверсификация, меньше операционной рутины. Доход/рост — через пулы активов.
+        </div>
+      </div>
+
+      <div class="border-b py-4">
+        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center" type="button" aria-expanded="false">
+          <span data-i18n="q2">Минимальная сумма и валюта?</span><span>+</span>
+        </button>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-700" aria-hidden="true" data-i18n="a2">
+          От $5,000 (или эквивалент). Валюта участия и выплаты указаны в меморандумах.
+        </div>
+      </div>
+
+      <div class="border-b py-4">
+        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center" type="button" aria-expanded="false">
+          <span data-i18n="q3">Когда стартует текущий раунд?</span><span>+</span>
+        </button>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-700" aria-hidden="true" data-i18n="a3">
+          Окно подписки зафиксировано на январь 2031. Подробности — в информационных материалах.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container-max mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-4" data-i18n="cta_h2">Подать заявку на участие</h2>
+      <p class="text-gray-600 mb-6 max-w-2xl" data-i18n="cta_p">
+        Заполните форму на главной ("Buy property") либо напишите на <strong>post@wegc.fund</strong> — мы пришлём пакет документов.
+      </p>
+      <div class="flex gap-3">
+        <a href="/#contact" class="px-5 py-3 rounded-md bg-gray-900 text-white" data-i18n="cta_go">К форме</a>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="px-5 py-3 border rounded">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (копия) -->
+  <footer class="bg-gray-900 text-gray-200 pt-10">
+    <div class="mt-8 bg-black/40">
+      <div class="container-max mx-auto px-4 py-5 text-xs text-gray-400">
+        <div class="grid md:grid-cols-3 gap-4">
+          <div>
+            <div class="font-semibold text-gray-300">WEST EAST TRADE GROUP PTE. LTD.</div>
+            <div>UEN: <span id="uen">202505772C</span></div>
+            <div>Registered Office: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore <span id="postal">038987</span></div>
+          </div>
+          <div>
+            <div>Business WhatsApp: <a class="text-blue-300" href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer">+66 657 658 782</a></div>
+            <div>Primary email: <a class="text-blue-300" href="mailto:post@wegc.fund">post@wegc.fund</a></div>
+          </div>
+          <div class="md:text-right">
+            <div>© 2025 West East. All rights reserved.</div>
+          </div>
+        </div>
+        <div class="mt-3 text-xs text-gray-400 flex flex-wrap gap-4">
+          <a href="/privacy.html" class="underline hover:text-gray-200">Privacy Policy</a>
+          <a href="/terms.html" class="underline hover:text-gray-200">Terms of Service</a>
+          <a href="/cookies.html" class="underline hover:text-gray-200">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPТЫ -->
+  <script>
+    // burger
+    const burger=document.getElementById('burgerBtn'); const menu=document.getElementById('navMenu');
+    burger?.addEventListener('click', ()=>{ menu.classList.toggle('hidden'); burger.textContent=menu.classList.contains('hidden')?'☰':'✕'; burger.setAttribute('aria-pressed', menu.classList.contains('hidden')?'false':'true'); });
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-question').forEach((btn)=>{
+      const ans=btn.parentElement.querySelector('.faq-answer');
+      btn.addEventListener('click', ()=>{
+        ans.classList.toggle('hidden');
+        const open=!ans.classList.contains('hidden');
+        btn.classList.toggle('open', open);
+        btn.querySelector('span:last-child').textContent=open?'−':'+';
+        btn.setAttribute('aria-expanded', open?'true':'false');
+        ans.setAttribute('aria-hidden', open?'false':'true');
+      });
+    });
+
+    // i18n
+    (function(){
+      const btn=document.getElementById('langBtn'); const menu=document.getElementById('langMenu'); const label=document.getElementById('langLabel');
+      btn?.addEventListener('click', ()=>{ const isOpen=menu.classList.toggle('hidden'); btn.setAttribute('aria-expanded', isOpen?'false':'true'); });
+      document.addEventListener('click', (e)=>{ if(!menu.contains(e.target) && !btn.contains(e.target)) menu.classList.add('hidden'); });
+
+      const dict={
+        en:{
+          head_title:"WEGC Fund — Asian Real Estate Income & Growth",
+          head_desc:"Fractional investing from $5k in income-producing and development-stage real estate across Phuket and Asia.",
+          og_title:"WEGC Fund — Fractional real estate investing from $5k",
+          og_desc:"Two strategies: 6.5% coupon pool and growth pool (~30% over 3 years).",
+          nav_buy:"Apply to fund",
+          hero_title:"Invest in real concrete from $5k: income & growth without buying an apartment",
+          hero_sub:"Two tracks: 6.5% coupon income and growth (~30% in 3 years). Curated by GIDR and linked to our Phuket brokerage.",
+          cta_explore:"Explore products",
+          cta_memorandum:"Download Memorandum (PDF)",
+          hero_notice:"* Figures are illustrative only and not guarantees.",
+          video_placeholder:"Video presentation placeholder",
+          usp1_tag:"FRACTIONAL",
+          usp1_title:"Entry from $5k",
+          usp1_txt:"No need to buy a $1M villa: pooled capital into tangible assets.",
+          usp2_tag:"INCOME + GROWTH",
+          usp2_title:"Two pools",
+          usp2_txt:"6.5% coupon from rental pool and growth track targeting ~30% in 3 years.",
+          usp3_tag:"DATA-DRIVEN",
+          usp3_title:"GIDR curation",
+          usp3_txt:"Model-based selection: demand, location, developer, liquidity.",
+          prod_h2:"Fund products",
+          prod_intro:"Both instruments are fractional. See memoranda for details.",
+          badge_income:"Income",
+          coupon_title:"Coupon pool — 6.5% p.a.",
+          coupon_txt:"Backed by operating, income-producing assets. Quarterly coupons.",
+          coupon_li1:"Payouts: quarterly",
+          coupon_li2:"Base: active rental contracts",
+          coupon_li3:"FX mix in the pool",
+          btn_coupon_pdf:"Memorandum (PDF)",
+          badge_growth:"Growth",
+          growth_title:"Growth pool — target ~30% in 3 years",
+          growth_txt:"Pre-construction/under-construction projects, exit via handover/resale.",
+          growth_li1:"Developer discount at entry",
+          growth_li2:"Phased realization on delivery",
+          growth_li3:"Revaluation at exit",
+          btn_growth_pdf:"Memorandum (PDF)",
+          round_tag:"Current round",
+          round_size:"Size:",
+          round_window:"Subscription window:",
+          round_window_val:"January 2031",
+          round_min:"Minimum per investor:",
+          cta_join:"Apply",
+          an_h2:"Market analytics (Phuket / Resort RE)",
+          an_intro:"Conservative guides. Replace charts with your SVG/PNG.",
+          kpi1_t:"Occupancy (Resort)",
+          kpi2_t:"ADR (US$)",
+          kpi3_t:"Yield (net)",
+          kpi4_t:"Price growth",
+          pdf_overview:"Market overview (PDF)",
+          pdf_hotels:"Hotels & Rentals (PDF)",
+          pdf_dev:"Development (PDF)",
+          pdf_fx:"FX & Returns (PDF)",
+          how_h2:"How the fund works",
+          how_li1:"Pooling from $5k → investing into asset pools.",
+          how_li2:"Coupon pool — rental cashflows, quarterly payouts.",
+          how_li3:"Growth pool — construction discount, exit in 3–4y.",
+          how_li4:"Selection via GIDR models.",
+          how_li5:"Reporting & docs via secure channel.",
+          risk_h2:"Risks (key)",
+          risk_li1:"Market: seasonality, occupancy/ADR.",
+          risk_li2:"Development: timelines, permits.",
+          risk_li3:"FX: THB/USD flows.",
+          risk_li4:"Legal: structure, taxes.",
+          risk_note:"Full risk list — in memoranda.",
+          faq_h2:"FAQ — fund participation",
+          q1:"How is this different from buying a condo?",
+          a1:"Lower ticket, diversification, less operating hassle.",
+          q2:"Minimum amount and currency?",
+          a2:"From $5,000 (or equivalent). See memoranda.",
+          q3:"When does this round start?",
+          a3:"Subscription window is set for January 2031.",
+          cta_h2:"Apply to participate",
+          cta_p:"Use the form on the main page or email post@wegc.fund.",
+          cta_go:"Go to form"
+        },
+        ru:{
+          head_title:"WEGC Fund — Фонд недвижимости Азии: доход и рост",
+          head_desc:"Фракционное инвестирование от $5k в доходные и строящиеся объекты Пхукета и региона.",
+          og_title:"WEGC Fund — фракционное инвестирование от $5k",
+          og_desc:"Два продукта: купон 6.5% и рост ~30% за 3 года.",
+          nav_buy:"Подать заявку на участие",
+          hero_title:"Инвестируйте в реальный бетон с $5k: доход и рост без покупки квартиры",
+          hero_sub:"Два трека: купонный пул 6.5% годовых и ростовой пул (~30% за 3 года). Курация GIDR.",
+          cta_explore:"Посмотреть продукты",
+          cta_memorandum:"Скачать меморандум (PDF)",
+          hero_notice:"* Показатели иллюстративны и не гарантированы.",
+          video_placeholder:"Здесь будет видео-презентация фонда",
+          usp1_tag:"ФРАКЦИОННО",
+          usp1_title:"Вход от $5k",
+          usp1_txt:"Не нужно покупать виллу за $1M: пул пайщиков → реальные объекты.",
+          usp2_tag:"ДОХОД + РОСТ",
+          usp2_title:"Два пула",
+          usp2_txt:"Купон 6.5% и ростовой трек ~30% за 3 года.",
+          usp3_tag:"DATA-DRIVEN",
+          usp3_title:"Курация GIDR",
+          usp3_txt:"Отбор по моделям: спрос, локация, девелопер, ликвидность.",
+          prod_h2:"Продукты фонда",
+          prod_intro:"Оба инструмента доступны фракционно. Детали — в меморандумах.",
+          badge_income:"Доход",
+          coupon_title:"Купонный пул — 6.5% годовых",
+          coupon_txt:"База — сдаваемые объекты. Квартальные выплаты.",
+          coupon_li1:"Выплаты: ежеквартально",
+          coupon_li2:"База: активные договоры аренды",
+          coupon_li3:"FX-структура пула",
+          btn_coupon_pdf:"Меморандум (PDF)",
+          badge_growth:"Рост",
+          growth_title:"Ростовой пул — цель ~30% за 3 года",
+          growth_txt:"Объекты на котловане/строительстве, выход при вводе/перепродаже.",
+          growth_li1:"Дисконт на входе",
+          growth_li2:"Реализация по очередям",
+          growth_li3:"Переоценка при выходе",
+          btn_growth_pdf:"Меморандум (PDF)",
+          round_tag:"Текущий раунд",
+          round_size:"Размер:",
+          round_window:"Окно подписки:",
+          round_window_val:"Январь 2031",
+          round_min:"Минимум на инвестора:",
+          cta_join:"Подать заявку",
+          an_h2:"Аналитика рынка (Пхукет / курортная недвижимость)",
+          an_intro:"Консервативные ориентиры. Замените графики на ваши SVG/PNG.",
+          kpi1_t:"Загрузка (Resort)",
+          kpi2_t:"ADR (US$)",
+          kpi3_t:"Yield (нетто)",
+          kpi4_t:"Рост цен",
+          pdf_overview:"Обзор рынка (PDF)",
+          pdf_hotels:"Отели и аренда (PDF)",
+          pdf_dev:"Девелопмент (PDF)",
+          pdf_fx:"Валюты и доходность (PDF)",
+          how_h2:"Как работает фонд",
+          how_li1:"Агрегация от $5k → инвестиции в пул.",
+          how_li2:"Купонный пул — арендные потоки.",
+          how_li3:"Ростовой — дисконт строительства, выход 3–4 года.",
+          how_li4:"Отбор по моделям GIDR.",
+          how_li5:"Отчётность и документы.",
+          risk_h2:"Риски (основные)",
+          risk_li1:"Рыночные: сезонность, occupancy/ADR.",
+          risk_li2:"Девелоперские: сроки, разрешения.",
+          risk_li3:"Валютные: THB/USD.",
+          risk_li4:"Правовые/налоговые.",
+          risk_note:"Полный перечень — в меморандумах.",
+          faq_h2:"FAQ — участие в фонде",
+          q1:"Чем отличается от покупки квартиры?",
+          a1:"Ниже чек, диверсификация, меньше рутины.",
+          q2:"Минимальная сумма и валюта?",
+          a2:"От $5,000 (или экв.). Подробности — в меморандумах.",
+          q3:"Когда стартует раунд?",
+          a3:"Окно подписки — январь 2031.",
+          cta_h2:"Подать заявку на участие",
+          cta_p:"Используйте форму на главной или email post@wegc.fund.",
+          cta_go:"К форме"
+        },
+        zh:{
+          head_title:"WEGC 基金 — 亚洲房地产收益与增长",
+          head_desc:"从 $5k 起的碎片化投资：度假租赁现金流与在建项目增长。",
+          og_title:"WEGC Fund — 从 $5k 起碎片化投资",
+          og_desc:"两种策略：6.5% 票息池与三年 ~30% 增长池。",
+          nav_buy:"申请基金",
+          hero_title:"从 $5k 起投资真实资产：无需买房也可获取收益与增长",
+          hero_sub:"两条路径：6.5% 票息与三年 ~30% 增长。由 GIDR 数据甄选。",
+          cta_explore:"查看产品",
+          cta_memorandum:"下载备忘录 (PDF)",
+          hero_notice:"* 数据仅为示例，并非保证。",
+          video_placeholder:"基金视频占位",
+          usp1_tag:"碎片化",
+          usp1_title:"$5k 起",
+          usp1_txt:"无需购买百万别墅：共同出资投向实物项目。",
+          usp2_tag:"收益+增长",
+          usp2_title:"两只池子",
+          usp2_txt:"票息 6.5% 与三年 ~30% 增长目标。",
+          usp3_tag:"数据驱动",
+          usp3_title:"GIDR 甄选",
+          usp3_txt:"基于需求、区位、开发商与流动性模型筛选。",
+          prod_h2:"基金产品",
+          prod_intro:"两种工具均支持碎片化。详见备忘录。",
+          badge_income:"收益",
+          coupon_title:"票息池 — 6.5% 年化",
+          coupon_txt:"以在营资产现金流为基础，按季度派息。",
+          coupon_li1:"派息：季度",
+          coupon_li2:"基础：有效租约",
+          coupon_li3:"外汇结构：多币种配置",
+          btn_coupon_pdf:"备忘录 (PDF)",
+          badge_growth:"增长",
+          growth_title:"增长池 — 3 年目标 ~30%",
+          growth_txt:"早期/在建项目，交付/转售退出。",
+          growth_li1:"折价入场",
+          growth_li2:"分期交付实现",
+          growth_li3:"退出再估值",
+          btn_growth_pdf:"备忘录 (PDF)",
+          round_tag:"当前轮次",
+          round_size:"规模：",
+          round_window:"认购窗口：",
+          round_window_val:"2031年1月",
+          round_min:"单一投资者最低：",
+          cta_join:"申请",
+          an_h2:"市场分析（普吉 / 度假不动产）",
+          an_intro:"保守口径。图表稍后替换为 SVG/PNG。",
+          kpi1_t:"入住率（Resort）",
+          kpi2_t:"ADR（美元）",
+          kpi3_t:"净收益率",
+          kpi4_t:"价格增速",
+          pdf_overview:"市场总览 (PDF)",
+          pdf_hotels:"酒店与租赁 (PDF)",
+          pdf_dev:"开发项目 (PDF)",
+          pdf_fx:"外汇与回报 (PDF)",
+          how_h2:"基金运作",
+          how_li1:"$5k 起募资→配置资产池。",
+          how_li2:"票息池：租金现金流，季度派息。",
+          how_li3:"增长池：建造折扣，3–4 年退出。",
+          how_li4:"GIDR 模型筛选。",
+          how_li5:"报告与材料。",
+          risk_h2:"主要风险",
+          risk_li1:"市场：季节性、入住率/ADR。",
+          risk_li2:"开发：进度、许可。",
+          risk_li3:"外汇：THB/USD。",
+          risk_li4:"法律/税务。",
+          risk_note:"详见备忘录。",
+          faq_h2:"FAQ — 基金参与",
+          q1:"与直接买房有何不同？",
+          a1:"门槛更低，更分散，无需运营。",
+          q2:"最低金额与币种？",
+          a2:"$5,000 起。详见备忘录。",
+          q3:"本轮何时开始？",
+          a3:"认购窗口：2031年1月。",
+          cta_h2:"申请参与",
+          cta_p:"使用主页表单或发送邮件至 post@wegc.fund。",
+          cta_go:"前往表单"
+        },
+        ar:{
+          head_title:"صندوق WEGC — دخل ونمو في عقار آسيا",
+          head_desc:"استثمار مجزأ ابتداءً من 5 آلاف دولار في أصول مؤجرة ومشاريع قيد الإنشاء.",
+          og_title:"WEGC Fund — استثمار مجزأ من 5 آلاف",
+          og_desc:"استراتيجيتان: قسيمة 6.5% ونمو ~30% خلال 3 سنوات.",
+          nav_buy:"قدّم للصندوق",
+          hero_title:"استثمر في أصول ملموسة من 5 آلاف دولار: دخل ونمو دون شراء شقة",
+          hero_sub:"مساران: قسيمة 6.5% ونمو ~30% خلال 3 سنوات. اختيار قائم على بيانات GIDR.",
+          cta_explore:"استكشاف المنتجات",
+          cta_memorandum:"تنزيل المذكرة (PDF)",
+          hero_notice:"* الأرقام تقريبية وليست ضمانات.",
+          video_placeholder:"مكان عرض فيديو الصندوق",
+          usp1_tag:"مجزيء",
+          usp1_title:"بداية من 5 آلاف",
+          usp1_txt:"لا حاجة لشراء فيلا بمليون: تجميع مساهمات في أصول ملموسة.",
+          usp2_tag:"دخل + نمو",
+          usp2_title:"مساران",
+          usp2_txt:"قسيمة 6.5% ونمو ~30% خلال 3 سنوات.",
+          usp3_tag:"مدفوع بالبيانات",
+          usp3_title:"اختيار GIDR",
+          usp3_txt:"نماذج للطلب والموقع والمطور والسيولة.",
+          prod_h2:"منتجات الصندوق",
+          prod_intro:"كلا الأداتين بدخول مجزأ. التفاصيل في المذكرات.",
+          badge_income:"دخل",
+          coupon_title:"مسار القسيمة — 6.5% سنوياً",
+          coupon_txt:"مدعوم بتدفقات إيجار من أصول عاملة. توزيعات ربع سنوية.",
+          coupon_li1:"توزيعات: ربع سنوية",
+          coupon_li2:"الأساس: عقود إيجار فعالة",
+          coupon_li3:"مزيج عملات في المحفظة",
+          btn_coupon_pdf:"المذكرة (PDF)",
+          badge_growth:"نمو",
+          growth_title:"مسار النمو — ~30% خلال 3 سنوات",
+          growth_txt:"مشاريع قيد الإنشاء؛ الخروج عند التسليم/إعادة البيع.",
+          growth_li1:"خصم دخول مطور",
+          growth_li2:"تحقيق تدريجي",
+          growth_li3:"إعادة تقييم عند الخروج",
+          btn_growth_pdf:"المذكرة (PDF)",
+          round_tag:"الجولة الحالية",
+          round_size:"الحجم:",
+          round_window:"نافذة الاكتتاب:",
+          round_window_val:"يناير 2031",
+          round_min:"الحد الأدنى للمستثمر:",
+          cta_join:"قدّم طلباً",
+          an_h2:"تحليلات السوق (بوكيت / عقار منتجعي)",
+          an_intro:"مؤشرات محافظة. استبدل الرسوم بـ SVG/PNG لاحقاً.",
+          kpi1_t:"الإشغال (Resort)",
+          kpi2_t:"ADR (دولار)",
+          kpi3_t:"العائد الصافي",
+          kpi4_t:"نمو الأسعار",
+          pdf_overview:"نظرة عامة (PDF)",
+          pdf_hotels:"الفنادق والإيجار (PDF)",
+          pdf_dev:"التطوير (PDF)",
+          pdf_fx:"العملات والعوائد (PDF)",
+          how_h2:"كيف يعمل الصندوق",
+          how_li1:"تجميع من 5 آلاف → استثمار في محفظة.",
+          how_li2:"قسيمة: تدفقات إيجار.",
+          how_li3:"نمو: خصم إنشاء والخروج خلال 3–4 سنوات.",
+          how_li4:"اختيار عبر نماذج GIDR.",
+          how_li5:"تقارير ووثائق.",
+          risk_h2:"المخاطر",
+          risk_li1:"السوق: موسمية، إشغال/ADR.",
+          risk_li2:"التطوير: المهل والتصاريح.",
+          risk_li3:"العملات: THB/USD.",
+          risk_li4:"قانوني/ضريبي.",
+          risk_note:"التفاصيل في المذكرات.",
+          faq_h2:"الأسئلة الشائعة — المشاركة",
+          q1:"كيف يختلف عن شراء شقة؟",
+          a1:"تذكرة أقل وتنوع أعلى وعمليات أقل.",
+          q2:"الحد الأدنى والعملة؟",
+          a2:"من 5,000$. التفاصيل في المذكرات.",
+          q3:"متى تبدأ الجولة؟",
+          a3:"نافذة الاكتتاب: يناير 2031.",
+          cta_h2:"قدّم طلباً للمشاركة",
+          cta_p:"استخدم نموذج الصفحة الرئيسية أو راسل post@wegc.fund.",
+          cta_go:"اذهب للنموذج"
+        }
+      };
+
+      function setLang(code, dir){
+        const d=dict[code]||dict.en;
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const k=el.getAttribute('data-i18n'); if(d[k]) el.textContent=d[k];
+        });
+        document.documentElement.setAttribute('dir', dir||'ltr');
+        document.documentElement.setAttribute('lang', code||'en');
+        const label=document.getElementById('langLabel'); if(label) label.textContent=(code||'en').toUpperCase();
+        localStorage.setItem('lang', JSON.stringify({code, dir: dir||'ltr'}));
+        const url=new URL(location.href); url.searchParams.set('lang', code); history.replaceState({}, '', url.toString());
+      }
+
+      document.querySelectorAll('#langMenu [data-lang]').forEach(item=>{
+        item.addEventListener('click', ()=>{
+          setLang(item.getAttribute('data-lang'), item.getAttribute('data-dir')||'ltr');
+          document.getElementById('langMenu').classList.add('hidden');
+        });
+      });
+
+      try{
+        const saved=JSON.parse(localStorage.getItem('lang')||'{}'); const q=new URLSearchParams(location.search).get('lang');
+        if(q){ setLang(q, q==='ar'?'rtl':'ltr'); }
+        else if(saved.code){ setLang(saved.code, saved.dir||'ltr'); }
+        else{ setLang('en','ltr'); }
+      }catch(_){ setLang('en','ltr'); }
+    })();
+  </script>
+</body>
+</html>
