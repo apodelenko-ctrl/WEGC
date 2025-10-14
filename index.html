@@ -166,6 +166,7 @@
       </div>
       <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
         <a href="#gidr" class="block py-2 md:py-0 hover:text-gray-300">GIDR</a>
+        <a href="/fund.html" class="block py-2 md:py-0 hover:text-gray-300" data-i18n="nav_fund">Fund</a>
         <a href="#portfolio" class="block py-2 md:py-0 hover:text-gray-300">Portfolio</a>
         <a href="#contact" class="block py-2 md:py-0 hover:text-gray-300">Contact</a>
         <a href="#contact" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">Buy property</a>
@@ -873,10 +874,10 @@
         });
       }
       const dict = {
-        en:{hero_title:'Most profitable & reliable Phuket properties',hero_sub:'Developer prices. Zero buyer commission. Curated by GIDR data.',b1:'Best-in-class projects only — screened for rental demand & liquidity',b2:'Direct developer contracts — no agency markup',b3:'AI-assessed by the Hong Kong Institute of Digital Research (GIDR)',b4:'Leasehold & Freehold routes — clearly explained'},
-        ru:{hero_title:'Самые прибыльные и надёжные объекты Пхукета',hero_sub:'Цены застройщика. 0% комиссии покупателя. Курация на основе данных GIDR.',b1:'Только лучшие проекты — отобраны по спросу на аренду и ликвидности',b2:'Прямые контракты с застройщиком — без наценки агентства',b3:'AI-оценка Гонконгского института цифровых исследований (GIDR)',b4:'Leasehold и Freehold — простое объяснение'},
-        zh:{hero_title:'普吉岛最具收益与可靠的房产',hero_sub:'开发商价格。买方零佣金。基于 GIDR 数据甄选。',b1:'仅甄选一流项目——基于租赁需求与流动性筛选',b2:'开发商直签——无中介加价',b3:'由香港数字研究院（GIDR）进行 AI 评估',b4:'清晰解释 Leasehold 与 Freehold'},
-        ar:{hero_title:'أفضل عقارات بوكيت ربحيةً وموثوقيةً',hero_sub:'أسعار المطوّر. عمولة المشتري 0%. مختارة ببيانات GIDR.',b1:'مشاريع من الفئة الأولى — مفحوصة لطلب الإيجار والسيولة',b2:'عقود مباشرة مع المطوّر — دون زيادة وكالات',b3:'تقييم بالذكاء الاصطناعي من معهد GIDR في هونغ كونغ',b4:'توضيح مسارات الحيازة Leasehold و Freehold'}
+        en:{nav_fund:'Fund',hero_title:'Most profitable & reliable Phuket properties',hero_sub:'Developer prices. Zero buyer commission. Curated by GIDR data.',b1:'Best-in-class projects only — screened for rental demand & liquidity',b2:'Direct developer contracts — no agency markup',b3:'AI-assessed by the Hong Kong Institute of Digital Research (GIDR)',b4:'Leasehold & Freehold routes — clearly explained'},
+        ru:{nav_fund:'Фонд',hero_title:'Самые прибыльные и надёжные объекты Пхукета',hero_sub:'Цены застройщика. 0% комиссии покупателя. Курация на основе данных GIDR.',b1:'Только лучшие проекты — отобраны по спросу на аренду и ликвидности',b2:'Прямые контракты с застройщиком — без наценки агентства',b3:'AI-оценка Гонконгского института цифровых исследований (GIDR)',b4:'Leasehold и Freehold — простое объяснение'},
+        zh:{nav_fund:'基金',hero_title:'普吉岛最具收益与可靠的房产',hero_sub:'开发商价格。买方零佣金。基于 GIDR 数据甄选。',b1:'仅甄选一流项目——基于租赁需求与流动性筛选',b2:'开发商直签——无中介加价',b3:'由香港数字研究院（GIDR）进行 AI 评估',b4:'清晰解释 Leasehold 与 Freehold'},
+        ar:{nav_fund:'الصندوق',hero_title:'أفضل عقارات بوكيت ربحيةً وموثوقيةً',hero_sub:'أسعار المطوّر. عمولة المشتري 0%. مختارة ببيانات GIDR.',b1:'مشاريع من الفئة الأولى — مفحوصة لطلب الإيجار والسيولة',b2:'عقود مباشرة مع المطوّر — دون زيادة وكالات',b3:'تقييم بالذكاء الاصطناعي من معهد GIDR في هونغ كونغ',b4:'توضيح مسارات الحيازة Leasehold و Freehold'}
       };
       function setLang(code, dir){
         const d = dict[code] || dict.en;
