@@ -348,16 +348,110 @@
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
+  <!-- FUND APPLICATION FORM -->
   <section id="contact" class="py-16 bg-white">
     <div class="container-max mx-auto px-4">
       <h2 class="text-3xl font-semibold mb-4" data-i18n="cta_h2">Подать заявку на участие</h2>
-      <p class="text-gray-600 mb-6 max-w-2xl" data-i18n="cta_p">
-        Заполните форму на главной ("Buy property") либо напишите на <strong>post@wegc.fund</strong> — мы пришлём пакет документов.
+      <p class="text-gray-600 mb-8 max-w-2xl" data-i18n="cta_p">
+        Заполните форму для участия в фонде — мы пришлём пакет документов и договоримся о встрече.
       </p>
-      <div class="flex gap-3">
-        <a href="/#contact" class="px-5 py-3 rounded-md bg-gray-900 text-white" data-i18n="cta_go">К форме</a>
-        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="px-5 py-3 border rounded">WhatsApp</a>
+      
+      <div class="max-w-2xl">
+        <form id="fundApplicationForm" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2" for="fundName" data-i18n="form_name">Имя и фамилия *</label>
+              <input type="text" id="fundName" name="name" required 
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                     data-i18n-placeholder="form_name_placeholder">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2" for="fundEmail" data-i18n="form_email">Email *</label>
+              <input type="email" id="fundEmail" name="email" required 
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                     data-i18n-placeholder="form_email_placeholder">
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2" for="fundPhone" data-i18n="form_phone">Телефон / WhatsApp *</label>
+              <input type="tel" id="fundPhone" name="phone" required 
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                     data-i18n-placeholder="form_phone_placeholder">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2" for="fundAmount" data-i18n="form_amount">Сумма инвестиции (USD) *</label>
+              <select id="fundAmount" name="amount" required 
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                <option value="" data-i18n="form_amount_choose">Выберите сумму</option>
+                <option value="5000-10000" data-i18n="form_amount_5k">$5,000 - $10,000</option>
+                <option value="10000-25000" data-i18n="form_amount_10k">$10,000 - $25,000</option>
+                <option value="25000-50000" data-i18n="form_amount_25k">$25,000 - $50,000</option>
+                <option value="50000+" data-i18n="form_amount_50k">$50,000+</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-3" data-i18n="form_type">Тип инвестиции *</label>
+            <div class="space-y-3">
+              <label class="flex items-start">
+                <input type="radio" name="investmentType" value="coupon" required class="mt-1 mr-3 text-emerald-600 focus:ring-emerald-500">
+                <div>
+                  <div class="font-medium" data-i18n="form_type_coupon">Купонный пул — 6.5% годовых</div>
+                  <div class="text-sm text-gray-600" data-i18n="form_type_coupon_desc">Доходный пул с квартальными выплатами от аренды</div>
+                </div>
+              </label>
+              <label class="flex items-start">
+                <input type="radio" name="investmentType" value="growth" required class="mt-1 mr-3 text-emerald-600 focus:ring-emerald-500">
+                <div>
+                  <div class="font-medium" data-i18n="form_type_growth">Ростовой пул — ~30% за 3 года</div>
+                  <div class="text-sm text-gray-600" data-i18n="form_type_growth_desc">Инвестиции в строящиеся объекты с выходом через 3-4 года</div>
+                </div>
+              </label>
+              <label class="flex items-start">
+                <input type="radio" name="investmentType" value="both" required class="mt-1 mr-3 text-emerald-600 focus:ring-emerald-500">
+                <div>
+                  <div class="font-medium" data-i18n="form_type_both">Оба пула</div>
+                  <div class="text-sm text-gray-600" data-i18n="form_type_both_desc">Диверсификация между доходным и ростовым пулами</div>
+                </div>
+              </label>
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2" for="fundNotes" data-i18n="form_notes">Дополнительная информация</label>
+            <textarea id="fundNotes" name="notes" rows="4" 
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      data-i18n-placeholder="form_notes_placeholder"></textarea>
+          </div>
+          
+          <div class="flex items-start">
+            <input type="checkbox" id="fundAgree" name="agree" required class="mt-1 mr-3 text-emerald-600 focus:ring-emerald-500">
+            <label for="fundAgree" class="text-sm text-gray-600">
+              <span data-i18n="form_agree">Я согласен с </span>
+              <a href="/terms.html" class="underline hover:text-emerald-600" data-i18n="form_terms">условиями</a>
+              <span data-i18n="form_agree_and"> и </span>
+              <a href="/privacy.html" class="underline hover:text-emerald-600" data-i18n="form_privacy">политикой конфиденциальности</a>
+            </label>
+          </div>
+          
+          <div class="flex gap-3">
+            <button type="submit" 
+                    class="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                    data-i18n="form_submit">
+              Подать заявку
+            </button>
+            <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" 
+               class="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+              WhatsApp
+            </a>
+          </div>
+          
+          <!-- Success/Error messages -->
+          <div id="fundFormNote" class="hidden mt-4 p-4 rounded-lg text-sm" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
   </section>
@@ -407,6 +501,52 @@
         ans.setAttribute('aria-hidden', open?'false':'true');
       });
     });
+
+    // Fund application form
+    (function(){
+      const form = document.getElementById('fundApplicationForm');
+      if(!form) return;
+      const note = document.getElementById('fundFormNote');
+      
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const fd = new FormData(form);
+        const payload = {
+          type: 'fund_application',
+          name: fd.get('name'),
+          email: fd.get('email'),
+          phone: fd.get('phone'),
+          amount: fd.get('amount'),
+          investmentType: fd.get('investmentType'),
+          notes: fd.get('notes') || '',
+          timestamp: new Date().toISOString()
+        };
+        
+        try{
+          const res = await fetch("https://formspree.io/f/xrbyywrr", {
+            method:"POST",
+            headers:{ "Accept":"application/json", "Content-Type":"application/json" },
+            body: JSON.stringify(payload)
+          });
+          
+          if(res.ok){
+            form.reset();
+            note.className = "mt-4 p-4 rounded-lg text-sm bg-emerald-50 text-emerald-700 border border-emerald-200";
+            note.textContent = "Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в течение 24 часов.";
+            note.classList.remove('hidden');
+            
+            // Scroll to success message
+            note.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }else{
+            throw new Error('Form submission failed');
+          }
+        }catch(err){
+          note.className = "mt-4 p-4 rounded-lg text-sm bg-red-50 text-red-700 border border-red-200";
+          note.textContent = "Ошибка отправки. Попробуйте еще раз или напишите на post@wegc.fund.";
+          note.classList.remove('hidden');
+        }
+      });
+    })();
 
     // i18n
     (function(){
@@ -488,8 +628,33 @@
           q3:"When does this round start?",
           a3:"Subscription window is set for January 2031.",
           cta_h2:"Apply to participate",
-          cta_p:"Use the form on the main page or email post@wegc.fund.",
-          cta_go:"Go to form"
+          cta_p:"Fill out the fund participation form — we'll send you the document package and schedule a meeting.",
+          form_name:"Full name",
+          form_name_placeholder:"Enter your full name",
+          form_email:"Email",
+          form_email_placeholder:"example@email.com",
+          form_phone:"Phone / WhatsApp",
+          form_phone_placeholder:"+1 (555) 123-4567",
+          form_amount:"Investment amount (USD)",
+          form_amount_choose:"Select amount",
+          form_amount_5k:"$5,000 - $10,000",
+          form_amount_10k:"$10,000 - $25,000",
+          form_amount_25k:"$25,000 - $50,000",
+          form_amount_50k:"$50,000+",
+          form_type:"Investment type",
+          form_type_coupon:"Coupon pool — 6.5% annually",
+          form_type_coupon_desc:"Income pool with quarterly rental payments",
+          form_type_growth:"Growth pool — ~30% over 3 years",
+          form_type_growth_desc:"Investments in construction-stage properties with 3-4 year exit",
+          form_type_both:"Both pools",
+          form_type_both_desc:"Diversification between income and growth pools",
+          form_notes:"Additional information",
+          form_notes_placeholder:"Tell us about your investment goals or ask questions...",
+          form_agree:"I agree to the",
+          form_terms:"terms",
+          form_agree_and:" and ",
+          form_privacy:"privacy policy",
+          form_submit:"Submit application"
         },
         ru:{
           head_title:"WEGC Fund — Фонд недвижимости Азии: доход и рост",
@@ -564,8 +729,33 @@
           q3:"Когда стартует раунд?",
           a3:"Окно подписки — январь 2031.",
           cta_h2:"Подать заявку на участие",
-          cta_p:"Используйте форму на главной или email post@wegc.fund.",
-          cta_go:"К форме"
+          cta_p:"Заполните форму для участия в фонде — мы пришлём пакет документов и договоримся о встрече.",
+          form_name:"Имя и фамилия",
+          form_name_placeholder:"Введите ваше имя и фамилию",
+          form_email:"Email",
+          form_email_placeholder:"example@email.com",
+          form_phone:"Телефон / WhatsApp",
+          form_phone_placeholder:"+7 (999) 123-45-67",
+          form_amount:"Сумма инвестиции (USD)",
+          form_amount_choose:"Выберите сумму",
+          form_amount_5k:"$5,000 - $10,000",
+          form_amount_10k:"$10,000 - $25,000",
+          form_amount_25k:"$25,000 - $50,000",
+          form_amount_50k:"$50,000+",
+          form_type:"Тип инвестиции",
+          form_type_coupon:"Купонный пул — 6.5% годовых",
+          form_type_coupon_desc:"Доходный пул с квартальными выплатами от аренды",
+          form_type_growth:"Ростовой пул — ~30% за 3 года",
+          form_type_growth_desc:"Инвестиции в строящиеся объекты с выходом через 3-4 года",
+          form_type_both:"Оба пула",
+          form_type_both_desc:"Диверсификация между доходным и ростовым пулами",
+          form_notes:"Дополнительная информация",
+          form_notes_placeholder:"Расскажите о ваших инвестиционных целях или задайте вопросы...",
+          form_agree:"Я согласен с",
+          form_terms:"условиями",
+          form_agree_and:" и ",
+          form_privacy:"политикой конфиденциальности",
+          form_submit:"Подать заявку"
         },
         zh:{
           head_title:"WEGC 基金 — 亚洲房地产收益与增长",
