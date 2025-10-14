@@ -317,8 +317,8 @@
         </ul>
 
         <div class="flex gap-3">
-          <a href="#contact" class="px-6 py-3 rounded-md bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition" data-i18n="cta_join">Подать заявку</a>
-          <a href="/docs/fund_memorandum.pdf" class="px-6 py-3 rounded-md border-2 border-emerald-600 text-emerald-600 font-semibold hover:bg-emerald-50 transition" data-i18n="cta_memorandum_short">Меморандум</a>
+          <button onclick="openApplicationForm()" class="px-6 py-3 rounded-md bg-gray-900 text-white font-semibold hover:bg-gray-800 transition" data-i18n="cta_join">Подать заявку</button>
+          <button onclick="openMemorandum()" class="px-6 py-3 rounded-md border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-50 transition" data-i18n="cta_memorandum_short">Меморандум</button>
         </div>
       </div>
     </div>
@@ -849,7 +849,7 @@
           // Финальный CTA
           cta_p1:"Начните с $5 000 — выберите стратегию, а мы возьмём на себя остальное: анализ, сделки, управление и отчётность.",
           cta_p2:"Напишите на post@wegc.fund или оставьте заявку — пришлём меморандум, календарь раунда и персональное распределение по стратегиям.",
-          cta_email:"Написать на Email",
+          cta_email:"Подать заявку на участие",
           cta_whatsapp:"WhatsApp",
           cta_download:"Скачать меморандум"
         },
@@ -1140,6 +1140,191 @@
             <p>Адрес: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</p>
             <p>Email: post@wegc.fund</p>
             <p>Вебсайт: https://wegc.fund</p>
+            
+            <hr class="my-8 border-gray-300">
+            
+            <h2 class="text-2xl font-bold mt-8 mb-6">Приложения</h2>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">1. Таблица ключевых условий участия</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse border border-gray-400 mb-6">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-400 px-4 py-3 text-left font-semibold">Параметр</th>
+                    <th class="border border-gray-400 px-4 py-3 text-left font-semibold">Условие / Значение</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Юридическая структура</td>
+                    <td class="border border-gray-400 px-4 py-3">Частный инвестиционный фонд под управлением WEST EAST TRADE GROUP PTE. LTD. (Сингапур)</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Тип предложения</td>
+                    <td class="border border-gray-400 px-4 py-3">Частное размещение (non-public offer)</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Минимальная сумма участия</td>
+                    <td class="border border-gray-400 px-4 py-3">5 000 USD</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Базовая валюта фонда</td>
+                    <td class="border border-gray-400 px-4 py-3">USD</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Старт подписки</td>
+                    <td class="border border-gray-400 px-4 py-3">1 декабря 2025 г.</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Закрытие подписки</td>
+                    <td class="border border-gray-400 px-4 py-3">31 января 2026 г. или достижение лимита — 2 000 000 USD</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Типы пулов</td>
+                    <td class="border border-gray-400 px-4 py-3">Купонный (доход 6,5% годовых) / Ростовой (до 30% за 3 года)</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Lock-up период</td>
+                    <td class="border border-gray-400 px-4 py-3">12 месяцев</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за успех (Growth Pool)</td>
+                    <td class="border border-gray-400 px-4 py-3">До 20% от прибыли</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за управление</td>
+                    <td class="border border-gray-400 px-4 py-3">До 2% годовых</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за вход</td>
+                    <td class="border border-gray-400 px-4 py-3">0%</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за выход</td>
+                    <td class="border border-gray-400 px-4 py-3">До 3% (при досрочном выкупе)</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Аудит</td>
+                    <td class="border border-gray-400 px-4 py-3">Независимый ежегодный аудит</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Юрисдикция</td>
+                    <td class="border border-gray-400 px-4 py-3">Сингапур</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Контакты</td>
+                    <td class="border border-gray-400 px-4 py-3">post@wegc.fund</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">2. Примеры финансовой модели и графиков</h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-blue-900 mb-3">Доходный пул (Income Pool)</h4>
+                <ul class="text-sm text-blue-800 space-y-2">
+                  <li>• <strong>Средний ROI:</strong> 6,5% годовых после расходов</li>
+                  <li>• <strong>Выплаты:</strong> поквартально</li>
+                  <li>• <strong>Источник дохода:</strong> аренда и управление гостиничным фондом</li>
+                  <li>• <strong>Целевая маржа:</strong> ~ 4% чистыми после всех операционных издержек</li>
+                </ul>
+              </div>
+              <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-green-900 mb-3">Пул роста (Growth Pool)</h4>
+                <ul class="text-sm text-green-800 space-y-2">
+                  <li>• <strong>Срок инвестирования:</strong> до 36 месяцев</li>
+                  <li>• <strong>Средняя доходность:</strong> ~ 30% за период</li>
+                  <li>• <strong>Стратегия:</strong> инвестиции на стадиях котлована, перепродажа или капитализация при вводе объекта в эксплуатацию</li>
+                  <li>• <strong>Потоки и динамика:</strong> капитал → финансирование девелопера → рост стоимости → реализация → распределение</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">3. Договор подписки (Subscription Agreement)</h3>
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+              <h4 class="font-semibold text-yellow-900 mb-3">Краткое содержание:</h4>
+              <ul class="text-sm text-yellow-800 space-y-2">
+                <li>• <strong>Предмет:</strong> участие инвестора в фонде WEGC</li>
+                <li>• <strong>Правовой статус:</strong> соглашение между инвестором и WEST EAST TRADE GROUP PTE. LTD.</li>
+                <li>• <strong>Основные положения:</strong>
+                  <ul class="ml-4 mt-2 space-y-1">
+                    <li>— фиксируется сумма инвестирования</li>
+                    <li>— определяется пул (доходный/ростовой)</li>
+                    <li>— устанавливаются права на долю прибыли</li>
+                    <li>— инвестор подтверждает понимание рисков и отказ от претензий при рыночных колебаниях</li>
+                    <li>— фонд обязуется использовать средства строго по целевому назначению</li>
+                    <li>— арбитраж — в Сингапуре</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">4. Анкета инвестора / KYC-форма</h3>
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 1. Персональные данные</h4>
+                <p class="text-sm text-purple-800">ФИО, дата рождения, страна проживания, гражданство, контактная информация.</p>
+              </div>
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 2. Финансовый профиль</h4>
+                <p class="text-sm text-purple-800">Источник доходов, общий объём активов, опыт инвестирования, налоговое резидентство.</p>
+              </div>
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 3. Проверка KYC/AML</h4>
+                <p class="text-sm text-purple-800">Скан паспорта, подтверждение адреса, проверка по санкционным и PEP-спискам.</p>
+              </div>
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 4. Подпись и согласие</h4>
+                <p class="text-sm text-purple-800">Подтверждение достоверности данных, согласие на хранение и использование персональной информации.</p>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">5. Глоссарий терминов</h3>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                  <div>
+                    <strong class="text-gray-900">GIDR (Global Intelligent Development Rating)</strong>
+                    <p class="text-sm text-gray-700">ИИ-модель, анализирующая тысячи параметров девелоперских проектов (доходность, локация, риски, спрос, инфраструктура) и присваивающая им сводный рейтинг.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Lock-up</strong>
+                    <p class="text-sm text-gray-700">Период, в течение которого нельзя вывести капитал из фонда.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Redemption Gate</strong>
+                    <p class="text-sm text-gray-700">Механизм ограничения объёма одновременных заявок на выкуп долей.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Income Pool</strong>
+                    <p class="text-sm text-gray-700">Портфель готовых арендных объектов, создающий регулярный денежный поток.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Growth Pool</strong>
+                    <p class="text-sm text-gray-700">Портфель девелоперских проектов на ранних стадиях, ориентированный на рост капитала.</p>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div>
+                    <strong class="text-gray-900">NAV (Net Asset Value)</strong>
+                    <p class="text-sm text-gray-700">Чистая стоимость активов фонда, рассчитываемая на одну долю.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">KYC/AML</strong>
+                    <p class="text-sm text-gray-700">Процедуры проверки личности и источников средств (Know Your Customer / Anti-Money Laundering).</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Escrow-счёт</strong>
+                    <p class="text-sm text-gray-700">Специальный банковский счёт для временного хранения средств инвестора до подтверждения условий.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Arbitration Clause</strong>
+                    <p class="text-sm text-gray-700">Положение о разрешении споров через арбитраж.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
