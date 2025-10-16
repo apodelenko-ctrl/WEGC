@@ -127,15 +127,19 @@
       <div class="grid md:grid-cols-2 gap-10 items-start">
         <!-- Left Column: Main Message -->
         <div class="space-y-6">
-          <div class="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight">
+          <div class="text-3xl md:text-4xl xl:text-5xl font-extrabold tracking-tight leading-tight">
             <span data-i18n="hero_title">Инвестируйте в реальный Пхукет с $5 000 — доход и рост на основе данных, а не обещаний</span>
         </div>
-          <div class="text-white/90 text-base leading-relaxed">
+          <div class="text-white/90 text-base leading-relaxed space-y-4">
             <p data-i18n="hero_sub_p1">Фонд WEST EAST GATE CAPITAL делает рынок премиальной недвижимости Пхукета доступным для частных инвесторов. Не нужно покупать квартиру за сотни тысяч: участвуйте фракционно от $5 000 и получайте долю в реальных объектах — с понятной экономикой, прозрачной отчётностью и управлением со стороны фонда.</p>
+            <p data-i18n="hero_sub_p2">Наш отбор — это GIDR, собственная AI-модель, натренированная на десятках тысяч параметров Пхукета. Мы видим карту острова буквально «до метра»: пляжные коридоры, транспортные хабы, динамику аренды, историю застройщиков и скорость ввода очередей. Поэтому в портфель попадают только локации и проекты, где цифры сходятся.</p>
+            <p data-i18n="hero_sub_p3">Выберите стратегию под свои цели: купонный пул (6,5% годовых, поквартально) или пул роста (цель ~30% за 3 года) — либо комбинируйте их, балансируя стабильный доход и прирост капитала.</p>
+            <p class="text-sm text-white/80 font-medium" data-i18n="hero_notice">
+              Мы инвестируем в активы, которые можно пощупать, и опираемся на модель, которая знает Пхукет лучше любого буклета.
+            </p>
         </div>
           <div class="flex flex-wrap gap-3">
             <a href="#products" class="px-6 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-100 transition-colors" data-i18n="cta_explore">Посмотреть продукты</a>
-            <a href="/docs/fund_memorandum.pdf" class="px-6 py-3 rounded-lg border border-white/40 font-semibold hover:bg-white/10 transition-colors" data-i18n="cta_memorandum">Скачать меморандум (PDF)</a>
         </div>
       </div>
         
@@ -143,9 +147,9 @@
         <div class="space-y-6">
           <!-- Video -->
           <div class="rounded-xl overflow-hidden shadow-lg border border-white/10">
-            <video class="w-full aspect-video object-cover" autoplay muted loop playsinline>
+            <video class="w-full aspect-square object-cover" autoplay muted loop playsinline>
               <source src="fund-intro.mp4" type="video/mp4">
-              <div class="aspect-video bg-gray-800/50 flex items-center justify-center">
+              <div class="aspect-square bg-gray-800/50 flex items-center justify-center">
                 <div class="text-center text-white/60">
                   <div class="text-base font-medium mb-2" data-i18n="video_placeholder">Видео-презентация фонда</div>
                 </div>
@@ -153,18 +157,9 @@
             </video>
           </div>
           
-          <!-- Supporting text -->
-          <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-            <div class="text-white/90 space-y-4 text-base leading-relaxed">
-              <p data-i18n="hero_sub_p2">Наш отбор — это GIDR, собственная AI-модель, натренированная на десятках тысяч параметров Пхукета. Мы видим карту острова буквально «до метра»: пляжные коридоры, транспортные хабы, динамику аренды, историю застройщиков и скорость ввода очередей. Поэтому в портфель попадают только локации и проекты, где цифры сходятся.</p>
-              <p data-i18n="hero_sub_p3">Выберите стратегию под свои цели: купонный пул (6,5% годовых, поквартально) или пул роста (цель ~30% за 3 года) — либо комбинируйте их, балансируя стабильный доход и прирост капитала.</p>
-            </div>
-          </div>
-          
-          <div class="text-center">
-            <div class="text-sm text-white/80 font-medium" data-i18n="hero_notice">
-              Мы инвестируем в активы, которые можно пощупать, и опираемся на модель, которая знает Пхукет лучше любого буклета.
-            </div>
+          <!-- Memorandum button -->
+          <div class="flex justify-center">
+            <a href="/docs/fund_memorandum.pdf" class="px-6 py-3 rounded-lg border border-white/40 font-semibold hover:bg-white/10 transition-colors" data-i18n="cta_memorandum">Скачать меморандум (PDF)</a>
           </div>
         </div>
       </div>
