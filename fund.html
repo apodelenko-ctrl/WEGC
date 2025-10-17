@@ -69,6 +69,14 @@
         radial-gradient(1000px 400px at 80% -200px, rgba(0,0,0,.06), transparent 60%),
         radial-gradient(800px 300px at -100px 20%, rgba(0,0,0,.05), transparent 60%);
     }
+    .product-card {
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card .mt-4:last-child {
+      margin-top: auto;
+    }
   </style>
 
   <!-- Structured Data: Organization -->
@@ -277,128 +285,73 @@
   </div>
 
   <!-- PRODUCTS -->
-  <section id="products" class="py-14 bg-gray-50">
-    <div class="container-max mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-semibold mb-2" data-i18n="prod_h2">Продукты фонда</h2>
-      <p class="text-gray-600 mb-6 text-justify" data-i18n="prod_intro">
-        Оба инструмента доступны фракционно. Детали — в меморандумах и в договорной документации.
-      </p>
+  <section id="products" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Продукты фонда</h2>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Coupon -->
-        <div class="rounded-xl bg-white border p-6 flex flex-col">
-          <div class="mb-2">
-            <span class="badge badge-emerald" data-i18n="badge_income">Доход</span>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4" data-i18n="coupon_title">Купонный пул — регулярный доход 6,5% годовых</h3>
-          
-          <div class="space-y-3 text-base text-gray-700 mb-4 text-justify">
-            <p data-i18n="coupon_p1">
-              <strong>База</strong> — действующие арендуемые объекты Пхукета: апарт-отели, кондоминиумы с доказанной загрузкой, управлением и предсказуемой экономикой.
-            </p>
-            <p data-i18n="coupon_p2">
-              <strong>Выплаты</strong> — поквартально. Доход формируется из чистого операционного потока, распределяется пропорционально долям инвесторов.
-            </p>
-            <p data-i18n="coupon_p3">
-              Мы балансируем валюту (THB/USD) и географию внутри острова, чтобы снизить зависимость от одного района или сегмента.
-            </p>
-          </div>
-
-          <div class="bg-emerald-50 rounded-lg p-4 mb-4">
-            <div class="text-sm font-semibold text-emerald-800 mb-2" data-i18n="coupon_important">Что важно:</div>
-            <ul class="text-sm text-emerald-900 space-y-1">
-              <li data-i18n="coupon_li1">— Прозрачная база: real occupancy, реальные ставки.</li>
-              <li data-i18n="coupon_li2">— Контракты и менеджмент проверены.</li>
-              <li data-i18n="coupon_li3">— Модель GIDR отслеживает загрузку и корректирует состав пула.</li>
-          </ul>
-          </div>
-
-          <button onclick="openMemorandum()" class="px-4 py-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition w-full" data-i18n="btn_coupon_pdf">Меморандум</button>
-        </div>
-
-        <!-- Growth -->
-        <div class="rounded-xl bg-white border p-6 flex flex-col">
-          <div class="mb-2">
-            <span class="badge badge-amber" data-i18n="badge_growth">Рост</span>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4" data-i18n="growth_title">Пул роста — цель ~30% за 3 года</h3>
-          
-          <div class="space-y-3 text-base text-gray-700 mb-4 text-justify">
-            <p data-i18n="growth_p1">
-              <strong>Вход</strong> на стадии котлована/строительства по девелоперскому дисконту. Рост стоимости идёт по мере готовности и выхода в эксплуатацию, а также за счёт перепродажи части пулов по мере сдачи очередей.
-            </p>
-            <p data-i18n="growth_p2">
-              <strong>Отбор</strong> — только объекты с высокими рейтингами по GIDR: сильная локация, понятная инфраструктура, подтверждённый спрос и дисциплина девелопера.
-            </p>
-            <p data-i18n="growth_p3">
-              <strong>Фокус</strong> — прирост капитала. По мере достижения целевых показателей по проекту фиксируем результат и переупаковываем пул.
-            </p>
-          </div>
-
-          <div class="bg-amber-50 rounded-lg p-4 mb-4">
-            <div class="text-sm font-semibold text-amber-800 mb-2" data-i18n="growth_important">Что важно:</div>
-            <ul class="text-sm text-amber-900 space-y-1">
-              <li data-i18n="growth_li1">— Дисконт на входе + переоценка при вводе.</li>
-              <li data-i18n="growth_li2">— Выход через 3–4 года или по триггерам.</li>
-              <li data-i18n="growth_li3">— Контроль сроков и рисков через данные.</li>
-          </ul>
-          </div>
-
-          <button onclick="openMemorandum()" class="px-4 py-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition w-full" data-i18n="btn_growth_pdf">Меморандум</button>
-        </div>
-      </div>
-
-      <!-- Black separator with golden text -->
-      <div class="bg-black py-8 mt-8">
-        <div class="container-max mx-auto px-4">
-          <div class="flex justify-between items-center mb-4">
-            <div class="text-white text-2xl font-bold">Подписка с 1 декабря 2025</div>
-            <div class="text-amber-400 text-sm font-bold uppercase tracking-wide">ТЕКУЩИЙ РАУНД</div>
-          </div>
-          <div class="text-gray-300 text-base text-justify">Формируем первую волну портфеля из объектов Пхукета с сильной арендной экономикой и прогнозируемым ростом. Минимальный вход $25 000, объём раунда $2 000 000.</div>
-        </div>
-      </div>
-
-      <!-- Round -->
-      <div class="rounded-xl border-2 border-amber-500 bg-white p-8 mt-8">
-        <h3 class="text-2xl font-bold mb-4" data-i18n="round_h3">Текущий раунд размещения</h3>
+      <!-- Карточки в адаптивной сетке -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="space-y-3 text-gray-700 mb-6">
-          <p data-i18n="round_p1">
-            <strong>Старт подписки — 1 декабря 2025 года.</strong> Этот раунд формирует «первую волну» портфеля строго из объектов Пхукета с сильной арендной экономикой и прогнозируемым ростом.
+        <!-- 1. Карточка: Hybrid Income + Growth -->
+        <div class="product-card p-6 border rounded-lg shadow-sm relative bg-white hover:shadow-md transition-shadow duration-300">
+          <div class="badge bg-red-600 text-white px-2 py-1 absolute top-4 right-4 text-xs font-semibold">ТОП по доходности</div>
+          <h3 class="text-xl font-bold text-gray-900">Hybrid Income + Growth (3–5 лет)</h3>
+          <p class="mt-2 text-gray-700 text-sm italic">"Доход и рост — два источника одной инвестиции"</p>
+          <p class="mt-2 text-gray-700 text-sm">
+            Уникальная модель, объединяющая доход от аренды и прирост капитала. Мы входим на этапе котлована по минимальной цене,
+            создаём арендный поток после сдачи объекта и выходим на пике рынка.
+            Эта стратегия приносит стабильный доход в долларах и рост стоимости актива.
           </p>
-          <p data-i18n="round_p2">
-            Мы работаем прозрачно: оформляем KYC/AML онлайн, предоставляем инвест-меморандум, договорную базу и индивидуальное распределение по стратегиям (доход/рост).
+          <ul class="mt-4 text-sm text-gray-700 space-y-1">
+            <li><strong>Минимум вложения:</strong> USD 25 000</li>
+            <li><strong>Доход-шэринг:</strong> 6 % – 9 % p.a.</li>
+            <li><strong>Целевая доходность (IRR):</strong> 11 % – 14 % p.a.</li>
+            <li><strong>Ожидаемый мультипликатор (MOIC):</strong> 1.35× – 1.45×</li>
+            <li><strong>Горизонт:</strong> 3 – 5 лет (опция продления до 7 лет)</li>
+          </ul>
+          <a href="hybrid_memorandum.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+            Меморандум
+          </a>
+        </div>
+
+        <!-- 2. Карточка: Fixed Income Program -->
+        <div class="product-card p-6 border rounded-lg shadow-sm bg-white hover:shadow-md transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900">Fixed Income Program (3 года)</h3>
+          <p class="mt-2 text-gray-700 text-sm italic">"Стабильный доход в долларах — без хлопот"</p>
+          <p class="mt-2 text-gray-700 text-sm">
+            Классическая программа фиксированной доходности. Инвесторы получают купон 8 % годовых с ежегодными выплатами и возврат капитала по окончании срока.
+            Простой, прозрачный инструмент для консервативных инвесторов.
           </p>
+          <ul class="mt-4 text-sm text-gray-700 space-y-1">
+            <li><strong>Минимум вложения:</strong> USD 25 000</li>
+            <li><strong>Фиксированный купон:</strong> 8 % p.a.</li>
+            <li><strong>Бонус при выходе:</strong> 20 % от прибыли проекта</li>
+            <li><strong>Горизонт:</strong> 36 месяцев</li>
+          </ul>
+          <a href="fixed_income_memorandum.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+            Меморандум
+          </a>
         </div>
 
-        <div class="bg-gray-50 rounded-lg p-6 mb-6">
-          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-          <div>
-              <div class="text-gray-500 text-xs mb-1" data-i18n="round_size_label">Объём раунда:</div>
-              <div class="text-2xl font-bold text-amber-600">$2 000 000</div>
-          </div>
-          <div>
-              <div class="text-gray-500 text-xs mb-1" data-i18n="round_min_label">Минимальный вход:</div>
-              <div class="text-2xl font-bold text-amber-600">$25 000</div>
-          </div>
-          <div>
-              <div class="text-gray-500 text-xs mb-1" data-i18n="round_currency_label">Валюта:</div>
-              <div class="text-2xl font-bold text-amber-600">USD</div>
-          </div>
-        </div>
+        <!-- 3. Карточка: Capital Growth Program -->
+        <div class="product-card p-6 border rounded-lg shadow-sm bg-white hover:shadow-md transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900">Capital Growth Program (3 года)</h3>
+          <p class="mt-2 text-gray-700 text-sm italic">"Инвестируйте в рост Пхукета — на ранних стадиях"</p>
+          <p class="mt-2 text-gray-700 text-sm">
+            Модель фокусируется на приобретении недвижимости на этапе котлована с последующей реализацией по мере роста цен.
+            Максимальный потенциал доходности при коротком горизонте и низкой волатильности рынка.
+          </p>
+          <ul class="mt-4 text-sm text-gray-700 space-y-1">
+            <li><strong>Минимум вложения:</strong> USD 25 000</li>
+            <li><strong>Целевая доходность:</strong> 30 % – 35 % за 3 года</li>
+            <li><strong>Средняя IRR:</strong> 9 % – 11 % p.a.</li>
+            <li><strong>Горизонт:</strong> 3 года</li>
+          </ul>
+          <a href="capital_growth_memorandum.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+            Меморандум
+          </a>
         </div>
 
-        <ul class="text-sm text-gray-700 space-y-2 mb-6">
-          <li data-i18n="round_li1"><span class="text-amber-600">✓</span> Выплаты по купону: ежеквартально</li>
-          <li data-i18n="round_li2"><span class="text-amber-600">✓</span> Горизонт по пулу роста: ~3 года</li>
-          <li data-i18n="round_li3"><span class="text-amber-600">✓</span> Отчётность: личный кабинет / email-рассылки по календарю фонда</li>
-        </ul>
-
-        <div class="flex gap-3">
-          <button onclick="openApplicationForm()" class="px-6 py-3 rounded-md bg-gray-900 text-white font-semibold hover:bg-gray-800 transition" data-i18n="cta_join">Подать заявку</button>
-          <button onclick="openMemorandum()" class="px-6 py-3 rounded-md border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-50 transition" data-i18n="cta_memorandum_short">Меморандум</button>
-        </div>
       </div>
     </div>
   </section>
