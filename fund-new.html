@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WEGC Fund — Asian Real Estate Income & Growth</title>
+  <meta name="description" content="Fractional investing from $25k in income-producing and development-stage real estate across Phuket and Asia. Two strategies: 6.5% coupon pool and growth pool targeting ~30% over 3 years.">
+
+  <!-- Tailwind CSS CDN -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Общие параметры макета */
+    .container-max { max-width: 1200px; }
+    
+    /* Цвета */
+    :root {
+      --bg-dark: #0B0B0D;
+      --text-primary: rgba(255,255,255,0.85);
+      --text-secondary: rgba(255,255,255,0.65);
+      --accent-gold: #D9A443;
+      --accent-gold-hover: #f1c871;
+      --border-color: rgba(255,255,255,0.08);
+      --button-text: #1A1A1A;
+    }
+    
+    /* Типографика */
+    h1 { font-size: 48px; line-height: 56px; font-weight: 800; letter-spacing: -0.02em; }
+    h2 { font-size: 32px; line-height: 42px; font-weight: 700; letter-spacing: -0.02em; }
+    h3 { font-size: 24px; line-height: 32px; font-weight: 700; letter-spacing: -0.02em; }
+    p { font-size: 16px; line-height: 26px; }
+    .text-sm { font-size: 12px; line-height: 18px; }
+    
+    /* Мобильная адаптация типографики */
+    @media (max-width: 768px) {
+      h1 { font-size: 36px; line-height: 44px; }
+      h2 { font-size: 24px; line-height: 32px; }
+      h3 { font-size: 20px; line-height: 28px; }
+    }
+    
+    /* Бейджи */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(217,164,67,0.15);
+      color: var(--accent-gold);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(217,164,67,0.3);
+    }
+    
+    /* Карточки */
+    .card {
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.02);
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.25s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.3);
+    }
+    
+    /* Кнопки */
+    .btn-primary {
+      background: var(--accent-gold);
+      color: var(--button-text);
+      font-weight: 600;
+      border-radius: 10px;
+      padding: 12px 28px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary:hover {
+      background: var(--accent-gold-hover);
+    }
+    
+    .btn-outline {
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      background: transparent;
+      border-radius: 10px;
+      padding: 12px 28px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .btn-outline:hover {
+      background: rgba(217,164,67,0.15);
+    }
+    
+    /* Sticky Header */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(12px);
+      z-index: 50;
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .sticky-header.scrolled {
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    
+    /* FAQ аккордеоны */
+    .faq-item {
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .faq-answer.open {
+      max-height: 200px;
+    }
+    
+    /* Stepper */
+    .stepper-circle {
+      width: 28px;
+      height: 28px;
+      background: var(--accent-gold);
+      color: #000;
+      border-radius: 50%;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    
+    .kpi-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .kpi-value {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .card { padding: 24px; }
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .btn-primary, .btn-outline { width: 100%; }
+    }
+    
+    @media (max-width: 480px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* Анимации */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.25s ease-out;
+    }
+  </style>
+</head>
+<body class="antialiased bg-black text-white">
+
+  <!-- STICKY HEADER -->
+  <header class="sticky-header" id="header">
+    <div class="container-max mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="/" class="text-xl font-bold text-white">West East Capital Fund</a>
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="/" class="text-white/70 hover:text-white transition">WE Real Estate</a>
+            <a href="/#gidr" class="text-white/70 hover:text-white transition">GIDR</a>
+            <a href="/#portfolio" class="text-white/70 hover:text-white transition">Portfolio</a>
+            <a href="/fund.html" class="text-white font-medium">WEGC Fund</a>
+            <a href="/#contact" class="text-white/70 hover:text-white transition">Contact</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <button onclick="openApplicationForm()" class="btn-primary">Apply to fund</button>
+          <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="btn-outline">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h1 class="text-white">Инвестируйте в реальный Пхукет с $25 000 — доход и рост на основе данных</h1>
+          <div class="space-y-4 text-white/85">
+            <p>Фонд WEST EAST GATE CAPITAL делает рынок премиальной недвижимости Пхукета доступным для частных инвесторов. Не нужно покупать квартиру за сотни тысяч: участвуйте фракционно от $25 000 и получайте долю в реальных объектах.</p>
+            <p>Наш отбор — это GIDR, собственная AI-модель, натренированная на десятках тысяч параметров Пхукета. Мы видим карту острова буквально «до метра»: пляжные коридоры, транспортные хабы, динамику аренды, историю застройщиков и скорость ввода очередей.</p>
+            <p>Выберите стратегию под свои цели: купонный пул (6,5% годовых, поквартально) или пул роста (цель ~30% за 3 года) — либо комбинируйте их, балансируя стабильный доход и прирост капитала.</p>
+          </div>
+          <div class="flex gap-4">
+            <button onclick="openApplicationForm()" class="btn-primary">Подать заявку</button>
+            <button onclick="openMemorandum()" class="btn-outline">Скачать меморандум</button>
+          </div>
+        </div>
+        <div class="bg-gray-800/50 rounded-xl p-8">
+          <div class="aspect-square bg-gray-700/50 rounded-lg flex items-center justify-center">
+            <div class="text-center text-white/60">
+              <div class="text-lg font-medium mb-2">Видео-презентация фонда</div>
+              <div class="text-sm">Здесь будет видео</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP CARDS -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card">
+          <span class="badge mb-4">ФРАКЦИОННО</span>
+          <h3 class="text-white mb-4">Вход от $25 000 — доля в реальных объектах</h3>
+          <p class="text-white/65">Доступ к премиальным локациям без покупки целой квартиры. Фонд агрегирует капитал пайщиков и приобретает объекты с понятной доходностью.</p>
+        </div>
+        <div class="card">
+          <span class="badge mb-4">ДОХОД + РОСТ</span>
+          <h3 class="text-white mb-4">Две стратегии — под ваши задачи</h3>
+          <p class="text-white/65">Купонный пул — стабильный доход 6,5% годовых, выплаты поквартально. Пул роста — вход на стадии строительства с целью ~30% за 3 года.</p>
+        </div>
+        <div class="card">
+          <span class="badge mb-4">AI-ВЫБОР (GIDR)</span>
+          <h3 class="text-white mb-4">Решения принимает модель, натренированная на Пхукете</h3>
+          <p class="text-white/65">GIDR анализирует карту спроса и цен «до метра»: сезонность, загрузку, инфраструктуру, кредит истории девелопера и ликвидность при выходе.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIDR SECTION -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="card">
+        <span class="badge mb-4">AI-МОДЕЛЬ</span>
+        <h2 class="text-white mb-6">GIDR знает Пхукет до метра</h2>
+        <p class="text-white/65 mb-8">Десятки тысяч показателей. Локальная реальность, а не общие слова. Наша нейросетевая модель анализирует карту спроса и цен, сезонность, загрузку, инфраструктуру и ликвидность для принятия инвестиционных решений.</p>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white/5 rounded-lg p-4">
+            <div class="font-semibold text-white mb-2">Доходность аренды</div>
+            <div class="text-white/65 text-sm">25% веса</div>
+          </div>
+          <div class="bg-white/5 rounded-lg p-4">
+            <div class="font-semibold text-white mb-2">Репутация девелопера</div>
+            <div class="text-white/65 text-sm">20% веса</div>
+          </div>
+          <div class="bg-white/5 rounded-lg p-4">
+            <div class="font-semibold text-white mb-2">Инфраструктура</div>
+            <div class="text-white/65 text-sm">15% веса</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="card">
+        <span class="badge mb-4">ИНВЕСТИЦИОННЫЕ ПРОДУКТЫ</span>
+        <h2 class="text-white mb-6">Два пула для разных стратегий</h2>
+        <p class="text-white/65 mb-8">Купонный пул для стабильного дохода 6,5% годовых или пул роста для прироста капитала ~30% за 3 года. Выбирайте подходящую стратегию или комбинируйте их для оптимального баланса риска и доходности.</p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white/5 rounded-lg p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              <h3 class="text-white">Купонный пул</h3>
+            </div>
+            <div class="text-green-400 font-semibold mb-2">6,5% годовых</div>
+            <p class="text-white/65 text-sm">Действующие арендуемые объекты Пхукета с доказанной загрузкой и предсказуемой экономикой. Выплаты поквартально.</p>
+            <button onclick="openMemorandum()" class="btn-outline w-full mt-4">Меморандум</button>
+          </div>
+          
+          <div class="bg-white/5 rounded-lg p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
+              <h3 class="text-white">Пул роста</h3>
+            </div>
+            <div class="text-amber-400 font-semibold mb-2">~30% за 3 года</div>
+            <p class="text-white/65 text-sm">Вход на стадии котлована/строительства по девелоперскому дисконту. Рост стоимости идёт по мере готовности и выхода в эксплуатацию.</p>
+            <button onclick="openMemorandum()" class="btn-outline w-full mt-4">Меморандум</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT ROUND -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="card">
+        <span class="badge mb-4">ТЕКУЩИЙ РАУНД</span>
+        <h2 class="text-white mb-6">Подписка с 1 декабря 2025</h2>
+        <p class="text-white/65 mb-8">Формируем первую волну портфеля из объектов Пхукета с сильной арендной экономикой и прогнозируемым ростом. Минимальный вход $25 000, объём раунда $2 000 000.</p>
+        
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div class="bg-white/5 rounded-lg p-4 text-center">
+            <div class="text-white/65 text-sm mb-2">Объём раунда</div>
+            <div class="text-2xl font-bold text-white">$2 000 000</div>
+          </div>
+          <div class="bg-white/5 rounded-lg p-4 text-center">
+            <div class="text-white/65 text-sm mb-2">Минимальный вход</div>
+            <div class="text-2xl font-bold text-white">$25 000</div>
+          </div>
+          <div class="bg-white/5 rounded-lg p-4 text-center">
+            <div class="text-white/65 text-sm mb-2">Валюта</div>
+            <div class="text-2xl font-bold text-white">USD</div>
+          </div>
+          <div class="bg-white/5 rounded-lg p-4 text-center">
+            <div class="text-white/65 text-sm mb-2">Старт подписки</div>
+            <div class="text-2xl font-bold text-white">1 дек 2025</div>
+          </div>
+        </div>
+        
+        <div class="flex gap-4">
+          <button onclick="openApplicationForm()" class="btn-primary">Подать заявку</button>
+          <button onclick="openMemorandum()" class="btn-outline">Меморандум</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYTICS SECTION -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="card">
+        <span class="badge mb-4">АНАЛИТИКА</span>
+        <h2 class="text-white mb-6">Пхукет сегодня: высокий спрос, ограниченное предложение</h2>
+        <p class="text-white/65 mb-8">Пхукет — главный курорт Юго-Восточной Азии с круглогодичным inbound-спросом и растущим пулом постоянных резидентов. Загрузка аренды держится высокой даже вне пиков.</p>
+        
+        <!-- KPI Grid -->
+        <div class="kpi-grid mb-8">
+          <div class="kpi-card">
+            <div class="text-white/65 text-sm mb-2">Загрузка (Resort)</div>
+            <div class="kpi-value">72–78%</div>
+          </div>
+          <div class="kpi-card">
+            <div class="text-white/65 text-sm mb-2">ADR (US$)</div>
+            <div class="kpi-value">135–165</div>
+          </div>
+          <div class="kpi-card">
+            <div class="text-white/65 text-sm mb-2">Yield (нетто)</div>
+            <div class="kpi-value">5–7%</div>
+          </div>
+          <div class="kpi-card">
+            <div class="text-white/65 text-sm mb-2">Темпы цен</div>
+            <div class="kpi-value">+3–6% г/г</div>
+          </div>
+        </div>
+        
+        <!-- Charts -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white/5 rounded-lg overflow-hidden">
+            <img src="/images/analytics/occ_yield.svg" alt="Occupancy vs Yield" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h4 class="font-semibold text-white mb-2">Заполняемость и доходность</h4>
+              <p class="text-white/65 text-sm">Сочетание высокой заполняемости курортов (72–80%) и устойчивого среднего дохода с аренды ($135–165 за ночь) формирует стабильную чистую доходность 5–7% годовых.</p>
+            </div>
+          </div>
+          <div class="bg-white/5 rounded-lg overflow-hidden">
+            <img src="/images/analytics/price_trend.svg" alt="Price trends" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h4 class="font-semibold text-white mb-2">Тренд цен +3–6% YoY</h4>
+              <p class="text-white/65 text-sm">Цены на курортную недвижимость на Пхукете растут плавно, на 3–6% в год, отражая органический спрос без перегрева рынка.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="card">
+        <span class="badge mb-4">КАК РАБОТАЕТ ФОНД</span>
+        <h2 class="text-white mb-8 text-center">Как мы инвестируем ваш капитал</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="stepper-circle">1</div>
+            <h3 class="text-white mb-3">Выбираете стратегию</h3>
+            <p class="text-white/65 text-sm">Купон, рост или микс — и вносите от $25 000</p>
+          </div>
+          <div class="text-center">
+            <div class="stepper-circle">2</div>
+            <h3 class="text-white mb-3">Мы собираем пул</h3>
+            <p class="text-white/65 text-sm">Заходим в объекты с высокими рейтингами GIDR</p>
+          </div>
+          <div class="text-center">
+            <div class="stepper-circle">3</div>
+            <h3 class="text-white mb-3">Деньги работают</h3>
+            <p class="text-white/65 text-sm">Видите движение в отчётности: сделки, статусы, загрузка</p>
+          </div>
+          <div class="text-center">
+            <div class="stepper-circle">4</div>
+            <h3 class="text-white mb-3">Получаете результат</h3>
+            <p class="text-white/65 text-sm">Выплаты по купону ежеквартально, выход по росту при достижении таргетов</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="card">
+        <span class="badge mb-4">FAQ</span>
+        <h2 class="text-white mb-8">Часто задаваемые вопросы</h2>
+        
+        <div class="space-y-4">
+          <div class="faq-item rounded-lg">
+            <button class="faq-question w-full text-left p-4 flex justify-between items-center">
+              <span>Какая минимальная сумма участия?</span>
+              <span class="text-white/60">+</span>
+            </button>
+            <div class="faq-answer px-4 pb-4">
+              <p class="text-white/65 text-sm">$25 000 или эквивалент. Вы можете докупать доли и наращивать позицию.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item rounded-lg">
+            <button class="faq-question w-full text-left p-4 flex justify-between items-center">
+              <span>Как работает купон 6,5%?</span>
+              <span class="text-white/60">+</span>
+            </button>
+            <div class="faq-answer px-4 pb-4">
+              <p class="text-white/65 text-sm">Мы собираем пул уже сдающихся объектов, получаем арендный поток и распределяем его между инвесторами поквартально.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item rounded-lg">
+            <button class="faq-question w-full text-left p-4 flex justify-between items-center">
+              <span>Когда старт текущего раунда?</span>
+              <span class="text-white/60">+</span>
+            </button>
+            <div class="faq-answer px-4 pb-4">
+              <p class="text-white/65 text-sm">1 декабря 2025 года. Это дата открытия подписки и формирования первой волны портфеля.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item rounded-lg">
+            <button class="faq-question w-full text-left p-4 flex justify-between items-center">
+              <span>Можно ли сочетать купон и рост?</span>
+              <span class="text-white/60">+</span>
+            </button>
+            <div class="faq-answer px-4 pb-4">
+              <p class="text-white/65 text-sm">Да. Многие инвесторы делят капитал, чтобы получать часть дохода поквартально и одновременно накапливать прирост.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="py-20">
+    <div class="container-max mx-auto px-6">
+      <div class="card text-center">
+        <h2 class="text-white mb-6">Присоединяйтесь к WEST EAST GATE CAPITAL</h2>
+        <p class="text-white/65 mb-8 max-w-3xl mx-auto">Начните с $25 000 — выберите стратегию, а мы возьмём на себя остальное: анализ, сделки, управление и отчётность.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <button onclick="openApplicationForm()" class="btn-primary">Подать заявку на участие</button>
+          <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="btn-outline">WhatsApp</a>
+          <button onclick="openMemorandum()" class="btn-outline">Скачать меморандум</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 py-12">
+    <div class="container-max mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <div class="font-semibold text-white mb-4">WEST EAST TRADE GROUP PTE. LTD.</div>
+          <div class="text-white/65 text-sm mb-2">UEN: 202505772C</div>
+          <div class="text-white/65 text-sm">7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</div>
+        </div>
+        <div>
+          <div class="text-white/65 text-sm mb-2">Business WhatsApp: <a href="https://wa.me/66657658782" class="text-blue-400 hover:text-blue-300">+66 657 658 782</a></div>
+          <div class="text-white/65 text-sm">Email: <a href="mailto:post@wegc.fund" class="text-blue-400 hover:text-blue-300">post@wegc.fund</a></div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6">
+        <div class="flex flex-wrap gap-4 text-sm text-white/65">
+          <a href="/privacy.html" class="hover:text-white transition">Privacy Policy</a>
+          <a href="/terms.html" class="hover:text-white transition">Terms of Service</a>
+          <a href="/cookies.html" class="hover:text-white transition">Cookies</a>
+          <span class="ml-auto">© 2025 West East. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальные окна -->
+  <div id="memorandumModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+          <h3 class="text-xl font-bold text-gray-900">Меморандум WEGC Fund</h3>
+          <button onclick="closeMemorandum()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        </div>
+        <div class="p-6 text-gray-900">
+          <h1 class="text-3xl font-bold mb-6">МЕМОРАНДУМ</h1>
+          <h2 class="text-2xl font-semibold mb-4">WEST EAST GATE CAPITAL FUND (WEGC FUND)</h2>
+          <p class="text-lg mb-8"><strong>Публичная версия — ноябрь 2025 г.</strong></p>
+          
+          <h3 class="text-xl font-semibold mb-4">1. Введение и дисклеймер</h3>
+          <h4 class="text-lg font-medium mb-3">1.1 Назначение документа</h4>
+          <p class="mb-4">Настоящий Публичный Меморандум (далее — «Меморандум») подготовлен для ознакомления потенциальных инвесторов с принципами, стратегиями, условиями и рисками фонда WEST EAST GATE CAPITAL FUND («Фонд», «WEGC»).</p>
+          <p class="mb-6">Он не является публичной офертой, не обязует фонд к выпуску долей и не гарантирует доходность. Инвесторы самостоятельно принимают решение на основании документов фонда и консультаций с юридическими/финансовыми советниками.</p>
+          
+          <h4 class="text-lg font-medium mb-3">1.2 Ограничения и ответственность</h4>
+          <ul class="list-disc pl-6 mb-6 space-y-2">
+            <li>Данный документ не заменяет юридические соглашения, меморандум подписки, договоры или финансовую модель.</li>
+            <li>Все прогнозы, цифры и планы являются ориентировочными и базируются на моделях и анализе GIDR. Реальные результаты могут отличаться.</li>
+            <li>Фонд не несёт ответственности за убытки, возникающие в результате макроэкономических шоков, регуляторных изменений или прочих форс-мажоров.</li>
+            <li>Инвесторам рекомендуется обращаться к своим юристам и консультантам перед принятием решения.</li>
+          </ul>
+          
+          <h3 class="text-xl font-semibold mb-4">2. Цель фонда и инвестиционная стратегия</h3>
+          <h4 class="text-lg font-medium mb-3">2.1 Миссия</h4>
+          <p class="mb-4">WEGC Fund создан, чтобы сделать премиальную недвижимость Пхукета доступной частным инвесторам с минимальным порогом, сохраняя при этом стандарты институционального управления.</p>
+          
+          <h4 class="text-lg font-medium mb-3">2.2 География деятельности</h4>
+          <p class="mb-4">Фокус — остров Пхукет (Таиланд). Только объекты, расположенные на острове и соответствующие строгим требованиям модели GIDR, могут попадать в портфель фонда.</p>
+          
+          <h4 class="text-lg font-medium mb-3">2.3 Стратегии фонда</h4>
+          <ul class="list-disc pl-6 mb-6 space-y-2">
+            <li><strong>Купонный пул (Income Pool):</strong> инвестиции в готовые объекты, уже генерирующие доход от аренды. Цель: стабильные выплаты порядка 6,5% годовых (после вычета расходов), с распределением поквартально.</li>
+            <li><strong>Пул роста (Growth Pool):</strong> инвестиции на стадии котлована или строительства с дисконтом, с целью прироста стоимости при вводе объекта в эксплуатацию и/или перепродаже. Цель: прирост капитала порядка ~30% за 3 года.</li>
+          </ul>
+          <p class="mb-6">Инвесторы могут распределять средства между двумя пулами по своему усмотрению.</p>
+          
+          <h3 class="text-xl font-semibold mb-4">3. Условия участия и подписка</h3>
+          <h4 class="text-lg font-medium mb-3">3.1 Минимальная инвестиция</h4>
+          <p class="mb-6">Минимальный порог участия — 25 000 USD (или эквивалент в согласованной валюте).</p>
+          
+          <h4 class="text-lg font-medium mb-3">3.2 Валюта инвестирования</h4>
+          <p class="mb-6">Базовая валюта — USD. Допускается эквивалент в THB или других валют, с пересчётом по курсу фонда.</p>
+          
+          <h4 class="text-lg font-medium mb-3">3.3 Период подписки и запуск раунда</h4>
+          <p class="mb-6">Подписка на текущий раунд начинается 1 декабря 2025 года. Максимальный период подписки — до 31 января 2026 года, либо до закрытия объёма (2 000 000 USD), в зависимости от чего наступит раньше.</p>
+          
+          <h3 class="text-xl font-semibold mb-4">4. Комиссии и расходы</h3>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full border-collapse border border-gray-300">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 px-4 py-2 text-left">Вид комиссии / расхода</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Размер / условие</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Примечание</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Управляющая комиссия</td>
+                  <td class="border border-gray-300 px-4 py-2">до 2% годовых</td>
+                  <td class="border border-gray-300 px-4 py-2">За управление активами</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Комиссия за успех (пул роста)</td>
+                  <td class="border border-gray-300 px-4 py-2">до 20% прибыли</td>
+                  <td class="border border-gray-300 px-4 py-2">Применяется только к прибыли ростового пула</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Комиссия за вход</td>
+                  <td class="border border-gray-300 px-4 py-2">0%</td>
+                  <td class="border border-gray-300 px-4 py-2">Нет комиссии за старт участия</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Комиссия за выход</td>
+                  <td class="border border-gray-300 px-4 py-2">до 3% (в пределах политики)</td>
+                  <td class="border border-gray-300 px-4 py-2">Применяется к выкупу раньше срока</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-4">5. Контакты</h3>
+          <p class="mb-2"><strong>WEST EAST TRADE GROUP PTE. LTD.</strong></p>
+          <p class="mb-2">Адрес: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</p>
+          <p class="mb-2">Email: post@wegc.fund</p>
+          <p>Вебсайт: https://wegc.fund</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="applicationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+          <h3 class="text-xl font-bold text-gray-900">Заявка на участие в фонде</h3>
+          <button onclick="closeApplicationForm()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        </div>
+        <div class="p-6">
+          <form id="fundApplicationForm" action="https://formspree.io/f/xpwpqgqr" method="POST">
+            <div class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">ФИО *</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Телефон *</label>
+                <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              
+              <div>
+                <label for="amount" class="block text-sm font-medium text-gray-700 mb-1">Сумма инвестирования *</label>
+                <select id="amount" name="amount" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">Выберите сумму</option>
+                  <option value="25000-50000">$25,000 - $50,000</option>
+                  <option value="50000-100000">$50,000 - $100,000</option>
+                  <option value="100000+">$100,000+</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="strategy" class="block text-sm font-medium text-gray-700 mb-1">Стратегия инвестирования *</label>
+                <select id="strategy" name="strategy" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">Выберите стратегию</option>
+                  <option value="coupon">Купонный пул (6.5% годовых)</option>
+                  <option value="growth">Пул роста (~30% за 3 года)</option>
+                  <option value="both">Комбинированная стратегия</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Дополнительная информация</label>
+                <textarea id="message" name="message" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              </div>
+              
+              <div class="flex items-start">
+                <input type="checkbox" id="agreement" name="agreement" required class="mt-1 mr-2">
+                <label for="agreement" class="text-sm text-gray-600">
+                  Я согласен с условиями обработки персональных данных и понимаю риски инвестирования *
+                </label>
+              </div>
+              
+              <div class="flex gap-3 pt-4">
+                <button type="submit" class="flex-1 bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 transition">
+                  Отправить заявку
+                </button>
+                <button type="button" onclick="closeApplicationForm()" class="flex-1 border border-gray-300 text-gray-700 py-3 px-6 rounded-md font-medium hover:bg-gray-50 transition">
+                  Отмена
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sticky header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-answer').forEach(item => {
+          item.classList.remove('open');
+        });
+        document.querySelectorAll('.faq-question span:last-child').forEach(span => {
+          span.textContent = '+';
+        });
+        
+        // Toggle current item
+        if (!isOpen) {
+          answer.classList.add('open');
+          this.querySelector('span:last-child').textContent = '−';
+        }
+      });
+    });
+
+    // Modal functions
+    function openMemorandum() {
+      document.getElementById('memorandumModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMemorandum() {
+      document.getElementById('memorandumModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    
+    function openApplicationForm() {
+      document.getElementById('applicationModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeApplicationForm() {
+      document.getElementById('applicationModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Close modals on outside click
+    document.getElementById('memorandumModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeMemorandum();
+      }
+    });
+    
+    document.getElementById('applicationModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeApplicationForm();
+      }
+    });
+    
+    // Form submission
+    document.getElementById('fundApplicationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+      closeApplicationForm();
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
