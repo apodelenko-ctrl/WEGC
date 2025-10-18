@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WEGC Fund — Фонд курортной недвижимости Азии</title>
-  <meta name="description" content="West East Gate Capital — фонд курортной недвижимости Азии. Доступ от $25 000, стратегия 24–36 месяцев, фокус на Пхукете. Сингапурская юрисдикция.">
+  <title data-i18n="head_title">WEGC Fund — Asian Real Estate Income & Growth</title>
+  <meta name="description" content="WEGC Fund: три стратегии — купон 8% годовых, рост ~30% за 3 года, гибрид 11–14% IRR (3–5 лет). Минимум от $25k. Юрисдикция Сингапур. Реальные курортные активы в Азии.">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS CDN (temporary fix) -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -21,14 +21,19 @@
     }
   </script>
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://wegc.fund/fund.html" />
+  <!-- Canonical / hreflang -->
+  <link rel="canonical" href="https://wegc.fund/fund.html">
+  <link rel="alternate" hreflang="en" href="https://wegc.fund/fund.html" />
+  <link rel="alternate" hreflang="ru" href="https://wegc.fund/fund.html?lang=ru" />
+  <link rel="alternate" hreflang="zh" href="https://wegc.fund/fund.html?lang=zh" />
+  <link rel="alternate" hreflang="ar" href="https://wegc.fund/fund.html?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://wegc.fund/fund.html" />
 
   <!-- Open Graph / Telegram preview -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="West East Gate Capital">
-  <meta property="og:title" content="WEGC Fund — Фонд курортной недвижимости Азии">
-  <meta property="og:description" content="Реальные активы. Реальная стабильность. Реальная Азия. Доступ от $25 000, стратегия 24–36 месяцев, фокус на Пхукете.">
+  <meta property="og:title" content="WEGC Fund — Fractional resort real estate investing from $25k">
+  <meta property="og:description" content="Три стратегии в одном фонде: Купонный пул 8% годовых, Ростовой пул ~30% за 3 года, Hybrid Income + Growth 11–14% IRR (горизонт 3–5 лет). Вход от $25k. Юрисдикция — Сингапур. Портфель — премиальные курортные проекты в Азии.">
   <meta property="og:url" content="https://wegc.fund/fund.html">
   <meta property="og:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
   <meta property="og:image:secure_url" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
@@ -38,8 +43,8 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WEGC Fund — Фонд курортной недвижимости Азии">
-  <meta name="twitter:description" content="Реальные активы. Реальная стабильность. Реальная Азия. Доступ от $25 000, стратегия 24–36 месяцев.">
+  <meta name="twitter:title" content="WEGC Fund — Fractional resort real estate investing from $25k">
+  <meta name="twitter:description" content="Купон 8% • Рост ~30%/3 года • Hybrid 11–14% IRR (3–5 лет). Вход от $25k. Сингапурское SPV. Премиальные курортные проекты в Азии.">
   <meta name="twitter:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
 
   <!-- PWA / Icons -->
@@ -53,250 +58,1484 @@
 
   <style>
     .container-max{max-width:1200px}
+    /* Force update v1.3 - Perfect alignment fix */
+    .badge{display:inline-block;padding:.25rem .5rem;border-radius:.5rem;font-size:.75rem;line-height:1}
+    .badge-dark{background:#0b0b0b;color:#fff;border:1px solid #111}
+    .badge-emerald{background:#e7f8ee;color:#197a42}
+    .badge-amber{background:#fff7e6;color:#9a5a00}
+    .nav a.active{ color:#93c5fd; text-decoration:underline; }
+    .hero-tech{
+      background:
+        radial-gradient(1000px 400px at 80% -200px, rgba(0,0,0,.06), transparent 60%),
+        radial-gradient(800px 300px at -100px 20%, rgba(0,0,0,.05), transparent 60%);
+    }
+    .product-card {
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card .mt-4:last-child {
+      margin-top: auto;
+    }
   </style>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"West East Capital Fund",
+    "legalName":"WEST EAST TRADE GROUP PTE. LTD.",
+    "url":"https://wegc.fund/",
+    "logo":"https://wegc.fund/images/icon-192.png",
+    "email":"post@wegc.fund",
+    "sameAs":[
+      "https://www.linkedin.com/company/westeastcapital/",
+      "https://www.instagram.com/westeastgate/"
+    ],
+    "address":{"@type":"PostalAddress",
+      "streetAddress":"7 Temasek Boulevard, #12-07, Suntec Tower One",
+      "addressLocality":"Singapore","postalCode":"038987","addressCountry":"SG"}
+  }
+  </script>
 </head>
 <body class="antialiased text-gray-800">
 
-  <!-- ===================== 1) HERO + CTA ===================== -->
-  <section class="relative isolate overflow-hidden bg-white/80 backdrop-blur">
-    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-      <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
-        <div>
-          <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900">
-            West East Gate Capital — фонд курортной недвижимости Азии
-          </h1>
-          <p class="mt-4 text-gray-700 leading-7">
-            Реальные активы. Реальная стабильность. Реальная Азия. Доступ от <span class="font-semibold">$25 000</span>,
-            стратегия 24–36 месяцев, фокус на Пхукете (TH) и прямых договорах с застройщиками.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-700">
-            <li>• Сингапурская юрисдикция (Exempt Private Company Limited by Shares)</li>
-            <li>• Три программы: купонная, рост капитала, гибрид 2025–2029</li>
-            <li>• AI-оценка локаций и сделок (GIDR-модель), партнёрства с девелоперами</li>
-          </ul>
+  <!-- NAV (копия с главной; добавлен пункт Fund) -->
+  <nav class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
+    <div class="container-max mx-auto px-4 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="font-semibold text-white hover:text-gray-300 text-base">West East Capital Fund</a>
+        <button id="burgerBtn" class="md:hidden p-2 border border-white/30 rounded" aria-label="Toggle menu">☰</button>
+      </div>
+      <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
+        <a href="/" class="block py-2 md:py-0 hover:text-gray-300">WE Real Estate</a>
+        <a href="#contact" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" data-i18n="nav_buy">Apply to fund</a>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">WhatsApp</a>
+
+        <!-- Language -->
+        <div class="lang-wrap relative">
+          <button id="langBtn" class="lang-btn inline-flex items-center gap-1.5 px-2 py-1 border border-white/40 rounded" aria-expanded="false" aria-haspopup="true">
+            <span id="langLabel">EN</span><span>▼</span>
+          </button>
+          <div id="langMenu" class="lang-menu absolute right-0 top-[calc(100%+4px)] min-w-[9rem] bg-white text-black border border-gray-200 rounded shadow-lg hidden z-50">
+            <button data-lang="en" data-dir="ltr" class="w-full text-left px-3 py-2">English</button>
+            <button data-lang="ru" data-dir="ltr" class="w-full text-left px-3 py-2">Русский</button>
+            <button data-lang="zh" data-dir="ltr" class="w-full text-left px-3 py-2">中文</button>
+            <button data-lang="ar" data-dir="rtl" class="w-full text-left px-3 py-2">العربية</button>
+          </div>
         </div>
-        <div>
-          <form action="https://formspree.io/f/xrbyywrr" method="POST" class="rounded-2xl border border-gray-200 bg-white p-6 shadow">
-            <h2 class="text-xl font-semibold text-gray-900">Получить инвестиционный меморандум (PDF)</h2>
-            <p class="mt-1 text-sm text-gray-600">Вышлем актуальные материалы и условия размещения.</p>
-            <input type="text" name="_gotcha" class="hidden" aria-hidden="true">
-            <div class="mt-4 grid gap-3">
-              <label class="block">
-                <span class="text-sm text-gray-700">Имя</span>
-                <input required name="name" class="mt-1 w-full rounded-md border-gray-300 focus:border-gray-900 focus:ring-gray-900" placeholder="Иван Иванов"/>
-              </label>
-              <label class="block">
-                <span class="text-sm text-gray-700">Email</span>
-                <input required type="email" name="email" class="mt-1 w-full rounded-md border-gray-300 focus:border-gray-900 focus:ring-gray-900" placeholder="you@example.com"/>
-              </label>
-              <label class="block">
-                <span class="text-sm text-gray-700">Сумма, планируемая к инвестированию</span>
-                <select name="ticket" class="mt-1 w-full rounded-md border-gray-300 focus:border-gray-900 focus:ring-gray-900">
-                  <option value="25-50k">$25k–$50k</option>
-                  <option value="50-100k">$50k–$100k</option>
-                  <option value="100-250k">$100k–$250k</option>
-                  <option value=">250k">$250k+</option>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top promo band -->
+  <div class="bg-gradient-to-r from-gray-900 to-black text-white">
+    <div class="container-max mx-auto px-4 py-10">
+      <div class="text-3xl md:text-5xl font-extrabold tracking-tight">
+        Инвестируйте в реальный Пхукет от $25 000 — доход и рост на основе данных, а не обещаний
+      </div>
+        </div>
+        </div>
+
+  <!-- HERO -->
+  <header class="hero-tech">
+    <div class="container-max mx-auto px-4 py-14 md:py-18 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-gray-700 text-lg mb-6">
+          Фонд WEST EAST GATE CAPITAL делает рынок премиальной недвижимости Пхукета доступным для частных инвесторов. Не нужно покупать квартиру за сотни тысяч: участвуйте фракционно от $25 000 и получайте долю в реальных объектах — с понятной экономикой, прозрачной отчётностью и управлением со стороны фонда.
+        </p>
+        <p class="text-gray-700 text-lg mb-5">
+          Мы видим карту острова буквально «до метра»: пляжные коридоры, транспортные хабы, динамику аренды, историю застройщиков и скорость ввода очередей. Поэтому в портфель попадают только локации и проекты, где цифры сходятся.
+        </p>
+        <p class="text-gray-700 text-lg mb-5">
+          Выберите стратегию под свои цели: купонный пул (6,5% годовых, поквартально) или пул роста (цель ~30% за 3 года) — либо комбинируйте их, балансируя стабильный доход и прирост капитала.
+        </p>
+        </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg border">
+        <video class="w-full object-cover" style="aspect-ratio: 16/15;" autoplay muted loop playsinline>
+          <source src="fund-intro.mp4" type="video/mp4">
+          <div class="bg-gray-800/50 flex items-center justify-center" style="aspect-ratio: 16/15;">
+            <div class="text-center text-white/60">
+              <div class="text-base font-medium mb-2" data-i18n="video_placeholder">Видео-презентация фонда</div>
+        </div>
+      </div>
+        </video>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOW IT WORKS - Light Section -->
+  <section class="bg-gray-50 py-16">
+    <div class="container-max mx-auto px-4">
+      <div class="text-left mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Как мы инвестируем ваш капитал</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-lg p-6 shadow-lg text-left">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-yellow-400 text-gray-900 rounded-full font-bold text-lg mb-4">1</div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Выбираете стратегию</h3>
+          <p class="text-gray-600 text-sm">Купон, рост или микс — и вносите от $25 000</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="bg-white rounded-lg p-6 shadow-lg text-left">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-yellow-400 text-gray-900 rounded-full font-bold text-lg mb-4">2</div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Мы собираем пул</h3>
+          <p class="text-gray-600 text-sm">Заходим в объекты с высокими рейтингами GIDR</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="bg-white rounded-lg p-6 shadow-lg text-left">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-yellow-400 text-gray-900 rounded-full font-bold text-lg mb-4">3</div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Деньги работают</h3>
+          <p class="text-gray-600 text-sm">Видите движение в отчётности: сделки, статусы, загрузка</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="bg-white rounded-lg p-6 shadow-lg text-left">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-yellow-400 text-gray-900 rounded-full font-bold text-lg mb-4">4</div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Получаете результат</h3>
+          <p class="text-gray-600 text-sm">Выплаты по купону ежеквартально, выход по росту при достижении таргетов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP: Fractional -->
+  <section class="bg-white">
+    <!-- Black separator with golden text -->
+    <div class="bg-black py-8">
+      <div class="container-max mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-black border border-white/20 rounded-lg p-6 text-center">
+            <div class="text-amber-400 text-sm font-bold uppercase tracking-wide mb-2">ФРАКЦИОННО</div>
+            <div class="text-white text-lg font-bold mb-3">Вход от $25 000 — доля в реальных объектах</div>
+            <div class="text-gray-300 text-base text-justify">Доступ к премиальным локациям без покупки целой квартиры. Фонд агрегирует капитал пайщиков и приобретает объекты с понятной доходностью. Все юридические, операционные и сервисные процессы — на нашей стороне. Вы получаете долю и участие в денежных потоках.</div>
+      </div>
+          <div class="bg-black border border-white/20 rounded-lg p-6 text-center">
+            <div class="text-amber-400 text-sm font-bold uppercase tracking-wide mb-2">ДОХОД + РОСТ</div>
+            <div class="text-white text-lg font-bold mb-3">Две стратегии — под ваши задачи</div>
+            <div class="text-gray-300 text-base text-justify">Купонный пул — стабильный доход 6,5% годовых, выплаты поквартально из арендного потока действующих объектов. Пул роста — вход на стадии строительства с целью ~30% за 3 года за счёт девелоперского дисконта и выхода при вводе/перепродаже. Можно комбинировать и ребалансировать.</div>
+      </div>
+          <div class="bg-black border border-white/20 rounded-lg p-6 text-center">
+            <div class="text-amber-400 text-sm font-bold uppercase tracking-wide mb-2">AI-ВЫБОР (GIDR)</div>
+            <div class="text-white text-lg font-bold mb-3">Решения принимает модель, натренированная на Пхукете</div>
+            <div class="text-gray-300 text-base text-justify">GIDR анализирует карту спроса и цен «до метра»: сезонность, загрузку, инфраструктуру, кредит истории девелопера и ликвидность при выходе. Мы используем конкретные данные, а не «инвест-моду».</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-max mx-auto px-4 py-10">
+      <div class="text-left mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Преимущества инвестирования через фонд</h2>
+        <p class="text-gray-600 text-base leading-relaxed text-justify">
+          Фонд WEST EAST GATE CAPITAL предоставляет уникальные возможности для инвестирования в недвижимость Пхукета. Наша модель GIDR анализирует тысячи параметров для выбора наиболее перспективных объектов, а фракционная структура делает премиальную недвижимость доступной для широкого круга инвесторов.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Black separator with golden text -->
+  <div class="bg-black py-8">
+    <div class="container-max mx-auto px-4">
+      <div class="flex justify-between items-center mb-4">
+        <div class="text-white text-2xl font-bold">GIDR знает Пхукет до метра</div>
+        <div class="text-amber-400 text-sm font-bold uppercase tracking-wide">AI-МОДЕЛЬ</div>
+          </div>
+      <div class="text-gray-300 text-base text-justify">Десятки тысяч показателей. Локальная реальность, а не общие слова. Наша нейросетевая модель анализирует карту спроса и цен, сезонность, загрузку, инфраструктуру и ликвидность для принятия инвестиционных решений.</div>
+        </div>
+          </div>
+
+  <!-- ABOUT GIDR (новый блок) -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container-max mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-bold mb-3" data-i18n="gidr_h2">GIDR: наша AI-модель знает Пхукет до метра — и это меняет правила</h2>
+      <p class="text-xl text-gray-600 mb-8" data-i18n="gidr_subtitle">Десятки тысяч показателей. Локальная реальность, а не общие слова.</p>
+      
+      <div class="space-y-6 text-gray-700 leading-relaxed text-justify">
+        <p data-i18n="gidr_p1">
+          <strong>Что это:</strong> GIDR — нейросетевая модель, обученная на массиве локальных данных по Пхукету: сделки и прайс-листы, темпы строительства и выдачи разрешений, плотность застройки по кварталам, сезонная загрузка аренды, история ввода очередей, рейтинги девелоперов, транспортные потоки, планы инфраструктуры, FX-параметры и пересечения с визовыми режимами.
+        </p>
+        <p data-i18n="gidr_p2">
+          <strong>Как работает:</strong> каждый объект «раскладывается» на признаки — локация и доступность пляжа, логистика, шум и трафик, менеджмент, качество отделки, кондоминальный режим (freehold/leasehold), динамика аренды, потенциальная ликвидность. Модель рассчитывает итоговый рейтинг (A–E) и прогноз: чистая доходность, ожидаемый рост, горизонт выхода.
+        </p>
+        <p data-i18n="gidr_p3">
+          <strong>Веса факторов (пример):</strong> доходность аренды — 25%, репутация девелопера — 20%, тренд цен района — 15%, инфраструктура и пляжная доступность — 15%, FX и макро — 10%, транспорт/шум/экология и визовые программы — 15%. Веса обновляются по мере поступления данных.
+        </p>
+        <p data-i18n="gidr_p4">
+          <strong>Зачем инвестору:</strong> мы не угадываем «где сейчас модно». Мы сверяем портфель с цифрами, корректируем веса и режем риск до того, как он становится проблемой. В результате в портфель попадают объекты, где сходятся локация, спрос и выход.
+        </p>
+        </div>
+      </div>
+  </section>
+
+  <!-- Black separator with golden text -->
+  <div class="bg-black py-8">
+    <div class="container-max mx-auto px-4">
+      <div class="flex justify-between items-center mb-4">
+        <div class="text-white text-2xl font-bold">Два пула для разных стратегий</div>
+        <div class="text-amber-400 text-sm font-bold uppercase tracking-wide">ИНВЕСТИЦИОННЫЕ ПРОДУКТЫ</div>
+          </div>
+      <div class="text-gray-300 text-base text-justify">Купонный пул для стабильного дохода 6,5% годовых или пул роста для прироста капитала ~30% за 3 года. Выбирайте подходящую стратегию или комбинируйте их для оптимального баланса риска и доходности.</div>
+          </div>
+          </div>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Продукты фонда</h2>
+
+      <!-- Карточки в адаптивной сетке -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- 1. Карточка: Hybrid Income + Growth -->
+        <div class="product-card p-6 border rounded-lg shadow-sm relative bg-white hover:shadow-md transition-shadow duration-300">
+          <div class="badge bg-red-600 text-white px-2 py-1 absolute top-4 right-4 text-xs font-semibold">ТОП по доходности</div>
+          <h3 class="text-xl font-bold text-gray-900 pr-24">Hybrid Income + Growth (3–5 лет)</h3>
+          <p class="mt-2 text-gray-700 text-sm italic">"Доход и рост — два источника одной инвестиции"</p>
+          <p class="mt-2 text-gray-700 text-sm">
+            Уникальная модель, объединяющая доход от аренды и прирост капитала. Мы входим на этапе котлована по минимальной цене,
+            создаём арендный поток после сдачи объекта и выходим на пике рынка.
+            Эта стратегия приносит стабильный доход в долларах и рост стоимости актива.
+          </p>
+          <ul class="mt-4 text-sm text-gray-700 space-y-1">
+            <li><strong>Минимум вложения:</strong> USD 25 000</li>
+            <li><strong>Доход-шэринг:</strong> 6 % – 9 % p.a.</li>
+            <li><strong>Целевая доходность (IRR):</strong> 11 % – 14 % p.a.</li>
+            <li><strong>Ожидаемый мультипликатор (MOIC):</strong> 1.35× – 1.45×</li>
+            <li><strong>Горизонт:</strong> 3 – 5 лет (опция продления до 7 лет)</li>
+          </ul>
+          <button onclick="openMemorandum()" class="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
+            Меморандум
+          </button>
+        </div>
+
+        <!-- 2. Карточка: Fixed Income Program -->
+        <div class="product-card p-6 border rounded-lg shadow-sm bg-white hover:shadow-md transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900">Fixed Income Program (1,5 года)</h3>
+          <p class="mt-2 text-gray-700 text-sm italic">"Стабильный доход в долларах — без хлопот"</p>
+          <p class="mt-2 text-gray-700 text-sm">
+            Классическая программа фиксированной доходности. Инвесторы получают купон 8 % годовых с ежегодными выплатами и возврат капитала по окончании срока.
+            Простой, прозрачный инструмент для консервативных инвесторов.
+          </p>
+          <ul class="mt-4 text-sm text-gray-700 space-y-1">
+            <li><strong>Минимум вложения:</strong> USD 25 000</li>
+            <li><strong>Фиксированный купон:</strong> 8 % p.a.</li>
+            <li><strong>Бонус при выходе:</strong> 20 % от прибыли проекта</li>
+            <li><strong>Горизонт:</strong> 18 месяцев</li>
+          </ul>
+          <button onclick="openMemorandum()" class="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
+            Меморандум
+          </button>
+        </div>
+
+        <!-- 3. Карточка: Capital Growth Program -->
+        <div class="product-card p-6 border rounded-lg shadow-sm bg-white hover:shadow-md transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900">Capital Growth Program (3 года)</h3>
+          <p class="mt-2 text-gray-700 text-sm italic">"Инвестируйте в рост Пхукета — на ранних стадиях"</p>
+          <p class="mt-2 text-gray-700 text-sm">
+            Модель фокусируется на приобретении недвижимости на этапе котлована с последующей реализацией по мере роста цен.
+            Максимальный потенциал доходности при коротком горизонте и низкой волатильности рынка.
+          </p>
+          <ul class="mt-4 text-sm text-gray-700 space-y-1">
+            <li><strong>Минимум вложения:</strong> USD 25 000</li>
+            <li><strong>Целевая доходность:</strong> 30 % – 35 % за 3 года</li>
+            <li><strong>Средняя IRR:</strong> 9 % – 11 % p.a.</li>
+            <li><strong>Горизонт:</strong> 3 года</li>
+          </ul>
+          <button onclick="openMemorandum()" class="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
+            Меморандум
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYTICS (плейсхолдеры под графики) -->
+  <section id="analytics" class="py-14 bg-white">
+    <div class="container-max mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-bold mb-4" data-i18n="an_h2">Пхукет сегодня: высокий спрос, ограниченное предложение, рост по понятной логике</h2>
+      
+      <div class="space-y-4 text-gray-700 leading-relaxed mb-8">
+        <p data-i18n="an_p1">
+          Пхукет — главный курорт Юго-Восточной Азии с круглогодичным inbound-спросом и растущим пулом постоянных резидентов. Загрузка аренды держится высокой даже вне пиков, а в «высокий» сезон часто упирается в дефицит качественного фонда. Это даёт устойчивую базу для купонного дохода.
+        </p>
+        <p data-i18n="an_p2">
+          По новостройкам виден чёткий тренд: локации рядом с инфраструктурными узлами и пляжами с доступом без «бутылочных горлышек» дорожают быстрее — туда устремляется спрос с более длинным горизонтом владения. Это фундамент для ростовой стратегии.
+        </p>
+        <p data-i18n="an_p3">
+          Модель GIDR ежедневно прогоняет данные: цены за квадрат, сделки, темпы строительства, заселённость, скорость выкупа очередей, отзывы по управлению, FX-эффекты. Если район перегревается — мы видим это первыми и переориентируемся.
+        </p>
+        <p data-i18n="an_p4">
+          Рынок растёт не «в среднем по больнице», а адресно: мы инвестируем туда, где сходятся потоки туристов, качество девелопера и план выхода.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-4 mb-6">
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi1_t">Загрузка (Resort)</div>
+          <div class="text-2xl font-semibold"><span id="kpi_occ">72–78%</span></div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi2_t">ADR (US$)</div>
+          <div class="text-2xl font-semibold"><span id="kpi_adr">135–165</span></div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi3_t">Yield (нетто)</div>
+          <div class="text-2xl font-semibold"><span id="kpi_yield">5–7%</span></div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs text-gray-500" data-i18n="kpi4_t">Темпы цен</div>
+          <div class="text-2xl font-semibold"><span id="kpi_price">+3–6% г/г</span></div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="rounded-xl border overflow-hidden">
+          <img src="/images/analytics/occ_yield.svg" alt="Occupancy vs Yield" class="w-full h-72 object-cover">
+          <div class="p-6 bg-gray-50">
+            <h4 class="font-semibold text-gray-900 mb-4">Подпись под графиком 1 (Occupancy & ADR with Yield band)</h4>
+            <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+              Сочетание высокой заполняемости курортов (72–80%) и устойчивого среднего дохода с аренды ($135–165 за ночь) формирует стабильную чистую доходность 5–7% годовых.
+            </p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Для инвестора это значит, что актив работает независимо от сезонных колебаний и обеспечивает постоянный денежный поток — именно такую стабильность фонд использует как основу своих инвестиций.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-xl border overflow-hidden">
+          <img src="/images/analytics/price_trend.svg" alt="Price trends" class="w-full h-72 object-cover">
+          <div class="p-6 bg-gray-50">
+            <h4 class="font-semibold text-gray-900 mb-4">Подпись под графиком 2 (Price Trend +3–6% YoY)</h4>
+            <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+              Цены на курортную недвижимость на Пхукете растут плавно, на 3–6% в год, отражая органический спрос без перегрева рынка.
+            </p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Такой тренд создаёт идеальную структуру для стратегии фонда — сочетание стабильной аренды и умеренного прироста капитала обеспечивает двойную выгоду инвесторам: регулярный доход и рост стоимости актива со временем.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-3 text-sm">
+        <a href="/docs/analytics_overview.pdf" class="px-4 py-2 rounded-md border hover:bg-gray-50 transition" data-i18n="pdf_overview">Обзор рынка (PDF)</a>
+        <a href="/docs/analytics_hotels.pdf" class="px-4 py-2 rounded-md border hover:bg-gray-50 transition" data-i18n="pdf_hotels">Отели и аренда (PDF)</a>
+        <a href="/docs/analytics_dev.pdf" class="px-4 py-2 rounded-md border hover:bg-gray-50 transition" data-i18n="pdf_dev">Девелопмент (PDF)</a>
+        <a href="/docs/analytics_fx.pdf" class="px-4 py-2 rounded-md border hover:bg-gray-50 transition" data-i18n="pdf_fx">Валюты и доходность (PDF)</a>
+      </div>
+
+      <p class="mt-6 text-sm text-gray-600 italic" data-i18n="an_charts_note">
+        Графики отражают консервативные ориентиры и тренды по Пхукету; конкретные серии доступны в документах фонда.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS / RISKS -->
+  <section class="py-14 bg-gray-50">
+    <div class="container-max mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-3xl font-bold mb-4" data-i18n="how_h2">Как мы инвестируем ваш капитал</h2>
+        <ol class="text-sm text-gray-800 space-y-4 list-none">
+          <li data-i18n="how_li1">
+            <span class="inline-block w-8 h-8 rounded-full bg-emerald-600 text-white text-center leading-8 font-bold mr-3">1</span>
+            <strong>Вы выбираете стратегию</strong> — купон, рост или микс — и вносите от $25 000.
+          </li>
+          <li data-i18n="how_li2">
+            <span class="inline-block w-8 h-8 rounded-full bg-emerald-600 text-white text-center leading-8 font-bold mr-3">2</span>
+            <strong>Мы собираем пул</strong> и заходим в объекты с высокими рейтингами GIDR. По купону — сданные комплексы с предсказуемой арендой. По росту — стройка с понятной дорожной картой.
+          </li>
+          <li data-i18n="how_li3">
+            <span class="inline-block w-8 h-8 rounded-full bg-emerald-600 text-white text-center leading-8 font-bold mr-3">3</span>
+            <strong>Деньги работают</strong>, а вы видите движение в отчётности: сделки, статусы, загрузка, выплаты, ключевые события.
+          </li>
+          <li data-i18n="how_li4">
+            <span class="inline-block w-8 h-8 rounded-full bg-emerald-600 text-white text-center leading-8 font-bold mr-3">4</span>
+            <strong>Выплаты по купону</strong> приходят ежеквартально. Выход по росту происходит при достижении таргетов — ввод/перепродажа.
+          </li>
+          <li data-i18n="how_li5">
+            <span class="inline-block w-8 h-8 rounded-full bg-emerald-600 text-white text-center leading-8 font-bold mr-3">5</span>
+            <strong>Мы переупаковываем портфель</strong> по мере изменения данных: GIDR подсказывает, где удерживать, где усиливать, где фиксировать.
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mb-4" data-i18n="risk_h2">Прозрачно о рисках и как мы с ними работаем</h2>
+        
+        <div class="space-y-4 text-sm text-gray-800">
+          <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
+            <h4 class="font-bold mb-2" data-i18n="risk_market_title">Рынок</h4>
+            <p data-i18n="risk_market_text">Сезонность, колебания загрузки и ставок. Мы снижаем волатильность диверсификацией по районам, сегментам и валютной структуре (THB/USD).</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
+            <h4 class="font-bold mb-2" data-i18n="risk_dev_title">Стройка</h4>
+            <p data-i18n="risk_dev_text">Сроки, разрешения, подрядчики. В портфель попадают проекты с дисциплиной ввода, а GIDR заранее сигналит об отклонениях.</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
+            <h4 class="font-bold mb-2" data-i18n="risk_legal_title">Право и налоги</h4>
+            <p data-i18n="risk_legal_text">Форма участия, freehold/leasehold, отчётность. Мы используем понятные структуры и сопровождаем инвестора документально.</p>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-700 mt-6 font-semibold" data-i18n="risk_conclusion">
+          Мы не убираем риск — мы им управляем и показываем это цифрами.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === BEGIN: Tax & Legal Disclaimer (Section 10L) === -->
+  <section id="tax-disclaimer" class="py-14 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="bg-white p-6 border border-gray-200 rounded-xl max-w-4xl mx-auto">
+        <h3 class="text-gray-800 font-semibold mb-4 text-lg">Налоговая позиция и Section 10L</h3>
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+          <p>
+            West East Gate Capital (WEST EAST TRADE GROUP PTE. LTD., Сингапур) инвестирует исключительно в зарубежную недвижимость. 
+            Все доходы от аренды и прибыль от реализации объектов аккумулируются и распределяются на зарубежных операционных счетах фонда 
+            и <strong>не переводятся в Сингапур</strong>. 
+          </p>
+          <p>
+            Согласно действующему налоговому руководству IRAS (<em>Inland Revenue Authority of Singapore</em>), 
+            иностранные доходы и приросты (<em>foreign-sourced gains</em>), которые не 
+            <em>remitted</em> в Сингапур и не <em>applied</em> к обязательствам или операциям в Сингапуре, 
+            <strong>не подпадают под обложение налогом по Section 10L</strong>.
+          </p>
+          <p>
+            У фонда нет офиса, долгов или обязательств в Сингапуре, и полученные средства не используются 
+            для удовлетворения долгов или покупки имущества, связанного с деятельностью в Сингапуре.
+          </p>
+          <p>
+            Для дополнительной защиты фонд планирует при необходимости получать внешние юридические заключения 
+            и/или официальное решение (<em>advance ruling</em>) от IRAS по отдельным сделкам, чтобы подтвердить 
+            соблюдение требований законодательства.
+          </p>
+          <p class="text-sm italic mt-4 text-gray-600">
+            Данное описание предназначено исключительно для раскрытия информации инвесторам и не является юридической или налоговой консультацией. 
+            West East Gate Capital рекомендует инвесторам консультироваться с независимыми налоговыми и юридическими специалистами в своих юрисдикциях.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- === END: Tax & Legal Disclaimer === -->
+
+  <!-- FAQ -->
+  <section id="faq" class="py-14 bg-white">
+    <div class="container-max mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-bold mb-8" data-i18n="faq_h2">FAQ — участие в фонде</h2>
+
+      <div class="space-y-3">
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q1">Чем фонд отличается от покупки квартиры на Пхукете?</span><span class="text-2xl text-gray-900">+</span>
+        </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a1">
+            Покупая квартиру, вы несёте все операционные задачи и риски одного объекта. Во фонде — фракционный вход от $25 000, диверсификация по нескольким активам, профессиональное управление и отчётность.
+        </div>
+      </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q2">Какая минимальная сумма участия?</span><span class="text-2xl text-gray-900">+</span>
+        </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a2">
+            $25 000 или эквивалент. Вы можете докупать доли и наращивать позицию.
+        </div>
+      </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q3">Когда старт текущего раунда?</span><span class="text-2xl text-gray-900">+</span>
+        </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a3">
+            1 декабря 2025 года. Это дата открытия подписки и формирования первой волны портфеля.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q4">Как работает купон 6,5%?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a4">
+            Мы собираем пул уже сдающихся объектов, получаем арендный поток и распределяем его между инвесторами поквартально. Ставка ориентируется на чистый поток (после расходов по управлению).
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q5">Как достигается рост ~30% за 3 года?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a5">
+            Вход на стадии котлована/строительства по дисконту + переоценка при вводе/перепродаже. Мы выбираем локации и девелоперов, где GIDR видит устойчивый спрос и скорость раскупаемости очередей.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q6">Можно ли сочетать купон и рост?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a6">
+            Да. Многие инвесторы делят капитал, чтобы получать часть дохода поквартально и одновременно накапливать прирост.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q7">В какой валюте работает фонд?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a7">
+            Базовая — USD; операционные потоки по объектам — в THB и USD. Мы балансируем валюту в портфеле, чтобы снизить FX-колебания.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q8">Какая юридическая структура участия?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a8">
+            Пай/доля через договорную базу фонда. KYC/AML — онлайн. Полный пакет документов предоставляем до подписки.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q9">Как я вижу отчётность?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a9">
+            Личный кабинет и email-отчёты по календарю фонда: статусы объектов, сделки, загрузка, выплаты, ключевые события.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q10">Есть ли комиссия за вход/выход?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a10">
+            Структура комиссий описана в меморандуме. Мы избегаем «скрытых» платежей: все условия вынесены в явный раздел.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q11">Можно ли выйти раньше срока?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a11">
+            По купонному пулу — ориентир на гибкость (подробности в меморандуме). По пулу роста оптимальный горизонт — ~3 года; ранний выход возможен в особых случаях и отражён в правилах.
+          </div>
+        </div>
+
+        <div class="border rounded-lg">
+          <button class="faq-question w-full text-left font-semibold text-base px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition" type="button" aria-expanded="false">
+            <span data-i18n="q12">Почему именно Пхукет?</span><span class="text-2xl text-gray-900">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-sm text-gray-700 leading-relaxed" aria-hidden="true" data-i18n="a12">
+            Здесь сходятся потоки туризма, статус международного хаба, ограниченность качественного фонда у пляжей и дисциплина топ-девелоперов. Мы знаем остров до метра — это база, на которой работает наша модель и наша стратегия.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+    <div class="container-max mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="cta_h2">Присоединяйтесь к WEST EAST GATE CAPITAL</h2>
+      <div class="max-w-3xl mx-auto space-y-4 text-lg text-white/90 mb-8">
+        <p data-i18n="cta_p1">
+          Начните с $25 000 — выберите стратегию, а мы возьмём на себя остальное: анализ, сделки, управление и отчётность.
+        </p>
+        <p data-i18n="cta_p2">
+          Напишите на <strong class="text-white">post@wegc.fund</strong> или оставьте заявку — пришлём меморандум, календарь раунда и персональное распределение по стратегиям.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="openApplicationForm()" class="px-8 py-4 rounded-lg bg-white text-gray-900 font-bold text-lg hover:bg-gray-100 transition shadow-lg" data-i18n="cta_email">Подать заявку на участие</button>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-lg border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition" data-i18n="cta_whatsapp">WhatsApp</a>
+        <button onclick="openMemorandum()" class="px-8 py-4 rounded-lg border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition" data-i18n="cta_download">Скачать меморандум</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (копия) -->
+  <footer class="bg-gray-900 text-gray-200 pt-10">
+    <div class="mt-8 bg-black/40">
+      <div class="container-max mx-auto px-4 py-5 text-xs text-gray-400">
+        <div class="grid md:grid-cols-3 gap-4">
+          <div>
+            <div class="font-semibold text-gray-300">WEST EAST TRADE GROUP PTE. LTD.</div>
+            <div>UEN: <span id="uen">202505772C</span></div>
+            <div>Registered Office: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore <span id="postal">038987</span></div>
+          </div>
+          <div>
+            <div class="mb-2">Primary email: <a class="text-blue-300" href="mailto:post@wegc.fund">post@wegc.fund</a></div>
+            <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition border border-gray-600">
+              <span>💬</span>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+          <div class="md:text-right">
+            <div>© 2025 West East. All rights reserved.</div>
+          </div>
+        </div>
+        <div class="mt-3 text-xs text-gray-400 flex flex-wrap gap-4">
+          <a href="/privacy.html" class="underline hover:text-gray-200">Privacy Policy</a>
+          <a href="/terms.html" class="underline hover:text-gray-200">Terms of Service</a>
+          <a href="/cookies.html" class="underline hover:text-gray-200">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPТЫ -->
+  <script>
+    // burger
+    const burger=document.getElementById('burgerBtn'); const menu=document.getElementById('navMenu');
+    burger?.addEventListener('click', ()=>{ menu.classList.toggle('hidden'); burger.textContent=menu.classList.contains('hidden')?'☰':'✕'; burger.setAttribute('aria-pressed', menu.classList.contains('hidden')?'false':'true'); });
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-question').forEach((btn)=>{
+      const ans=btn.parentElement.querySelector('.faq-answer');
+      btn.addEventListener('click', ()=>{
+        ans.classList.toggle('hidden');
+        const open=!ans.classList.contains('hidden');
+        btn.classList.toggle('open', open);
+        btn.querySelector('span:last-child').textContent=open?'−':'+';
+        btn.setAttribute('aria-expanded', open?'true':'false');
+        ans.setAttribute('aria-hidden', open?'false':'true');
+      });
+    });
+
+    // i18n
+    (function(){
+      const btn=document.getElementById('langBtn'); const menu=document.getElementById('langMenu'); const label=document.getElementById('langLabel');
+      btn?.addEventListener('click', ()=>{ const isOpen=menu.classList.toggle('hidden'); btn.setAttribute('aria-expanded', isOpen?'false':'true'); });
+      document.addEventListener('click', (e)=>{ if(!menu.contains(e.target) && !btn.contains(e.target)) menu.classList.add('hidden'); });
+
+      const dict={
+        en:{
+          head_title:"WEGC Fund — Asian Real Estate Income & Growth",
+          head_desc:"Fractional investing from $5k in income-producing and development-stage real estate across Phuket and Asia.",
+          og_title:"WEGC Fund — Fractional real estate investing from $5k",
+          og_desc:"Two strategies: 6.5% coupon pool and growth pool (~30% over 3 years).",
+          nav_buy:"Apply to fund",
+          hero_title:"Invest in real concrete from $5k: income & growth without buying an apartment",
+          hero_sub:"Two tracks: 6.5% coupon income and growth (~30% in 3 years). Curated by GIDR and linked to our Phuket brokerage.",
+          cta_explore:"Explore products",
+          cta_memorandum:"Download Memorandum",
+          hero_notice:"* Figures are illustrative only and not guarantees.",
+          video_placeholder:"Video presentation placeholder",
+          usp1_tag:"FRACTIONAL",
+          usp1_title:"Entry from $5k",
+          usp1_txt:"No need to buy a $1M villa: pooled capital into tangible assets.",
+          usp2_tag:"INCOME + GROWTH",
+          usp2_title:"Two pools",
+          usp2_txt:"6.5% coupon from rental pool and growth track targeting ~30% in 3 years.",
+          usp3_tag:"DATA-DRIVEN",
+          usp3_title:"GIDR curation",
+          usp3_txt:"Model-based selection: demand, location, developer, liquidity.",
+          prod_h2:"Fund products",
+          prod_intro:"Both instruments are fractional. See memoranda for details.",
+          badge_income:"Income",
+          coupon_title:"Coupon pool — 6.5% p.a.",
+          coupon_txt:"Backed by operating, income-producing assets. Quarterly coupons.",
+          coupon_li1:"Payouts: quarterly",
+          coupon_li2:"Base: active rental contracts",
+          coupon_li3:"FX mix in the pool",
+          btn_coupon_pdf:"Memorandum (PDF)",
+          badge_growth:"Growth",
+          growth_title:"Growth pool — target ~30% in 3 years",
+          growth_txt:"Pre-construction/under-construction projects, exit via handover/resale.",
+          growth_li1:"Developer discount at entry",
+          growth_li2:"Phased realization on delivery",
+          growth_li3:"Revaluation at exit",
+          btn_growth_pdf:"Memorandum (PDF)",
+          round_tag:"Current round",
+          round_size:"Size:",
+          round_window:"Subscription window:",
+          round_window_val:"January 2031",
+          round_min:"Minimum per investor:",
+          cta_join:"Apply",
+          an_h2:"Market analytics (Phuket / Resort RE)",
+          an_intro:"Conservative guides. Replace charts with your SVG/PNG.",
+          kpi1_t:"Occupancy (Resort)",
+          kpi2_t:"ADR (US$)",
+          kpi3_t:"Yield (net)",
+          kpi4_t:"Price growth",
+          pdf_overview:"Market overview (PDF)",
+          pdf_hotels:"Hotels & Rentals (PDF)",
+          pdf_dev:"Development (PDF)",
+          pdf_fx:"FX & Returns (PDF)",
+          how_h2:"How the fund works",
+          how_li1:"Pooling from $5k → investing into asset pools.",
+          how_li2:"Coupon pool — rental cashflows, quarterly payouts.",
+          how_li3:"Growth pool — construction discount, exit in 3–4y.",
+          how_li4:"Selection via GIDR models.",
+          how_li5:"Reporting & docs via secure channel.",
+          risk_h2:"Risks (key)",
+          risk_li1:"Market: seasonality, occupancy/ADR.",
+          risk_li2:"Development: timelines, permits.",
+          risk_li3:"FX: THB/USD flows.",
+          risk_li4:"Legal: structure, taxes.",
+          risk_note:"Full risk list — in memoranda.",
+          faq_h2:"FAQ — fund participation",
+          q1:"How is this different from buying a condo?",
+          a1:"Lower ticket, diversification, less operating hassle.",
+          q2:"Minimum amount and currency?",
+          a2:"From $5,000 (or equivalent). See memoranda.",
+          q3:"When does this round start?",
+          a3:"Subscription window is set for January 2031.",
+          cta_h2:"Apply to participate",
+          cta_p:"Use the form on the main page or email post@wegc.fund.",
+          cta_go:"Go to form"
+        },
+        ru:{
+          head_title:"WEGC Fund — Фонд недвижимости Азии: доход и рост",
+          head_desc:"Фракционное инвестирование от $5k в доходные и строящиеся объекты Пхукета и региона.",
+          og_title:"WEGC Fund — фракционное инвестирование от $5k",
+          og_desc:"Два продукта: купон 6.5% и рост ~30% за 3 года.",
+          nav_buy:"Подать заявку на участие",
+          hero_title:"Наш отбор — это GIDR, собственная AI-модель, натренированная на десятках тысяч параметров Пхукета",
+          hero_sub_p1:"Фонд WEST EAST GATE CAPITAL делает рынок премиальной недвижимости Пхукета доступным для частных инвесторов. Не нужно покупать квартиру за сотни тысяч: участвуйте фракционно от $25 000 и получайте долю в реальных объектах — с понятной экономикой, прозрачной отчётностью и управлением со стороны фонда.",
+          hero_sub_p2:"Наш отбор — это GIDR, собственная AI-модель, натренированная на десятках тысяч параметров Пхукета. Мы видим карту острова буквально «до метра»: пляжные коридоры, транспортные хабы, динамику аренды, историю застройщиков и скорость ввода очередей. Поэтому в портфель попадают только локации и проекты, где цифры сходятся.",
+          hero_sub_p3:"Выберите стратегию под свои цели: купонный пул (6,5% годовых, поквартально) или пул роста (цель ~30% за 3 года) — либо комбинируйте их, балансируя стабильный доход и прирост капитала.",
+          cta_explore:"Посмотреть продукты",
+          cta_memorandum:"Скачать меморандум",
+          hero_notice:"",
+          video_placeholder:"Здесь будет видео-презентация фонда",
+          image_placeholder:"Изображение фонда",
+          usp1_tag:"ФРАКЦИОННО",
+          usp1_title:"Вход от $25 000 — доля в реальных объектах",
+          usp1_txt:"Доступ к премиальным локациям без покупки целой квартиры. Фонд агрегирует капитал пайщиков и приобретает объекты с понятной доходностью. Все юридические, операционные и сервисные процессы — на нашей стороне. Вы получаете долю и участие в денежных потоках.",
+          usp2_tag:"ДОХОД + РОСТ",
+          usp2_title:"Две стратегии — под ваши задачи",
+          usp2_txt:"Купонный пул — стабильный доход 6,5% годовых, выплаты поквартально из арендного потока действующих объектов. Пул роста — вход на стадии строительства с целью ~30% за 3 года за счёт девелоперского дисконта и выхода при вводе/перепродаже. Можно комбинировать и ребалансировать.",
+          usp3_tag:"AI-ВЫБОР (GIDR)",
+          usp3_title:"Решения принимает модель, натренированная на Пхукете",
+          usp3_txt:"GIDR анализирует карту спроса и цен «до метра»: сезонность, загрузку, инфраструктуру, кредит истории девелопера и ликвидность при выходе. Мы используем конкретные данные, а не «инвест-моду».",
+          prod_h2:"Продукты фонда",
+          prod_intro:"Оба инструмента доступны фракционно. Детали — в меморандумах.",
+          badge_income:"Доход",
+          coupon_title:"Купонный пул — 6.5% годовых",
+          coupon_txt:"База — сдаваемые объекты. Квартальные выплаты.",
+          coupon_li1:"Выплаты: ежеквартально",
+          coupon_li2:"База: активные договоры аренды",
+          coupon_li3:"FX-структура пула",
+          btn_coupon_pdf:"Меморандум",
+          badge_growth:"Рост",
+          growth_title:"Ростовой пул — цель ~30% за 3 года",
+          growth_txt:"Объекты на котловане/строительстве, выход при вводе/перепродаже.",
+          growth_li1:"Дисконт на входе",
+          growth_li2:"Реализация по очередям",
+          growth_li3:"Переоценка при выходе",
+          btn_growth_pdf:"Меморандум",
+          round_tag:"Текущий раунд",
+          round_size:"Размер:",
+          round_window:"Окно подписки:",
+          round_window_val:"Январь 2026",
+          round_min:"Минимум на инвестора:",
+          cta_join:"Подать заявку",
+          an_h2:"Аналитика рынка (Пхукет / курортная недвижимость)",
+          an_intro:"Консервативные ориентиры. Замените графики на ваши SVG/PNG.",
+          kpi1_t:"Загрузка (Resort)",
+          kpi2_t:"ADR (US$)",
+          kpi3_t:"Yield (нетто)",
+          kpi4_t:"Рост цен",
+          pdf_overview:"Обзор рынка (PDF)",
+          pdf_hotels:"Отели и аренда (PDF)",
+          pdf_dev:"Девелопмент (PDF)",
+          pdf_fx:"Валюты и доходность (PDF)",
+          how_h2:"Как работает фонд",
+          how_li1:"Агрегация от $5k → инвестиции в пул.",
+          how_li2:"Купонный пул — арендные потоки.",
+          how_li3:"Ростовой — дисконт строительства, выход 3–4 года.",
+          how_li4:"Отбор по моделям GIDR.",
+          how_li5:"Отчётность и документы.",
+          risk_h2:"Риски (основные)",
+          risk_li1:"Рыночные: сезонность, occupancy/ADR.",
+          risk_li2:"Девелоперские: сроки, разрешения.",
+          risk_li3:"Валютные: THB/USD.",
+          risk_li4:"Правовые/налоговые.",
+          risk_note:"Полный перечень — в меморандумах.",
+          faq_h2:"FAQ — участие в фонде",
+          q1:"Чем отличается от покупки квартиры?",
+          a1:"Ниже чек, диверсификация, меньше рутины.",
+          q2:"Минимальная сумма и валюта?",
+          a2:"От $5,000 (или экв.). Подробности — в меморандумах.",
+          // GIDR блок
+          gidr_h2:"GIDR: наша AI-модель знает Пхукет до метра — и это меняет правила",
+          gidr_subtitle:"Десятки тысяч показателей. Локальная реальность, а не общие слова.",
+          gidr_p1:"Что это: GIDR — нейросетевая модель, обученная на массиве локальных данных по Пхукету: сделки и прайс-листы, темпы строительства и выдачи разрешений, плотность застройки по кварталам, сезонная загрузка аренды, история ввода очередей, рейтинги девелоперов, транспортные потоки, планы инфраструктуры, FX-параметры и пересечения с визовыми режимами.",
+          gidr_p2:"Как работает: каждый объект «раскладывается» на признаки — локация и доступность пляжа, логистика, шум и трафик, менеджмент, качество отделки, кондоминальный режим (freehold/leasehold), динамика аренды, потенциальная ликвидность. Модель рассчитывает итоговый рейтинг (A–E) и прогноз: чистая доходность, ожидаемый рост, горизонт выхода.",
+          gidr_p3:"Веса факторов (пример): доходность аренды — 25%, репутация девелопера — 20%, тренд цен района — 15%, инфраструктура и пляжная доступность — 15%, FX и макро — 10%, транспорт/шум/экология и визовые программы — 15%. Веса обновляются по мере поступления данных.",
+          gidr_p4:"Зачем инвестору: мы не угадываем «где сейчас модно». Мы сверяем портфель с цифрами, корректируем веса и режем риск до того, как он становится проблемой. В результате в портфель попадают объекты, где сходятся локация, спрос и выход.",
+          // Продукты - купонный пул
+          coupon_p1:"База — действующие арендуемые объекты Пхукета: апарт-отели, кондоминиумы с доказанной загрузкой, управлением и предсказуемой экономикой.",
+          coupon_p2:"Выплаты — поквартально. Доход формируется из чистого операционного потока, распределяется пропорционально долям инвесторов.",
+          coupon_p3:"Мы балансируем валюту (THB/USD) и географию внутри острова, чтобы снизить зависимость от одного района или сегмента.",
+          coupon_important:"Что важно:",
+          // Продукты - пул роста
+          growth_p1:"Вход на стадии котлована/строительства по девелоперскому дисконту. Рост стоимости идёт по мере готовности и выхода в эксплуатацию, а также за счёт перепродажи части пулов по мере сдачи очередей.",
+          growth_p2:"Отбор — только объекты с высокими рейтингами по GIDR: сильная локация, понятная инфраструктура, подтверждённый спрос и дисциплина девелопера.",
+          growth_p3:"Фокус — прирост капитала. По мере достижения целевых показателей по проекту фиксируем результат и переупаковываем пул.",
+          growth_important:"Что важно:",
+          // Текущий раунд
+          round_h3:"Текущий раунд размещения",
+          round_p1:"Старт подписки — 1 декабря 2025 года. Этот раунд формирует «первую волну» портфеля строго из объектов Пхукета с сильной арендной экономикой и прогнозируемым ростом.",
+          round_p2:"Мы работаем прозрачно: оформляем KYC/AML онлайн, предоставляем инвест-меморандум, договорную базу и индивидуальное распределение по стратегиям (доход/рост).",
+          round_size_label:"Объём раунда:",
+          round_min_label:"Минимальный вход:",
+          round_currency_label:"Валюта:",
+          round_li1:"✓ Выплаты по купону: ежеквартально",
+          round_li2:"✓ Горизонт по пулу роста: ~3 года",
+          round_li3:"✓ Отчётность: личный кабинет / email-рассылки по календарю фонда",
+          cta_memorandum_short:"Меморандум",
+          // Аналитика - новые тексты
+          an_p1:"Пхукет — главный курорт Юго-Восточной Азии с круглогодичным inbound-спросом и растущим пулом постоянных резидентов. Загрузка аренды держится высокой даже вне пиков, а в «высокий» сезон часто упирается в дефицит качественного фонда. Это даёт устойчивую базу для купонного дохода.",
+          an_p2:"По новостройкам виден чёткий тренд: локации рядом с инфраструктурными узлами и пляжами с доступом без «бутылочных горлышек» дорожают быстрее — туда устремляется спрос с более длинным горизонтом владения. Это фундамент для ростовой стратегии.",
+          an_p3:"Модель GIDR ежедневно прогоняет данные: цены за квадрат, сделки, темпы строительства, заселённость, скорость выкупа очередей, отзывы по управлению, FX-эффекты. Если район перегревается — мы видим это первыми и переориентируемся.",
+          an_p4:"Рынок растёт не «в среднем по больнице», а адресно: мы инвестируем туда, где сходятся потоки туристов, качество девелопера и план выхода.",
+          an_charts_note:"Графики отражают консервативные ориентиры и тренды по Пхукету; конкретные серии доступны в документах фонда.",
+          // Риски - новая структура
+          risk_market_title:"Рынок",
+          risk_market_text:"Сезонность, колебания загрузки и ставок. Мы снижаем волатильность диверсификацией по районам, сегментам и валютной структуре (THB/USD).",
+          risk_dev_title:"Стройка",
+          risk_dev_text:"Сроки, разрешения, подрядчики. В портфель попадают проекты с дисциплиной ввода, а GIDR заранее сигналит об отклонениях.",
+          risk_legal_title:"Право и налоги",
+          risk_legal_text:"Форма участия, freehold/leasehold, отчётность. Мы используем понятные структуры и сопровождаем инвестора документально.",
+          risk_conclusion:"Мы не убираем риск — мы им управляем и показываем это цифрами.",
+          // FAQ - расширенный (12 вопросов)
+          q1:"Чем фонд отличается от покупки квартиры на Пхукете?",
+          a1:"Покупая квартиру, вы несёте все операционные задачи и риски одного объекта. Во фонде — фракционный вход от $25 000, диверсификация по нескольким активам, профессиональное управление и отчётность.",
+          q2:"Какая минимальная сумма участия?",
+          a2:"$25 000 или эквивалент. Вы можете докупать доли и наращивать позицию.",
+          q3:"Когда старт текущего раунда?",
+          a3:"1 декабря 2025 года. Это дата открытия подписки и формирования первой волны портфеля.",
+          q4:"Как работает купон 6,5%?",
+          a4:"Мы собираем пул уже сдающихся объектов, получаем арендный поток и распределяем его между инвесторами поквартально. Ставка ориентируется на чистый поток (после расходов по управлению).",
+          q5:"Как достигается рост ~30% за 3 года?",
+          a5:"Вход на стадии котлована/строительства по дисконту + переоценка при вводе/перепродаже. Мы выбираем локации и девелоперов, где GIDR видит устойчивый спрос и скорость раскупаемости очередей.",
+          q6:"Можно ли сочетать купон и рост?",
+          a6:"Да. Многие инвесторы делят капитал, чтобы получать часть дохода поквартально и одновременно накапливать прирост.",
+          q7:"В какой валюте работает фонд?",
+          a7:"Базовая — USD; операционные потоки по объектам — в THB и USD. Мы балансируем валюту в портфеле, чтобы снизить FX-колебания.",
+          q8:"Какая юридическая структура участия?",
+          a8:"Пай/доля через договорную базу фонда. KYC/AML — онлайн. Полный пакет документов предоставляем до подписки.",
+          q9:"Как я вижу отчётность?",
+          a9:"Личный кабинет и email-отчёты по календарю фонда: статусы объектов, сделки, загрузка, выплаты, ключевые события.",
+          q10:"Есть ли комиссия за вход/выход?",
+          a10:"Структура комиссий описана в меморандуме. Мы избегаем «скрытых» платежей: все условия вынесены в явный раздел.",
+          q11:"Можно ли выйти раньше срока?",
+          a11:"По купонному пулу — ориентир на гибкость (подробности в меморандуме). По пулу роста оптимальный горизонт — ~3 года; ранний выход возможен в особых случаях и отражён в правилах.",
+          q12:"Почему именно Пхукет?",
+          a12:"Здесь сходятся потоки туризма, статус международного хаба, ограниченность качественного фонда у пляжей и дисциплина топ-девелоперов. Мы знаем остров до метра — это база, на которой работает наша модель и наша стратегия.",
+          // Финальный CTA
+          cta_p1:"Начните с $25 000 — выберите стратегию, а мы возьмём на себя остальное: анализ, сделки, управление и отчётность.",
+          cta_p2:"Напишите на post@wegc.fund или оставьте заявку — пришлём меморандум, календарь раунда и персональное распределение по стратегиям.",
+          cta_email:"Подать заявку на участие",
+          cta_whatsapp:"WhatsApp",
+          cta_download:"Скачать меморандум"
+        },
+        zh:{
+          head_title:"WEGC 基金 — 亚洲房地产收益与增长",
+          head_desc:"从 $5k 起的碎片化投资：度假租赁现金流与在建项目增长。",
+          og_title:"WEGC Fund — 从 $5k 起碎片化投资",
+          og_desc:"两种策略：6.5% 票息池与三年 ~30% 增长池。",
+          nav_buy:"申请基金",
+          hero_title:"从 $5k 起投资真实资产：无需买房也可获取收益与增长",
+          hero_sub:"两条路径：6.5% 票息与三年 ~30% 增长。由 GIDR 数据甄选。",
+          cta_explore:"查看产品",
+          cta_memorandum:"下载备忘录",
+          hero_notice:"* 数据仅为示例，并非保证。",
+          video_placeholder:"基金视频占位",
+          usp1_tag:"碎片化",
+          usp1_title:"$5k 起",
+          usp1_txt:"无需购买百万别墅：共同出资投向实物项目。",
+          usp2_tag:"收益+增长",
+          usp2_title:"两只池子",
+          usp2_txt:"票息 6.5% 与三年 ~30% 增长目标。",
+          usp3_tag:"数据驱动",
+          usp3_title:"GIDR 甄选",
+          usp3_txt:"基于需求、区位、开发商与流动性模型筛选。",
+          prod_h2:"基金产品",
+          prod_intro:"两种工具均支持碎片化。详见备忘录。",
+          badge_income:"收益",
+          coupon_title:"票息池 — 6.5% 年化",
+          coupon_txt:"以在营资产现金流为基础，按季度派息。",
+          coupon_li1:"派息：季度",
+          coupon_li2:"基础：有效租约",
+          coupon_li3:"外汇结构：多币种配置",
+          btn_coupon_pdf:"备忘录 (PDF)",
+          badge_growth:"增长",
+          growth_title:"增长池 — 3 年目标 ~30%",
+          growth_txt:"早期/在建项目，交付/转售退出。",
+          growth_li1:"折价入场",
+          growth_li2:"分期交付实现",
+          growth_li3:"退出再估值",
+          btn_growth_pdf:"备忘录 (PDF)",
+          round_tag:"当前轮次",
+          round_size:"规模：",
+          round_window:"认购窗口：",
+          round_window_val:"2031年1月",
+          round_min:"单一投资者最低：",
+          cta_join:"申请",
+          an_h2:"市场分析（普吉 / 度假不动产）",
+          an_intro:"保守口径。图表稍后替换为 SVG/PNG。",
+          kpi1_t:"入住率（Resort）",
+          kpi2_t:"ADR（美元）",
+          kpi3_t:"净收益率",
+          kpi4_t:"价格增速",
+          pdf_overview:"市场总览 (PDF)",
+          pdf_hotels:"酒店与租赁 (PDF)",
+          pdf_dev:"开发项目 (PDF)",
+          pdf_fx:"外汇与回报 (PDF)",
+          how_h2:"基金运作",
+          how_li1:"$5k 起募资→配置资产池。",
+          how_li2:"票息池：租金现金流，季度派息。",
+          how_li3:"增长池：建造折扣，3–4 年退出。",
+          how_li4:"GIDR 模型筛选。",
+          how_li5:"报告与材料。",
+          risk_h2:"主要风险",
+          risk_li1:"市场：季节性、入住率/ADR。",
+          risk_li2:"开发：进度、许可。",
+          risk_li3:"外汇：THB/USD。",
+          risk_li4:"法律/税务。",
+          risk_note:"详见备忘录。",
+          faq_h2:"FAQ — 基金参与",
+          q1:"与直接买房有何不同？",
+          a1:"门槛更低，更分散，无需运营。",
+          q2:"最低金额与币种？",
+          a2:"$5,000 起。详见备忘录。",
+          q3:"本轮何时开始？",
+          a3:"认购窗口：2031年1月。",
+          cta_h2:"申请参与",
+          cta_p:"使用主页表单或发送邮件至 post@wegc.fund。",
+          cta_go:"前往表单"
+        },
+        ar:{
+          head_title:"صندوق WEGC — دخل ونمو في عقار آسيا",
+          head_desc:"استثمار مجزأ ابتداءً من 5 آلاف دولار في أصول مؤجرة ومشاريع قيد الإنشاء.",
+          og_title:"WEGC Fund — استثمار مجزأ من 5 آلاف",
+          og_desc:"استراتيجيتان: قسيمة 6.5% ونمو ~30% خلال 3 سنوات.",
+          nav_buy:"قدّم للصندوق",
+          hero_title:"استثمر في أصول ملموسة من 5 آلاف دولار: دخل ونمو دون شراء شقة",
+          hero_sub:"مساران: قسيمة 6.5% ونمو ~30% خلال 3 سنوات. اختيار قائم على بيانات GIDR.",
+          cta_explore:"استكشاف المنتجات",
+          cta_memorandum:"تنزيل المذكرة",
+          hero_notice:"* الأرقام تقريبية وليست ضمانات.",
+          video_placeholder:"مكان عرض فيديو الصندوق",
+          usp1_tag:"مجزيء",
+          usp1_title:"بداية من 5 آلاف",
+          usp1_txt:"لا حاجة لشراء فيلا بمليون: تجميع مساهمات في أصول ملموسة.",
+          usp2_tag:"دخل + نمو",
+          usp2_title:"مساران",
+          usp2_txt:"قسيمة 6.5% ونمو ~30% خلال 3 سنوات.",
+          usp3_tag:"مدفوع بالبيانات",
+          usp3_title:"اختيار GIDR",
+          usp3_txt:"نماذج للطلب والموقع والمطور والسيولة.",
+          prod_h2:"منتجات الصندوق",
+          prod_intro:"كلا الأداتين بدخول مجزأ. التفاصيل في المذكرات.",
+          badge_income:"دخل",
+          coupon_title:"مسار القسيمة — 6.5% سنوياً",
+          coupon_txt:"مدعوم بتدفقات إيجار من أصول عاملة. توزيعات ربع سنوية.",
+          coupon_li1:"توزيعات: ربع سنوية",
+          coupon_li2:"الأساس: عقود إيجار فعالة",
+          coupon_li3:"مزيج عملات في المحفظة",
+          btn_coupon_pdf:"المذكرة (PDF)",
+          badge_growth:"نمو",
+          growth_title:"مسار النمو — ~30% خلال 3 سنوات",
+          growth_txt:"مشاريع قيد الإنشاء؛ الخروج عند التسليم/إعادة البيع.",
+          growth_li1:"خصم دخول مطور",
+          growth_li2:"تحقيق تدريجي",
+          growth_li3:"إعادة تقييم عند الخروج",
+          btn_growth_pdf:"المذكرة (PDF)",
+          round_tag:"الجولة الحالية",
+          round_size:"الحجم:",
+          round_window:"نافذة الاكتتاب:",
+          round_window_val:"يناير 2031",
+          round_min:"الحد الأدنى للمستثمر:",
+          cta_join:"قدّم طلباً",
+          an_h2:"تحليلات السوق (بوكيت / عقار منتجعي)",
+          an_intro:"مؤشرات محافظة. استبدل الرسوم بـ SVG/PNG لاحقاً.",
+          kpi1_t:"الإشغال (Resort)",
+          kpi2_t:"ADR (دولار)",
+          kpi3_t:"العائد الصافي",
+          kpi4_t:"نمو الأسعار",
+          pdf_overview:"نظرة عامة (PDF)",
+          pdf_hotels:"الفنادق والإيجار (PDF)",
+          pdf_dev:"التطوير (PDF)",
+          pdf_fx:"العملات والعوائد (PDF)",
+          how_h2:"كيف يعمل الصندوق",
+          how_li1:"تجميع من 5 آلاف → استثمار في محفظة.",
+          how_li2:"قسيمة: تدفقات إيجار.",
+          how_li3:"نمو: خصم إنشاء والخروج خلال 3–4 سنوات.",
+          how_li4:"اختيار عبر نماذج GIDR.",
+          how_li5:"تقارير ووثائق.",
+          risk_h2:"المخاطر",
+          risk_li1:"السوق: موسمية، إشغال/ADR.",
+          risk_li2:"التطوير: المهل والتصاريح.",
+          risk_li3:"العملات: THB/USD.",
+          risk_li4:"قانوني/ضريبي.",
+          risk_note:"التفاصيل في المذكرات.",
+          faq_h2:"الأسئلة الشائعة — المشاركة",
+          q1:"كيف يختلف عن شراء شقة؟",
+          a1:"تذكرة أقل وتنوع أعلى وعمليات أقل.",
+          q2:"الحد الأدنى والعملة؟",
+          a2:"من 5,000$. التفاصيل في المذكرات.",
+          q3:"متى تبدأ الجولة؟",
+          a3:"نافذة الاكتتاب: يناير 2031.",
+          cta_h2:"قدّم طلباً للمشاركة",
+          cta_p:"استخدم نموذج الصفحة الرئيسية أو راسل post@wegc.fund.",
+          cta_go:"اذهب للنموذج"
+        }
+      };
+
+      function setLang(code, dir){
+        const d=dict[code]||dict.en;
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const k=el.getAttribute('data-i18n'); if(d[k]) el.textContent=d[k];
+        });
+        document.documentElement.setAttribute('dir', dir||'ltr');
+        document.documentElement.setAttribute('lang', code||'en');
+        const label=document.getElementById('langLabel'); if(label) label.textContent=(code||'en').toUpperCase();
+        localStorage.setItem('lang', JSON.stringify({code, dir: dir||'ltr'}));
+        const url=new URL(location.href); url.searchParams.set('lang', code); history.replaceState({}, '', url.toString());
+      }
+
+      document.querySelectorAll('#langMenu [data-lang]').forEach(item=>{
+        item.addEventListener('click', ()=>{
+          setLang(item.getAttribute('data-lang'), item.getAttribute('data-dir')||'ltr');
+          document.getElementById('langMenu').classList.add('hidden');
+        });
+      });
+
+      try{
+        const saved=JSON.parse(localStorage.getItem('lang')||'{}'); const q=new URLSearchParams(location.search).get('lang');
+        if(q){ setLang(q, q==='ar'?'rtl':'ltr'); }
+        else if(saved.code){ setLang(saved.code, saved.dir||'ltr'); }
+        else{ setLang('en','ltr'); }
+      }catch(_){ setLang('en','ltr'); }
+    })();
+  </script>
+
+  <!-- Модальное окно меморандума -->
+  <div id="memorandumModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+          <h3 class="text-xl font-bold">Меморандум WEGC Fund</h3>
+          <button onclick="closeMemorandum()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        </div>
+        <div class="p-6">
+          <div class="prose max-w-none">
+            <h1>МЕМОРАНДУМ</h1>
+            <h2>WEST EAST GATE CAPITAL FUND (WEGC FUND)</h2>
+            <p><strong>Публичная версия — ноябрь 2025 г.</strong></p>
+            
+            <h3>1. Введение и дисклеймер</h3>
+            <h4>1.1 Назначение документа</h4>
+            <p>Настоящий Публичный Меморандум (далее — «Меморандум») подготовлен для ознакомления потенциальных инвесторов с принципами, стратегиями, условиями и рисками фонда WEST EAST GATE CAPITAL FUND («Фонд», «WEGC»).</p>
+            <p>Он не является публичной офертой, не обязует фонд к выпуску долей и не гарантирует доходность. Инвесторы самостоятельно принимают решение на основании документов фонда и консультаций с юридическими/финансовыми советниками.</p>
+            
+            <h4>1.2 Ограничения и ответственность</h4>
+            <ul>
+              <li>Данный документ не заменяет юридические соглашения, меморандум подписки, договоры или финансовую модель.</li>
+              <li>Все прогнозы, цифры и планы являются ориентировочными и базируются на моделях и анализе GIDR. Реальные результаты могут отличаться.</li>
+              <li>Фонд не несёт ответственности за убытки, возникающие в результате макроэкономических шоков, регуляторных изменений или прочих форс-мажоров.</li>
+              <li>Инвесторам рекомендуется обращаться к своим юристам и консультантам перед принятием решения.</li>
+            </ul>
+            
+            <h3>2. Цель фонда и инвестиционная стратегия</h3>
+            <h4>2.1 Миссия</h4>
+            <p>WEGC Fund создан, чтобы сделать премиальную недвижимость Пхукета доступной частным инвесторам с минимальным порогом, сохраняя при этом стандарты институционального управления.</p>
+            
+            <h4>2.2 География деятельности</h4>
+            <p>Фокус — остров Пхукет (Таиланд). Только объекты, расположенные на острове и соответствующие строгим требованиям модели GIDR, могут попадать в портфель фонда.</p>
+            
+            <h4>2.3 Стратегии фонда</h4>
+            <ul>
+              <li><strong>Купонный пул (Income Pool):</strong> инвестиции в готовые объекты, уже генерирующие доход от аренды. Цель: стабильные выплаты порядка 6,5% годовых (после вычета расходов), с распределением поквартально.</li>
+              <li><strong>Пул роста (Growth Pool):</strong> инвестиции на стадии котлована или строительства с дисконтом, с целью прироста стоимости при вводе объекта в эксплуатацию и/или перепродаже. Цель: прирост капитала порядка ~30% за 3 года.</li>
+            </ul>
+            <p>Инвесторы могут распределять средства между двумя пулами по своему усмотрению.</p>
+            
+            <h3>3. Юридическая структура и управление</h3>
+            <h4>3.1 Управляющая компания</h4>
+            <p>Фонд управляется компанией WEST EAST TRADE GROUP PTE. LTD., зарегистрированной в Сингапуре. Все решения по инвестициям, распределению, отчетности и управлению осуществляются через эту структуру.</p>
+            
+            <h4>3.2 Форма предложения</h4>
+            <p>Предлагается частное размещение долей фонда (non-public) без лицензии MAS, в рамках допустимых исключений для непубличных фондов в Сингапуре. Доступ к участию открыт широкому кругу инвесторов (не требуется квалификация) при выполнении условий KYC/AML.</p>
+            
+            <h3>4. Условия участия и подписка</h3>
+            <h4>4.1 Минимальная инвестиция</h4>
+            <p>Минимальный порог участия — 25 000 USD (или эквивалент в согласованной валюте).</p>
+            
+            <h4>4.2 Валюта инвестирования</h4>
+            <p>Базовая валюта — USD. Допускается эквивалент в THB или других валют, с пересчётом по курсу фонда.</p>
+            
+            <h4>4.3 Период подписки и запуск раунда</h4>
+            <p>Подписка на текущий раунд начинается 1 декабря 2025 года. Максимальный период подписки — до 31 января 2026 года, либо до закрытия объёма (2 000 000 USD), в зависимости от чего наступит раньше.</p>
+            
+            <h3>5. Комиссии и расходы</h3>
+            <table class="w-full border-collapse border border-gray-300">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 px-4 py-2">Вид комиссии / расхода</th>
+                  <th class="border border-gray-300 px-4 py-2">Размер / условие</th>
+                  <th class="border border-gray-300 px-4 py-2">Примечание</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Управляющая комиссия</td>
+                  <td class="border border-gray-300 px-4 py-2">до 2% годовых</td>
+                  <td class="border border-gray-300 px-4 py-2">За управление активами</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Комиссия за успех (пул роста)</td>
+                  <td class="border border-gray-300 px-4 py-2">до 20% прибыли</td>
+                  <td class="border border-gray-300 px-4 py-2">Применяется только к прибыли ростового пула</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Комиссия за вход</td>
+                  <td class="border border-gray-300 px-4 py-2">0%</td>
+                  <td class="border border-gray-300 px-4 py-2">Нет комиссии за старт участия</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Комиссия за выход</td>
+                  <td class="border border-gray-300 px-4 py-2">до 3% (в пределах политики)</td>
+                  <td class="border border-gray-300 px-4 py-2">Применяется к выкупу раньше срока</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <h3>6. Управление рисками</h3>
+            <p>Фонд идентифицирует и контролирует следующие категории рисков:</p>
+            <ul>
+              <li><strong>Рыночные риски:</strong> сезонность туризма, изменение спроса, ценовые колебания, конкуренция.</li>
+              <li><strong>Девелоперские риски:</strong> срывы сроков строительства, недостаточное качество работ, задержки разрешений, бюджетные перерасходы.</li>
+              <li><strong>Валютные риски:</strong> колебания курса THB / USD могут влиять на операционные доходы после конверсии.</li>
+              <li><strong>Правовые и регуляторные риски:</strong> изменения законодательства Таиланда и Сингапура, препятствия при получении разрешений, налоговая нагрузка.</li>
+            </ul>
+            
+            <h3>7. Контакты</h3>
+            <p><strong>WEST EAST TRADE GROUP PTE. LTD.</strong></p>
+            <p>Адрес: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</p>
+            <p>Email: post@wegc.fund</p>
+            <p>Вебсайт: https://wegc.fund</p>
+            
+            <hr class="my-8 border-gray-300">
+            
+            <h2 class="text-2xl font-bold mt-8 mb-6">Приложения</h2>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">1. Таблица ключевых условий участия</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse border border-gray-400 mb-6">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-400 px-4 py-3 text-left font-semibold">Параметр</th>
+                    <th class="border border-gray-400 px-4 py-3 text-left font-semibold">Условие / Значение</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Юридическая структура</td>
+                    <td class="border border-gray-400 px-4 py-3">Частный инвестиционный фонд под управлением WEST EAST TRADE GROUP PTE. LTD. (Сингапур)</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Тип предложения</td>
+                    <td class="border border-gray-400 px-4 py-3">Частное размещение (non-public offer)</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Минимальная сумма участия</td>
+                    <td class="border border-gray-400 px-4 py-3">25 000 USD</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Базовая валюта фонда</td>
+                    <td class="border border-gray-400 px-4 py-3">USD</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Старт подписки</td>
+                    <td class="border border-gray-400 px-4 py-3">1 декабря 2025 г.</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Закрытие подписки</td>
+                    <td class="border border-gray-400 px-4 py-3">31 января 2026 г. или достижение лимита — 2 000 000 USD</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Типы пулов</td>
+                    <td class="border border-gray-400 px-4 py-3">Купонный (доход 6,5% годовых) / Ростовой (до 30% за 3 года)</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Lock-up период</td>
+                    <td class="border border-gray-400 px-4 py-3">12 месяцев</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за успех (Growth Pool)</td>
+                    <td class="border border-gray-400 px-4 py-3">До 20% от прибыли</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за управление</td>
+                    <td class="border border-gray-400 px-4 py-3">До 2% годовых</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за вход</td>
+                    <td class="border border-gray-400 px-4 py-3">0%</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Комиссия за выход</td>
+                    <td class="border border-gray-400 px-4 py-3">До 3% (при досрочном выкупе)</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Аудит</td>
+                    <td class="border border-gray-400 px-4 py-3">Независимый ежегодный аудит</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Юрисдикция</td>
+                    <td class="border border-gray-400 px-4 py-3">Сингапур</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-400 px-4 py-3 font-medium">Контакты</td>
+                    <td class="border border-gray-400 px-4 py-3">post@wegc.fund</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">2. Примеры финансовой модели и графиков</h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-blue-900 mb-3">Доходный пул (Income Pool)</h4>
+                <ul class="text-sm text-blue-800 space-y-2">
+                  <li>• <strong>Средний ROI:</strong> 6,5% годовых после расходов</li>
+                  <li>• <strong>Выплаты:</strong> поквартально</li>
+                  <li>• <strong>Источник дохода:</strong> аренда и управление гостиничным фондом</li>
+                  <li>• <strong>Целевая маржа:</strong> ~ 4% чистыми после всех операционных издержек</li>
+                </ul>
+              </div>
+              <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-green-900 mb-3">Пул роста (Growth Pool)</h4>
+                <ul class="text-sm text-green-800 space-y-2">
+                  <li>• <strong>Срок инвестирования:</strong> до 36 месяцев</li>
+                  <li>• <strong>Средняя доходность:</strong> ~ 30% за период</li>
+                  <li>• <strong>Стратегия:</strong> инвестиции на стадиях котлована, перепродажа или капитализация при вводе объекта в эксплуатацию</li>
+                  <li>• <strong>Потоки и динамика:</strong> капитал → финансирование девелопера → рост стоимости → реализация → распределение</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">3. Договор подписки (Subscription Agreement)</h3>
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+              <h4 class="font-semibold text-yellow-900 mb-3">Краткое содержание:</h4>
+              <ul class="text-sm text-yellow-800 space-y-2">
+                <li>• <strong>Предмет:</strong> участие инвестора в фонде WEGC</li>
+                <li>• <strong>Правовой статус:</strong> соглашение между инвестором и WEST EAST TRADE GROUP PTE. LTD.</li>
+                <li>• <strong>Основные положения:</strong>
+                  <ul class="ml-4 mt-2 space-y-1">
+                    <li>— фиксируется сумма инвестирования</li>
+                    <li>— определяется пул (доходный/ростовой)</li>
+                    <li>— устанавливаются права на долю прибыли</li>
+                    <li>— инвестор подтверждает понимание рисков и отказ от претензий при рыночных колебаниях</li>
+                    <li>— фонд обязуется использовать средства строго по целевому назначению</li>
+                    <li>— арбитраж — в Сингапуре</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">4. Анкета инвестора / KYC-форма</h3>
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 1. Персональные данные</h4>
+                <p class="text-sm text-purple-800">ФИО, дата рождения, страна проживания, гражданство, контактная информация.</p>
+              </div>
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 2. Финансовый профиль</h4>
+                <p class="text-sm text-purple-800">Источник доходов, общий объём активов, опыт инвестирования, налоговое резидентство.</p>
+              </div>
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 3. Проверка KYC/AML</h4>
+                <p class="text-sm text-purple-800">Скан паспорта, подтверждение адреса, проверка по санкционным и PEP-спискам.</p>
+              </div>
+              <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">Раздел 4. Подпись и согласие</h4>
+                <p class="text-sm text-purple-800">Подтверждение достоверности данных, согласие на хранение и использование персональной информации.</p>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4">5. Глоссарий терминов</h3>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                  <div>
+                    <strong class="text-gray-900">GIDR (Global Intelligent Development Rating)</strong>
+                    <p class="text-sm text-gray-700">ИИ-модель, анализирующая тысячи параметров девелоперских проектов (доходность, локация, риски, спрос, инфраструктура) и присваивающая им сводный рейтинг.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Lock-up</strong>
+                    <p class="text-sm text-gray-700">Период, в течение которого нельзя вывести капитал из фонда.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Redemption Gate</strong>
+                    <p class="text-sm text-gray-700">Механизм ограничения объёма одновременных заявок на выкуп долей.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Income Pool</strong>
+                    <p class="text-sm text-gray-700">Портфель готовых арендных объектов, создающий регулярный денежный поток.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Growth Pool</strong>
+                    <p class="text-sm text-gray-700">Портфель девелоперских проектов на ранних стадиях, ориентированный на рост капитала.</p>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div>
+                    <strong class="text-gray-900">NAV (Net Asset Value)</strong>
+                    <p class="text-sm text-gray-700">Чистая стоимость активов фонда, рассчитываемая на одну долю.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">KYC/AML</strong>
+                    <p class="text-sm text-gray-700">Процедуры проверки личности и источников средств (Know Your Customer / Anti-Money Laundering).</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Escrow-счёт</strong>
+                    <p class="text-sm text-gray-700">Специальный банковский счёт для временного хранения средств инвестора до подтверждения условий.</p>
+                  </div>
+                  <div>
+                    <strong class="text-gray-900">Arbitration Clause</strong>
+                    <p class="text-sm text-gray-700">Положение о разрешении споров через арбитраж.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно формы заявки -->
+  <div id="applicationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+          <h3 class="text-xl font-bold">Заявка на участие в фонде</h3>
+          <button onclick="closeApplicationForm()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        </div>
+        <div class="p-6">
+          <form id="fundApplicationForm" action="https://formspree.io/f/xpwpqgqr" method="POST">
+            <div class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">ФИО *</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Телефон *</label>
+                <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+              </div>
+              
+              <div>
+                <label for="amount" class="block text-sm font-medium text-gray-700 mb-1">Сумма инвестирования *</label>
+                <select id="amount" name="amount" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+                  <option value="">Выберите сумму</option>
+                  <option value="25000-50000">$25,000 - $50,000</option>
+                  <option value="50000-100000">$50,000 - $100,000</option>
+                  <option value="100000+">$100,000+</option>
                 </select>
-              </label>
-              <label class="block">
-                <span class="text-sm text-gray-700">Комментарий (необязательно)</span>
-                <textarea name="message" rows="3" class="mt-1 w-full rounded-md border-gray-300 focus:border-gray-900 focus:ring-gray-900" placeholder="Коротко о ваших ожиданиях"></textarea>
-              </label>
+              </div>
+              
+              <div>
+                <label for="strategy" class="block text-sm font-medium text-gray-700 mb-1">Стратегия инвестирования *</label>
+                <select id="strategy" name="strategy" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+                  <option value="">Выберите стратегию</option>
+                  <option value="coupon">Купонный пул (6.5% годовых)</option>
+                  <option value="growth">Пул роста (~30% за 3 года)</option>
+                  <option value="both">Комбинированная стратегия</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Дополнительная информация</label>
+                <textarea id="message" name="message" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+              </div>
+              
+              <div class="flex items-start">
+                <input type="checkbox" id="agreement" name="agreement" required class="mt-1 mr-2">
+                <label for="agreement" class="text-sm text-gray-600">
+                  Я согласен с условиями обработки персональных данных и понимаю риски инвестирования *
+                </label>
+              </div>
+              
+              <div class="flex gap-3 pt-4">
+                <button type="submit" class="flex-1 bg-gray-900 text-white py-3 px-6 rounded-md font-semibold hover:bg-gray-800 transition">
+                  Отправить заявку
+                </button>
+                <button type="button" onclick="closeApplicationForm()" class="flex-1 border border-gray-300 text-gray-700 py-3 px-6 rounded-md font-semibold hover:bg-gray-50 transition">
+                  Отмена
+                </button>
+              </div>
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <label class="inline-flex items-center gap-2 text-xs text-gray-600">
-                <input type="checkbox" name="consent" required class="rounded border-gray-300 text-gray-900 focus:ring-gray-900">
-                Я согласен(на) на обработку персональных данных и получение материалов фонда
-              </label>
-            </div>
-            <button type="submit" class="mt-4 inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-4 py-2.5 text-white hover:bg-black focus:outline-none">
-              Выслать PDF
-            </button>
-            <p class="mt-3 text-xs text-gray-500">Форма защищена. Мы не передаём данные третьим лицам.</p>
           </form>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===================== 2) ИНФОГРАФИКА «3 ПРОГРАММЫ — 3 РЕЗУЛЬТАТА» ===================== -->
-  <section class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-semibold text-gray-900">Три программы — три результата</h2>
-    <p class="mt-2 text-gray-700">Выберите профиль риска и доходности. Все расчёты в USD, горизонты 24–36 мес., активы — курортная недвижимость Пхукета.</p>
-    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 class="text-lg font-semibold text-gray-900">Купонный доход</h3>
-        <p class="mt-1 text-sm text-gray-600">Фиксированный купон, краткий горизонт.</p>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700">
-          <li>• <span class="font-medium">6.5 %</span> годовых, выплата ежегодно</li>
-          <li>• Возврат капитала через <span class="font-medium">24 мес.</span></li>
-          <li>• Подходит инвесторам, кто предпочитает стабильный поток</li>
-        </ul>
-      </article>
-      <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 class="text-lg font-semibold text-gray-900">Капитал-рост</h3>
-        <p class="mt-1 text-sm text-gray-600">Без купона, максимальный упор на апсайд.</p>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700">
-          <li>• Цель: <span class="font-medium">+25 %</span> к капиталу за <span class="font-medium">3 года</span></li>
-          <li>• Доход при выходе: доля от прибыли проекта</li>
-          <li>• Подходит тем, кто допускает волатильность ради роста</li>
-        </ul>
-      </article>
-      <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 class="text-lg font-semibold text-gray-900">Гибрид 2025–2029</h3>
-        <p class="mt-1 text-sm text-gray-600">Доход от аренды + рост капитала, сбалансированный профиль.</p>
-        <ul class="mt-3 space-y-1 text-sm text-gray-700">
-          <li>• Аренда <span class="font-medium">6–9 % p.a.</span> (выплаты)</li>
-          <li>• Итоговая доходность <span class="font-medium">~11–14 % IRR</span></li>
-          <li>• Опцион продления до 7 лет</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===================== 3) ПРИМЕР РАСЧЁТА + ЧУВСТВИТЕЛЬНОСТЬ ===================== -->
-  <section class="mx-auto max-w-6xl px-4 py-8">
-    <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h2 class="text-xl font-semibold text-gray-900">Как считать результат (пример)</h2>
-      <p class="mt-2 text-gray-700">
-        Инвестор вкладывает <span class="font-semibold">$25 000</span> в купонную программу. Купон 6.5 %/год, горизонт 24 мес.
-        Предположим, купон выплачивается ежегодно, а капитал возвращается в конце срока.
-      </p>
-      <div class="mt-4 grid gap-4 md:grid-cols-2">
-        <div class="space-y-1 text-sm text-gray-800">
-          <p>• Год 1: $25 000 × 6.5 % = <span class="font-medium">$1 625</span> (выплата)</p>
-          <p>• Год 2: $25 000 × 6.5 % = <span class="font-medium">$1 625</span> (выплата)</p>
-          <p>• Конец срока: возврат капитала <span class="font-medium">$25 000</span></p>
-        </div>
-        <div class="rounded-xl bg-gray-50 p-4 text-sm text-gray-700">
-          <p class="font-medium">Сценарий чувствительности (иллюстрация):</p>
-          <p class="mt-1">
-            Если операционные расходы на аренду вырастут и чистая доходность снизится на 1 п.п.,
-            реальная выплата купона может быть ограничена до <span class="font-medium">~5.5 %</span>,
-            а разница переносится на выход/продление. Всегда смотрите на допущения конкретного проекта.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 4) ЗАЩИТА ИНВЕСТОРА ===================== -->
-  <section class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-semibold text-gray-900">Защита инвестора и контроль</h2>
-    <div class="mt-4 grid gap-4 md:grid-cols-2">
-      <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 class="text-lg font-semibold">Юрисдикция и структура</h3>
-        <ul class="mt-2 space-y-1 text-sm text-gray-700">
-          <li>• Сингапур: WEST EAST TRADE GROUP PTE. LTD. (UEN 202505772C)</li>
-          <li>• Exempt Private Company Limited by Shares (частное размещение)</li>
-          <li>• SPV-подход: по проектам могут создаваться суб-SPV</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 class="text-lg font-semibold">Процессы и отчётность</h3>
-        <ul class="mt-2 space-y-1 text-sm text-gray-700">
-          <li>• Договоры с застройщиками, этапные оплаты</li>
-          <li>• Годовая отчётность и независимый аудит (раскрывается инвесторам)</li>
-          <li>• Регулярные апдейты по аренде, строительству, выходам</li>
-        </ul>
-      </div>
-    </div>
-    <p class="mt-4 text-xs text-gray-500">
-      Внимание: размещение не является публичным предложением. Прогнозы и иллюстрации не гарантируют фактических результатов.
-      Инвестору следует получить независимую юридическую и налоговую консультацию.
-    </p>
-  </section>
-
-  <!-- ===================== 5) MINI-FAQ ===================== -->
-  <section class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-semibold text-gray-900">Частые вопросы</h2>
-    <div class="mt-4 grid gap-4 md:grid-cols-2">
-      <details class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm" open>
-        <summary class="cursor-pointer text-sm font-medium text-gray-900">Где хранятся средства до сделки?</summary>
-        <p class="mt-2 text-sm text-gray-700">
-          Средства зачисляются на корпоративные счета в Сингапуре и расходуются согласно графикам по подписанным договорам с застройщиками.
-          Возможен эскроу/этапная схема по проекту.
-        </p>
-      </details>
-      <details class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-        <summary class="cursor-pointer text-sm font-medium text-gray-900">Кто владеет активом?</summary>
-        <p class="mt-2 text-sm text-gray-700">
-          Объекты приобретаются на баланс SPV/фонда для дальнейшего управления и выхода (перепродажа/выкуп/арендная доходность).
-          Точная структура указывается в документах по проекту.
-        </p>
-      </details>
-      <details class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-        <summary class="cursor-pointer text-sm font-medium text-gray-900">Как я получаю выплаты?</summary>
-        <p class="mt-2 text-sm text-gray-700">
-          Купон/арендные выплаты перечисляются инвестору в USD на указанные реквизиты. Периодичность и график — согласно выбранной программе.
-        </p>
-      </details>
-      <details class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-        <summary class="cursor-pointer text-sm font-medium text-gray-900">Можно выйти раньше срока?</summary>
-        <p class="mt-2 text-sm text-gray-700">
-          Доступен ранний выход по стандартной процедуре (может действовать комиссия до 3 %). Условия фиксируются в инвестиционных документах.
-        </p>
-      </details>
-      <details class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-        <summary class="cursor-pointer text-sm font-medium text-gray-900">Будет ли аудит?</summary>
-        <p class="mt-2 text-sm text-gray-700">
-          Да. Годовая отчётность компании и/или SPV проходит независимую проверку. Материалы доступны инвесторам.
-        </p>
-      </details>
-    </div>
-  </section>
-
-  <!-- ===================== 6) КОМПЛАЕНС-ФУТЕР ===================== -->
-  <footer class="border-t border-gray-200 bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-10">
-      <div class="grid gap-6 md:grid-cols-3">
-        <div>
-          <p class="text-sm font-semibold text-gray-900">WEST EAST TRADE GROUP PTE. LTD.</p>
-          <p class="mt-1 text-sm text-gray-700">UEN 202505772C · Exempt Private Company Limited by Shares</p>
-          <p class="mt-1 text-sm text-gray-700">Registered Office: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</p>
-          <p class="mt-1 text-sm text-gray-700">Email: <a href="mailto:post@wegc.fund" class="underline">post@wegc.fund</a></p>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-gray-900">Юридические</p>
-          <ul class="mt-1 space-y-1 text-sm text-gray-700">
-            <li><a href="/privacy.html" class="underline">Политика конфиденциальности</a></li>
-            <li><a href="/terms.html" class="underline">Условия использования</a></li>
-            <li><a href="/cookies.html" class="underline">Cookies</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-gray-900">Отказ от ответственности</p>
-          <p class="mt-1 text-xs text-gray-600">
-            Материалы на сайте предназначены для ограниченного круга инвесторов и не являются публичной офертой.
-            Прогнозы не гарантируют будущих результатов. Инвесторы самостоятельно оценивают риски и получают независимую консультацию.
-          </p>
-        </div>
-      </div>
-      <div class="mt-8 text-xs text-gray-500">© <span id="year"></span> West East Gate Capital. All rights reserved.</div>
-    </div>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-  <!-- ===================== 7) STRUCTURED DATA (JSON-LD) ===================== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "West East Gate Capital",
-    "legalName": "WEST EAST TRADE GROUP PTE. LTD.",
-    "url": "https://wegc.fund",
-    "logo": "https://wegc.fund/assets/logo.png",
-    "email": "post@wegc.fund",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "7 Temasek Boulevard, #12-07, Suntec Tower One",
-      "addressLocality": "Singapore",
-      "postalCode": "038987",
-      "addressCountry": "SG"
-    },
-    "sameAs": []
-  }
+  <script>
+    function openMemorandum() {
+      document.getElementById('memorandumModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMemorandum() {
+      document.getElementById('memorandumModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    
+    function openApplicationForm() {
+      document.getElementById('applicationModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeApplicationForm() {
+      document.getElementById('applicationModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Закрытие модальных окон по клику вне их области
+    document.getElementById('memorandumModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeMemorandum();
+      }
+    });
+    
+    document.getElementById('applicationModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeApplicationForm();
+      }
+    });
+    
+    // Обработка формы
+    document.getElementById('fundApplicationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Показываем сообщение об успешной отправке
+      alert('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+      closeApplicationForm();
+    });
   </script>
-
 </body>
 </html>
