@@ -275,6 +275,108 @@
       </div>
     </section>
     <!-- === END: Brand Pillars (white cards) === -->
+
+    <!-- === BEGIN: Calculation Example + Sensitivity — injection v1 === -->
+    <section class="bg-white py-10">
+      <div class="container-max mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Пример расчёта (инвестиция $25,000)</h2>
+        <p class="text-gray-600 mb-6">Компактно показываем логику кэшфлоу и ориентиры по IRR/MOIC для трёх стратегий. Иллюстративно, не гарантия.</p>
+
+        <!-- Cards: three strategies -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Coupon -->
+          <article class="border rounded-xl p-6 bg-white shadow-sm">
+            <h3 class="text-gray-900 text-xl font-bold">Купонный доход</h3>
+            <p class="text-gray-600 text-sm mt-1">6.5% p.a., возврат капитала через 24 мес.</p>
+            <ul class="mt-4 text-sm text-gray-800 space-y-1">
+              <li>Год 0: −$25,000 (взнос)</li>
+              <li>Год 1: +$1,625 (купон 6.5%)</li>
+              <li>Год 2: +$1,625 купон + $25,000 возврат</li>
+            </ul>
+            <div class="mt-4 text-sm text-gray-700">
+              <div>IRR: <span class="font-semibold">~6.5% p.a.</span></div>
+              <div>MOIC (за 2 года): <span class="font-semibold">~1.13×</span></div>
+            </div>
+          </article>
+
+          <!-- Growth -->
+          <article class="border rounded-xl p-6 bg-white shadow-sm">
+            <h3 class="text-gray-900 text-xl font-bold">Капитал-рост</h3>
+            <p class="text-gray-600 text-sm mt-1">Цель: +25% к капиталу за 3 года (без купона)</p>
+            <ul class="mt-4 text-sm text-gray-800 space-y-1">
+              <li>Год 0: −$25,000</li>
+              <li>Годы 1–2: $0 (нет купона)</li>
+              <li>Год 3: +$31,250 (выход)</li>
+            </ul>
+            <div class="mt-4 text-sm text-gray-700">
+              <div>IRR: <span class="font-semibold">~7.7% p.a.</span></div>
+              <div>MOIC (за 3 года): <span class="font-semibold">1.25×</span></div>
+            </div>
+          </article>
+
+          <!-- Hybrid -->
+          <article class="border rounded-xl p-6 bg-white shadow-sm">
+            <h3 class="text-gray-900 text-xl font-bold">Гибрид 2025–2029</h3>
+            <p class="text-gray-600 text-sm mt-1">Аренда 6–9% p.a. + рост капитала; горизонт 3–5 лет</p>
+            <ul class="mt-4 text-sm text-gray-800 space-y-1">
+              <li>Пример (mid-case, 4 года): аренда ~8% p.a.</li>
+              <li>Годы 1–3: +$2,000 / год (от аренды)</li>
+              <li>Год 4: +$2,000 аренда + выход с апсайдом</li>
+            </ul>
+            <div class="mt-4 text-sm text-gray-700">
+              <div>IRR (mid-case): <span class="font-semibold">~11–12% p.a.</span></div>
+              <div>MOIC (4 года, ориентир): <span class="font-semibold">~1.45×</span></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sensitivity: Hybrid -->
+        <div class="mt-10">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Чувствительность (гибрид): IRR при разных параметрах</h3>
+          <p class="text-gray-600 text-sm mb-3">
+            Инвестиция $25,000, горизонт 4 года. Ячейка = ориентир IRR при сочетании годовой аренды и апсайда на выходе.
+          </p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-sm">
+              <thead>
+                <tr class="bg-gray-50">
+                  <th class="border px-3 py-2 text-left text-gray-700">Аренда \ Апсайд</th>
+                  <th class="border px-3 py-2 text-gray-700">+15%</th>
+                  <th class="border px-3 py-2 text-gray-700">+18%</th>
+                  <th class="border px-3 py-2 text-gray-700">+20%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border px-3 py-2 text-gray-700">7% p.a.</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~10.2%</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~10.8%</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~11.2%</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border px-3 py-2 text-gray-700">8% p.a.</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~11.2%</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~11.8%</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~12.2%</td>
+                </tr>
+                <tr>
+                  <td class="border px-3 py-2 text-gray-700">9% p.a.</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~12.1%</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~12.7%</td>
+                  <td class="border px-3 py-2 text-gray-900 font-medium">~13.1%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-3 text-xs text-gray-500">
+            Примечание: значения округлены; фактический результат зависит от сроков, структуры, комиссий и рыночных условий. Диапазон по стратегии заявлен как ~11–14% IRR; верхняя граница достигается при более высоком апсайде/загрузке.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- === END: Calculation Example + Sensitivity === -->
     
     <div class="container-max mx-auto px-4 py-10">
       <div class="text-left mb-8">
