@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="head_title">WEGC Fund — Asian Real Estate Income & Growth</title>
-  <meta name="description" content="WEGC Fund: три стратегии — купон 8% годовых, рост ~30% за 3 года, гибрид 11–14% IRR (3–5 лет). Минимум от $25k. Юрисдикция Сингапур. Реальные курортные активы в Азии.">
+  <!-- WEGC: HEAD SEO RU (replace) -->
+  <title>WEGC Fund — Инвестиции в Пхукет от $25k: купон 6.5% • рост +25% за 3 года • гибрид 11–14% IRR</title>
+  <meta name="description" content="Фонд WEGC: фракционные инвестиции от $25 000 в курортную недвижимость Пхукета. Три стратегии: купон 6.5% годовых (24 мес), капитал-рост +25% за 3 года, гибрид 11–14% IRR (2025–2029). Юрисдикция — Сингапур.">
+
+  <!-- WEGC: Preload OG image & DNS hints (add) -->
+  <link rel="preload" as="image" href="https://wegc.fund/images/og/wegc-fund-1200x630.jpg">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <!-- END WEGC: Preload -->
 
   <!-- Tailwind CSS CDN (temporary fix) -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -21,31 +27,29 @@
     }
   </script>
 
-  <!-- Canonical / hreflang -->
-  <link rel="canonical" href="https://wegc.fund/fund.html">
-  <link rel="alternate" hreflang="en" href="https://wegc.fund/fund.html" />
-  <link rel="alternate" hreflang="ru" href="https://wegc.fund/fund.html?lang=ru" />
-  <link rel="alternate" hreflang="zh" href="https://wegc.fund/fund.html?lang=zh" />
-  <link rel="alternate" hreflang="ar" href="https://wegc.fund/fund.html?lang=ar" />
-  <link rel="alternate" hreflang="x-default" href="https://wegc.fund/fund.html" />
+  <!-- WEGC: Canonical & hreflang (replace for RU page) -->
+  <link rel="canonical" href="https://wegc.fund/fund.html?lang=ru">
+  <link rel="alternate" hreflang="x-default" href="https://wegc.fund/fund.html">
+  <link rel="alternate" hreflang="en" href="https://wegc.fund/fund.html?lang=en">
+  <link rel="alternate" hreflang="ru" href="https://wegc.fund/fund.html?lang=ru">
+  <link rel="alternate" hreflang="zh" href="https://wegc.fund/fund.html?lang=zh">
+  <link rel="alternate" hreflang="ar" href="https://wegc.fund/fund.html?lang=ar">
 
-  <!-- Open Graph / Telegram preview -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="West East Gate Capital">
-  <meta property="og:title" content="WEGC Fund — Fractional resort real estate investing from $25k">
-  <meta property="og:description" content="Три стратегии в одном фонде: Купонный пул 8% годовых, Ростовой пул ~30% за 3 года, Hybrid Income + Growth 11–14% IRR (горизонт 3–5 лет). Вход от $25k. Юрисдикция — Сингапур. Портфель — премиальные курортные проекты в Азии.">
-  <meta property="og:url" content="https://wegc.fund/fund.html">
-  <meta property="og:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
-  <meta property="og:image:secure_url" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
-  <meta property="og:image:width" content="1280">
-  <meta property="og:image:height" content="791">
+  <meta property="og:title" content="WEGC Fund — Инвестиции в Пхукет от $25k: 6.5% купон • +25% рост • 11–14% IRR">
+  <meta property="og:description" content="Три стратегии: Купонный доход 6.5% p.a. (24 мес), Капитал-рост +25% за 3 года, Гибрид 11–14% IRR. Реальные активы, данные GIDR, Сингапур.">
+  <meta property="og:url" content="https://wegc.fund/fund.html?lang=ru">
+  <meta property="og:image" content="https://wegc.fund/images/og/wegc-fund-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="ru_RU">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WEGC Fund — Fractional resort real estate investing from $25k">
-  <meta name="twitter:description" content="Купон 8% • Рост ~30%/3 года • Hybrid 11–14% IRR (3–5 лет). Вход от $25k. Сингапурское SPV. Премиальные курортные проекты в Азии.">
-  <meta name="twitter:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
+  <meta name="twitter:title" content="WEGC Fund — Инвестиции в Пхукет от $25k">
+  <meta name="twitter:description" content="Купон 6.5% • рост +25% за 3 года • гибрид 11–14% IRR. Фракционно от $25k. Сингапур.">
+  <meta name="twitter:image" content="https://wegc.fund/images/og/wegc-fund-1200x630.jpg">
 
   <!-- PWA / Icons -->
   <meta name="theme-color" content="#0b0b0b">
@@ -134,6 +138,23 @@
   }
   </script>
   <!-- END WEGC: Extended Structured Data -->
+
+  <!-- WEGC: WebSite JSON-LD (add) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"West East Gate Capital",
+    "url":"https://wegc.fund/",
+    "inLanguage":"ru",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://wegc.fund/search?q={query}",
+      "query-input":"required name=query"
+    }
+  }
+  </script>
+  <!-- END WEGC: WebSite JSON-LD -->
 </head>
 <body class="antialiased text-gray-800">
 
@@ -1046,18 +1067,18 @@
       const dict={
         en:{
           head_title:"WEGC Fund — Asian Real Estate Income & Growth",
-          head_desc:"Fractional investing from $5k in income-producing and development-stage real estate across Phuket and Asia.",
-          og_title:"WEGC Fund — Fractional real estate investing from $5k",
+          head_desc:"Fractional investing from $25k in income-producing and development-stage real estate across Phuket and Asia.",
+          og_title:"WEGC Fund — Fractional real estate investing from $25k",
           og_desc:"Two strategies: 6.5% coupon pool and growth pool (~30% over 3 years).",
           nav_buy:"Apply to fund",
-          hero_title:"Invest in real concrete from $5k: income & growth without buying an apartment",
+          hero_title:"Invest in real concrete from $25k: income & growth without buying an apartment",
           hero_sub:"Two tracks: 6.5% coupon income and growth (~30% in 3 years). Curated by GIDR and linked to our Phuket brokerage.",
           cta_explore:"Explore products",
           cta_memorandum:"Download Memorandum",
           hero_notice:"* Figures are illustrative only and not guarantees.",
           video_placeholder:"Video presentation placeholder",
           usp1_tag:"FRACTIONAL",
-          usp1_title:"Entry from $5k",
+          usp1_title:"Entry from $25k",
           usp1_txt:"No need to buy a $1M villa: pooled capital into tangible assets.",
           usp2_tag:"INCOME + GROWTH",
           usp2_title:"Two pools",
@@ -1098,7 +1119,7 @@
           pdf_dev:"Development (PDF)",
           pdf_fx:"FX & Returns (PDF)",
           how_h2:"How the fund works",
-          how_li1:"Pooling from $5k → investing into asset pools.",
+          how_li1:"Pooling from $25k → investing into asset pools.",
           how_li2:"Coupon pool — rental cashflows, quarterly payouts.",
           how_li3:"Growth pool — construction discount, exit in 3–4y.",
           how_li4:"Selection via GIDR models.",
@@ -1113,7 +1134,7 @@
           q1:"How is this different from buying a condo?",
           a1:"Lower ticket, diversification, less operating hassle.",
           q2:"Minimum amount and currency?",
-          a2:"From $5,000 (or equivalent). See memoranda.",
+          a2:"From $25,000 (or equivalent). See memoranda.",
           q3:"When does this round start?",
           a3:"Subscription window is set for January 2031.",
           cta_h2:"Apply to participate",
@@ -1122,8 +1143,8 @@
         },
         ru:{
           head_title:"WEGC Fund — Фонд недвижимости Азии: доход и рост",
-          head_desc:"Фракционное инвестирование от $5k в доходные и строящиеся объекты Пхукета и региона.",
-          og_title:"WEGC Fund — фракционное инвестирование от $5k",
+          head_desc:"Фракционное инвестирование от $25k в доходные и строящиеся объекты Пхукета и региона.",
+          og_title:"WEGC Fund — фракционное инвестирование от $25k",
           og_desc:"Два продукта: купон 6.5% и рост ~30% за 3 года.",
           nav_buy:"Подать заявку на участие",
           hero_title:"Наш отбор — это GIDR, собственная AI-модель, натренированная на десятках тысяч параметров Пхукета",
@@ -1177,7 +1198,7 @@
           pdf_dev:"Девелопмент (PDF)",
           pdf_fx:"Валюты и доходность (PDF)",
           how_h2:"Как работает фонд",
-          how_li1:"Агрегация от $5k → инвестиции в пул.",
+          how_li1:"Агрегация от $25k → инвестиции в пул.",
           how_li2:"Купонный пул — арендные потоки.",
           how_li3:"Ростовой — дисконт строительства, выход 3–4 года.",
           how_li4:"Отбор по моделям GIDR.",
@@ -1192,7 +1213,7 @@
           q1:"Чем отличается от покупки квартиры?",
           a1:"Ниже чек, диверсификация, меньше рутины.",
           q2:"Минимальная сумма и валюта?",
-          a2:"От $5,000 (или экв.). Подробности — в меморандумах.",
+          a2:"От $25,000 (или экв.). Подробности — в меморандумах.",
           // GIDR блок
           gidr_h2:"GIDR: наша AI-модель знает Пхукет до метра — и это меняет правила",
           gidr_subtitle:"Десятки тысяч показателей. Локальная реальность, а не общие слова.",
@@ -1269,18 +1290,18 @@
         },
         zh:{
           head_title:"WEGC 基金 — 亚洲房地产收益与增长",
-          head_desc:"从 $5k 起的碎片化投资：度假租赁现金流与在建项目增长。",
-          og_title:"WEGC Fund — 从 $5k 起碎片化投资",
+          head_desc:"从 $25k 起的碎片化投资：度假租赁现金流与在建项目增长。",
+          og_title:"WEGC Fund — 从 $25k 起碎片化投资",
           og_desc:"两种策略：6.5% 票息池与三年 ~30% 增长池。",
           nav_buy:"申请基金",
-          hero_title:"从 $5k 起投资真实资产：无需买房也可获取收益与增长",
+          hero_title:"从 $25k 起投资真实资产：无需买房也可获取收益与增长",
           hero_sub:"两条路径：6.5% 票息与三年 ~30% 增长。由 GIDR 数据甄选。",
           cta_explore:"查看产品",
           cta_memorandum:"下载备忘录",
           hero_notice:"* 数据仅为示例，并非保证。",
           video_placeholder:"基金视频占位",
           usp1_tag:"碎片化",
-          usp1_title:"$5k 起",
+          usp1_title:"$25k 起",
           usp1_txt:"无需购买百万别墅：共同出资投向实物项目。",
           usp2_tag:"收益+增长",
           usp2_title:"两只池子",
@@ -1321,7 +1342,7 @@
           pdf_dev:"开发项目 (PDF)",
           pdf_fx:"外汇与回报 (PDF)",
           how_h2:"基金运作",
-          how_li1:"$5k 起募资→配置资产池。",
+          how_li1:"$25k 起募资→配置资产池。",
           how_li2:"票息池：租金现金流，季度派息。",
           how_li3:"增长池：建造折扣，3–4 年退出。",
           how_li4:"GIDR 模型筛选。",
@@ -1336,7 +1357,7 @@
           q1:"与直接买房有何不同？",
           a1:"门槛更低，更分散，无需运营。",
           q2:"最低金额与币种？",
-          a2:"$5,000 起。详见备忘录。",
+          a2:"$25,000 起。详见备忘录。",
           q3:"本轮何时开始？",
           a3:"认购窗口：2031年1月。",
           cta_h2:"申请参与",
