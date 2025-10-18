@@ -167,8 +167,8 @@
       </div>
       <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
         <a href="/" class="block py-2 md:py-0 hover:text-gray-300">WE Real Estate</a>
-        <a href="#contact" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" data-i18n="nav_buy" data-track="nav_apply" data-track-lbl="nav">Apply to fund</a>
-        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" data-track="nav_whatsapp" data-track-lbl="nav">WhatsApp</a>
+        <a href="#contact" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" data-i18n="nav_buy" data-track="nav_apply" data-track-lbl="nav" data-utm="apply-nav">Apply to fund</a>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition" data-track="nav_whatsapp" data-track-lbl="nav" data-utm="wa">WhatsApp</a>
 
         <!-- Language -->
         <div class="lang-wrap relative">
@@ -472,7 +472,7 @@
               <li>• Независимый ежегодный аудит (<span class="italic">firm: TBD</span>)</li>
               <li>• Комплект документов: Memorandum, Subscription Agreement, KYC Pack</li>
               <li>• Прозрачные комиссии и правила выкупа/выхода — в меморандуме</li>
-              <li>• Поддержка на WhatsApp и email: <a class="text-blue-600 underline" href="mailto:post@wegc.fund">post@wegc.fund</a></li>
+              <li>• Поддержка на WhatsApp и email: <a class="text-blue-600 underline" href="mailto:post@wegc.fund" data-utm="mail">post@wegc.fund</a></li>
             </ul>
           </article>
         </div>
@@ -993,8 +993,8 @@
         </p>
       </div>
       <div class="flex flex-wrap gap-4 justify-center">
-        <button onclick="openApplicationForm()" class="px-8 py-4 rounded-lg bg-white text-gray-900 font-bold text-lg hover:bg-gray-100 transition shadow-lg" data-i18n="cta_email" data-track="apply_open" data-track-lbl="contact">Подать заявку на участие</button>
-        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-lg border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition" data-i18n="cta_whatsapp" data-track="wa_click" data-track-lbl="contact">WhatsApp</a>
+        <button onclick="openApplicationForm()" class="px-8 py-4 rounded-lg bg-white text-gray-900 font-bold text-lg hover:bg-gray-100 transition shadow-lg" data-i18n="cta_email" data-track="apply_open" data-track-lbl="contact" data-utm="apply-cta">Подать заявку на участие</button>
+        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-lg border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition" data-i18n="cta_whatsapp" data-track="wa_click" data-track-lbl="contact" data-utm="wa">WhatsApp</a>
         <button onclick="openMemorandum()" class="px-8 py-4 rounded-lg border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition" data-i18n="cta_download" data-track="memo_open" data-track-lbl="contact">Скачать меморандум</button>
       </div>
     </div>
@@ -1011,7 +1011,7 @@
             <div>Registered Office: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore <span id="postal">038987</span></div>
           </div>
           <div>
-            <div class="mb-2">Primary email: <a class="text-blue-300" href="mailto:post@wegc.fund">post@wegc.fund</a></div>
+            <div class="mb-2">Primary email: <a class="text-blue-300" href="mailto:post@wegc.fund" data-utm="mail">post@wegc.fund</a></div>
             <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition border border-gray-600">
               <span>💬</span>
               <span>WhatsApp</span>
@@ -1033,7 +1033,7 @@
     <div class="bg-black text-gray-400 border-t border-gray-800 text-[11px] py-4 px-4 text-center leading-relaxed">
       WEST EAST TRADE GROUP PTE. LTD. (Сингапур) • UEN 202505772C • Registered Office:
       7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987 • Email:
-      <a href="mailto:post@wegc.fund" class="underline text-gray-300 hover:text-white">post@wegc.fund</a><br>
+      <a href="mailto:post@wegc.fund" class="underline text-gray-300 hover:text-white" data-utm="mail">post@wegc.fund</a><br>
       Disclosure: The Fund operates under a private placement model for non-public investors and is not licensed by the Monetary Authority of Singapore (MAS). Participation is by invitation and subject to KYC/AML approval.
     </div>
     <!-- END WEGC: Compliance line -->
@@ -1775,7 +1775,7 @@
           <button onclick="closeApplicationForm()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
         </div>
         <div class="p-6">
-          <form id="fundApplicationForm" action="https://formspree.io/f/xpwpqgqr" method="POST" data-track="apply_submit">
+          <form id="fundApplicationForm" action="https://formspree.io/f/xpwpqgqr" method="POST" data-track="apply_submit" data-utm="form">
             <div class="space-y-4">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">ФИО *</label>
@@ -1922,5 +1922,109 @@
   })();
   </script>
   <!-- END WEGC: micro-analytics v1 -->
+
+  <!-- WEGC: UTM propagate v1 -->
+  <script>
+  (function(){
+    var UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','ref','gclid','fbclid'];
+
+    function parseQuery(qs){
+      var p={}; try{
+        (qs||'').replace(/^\?/,'').split('&').forEach(function(kv){
+          if(!kv) return; var s=kv.split('='); p[decodeURIComponent(s[0])] = decodeURIComponent((s[1]||'').replace(/\+/g,' '));
+        });
+      }catch(_){};
+      return p;
+    }
+
+    function readUtm(){
+      var q=parseQuery(location.search), out={};
+      var hasAny=false;
+      UTM_KEYS.forEach(function(k){
+        if(q[k]){ out[k]=q[k]; hasAny=true; sessionStorage.setItem('wegc:'+k,q[k]); }
+        else{
+          var sv=sessionStorage.getItem('wegc:'+k);
+          if(sv){ out[k]=sv; hasAny=true; }
+        }
+      });
+      return hasAny ? out : null;
+    }
+
+    function buildQuery(obj){
+      var arr=[]; for(var k in obj){ if(obj[k]) arr.push(encodeURIComponent(k)+'='+encodeURIComponent(obj[k])); }
+      return arr.length ? ('?'+arr.join('&')) : '';
+    }
+
+    function ensureFormHiddenInputs(form, utm){
+      if(!utm) return;
+      UTM_KEYS.forEach(function(k){
+        if(!utm[k]) return;
+        var name='x_'+k; // не конфликтуем с системными полями Formspree
+        var el=form.querySelector('input[name="'+name+'"]');
+        if(!el){
+          el=document.createElement('input');
+          el.type='hidden'; el.name=name; form.appendChild(el);
+        }
+        el.value=utm[k];
+      });
+      // Сохраним посадочную страницу
+      var lp=form.querySelector('input[name="x_landing"]');
+      if(!lp){ lp=document.createElement('input'); lp.type='hidden'; lp.name='x_landing'; form.appendChild(lp); }
+      lp.value=location.href;
+    }
+
+    function decorateMailto(a, utm){
+      if(!utm) return;
+      try{
+        var u=new URL(a.href);
+        if(u.protocol!=='mailto:') return;
+        var subj=u.searchParams.get('subject')||'WEGC Fund — запрос инвестора';
+        var body=u.searchParams.get('body')||'';
+        var tag = buildQuery(utm).replace(/^\?/,'');
+        var link = location.origin + location.pathname + buildQuery(utm);
+        var add = '\n\n---\nUTM: '+tag+'\nPage: '+link;
+        u.searchParams.set('subject', subj);
+        u.searchParams.set('body', (body?body+'\n':'') + add);
+        a.href=u.toString();
+      }catch(_){}
+    }
+
+    function decorateWhatsApp(a, utm){
+      if(!utm) return;
+      try{
+        var href=a.getAttribute('href')||'';
+        if(!/^https?:\/\/wa\.me\//.test(href)) return;
+        var title=document.title.replace(/\s+/g,' ').trim();
+        var link=location.origin + location.pathname + buildQuery(utm);
+        var msg = a.getAttribute('data-wa-text') || (title + ' — ' + link);
+        // Собираем конечный URL: wa.me/<num>?text=<msg>
+        var m = href.match(/^(https?:\/\/wa\.me\/\d+)/);
+        var base = m ? m[1] : href.replace(/\?.*$/,'');
+        var final = base + '?text=' + encodeURIComponent(msg);
+        a.setAttribute('href', final);
+      }catch(_){}
+    }
+
+    var utm=readUtm();
+
+    // 1) mailto
+    document.querySelectorAll('a[href^="mailto:"][data-utm]').forEach(function(a){ decorateMailto(a, utm); });
+
+    // 2) WhatsApp
+    document.querySelectorAll('a[href^="https://wa.me/"][data-utm]').forEach(function(a){ decorateWhatsApp(a, utm); });
+
+    // 3) форма заявки
+    var form=document.getElementById('fundApplicationForm');
+    if(form){ ensureFormHiddenInputs(form, utm); }
+
+    // 4) клик по кнопкам "открыть форму" — защитное дублирование скрытых UTM
+    document.addEventListener('click', function(e){
+      var el=e.target.closest('[data-utm="apply-cta"], [data-utm="apply-nav"]');
+      if(!el || !form) return;
+      ensureFormHiddenInputs(form, utm);
+    });
+  })();
+  </script>
+  <!-- END WEGC: UTM propagate v1 -->
 </body>
 </html>
