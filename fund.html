@@ -1812,10 +1812,22 @@
       };
 
       function setLang(code, dir){
+        console.log('Setting language to:', code);
         const d=dict[code]||dict.en;
-        document.querySelectorAll('[data-i18n]').forEach(el=>{
-          const k=el.getAttribute('data-i18n'); if(d[k]) el.textContent=d[k];
+        const elements = document.querySelectorAll('[data-i18n]');
+        console.log('Found', elements.length, 'elements with data-i18n');
+        let translated = 0;
+        elements.forEach(el=>{
+          const k=el.getAttribute('data-i18n'); 
+          if(d[k]) {
+            el.textContent=d[k];
+            translated++;
+            console.log('Translated:', k, 'to:', d[k]);
+          } else {
+            console.log('No translation found for:', k);
+          }
         });
+        console.log('Translated', translated, 'elements');
         document.documentElement.setAttribute('dir', dir||'ltr');
         document.documentElement.setAttribute('lang', code||'en');
         const label=document.getElementById('langLabel'); if(label) label.textContent=(code||'en').toUpperCase();
