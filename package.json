@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @tailwindcss/cli --content \"./index.html,./src/**/*.{html,js}\" -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "NODE_ENV=production npx @tailwindcss/cli --content \"./index.html,./src/**/*.{html,js}\" -i ./src/input.css -o ./dist/output.css"
+    "build": "NODE_ENV=production npx @tailwindcss/cli --content \"./index.html,./src/**/*.{html,js}\" -i ./src/input.css -o ./dist/output.css",
+    "audit": "node scripts/audit-site.js"
   },
   "keywords": [],
   "author": "",
