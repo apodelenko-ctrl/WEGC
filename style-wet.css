@@ -52,7 +52,7 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #0a2b73;
+    background: var(--color-primary, #0a2b73);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +74,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.5px;
-    color: #0a2b73;
+    color: var(--color-primary, #0a2b73);
     text-transform: uppercase;
 }
 
@@ -85,7 +85,7 @@ body {
 
 .nav-links a {
     margin-left: 20px;
-    color: #0a2b73;
+    color: var(--color-primary, #0a2b73);
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -101,12 +101,12 @@ body {
     bottom: 0;
     width: 0;
     height: 2px;
-    background: #0a2b73;
+    background: var(--color-primary, #0a2b73);
     transition: width 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #061b4a;
+    color: var(--color-secondary, #061b4a);
 }
 
 .nav-links a:hover::after {
@@ -148,17 +148,24 @@ body {
     font-weight: 700;
 }
 
-.hero-visual-sub {
+.hero-visual-lead {
     margin-top: 12px;
     font-size: 17px;
     opacity: 0.95;
+    font-weight: 500;
+}
+
+.hero-visual-sub {
+    margin-top: 10px;
+    font-size: 15px;
+    opacity: 0.85;
 }
 
 .btn-primary {
     display: inline-block;
     margin-top: 22px;
     padding: 11px 22px;
-    background: #0a2b73;
+    background: var(--color-primary, #0a2b73);
     color: white;
     border-radius: 999px;
     text-decoration: none;
@@ -171,7 +178,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: #061f56;
+    background: var(--color-secondary, #061f56);
     box-shadow: 0 6px 16px rgba(0,0,0,0.22);
     transform: translateY(-2px);
 }
@@ -190,7 +197,15 @@ body {
 .section h2 {
     margin-bottom: 18px;
     font-size: 26px;
-    color: #0a2b73;
+    color: var(--color-primary, #0a2b73);
+}
+
+.company-details {
+    max-width: 600px;
+}
+
+.company-details p {
+    margin-bottom: 12px;
 }
 
 .section p {
@@ -248,7 +263,7 @@ body {
 
 .product-card h3 {
     margin-bottom: 8px;
-    color: #0a2b73;
+    color: var(--color-primary, #0a2b73);
 }
 
 .product-card p {
@@ -257,7 +272,7 @@ body {
 }
 
 .product-card:hover {
-    border-color: #0a2b73;
+    border-color: var(--color-primary, #0a2b73);
     box-shadow: 0 6px 18px rgba(0,0,0,0.16);
     transform: translateY(-2px);
 }
@@ -301,7 +316,7 @@ body {
 /* FOOTER */
 
 .footer {
-    background: #0a2b73;
+    background: var(--color-primary, #0a2b73);
     color: white;
     padding: 18px 0;
     text-align: center;
