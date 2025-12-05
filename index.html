@@ -3,958 +3,636 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>West East Real Estate — Phuket Property Marketplace</title>
-  <meta name="description" content="Phuket marketplace for disciplined investors: developer prices, 0% buyer fee, curated by GIDR data. Leasehold & Freehold explained with documents.">
+  <title>Terra Intelligence Lab — Territory Intelligence Layer for the AI Era</title>
+  <meta name="description" content="Terra Intelligence Lab builds a continuously-learning world model of resort territories — a new layer between the physical world and AI systems that need to understand it.">
 
   <!-- Global Design System -->
   <link rel="stylesheet" href="style-global.css">
 
-  <!-- Tailwind CSS CDN (temporary fix) -->
+  <!-- Tailwind CSS CDN -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Preload LCP hero frame -->
-  <link rel="preload" as="image" href="/images/title-vivi-exterior-1280x791.jpg" imagesrcset="/images/title-vivi-exterior-1280x791.jpg 1x" imagesizes="(min-width: 768px) 600px, 90vw">
-
   <style>
     .container-max{max-width:1200px}
-    .badge{display:inline-block;padding:.25rem .5rem;border-radius:.5rem;font-size:.75rem;line-height:1}
-    .badge-free{background:#e7f8ee;color:#197a42}
-    .badge-lease{background:#fff7e6;color:#9a5a00}
-
-    /* Passport */
-    .pp-tabs button{padding:.6rem 1rem;border-bottom:2px solid transparent}
-    .pp-tabs button.active{border-color:#111;color:#111}
-    .pp-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
-    .pp-kpi .k{background:#f7f7f7;border:1px solid #eee;border-radius:.75rem;padding:.75rem;text-align:center}
-    .pp-kpi .k .v{font-weight:700;font-size:1.1rem}
-    .pp-doc{border:1px dashed #e5e7eb;border-radius:.75rem;padding:.75rem;display:block;text-align:center}
-    .pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    @media (max-width:768px){.pp-grid{grid-template-columns:1fr}}
     .hero-tech{
       background:
-        radial-gradient(1000px 400px at 80% -200px, rgba(0,0,0,.06), transparent 60%),
-        radial-gradient(800px 300px at -100px 20%, rgba(0,0,0,.05), transparent 60%);
-    }
-
-    /* Modal & Lightbox */
-    .modal{position:fixed;inset:0;display:none;background:rgba(0,0,0,.5);z-index:60}
-    .modal.open{display:flex}
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:70}
-    .lightbox.open{display:flex}
-    .lb-img{max-width:92vw;max-height:86vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
-    .lb-btn{position:fixed;top:50%;transform:translateY(-50%);font-size:28px;color:#fff;padding:.5rem .75rem;border-radius:.75rem;background:rgba(255,255,255,.12)}
-    .lb-prev{left:18px}.lb-next{right:18px}
-    .lb-close{position:fixed;top:12px;right:12px;font-size:24px;color:#fff;padding:.4rem .55rem;border-radius:.75rem;background:rgba(255,255,255,.12)}
-    .thumbs{display:flex;gap:.5rem;overflow-x:auto;padding-top:.5rem}
-    .thumbs img{height:64px;width:96px;object-fit:cover;border-radius:.5rem;border:1px solid #e5e7eb;cursor:pointer}
-
-    /* Tiny gradient overlay for About GIDR image on the right edge */
-    .fade-right{
-      position:relative;overflow:hidden;border-radius:1rem;border:1px solid #e5e7eb;
-    }
-    .fade-right:after{
-      content:"";position:absolute;inset:0;
-      background:linear-gradient(90deg, rgba(255,255,255,0) 70%, rgba(255,255,255,.4));
-      pointer-events:none;
-    }
-
-    /* Language dropdown */
-    .lang-wrap{position:relative}
-    .lang-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .6rem;border:1px solid rgba(255,255,255,.4);border-radius:.5rem;background:transparent;color:#fff}
-    .lang-menu{position:absolute;right:0;top:calc(100% + .25rem);min-width:9rem;background:#fff;color:#111;border:1px solid #e5e7eb;border-radius:.5rem;box-shadow:0 10px 30px rgba(0,0,0,.15);display:none;z-index:50}
-    .lang-menu.open{display:block}
-    .lang-menu button{display:block;width:100%;text-align:left;padding:.5rem .75rem}
-    .lang-menu button:hover{background:#f3f4f6}
-    [dir="rtl"] .text-left{text-align:right}
-    /* Navbar active link */
-    .nav a.active{ color:#93c5fd; text-decoration:underline; }
-    .nav{position:sticky;top:0;z-index:1000}
-    @media (max-width:768px){
-      #navMenu{width:100%}
-      #navMenu a{display:block;border-bottom:1px solid rgba(255,255,255,.1);padding:.5rem 0}
+        radial-gradient(1000px 400px at 80% -200px, rgba(59,130,246,0.1), transparent 60%),
+        radial-gradient(800px 300px at -100px 20%, rgba(34,211,238,0.08), transparent 60%);
     }
   </style>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://wegc.fund/">
-  <link rel="alternate" hreflang="en" href="https://wegc.fund/" />
-  <link rel="alternate" hreflang="ru" href="https://wegc.fund/?lang=ru" />
-  <link rel="alternate" hreflang="zh" href="https://wegc.fund/?lang=zh" />
-  <link rel="alternate" hreflang="ar" href="https://wegc.fund/?lang=ar" />
-  <link rel="alternate" hreflang="x-default" href="https://wegc.fund/" />
-
-  <!-- Structured Data: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "West East Real Estate",
-    "legalName": "WEST EAST TRADE GROUP PTE. LTD.",
-    "url": "https://wegc.fund/",
-    "logo": "https://wegc.fund/images/icon-192.png",
-    "email": "post@wegc.fund",
-    "sameAs": [
-      "https://www.linkedin.com/company/westeastcapital/",
-      "https://www.instagram.com/westeastgate/"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "7 Temasek Boulevard, #12-07, Suntec Tower One",
-      "addressLocality": "Singapore",
-      "postalCode": "038987",
-      "addressCountry": "SG"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "post@wegc.fund",
-      "telephone": "+66 657 658 782",
-      "areaServed": ["TH", "HK", "SG"],
-      "availableLanguage": ["en", "ru", "zh", "ar"]
-    }
-  }
-  </script>
-
-  <!-- Structured Data: WebSite + SearchAction -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://wegc.fund/",
-    "name": "West East Real Estate",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://wegc.fund/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="West East Real Estate">
-  <meta property="og:title" content="West East Real Estate — Phuket Property Marketplace">
-  <meta property="og:description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Leasehold & Freehold explained. Curated by GIDR data.">
-  <meta property="og:url" content="https://wegc.fund/">
-  <meta property="og:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="ru_RU">
-  <meta property="og:locale:alternate" content="zh_CN">
-  <meta property="og:locale:alternate" content="ar_AE">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="West East Real Estate — Phuket Property Marketplace">
-  <meta name="twitter:description" content="Most profitable & reliable Phuket properties at developer prices. Zero buyer commission. Leasehold & Freehold explained. Curated by GIDR data.">
-  <meta name="twitter:image" content="https://wegc.fund/images/title-vivi-exterior-1280x791.jpg">
-
-  <!-- PWA / Icons -->
-  <meta name="theme-color" content="#0b0b0b">
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/images/icon-192.png">
-  <link rel="mask-icon" href="/images/favicon.svg" color="#0b0b0b">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0b">
 </head>
-<body class="antialiased text-gray-800">
+<body class="antialiased text-gray-800 bg-white">
 
-  <!-- Top navigation bar -->
-  <nav class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
-    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <a href="#" class="font-semibold text-white hover:text-gray-300 text-base">West East Real Estate</a>
-        <button id="burgerBtn" class="md:hidden p-2 border border-white/30 rounded" aria-label="Toggle menu">☰</button>
-      </div>
-      <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
-        <a href="#gidr" class="block py-2 md:py-0 hover:text-gray-300">GIDR</a>
-        <a href="/fund.html" class="block py-2 md:py-0 hover:text-gray-300" data-i18n="nav_fund">Fund</a>
-        <a href="/wet-trading-house.html" class="block py-2 md:py-0 hover:text-gray-300" data-i18n="nav_trading_house">Trading House (HK)</a>
-        <a href="/til.html" class="block py-2 md:py-0 hover:text-gray-300">TIL</a>
-        <a href="#portfolio" class="block py-2 md:py-0 hover:text-gray-300">Portfolio</a>
-        <a href="#contact" class="block py-2 md:py-0 hover:text-gray-300">Contact</a>
-        <a href="#contact" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">Buy property</a>
-        <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="block px-4 py-1.5 md:ml-3 rounded-md border border-white/40 text-white hover:bg-white hover:text-black transition">WhatsApp</a>
-        
-        <!-- Language selector -->
-        <div class="lang-wrap">
-          <button id="langBtn" class="lang-btn" aria-expanded="false" aria-haspopup="true">
-            <span id="langLabel">EN</span>
-            <span>▼</span>
-          </button>
-          <div id="langMenu" class="lang-menu">
-            <button data-lang="en" data-dir="ltr">English</button>
-            <button data-lang="ru" data-dir="ltr">Русский</button>
-            <button data-lang="zh" data-dir="ltr">中文</button>
-            <button data-lang="ar" data-dir="rtl">العربية</button>
-          </div>
+  <!-- HERO SECTION -->
+  <section class="bg-black text-white py-20 md:py-32 hero-tech">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-center text-sm text-gray-400 tracking-wide mb-3">
+          Terra Intelligence Lab — Territory Intelligence Layer
         </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Top promo band -->
-  <div class="bg-gradient-to-r from-gray-900 to-black text-white">
-    <div class="container-max mx-auto px-4 py-10">
-      <div class="text-3xl md:text-5xl font-extrabold tracking-tight">
-        Thailand — a paradise for disciplined investors
-      </div>
-      <p class="text-white/70 mt-3 max-w-3xl">
-        Limited beachfront land, strong tourism, and distinct rental seasons support long-run demand for resort property.
-      </p>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <header class="hero-tech">
-    <div class="container-max mx-auto px-4 py-14 md:py-18 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4" data-i18n="hero_title">
-          Most profitable & reliable Phuket properties
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+          The Territory Intelligence Layer for the AI Era
         </h1>
-        <p class="text-gray-700 text-lg mb-5" data-i18n="hero_sub">
-          Developer prices. Zero buyer commission. Curated by GIDR data.
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+          Terra Intelligence Lab is building a continuously-learning world model of resort territories — a new layer between the physical world and AI systems that need to understand it.
         </p>
-        <ul class="text-gray-800 grid sm:grid-cols-2 gap-2 mb-7">
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
-            <span data-i18n="b1">Best-in-class projects only — screened for rental demand & liquidity</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>
-            <span data-i18n="b2">Direct developer contracts — no agency markup</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-amber-500"></span>
-            <span data-i18n="b3">AI-assessed by the Hong Kong Institute of Digital Research (GIDR)</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
-            <span data-i18n="b4">Leasehold & Freehold routes — clearly explained</span>
-          </li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="#portfolio" class="px-5 py-3 rounded-md bg-gray-900 text-white">Browse projects</a>
-          <a href="#contact" class="px-5 py-3 rounded-md border">Buy property</a>
-        </div>
-      </div>
-      <div class="rounded-2xl overflow-hidden shadow-lg border">
-        <img
-          src="/images/title-vivi-exterior-1280x791.jpg"
-          alt="Phuket hero"
-          class="w-full h-full object-cover"
-          width="1280" height="791"
-          decoding="async"
-          fetchpriority="high">
+        <a href="#investor-form" class="inline-block px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+          Request TIL Investor Brief
+        </a>
       </div>
     </div>
-  </header>
-
-  <!-- 3 highlights -->
-  <section class="bg-black text-white/90">
-    <div class="container-max mx-auto px-4 py-8 grid md:grid-cols-3 gap-4">
-      <div class="rounded-xl border border-white/10 bg-white/5 p-6">
-        <div class="text-amber-300 text-sm mb-1">PRICING</div>
-        <div class="text-2xl font-semibold mb-2">Developer price • 0% buyer fee</div>
-        <p class="text-white/70 text-sm">You pay the price from the developer’s list — no extra commission.</p>
-      </div>
-      <div class="rounded-xl border border-white/10 bg-white/5 p-6">
-        <div class="text-amber-300 text-sm mb-1">PERFORMANCE (GUIDANCE)</div>
-        <div class="text-2xl font-semibold mb-2">Rental yield ~5–9% p.a.</div>
-        <p class="text-white/70 text-sm">Ranges observed in comparable resort areas. Project documents prevail.</p>
-      </div>
-      <div class="rounded-xl border border-white/10 bg-white/5 p-6">
-        <div class="text-amber-300 text-sm mb-1">PROGRAMS</div>
-        <div class="text-2xl font-semibold mb-2">Some offer fixed rent</div>
-        <p class="text-white/70 text-sm">E.g. advertised 7% in THB with indexation in select projects. Terms vary by developer.</p>
-      </div>
-    </div>
-    <p class="container-max mx-auto px-4 pb-6 text-xs text-white/60">
-      Figures are for guidance only and do not constitute investment advice or guarantees. Terms depend on specific contracts, market conditions, and regulations.
-    </p>
   </section>
 
-  <!-- FAQ SECTION -->
-  <section id="faq" class="py-16 bg-white">
+  <!-- SECTION: A new layer between the map and the market -->
+  <section class="py-16 md:py-24 bg-white">
     <div class="container-max mx-auto px-4">
-      <h2 class="text-3xl font-semibold mb-8">FAQ — Property Ownership in Thailand</h2>
-
-      <!-- 1 -->
-      <div class="border-b py-4">
-        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center" type="button" aria-expanded="false" aria-controls="faq1">
-          Leasehold vs Freehold — what's the difference?
-          <span>+</span>
-        </button>
-        <div id="faq1" class="faq-answer hidden mt-3 text-sm text-gray-700 space-y-3" role="region" aria-hidden="true">
-          <p><strong>Freehold:</strong> Condominium ownership (up to 49% of total sellable area for foreigners).</p>
-          <p><strong>Leasehold:</strong> Registered lease, commonly 30 + 30 + 30 years.</p>
-          <p class="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded p-2">
-            Legal note: Lease renewals depend on developer policy. Always check project documentation.
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          A new layer between the map and the market
+        </h2>
+        <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+          <p>
+            Maps show where things are. Dashboards show what has happened. Terra Intelligence Lab builds something different — a territory-level world model that explains how a place really works.
+          </p>
+          <p>
+            We analyse resort territories as living systems: people flows, demand patterns, infrastructure, projects, sentiment and risk — all fused into a single, structured view.
+          </p>
+          <p>
+            This is not another map. It is an intelligence layer that can be used by both humans and AI agents to make better decisions.
           </p>
         </div>
       </div>
-
-      <!-- 2 -->
-      <div class="border-b py-4">
-        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center" type="button" aria-expanded="false" aria-controls="faq2">
-          Can foreigners own land in Thailand?
-          <span>+</span>
-        </button>
-        <div id="faq2" class="faq-answer hidden mt-3 text-sm text-gray-700" role="region" aria-hidden="true">
-          Foreigners cannot own land directly, but can own condos (up to 49% of area) or lease land long-term (30+30+30 years).
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="border-b py-4">
-        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center" type="button" aria-expanded="false" aria-controls="faq3">
-          What are common rental yields in resort areas?
-          <span>+</span>
-        </button>
-        <div id="faq3" class="faq-answer hidden mt-3 text-sm text-gray-700" role="region" aria-hidden="true">
-          Typical yields range from 5–9% annually in top tourist locations, depending on project and management.
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="border-b py-4">
-        <button class="faq-question w-full text-left font-semibold text-lg flex justify-between items-center" type="button" aria-expanded="false" aria-controls="faq4">
-          How secure are leasehold rights in Thailand?
-          <span>+</span>
-        </button>
-        <div id="faq4" class="faq-answer hidden mt-3 text-sm text-gray-700" role="region" aria-hidden="true">
-          Registered leaseholds are protected by law, but renewals must be documented in the developer’s policy.
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <script defer>
-  document.querySelectorAll('.faq-question').forEach((btn, idx)=>{
-    // гарантируем уникальные id
-    const ans = btn.nextElementSibling;
-    const id = ans.id || `faq${idx+1}`;
-    ans.id = id;
-    btn.setAttribute('aria-controls', id);
-    btn.addEventListener('click', ()=>{
-      ans.classList.toggle('hidden');
-      const open = !ans.classList.contains('hidden');
-      btn.classList.toggle('open', open);
-      btn.querySelector('span').textContent = open ? '−' : '+';
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      ans.setAttribute('aria-hidden', open ? 'false' : 'true');
-    });
-  });
-  </script>
-<script defer>
-  // Active menu highlight using IntersectionObserver
-  (function(){
-    const map = new Map();
-    document.querySelectorAll('.nav a[href^="#"]').forEach(a=>{
-      const id = a.getAttribute('href');
-      const el = document.querySelector(id);
-      if(el){ map.set(el, a); }
-    });
-    if(!map.size) return;
-    const io = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        const a = map.get(e.target);
-        if(!a) return;
-        if(e.isIntersecting) {
-          document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));
-          a.classList.add('active');
-        }
-      });
-    }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
-    map.forEach((_, el)=>io.observe(el));
-  })();
-</script>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="py-14 bg-gray-50">
+  <!-- SECTION: What Terra Intelligence Lab actually does -->
+  <section class="py-16 md:py-24 bg-gray-50">
     <div class="container-max mx-auto px-4">
-      <h2 class="text-3xl font-semibold mb-8">Featured projects</h2>
-
-      <div class="mb-6 flex flex-wrap items-center gap-3 text-xs">
-        <span class="badge badge-free">Freehold</span>
-        <span class="badge badge-lease">Leasehold</span>
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          What Terra Intelligence Lab actually does
+        </h2>
+        <p class="text-lg text-gray-700 mb-12">
+          In simple terms, TIL does three things inside each territory:
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">1. Observe the territory</h3>
+            <p class="text-gray-700 leading-relaxed">
+              We continuously capture thousands of signals: location, projects, infrastructure, mobility, pricing, online demand, booking and social behaviour. All of this is cleaned and aligned in time and space into a single territorial dataset.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">2. Understand the territory</h3>
+            <p class="text-gray-700 leading-relaxed">
+              On top of this data, we build a digital twin and a GRID Index — a dynamic scoring system for locations and projects. It shows where demand is forming, where risk is building, and where the next pockets of value are likely to emerge.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">3. Power decisions and AI agents</h3>
+            <p class="text-gray-700 leading-relaxed">
+              The model is exposed through an API and AI agents, so investors, brokers and developers — and in the future autonomous AI systems — can query the territory, compare projects and embed TIL signals directly into their workflows.
+            </p>
       </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-
-        <!-- MODEVA -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-modeva-exterior-4-1.jpg" alt="The Modeva — Bang Tao"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Modeva</h3>
-            <p class="text-sm text-gray-600 mb-1">Bang Tao, Phuket, Thailand</p>
-            <p class="text-sm mb-1">Developer: Rhom Bho / The Title</p>
-            <p class="text-sm mb-1">Lifestyle condo • ~500 m to beach <span class="badge badge-lease ml-1">Leasehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/modeva.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="/passport.html" class="px-3 py-2 border rounded inline-block">View passport</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- KATABELLO -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-title-katabello-exterior-2.jpg" alt="The Title Katabello — Kata/Karon"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Title Katabello</h3>
-            <p class="text-sm text-gray-600 mb-1">Kata / Karon, Phuket, Thailand</p>
-            <p class="text-sm mb-1">Developer: Rhom Bho / AssetWise</p>
-            <p class="text-sm mb-1">Condo • 8×7 floors • ETA 2027 <span class="badge badge-lease ml-1">Leasehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/katabello.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="/passport.html" class="px-3 py-2 border rounded inline-block">View passport</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- ADORA -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-title-adora-exterior-9.jpg" alt="The Title Adora — Rawai"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Title Adora Rawai</h3>
-            <p class="text-sm text-gray-600 mb-1">Rawai, Phuket, Thailand</p>
-            <p class="text-sm mb-1">1–2 BR + penthouses • ~400 m to beach <span class="badge badge-lease ml-1">Leasehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/adora.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="mailto:post@wegc.fund?subject=Adora%20-%20Request%20dossier" class="px-3 py-2 border rounded">Request dossier</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- ARTRIO -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-title-artrio-exterior-1.jpg" alt="The Title Artrio — Bang Tao"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Title Artrio</h3>
-            <p class="text-sm text-gray-600 mb-1">Bang Tao, Phuket, Thailand</p>
-            <p class="text-sm mb-1">Developer: Rhom Bho / The Title</p>
-            <p class="text-sm mb-1">Condo • 4×7 floors • ETA 2026 <span class="badge badge-lease ml-1">Leasehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/artrio.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="mailto:post@wegc.fund?subject=Artrio%20-%20Request%20dossier" class="px-3 py-2 border rounded">Request dossier</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- VIVI -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/title-vivi-exterior-3.jpg" alt="The Title ViVi — Naiyang"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Title ViVi</h3>
-            <p class="text-sm text-gray-600 mb-1">Naiyang, Phuket, Thailand</p>
-            <p class="text-sm mb-1">Developer: Rhom Bho / The Title</p>
-            <p class="text-sm mb-1">Condo • 1–2 BR • resort facilities <span class="badge badge-free ml-1">Freehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/vivi.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="mailto:post@wegc.fund?subject=ViVi%20-%20Request%20dossier" class="px-3 py-2 border rounded">Request dossier</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CIELO -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/the-title-adora-exterior-8.jpg" alt="The Title Cielo — Rawai"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Title Cielo</h3>
-            <p class="text-sm text-gray-600 mb-1">Rawai, Phuket, Thailand</p>
-            <p class="text-sm mb-1">Condo • 171 units • near beach <span class="badge badge-free ml-1">Freehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/cielo.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="mailto:post@wegc.fund?subject=Cielo%20-%20Request%20dossier" class="px-3 py-2 border rounded">Request dossier</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- HALO 1 -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/title-vivi-exterior-2-1280x716.jpg" alt="The Title Halo 1 — Naiyang"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Title Halo 1</h3>
-            <p class="text-sm text-gray-600 mb-1">Naiyang, Phuket, Thailand</p>
-            <p class="text-sm mb-1">329 units • 7 floors • ~350 m to beach <span class="badge badge-free ml-1">Freehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/halo1.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="mailto:post@wegc.fund?subject=Halo%201%20-%20Request%20dossier" class="px-3 py-2 border rounded">Request dossier</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SERENITY -->
-        <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg bg-white">
-          <img src="/images/title-vivi-exterior-3.jpg" alt="The Title Serenity — Naiyang"
-               class="w-full h-48 object-cover" width="768" height="384" loading="lazy" decoding="async">
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-1">The Title Serenity</h3>
-            <p class="text-sm text-gray-600 mb-1">Naiyang, Phuket, Thailand</p>
-            <p class="text-sm mb-1">814 units • ~400 m to beach <span class="badge badge-lease ml-1">Leasehold</span></p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a href="/docs/serenity.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-              <a href="mailto:post@wegc.fund?subject=Serenity%20-%20Request%20dossier" class="px-3 py-2 border rounded">Request dossier</a>
-            </div>
-          </div>
-        </div>
-
+      </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT GIDR -->
-  <section id="gidr" class="py-16 bg-white">
-    <div class="container-max mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl font-semibold mb-4">About GIDR — Hong Kong Institute of Digital Research</h2>
-        <p class="text-gray-700 mb-3">
-          The Hong Kong Institute of Digital Research (GIDR) is an applied analytics and AI lab modeling resort real-estate
-          markets across Asia. Founded in Hong Kong, GIDR operates as a research & data-intelligence project of
-          <strong>West East Gate Capital (WEGC)</strong>.
-        </p>
-        <p class="text-gray-700 mb-3">
-          Our neural model processes thousands of signals per property — geospatial and climatic layers, construction
-          milestones, developer track record, price dynamics — to produce predictive ROI and liquidity ratings.
-        </p>
-      </div>
-      <div class="fade-right">
-        <!-- GIDR data visualization -->
-        <img src="/images/the-title-artrio-exterior-2-1.jpg" alt="Data network over Hong Kong skyline" width="1280" height="800" class="w-full h-full object-cover rounded-2xl" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT / FORM -->
-  <section id="contact" class="py-16 bg-white">
+  <!-- SECTION: Designed for an AI-native future -->
+  <section class="py-16 md:py-24 bg-white">
     <div class="container-max mx-auto px-4">
-      <h2 class="text-3xl font-semibold mb-6">Buy property</h2>
-      <p class="text-gray-600 mb-6 max-w-2xl">
-        Tell us who you are and which project you’re interested in — we’ll reply from
-        <strong>post@wegc.fund</strong> with a curated dossier and next steps.
-      </p>
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Designed for an AI-native future
+        </h2>
+        <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+          <p>
+            Most tools today were built for people staring at dashboards. Terra Intelligence Lab is built for a world where AI systems will be making and assisting decisions.
+          </p>
+          <p>
+            TIL provides a structured, continuously-updated world model of resort territories that future AI agents can rely on — instead of scraping random data, guessing from incomplete maps, or relying on outdated reports.
+          </p>
+          <p>
+            We are not building yet another analytics product. We are building an infrastructure layer that other AI systems can stand on.
+          </p>
+        </div>
+      </div>
+        </div>
+  </section>
 
-      <form id="buyForm" class="grid md:grid-cols-2 gap-4 max-w-3xl">
-        <div>
-          <label class="block text-sm text-gray-600 mb-1" for="name">Full name</label>
-          <input id="name" name="name" required autocomplete="name" class="w-full border rounded px-3 py-2">
-        </div>
-        <div>
-          <label class="block text-sm text-gray-600 mb-1" for="email">Email</label>
-          <input id="email" name="email" type="email" required autocomplete="email" class="w-full border rounded px-3 py-2">
-        </div>
-        <div>
-          <label class="block text-sm text-gray-600 mb-1" for="phone">Phone / WhatsApp</label>
-          <input id="phone" name="phone" autocomplete="tel" class="w-full border rounded px-3 py-2">
-        </div>
-        <div>
-          <label class="block text-sm text-gray-600 mb-1" for="budget">Budget (USD)</label>
-          <input id="budget" name="budget" type="number" inputmode="numeric" min="0" class="w-full border rounded px-3 py-2">
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-sm text-gray-600 mb-1" for="project">Project</label>
-          <select id="project" name="project" class="w-full border rounded px-3 py-2">
-            <option value="The Modeva">The Modeva (Bang Tao)</option>
-            <option value="The Title Katabello">The Title Katabello (Kata/Karon)</option>
-            <option value="The Title Adora Rawai">The Title Adora (Rawai)</option>
-            <option value="The Title Artrio">The Title Artrio (Bang Tao)</option>
-            <option value="The Title ViVi">The Title ViVi (Naiyang)</option>
-            <option value="The Title Cielo">The Title Cielo (Rawai)</option>
-            <option value="The Title Halo 1">The Title Halo 1 (Naiyang)</option>
-            <option value="The Title Serenity">The Title Serenity (Naiyang)</option>
-          </select>
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-sm text-gray-600 mb-1" for="msg">Message</label>
-          <textarea id="msg" name="msg" rows="4" class="w-full border rounded px-3 py-2" placeholder="Any specifics (tenure, unit type, viewing dates)…"></textarea>
-        </div>
-        <div class="md:col-span-2 flex items-center gap-2 text-xs text-gray-600">
-          <input id="agree" type="checkbox" required>
-          <label for="agree">I agree to <a href="/terms.html" class="underline">Terms</a> &amp; <a href="/privacy.html" class="underline">Privacy</a>.</label>
-        </div>
-        <div class="md:col-span-2 flex gap-3">
-          <button class="px-5 py-3 bg-emerald-600 text-white rounded" type="submit">Send enquiry</button>
-          <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="px-5 py-3 border rounded">Chat in WhatsApp</a>
-        </div>
-
-        <!-- Success / error banners -->
-        <div id="formNote" class="md:col-span-2 hidden mt-2 text-sm" role="status" aria-live="polite"></div>
-      </form>
+  <!-- SECTION: Why build TIL now -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Why build TIL now
+        </h2>
+        <ul class="space-y-4 text-lg text-gray-700 leading-relaxed list-disc list-inside">
+          <li>AI systems need structured world-models. Large models are powerful, but they lack deep structured understanding of real territories.</li>
+          <li>Territory Intelligence is a missing layer. Real estate, tourism and infrastructure still run on fragmented spreadsheets and opinions.</li>
+          <li>Resort territories are ideal sandboxes. Phuket is a closed, highly dynamic system that can be fully digitized, learned and replicated to similar markets.</li>
+          <li>The construction boom lacks objective scoring. Capital is deployed with no independent, mathematical rating of territories and projects.</li>
+          <li>Timing is right. AI adoption is exploding, transparency is in demand, and the cost of data and compute keeps falling.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-200 pt-10">
-    <!-- Compliance strip -->
-    <div class="mt-8 bg-black/40">
-      <div class="container-max mx-auto px-4 py-5 text-xs text-gray-400">
-        <div class="grid md:grid-cols-3 gap-4">
-          <div>
-            <div class="font-semibold text-gray-300">WEST EAST TRADE GROUP PTE. LTD.</div>
-            <div>UEN: <span id="uen">202505772C</span></div>
-            <div>Registered Office: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore <span id="postal">038987</span></div>
+  <!-- SECTION: Who TIL is for -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Who TIL is for
+        </h2>
+        <p class="text-lg text-gray-700 mb-12">
+          TIL is an infrastructure layer that can be used by different players in the ecosystem.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Investors & AI-driven funds</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Use TIL signals to screen territories, rank projects, and build AI-native investment strategies on top of a real-world model.
+            </p>
           </div>
-          <div>
-            <div class="mb-2">Primary email: <a class="text-blue-300" href="mailto:post@wegc.fund">post@wegc.fund</a></div>
-            <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition border border-gray-600">
-              <span>💬</span>
-              <span>WhatsApp</span>
-            </a>
-          </div>
-          <div class="md:text-right">
-            <div>© 2025 West East. All rights reserved.</div>
-          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Developers & operators</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Understand how the territory around your projects evolves, how demand shifts, and how your positioning compares inside the GRID Index.
+            </p>
         </div>
-        <div class="mt-3 text-xs text-gray-400 flex flex-wrap gap-4">
-          <a href="/privacy.html" class="underline hover:text-gray-200">Privacy Policy</a>
-          <a href="/terms.html" class="underline hover:text-gray-200">Terms of Service</a>
-          <a href="/cookies.html" class="underline hover:text-gray-200">Cookies</a>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">AI agents & platforms</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Embed TIL via API as a trusted territorial world-model — to power autonomous analysis, recommendations, underwriting or advisory workflows.
+            </p>
+      </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The agentic intelligence loop -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+          The agentic intelligence loop
+        </h2>
+        <p class="text-lg text-gray-700 mb-12 leading-relaxed">
+          Terra Intelligence Lab and <a href="/fund.html" class="text-emerald-600 hover:text-emerald-700 underline">the Fund</a> form a closed, self-reinforcing loop.
+          The model observes and understands the territory, <a href="/fund.html" class="text-emerald-600 hover:text-emerald-700 underline">the Fund</a> acts as its first AI-driven execution layer in the real market, and real outcomes return as feedback to strengthen the world-model.
+        </p>
+
+        <!-- Loop Diagram -->
+        <div class="relative mb-8">
+          <!-- Desktop: Circular/flow layout -->
+          <div class="hidden md:block">
+            <!-- Top row: nodes 1, 2, 3 -->
+            <div class="flex items-start justify-between mb-8">
+              <!-- Node 1: TIL world-model -->
+              <div class="flex-1 max-w-[200px] bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                <h3 class="text-sm font-bold mb-2 text-gray-900">1. TIL world-model</h3>
+                <p class="text-xs text-gray-700 leading-relaxed">The model observes and understands the territory: signals, structure, dynamics.</p>
+              </div>
+              
+              <!-- Arrow 1 -->
+              <div class="flex-shrink-0 mx-3 mt-6 text-gray-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+
+              <!-- Node 2: Fund as first AI agent -->
+              <div class="flex-1 max-w-[200px] bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                <h3 class="text-sm font-bold mb-2 text-gray-900">2. <a href="/fund.html" class="text-emerald-600 hover:text-emerald-700">Fund</a> as first AI agent</h3>
+                <p class="text-xs text-gray-700 leading-relaxed"><a href="/fund.html" class="text-emerald-600 hover:text-emerald-700">The Fund</a> uses TIL signals to execute intelligent actions in the real market.</p>
+      </div>
+
+              <!-- Arrow 2 -->
+              <div class="flex-shrink-0 mx-3 mt-6 text-gray-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+
+              <!-- Node 3: Real market outcomes -->
+              <div class="flex-1 max-w-[200px] bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                <h3 class="text-sm font-bold mb-2 text-gray-900">3. Real market outcomes</h3>
+                <p class="text-xs text-gray-700 leading-relaxed">Projects are launched, rented, refinanced, exited — real decisions, real money.</p>
+              </div>
+            </div>
+
+            <!-- Bottom row: nodes 5 and 4 (reversed for loop) -->
+            <div class="flex items-start justify-between">
+              <!-- Node 5: Stronger TIL signals -->
+              <div class="flex-1 max-w-[200px] bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                <h3 class="text-sm font-bold mb-2 text-gray-900">5. Stronger TIL signals</h3>
+                <p class="text-xs text-gray-700 leading-relaxed">The model becomes sharper, more predictive and more useful for the next cycle.</p>
+              </div>
+
+              <!-- Arrow 5 (back to start) -->
+              <div class="flex-shrink-0 mx-3 mt-6 text-gray-400">
+                <svg class="w-6 h-6 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+          </div>
+
+              <!-- Node 4: Structured feedback data -->
+              <div class="flex-1 max-w-[200px] bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                <h3 class="text-sm font-bold mb-2 text-gray-900">4. Structured feedback data</h3>
+                <p class="text-xs text-gray-700 leading-relaxed">Outcomes return into TIL as labelled feedback, updating the digital twin and GRID Index.</p>
+        </div>
+
+              <!-- Spacer for alignment -->
+              <div class="flex-1"></div>
+              <div class="flex-shrink-0 mx-3"></div>
+              <div class="flex-1"></div>
+            </div>
+
+            <!-- Vertical arrows connecting top and bottom rows -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 top-[140px] bottom-[140px] flex flex-col justify-between">
+              <!-- Arrow down from node 3 -->
+              <div class="text-gray-400">
+                <svg class="w-5 h-5 rotate-90 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+          </div>
+              <!-- Arrow up to node 4 -->
+              <div class="text-gray-400">
+                <svg class="w-5 h-5 -rotate-90 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+        </div>
+            </div>
+          </div>
+
+          <!-- Mobile: Vertical stack -->
+          <div class="md:hidden space-y-6">
+            <!-- Node 1 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+              <h3 class="text-sm font-bold mb-2 text-gray-900">1. TIL world-model</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">The model observes and understands the territory: signals, structure, dynamics.</p>
+            </div>
+            <div class="flex justify-center text-gray-400">
+              <svg class="w-6 h-6 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+        </div>
+
+            <!-- Node 2 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+              <h3 class="text-sm font-bold mb-2 text-gray-900">2. <a href="/fund.html" class="text-emerald-600 hover:text-emerald-700">Fund</a> as first AI agent</h3>
+              <p class="text-xs text-gray-700 leading-relaxed"><a href="/fund.html" class="text-emerald-600 hover:text-emerald-700">The Fund</a> uses TIL signals to execute intelligent actions in the real market.</p>
+            </div>
+            <div class="flex justify-center text-gray-400">
+              <svg class="w-6 h-6 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+        </div>
+
+            <!-- Node 3 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+              <h3 class="text-sm font-bold mb-2 text-gray-900">3. Real market outcomes</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">Projects are launched, rented, refinanced, exited — real decisions, real money.</p>
+            </div>
+            <div class="flex justify-center text-gray-400">
+              <svg class="w-6 h-6 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+        </div>
+
+            <!-- Node 4 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+              <h3 class="text-sm font-bold mb-2 text-gray-900">4. Structured feedback data</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">Outcomes return into TIL as labelled feedback, updating the digital twin and GRID Index.</p>
+            </div>
+            <div class="flex justify-center text-gray-400">
+              <svg class="w-6 h-6 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+        </div>
+
+            <!-- Node 5 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+              <h3 class="text-sm font-bold mb-2 text-gray-900">5. Stronger TIL signals</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">The model becomes sharper, more predictive and more useful for the next cycle.</p>
+            </div>
+            <div class="flex justify-center text-gray-400">
+              <svg class="w-6 h-6 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+          </div>
+            <!-- Loop indicator: back to start -->
+            <div class="text-center text-xs text-gray-500 italic">
+              → back to TIL world-model
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-sm text-gray-600 italic mt-8">
+          Zero-Circle investors participate in this full loop — not just in the platform, but in the intelligence cycle itself.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Roadmap 2025–2029 -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Roadmap 2025–2029
+        </h2>
+        <ul class="space-y-3 text-lg text-gray-700 leading-relaxed">
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2025</span>
+            <span>— Phuket model training</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2026</span>
+            <span>— API commercial launch</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2027</span>
+            <span>— Expansion to Bali</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2028</span>
+            <span>— Expansion to Dubai</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2029</span>
+            <span>— Multi-territory world-model</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: For investors -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          For investors — joining the agentic intelligence loop
+        </h2>
+        
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed mb-12">
+          <p>
+            TIL is not a single product.
+          </p>
+          <p>
+            It is a self-reinforcing intelligence engine.
+          </p>
+          <ul class="space-y-3 list-disc list-inside">
+            <li>TIL builds the world-model — observing and understanding the territory.</li>
+            <li><a href="/fund.html" class="text-emerald-600 hover:text-emerald-700 underline">The Fund</a> executes intelligent actions in the real market, acting as TIL's first AI agent.</li>
+            <li>Real outcomes return as feedback, strengthening the model.</li>
+            <li>A stronger model powers better execution, which generates even better data.</li>
+          </ul>
+          <p>
+            This creates a closed-loop system that compounds over time — something no traditional analytics or proptech platform can replicate.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
+            Zero-Circle investors participate in the full cycle
+          </h3>
+          <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <p>
+              Zero-Circle participants are not "early investors".
+            </p>
+            <p>
+              They join the creation of an AI-native territory engine where:
+            </p>
+            <ul class="space-y-2 list-disc list-inside ml-4">
+              <li>data infrastructure,</li>
+              <li>model evolution,</li>
+              <li>agentic execution,</li>
+              <li>and multi-territory expansion</li>
+            </ul>
+            <p>
+              all reinforce one another.
+            </p>
+            <p class="mt-6">
+              Zero-Circle capital powers:
+            </p>
+            <ol class="space-y-2 list-decimal list-inside ml-4">
+              <li>Territory data acquisition &amp; integration</li>
+              <li>Digital twin &amp; GRID model development</li>
+              <li>Agentic execution layer through <a href="/fund.html" class="text-emerald-600 hover:text-emerald-700 underline">the Fund</a></li>
+              <li>Real-world reinforcement cycles</li>
+              <li>Expansion to new territories (Bali, Dubai, etc.)</li>
+            </ol>
+            <p class="mt-6 font-semibold">
+              Zero-Circle investors receive a position that later participants cannot:
+            </p>
+            <p>
+              participation not only in the platform — but in the intelligence cycle itself.
+            </p>
+        </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
+            Three stages of participation
+          </h3>
+          <div class="space-y-8">
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h4 class="text-xl font-bold mb-3 text-gray-900">Stage 0 — Alignment &amp; Access</h4>
+              <p class="text-gray-700 leading-relaxed">
+                You request the TIL Investor Brief.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                We confirm strategic alignment and suitability for participating in the agentic intelligence loop.
+              </p>
+    </div>
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h4 class="text-xl font-bold mb-3 text-gray-900">Stage 1 — Deep Technical &amp; Operational Review</h4>
+              <p class="text-gray-700 leading-relaxed">
+                Under NDA, you receive access to the TIL Data Room:
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                world-model architecture, GRID logic, reinforcement cycle structure, monetization logic, risk strategy and territory pipeline.
+              </p>
+          </div>
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h4 class="text-xl font-bold mb-3 text-gray-900">Stage 2 — Commitment &amp; Structuring</h4>
+              <p class="text-gray-700 leading-relaxed">
+                If there is mutual interest, we structure involvement to match the long-term nature of the TIL agentic loop:
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                governance, capital structure, expansion rights, and scaling roadmap.
+              </p>
+          </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="#investor-form" class="inline-block px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+            Request TIL Investor Brief
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Investor Form -->
+  <section id="investor-form" class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
+          Request TIL Investor Brief
+        </h2>
+        <form id="tilInvestorForm" class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+          <!-- TODO: insert Formspree endpoint -->
+          <div class="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+            <p class="text-sm text-amber-800">
+              <strong>Note:</strong> This form is currently under development. Please contact us directly at <a href="mailto:post@wegc.fund?subject=TIL Investor Brief Request" class="underline font-semibold">post@wegc.fund</a> to request the TIL Investor Brief.
+            </p>
+          </div>
+          <div class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-2 text-gray-900">Name <span class="text-red-500">*</span></label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+          </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2 text-gray-900">Email <span class="text-red-500">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+          </div>
+            <div>
+              <label for="company" class="block text-sm font-semibold mb-2 text-gray-900">Company</label>
+              <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+          </div>
+            <div>
+              <label for="country" class="block text-sm font-semibold mb-2 text-gray-900">Country</label>
+              <input type="text" id="country" name="country" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+    </div>
+        <div>
+              <label for="message" class="block text-sm font-semibold mb-2 text-gray-900">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"></textarea>
+          </div>
+            <div id="formMessage" class="hidden p-4 rounded-lg"></div>
+            <button type="submit" class="w-full px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+              Submit Request
+            </button>
+            <p class="text-xs text-gray-500 text-center mt-4">
+              Form submission coming soon. For immediate inquiries, please email <a href="mailto:post@wegc.fund?subject=TIL Investor Brief Request" class="underline">post@wegc.fund</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container-max mx-auto px-4 text-center text-sm text-gray-400 space-y-4">
+      <nav class="space-x-4">
+        <a href="/" class="hover:text-white">TIL</a>
+        <a href="/fund.html" class="hover:text-white">Fund</a>
+        <a href="/wet-trading-house.html" class="hover:text-white">Trading House (HK)</a>
+        <a href="/real-estate.html" class="hover:text-white">Real Estate Agency</a>
+        <a href="#investor-form" class="hover:text-white">Contact</a>
+        <a href="/privacy.html" class="hover:text-white">Legal / Privacy</a>
+      </nav>
+      <p>© Terra Intelligence Lab — Territory Intelligence Layer for the AI Era</p>
     </div>
   </footer>
 
-  <!-- ===== PASSPORT TEMPLATES (unchanged except dimensions/lazy) ===== -->
-  <!-- MODEVA -->
-  <template data-passport="modeva">
-    <div data-pp>
-      <div class="pp-grid mb-4">
-        <img src="/images/the-modeva-exterior-5-1.jpg" class="w-full h-64 object-cover rounded-xl" alt="Modeva — Bang Tao" loading="lazy" decoding="async" width="1024" height="512">
-        <div>
-          <h4 class="text-xl font-semibold mb-1">Modeva — Bang Tao</h4>
-          <div class="text-sm text-gray-600 mb-3">
-            1–2BR • ~500 m to beach • ETA 2026 <span class="badge badge-lease ml-2">Leasehold</span>
-          </div>
-          <div class="pp-kpi mb-3">
-            <div class="k"><div class="v">~10.3%</div><div class="t text-xs text-gray-500">ROI (model)</div></div>
-            <div class="k"><div class="v">8/10</div><div class="t text-xs text-gray-500">Liquidity</div></div>
-            <div class="k"><div class="v">10–12%</div><div class="t text-xs text-gray-500">IRR (base)</div></div>
-            <div class="k"><div class="v">8.4</div><div class="t text-xs text-gray-500">GIDR Score</div></div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-3 mt-2 text-sm">
-            <div class="flex items-center gap-2"><span>🏖️</span><span>Beach proximity</span></div>
-            <div class="flex items-center gap-2"><span>✈️</span><span>Airport access</span></div>
-            <div class="flex items-center gap-2"><span>🛍️</span><span>Retail &amp; dining</span></div>
-            <div class="flex items-center gap-2"><span>🏥</span><span>Hospitals nearby</span></div>
-          </div>
-          <div class="mt-3 text-xs text-gray-600">
-            Yield (illustrative): <canvas class="spark align-middle" data-points="6.0,6.5,6.2,7.1,7.6,8.0"></canvas>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <a href="/docs/modeva.pdf" class="pp-doc">Developer brochure (PDF)</a>
-            <a href="/docs/modeva_pricelist.pdf" class="pp-doc">Price list & payment schedule (PDF)</a>
-            <a href="/docs/modeva_rental.pdf" class="pp-doc">Rental program (PDF)</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="thumbs mb-3">
-        <img src="/images/the-modeva-exterior-3-1-1280x668.jpg" alt="The Modeva exterior view" loading="lazy" decoding="async">
-        <img src="/images/the-modeva-exterior-4-1.jpg" alt="The Modeva building facade" loading="lazy" decoding="async">
-        <img src="/images/modeva-interior-1bdr-3.jpg" alt="The Modeva 1 bedroom interior" loading="lazy" decoding="async">
-        <img src="/images/modeva-interior-1bdr-4.jpg" alt="The Modeva bedroom layout" loading="lazy" decoding="async">
-      </div>
-
-      <div class="pp-tabs flex gap-4 border-b mb-3">
-        <button class="active" onclick="ppTab('overview', this)" type="button">Overview</button>
-        <button onclick="ppTab('financials', this)" type="button">Financials</button>
-        <button onclick="ppTab('map', this)" type="button">Map</button>
-        <button onclick="ppTab('docs', this)" type="button">Documents</button>
-      </div>
-
-      <div data-pp-tab="overview">
-        <div class="grid md:grid-cols-2 gap-4 text-sm">
-          <div class="space-y-2">
-            <div><strong>Developer:</strong> Rhom Bho Property PLC</div>
-            <div><strong>Status:</strong> Under construction (ETA 2026)</div>
-            <div><strong>Units:</strong> 1–2BR • 29–95 m²</div>
-            <div><strong>Tenure:</strong> Leasehold (30+30+30)</div>
-          </div>
-          <div class="space-y-2">
-            <div><strong>GIDR Forecast:</strong> Stable-to-positive</div>
-            <div><strong>Risks:</strong> schedule; foreign-quota demand; rental seasonality</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hidden" data-pp-tab="financials">
-        <div class="grid md:grid-cols-2 gap-4 text-sm">
-          <div class="space-y-2">
-            <div><strong>Entry (illustrative):</strong> THB 100k–120k / m²</div>
-            <div><strong>Area comps (’25):</strong> THB 125k–140k / m²</div>
-            <div><strong>Rental yield:</strong> 6–8% p.a.</div>
-          </div>
-          <div class="space-y-2">
-            <a href="/docs/modeva_pricelist.pdf" class="pp-doc">Price list & payment schedule (PDF)</a>
-            <a href="/docs/modeva_rental.pdf" class="pp-doc">Rental program (PDF)</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="hidden" data-pp-tab="map">
-        <div class="rounded-xl overflow-hidden border">
-          <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=98.27,7.96,98.33,8.03&layer=mapnik" class="w-full" style="height:300px"></iframe>
-        </div>
-      </div>
-
-      <div class="hidden" data-pp-tab="docs">
-        <div class="grid md:grid-cols-2 gap-3 text-sm">
-          <a href="/docs/modeva.pdf" class="pp-doc">Developer brochure (PDF)</a>
-          <a href="/docs/modeva_legal.pdf" class="pp-doc">Legal brief (tenure/quota) (PDF)</a>
-        </div>
-      </div>
-    </div>
-  </template>
-
-  <!-- KATABELLO -->
-  <template data-passport="katabello">
-    <div data-pp>
-      <div class="pp-grid mb-4">
-        <img src="/images/the-title-katabello-exterior-2.jpg" class="w-full h-64 object-cover rounded-xl" alt="Katabello" loading="lazy" decoding="async" width="1024" height="512">
-        <div>
-          <h4 class="text-xl font-semibold mb-1">The Title Katabello — Kata/Karon</h4>
-          <div class="text-sm text-gray-600 mb-3">Condo • 8×7 floors • ETA 2027 <span class="badge badge-lease ml-2">Leasehold</span></div>
-          <div class="grid sm:grid-cols-2 gap-3 mt-3 text-sm">
-            <div class="flex items-center gap-2"><span>🏖️</span><span>Beach proximity</span></div>
-            <div class="flex items-center gap-2"><span>🚌</span><span>Shuttle &amp; transport</span></div>
-            <div class="flex items-center gap-2"><span>🛍️</span><span>Retail &amp; dining</span></div>
-            <div class="flex items-center gap-2"><span>🏥</span><span>Hospitals nearby</span></div>
-          </div>
-          <div class="mt-3 text-xs text-gray-600">
-            Yield (illustrative): <canvas class="spark align-middle" data-points="5.5,5.8,6.1,6.4,6.7,7.0"></canvas>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-3">
-            <a href="/docs/katabello.pdf" download class="px-3 py-2 bg-gray-900 text-white rounded">Download brochure (PDF)</a>
-            <a href="mailto:post@wegc.fund?subject=Katabello%20Passport" class="px-3 py-2 border rounded">Request full dossier</a>
-          </div>
-        </div>
-      </div>
-      <div class="thumbs mb-3">
-        <img src="/images/the-title-katabello-exterior-27-1280x720.jpg" alt="The Title Katabello exterior view" loading="lazy" decoding="async">
-        <img src="/images/the-title-katabello-exterior-26-1280x720.jpg" alt="The Title Katabello building facade" loading="lazy" decoding="async">
-        <img src="/images/the-title-katabello-interior-1.jpg" alt="The Title Katabello interior design" loading="lazy" decoding="async">
-        <img src="/images/the-title-katabello-interior-2.jpg" alt="The Title Katabello living space" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </template>
-
-  <!-- ADORA -->
-  <template data-passport="adora">...</template>
-  <!-- ARTRIO -->
-  <template data-passport="artrio">...</template>
-  <!-- VIVI -->
-  <template data-passport="vivi">...</template>
-  <!-- CIELO -->
-  <template data-passport="cielo">...</template>
-  <!-- HALO1 -->
-  <template data-passport="halo1">...</template>
-  <!-- SERENITY -->
-  <template data-passport="serenity">...</template>
-
-  <!-- MODAL / LIGHTBOX -->
-  <div id="modal" class="modal items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border">
-      <div class="flex items-center justify-between px-5 py-3 border-b">
-        <div class="font-semibold">Project passport</div>
-        <button class="p-2" onclick="closeModal()" aria-label="Close" type="button">✕</button>
-      </div>
-      <div id="modal-body" class="p-5"></div>
-    </div>
-  </div>
-
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button class="lb-close" onclick="closeLb()" aria-label="Close" type="button">✕</button>
-    <button class="lb-btn lb-prev" onclick="navLb(-1)" aria-label="Previous" type="button">❮</button>
-    <img id="lb-img" class="lb-img" alt="preview">
-    <button class="lb-btn lb-next" onclick="navLb(1)" aria-label="Next" type="button">❯</button>
-  </div>
-
-  <!-- SCRIPTS -->
-  <script defer>
-    // Tabs inside passport
-    function ppTab(id, btn){
-      const scope = btn.closest('[data-pp]');
-      scope.querySelectorAll('[data-pp-tab]').forEach(el=>el.classList.add('hidden'));
-      const target = scope.querySelector('[data-pp-tab="'+id+'"]');
-      if (target) target.classList.remove('hidden');
-      scope.querySelectorAll('.pp-tabs button').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-    }
-
-    // Modal open via delegated click on [data-open]
-    document.addEventListener('click', (e)=>{
-      const t = e.target.closest('[data-open]');
-      if(!t) return;
-      const key = t.getAttribute('data-open');
-      const tpl = document.querySelector('template[data-passport="'+key+'"]');
-      if(!tpl) return;
-      const body = document.getElementById('modal-body');
-      body.innerHTML = '';
-      body.appendChild(tpl.content.cloneNode(true));
-      // attach gallery clicks for lightbox
-      body.querySelectorAll('.thumbs img').forEach((img, idx)=>{
-        img.addEventListener('click', ()=>openLb([...body.querySelectorAll('.thumbs img')].map(i=>i.src), idx));
-      });
-      // render sparklines when opening
-      renderSparklines();
-      document.getElementById('modal').classList.add('open');
+  <script>
+    // Form validation and submission
+    document.getElementById('tilInvestorForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const formMessage = document.getElementById('formMessage');
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      
+      // Basic validation
+      if (!name || !email) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-50 text-red-700 border border-red-200';
+          formMessage.textContent = 'Please fill in all required fields.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-50 text-red-700 border border-red-200';
+          formMessage.textContent = 'Please enter a valid email address.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Form is not yet active - NO DATA IS SUBMITTED
+      // Direct users to email instead - this form does NOT send data anywhere
+      if (formMessage) {
+        formMessage.className = 'p-4 rounded-lg bg-amber-50 text-amber-800 border border-amber-200';
+        formMessage.innerHTML = '<strong>⚠️ Form submission is not yet active.</strong> No data has been sent. Please contact us directly at <a href="mailto:post@wegc.fund?subject=TIL Investor Brief Request&body=' + 
+          encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nCompany: ' + (form.querySelector('#company').value || 'N/A') + '\nCountry: ' + (form.querySelector('#country').value || 'N/A') + '\n\nMessage:\n' + (form.querySelector('#message').value || 'N/A')) + 
+          '" class="underline font-semibold">post@wegc.fund</a> to submit your request.';
+        formMessage.classList.remove('hidden');
+        // Do NOT reset the form - user may may want to copy their data for email
+      }
+      
+      // TODO: Add Formspree submission logic here
+      // IMPORTANT: When implementing, replace the above warning message with actual submission
+      // and only show success message AFTER successful server response
+      // When Formspree endpoint is added, replace the above message with actual submission:
+      // const formData = new FormData(form);
+      // fetch('YOUR_FORMSPREE_ENDPOINT', { method: 'POST', body: formData })
+      //   .then(response => {
+      //     if (response.ok) {
+      //       formMessage.className = 'p-4 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200';
+      //       formMessage.textContent = 'Thank you! Your request has been submitted. We will contact you shortly.';
+      //       formMessage.classList.remove('hidden');
+      //       form.reset();
+      //     } else {
+      //       throw new Error('Submission failed');
+      //     }
+      //   })
+      //   .catch(error => {
+      //     formMessage.className = 'p-4 rounded-lg bg-red-50 text-red-700 border border-red-200';
+      //     formMessage.textContent = 'Sorry, there was an error submitting your request. Please try emailing us directly.';
+      //     formMessage.classList.remove('hidden');
+      //   });
     });
 
-    function closeModal(){ document.getElementById('modal').classList.remove('open'); }
-
-    // Lightbox
-    let lbList=[], lbIndex=0;
-    function openLb(list, i){ lbList=list; lbIndex=i||0; renderLb(); const lb=document.getElementById('lightbox'); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); }
-    function closeLb(){ const lb=document.getElementById('lightbox'); lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
-    function navLb(step){ if(!lbList.length) return; lbIndex=(lbIndex+step+lbList.length)%lbList.length; renderLb(); }
-    function renderLb(){ const img=document.getElementById('lb-img'); if(img) img.src = lbList[lbIndex]; }
-    document.addEventListener('keydown', e=>{
-      const lb=document.getElementById('lightbox');
-      if(!lb.classList.contains('open')) return;
-      if(e.key==='Escape') closeLb();
-      if(e.key==='ArrowLeft') navLb(-1);
-      if(e.key==='ArrowRight') navLb(1);
-    });
-
-    // Buy form -> Formspree JSON
-    (function(){
-      const form = document.getElementById('buyForm');
-      if(!form) return;
-      const note = document.getElementById('formNote');
-      form.addEventListener('submit', async (e)=>{
+    // Smooth scroll for anchor links (only for same-page anchors, not cross-page links)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Only intercept same-page anchors (starting with just #), not cross-page links (starting with /#)
+        if (href.startsWith('/#')) {
+          // Allow normal navigation for cross-page links
+          return;
+        }
+        // For same-page anchors, use smooth scroll
         e.preventDefault();
-        const fd = new FormData(form);
-        const payload = {
-          project: fd.get('project'),
-          name: fd.get('name'),
-          email: fd.get('email'),
-          phone: fd.get('phone'),
-          budget: fd.get('budget'),
-          message: `Project: ${fd.get('project')}\nName: ${fd.get('name')}\nEmail: ${fd.get('email')}\nPhone: ${fd.get('phone')}\nBudget: ${fd.get('budget')}\n\nMessage:\n${fd.get('msg')||''}`
-        };
-        try{
-          const res = await fetch("https://formspree.io/f/xrbyywrr", {
-            method:"POST",
-            headers:{ "Accept":"application/json", "Content-Type":"application/json" },
-            body: JSON.stringify(payload)
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
           });
-          if(res.ok){
-            form.reset();
-            note.className = "md:col-span-2 mt-2 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded px-3 py-2";
-            note.textContent = "Thanks! Your enquiry is submitted. We’ll reply from post@wegc.fund.";
-            note.classList.remove('hidden');
-          }else{
-            throw new Error('Formspree error');
-          }
-        }catch(err){
-          note.className = "md:col-span-2 mt-2 text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded px-3 py-2";
-          note.textContent = "Could not submit. Try again or email post@wegc.fund.";
-          note.classList.remove('hidden');
         }
       });
-    })();
-
-    // Language dropdown + i18n
-    (function(){
-      const btn = document.getElementById('langBtn');
-      const menu = document.getElementById('langMenu');
-      const label = document.getElementById('langLabel');
-      if(btn && menu){
-        btn.addEventListener('click', ()=>{
-          const isOpen = menu.classList.toggle('open');
-          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-        document.addEventListener('click', (e)=>{
-          if(!menu.contains(e.target) && !btn.contains(e.target)) menu.classList.remove('open');
-        });
-      }
-      const dict = {
-        en:{nav_fund:'Fund',nav_trading_house:'Trading House (HK)',hero_title:'Most profitable & reliable Phuket properties',hero_sub:'Developer prices. Zero buyer commission. Curated by GIDR data.',b1:'Best-in-class projects only — screened for rental demand & liquidity',b2:'Direct developer contracts — no agency markup',b3:'AI-assessed by the Hong Kong Institute of Digital Research (GIDR)',b4:'Leasehold & Freehold routes — clearly explained'},
-        ru:{nav_fund:'Фонд',nav_trading_house:'Торговый дом (ГК)',hero_title:'Самые прибыльные и надёжные объекты Пхукета',hero_sub:'Цены застройщика. 0% комиссии покупателя. Курация на основе данных GIDR.',b1:'Только лучшие проекты — отобраны по спросу на аренду и ликвидности',b2:'Прямые контракты с застройщиком — без наценки агентства',b3:'AI-оценка Гонконгского института цифровых исследований (GIDR)',b4:'Leasehold и Freehold — простое объяснение'},
-        zh:{nav_fund:'基金',nav_trading_house:'贸易公司 (香港)',hero_title:'普吉岛最具收益与可靠的房产',hero_sub:'开发商价格。买方零佣金。基于 GIDR 数据甄选。',b1:'仅甄选一流项目——基于租赁需求与流动性筛选',b2:'开发商直签——无中介加价',b3:'由香港数字研究院（GIDR）进行 AI 评估',b4:'清晰解释 Leasehold 与 Freehold'},
-        ar:{nav_fund:'الصندوق',nav_trading_house:'بيت التجارة (هونغ كونغ)',hero_title:'أفضل عقارات بوكيت ربحيةً وموثوقيةً',hero_sub:'أسعار المطوّر. عمولة المشتري 0%. مختارة ببيانات GIDR.',b1:'مشاريع من الفئة الأولى — مفحوصة لطلب الإيجار والسيولة',b2:'عقود مباشرة مع المطوّر — دون زيادة وكالات',b3:'تقييم بالذكاء الاصطناعي من معهد GIDR في هونغ كونغ',b4:'توضيح مسارات الحيازة Leasehold و Freehold'}
-      };
-      function setLang(code, dir){
-        const d = dict[code] || dict.en;
-        document.querySelectorAll('[data-i18n]').forEach(el=>{
-          const k = el.getAttribute('data-i18n');
-          if(d[k]) el.textContent = d[k];
-        });
-        document.documentElement.setAttribute('dir', dir || 'ltr');
-        document.documentElement.setAttribute('lang', code || 'en');
-        if(label) label.textContent = code.toUpperCase();
-        localStorage.setItem('lang', JSON.stringify({code, dir: dir||'ltr'}));
-        const url = new URL(location.href);
-        url.searchParams.set('lang', code);
-        history.replaceState({}, '', url.toString());
-      }
-      menu?.querySelectorAll('[data-lang]').forEach(item=>{
-        item.addEventListener('click', ()=>{
-          setLang(item.getAttribute('data-lang'), item.getAttribute('data-dir')||'ltr');
-          menu.classList.remove('open');
-        });
-      });
-      // Init from storage
-      try{
-        const saved = JSON.parse(localStorage.getItem('lang')||'{}');
-        const qp = new URLSearchParams(location.search);
-        const qlang = qp.get('lang');
-        if(qlang){
-          setLang(qlang, qlang==='ar' ? 'rtl' : 'ltr');
-        } else if(saved.code){
-          setLang(saved.code, saved.dir||'ltr');
-          if(label) label.textContent = saved.code.toUpperCase();
-        }
-      }catch(_){}
-    })();
-
-    // Simple sparkline renderer
-    function renderSparklines(){
-      document.querySelectorAll('#modal-body canvas.spark').forEach(cv=>{
-        const pts=(cv.dataset.points||'').split(',').map(Number).filter(n=>!isNaN(n));
-        if(!pts.length) return;
-        const ctx=cv.getContext('2d'); const w=cv.width=150, h=cv.height=40; ctx.clearRect(0,0,w,h);
-        const min=Math.min(...pts), max=Math.max(...pts), sx=w/Math.max(1,(pts.length-1));
-        ctx.lineWidth=2; ctx.strokeStyle='#0ea5e9'; ctx.beginPath();
-        pts.forEach((v,i)=>{const x=i*sx, y=h-((v-min)/(max-min||1))*h; i?ctx.lineTo(x,y):ctx.moveTo(x,y);});
-        ctx.stroke();
-      });
-    }
-  </script>
-
-  <!-- Database and project management -->
-  <script defer src="/js/database.js"></script>
-
-  <!-- Company data and burger menu script -->
-  <script defer>
-    const COMPANY = {
-      name: "WEST EAST TRADE GROUP PTE. LTD.",
-      uen: "202505772C",
-      address: "7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987",
-      postal: "038987",
-      email: "post@wegc.fund"
-    };
-    document.getElementById('uen')?.textContent = COMPANY.uen;
-    document.getElementById('postal')?.textContent = COMPANY.postal;
-
-    // Burger menu functionality
-    const burger = document.getElementById('burgerBtn');
-    const menu = document.getElementById('navMenu');
-    burger?.addEventListener('click', ()=>{
-      menu.classList.toggle('hidden');
-      burger.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
-      burger.setAttribute('aria-pressed', menu.classList.contains('hidden') ? 'false' : 'true');
     });
   </script>
+
 </body>
 </html>
