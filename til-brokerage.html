@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TIL Brokerage — AI-Native Property Acquisition Engine</title>
+  <meta name="description" content="An AI-native acquisition engine built on the TIL world model — not a traditional property agency. Smart Entry. Smart Exit.">
+
+  <!-- Global Design System -->
+  <link rel="stylesheet" href="style-global.css">
+
+  <!-- Tailwind CSS CDN -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .container-max{max-width:1200px}
+    .hero-tech{
+      background:
+        radial-gradient(1000px 400px at 80% -200px, rgba(59,130,246,0.1), transparent 60%),
+        radial-gradient(800px 300px at -100px 20%, rgba(34,211,238,0.08), transparent 60%);
+    }
+    .nav{position:sticky;top:0;z-index:1000}
+    @media (max-width:768px){
+      #navMenu{width:100%}
+      #navMenu a{display:block;border-bottom:1px solid rgba(255,255,255,.1);padding:.5rem 0}
+    }
+    /* FAQ Accordion */
+    .faq-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: white;
+      border: none;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
+    }
+    .faq-question:hover {
+      background-color: #f9fafb;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 500px;
+    }
+    .faq-answer-content {
+      padding: 0 1.5rem 1.5rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://wegc.fund/til-brokerage.html">
+</head>
+<body class="antialiased text-gray-800 bg-white">
+
+  <!-- Top navigation bar -->
+  <nav class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
+    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="font-semibold text-white hover:text-gray-300 text-base">Terra Intelligence Lab</a>
+        <button id="burgerBtn" class="md:hidden p-2 border border-white/30 rounded" aria-label="Toggle menu">☰</button>
+      </div>
+      <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
+        <a href="/" class="block py-2 md:py-0 hover:text-gray-300">TIL</a>
+        <a href="/til-brokerage.html" class="block py-2 md:py-0 hover:text-gray-300">TIL Brokerage</a>
+        <a href="/fund.html" class="block py-2 md:py-0 hover:text-gray-300">Fund</a>
+        <a href="/wet-trading-house.html" class="block py-2 md:py-0 hover:text-gray-300">Trading House (HK)</a>
+        <a href="#contact-form" class="block py-2 md:py-0 hover:text-gray-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="bg-black text-white py-20 md:py-32 hero-tech">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+          TIL Brokerage
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed">
+          An AI-native acquisition engine built on the TIL world model — not a traditional property agency.
+        </p>
+        <p class="text-sm text-gray-400 mb-8">Smart Entry. Smart Exit.</p>
+        <a href="#contact-form" class="inline-block px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+          Request AI Property Report
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Services -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Services
+        </h2>
+        <p class="text-lg text-gray-700 mb-12">
+          We find value others do not see.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Property Acquisition Intelligence</h3>
+            <p class="text-gray-700 leading-relaxed">
+              AI-powered due diligence reports that go beyond traditional property checks. Our model analyzes location dynamics, developer risk, project viability, and financial projections using thousands of territorial signals.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">GRID Index Scoring</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Compare any project against our structured scoring model. See where demand is forming, where risk is building, and where the next pockets of value are likely to emerge.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Exit Strategy Intelligence</h3>
+            <p class="text-gray-700 leading-relaxed">
+              AI-powered exit timing windows based on market cycles, liquidity depth, and territory dynamics. Know when to hold and when to exit.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Transaction Support</h3>
+            <p class="text-gray-700 leading-relaxed">
+              End-to-end support from initial intelligence gathering through due diligence, negotiation, and closing. Decisions powered by intelligence, not opinions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: AI Due Diligence Intelligence -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-sm text-gray-500 mb-2">Decisions powered by intelligence, not opinions.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          AI Due Diligence Intelligence — the questions our model asks before recommending any project
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Card 1: Location Intelligence -->
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Location Intelligence</h3>
+            <ul class="space-y-2 text-gray-700 leading-relaxed list-disc list-inside">
+              <li>What is the real foot traffic in this microlocation?</li>
+              <li>How will new infrastructure reshape demand?</li>
+              <li>Is there hidden supply saturation coming?</li>
+              <li>What is the sentiment and booking pattern trend?</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Developer Intelligence -->
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Developer Intelligence</h3>
+            <ul class="space-y-2 text-gray-700 leading-relaxed list-disc list-inside">
+              <li>Delivery history, delays, construction risk</li>
+              <li>Contractor substitution probability</li>
+              <li>Financial resilience of the developer</li>
+              <li>Reputation & previous defects cases</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Project Intelligence -->
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Project Intelligence</h3>
+            <ul class="space-y-2 text-gray-700 leading-relaxed list-disc list-inside">
+              <li>Daily rental legality (beyond brochure claims)</li>
+              <li>Leasehold renewal probability</li>
+              <li>Operator quality & real achievable occupancy</li>
+              <li>Long-term liquidity vs. brochure ROI</li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Financial Intelligence -->
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Financial Intelligence</h3>
+            <ul class="space-y-2 text-gray-700 leading-relaxed list-disc list-inside">
+              <li>Real net yield after fees</li>
+              <li>Liquidity depth of segment</li>
+              <li>Exit window prediction (AI)</li>
+              <li>Minimum optimal holding period</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Buyer Intelligence FAQ -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm text-gray-500 mb-2">Clarity in complex markets.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Buyer Intelligence FAQ — TIL answers the hard questions
+        </h2>
+        <div class="space-y-3">
+          <!-- Q1 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can foreigners own property in Thailand?</span>
+              <span class="text-gray-400">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Foreigners can own condominium units (up to 49% of a building) in freehold, but cannot own land directly. Leasehold is common for villas and land plots, typically 30-year renewable leases. However, leasehold renewal is not guaranteed and carries long-term depreciation risk. TIL models the probability of successful renewal based on developer track record, legal structure, and historical patterns.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Is leasehold safe?</span>
+              <span class="text-gray-400">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Leasehold carries structural depreciation risk. As the lease term decreases, the property value typically declines. Renewal is not automatic and depends on the lessor's willingness and legal structure. TIL's risk-score approach evaluates developer reliability, lease structure, renewal probability, and historical renewal rates in similar projects. We factor in these risks when scoring projects in the GRID Index.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Is daily rental legal?</span>
+              <span class="text-gray-400">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Daily rental of condominium units requires a hotel license, which is difficult to obtain and rarely granted to individual unit owners. Most "daily rental" operations operate in a legal gray area. Enforcement varies by district and can change with new regulations. TIL models regulatory enforcement probability based on district-level enforcement history, project scale, and operator compliance track record. We flag high-risk projects where daily rental claims may not be legally sustainable.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>What is the real rental yield in Phuket?</span>
+              <span class="text-gray-400">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Brochure numbers often claim 6-8% gross yields, but real net yields after management fees, maintenance, vacancies, and seasonal variations typically range from 3-5% for well-managed properties. TIL uses AI-adjusted occupancy forecasts based on actual booking data, seasonal patterns, operator quality, and location dynamics. We provide realistic yield projections, not marketing numbers.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>How do I compare two projects objectively?</span>
+              <span class="text-gray-400">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Use GRID Index — a structured scoring model based on thousands of territorial signals. GRID evaluates location dynamics, developer risk, project viability, financial projections, and exit liquidity. Each project receives a composite score across multiple dimensions, allowing objective comparison beyond marketing claims. TIL reports include GRID scores and detailed breakdowns for any project you're evaluating.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>How do exits work in Phuket?</span>
+              <span class="text-gray-400">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Resale liquidity varies significantly by project, location, and market cycle. Premium locations with strong rental track records have better liquidity, while off-plan or secondary locations can take months or years to sell. TIL's AI exit timing windows analyze market cycles, liquidity depth, seasonal patterns, and territory dynamics to predict optimal exit windows. We help you understand not just what to buy, but when to exit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Phuket Market Intelligence Snapshot -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Phuket Territory Intelligence Snapshot
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Block 1: Demand Dynamics -->
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Demand Dynamics 2023–2025</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">
+              Rapid absorption of new supply driven by international buyer segments. Chinese and CIS markets showing strong recovery post-pandemic. Shift toward premium locations with proven rental track records. Secondary locations experiencing slower absorption.
+            </p>
+          </div>
+
+          <!-- Block 2: Supply & Construction Cycle -->
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Supply & Construction Cycle</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">
+              Saturation zones emerging in Patong and certain parts of Kamala. Multiple delayed projects due to construction bottlenecks and financing challenges. Infrastructure projects (airport expansion, road improvements) influencing value in specific corridors. New supply pipeline concentrated in premium beachfront areas.
+            </p>
+          </div>
+
+          <!-- Block 3: Risk Factors -->
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Risk Factors</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">
+              Legal enforcement risk increasing for unlicensed daily rental operations. Leasehold structural depreciation accelerating in projects with <30 years remaining. Price bubble warning in specific subdistricts with oversupply and weak fundamentals. Regulatory changes affecting foreign ownership structures under review.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The agentic intelligence loop -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-sm text-gray-500 mb-2">We find value others do not see.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+          The agentic intelligence loop
+        </h2>
+        <p class="text-lg text-gray-700 mb-12 leading-relaxed">
+          TIL Brokerage is not a standalone service. It is part of the closed-loop intelligence system where TIL builds the world-model, the Fund executes intelligent actions, and real outcomes return as feedback to strengthen the model. Every transaction we facilitate becomes data that makes the model smarter — and the next transaction better.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Contact Form -->
+  <section id="contact-form" class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
+          Request AI Property Report
+        </h2>
+        <form id="brokerageForm" class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm">
+          <div class="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+            <p class="text-sm text-amber-800">
+              <strong>Note:</strong> AI Property Reports are coming soon. For now, contact <a href="mailto:post@wegc.fund?subject=AI Property Report Request" class="underline font-semibold">post@wegc.fund</a>
+            </p>
+          </div>
+          <div class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-2 text-gray-900">Name <span class="text-red-500">*</span></label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2 text-gray-900">Email <span class="text-red-500">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-semibold mb-2 text-gray-900">Company</label>
+              <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="property" class="block text-sm font-semibold mb-2 text-gray-900">Property/Project of Interest</label>
+              <input type="text" id="property" name="property" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-2 text-gray-900">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"></textarea>
+            </div>
+            <div id="formMessage" class="hidden p-4 rounded-lg"></div>
+            <button type="submit" class="w-full px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+              Submit Request
+            </button>
+            <p class="text-xs text-gray-500 text-center mt-4">
+              Form submission coming soon. For immediate inquiries, please email <a href="mailto:post@wegc.fund?subject=AI Property Report Request" class="underline">post@wegc.fund</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container-max mx-auto px-4 text-center text-sm text-gray-400 space-y-4">
+      <nav class="space-x-4">
+        <a href="/" class="hover:text-white">TIL</a>
+        <a href="/til-brokerage.html" class="hover:text-white">TIL Brokerage</a>
+        <a href="/fund.html" class="hover:text-white">Fund</a>
+        <a href="/wet-trading-house.html" class="hover:text-white">Trading House (HK)</a>
+        <a href="#contact-form" class="hover:text-white">Contact</a>
+      </nav>
+      <p>© Terra Intelligence Lab — Territory Intelligence Layer for the AI Era</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('burgerBtn')?.addEventListener('click', function() {
+      const menu = document.getElementById('navMenu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-answer').forEach(item => {
+          item.classList.remove('open');
+        });
+        document.querySelectorAll('.faq-question span:last-child').forEach(span => {
+          span.textContent = '+';
+        });
+        
+        // Toggle current FAQ
+        if (!isOpen) {
+          answer.classList.add('open');
+          this.querySelector('span:last-child').textContent = '−';
+        }
+      });
+    });
+
+    // Form validation and submission
+    document.getElementById('brokerageForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const formMessage = document.getElementById('formMessage');
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      
+      // Basic validation
+      if (!name || !email) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-50 text-red-700 border border-red-200';
+          formMessage.textContent = 'Please fill in all required fields.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-50 text-red-700 border border-red-200';
+          formMessage.textContent = 'Please enter a valid email address.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Form is not yet active - NO DATA IS SUBMITTED
+      if (formMessage) {
+        formMessage.className = 'p-4 rounded-lg bg-amber-50 text-amber-800 border border-amber-200';
+        formMessage.innerHTML = '<strong>⚠️ Form submission is not yet active.</strong> No data has been sent. Please contact us directly at <a href="mailto:post@wegc.fund?subject=AI Property Report Request&body=' + 
+          encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nCompany: ' + (form.querySelector('#company').value || 'N/A') + '\nProperty: ' + (form.querySelector('#property').value || 'N/A') + '\n\nMessage:\n' + (form.querySelector('#message').value || 'N/A')) + 
+          '" class="underline font-semibold">post@wegc.fund</a> to submit your request.';
+        formMessage.classList.remove('hidden');
+      }
+    });
+
+    // Smooth scroll for anchor links (only for same-page anchors, not cross-page links)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Only intercept same-page anchors (starting with just #), not cross-page links (starting with /#)
+        if (href.startsWith('/#')) {
+          // Allow normal navigation for cross-page links
+          return;
+        }
+        // For same-page anchors, use smooth scroll
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
