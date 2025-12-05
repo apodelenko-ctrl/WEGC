@@ -1,0 +1,29 @@
+# WEGC Website Redirects
+# Redirect old TIL page to main landing
+Redirect 301 /til.html /
+
+# Redirect GIDR references to homepage
+Redirect 301 /gidr /
+RedirectMatch 301 ^/gidr(.*)$ /
+
+# Ensure proper MIME types
+AddType text/css .css
+AddType application/javascript .js
+
+# Enable compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Browser caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
