@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terra Intelligence Lab — Territory Intelligence Layer for the AI Era</title>
+  <meta name="description" content="Terra Intelligence Lab builds a continuously-learning world model of resort territories — a new layer between the physical world and AI systems that need to understand it.">
+
+  <!-- Global Design System -->
+  <link rel="stylesheet" href="style-global.css">
+
+  <!-- Tailwind CSS CDN -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .container-max{max-width:1200px}
+    .hero-tech{
+      background:
+        radial-gradient(1000px 400px at 80% -200px, rgba(59,130,246,0.1), transparent 60%),
+        radial-gradient(800px 300px at -100px 20%, rgba(34,211,238,0.08), transparent 60%);
+    }
+    .nav{position:sticky;top:0;z-index:1000}
+    @media (max-width:768px){
+      #navMenu{width:100%}
+      #navMenu a{display:block;border-bottom:1px solid rgba(255,255,255,.1);padding:.5rem 0}
+    }
+  </style>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://wegc.fund/til.html">
+</head>
+<body class="antialiased text-gray-800 bg-white">
+
+  <!-- Top navigation bar -->
+  <nav class="bg-black/90 text-white text-sm sticky top-0 z-50 border-b border-white/10 backdrop-blur nav">
+    <div class="container-max mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="font-semibold text-white hover:text-gray-300 text-base">West East Real Estate</a>
+        <button id="burgerBtn" class="md:hidden p-2 border border-white/30 rounded" aria-label="Toggle menu">☰</button>
+      </div>
+      <div id="navMenu" class="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 w-full md:w-auto mt-3 md:mt-0 bg-black/95 md:bg-transparent p-4 md:p-0 rounded-md">
+        <a href="/#gidr" class="block py-2 md:py-0 hover:text-gray-300">GIDR</a>
+        <a href="/fund.html" class="block py-2 md:py-0 hover:text-gray-300">Fund</a>
+        <a href="/wet-trading-house.html" class="block py-2 md:py-0 hover:text-gray-300">Trading House (HK)</a>
+        <a href="/til.html" class="block py-2 md:py-0 hover:text-gray-300 text-emerald-400">TIL</a>
+        <a href="/#portfolio" class="block py-2 md:py-0 hover:text-gray-300">Portfolio</a>
+        <a href="/#contact" class="block py-2 md:py-0 hover:text-gray-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="bg-black text-white py-20 md:py-32 hero-tech">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+          The Territory Intelligence Layer for the AI Era
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+          Terra Intelligence Lab is building a continuously-learning world model of resort territories — a new layer between the physical world and AI systems that need to understand it.
+        </p>
+        <a href="#investor-form" class="inline-block px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+          Request TIL Investor Brief
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: A new layer between the map and the market -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          A new layer between the map and the market
+        </h2>
+        <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+          <p>
+            Maps show where things are. Dashboards show what has happened. Terra Intelligence Lab builds something different — a territory-level world model that explains how a place really works.
+          </p>
+          <p>
+            We analyse resort territories as living systems: people flows, demand patterns, infrastructure, projects, sentiment and risk — all fused into a single, structured view.
+          </p>
+          <p>
+            This is not another map. It is an intelligence layer that can be used by both humans and AI agents to make better decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: What Terra Intelligence Lab actually does -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          What Terra Intelligence Lab actually does
+        </h2>
+        <p class="text-lg text-gray-700 mb-12">
+          In simple terms, TIL does three things inside each territory:
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">1. Observe the territory</h3>
+            <p class="text-gray-700 leading-relaxed">
+              We continuously capture thousands of signals: location, projects, infrastructure, mobility, pricing, online demand, booking and social behaviour. All of this is cleaned and aligned in time and space into a single territorial dataset.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">2. Understand the territory</h3>
+            <p class="text-gray-700 leading-relaxed">
+              On top of this data, we build a digital twin and a GRID Index — a dynamic scoring system for locations and projects. It shows where demand is forming, where risk is building, and where the next pockets of value are likely to emerge.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">3. Power decisions and AI agents</h3>
+            <p class="text-gray-700 leading-relaxed">
+              The model is exposed through an API and AI agents, so investors, brokers and developers — and in the future autonomous AI systems — can query the territory, compare projects and embed TIL signals directly into their workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Designed for an AI-native future -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Designed for an AI-native future
+        </h2>
+        <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+          <p>
+            Most tools today were built for people staring at dashboards. Terra Intelligence Lab is built for a world where AI systems will be making and assisting decisions.
+          </p>
+          <p>
+            TIL provides a structured, continuously-updated world model of resort territories that future AI agents can rely on — instead of scraping random data, guessing from incomplete maps, or relying on outdated reports.
+          </p>
+          <p>
+            We are not building yet another analytics product. We are building an infrastructure layer that other AI systems can stand on.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Why build TIL now -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Why build TIL now
+        </h2>
+        <ul class="space-y-4 text-lg text-gray-700 leading-relaxed list-disc list-inside">
+          <li>AI systems need structured world-models. Large models are powerful, but they lack deep structured understanding of real territories.</li>
+          <li>Territory Intelligence is a missing layer. Real estate, tourism and infrastructure still run on fragmented spreadsheets and opinions.</li>
+          <li>Resort territories are ideal sandboxes. Phuket is a closed, highly dynamic system that can be fully digitized, learned and replicated to similar markets.</li>
+          <li>The construction boom lacks objective scoring. Capital is deployed with no independent, mathematical rating of territories and projects.</li>
+          <li>Timing is right. AI adoption is exploding, transparency is in demand, and the cost of data and compute keeps falling.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Who TIL is for -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Who TIL is for
+        </h2>
+        <p class="text-lg text-gray-700 mb-12">
+          TIL is an infrastructure layer that can be used by different players in the ecosystem.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Investors & AI-driven funds</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Use TIL signals to screen territories, rank projects, and build AI-native investment strategies on top of a real-world model.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Developers & operators</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Understand how the territory around your projects evolves, how demand shifts, and how your positioning compares inside the GRID Index.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">AI agents & platforms</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Embed TIL via API as a trusted territorial world-model — to power autonomous analysis, recommendations, underwriting or advisory workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Roadmap 2025–2029 -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+          Roadmap 2025–2029
+        </h2>
+        <ul class="space-y-3 text-lg text-gray-700 leading-relaxed">
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2025</span>
+            <span>— Phuket model training</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2026</span>
+            <span>— API commercial launch</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2027</span>
+            <span>— Expansion to Bali</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2028</span>
+            <span>— Expansion to Dubai</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold mr-3 text-gray-900">2029</span>
+            <span>— Multi-territory world-model</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: For investors -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          For investors — how participation works
+        </h2>
+        <p class="text-lg text-gray-700 mb-12">
+          TIL is an infrastructure company, not a single project. Investor participation is structured in three stages:
+        </p>
+        <div class="space-y-8">
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">Stage 0 — Access & Alignment</h3>
+            <p class="text-gray-700 leading-relaxed">
+              You request the TIL Investor Brief and we run an alignment call to understand who you are, how you invest, and whether TIL fits your mandate.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">Stage 1 — Deep Technical & Operational Review</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Under NDA, you gain access to the TIL Data Room: model architecture, GRID framework, roadmap, monetization and risk view.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">Stage 2 — Commitment & Structuring</h3>
+            <p class="text-gray-700 leading-relaxed">
+              If there is mutual interest, we move to structuring participation, governance and capital allocation to match the long-term nature of TIL.
+            </p>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <a href="#investor-form" class="inline-block px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+            Request TIL Investor Brief
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Investor Form -->
+  <section id="investor-form" class="py-16 md:py-24 bg-gray-50">
+    <div class="container-max mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
+          Request TIL Investor Brief
+        </h2>
+        <form id="tilInvestorForm" class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+          <!-- TODO: insert Formspree endpoint -->
+          <div class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-2 text-gray-900">Name <span class="text-red-500">*</span></label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2 text-gray-900">Email <span class="text-red-500">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-semibold mb-2 text-gray-900">Company</label>
+              <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="country" class="block text-sm font-semibold mb-2 text-gray-900">Country</label>
+              <input type="text" id="country" name="country" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-2 text-gray-900">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"></textarea>
+            </div>
+            <div id="formMessage" class="hidden p-4 rounded-lg"></div>
+            <button type="submit" class="w-full px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors shadow-lg">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container-max mx-auto px-4 text-center text-sm text-gray-400">
+      <p>© Terra Intelligence Lab — Territory Intelligence Layer for the AI Era</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('burgerBtn')?.addEventListener('click', function() {
+      const menu = document.getElementById('navMenu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    });
+
+    // Form validation and submission
+    document.getElementById('tilInvestorForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const formMessage = document.getElementById('formMessage');
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      
+      // Basic validation
+      if (!name || !email) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-50 text-red-700 border border-red-200';
+          formMessage.textContent = 'Please fill in all required fields.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-50 text-red-700 border border-red-200';
+          formMessage.textContent = 'Please enter a valid email address.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Success message (placeholder until Formspree endpoint is added)
+      if (formMessage) {
+        formMessage.className = 'p-4 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200';
+        formMessage.textContent = 'Thank you! Your request has been submitted. We will contact you shortly.';
+        formMessage.classList.remove('hidden');
+        form.reset();
+      }
+      
+      // TODO: Add Formspree submission logic here
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
