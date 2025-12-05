@@ -47,6 +47,10 @@ function findHtmlFiles(dir) {
       }
       files.push(...findHtmlFiles(fullPath));
     } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      // Skip backup files
+      if (entry.name.includes('backup') || entry.name.includes('_backup') || entry.name.includes('.backup')) {
+        continue;
+      }
       files.push(fullPath);
     }
   }
