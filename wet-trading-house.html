@@ -3,348 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WET SOLUTION LIMITED | Global Trading House</title>
+    <title>WET SOLUTION LIMITED | Hong Kong Trading House</title>
     <meta name="description" content="Hong Kong Trading House specializing in textile and food commodity sourcing. Reliable execution for global B2B partners.">
-    <meta property="og:title" content="WET SOLUTION LIMITED | Global Trading House">
-    <meta property="og:description" content="Secure Supply Chains From Asia">
+    <meta property="og:title" content="WET SOLUTION LIMITED | Hong Kong Trading House">
+    <meta property="og:description" content="Connecting Asian Supply To Global Markets">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wegc.fund/wet-trading-house.html">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@500&display=swap" rel="stylesheet">
     
     <link rel="canonical" href="https://wegc.fund/wet-trading-house.html">
     
     <style>
-        /* Base Settings */
-        body { font-family: 'Manrope', sans-serif; background-color: #0f172a; color: #e2e8f0; }
-        h1, h2, h3, h4, .brand-font { font-family: 'Oswald', sans-serif; letter-spacing: 0.05em; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Oswald', sans-serif; }
         
-        /* Animations */
-        @keyframes flashGreen { 0% { color: #4ade80; } 100% { color: inherit; } }
-        @keyframes flashRed { 0% { color: #f87171; } 100% { color: inherit; } }
-        .flash-up { animation: flashGreen 1s ease; }
-        .flash-down { animation: flashRed 1s ease; }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
-
-        /* Images & Backgrounds */
+        /* Hero Background with Light Overlay */
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1516937941348-c09e5548e96f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); /* Hong Kong Night Port */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1494412574643-35d324698427?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        .grid-bg {
-            background-image: radial-gradient(#334155 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.1;
+
+        /* Ticker Animation */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
         }
+        .ticker {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Card Hover Effects */
+        .product-card { transition: all 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
     </style>
 </head>
-<body class="antialiased selection:bg-yellow-500 selection:text-blue-900">
+<body class="bg-slate-50 text-slate-800">
 
-    <div class="bg-slate-900 border-b border-slate-700 text-xs py-2 overflow-hidden whitespace-nowrap relative z-50">
-        <div class="inline-block animate-marquee pl-4">
-            <span class="mr-8 text-slate-400">SYSTEM STATUS: <span class="text-green-400 font-bold">ONLINE</span></span>
-            <span class="mr-8 text-slate-400">HK OFFICE: <span class="text-white font-bold">OPEN (09:00 - 18:00 HKT)</span></span>
-            <span class="mr-8 text-slate-400">LOGISTICS: <span class="text-yellow-400 font-bold">HIGH VOLUME</span></span>
-            <span class="mr-8 text-slate-400">LAST UPDATE: <span class="text-white font-mono" id="last-update">--:--:--</span></span>
+    <div class="bg-blue-900 text-white text-xs py-2 overflow-hidden relative z-50">
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <span class="px-6 border-r border-blue-800">HK OFFICE: <span class="font-bold text-green-400">OPEN</span></span>
+                <span class="px-6 border-r border-blue-800">USD/CNY: <span class="font-bold" id="cny-rate">7.24</span></span>
+                <span class="px-6 border-r border-blue-800">USD/HKD: <span class="font-bold" id="hkd-rate">7.82</span></span>
+                <span class="px-6 border-r border-blue-800">LOGISTICS STATUS: <span class="text-yellow-400">OPERATIONAL</span></span>
+                <span class="px-6 border-r border-blue-800">FREIGHT INDEX: <span class="font-bold">STABLE</span></span>
+                <span class="px-6 border-r border-blue-800">HK OFFICE: <span class="font-bold text-green-400">OPEN</span></span>
+                <span class="px-6 border-r border-blue-800">USD/CNY: <span class="font-bold">7.24</span></span>
+            </div>
         </div>
     </div>
 
-    <nav class="bg-slate-900/80 backdrop-blur-md border-b border-slate-700 sticky top-0 z-40">
+    <nav class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-40 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-yellow-500 text-blue-900 flex items-center justify-center font-bold text-xl rounded">W</div>
-                        <div class="leading-tight">
-                            <span class="block text-xl font-bold text-white tracking-tighter brand-font">WET SOLUTION</span>
-                            <span class="block text-[10px] text-slate-400 uppercase tracking-widest">Hong Kong Trading House</span>
-                        </div>
+                <div class="flex items-center gap-2">
+                    <a href="/" class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-blue-900 text-white flex items-center justify-center font-bold rounded-sm">W</div>
+                        <span class="text-xl font-bold text-slate-900 tracking-tight brand-font">WET SOLUTION</span>
                     </a>
                 </div>
-
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#market" class="text-sm font-semibold text-slate-300 hover:text-yellow-400 uppercase tracking-wide transition">Market Data</a>
-                    <a href="#divisions" class="text-sm font-semibold text-slate-300 hover:text-yellow-400 uppercase tracking-wide transition">Divisions</a>
-                    <a href="#contact" class="text-sm font-semibold text-slate-300 hover:text-yellow-400 uppercase tracking-wide transition">Contact</a>
+                    <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-blue-900 uppercase">About</a>
+                    <a href="#divisions" class="text-sm font-semibold text-slate-600 hover:text-blue-900 uppercase">Products</a>
+                    <a href="#logistics" class="text-sm font-semibold text-slate-600 hover:text-blue-900 uppercase">Logistics</a>
                     
-                    <a href="/" class="flex items-center gap-2 text-sm font-semibold text-blue-400 border border-blue-900 bg-blue-900/20 px-3 py-1 rounded hover:bg-blue-900/50 transition">
-                        <i class="fa-solid fa-cube"></i> Ecosystem / TIL
+                    <a href="/" class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded hover:bg-blue-100 transition border border-blue-100">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs mr-1"></i> Ecosystem
                     </a>
 
-                    <a href="#contact" class="bg-white text-blue-900 px-6 py-2 rounded font-bold text-sm hover:bg-yellow-400 transition shadow-lg transform hover:-translate-y-0.5">
-                        <i class="fa-solid fa-bolt mr-2"></i> GET QUOTE
+                    <a href="#contact" class="bg-blue-900 text-white px-5 py-2 rounded font-medium text-sm hover:bg-blue-800 transition shadow-md">
+                        Contact Trading Desk
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg min-h-screen flex items-center justify-center text-white relative">
-        <div class="max-w-7xl mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-10">
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-10" id="about">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            <div class="lg:col-span-7">
-                <div class="inline-flex items-center gap-2 bg-blue-900/50 border border-blue-500/30 text-blue-300 font-bold px-3 py-1 text-xs uppercase tracking-widest mb-6 rounded backdrop-blur-sm">
-                    International Trade Execution
+            <div>
+                <div class="inline-block bg-blue-100 text-blue-900 font-bold px-3 py-1 text-xs uppercase tracking-widest mb-4 rounded-sm">
+                    Hong Kong • Global Trading House
                 </div>
-                <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-none">
-                    SECURE <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200">SUPPLY CHAINS</span> <br>
-                    FROM ASIA.
+                <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    Connecting Asian Supply <br> To Global Markets
                 </h1>
-                <p class="text-lg text-slate-300 mb-8 max-w-lg leading-relaxed border-l-2 border-yellow-500 pl-6">
-                    We bridge the gap between Asian manufacturers and global buyers. 
-                    Specialized sourcing in <b>Frozen Commodities</b> and <b>Textiles</b> with integrated logistics.
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-lg">
+                    We specialize in the wholesale sourcing of <b>Textiles</b> and <b>Frozen Commodities</b>. 
+                    From factory audit to customs clearance, we manage the entire supply chain.
                 </p>
                 <div class="flex gap-4">
-                    <a href="#divisions" class="px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold rounded shadow-lg transition uppercase tracking-wide">
-                        View Catalog
+                    <a href="#divisions" class="px-8 py-4 bg-blue-900 hover:bg-blue-800 text-white font-semibold rounded shadow-lg transition">
+                        Our Divisions
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold rounded transition">
+                        Request Quote
                     </a>
                 </div>
             </div>
 
-            <div class="lg:col-span-5">
-                <div class="bg-slate-900/90 backdrop-blur border border-slate-700 rounded-xl p-6 shadow-2xl">
-                    <div class="flex justify-between items-center mb-4 border-b border-slate-700 pb-2">
-                        <h3 class="text-white font-bold uppercase text-sm"><i class="fa-solid fa-chart-line text-yellow-500 mr-2"></i> Live FX Rates</h3>
-                        <span class="text-xs text-slate-500 animate-pulse">● LIVE</span>
-                    </div>
+            <div class="hidden lg:block">
+                <div class="bg-white p-8 rounded-xl shadow-2xl border border-slate-100 max-w-sm ml-auto relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 to-blue-500"></div>
                     
-                    <div class="space-y-4 font-mono text-sm">
-                        <div class="flex justify-between items-center p-3 bg-slate-800/50 rounded hover:bg-slate-800 transition">
-                            <div class="flex items-center gap-3">
-                                <span class="text-slate-400">USD/CNY</span>
-                            </div>
-                            <div class="text-right">
-                                <div class="font-bold text-white rate-value" data-base="7.24">7.2400</div>
-                                <div class="text-xs text-slate-500 rate-change">+0.05%</div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center p-3 bg-slate-800/50 rounded hover:bg-slate-800 transition">
-                            <div class="flex items-center gap-3">
-                                <span class="text-slate-400">USD/HKD</span>
-                            </div>
-                            <div class="text-right">
-                                <div class="font-bold text-white rate-value" data-base="7.82">7.8200</div>
-                                <div class="text-xs text-slate-500 rate-change">0.00%</div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center p-3 bg-slate-800/50 rounded hover:bg-slate-800 transition">
-                            <div class="flex items-center gap-3">
-                                <span class="text-slate-400">USD/THB</span>
-                            </div>
-                            <div class="text-right">
-                                <div class="font-bold text-white rate-value" data-base="35.50">35.5000</div>
-                                <div class="text-xs text-slate-500 rate-change">-0.12%</div>
-                            </div>
-                        </div>
-                         <div class="flex justify-between items-center p-3 bg-slate-800/50 rounded hover:bg-slate-800 transition border-l-2 border-yellow-500">
-                            <div class="flex items-center gap-3">
-                                <span class="text-yellow-500">SCFI (Freight)</span>
-                            </div>
-                            <div class="text-right">
-                                <div class="font-bold text-white">1024.50</div>
-                                <div class="text-xs text-green-400">Stable</div>
-                            </div>
-                        </div>
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-slate-900 brand-font text-lg">MARKET SNAPSHOT</h3>
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="market" class="py-20 bg-slate-900 relative">
-        <div class="absolute inset-0 grid-bg"></div>
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-white">Market Intelligence</h2>
-                <p class="text-slate-400">Real-time sourcing dynamics from our analytics desk.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                    <h4 class="text-slate-300 font-bold mb-4 text-sm uppercase">Frozen Poultry Index (Asia Import)</h4>
-                    <div class="flex items-end space-x-2 h-40 pt-4 border-b border-slate-600 pb-2">
-                        <div class="w-1/6 bg-blue-900 h-[60%] rounded-t hover:bg-blue-600 transition relative group"><span class="absolute -top-6 left-1 text-xs text-slate-400 opacity-0 group-hover:opacity-100">Q1</span></div>
-                        <div class="w-1/6 bg-blue-900 h-[55%] rounded-t hover:bg-blue-600 transition relative group"><span class="absolute -top-6 left-1 text-xs text-slate-400 opacity-0 group-hover:opacity-100">Q2</span></div>
-                        <div class="w-1/6 bg-blue-900 h-[70%] rounded-t hover:bg-blue-600 transition relative group"><span class="absolute -top-6 left-1 text-xs text-slate-400 opacity-0 group-hover:opacity-100">Q3</span></div>
-                        <div class="w-1/6 bg-blue-900 h-[65%] rounded-t hover:bg-blue-600 transition relative group"><span class="absolute -top-6 left-1 text-xs text-slate-400 opacity-0 group-hover:opacity-100">Q4</span></div>
-                        <div class="w-1/6 bg-yellow-500 h-[85%] rounded-t hover:bg-yellow-400 transition relative group animate-pulse">
-                            <span class="absolute -top-8 left-1 text-xs font-bold text-yellow-400">NOW</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between text-xs text-slate-500 mt-2">
-                        <span>2024 Trend</span>
-                        <span>High Demand Zone</span>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                    <h4 class="text-slate-300 font-bold mb-4 text-sm uppercase">Logistics Efficiency</h4>
                     <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                <span>Sourcing & QC</span>
-                                <span class="text-white">5 Days</span>
+                        <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
+                                    <i class="fa-solid fa-yen-sign text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase">CNY / USD</div>
+                                    <div class="font-bold text-slate-800 dynamic-rate" data-base="7.24">7.2400</div>
+                                </div>
                             </div>
-                            <div class="w-full bg-slate-700 h-2 rounded-full">
-                                <div class="bg-blue-500 h-2 rounded-full" style="width: 20%"></div>
+                            <div class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">+0.05%</div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
+                                    <i class="fa-solid fa-dollar-sign text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase">HKD / USD</div>
+                                    <div class="font-bold text-slate-800 dynamic-rate" data-base="7.82">7.8215</div>
+                                </div>
+                            </div>
+                            <div class="text-xs font-bold text-slate-400 bg-slate-50 px-2 py-1 rounded">0.00%</div>
+                        </div>
+
+                         <div class="pt-2">
+                            <div class="text-xs text-slate-500 uppercase mb-2 flex justify-between">
+                                <span>Commodity Demand (Poultry)</span>
+                                <span class="text-blue-900 font-bold">HIGH</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                <div class="bg-blue-900 h-1.5 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
-                        <div>
-                            <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                <span>Export Docs (HK)</span>
-                                <span class="text-white">2 Days</span>
-                            </div>
-                            <div class="w-full bg-slate-700 h-2 rounded-full">
-                                <div class="bg-green-500 h-2 rounded-full" style="width: 10%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                <span>Sea Freight (Avg)</span>
-                                <span class="text-white">25-35 Days</span>
-                            </div>
-                            <div class="w-full bg-slate-700 h-2 rounded-full">
-                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 70%"></div>
-                            </div>
-                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 text-center">
+                         <p class="text-xs text-slate-400">Data delayed by 15 mins. Indicative only.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="divisions" class="py-24 bg-slate-50 text-slate-900">
-        <div class="max-w-7xl mx-auto px-4">
+    <section id="divisions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-blue-900 font-bold text-sm uppercase tracking-widest mb-2">Our Core Divisions</h2>
-                <h3 class="text-4xl font-bold">Industrial Sourcing</h3>
+                <h2 class="text-blue-900 font-bold text-sm uppercase tracking-widest mb-2">Our Catalog</h2>
+                <h3 class="text-4xl font-extrabold text-slate-900 brand-font">Key Trading Sectors</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group relative rounded-xl overflow-hidden shadow-xl h-96">
-                    <img src="https://images.unsplash.com/photo-1627483298606-1293872c1d9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Meat">
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/40 to-transparent opacity-90"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fa-solid fa-drumstick-bite text-yellow-400 text-3xl mb-4"></i>
-                        <h4 class="text-2xl font-bold text-white mb-2">Frozen Commodities</h4>
-                        <p class="text-slate-200 text-sm mb-4 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300">
-                            Wholesale poultry, beef, and pork cuts for processing plants. HACCP certified.
+                
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meat" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-blue-900/20 group-hover:bg-blue-900/10 transition"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mb-4 text-xl -mt-14 relative z-10 border-4 border-white">
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Frozen Commodities</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Direct sourcing of Poultry, Beef, and Pork cuts. We handle HACCP certification and cold-chain logistics to destination ports.
                         </p>
-                        <a href="#contact" class="inline-block text-yellow-400 text-sm font-bold uppercase tracking-wider border-b border-yellow-400 pb-1">Request Price List</a>
+                        <ul class="text-xs text-slate-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Chicken Feet / Paws / MJW</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Frozen Beef Cuts</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="group relative rounded-xl overflow-hidden shadow-xl h-96">
-                    <img src="https://images.unsplash.com/photo-1620799140408-ed5341cd2431?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Textile">
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/40 to-transparent opacity-90"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fa-solid fa-layer-group text-yellow-400 text-3xl mb-4"></i>
-                        <h4 class="text-2xl font-bold text-white mb-2">Textile & Apparel</h4>
-                        <p class="text-slate-200 text-sm mb-4 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300">
-                            Raw fabrics, uniforms, and OEM garments. Strict GSM control and quality checks.
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f11a3b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Textile" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="absolute inset-0 bg-indigo-900/20 group-hover:bg-indigo-900/10 transition"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-indigo-50 text-indigo-900 rounded-full flex items-center justify-center mb-4 text-xl -mt-14 relative z-10 border-4 border-white">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Textile & Raw Materials</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Industrial-grade fabrics and raw materials. From natural cotton to synthetic blends, ensuring consistent technical specs.
                         </p>
-                        <a href="#contact" class="inline-block text-yellow-400 text-sm font-bold uppercase tracking-wider border-b border-yellow-400 pb-1">Request Price List</a>
+                        <ul class="text-xs text-slate-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Cotton & Polyester Rolls</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Technical Fabrics</li>
+                        </ul>
                     </div>
                 </div>
 
-                 <div class="group relative rounded-xl overflow-hidden shadow-xl h-96">
-                    <img src="https://images.unsplash.com/photo-1566576912906-25317b34fb08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Logistics">
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/40 to-transparent opacity-90"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fa-solid fa-boxes-stacked text-yellow-400 text-3xl mb-4"></i>
-                        <h4 class="text-2xl font-bold text-white mb-2">General Sourcing</h4>
-                        <p class="text-slate-200 text-sm mb-4 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300">
-                            FMCG, Packaging, and Industrial Equipment. Your dedicated procurement office.
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1556906781-9a412961d28c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apparel" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-slate-100 text-slate-700 rounded-full flex items-center justify-center mb-4 text-xl -mt-14 relative z-10 border-4 border-white">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Apparel & General</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            OEM Manufacturing for corporate uniforms and workwear. Plus general procurement services for industrial equipment.
                         </p>
-                        <a href="#contact" class="inline-block text-yellow-400 text-sm font-bold uppercase tracking-wider border-b border-yellow-400 pb-1">Inquire Now</a>
+                        <ul class="text-xs text-slate-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Workwear & Uniforms</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Machinery Sourcing</li>
+                        </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-slate-900 border-t border-slate-700 pt-16 pb-8 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold brand-font mb-6">START TRADING</h2>
-            <p class="text-slate-400 mb-8 max-w-xl mx-auto">Send your Letter of Intent (LOI). We handle the rest.</p>
-            <a href="mailto:wet4kg@gmail.com" class="inline-flex items-center gap-3 bg-yellow-500 text-blue-900 px-8 py-4 rounded font-bold text-lg hover:bg-white transition">
-                wet4kg@gmail.com
-            </a>
-            
-            <div class="mt-12 pt-8 border-t border-slate-700">
-                <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400 mb-6">
-                    <a href="/" class="hover:text-white transition">WEGC Home</a>
-                    <a href="/til.html" class="hover:text-white transition">Terra Intelligence Lab</a>
-                    <a href="/til-memo.html" class="hover:text-white transition">TIL Deep Dive</a>
-                    <a href="/fund.html" class="hover:text-white transition">Fund</a>
-                    <a href="/wet-agency.html" class="hover:text-white transition">Real Estate Agency</a>
-                    <a href="/privacy.html" class="hover:text-white transition">Privacy</a>
+    <section id="logistics" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" class="absolute inset-0 w-full h-full object-cover opacity-10 invert" alt="map">
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-6 brand-font">Global Reach</h2>
+                <p class="text-gray-400 mb-6 text-lg">
+                    We don't just find the product; we deliver it. Our logistics team in Hong Kong coordinates sea freight and customs documentation.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-blue-900/50 p-4 rounded border border-blue-800">
+                        <div class="text-2xl font-bold text-yellow-400 mb-1">20+</div>
+                        <div class="text-xs text-gray-300">Active Countries</div>
+                    </div>
+                    <div class="bg-blue-900/50 p-4 rounded border border-blue-800">
+                        <div class="text-2xl font-bold text-yellow-400 mb-1">100%</div>
+                        <div class="text-xs text-gray-300">Compliance Rate</div>
+                    </div>
                 </div>
             </div>
             
-            <div class="text-slate-500 text-sm">
-                &copy; 2025 WET SOLUTION LIMITED. Hong Kong SAR. Reg: 76458883.
+            <div class="md:w-1/2 relative h-64 w-full bg-slate-800 rounded-xl border border-slate-700 shadow-2xl overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-slate-600 font-bold tracking-widest text-sm">
+                    [ INTERACTIVE SUPPLY CHAIN MAP ]
+                </div>
+                <div class="absolute top-[40%] left-[75%] w-3 h-3 bg-yellow-400 rounded-full animate-pulse shadow-[0_0_15px_rgba(250,204,21,0.6)]"></div> 
+                <div class="absolute top-[55%] left-[50%] w-2 h-2 bg-white rounded-full opacity-60"></div> 
+                <div class="absolute top-[25%] left-[52%] w-2 h-2 bg-white rounded-full opacity-60"></div> 
+                <svg class="absolute inset-0 w-full h-full pointer-events-none">
+                    <path d="M 550 160 Q 450 250 370 230" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none" />
+                    <path d="M 550 160 Q 450 100 380 110" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none" />
+                </svg>
             </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+            <div>
+                <span class="text-2xl font-bold text-slate-900 brand-font">WET SOLUTION</span>
+                <p class="mt-4 text-slate-600">
+                    Hong Kong registered Trading House. <br>
+                    Reliable sourcing. Transparent logistics.
+                </p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                <h4 class="font-bold text-lg mb-4 text-slate-900">Corporate Inquiries</h4>
+                <div class="space-y-3 text-sm text-slate-700 font-mono">
+                    <p><strong>Registration:</strong> 76458883 (Hong Kong SAR)</p>
+                    <p><strong>Address:</strong> FLAT/RM C, 7/F, WORLD TRUST TOWER, 50 STANLEY STREET, CENTRAL, HK</p>
+                    <a href="mailto:wet4kg@gmail.com" class="inline-block mt-2 text-blue-700 font-bold hover:underline text-base">wet4kg@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 mb-8">
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-500 border-t border-gray-100 pt-8">
+                <a href="/" class="hover:text-slate-700 transition">WEGC Home</a>
+                <a href="/til.html" class="hover:text-slate-700 transition">Terra Intelligence Lab</a>
+                <a href="/til-memo.html" class="hover:text-slate-700 transition">TIL Deep Dive</a>
+                <a href="/fund.html" class="hover:text-slate-700 transition">Fund</a>
+                <a href="/wet-agency.html" class="hover:text-slate-700 transition">Real Estate Agency</a>
+                <a href="/privacy.html" class="hover:text-slate-700 transition">Privacy</a>
+            </div>
+        </div>
+        
+        <div class="text-center text-slate-400 text-sm border-t border-gray-100 pt-8">
+            &copy; 2025 WET SOLUTION LIMITED. All Rights Reserved.
         </div>
     </footer>
 
     <script>
-        // Update Time
-        function updateTime() {
-            const now = new Date();
-            document.getElementById('last-update').innerText = now.toLocaleTimeString('en-US', {hour12: false});
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
-
-        // Simulate Currency Fluctuations
-        function fluctuateRates() {
-            const rates = document.querySelectorAll('.rate-value');
+        // Update ticker rates
+        setInterval(() => {
+            const cnyEl = document.getElementById('cny-rate');
+            const hkdEl = document.getElementById('hkd-rate');
+            
+            // Small fluctuation for CNY
+            const cnyVal = 7.24 + (Math.random() * 0.01 - 0.005);
+            cnyEl.innerText = cnyVal.toFixed(4);
+            cnyEl.classList.add('text-blue-300');
+            setTimeout(() => cnyEl.classList.remove('text-blue-300'), 500);
+            
+            // Small fluctuation for HKD
+            const hkdVal = 7.82 + (Math.random() * 0.005 - 0.0025);
+            hkdEl.innerText = hkdVal.toFixed(4);
+            hkdEl.classList.add('text-blue-300');
+            setTimeout(() => hkdEl.classList.remove('text-blue-300'), 500);
+        }, 3000);
+        
+        // Update market snapshot rates
+        setInterval(() => {
+            const rates = document.querySelectorAll('.dynamic-rate');
             rates.forEach(rate => {
                 const base = parseFloat(rate.getAttribute('data-base'));
-                // Random fluctuation +/- 0.005
-                const fluctuation = (Math.random() - 0.5) * 0.01;
+                const fluctuation = (Math.random() * 0.01 - 0.005);
                 const newValue = (base + fluctuation).toFixed(4);
-                
-                // Determine color
-                const changeElem = rate.nextElementSibling;
-                const oldValue = parseFloat(rate.innerText);
-                
-                if (newValue > oldValue) {
-                    rate.classList.remove('flash-down');
-                    rate.classList.add('flash-up');
-                    const changePercent = (((newValue - oldValue) / oldValue) * 100).toFixed(2);
-                    changeElem.innerText = "+" + changePercent + "%";
-                    changeElem.classList.add('text-green-400');
-                    changeElem.classList.remove('text-red-400', 'text-slate-500');
-                } else if (newValue < oldValue) {
-                    rate.classList.remove('flash-up');
-                    rate.classList.add('flash-down');
-                    const changePercent = (((newValue - oldValue) / oldValue) * 100).toFixed(2);
-                    changeElem.innerText = changePercent + "%";
-                    changeElem.classList.add('text-red-400');
-                    changeElem.classList.remove('text-green-400', 'text-slate-500');
-                } else {
-                    changeElem.innerText = "0.00%";
-                    changeElem.classList.remove('text-green-400', 'text-red-400');
-                    changeElem.classList.add('text-slate-500');
-                }
-                
                 rate.innerText = newValue;
             });
-        }
-        // Update every 3 seconds
-        setInterval(fluctuateRates, 3000);
+        }, 3000);
     </script>
 
 </body>
