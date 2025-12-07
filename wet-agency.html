@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>West East Real Estate | Phuket Agency</title>
-  <meta name="description" content="Most profitable & reliable Phuket properties. Developer prices, zero buyer commission, and AI-driven screening by Terra Intelligence Lab.">
+  <title>West East Real Estate | Most Profitable & Reliable Phuket Properties</title>
+  <meta name="description" content="Developer prices. Zero buyer commission. Curated by GIDR data. Most profitable & reliable Phuket properties for disciplined investors.">
   <meta property="og:title" content="West East Real Estate | Phuket Agency">
-  <meta property="og:description" content="Developer prices. Zero buyer commission. Curated by AI-driven territory intelligence.">
+  <meta property="og:description" content="Developer prices. Zero buyer commission. Curated by GIDR data.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wegc.fund/wet-agency.html">
 
@@ -20,8 +20,6 @@
     }
 
     body {
-      background-color: var(--bg-deep);
-      color: #020617;
       font-family: 'Inter', sans-serif;
     }
 
@@ -34,26 +32,36 @@
         0 18px 45px rgba(15, 23, 42, 0.18),
         0 8px 20px rgba(15, 23, 42, 0.1);
     }
+
+    /* Accordion styles */
+    .accordion-icon {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    details[open] .accordion-icon {
+      transform: rotate(90deg);
+    }
   </style>
 
   <link rel="canonical" href="https://wegc.fund/wet-agency.html">
 </head>
-<body class="antialiased">
+<body class="antialiased bg-white text-slate-900">
 
   <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-md text-white">
+  <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/90 backdrop-blur-md text-white">
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
         <a href="/" class="heading-font font-semibold tracking-tight text-lg hover:text-emerald-300 transition">
-          West East Real Estate
+          Terra Intelligence Lab
         </a>
       </div>
       <div class="hidden md:flex gap-7 text-xs font-medium tracking-wide">
-        <a href="/til-start.html" class="hover:text-emerald-300 transition">TIL</a>
-        <a href="/til-memo.html" class="hover:text-emerald-300 transition">TIL Memo</a>
+        <a href="/" class="hover:text-emerald-300 transition">TIL</a>
+        <a href="/til-memo.html" class="hover:text-emerald-300 transition">TIL Deep Dive</a>
         <a href="/fund.html" class="hover:text-emerald-300 transition">Fund</a>
-        <a href="/wet-agency.html" class="text-emerald-300">Agency</a>
+        <a href="/wet-agency.html" class="text-emerald-300">Real Estate Agency</a>
         <a href="/wet-trading-house.html" class="hover:text-emerald-300 transition">Trading House</a>
       </div>
       <a href="#contact" class="hidden sm:inline-flex items-center gap-2 border border-white/30 px-4 py-2 text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-black transition">
@@ -63,365 +71,263 @@
     </div>
   </nav>
 
-  <main class="pt-20 pb-24">
-    <!-- HERO -->
-    <section class="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0 py-16 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-emerald-300 mb-4">
-            WEST EAST REAL ESTATE · PHUKET
-          </p>
-          <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Thailand — a paradise<br class="hidden md:block">
-            for disciplined investors
-          </h1>
-          <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-6">
-            Limited beachfront land, strong tourism, and distinct rental seasons create structural, long-run demand for resort property.
-            We focus on a small set of projects in Phuket that combine reliable rental performance with clear ownership structures.
-          </p>
-          <p class="text-slate-400 text-sm mb-8">
-            Developer prices. Zero buyer commission. Projects are screened using <span class="font-semibold text-white">Terra Intelligence Lab</span>
-            signals for demand, liquidity, and risk.
-          </p>
-
-          <div class="flex flex-wrap gap-3">
-            <a href="#featured" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-slate-950 text-sm font-semibold shadow-soft hover:bg-slate-100 transition">
-              Browse projects
-            </a>
-            <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full border border-slate-500 text-sm font-medium hover:border-white hover:text-white transition">
-              Buy property
-            </a>
+  <main class="pt-20">
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 text-white py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-xs font-semibold tracking-[0.25em] uppercase text-emerald-300 mb-4">
+              West East Real Estate
+            </p>
+            <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Thailand — a paradise<br class="hidden md:block">
+              for disciplined investors
+            </h1>
+            <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
+              Limited beachfront land, strong tourism, and distinct rental seasons support long-run demand for resort property.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#featured" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-slate-950 text-sm font-semibold shadow-soft hover:bg-slate-100 transition">
+                Browse projects
+              </a>
+              <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full border border-slate-500 text-sm font-medium hover:border-white hover:text-white transition">
+                Buy property
+              </a>
+            </div>
           </div>
-        </div>
-
-        <div class="relative">
-          <div class="absolute -inset-6 bg-emerald-500/10 blur-3xl rounded-full"></div>
-          <div class="relative bg-slate-900/60 border border-slate-800 rounded-3xl overflow-hidden shadow-soft">
-            <div class="p-5 border-b border-slate-800 flex items-center justify-between text-xs text-slate-300">
-              <span class="font-mono">Phuket · GRID-screened coastal corridor</span>
-              <span class="inline-flex items-center gap-1">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                LIVE
-              </span>
-            </div>
-            <div class="p-6 grid grid-cols-2 gap-4 text-xs md:text-sm text-slate-200">
-              <div class="space-y-3">
-                <div>
-                  <div class="text-slate-400 text-[11px] uppercase tracking-widest mb-1">Sample project band</div>
-                  <div class="text-lg font-semibold">Yield ~5–9% p.a.</div>
-                  <div class="text-[11px] text-slate-400">
-                    Guidance based on comparable resort projects. Documents and contracts prevail.
-                  </div>
-                </div>
-                <div>
-                  <div class="text-[11px] uppercase tracking-widest text-slate-400 mb-1">Investor profile</div>
-                  <div class="text-sm text-slate-200">Long-term USD / THB investors seeking income + optional exit upside.</div>
+          <div class="relative">
+            <div class="absolute -inset-6 bg-emerald-500/10 blur-3xl rounded-full"></div>
+            <div class="relative bg-slate-900/60 border border-slate-800 rounded-3xl overflow-hidden shadow-soft">
+              <!-- Hero image placeholder - using a gradient with overlay text -->
+              <div class="aspect-[4/3] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative">
+                <img src="/images/the-modeva-exterior-2-1-1280x665.jpg" alt="Phuket property" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                  <div class="text-xs font-mono text-slate-300 mb-2">Phuket · Coastal Corridor</div>
+                  <div class="text-lg font-semibold">Premium Resort Properties</div>
                 </div>
               </div>
-              <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                  <span class="text-[11px] uppercase tracking-widest text-slate-400">Developer price</span>
-                  <span class="rounded-full border border-emerald-500/40 px-2 py-0.5 text-[11px] text-emerald-300">
-                    0% buyer fee
-                  </span>
-                </div>
-                <div class="h-2 w-full rounded-full bg-slate-800 overflow-hidden">
-                  <div class="h-2 bg-emerald-400 w-2/3"></div>
-                </div>
-                <div class="grid grid-cols-2 gap-3 text-[11px]">
-                  <div class="space-y-1">
-                    <div class="text-slate-400">Liquidity</div>
-                    <div class="text-emerald-300 font-semibold">High</div>
-                  </div>
-                  <div class="space-y-1">
-                    <div class="text-slate-400">Volatility</div>
-                    <div class="text-slate-200">Moderate</div>
-                  </div>
-                  <div class="space-y-1">
-                    <div class="text-slate-400">Tourism trend</div>
-                    <div class="text-emerald-300">Upward</div>
-                  </div>
-                  <div class="space-y-1">
-                    <div class="text-slate-400">TIL status</div>
-                    <div class="text-slate-200">In model training</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="px-6 pb-6 text-[11px] text-slate-400 border-t border-slate-800">
-              Figures are indicative and do not constitute investment advice or guarantees. Final terms depend on specific contracts, market
-              conditions, and regulations.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MOST PROFITABLE SECTION -->
-    <section class="bg-slate-50 py-16 lg:py-20">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0 grid lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-12 items-start">
-        <div>
+    <!-- VALUE PROPOSITION BLOCK -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="text-center mb-12">
           <h2 class="heading-font text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Most profitable & reliable Phuket properties
           </h2>
-          <p class="text-slate-600 text-base md:text-lg mb-8">
-            We work only with a narrow set of projects that survive a strict screening: rental demand, developer quality, liquidity,
-            and legal clarity. Our role is to reduce noise and guide you to assets that behave well over a 5–10 year horizon.
+          <p class="text-slate-600 text-lg">
+            Developer prices. Zero buyer commission. Curated by GIDR data.
           </p>
-
-          <div class="grid sm:grid-cols-2 gap-5 mb-8 text-sm">
-            <div class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-emerald-500"></span>
-              <div>
-                <div class="font-semibold text-slate-900">Best-in-class projects only</div>
-                <p class="text-slate-600">
-                  Screened for rental demand, occupancy patterns, and exit liquidity — not just brochure promises.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-sky-500"></span>
-              <div>
-                <div class="font-semibold text-slate-900">Direct developer contracts</div>
-                <p class="text-slate-600">
-                  You buy at developer list prices. Our compensation is on the developer side — zero buyer commission.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-amber-500"></span>
-              <div>
-                <div class="font-semibold text-slate-900">AI-assessed by TIL / GIDR</div>
-                <p class="text-slate-600">
-                  Projects are benchmarked using the Terra Intelligence Lab world-model of Phuket and the legacy GIDR analytical stack.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-violet-500"></span>
-              <div>
-                <div class="font-semibold text-slate-900">Leasehold & Freehold routes</div>
-                <p class="text-slate-600">
-                  Clear explanation of Thai structures: condo freehold quota, leasehold, company routes, and typical bank practices.
-                </p>
-              </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-2 h-2 rounded-full bg-emerald-500 mt-2"></div>
+            <div>
+              <h3 class="font-semibold text-slate-900 mb-2">Best-in-class projects only — screened for rental demand & liquidity</h3>
+              <p class="text-slate-600 text-sm">
+                We work only with projects that survive strict screening for rental performance, developer quality, and exit liquidity.
+              </p>
             </div>
           </div>
-
-          <div class="flex flex-wrap gap-3">
-            <a href="#faq" class="inline-flex items-center gap-2 text-sm font-medium text-slate-800">
-              Read FAQ on Thai ownership
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-2 h-2 rounded-full bg-sky-500 mt-2"></div>
+            <div>
+              <h3 class="font-semibold text-slate-900 mb-2">Direct developer contracts — no agency markup</h3>
+              <p class="text-slate-600 text-sm">
+                You pay the price from the developer's list. Our compensation is on the developer side — zero buyer commission.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-2 h-2 rounded-full bg-amber-500 mt-2"></div>
+            <div>
+              <h3 class="font-semibold text-slate-900 mb-2">AI-assessed by the Hong Kong Institute of Digital Research (GIDR)</h3>
+              <p class="text-slate-600 text-sm">
+                Projects are benchmarked using GIDR's neural model that processes thousands of signals per property.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-2 h-2 rounded-full bg-violet-500 mt-2"></div>
+            <div>
+              <h3 class="font-semibold text-slate-900 mb-2">Leasehold & Freehold routes — clearly explained</h3>
+              <p class="text-slate-600 text-sm">
+                Clear explanation of Thai structures: condo freehold quota, leasehold, company routes, and typical bank practices.
+              </p>
+            </div>
           </div>
         </div>
-
-        <!-- Pricing / Performance / Programs -->
-        <div class="space-y-4">
-          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
-            <div class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400 mb-1">Pricing</div>
-            <h3 class="font-semibold text-slate-900 mb-1">Developer price · 0% buyer fee</h3>
-            <p class="text-sm text-slate-600">
-              You pay the price from the developer’s list — no extra commission on top.
-            </p>
-          </div>
-          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
-            <div class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400 mb-1">Performance (guidance)</div>
-            <h3 class="font-semibold text-slate-900 mb-1">Rental yield ~5–9% p.a.</h3>
-            <p class="text-sm text-slate-600">
-              Based on ranges observed in comparable resort markets. Final numbers depend on specific contracts, unit type,
-              operator quality, and market conditions.
-            </p>
-          </div>
-          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
-            <div class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400 mb-1">Programs</div>
-            <h3 class="font-semibold text-slate-900 mb-1">Some projects offer fixed rent</h3>
-            <p class="text-sm text-slate-600">
-              E.g. advertised 7% in THB with indexation in select projects. Terms vary by developer; documentation prevails.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="max-w-6xl mx-auto px-6 lg:px-0 mt-6 text-[11px] text-slate-500">
-        Figures are for guidance only and do not constitute investment advice or guarantees. Terms depend on specific contracts,
-        regulatory changes, and operational performance.
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="bg-white py-16 lg:py-20">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0 grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-12 items-start">
-        <div>
-          <h2 class="heading-font text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-            FAQ — Property ownership in Thailand
-          </h2>
-          <p class="text-slate-600 mb-8">
-            Thai law is different from most Western systems. Our role is to give you a clear, realistic picture of how investors
-            typically structure purchases — and where the real risks are.
-          </p>
-
-          <div class="divide-y divide-slate-200">
-            <details class="py-4 group" open>
-              <summary class="flex items-center justify-between cursor-pointer">
-                <span class="font-medium text-slate-900">
-                  Leasehold vs Freehold — what is the difference?
-                </span>
-                <span class="text-slate-400 group-open:rotate-90 transition-transform">
-                  ›
-                </span>
-              </summary>
-              <p class="mt-2 text-sm text-slate-600">
-                Freehold in practice applies to condominium units within the foreign quota (up to 49% of sellable area). Leasehold
-                is a long-term registered right of use (typically 30+30+30 years). Both routes are used by international investors;
-                the right structure depends on your budget, passport, and time horizon.
-              </p>
-            </details>
-
-            <details class="py-4 group">
-              <summary class="flex items-center justify-between cursor-pointer">
-                <span class="font-medium text-slate-900">
-                  Can foreigners own land in Thailand?
-                </span>
-                <span class="text-slate-400 group-open:rotate-90 transition-transform">
-                  ›
-                </span>
-              </summary>
-              <p class="mt-2 text-sm text-slate-600">
-                Direct freehold land ownership by foreigners is heavily restricted. Most investors either purchase condominium units
-                within the quota or use long-term leasehold / structured routes vetted by local counsel. We help you understand which
-                options are realistic and compliant for your case.
-              </p>
-            </details>
-
-            <details class="py-4 group">
-              <summary class="flex items-center justify-between cursor-pointer">
-                <span class="font-medium text-slate-900">
-                  What rental yields are typical in resort areas?
-                </span>
-                <span class="text-slate-400 group-open:rotate-90 transition-transform">
-                  ›
-                </span>
-              </summary>
-              <p class="mt-2 text-sm text-slate-600">
-                Historically, stabilized projects in strong locations have delivered net yields in the mid-single to high-single
-                digits. Peaks above that usually reflect either a marketing campaign or higher risk. We benchmark each project against
-                Terra Intelligence Lab’s territory model, not only brochure numbers.
-              </p>
-            </details>
-
-            <details class="py-4 group">
-              <summary class="flex items-center justify-between cursor-pointer">
-                <span class="font-medium text-slate-900">
-                  How secure are leasehold rights?
-                </span>
-                <span class="text-slate-400 group-open:rotate-90 transition-transform">
-                  ›
-                </span>
-              </summary>
-              <p class="mt-2 text-sm text-slate-600">
-                Properly drafted and registered leaseholds are a mainstream structure in Thai resort property. The real question is
-                the quality of drafting, registration, and counterparty. We work only with developers and legal teams that provide
-                transparent documentation and realistic renewal mechanics.
-              </p>
-            </details>
+    <!-- PRICING / PERFORMANCE / PROGRAMS STRIP -->
+    <section class="bg-slate-50 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+            <div class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400 mb-2">PRICING</div>
+            <h3 class="font-semibold text-slate-900 mb-2 text-lg">Developer price • 0% buyer fee</h3>
+            <p class="text-sm text-slate-600">
+              You pay the price from the developer's list — no extra commission.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+            <div class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400 mb-2">PERFORMANCE (GUIDANCE)</div>
+            <h3 class="font-semibold text-slate-900 mb-2 text-lg">Rental yield ~5–9% p.a.</h3>
+            <p class="text-sm text-slate-600">
+              Ranges observed in comparable resort areas. Project documents prevail.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+            <div class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400 mb-2">PROGRAMS</div>
+            <h3 class="font-semibold text-slate-900 mb-2 text-lg">Some offer fixed rent</h3>
+            <p class="text-sm text-slate-600">
+              E.g. advertised 7% in THB with indexation in select projects. Terms vary by developer.
+            </p>
           </div>
         </div>
+        <div class="max-w-5xl mx-auto text-center">
+          <p class="text-xs text-slate-500">
+            Figures are for guidance only and do not constitute investment advice or guarantees. Terms depend on specific contracts, market conditions, and regulations.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <!-- About TIL / GIDR -->
-        <div class="bg-slate-900 text-slate-100 rounded-2xl p-6 lg:p-7 shadow-soft">
-          <h3 class="text-sm font-semibold tracking-[0.2em] uppercase text-emerald-300 mb-3">
-            Powered by Terra Intelligence Lab
-          </h3>
-          <p class="text-sm text-slate-200 mb-3">
-            Terra Intelligence Lab (TIL) is an AI-native world-model of resort territories, starting from Phuket. It ingests thousands
-            of signals — from micro-location and infrastructure to tourist flows and legal risk — to score each pocket of the island.
-          </p>
-          <p class="text-sm text-slate-300 mb-3">
-            The agency uses this model to pre-screen projects and to understand where demand, supply, and risk are moving. You see a
-            curated short-list instead of a chaotic marketplace.
-          </p>
-          <p class="text-xs text-slate-400">
-            TIL is the successor of the Hong Kong Institute of Digital Research (GIDR), an applied analytics initiative of
-            West East Gate Capital.
-          </p>
-
-          <a href="/til-start.html" class="mt-4 inline-flex items-center gap-2 text-xs font-medium text-emerald-300 hover:text-emerald-200">
-            Learn more about TIL
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+    <!-- FAQ — PROPERTY OWNERSHIP IN THAILAND -->
+    <section id="faq" class="bg-white py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="heading-font text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
+            FAQ — Property Ownership in Thailand
+          </h2>
+          <div class="space-y-4">
+            <details class="bg-slate-50 rounded-lg border border-slate-200 p-5" open>
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-medium text-slate-900 pr-4">
+                  Leasehold vs Freehold — what's the difference?
+                </span>
+                <span class="accordion-icon text-slate-400 text-xl">›</span>
+              </summary>
+              <div class="mt-4 pt-4 border-t border-slate-200">
+                <p class="text-sm text-slate-600">
+                  Freehold in practice applies to condominium units within the foreign quota (up to 49% of sellable area). Leasehold is a long-term registered right of use (typically 30+30+30 years). Both routes are used by international investors; the right structure depends on your budget, passport, and time horizon.
+                </p>
+              </div>
+            </details>
+            <details class="bg-slate-50 rounded-lg border border-slate-200 p-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-medium text-slate-900 pr-4">
+                  Can foreigners own land in Thailand?
+                </span>
+                <span class="accordion-icon text-slate-400 text-xl">›</span>
+              </summary>
+              <div class="mt-4 pt-4 border-t border-slate-200">
+                <p class="text-sm text-slate-600">
+                  Direct freehold land ownership by foreigners is heavily restricted. Most investors either purchase condominium units within the quota or use long-term leasehold / structured routes vetted by local counsel. We help you understand which options are realistic and compliant for your case.
+                </p>
+              </div>
+            </details>
+            <details class="bg-slate-50 rounded-lg border border-slate-200 p-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-medium text-slate-900 pr-4">
+                  What are common rental yields in resort areas?
+                </span>
+                <span class="accordion-icon text-slate-400 text-xl">›</span>
+              </summary>
+              <div class="mt-4 pt-4 border-t border-slate-200">
+                <p class="text-sm text-slate-600">
+                  Historically, stabilized projects in strong locations have delivered net yields in the mid-single to high-single digits. Peaks above that usually reflect either a marketing campaign or higher risk. We benchmark each project against GIDR's territory model, not only brochure numbers.
+                </p>
+              </div>
+            </details>
+            <details class="bg-slate-50 rounded-lg border border-slate-200 p-5">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-medium text-slate-900 pr-4">
+                  How secure are leasehold rights in Thailand?
+                </span>
+                <span class="accordion-icon text-slate-400 text-xl">›</span>
+              </summary>
+              <div class="mt-4 pt-4 border-t border-slate-200">
+                <p class="text-sm text-slate-600">
+                  Properly drafted and registered leaseholds are a mainstream structure in Thai resort property. The real question is the quality of drafting, registration, and counterparty. We work only with developers and legal teams that provide transparent documentation and realistic renewal mechanics.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FEATURED PROJECTS -->
     <section id="featured" class="bg-slate-50 py-16 lg:py-20">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-          <div>
-            <h2 class="heading-font text-2xl md:text-3xl font-bold text-slate-900 mb-2">
-              Featured projects
-            </h2>
-            <p class="text-slate-600 text-sm md:text-base">
-              A focused selection of Phuket developments that fit our criteria on location, developer quality, and projected performance.
-            </p>
-          </div>
-          <div class="text-xs text-slate-500">
-            Status and timelines are indicative. Full details are provided in project passports and contracts.
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="text-center mb-12">
+          <h2 class="heading-font text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Featured projects
+          </h2>
+          <div class="flex justify-center gap-2 mb-8">
+            <button class="px-4 py-2 text-sm font-medium rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition">
+              Freehold
+            </button>
+            <button class="px-4 py-2 text-sm font-medium rounded-full border border-emerald-500 bg-emerald-50 text-emerald-700">
+              Leasehold
+            </button>
           </div>
         </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- Modeva -->
-          <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col gap-3">
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <!-- Project 1: The Modeva -->
+          <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
             <div class="flex items-center justify-between gap-2">
-              <h3 class="font-semibold text-slate-900">The Modeva — Bang Tao, Phuket</h3>
-              <span class="inline-flex items-center gap-1 text-[11px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+              <h3 class="font-semibold text-slate-900 text-lg">The Modeva — Bang Tao, Phuket, Thailand</h3>
+              <span class="inline-flex items-center gap-1 text-[11px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                 Leasehold
               </span>
             </div>
+            <p class="text-sm text-slate-600 font-medium">Rhom Bho / The Title</p>
             <p class="text-sm text-slate-600">
-              Lifestyle condominium 500 meters from Bang Tao beach. Developed by Rhom Bho / The Title group. ETA 2026.
+              Lifestyle condo • 500 meters to beach • ETA 2026 • Leasehold
             </p>
-            <div class="text-xs text-slate-500">
-              TIL focus: walkable access, rental depth, and historical absorption of nearby Title projects.
-            </div>
-            <div class="flex flex-wrap gap-3 pt-2 text-sm">
-              <a href="/docs/modeva-brochure.pdf" class="inline-flex items-center gap-2 text-slate-800 hover:text-slate-950">
+            <div class="flex flex-wrap gap-3 pt-2 mt-auto">
+              <a href="/docs/modeva-brochure.pdf" class="inline-flex items-center gap-2 text-sm text-slate-800 hover:text-slate-950 font-medium">
                 Download brochure (PDF)
+                <i data-lucide="download" class="w-4 h-4"></i>
               </a>
-              <a href="/projects/modeva-passport.html" class="inline-flex items-center gap-2 text-slate-800 hover:text-slate-950">
+              <a href="/projects/modeva-passport.html" class="inline-flex items-center gap-2 text-sm text-slate-800 hover:text-slate-950 font-medium">
                 View passport
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </a>
             </div>
           </article>
 
-          <!-- Katabello -->
-          <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col gap-3">
+          <!-- Project 2: The Title Katabello -->
+          <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
             <div class="flex items-center justify-between gap-2">
-              <h3 class="font-semibold text-slate-900">The Title Katabello — Kata / Karon</h3>
-              <span class="inline-flex items-center gap-1 text-[11px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+              <h3 class="font-semibold text-slate-900 text-lg">The Title Katabello — Kata / Karon, Phuket, Thailand</h3>
+              <span class="inline-flex items-center gap-1 text-[11px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                 Leasehold
               </span>
             </div>
+            <p class="text-sm text-slate-600 font-medium">Rhom Bho / AssetWise</p>
             <p class="text-sm text-slate-600">
-              Large-scale resort condominium in the Kata / Karon area. Joint project by Rhom Bho / AssetWise. ETA 2027.
+              Condo • ETA 2027 • Leasehold
             </p>
-            <div class="text-xs text-slate-500">
-              TIL focus: supply pipeline on Karon–Kata corridor, seasonal occupancy, and liquidity under different FX scenarios.
-            </div>
-            <div class="flex flex-wrap gap-3 pt-2 text-sm">
-              <a href="/docs/katabello-brochure.pdf" class="inline-flex items-center gap-2 text-slate-800 hover:text-slate-950">
+            <div class="flex flex-wrap gap-3 pt-2 mt-auto">
+              <a href="/docs/katabello-brochure.pdf" class="inline-flex items-center gap-2 text-sm text-slate-800 hover:text-slate-950 font-medium">
                 Download brochure (PDF)
+                <i data-lucide="download" class="w-4 h-4"></i>
               </a>
-              <a href="/projects/katabello-passport.html" class="inline-flex items-center gap-2 text-slate-800 hover:text-slate-950">
+              <a href="/projects/katabello-passport.html" class="inline-flex items-center gap-2 text-sm text-slate-800 hover:text-slate-950 font-medium">
                 View passport
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </a>
             </div>
           </article>
@@ -429,82 +335,147 @@
       </div>
     </section>
 
-    <!-- CONTACT / BUY PROPERTY -->
+    <!-- ABOUT GIDR / TIL BLOCK -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+          <div>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              About GIDR — Hong Kong Institute of Digital Research
+            </h2>
+            <div class="space-y-4 text-slate-600">
+              <p>
+                The Hong Kong Institute of Digital Research (GIDR) is an applied analytics and AI lab modeling resort real-estate markets across Asia. Founded in Hong Kong, GIDR operates as a research & data-intelligence project of West East Gate Capital (WEGC).
+              </p>
+              <p>
+                Our neural model processes thousands of signals per property — geospatial and climatic layers, construction milestones, developer track record, price dynamics — to produce predictive ROI and liquidity ratings.
+              </p>
+            </div>
+            <a href="/til-memo.html" class="inline-flex items-center gap-2 mt-6 text-sm font-medium text-emerald-600 hover:text-emerald-700">
+              Learn more about GIDR & TIL
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 bg-emerald-500/10 blur-2xl rounded-full"></div>
+            <div class="relative bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                  <span class="text-xs font-mono text-slate-300">GIDR Neural Model</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-xs">
+                  <div>
+                    <div class="text-slate-400 mb-1">Signals processed</div>
+                    <div class="text-lg font-semibold">1,000+</div>
+                  </div>
+                  <div>
+                    <div class="text-slate-400 mb-1">Markets covered</div>
+                    <div class="text-lg font-semibold">Asia-wide</div>
+                  </div>
+                  <div>
+                    <div class="text-slate-400 mb-1">Property types</div>
+                    <div class="text-lg font-semibold">Resort</div>
+                  </div>
+                  <div>
+                    <div class="text-slate-400 mb-1">Model status</div>
+                    <div class="text-lg font-semibold text-emerald-400">Active</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUY PROPERTY — CONTACT FORM -->
     <section id="contact" class="bg-slate-900 py-16 lg:py-20 text-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0 grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-12 items-start">
-        <div>
-          <h2 class="heading-font text-2xl md:text-3xl font-bold mb-4">
-            Buy property in Phuket
-          </h2>
-          <p class="text-slate-300 mb-4">
-            Tell us who you are, your budget, and which project you are interested in. We will send a curated dossier from
-            <span class="font-semibold">post@wegc.fund</span> with next steps, ownership route options, and an honest view of risks.
-          </p>
-          <p class="text-slate-500 text-sm">
-            No mass mailings. No aggressive sales funnels. We work one-to-one with investors who value structure, transparency,
-            and disciplined decisions.
-          </p>
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4">
+              Buy property
+            </h2>
+            <p class="text-slate-300 mb-4 text-lg">
+              Tell us who you are and which project you're interested in — we'll reply from <span class="font-semibold text-white">post@wegc.fund</span> with a curated dossier and next steps.
+            </p>
+            <p class="text-slate-400 text-sm">
+              No mass mailings. No aggressive sales funnels. We work one-to-one with investors who value structure, transparency, and disciplined decisions.
+            </p>
+          </div>
+
+          <form id="agencyForm" class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6 space-y-4" action="https://formspree.io/f/xrbyywrr" method="POST">
+            <div id="formMessage" class="hidden p-4 rounded-lg text-sm"></div>
+            
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Full name *</label>
+                <input type="text" name="name" id="name" required class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Email *</label>
+                <input type="email" name="email" id="email" required class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Phone / WhatsApp</label>
+                <input type="text" name="phone" id="phone" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Budget (USD)</label>
+                <input type="text" name="budget" id="budget" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Project</label>
+              <select name="project" id="project" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
+                <option value="">Select a project</option>
+                <option value="The Modeva (Bang Tao)">The Modeva (Bang Tao)</option>
+                <option value="The Title Katabello">The Title Katabello</option>
+                <option value="Other / not sure yet">Other / not sure yet</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Message</label>
+              <textarea name="message" id="message" rows="3" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400" placeholder="Any specifics (tenure, unit type, viewing dates)…"></textarea>
+            </div>
+
+            <div class="flex items-start gap-2">
+              <input id="agree" type="checkbox" name="agree" required class="mt-1 w-4 h-4 border-slate-600 bg-slate-900 rounded">
+              <label for="agree" class="text-xs text-slate-400">
+                I agree to <a href="/terms.html" class="underline hover:text-slate-200">Terms</a> & <a href="/privacy.html" class="underline hover:text-slate-200">Privacy</a>.
+              </label>
+            </div>
+
+            <!-- Honeypot -->
+            <input type="text" name="_gotcha" class="hidden" aria-hidden="true">
+
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 text-black text-sm font-semibold px-4 py-2.5 hover:bg-emerald-400 transition">
+              Send enquiry
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+          </form>
         </div>
 
-        <form class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6 space-y-4" action="https://formspree.io/f/xrbyywrr" method="POST">
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1">Full name</label>
-              <input type="text" name="name" required class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
-            </div>
-            <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1">Email</label>
-              <input type="email" name="email" required class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1">Phone / WhatsApp</label>
-              <input type="text" name="phone" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
-            </div>
-            <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1">Budget (USD)</label>
-              <input type="text" name="budget" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-medium text-slate-300 mb-1">Project</label>
-            <select name="project" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
-              <option>The Modeva (Bang Tao)</option>
-              <option>The Title Katabello (Kata/Karon)</option>
-              <option>Not sure yet — need guidance</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-xs font-medium text-slate-300 mb-1">Message</label>
-            <textarea name="message" rows="3" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-emerald-400" placeholder="Any specifics (tenure, unit type, viewing dates)…"></textarea>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <input id="agree" type="checkbox" name="agree" required class="w-3 h-3 border-slate-600 bg-slate-900">
-            <label for="agree" class="text-[11px] text-slate-400">
-              I agree to Terms &amp; Privacy.
-            </label>
-          </div>
-
-          <!-- Honeypot -->
-          <input type="text" name="_gotcha" class="hidden" aria-hidden="true">
-
-          <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 text-black text-sm font-semibold px-4 py-2.5 hover:bg-emerald-400 transition">
-            Send enquiry
-            <i data-lucide="send" class="w-4 h-4"></i>
-          </button>
-        </form>
+        <div class="text-center mt-8">
+          <p class="text-slate-400 text-sm mb-3">Or contact us directly:</p>
+          <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-700 text-white hover:bg-slate-800 transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Chat in WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="bg-black border-t border-white/5 text-[11px] text-slate-500">
-    <div class="max-w-6xl mx-auto px-6 py-8 space-y-4">
+    <div class="max-w-7xl mx-auto px-6 py-8 space-y-4">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
         <p class="text-slate-400">
           WEST EAST TRADE GROUP PTE. LTD. · UEN: 202505772C · Registered Office: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987 · Primary email: <a href="mailto:post@wegc.fund" class="underline hover:text-slate-200">post@wegc.fund</a>
@@ -512,8 +483,9 @@
       </div>
       <div class="flex flex-wrap gap-4 text-slate-500">
         <a href="/" class="hover:text-slate-200">WEGC Home</a>
-        <a href="/til-start.html" class="hover:text-slate-200">Terra Intelligence Lab</a>
+        <a href="/til-memo.html" class="hover:text-slate-200">Terra Intelligence Lab</a>
         <a href="/fund.html" class="hover:text-slate-200">Fund</a>
+        <a href="/wet-agency.html" class="hover:text-slate-200">Real Estate Agency</a>
         <a href="/privacy.html" class="hover:text-slate-200">Privacy Policy</a>
         <a href="/terms.html" class="hover:text-slate-200">Terms of Service</a>
         <a href="/cookies.html" class="hover:text-slate-200">Cookies</a>
@@ -525,8 +497,86 @@
   </footer>
 
   <script>
-    // init lucide icons
+    // Initialize Lucide icons
     lucide.createIcons();
+
+    // Accordion functionality - native details element handles open/close, we just style it
+
+    // Form validation and submission
+    document.getElementById('agencyForm')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const formMessage = document.getElementById('formMessage');
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      
+      // Basic validation
+      if (!name || !email) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-500/20 text-red-300 border border-red-500/30';
+          formMessage.textContent = 'Please fill in all required fields.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-500/20 text-red-300 border border-red-500/30';
+          formMessage.textContent = 'Please enter a valid email address.';
+          formMessage.classList.remove('hidden');
+        }
+        return;
+      }
+      
+      // Submit to Formspree
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          form.reset();
+          if (formMessage) {
+            formMessage.className = 'p-4 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+            formMessage.textContent = 'Thank you! Your enquiry has been sent. We will reply from post@wegc.fund shortly.';
+            formMessage.classList.remove('hidden');
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        if (formMessage) {
+          formMessage.className = 'p-4 rounded-lg bg-red-500/20 text-red-300 border border-red-500/30';
+          formMessage.textContent = 'Error sending enquiry. Please try again or contact us directly at post@wegc.fund.';
+          formMessage.classList.remove('hidden');
+        }
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
   </script>
 </body>
 </html>
