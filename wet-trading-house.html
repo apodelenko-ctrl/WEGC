@@ -2,195 +2,302 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WET SOLUTION LIMITED — Hong Kong Trading House</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="WET SOLUTION LIMITED is a Hong Kong trading house focused on global sourcing and B2B supply of textiles and frozen meat products.">
-    <link rel="stylesheet" href="style-global.css">
-    <link rel="stylesheet" href="style-wet.css">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WET SOLUTION LIMITED | Hong Kong Trading House</title>
+    <meta name="description" content="Hong Kong Trading House specializing in textile and food commodity sourcing. Reliable execution for global B2B partners.">
+    <meta property="og:title" content="WET SOLUTION LIMITED | Hong Kong Trading House">
+    <meta property="og:description" content="Your Strategic Trading Bridge Between Asia & The World">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wegc.fund/wet-trading-house.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="canonical" href="https://wegc.fund/wet-trading-house.html">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.7)), url('https://images.unsplash.com/photo-1494412574643-35d324698427?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .map-bg {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+        .pulse-dot {
+            box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7);
+            transform: scale(1);
+            animation: pulse-yellow 2s infinite;
+        }
+        @keyframes pulse-yellow {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(234, 179, 8, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800">
 
-<body>
-
-<header class="site-header">
-    <div class="container nav">
-        <div class="logo-block">
-            <div class="logo-mark">
-                <span>W</span>
-            </div>
-            <div class="logo-text">
-                <div class="logo-name">WET SOLUTION LIMITED</div>
-                <div class="logo-tagline">Hong Kong Trading House</div>
-            </div>
-        </div>
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#business">Business Scope</a>
-            <a href="#products">Products</a>
-            <a href="#company">Company</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
-
-
-
-<!-- HERO SECTION -->
-<section class="hero" id="top">
-    <div class="hero-visual">
-        <div class="hero-visual-overlay">
-            <div class="hero-visual-label">Hong Kong • Central</div>
-            <div class="hero-visual-title">International Trading House</div>
-            <div class="hero-visual-lead">
-                Connecting Asian manufacturers with global B2B buyers through reliable sourcing, documentation and logistics.
-            </div>
-            <div class="hero-visual-sub">
-                We specialize in wholesale textile goods and frozen meat products, coordinating end-to-end supply chain management from Asia to markets across Africa, Eastern Europe, and beyond.
-            </div>
-            <a href="#contact" class="btn-primary">Contact for B2B inquiries</a>
-        </div>
-    </div>
-</section>
-
-
-
-<main>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-    <div class="container">
-        <h2>About the Company</h2>
-        <p>
-            WET SOLUTION LIMITED is a Hong Kong–registered trading house specializing in international B2B distribution. 
-            We work with vetted suppliers across Asia, sourcing textile goods and frozen meat products, and coordinating 
-            deliveries to importers and distributors in multiple global markets.
-        </p>
-        <p>
-            From our base in Hong Kong, we manage contract terms, documentation, quality control, and logistics — 
-            providing transparent pricing and reliable commercial execution for every transaction. Our expertise spans 
-            supply chain coordination, regulatory compliance, and cross-border trade facilitation.
-        </p>
-    </div>
-</section>
-
-
-
-<!-- BUSINESS SCOPE -->
-<section class="section" id="business">
-    <div class="container">
-        <h2>Business Scope</h2>
-        <p>
-            Our company consolidates supply from factories across Asia and structures deliveries to Africa, Asia, 
-            and Eastern Europe under clear documentation and commercial standards. We operate as a bridge between 
-            Asian manufacturers and global B2B buyers, ensuring quality, compliance, and timely delivery.
-        </p>
-
-        <div class="route-card">
-            <!-- Placeholder for trade routes map -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; border-radius: 8px;">
-                Global Trade Routes Map
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-slate-900 tracking-tighter hover:text-blue-900 transition">WET <span class="text-blue-900">SOLUTION</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-slate-600 hover:text-blue-900 font-medium">TIL</a>
+                    <a href="/til-memo.html" class="text-slate-600 hover:text-blue-900 font-medium">TIL Deep Dive</a>
+                    <a href="/fund.html" class="text-slate-600 hover:text-blue-900 font-medium">Fund</a>
+                    <a href="/wet-agency.html" class="text-slate-600 hover:text-blue-900 font-medium">Agency</a>
+                    <a href="/wet-trading-house.html" class="text-blue-900 font-medium">Trading House</a>
+                    <a href="#contact" class="bg-blue-900 text-white px-5 py-2 rounded hover:bg-blue-800 transition">Contact Us</a>
+                </div>
             </div>
         </div>
+    </nav>
 
-        <ul class="bullet-list">
-            <li>Wholesale textile sourcing — fabric rolls, garments, ready-made goods</li>
-            <li>Frozen meat &amp; poultry distribution — cuts and semi-finished products</li>
-            <li>Contract negotiation &amp; documentation support — terms, compliance, customs</li>
-            <li>Supply chain coordination &amp; logistics — end-to-end delivery management</li>
-        </ul>
-    </div>
-</section>
-
-
-
-<!-- PRODUCTS -->
-<section class="section" id="products">
-    <div class="container">
-        <h2>Products</h2>
-
-        <div class="product-grid">
-
-            <div class="product-card">
-                <h3>Textile Products</h3>
-                <p>Fabric rolls, garments, ready-made textile goods for wholesale buyers. Sourced from verified manufacturers across Asia with quality assurance and compliance documentation.</p>
+    <section class="hero-bg h-screen flex items-center justify-center text-white pt-20" id="about">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="inline-block bg-yellow-500 text-blue-900 font-bold px-3 py-1 text-xs uppercase tracking-widest mb-4 rounded-sm">
+                Hong Kong Based • Global Reach
             </div>
-
-            <div class="product-card">
-                <h3>Frozen Meat &amp; Poultry</h3>
-                <p>Poultry cuts, beef, and semi-finished meat products sourced from certified Asian producers. Full traceability and regulatory compliance for international distribution.</p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-
-<!-- COMPANY DETAILS -->
-<section class="section" id="company">
-    <div class="container">
-        <h2>Company Details</h2>
-
-        <div class="company-details">
-            <p><strong>Company Name:</strong> WET SOLUTION LIMITED</p>
-            <p><strong>Company Number:</strong> 76458883</p>
-            <p><strong>Registered Address:</strong><br>
-                FLAT/RM C, 7/F, WORLD TRUST TOWER,<br>
-                50 STANLEY STREET, CENTRAL, HONG KONG
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Your Strategic Trading Bridge <br> Between Asia & The World
+            </h1>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
+                We specialize in end-to-end supply chain management: from sourcing textiles and frozen commodities to navigating complex logistics for African and Eastern European markets.
             </p>
-            <p><strong>Jurisdiction:</strong> Hong Kong SAR</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded shadow-lg transition text-lg">
+                    Explore Categories
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold rounded transition text-lg">
+                    Request Quote
+                </a>
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
-
-
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-
-        <form class="contact-form" action="mailto:wet4kg@gmail.com" method="post" enctype="text/plain">
-            <label>Your Name</label>
-            <input type="text" name="name" required>
-
-            <label>Your Email</label>
-            <input type="email" name="email" required>
-
-            <label>Message</label>
-            <textarea name="message" rows="4" required></textarea>
-
-            <button type="submit" class="btn-primary">Send Inquiry</button>
-        </form>
-
-        <p class="direct-mail">
-            Or contact us directly: <a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a>
-        </p>
-    </div>
-</section>
-
-</main>
-
-
-
-<footer class="footer">
-    <div class="container">
-        <div class="text-center space-y-4 py-4">
-            <nav class="space-x-4 text-sm">
-                <a href="/" class="hover:text-gray-300">TIL</a>
-                <a href="/til-memo.html" class="hover:text-gray-300">TIL Deep Dive</a>
-                <a href="/fund.html" class="hover:text-gray-300">Fund</a>
-                <a href="/wet-agency.html" class="hover:text-gray-300">Real Estate Agency</a>
-                <a href="/wet-trading-house.html" class="hover:text-gray-300">Trading House</a>
-                <a href="#contact" class="hover:text-gray-300">Contact</a>
-            </nav>
-            <p class="text-xs">© Terra Intelligence Lab — Territory Intelligence Layer for the AI Era</p>
+    <div class="bg-blue-900 py-10 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div>
+                <div class="text-3xl font-bold text-yellow-400">HK SAR</div>
+                <div class="text-sm opacity-80 uppercase tracking-wide mt-1">Jurisdiction</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold text-yellow-400">100%</div>
+                <div class="text-sm opacity-80 uppercase tracking-wide mt-1">Verified Suppliers</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold text-yellow-400">Global</div>
+                <div class="text-sm opacity-80 uppercase tracking-wide mt-1">Logistics Network</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold text-yellow-400">B2B</div>
+                <div class="text-sm opacity-80 uppercase tracking-wide mt-1">Wholesale Focus</div>
+            </div>
         </div>
     </div>
-</footer>
+
+    <section id="products" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-900 font-bold text-sm uppercase tracking-widest mb-2">Our Business Scope</h2>
+                <h3 class="text-4xl font-extrabold text-slate-900">Key Trading Divisions</h3>
+                <p class="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
+                    Diversified sourcing capabilities tailored for industrial buyers and distributors.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-blue-900">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-900 text-2xl">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Frozen Meat Commodities</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Wholesale cuts of poultry, beef, and pork tailored for processing plants. Strict cold-chain integrity, HACCP compliance, and full veterinary certification.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-blue-900">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6 text-indigo-900 text-2xl">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Textile & Fabric Rolls</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Industrial-grade fabrics and raw materials. From natural cotton to synthetic blends, ensuring consistent technical specs for your production lines.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-blue-900">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-900 text-2xl">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Apparel & Uniforms (OEM)</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        End-to-end manufacturing solutions. Corporate uniforms, workwear, and private label collections managed from pattern making to final QC.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-yellow-500">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-6 text-yellow-700 text-2xl">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">FMCG & Packaged Foods</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Shelf-stable food products and consumer goods. We consolidate shipments of canned goods, oils, and snacks for retail chains.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-yellow-500">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-6 text-yellow-700 text-2xl">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Industrial Packaging</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Cardboard boxes, food-grade plastics, and branding materials. Solutions for both logistics protection and retail display.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-gray-400">
+                    <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-gray-700 text-2xl">
+                        <i class="fa-solid fa-magnifying-glass-location"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">General Procurement</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Acting as your purchasing office in Asia. On-demand sourcing for machinery and specialized goods with full supplier vetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900">How We Work</h2>
+                <p class="text-slate-600 mt-2">Simplified procurement cycle for international buyers.</p>
+            </div>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -z-10 transform -translate-y-1/2"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                    <div class="bg-white p-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-white shadow-lg">1</div>
+                        <h5 class="font-bold text-lg mb-2">Request</h5>
+                        <p class="text-sm text-gray-500">You send specs & target price.</p>
+                    </div>
+                    <div class="bg-white p-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-blue-800 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-white shadow-lg">2</div>
+                        <h5 class="font-bold text-lg mb-2">Sourcing</h5>
+                        <p class="text-sm text-gray-500">We vet factories & negotiate.</p>
+                    </div>
+                    <div class="bg-white p-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-blue-700 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-white shadow-lg">3</div>
+                        <h5 class="font-bold text-lg mb-2">Contract</h5>
+                        <p class="text-sm text-gray-500">HK Legal framework & Payment.</p>
+                    </div>
+                    <div class="bg-white p-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-white shadow-lg">4</div>
+                        <h5 class="font-bold text-lg mb-2">QC & Load</h5>
+                        <p class="text-sm text-gray-500">Inspection & Container loading.</p>
+                    </div>
+                    <div class="bg-white p-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-yellow-500 text-blue-900 rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-white shadow-lg">5</div>
+                        <h5 class="font-bold text-lg mb-2">Delivery</h5>
+                        <p class="text-sm text-gray-500">Shipping documents & Logistics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 map-bg opacity-20"></div> 
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl font-bold mb-6">Global Logistics Hub</h2>
+                <p class="text-gray-400 mb-6 text-lg">
+                    From our headquarters in <span class="text-white font-semibold">Hong Kong</span>, we coordinate complex supply chains connecting Asian manufacturers with emerging markets.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-yellow-500 mr-3"></i> Consolidation Warehouses in China</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-yellow-500 mr-3"></i> Sea Freight to Africa (East & West)</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-yellow-500 mr-3"></i> Overland & Sea Routes to Eastern Europe</li>
+                </ul>
+            </div>
+            
+            <div class="md:w-1/2 h-64 md:h-96 w-full relative bg-blue-950 rounded-xl border border-blue-800 shadow-2xl overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/World_map_blank_without_borders.svg" class="absolute inset-0 w-full h-full object-cover opacity-30 invert" alt="World Map">
+                
+                <div class="absolute top-[40%] left-[75%]">
+                    <div class="w-4 h-4 bg-yellow-500 rounded-full pulse-dot"></div>
+                    <span class="absolute top-6 left-1/2 transform -translate-x-1/2 text-xs font-bold text-white bg-blue-900 px-2 rounded">HK (HQ)</span>
+                </div>
+
+                <div class="absolute top-[25%] left-[52%]">
+                    <div class="w-3 h-3 bg-white rounded-full opacity-70"></div>
+                     <span class="absolute top-5 left-1/2 transform -translate-x-1/2 text-[10px] text-gray-300">Europe</span>
+                </div>
+
+                <div class="absolute top-[55%] left-[50%]">
+                    <div class="w-3 h-3 bg-white rounded-full opacity-70"></div>
+                    <span class="absolute top-5 left-1/2 transform -translate-x-1/2 text-[10px] text-gray-300">Africa</span>
+                </div>
+                
+                <svg class="absolute inset-0 w-full h-full pointer-events-none">
+                    <path d="M 750 400 Q 600 550 500 550" stroke="rgba(234, 179, 8, 0.5)" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                     <path d="M 750 400 Q 650 300 520 250" stroke="rgba(234, 179, 8, 0.5)" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+            <div>
+                <span class="text-2xl font-bold text-slate-900">WET <span class="text-blue-900">SOLUTION</span></span>
+                <p class="mt-4 text-slate-600">
+                    Hong Kong Trading House specializing in textile and food commodity sourcing. Reliable execution for global B2B partners.
+                </p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                <h4 class="font-bold text-lg mb-4">Company Details</h4>
+                <div class="space-y-2 text-sm text-slate-700">
+                    <p><strong>Company Name:</strong> WET SOLUTION LIMITED</p>
+                    <p><strong>Registration:</strong> 76458883 (Hong Kong SAR)</p>
+                    <p><strong>Address:</strong> FLAT/RM C, 7/F, WORLD TRUST TOWER, 50 STANLEY STREET, CENTRAL, HONG KONG</p>
+                    <p class="mt-4 pt-4 border-t border-slate-200">
+                        <a href="mailto:wet4kg@gmail.com" class="text-blue-600 font-bold text-lg hover:underline">wet4kg@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 mb-8">
+            <div class="flex flex-wrap gap-4 text-sm text-slate-500 border-t border-gray-100 pt-8">
+                <a href="/" class="hover:text-slate-700">WEGC Home</a>
+                <a href="/til.html" class="hover:text-slate-700">Terra Intelligence Lab</a>
+                <a href="/til-memo.html" class="hover:text-slate-700">TIL Deep Dive</a>
+                <a href="/fund.html" class="hover:text-slate-700">Fund</a>
+                <a href="/wet-agency.html" class="hover:text-slate-700">Real Estate Agency</a>
+                <a href="/privacy.html" class="hover:text-slate-700">Privacy</a>
+            </div>
+        </div>
+        
+        <div class="text-center text-slate-400 text-sm border-t border-gray-100 pt-8">
+            &copy; 2025 WET SOLUTION LIMITED. All Rights Reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
-
