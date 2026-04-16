@@ -127,9 +127,28 @@
                 <h1 class="section-title text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
                     Connecting Asian Supply To Global Markets
                 </h1>
-                <p class="text-lg md:text-xl text-slate-600 mb-9 leading-relaxed max-w-xl">
-                    WET SOLUTIONS LIMITED — A Strategic General Contractor and Principal Trading House in Hong Kong. We manage end-to-end procurement and physical trade execution between APAC and the MENA region.
-                </p>
+                <div class="max-w-xl mb-9">
+                    <div class="hero-copy-slide" data-hero-slide="0">
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+                            WET SOLUTIONS LIMITED — A Strategic General Contractor and Principal Trading House in Hong Kong. We manage end-to-end procurement and physical trade execution between APAC and the MENA region.
+                        </p>
+                    </div>
+                    <div class="hero-copy-slide hidden" data-hero-slide="1">
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+                            We execute principal-led sourcing mandates, factory verification, and cross-border fulfillment with full commercial shipping documentation for institutional counterparties.
+                        </p>
+                    </div>
+                    <div class="hero-copy-slide hidden" data-hero-slide="2">
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+                            Our teams coordinate maritime and air cargo programs from Hong Kong with disciplined operational control, transparent milestones, and trade-finance-ready workflows.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 mt-5" aria-label="Hero text slider navigation">
+                        <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-blue-900" data-hero-dot="0" aria-label="Show hero text 1"></button>
+                        <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-slate-300" data-hero-dot="1" aria-label="Show hero text 2"></button>
+                        <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-slate-300" data-hero-dot="2" aria-label="Show hero text 3"></button>
+                    </div>
+                </div>
                 <div class="flex gap-4 flex-wrap">
                     <a href="#divisions" class="px-7 py-3.5 bg-blue-950 hover:bg-blue-900 text-white font-semibold rounded transition shadow-sm">
                         Trading Sectors
@@ -465,6 +484,28 @@
             });
 
             setInterval(() => setActiveSlide(active + 1), 4500);
+        })();
+
+        (() => {
+            const slides = Array.from(document.querySelectorAll('.hero-copy-slide'));
+            const dots = Array.from(document.querySelectorAll('.hero-dot'));
+            if (!slides.length || !dots.length) return;
+
+            let active = 0;
+            const setActiveSlide = (next) => {
+                active = (next + slides.length) % slides.length;
+                slides.forEach((slide, index) => slide.classList.toggle('hidden', index !== active));
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('bg-blue-900', index === active);
+                    dot.classList.toggle('bg-slate-300', index !== active);
+                });
+            };
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => setActiveSlide(index));
+            });
+
+            setInterval(() => setActiveSlide(active + 1), 5000);
         })();
 
     </script>
