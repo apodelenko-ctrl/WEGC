@@ -262,9 +262,9 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="product-card institutional-card overflow-hidden group">
+                <div class="product-card institutional-card overflow-hidden group cursor-pointer" data-sector-card="frozen" role="button" tabindex="0" aria-label="Open Frozen Commodities details">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Frozen poultry and beef commodities — documented cold chain" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Frozen poultry and beef commodities — documented cold chain" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-blue-900/20 group-hover:bg-blue-900/10 transition"></div>
                     </div>
                     <div class="p-8">
@@ -280,12 +280,13 @@
                             <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Standard Poultry &amp; Beef Cuts</li>
                             <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Grade A Frozen Commodities</li>
                         </ul>
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-blue-900">Open sector details</p>
                     </div>
                 </div>
 
-                <div class="product-card institutional-card overflow-hidden group">
+                <div class="product-card institutional-card overflow-hidden group cursor-pointer" data-sector-card="textile" role="button" tabindex="0" aria-label="Open Textile and Raw Materials details">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1598300042247-d088f11a3b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Industrial textiles and documented mill specifications" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Industrial textiles and documented mill specifications" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
                          <div class="absolute inset-0 bg-indigo-900/20 group-hover:bg-indigo-900/10 transition"></div>
                     </div>
                     <div class="p-8">
@@ -300,12 +301,13 @@
                             <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Cotton &amp; polyester rolls (lot-traceable)</li>
                             <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Technical fabrics under documented QC</li>
                         </ul>
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-blue-900">Open sector details</p>
                     </div>
                 </div>
 
-                <div class="product-card institutional-card overflow-hidden group">
+                <div class="product-card institutional-card overflow-hidden group cursor-pointer" data-sector-card="apparel" role="button" tabindex="0" aria-label="Open Apparel and General details">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1556906781-9a412961d28c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apparel manufacturing under principal oversight" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://images.pexels.com/photos/5698851/pexels-photo-5698851.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Apparel manufacturing under principal oversight" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
                          <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition"></div>
                     </div>
                     <div class="p-8">
@@ -320,9 +322,45 @@
                             <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Workwear &amp; uniforms (bill-to/ship-to clarity)</li>
                             <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Machinery sourcing with factory acceptance</li>
                         </ul>
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-blue-900">Open sector details</p>
                     </div>
                 </div>
 
+            </div>
+
+            <div id="sector-detail-panel" class="institutional-card mt-10 p-6 sm:p-8">
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <button type="button" class="sector-tab px-3 py-1.5 text-xs font-semibold uppercase tracking-wide rounded border border-blue-200 bg-blue-50 text-blue-900" data-sector-tab="frozen">Frozen</button>
+                    <button type="button" class="sector-tab px-3 py-1.5 text-xs font-semibold uppercase tracking-wide rounded border border-slate-200 text-slate-600" data-sector-tab="textile">Textile</button>
+                    <button type="button" class="sector-tab px-3 py-1.5 text-xs font-semibold uppercase tracking-wide rounded border border-slate-200 text-slate-600" data-sector-tab="apparel">Apparel</button>
+                </div>
+
+                <article class="sector-detail" data-sector-detail="frozen">
+                    <h4 class="text-2xl font-extrabold text-slate-900 brand-font mb-3">Frozen Commodities — Detailed Scope</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Product range</strong>Halal and standard poultry, beef cuts, and Grade A frozen programs.</div>
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Control points</strong>Plant certification checks, SGS inspection coordination, and cold-chain integrity controls.</div>
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Documents</strong>Commercial invoice, packing list, COO, health certificates, and Bill of Lading set.</div>
+                    </div>
+                </article>
+
+                <article class="sector-detail hidden" data-sector-detail="textile">
+                    <h4 class="text-2xl font-extrabold text-slate-900 brand-font mb-3">Textile &amp; Raw Materials — Detailed Scope</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Product range</strong>Industrial fabrics, cotton/poly blends, and technical fabric allocations by lot.</div>
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Control points</strong>Mill due diligence, GSM/spec matching, and pre-shipment quality checkpoints.</div>
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Documents</strong>Test sheets, batch references, certificates of origin, and shipment release pack.</div>
+                    </div>
+                </article>
+
+                <article class="sector-detail hidden" data-sector-detail="apparel">
+                    <h4 class="text-2xl font-extrabold text-slate-900 brand-font mb-3">Apparel &amp; General — Detailed Scope</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Product range</strong>Corporate uniforms, workwear, and general industrial sourcing mandates.</div>
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Control points</strong>Factory capacity check, timeline governance, and acceptance milestone alignment.</div>
+                        <div class="rounded-lg border border-slate-200 p-4 bg-slate-50"><strong class="block mb-1">Documents</strong>PO mapping, QC records, shipment file set, and counterpart-ready compliance bundle.</div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -662,6 +700,50 @@
                     window.location.href = 'mailto:trading@wet-solutions.com?subject=Sign%20In%20Request';
                 });
             }
+        })();
+
+        (() => {
+            const cards = Array.from(document.querySelectorAll('[data-sector-card]'));
+            const tabs = Array.from(document.querySelectorAll('[data-sector-tab]'));
+            const details = Array.from(document.querySelectorAll('[data-sector-detail]'));
+            const panel = document.getElementById('sector-detail-panel');
+            if (!cards.length || !tabs.length || !details.length || !panel) return;
+
+            const activateSector = (sector) => {
+                details.forEach((detail) => {
+                    detail.classList.toggle('hidden', detail.getAttribute('data-sector-detail') !== sector);
+                });
+                tabs.forEach((tab) => {
+                    const active = tab.getAttribute('data-sector-tab') === sector;
+                    tab.classList.toggle('bg-blue-50', active);
+                    tab.classList.toggle('border-blue-200', active);
+                    tab.classList.toggle('text-blue-900', active);
+                    tab.classList.toggle('border-slate-200', !active);
+                    tab.classList.toggle('text-slate-600', !active);
+                });
+            };
+
+            cards.forEach((card) => {
+                const sector = card.getAttribute('data-sector-card');
+                card.addEventListener('click', () => {
+                    activateSector(sector);
+                    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+                card.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        activateSector(sector);
+                        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            tabs.forEach((tab) => {
+                tab.addEventListener('click', () => {
+                    const sector = tab.getAttribute('data-sector-tab');
+                    activateSector(sector);
+                });
+            });
         })();
 
         (() => {
