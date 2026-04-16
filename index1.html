@@ -48,6 +48,7 @@
         }
         .ticker {
             display: inline-block;
+            min-width: max-content;
             padding-left: 100%;
             animation: ticker 34s linear infinite;
         }
@@ -86,6 +87,9 @@
                 <span class="px-6 border-r border-blue-800">CNY/USD: <span class="font-bold" id="cny-rate">7.2400</span></span>
                 <span class="px-6 border-r border-blue-800">HKD/USD: <span class="font-bold" id="hkd-rate">7.8215</span></span>
                 <span class="px-6 border-r border-blue-800">AED/USD: <span class="font-bold" id="aed-rate">3.6725</span></span>
+                <span class="px-6 border-r border-blue-800 text-blue-100">HK NEWS:</span>
+                <span class="px-6 border-r border-blue-800" id="hk-news-1">Loading Hong Kong market headlines...</span>
+                <span class="px-6 border-r border-blue-800" id="hk-news-2">Loading Hong Kong market headlines...</span>
             </div>
         </div>
     </div>
@@ -421,6 +425,49 @@
 
         updateLiveRates();
         setInterval(updateLiveRates, 30000);
+
+        const cleanHeadline = (text) => {
+            if (!text) return '';
+            return text.replace(/\s+/g, ' ').replace(/&amp;/g, '&').trim();
+        };
+
+        const setNewsText = (id, text) => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = text;
+        };
+
+        const updateHongKongNews = async () => {
+            const rssUrl = 'https://news.google.com/rss/search?q=Hong+Kong+trade+finance+logistics&hl=en-US&gl=US&ceid=US:en';
+            const fallbackHeadlines = [
+                'Hong Kong trade and logistics updates are temporarily unavailable',
+                'Rates remain live; refreshing headlines shortly'
+            ];
+
+            try {
+                const url = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+                const response = await fetch(url, { cache: 'no-store' });
+                const data = await response.json();
+                const items = Array.isArray(data?.items) ? data.items : [];
+                const titles = items
+                    .map((item) => cleanHeadline(item.title))
+                    .filter((title) => title.length > 18 && !title.toLowerCase().includes('google news'))
+                    .slice(0, 2);
+
+                if (titles.length >= 2) {
+                    setNewsText('hk-news-1', titles[0]);
+                    setNewsText('hk-news-2', titles[1]);
+                    return;
+                }
+            } catch (err) {
+                // Fallback below if external feed is unavailable.
+            }
+
+            setNewsText('hk-news-1', fallbackHeadlines[0]);
+            setNewsText('hk-news-2', fallbackHeadlines[1]);
+        };
+
+        updateHongKongNews();
+        setInterval(updateHongKongNews, 600000);
 
     </script>
 
