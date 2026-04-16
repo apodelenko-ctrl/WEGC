@@ -141,62 +141,38 @@
             </div>
 
             <div class="hidden lg:block">
-                <div class="institutional-card p-8 max-w-sm ml-auto relative overflow-hidden">
+                <div class="institutional-card p-6 max-w-md ml-auto relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-950 to-blue-700"></div>
                     
-                    <div class="flex justify-between items-center mb-6">
-                        <h3 class="font-bold text-slate-900 brand-font text-lg tracking-wide">MARKET SNAPSHOT</h3>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-slate-900 brand-font text-lg tracking-wide">OPERATIONS GALLERY</h3>
+                        <span class="text-[11px] uppercase tracking-wider text-slate-500">Hong Kong</span>
                     </div>
 
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
-                                    <i class="fa-solid fa-yen-sign text-sm"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-500 uppercase">CNY / USD</div>
-                                    <div class="font-bold text-slate-800 dynamic-rate" data-symbol="CNY">7.2400</div>
-                                </div>
+                    <div class="relative rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                        <div class="carousel-slide" data-slide="0">
+                            <img src="https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=1400&q=80" alt="Hong Kong container port operations" class="w-full h-72 object-cover">
+                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent p-4">
+                                <p class="text-white font-semibold text-sm">Hong Kong Port</p>
+                                <p class="text-slate-200 text-xs">Containerized cargo handling and maritime logistics</p>
                             </div>
                         </div>
-
-                        <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
-                                    <i class="fa-solid fa-dollar-sign text-sm"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-500 uppercase">HKD / USD</div>
-                                    <div class="font-bold text-slate-800 dynamic-rate" data-symbol="HKD">7.8215</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
-                                    <i class="fa-solid fa-coins text-sm"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-500 uppercase">AED / USD</div>
-                                    <div class="font-bold text-slate-800 dynamic-rate" data-symbol="AED">3.6725</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-                            <div class="bg-slate-50 border border-slate-200 rounded p-3">
-                                <div class="text-slate-500 uppercase mb-1">HK Office</div>
-                                <div class="font-bold text-green-700">Open</div>
-                            </div>
-                            <div class="bg-slate-50 border border-slate-200 rounded p-3">
-                                <div class="text-slate-500 uppercase mb-1">Logistics</div>
-                                <div class="font-bold text-slate-800">Operational</div>
+                        <div class="carousel-slide hidden" data-slide="1">
+                            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80" alt="Air cargo terminal freight operations" class="w-full h-72 object-cover">
+                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent p-4">
+                                <p class="text-white font-semibold text-sm">Air Cargo Terminal</p>
+                                <p class="text-slate-200 text-xs">Time-critical freight throughput and customs coordination</p>
                             </div>
                         </div>
                     </div>
 
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex gap-2" aria-label="Carousel indicators">
+                            <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-blue-900" data-dot="0" aria-label="Show port image"></button>
+                            <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-300" data-dot="1" aria-label="Show air cargo image"></button>
+                        </div>
+                        <p class="text-xs text-slate-500">Auto-rotating infrastructure visuals</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -468,6 +444,28 @@
 
         updateHongKongNews();
         setInterval(updateHongKongNews, 600000);
+
+        (() => {
+            const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+            const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+            if (!slides.length || !dots.length) return;
+
+            let active = 0;
+            const setActiveSlide = (next) => {
+                active = (next + slides.length) % slides.length;
+                slides.forEach((slide, index) => slide.classList.toggle('hidden', index !== active));
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('bg-blue-900', index === active);
+                    dot.classList.toggle('bg-slate-300', index !== active);
+                });
+            };
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => setActiveSlide(index));
+            });
+
+            setInterval(() => setActiveSlide(active + 1), 4500);
+        })();
 
     </script>
 
