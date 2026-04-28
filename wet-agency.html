@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>CP Property — Curated Phuket properties · Charter Capital</title>
-<meta name="description" content="CP Property · part of the Charter Capital ecosystem. Developer-direct Phuket real estate. Zero buyer commission. Five screened projects in Bang Tao, Layan, Kata, Karon and Rawai. Leasehold and freehold structures executed with full documentation."/>
+<title>CP Property — Подобранная недвижимость Пхукета · Charter Capital</title>
+<meta name="description" content="CP Property · часть экосистемы Charter Capital. Прямые контракты с застройщиками Пхукета. Ноль комиссии покупателю. Пять прошедших скрининг проектов в Bang Tao, Layan, Kata, Karon и Rawai. Leasehold и freehold структуры с полной документацией."/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="CP Property — Curated Phuket properties · Charter Capital"/>
-<meta property="og:description" content="Developer-direct contracts. Zero buyer commission. Five screened Phuket projects under one mandate."/>
+<meta property="og:title" content="CP Property — Подобранная недвижимость Пхукета · Charter Capital"/>
+<meta property="og:description" content="Прямые контракты с застройщиком. Ноль комиссии покупателю. Пять подобранных проектов Пхукета под единым мандатом."/>
 <meta property="og:url" content="https://ccapital.pro/property.html"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
+<meta property="og:locale" content="ru_RU"/>
+<meta property="og:locale:alternate" content="en_US"/>
 <link rel="canonical" href="https://ccapital.pro/property.html"/>
+<link rel="alternate" hreflang="ru" href="https://ccapital.pro/property.html"/>
+<link rel="alternate" hreflang="en" href="https://ccapital.pro/property-en.html"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -30,9 +34,6 @@
   --line-dark:#1f2937;
   --blue:#2563eb;
   --red:#dc2626;
-  --red-dark:#991b1b;
-  --amber:#d97706;
-  --green:#0f5132;
   --gold:#a08156;
   --gold-soft:#cfc4a2;
   --gold-bright:#d6b370;
@@ -41,18 +42,10 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Inter',-apple-system,sans-serif;
-  background:#fff;color:var(--ink);
-  font-size:16px;line-height:1.6;font-weight:400;
-  -webkit-font-smoothing:antialiased;
-  opacity:0;transition:opacity .35s ease;
-}
+body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;opacity:0;transition:opacity .35s ease}
 body.page-ready{opacity:1}
 ::selection{background:var(--gold);color:#fff}
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:#f1f5f9}
-::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#f1f5f9}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit}
@@ -67,129 +60,65 @@ h3{font-size:1.25rem;font-weight:500;letter-spacing:-.02em}
 h4{font-size:1rem;font-weight:600;letter-spacing:-.01em}
 p{color:var(--body);font-weight:400;line-height:1.7}
 
-.kicker{
-  display:inline-block;font-size:11px;font-weight:600;
-  letter-spacing:.18em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:18px;
-}
-.kicker.muted{color:var(--muted)}
-.kicker.amber{color:var(--amber)}
-.kicker.green{color:var(--green)}
-.kicker.blue{color:var(--blue)}
-.kicker.gold{color:var(--gold)}
+.kicker{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
 
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:inherit;font-size:14px;font-weight:500;
-  padding:14px 26px;border-radius:var(--radius);
-  cursor:pointer;border:none;text-decoration:none;
-  transition:all .18s ease;white-space:nowrap;
-}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:14px;font-weight:500;padding:14px 26px;border-radius:var(--radius);cursor:pointer;border:none;text-decoration:none;transition:all .18s ease;white-space:nowrap}
 .btn-primary{background:var(--gold);color:#fff}
 .btn-primary:hover{background:#8c6e44;transform:translateY(-1px);box-shadow:0 8px 20px rgba(160,129,86,.32)}
 .btn-secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .btn-secondary:hover{border-color:#cbd5e1;background:var(--bg-soft)}
 .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
 .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
-.btn-dark{background:var(--ink);color:#fff;border:none}
-.btn-dark:hover{background:#000;transform:translateY(-1px)}
 .btn-lg{padding:16px 30px;font-size:15px}
 .btn .arr{transition:transform .18s ease}
 .btn:hover .arr{transform:translateX(3px)}
 
-/* ─── TOPBAR ─────────────────────────────────────────────── */
-#topbar{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:transparent;border-bottom:1px solid rgba(255,255,255,.08);
-  transition:background .25s ease,border-color .25s ease;
-}
-#topbar.solid{
-  background:rgba(255,255,255,.96);
-  backdrop-filter:saturate(180%) blur(10px);
-  border-bottom-color:var(--line);
-}
-.topbar-inner{
-  max-width:1320px;margin:0 auto;padding:18px 32px;
-  display:flex;align-items:center;justify-content:space-between;gap:24px;
-}
+/* TOPBAR */
+#topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s ease,border-color .25s ease}
+#topbar.solid{background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom-color:var(--line)}
+.topbar-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .topbar-brand{display:flex;align-items:baseline;gap:14px;color:#fff}
 .topbar-brand .name{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
-.topbar-brand .tag{
-  font-size:11px;font-weight:300;color:rgba(255,255,255,.6);
-  border-left:1px solid rgba(255,255,255,.2);padding-left:14px;letter-spacing:.04em;
-}
+.topbar-brand .tag{font-size:11px;font-weight:300;color:rgba(255,255,255,.6);border-left:1px solid rgba(255,255,255,.2);padding-left:14px;letter-spacing:.04em}
 #topbar.solid .topbar-brand,#topbar.solid .topbar-brand .name{color:var(--ink)}
 #topbar.solid .topbar-brand .tag{color:var(--muted);border-left-color:var(--line)}
 .topbar-nav{display:flex;align-items:center;gap:6px}
-.topbar-nav a{
-  font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(255,255,255,.78);padding:8px 14px;border-radius:6px;
-  transition:color .15s ease,background .15s ease;
-}
+.topbar-nav a{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.78);padding:8px 14px;border-radius:6px;transition:color .15s ease,background .15s ease}
 .topbar-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
 #topbar.solid .topbar-nav a{color:var(--muted)}
 #topbar.solid .topbar-nav a:hover{color:var(--ink);background:var(--bg-soft)}
-.topbar-cta{
-  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  background:transparent;color:#fff;cursor:pointer;
-  border:1px solid rgba(255,255,255,.4);padding:10px 18px;border-radius:6px;
-  transition:all .15s ease;font-family:inherit;
-}
+.topbar-cta{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:transparent;color:#fff;cursor:pointer;border:1px solid rgba(255,255,255,.4);padding:10px 18px;border-radius:6px;transition:all .15s ease;font-family:inherit}
 .topbar-cta:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 #topbar.solid .topbar-cta{color:var(--ink);border-color:var(--line)}
 #topbar.solid .topbar-cta:hover{border-color:#cbd5e1;background:var(--bg-soft)}
+.topbar-actions{display:flex;align-items:center;gap:10px}
+.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease}
+.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}
+#topbar.solid .lang-switch{color:var(--muted);border-color:var(--line)}
+#topbar.solid .lang-switch:hover{color:var(--ink);background:var(--bg-soft);border-color:#cbd5e1}
 
-/* ─── HERO ──────────────────────────────────────────────── */
-.hero{
-  position:relative;min-height:100vh;
-  background:
-    linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%),
-    url('/images/the-modeva-exterior-5-1.jpg') center/cover no-repeat,
-    var(--bg-darker);
-  display:flex;flex-direction:column;justify-content:center;
-  padding:140px 32px 80px;overflow:hidden;color:#fff;
-}
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.18) 0%,transparent 55%),
-             radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);
-  pointer-events:none;
-}
+/* HERO */
+.hero{position:relative;min-height:100vh;background:linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%),url('/images/the-modeva-exterior-5-1.jpg') center/cover no-repeat,var(--bg-darker);display:flex;flex-direction:column;justify-content:center;padding:140px 32px 80px;overflow:hidden;color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.18) 0%,transparent 55%),radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);pointer-events:none}
 .hero-inner{position:relative;max-width:1240px;margin:0 auto;width:100%}
 .hero-flags{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
-.hero-flag{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:7px 16px;border-radius:999px;
-  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-}
+.hero-flag{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 .hero-flag.gold{background:rgba(160,129,86,.18);border:1px solid rgba(160,129,86,.5);color:var(--gold-bright)}
 .hero-flag.blue{background:rgba(37,99,235,.14);border:1px solid rgba(37,99,235,.45);color:#93c5fd}
 .hero-flag .dot{width:6px;height:6px;border-radius:50%;animation:pulse 2.4s ease infinite}
 .hero-flag.gold .dot{background:var(--gold-bright)}
 .hero-flag.blue .dot{background:#60a5fa}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{
-  color:#fff;max-width:22ch;
-  font-size:clamp(2.2rem,5.4vw,4.4rem);
-  letter-spacing:-.045em;line-height:1.04;
-  font-weight:300;margin-bottom:26px;
-}
+.hero h1{color:#fff;max-width:22ch;font-size:clamp(2.2rem,5.4vw,4.4rem);letter-spacing:-.045em;line-height:1.04;font-weight:300;margin-bottom:26px}
 .hero h1 strong{font-weight:600;color:var(--gold-bright)}
-.hero-sub{
-  color:rgba(255,255,255,.74);
-  font-size:clamp(1rem,1.4vw,1.25rem);
-  max-width:62ch;line-height:1.55;font-weight:300;margin-bottom:42px;
-}
+.hero-sub{color:rgba(255,255,255,.74);font-size:clamp(1rem,1.4vw,1.25rem);max-width:62ch;line-height:1.55;font-weight:300;margin-bottom:42px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:80px}
-.hero-meta{
-  display:flex;gap:48px;flex-wrap:wrap;
-  padding-top:34px;border-top:1px solid rgba(255,255,255,.12);max-width:840px;
-}
+.hero-meta{display:flex;gap:48px;flex-wrap:wrap;padding-top:34px;border-top:1px solid rgba(255,255,255,.12);max-width:840px}
 .hero-meta-item{display:flex;flex-direction:column;gap:4px}
 .hero-meta-item .v{font-size:1.5rem;font-weight:600;color:#fff;letter-spacing:-.02em}
 .hero-meta-item .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 
-/* ─── SECTION ──────────────────────────────────────────── */
+/* SECTION */
 section.s{padding:120px 0;position:relative}
 section.s.cream{background:var(--bg-cream)}
 section.s.cream-2{background:var(--bg-cream-2)}
@@ -199,9 +128,8 @@ section.s.dark p{color:rgba(255,255,255,.74)}
 .s-head{margin-bottom:54px;max-width:760px}
 .s-head h2{margin-bottom:14px}
 .s-head p{font-size:17px;color:var(--muted);font-weight:400}
-section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 
-/* ─── INTELLIGENCE LAYER ───────────────────────────────── */
+/* INTELLIGENCE */
 .intel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden}
 .intel-item{background:#fff;padding:32px 28px;display:flex;flex-direction:column;gap:10px;transition:background .15s ease}
 .intel-item:hover{background:var(--bg-soft)}
@@ -209,36 +137,22 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .intel-item h4{font-size:15.5px;font-weight:600;color:var(--ink);line-height:1.25;letter-spacing:-.005em}
 .intel-item p{font-size:13.5px;line-height:1.6;color:var(--body)}
 
-/* ─── CATALOG ───────────────────────────────────────────── */
+/* CATALOG */
 .cat-toolbar{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:36px}
 .cat-toolbar h2{margin:0}
 .cat-filters{display:flex;gap:8px;flex-wrap:wrap}
-.cat-filter{
-  font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
-  border:1px solid var(--line);background:#fff;color:var(--muted);
-  padding:9px 16px;border-radius:999px;cursor:pointer;
-  transition:all .15s ease;
-}
+.cat-filter{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--muted);padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .15s ease}
 .cat-filter:hover{border-color:var(--gold);color:var(--ink)}
 .cat-filter.active{border-color:var(--gold);background:var(--gold);color:#fff}
 .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.cat-card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
-}
+.cat-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .cat-card:hover{transform:translateY(-3px);box-shadow:0 18px 38px -10px rgba(15,23,42,.18);border-color:#d4cfa8}
 .cat-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0f172a}
 .cat-cover img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
 .cat-card:hover .cat-cover img{transform:scale(1.04)}
 .cat-tags{position:absolute;top:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap}
-.cat-tag{
-  font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  background:rgba(15,23,42,.78);color:#fff;padding:5px 10px;border-radius:3px;
-  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-}
+.cat-tag{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(15,23,42,.78);color:#fff;padding:5px 10px;border-radius:3px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .cat-tag.gold{background:rgba(160,129,86,.92)}
-.cat-tag.blue{background:rgba(37,99,235,.88)}
 .cat-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
 .cat-body h3{font-size:1.4rem;font-weight:500;letter-spacing:-.02em;line-height:1.2}
 .cat-developer{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
@@ -247,16 +161,12 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .cat-meta-item .v{font-size:14px;font-weight:600;color:var(--ink)}
 .cat-desc{font-size:14px;line-height:1.6;color:var(--body)}
 .cat-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto}
-.cat-actions a{
-  font-size:13px;font-weight:600;letter-spacing:.06em;
-  color:var(--ink);display:inline-flex;align-items:center;gap:6px;
-  padding:8px 0;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;
-}
+.cat-actions a{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--ink);display:inline-flex;align-items:center;gap:6px;padding:8px 0;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease}
 .cat-actions a:hover{color:var(--gold);border-bottom-color:var(--gold)}
 .cat-actions a.muted{color:var(--muted)}
 .cat-actions a.muted:hover{color:var(--ink);border-bottom-color:var(--ink)}
 
-/* ─── MECHANICS ────────────────────────────────────────── */
+/* MECHANICS */
 .mech-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
 .mech-text > p{font-size:17px;line-height:1.7;color:var(--body);margin-bottom:14px}
 .mech-text strong{color:var(--ink);font-weight:600}
@@ -269,109 +179,56 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .mech-row.head .mech-cell{font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11px;color:var(--muted)}
 .mech-cell strong{color:var(--ink);font-weight:600}
 .mech-side{display:flex;flex-direction:column;gap:14px}
-.mech-card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px;
-}
+.mech-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px}
 .mech-card .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
 .mech-card .v{font-size:1.6rem;font-weight:500;letter-spacing:-.02em;color:var(--ink);margin-bottom:6px}
 .mech-card p{font-size:13px;color:var(--muted);line-height:1.6}
 .mech-disclaimer{margin-top:22px;font-size:12px;color:var(--muted);line-height:1.65;padding:14px 18px;background:var(--bg-soft);border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0}
 
-/* ─── LOCATION INTELLIGENCE ───────────────────────────── */
+/* LOCATIONS */
 .loc-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:36px;align-items:start}
 .loc-list{display:flex;flex-direction:column;gap:10px}
-.loc-item{
-  display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;
-  padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  transition:border-color .15s ease,background .15s ease;
-}
+.loc-item{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:border-color .15s ease,background .15s ease}
 .loc-item:hover{border-color:var(--gold);background:#fffaf0}
 .loc-item .n{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--gold)}
 .loc-item h4{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
 .loc-item p{font-size:12.5px;line-height:1.55;color:var(--muted);margin:0}
 .loc-item .y{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:-.01em;font-feature-settings:'tnum';white-space:nowrap}
-.loc-map{
-  position:relative;
-  background:radial-gradient(ellipse at 50% 50%,#0e1322 0%,#06080f 80%);
-  border-radius:var(--radius-lg);overflow:hidden;color:#fff;
-  display:grid;grid-template-columns:1fr 200px;gap:0;
-  border:1px solid #1f2937;
-  min-height:560px;
-}
-.phuket-svg{
-  width:100%;height:100%;display:block;
-  padding:18px;
-}
+
+.loc-map{position:relative;background:radial-gradient(ellipse at 50% 50%,#0e1322 0%,#06080f 80%);border-radius:var(--radius-lg);overflow:hidden;color:#fff;display:grid;grid-template-columns:1fr 200px;gap:0;border:1px solid #1f2937;min-height:560px}
+.phuket-svg{width:100%;height:100%;display:block;padding:18px}
 .phuket-svg .map-pin{cursor:pointer;transform-origin:center;transition:transform .25s ease}
 .phuket-svg .map-pin:hover{transform:translate(var(--tx,0),var(--ty,0)) scale(1.08)}
 .phuket-svg .pin-glow{transform-origin:center;animation:mapPing 2.8s cubic-bezier(0,0,.2,1) infinite}
 @keyframes mapPing{0%{transform:scale(.7);opacity:.7}80%,100%{transform:scale(1.4);opacity:0}}
-.map-legend{
-  border-left:1px solid rgba(255,255,255,.08);
-  background:rgba(0,0,0,.18);
-  padding:24px 22px;
-  display:flex;flex-direction:column;gap:14px;
-  backdrop-filter:blur(8px);
-}
+.map-legend{border-left:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.18);padding:24px 22px;display:flex;flex-direction:column;gap:14px;backdrop-filter:blur(8px)}
 .map-legend-row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
-.map-legend-num{
-  width:26px;height:26px;border-radius:50%;
-  background:var(--gold-bright);color:#0a0e1a;
-  display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:700;
-  box-shadow:0 0 0 3px rgba(214,179,112,.18);
-}
+.map-legend-num{width:26px;height:26px;border-radius:50%;background:var(--gold-bright);color:#0a0e1a;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;box-shadow:0 0 0 3px rgba(214,179,112,.18)}
 .map-legend-name{font-size:13px;font-weight:600;color:#fff;letter-spacing:-.005em}
 .map-legend-meta{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.04em;margin-top:1px}
 
-/* ─── PROCESS (dark, full-bleed) ─────────────────────── */
-.s-process{
-  position:relative;color:#fff;overflow:hidden;isolation:isolate;
-  padding:140px 32px;
-  background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);
-}
-.s-process::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 12% 30%,rgba(160,129,86,.16) 0%,transparent 55%),
-             radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);
-  pointer-events:none;
-}
+/* PROCESS */
+.s-process{position:relative;color:#fff;overflow:hidden;isolation:isolate;padding:140px 32px;background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%)}
+.s-process::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 12% 30%,rgba(160,129,86,.16) 0%,transparent 55%),radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);pointer-events:none}
 .process-inner{position:relative;max-width:1240px;margin:0 auto}
 .process-header{margin-bottom:54px;max-width:680px}
 .process-header h2{color:#fff;font-weight:300;margin-bottom:14px}
 .process-header h2 strong{color:var(--gold-bright);font-weight:500}
 .process-header p{color:rgba(255,255,255,.74);font-size:17px;line-height:1.65;font-weight:300}
 .process-list{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.process-step{
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
-  border-radius:var(--radius);padding:24px 22px;
-  display:flex;flex-direction:column;gap:14px;
-  transition:border-color .18s ease,background .18s ease;
-}
+.process-step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column;gap:14px;transition:border-color .18s ease,background .18s ease}
 .process-step:hover{border-color:rgba(214,179,112,.45);background:rgba(255,255,255,.06)}
 .process-num{font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--gold-bright)}
 .process-step h4{font-size:15px;font-weight:600;color:#fff;letter-spacing:-.005em;line-height:1.25}
 .process-step p{font-size:13px;line-height:1.55;color:rgba(255,255,255,.65);margin:0}
 
-/* ─── GIDR / TIL ──────────────────────────────────────── */
+/* GIDR */
 .gidr-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .gidr-text > p{font-size:17px;line-height:1.7;color:var(--body);margin-bottom:14px}
 .gidr-text strong{color:var(--ink);font-weight:600}
-.gidr-card{
-  background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);
-  border:1px solid #1f2937;border-radius:var(--radius-lg);
-  padding:38px 36px;color:#fff;position:relative;overflow:hidden;
-}
-.gidr-card::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 80% 0%,rgba(160,129,86,.18) 0%,transparent 55%);
-  pointer-events:none;
-}
-.gidr-card .label{
-  display:flex;align-items:center;gap:10px;
-  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--gold-bright);font-weight:700;margin-bottom:24px;
-}
+.gidr-card{background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);border:1px solid #1f2937;border-radius:var(--radius-lg);padding:38px 36px;color:#fff;position:relative;overflow:hidden}
+.gidr-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 0%,rgba(160,129,86,.18) 0%,transparent 55%);pointer-events:none}
+.gidr-card .label{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);font-weight:700;margin-bottom:24px}
 .gidr-card .label .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-bright);animation:pulse 2.4s ease infinite}
 .gidr-card h3{font-size:1.6rem;font-weight:300;color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:24px;max-width:24ch}
 .gidr-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -379,7 +236,7 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .gidr-stat .v{font-size:1.5rem;font-weight:600;color:#fff;letter-spacing:-.02em}
 .gidr-stat .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:4px}
 
-/* ─── OWNERSHIP ────────────────────────────────────────── */
+/* OWNERSHIP */
 .own-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .own-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 28px;display:flex;flex-direction:column;gap:14px}
 .own-card h4{font-size:1.05rem;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin-bottom:4px}
@@ -388,84 +245,47 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .own-card li{position:relative;padding-left:18px;font-size:13.5px;color:var(--body);line-height:1.55}
 .own-card li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
-/* ─── FAQ ──────────────────────────────────────────────── */
+/* FAQ */
 .faq-list{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
 .faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;cursor:pointer}
-.faq-item summary{
-  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;
-  font-size:15.5px;font-weight:500;color:var(--ink);letter-spacing:-.005em;line-height:1.4;
-}
+.faq-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:15.5px;font-weight:500;color:var(--ink);letter-spacing:-.005em;line-height:1.4}
 .faq-item summary::-webkit-details-marker{display:none}
-.faq-icon{
-  flex-shrink:0;width:28px;height:28px;border-radius:50%;
-  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
-  font-size:14px;color:var(--muted);transition:all .2s ease;
-}
+.faq-icon{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--muted);transition:all .2s ease}
 .faq-item[open] .faq-icon{transform:rotate(45deg);color:var(--gold);border-color:var(--gold)}
 .faq-item p{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--body);line-height:1.7}
 
-/* ─── CONTACT ──────────────────────────────────────────── */
-.contact-wrap{
-  background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);
-  border-radius:var(--radius-lg);padding:64px 48px;
-  color:#fff;position:relative;overflow:hidden;
-}
-.contact-wrap::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 50% 0%,rgba(160,129,86,.16) 0%,transparent 60%);
-  pointer-events:none;
-}
+/* CONTACT */
+.contact-wrap{background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);border-radius:var(--radius-lg);padding:64px 48px;color:#fff;position:relative;overflow:hidden}
+.contact-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(160,129,86,.16) 0%,transparent 60%);pointer-events:none}
 .contact-grid{position:relative;display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}
 .contact-text h2{color:#fff;font-weight:300;margin-bottom:16px}
 .contact-text h2 strong{color:var(--gold-bright);font-weight:500}
 .contact-text p{color:rgba(255,255,255,.74);font-size:16px;line-height:1.65;margin-bottom:14px}
 .contact-text strong{color:#fff;font-weight:600}
 .contact-channels{display:flex;flex-direction:column;gap:10px;margin-top:24px}
-.contact-channel{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:12px 18px;border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);
-  font-size:13.5px;color:#fff;font-weight:500;
-  background:rgba(255,255,255,.04);
-  transition:all .15s ease;
-}
+.contact-channel{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);font-size:13.5px;color:#fff;font-weight:500;background:rgba(255,255,255,.04);transition:all .15s ease}
 .contact-channel:hover{border-color:var(--gold-bright);background:rgba(255,255,255,.08)}
 .contact-channel .ico{width:18px;height:18px;display:inline-flex}
-.contact-form{
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
-  border-radius:var(--radius-lg);padding:32px;display:flex;flex-direction:column;gap:14px;
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-}
+.contact-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:32px;display:flex;flex-direction:column;gap:14px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .cf-field{display:flex;flex-direction:column;gap:6px}
 .cf-field label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600}
-.cf-field input,.cf-field select,.cf-field textarea{
-  font-family:inherit;font-size:14px;color:#fff;
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);
-  padding:11px 14px;border-radius:6px;outline:none;
-  transition:border-color .15s ease,background .15s ease;
-}
+.cf-field input,.cf-field select,.cf-field textarea{font-family:inherit;font-size:14px;color:#fff;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);padding:11px 14px;border-radius:6px;outline:none;transition:border-color .15s ease,background .15s ease}
 .cf-field input:focus,.cf-field select:focus,.cf-field textarea:focus{border-color:var(--gold-bright);background:rgba(255,255,255,.07)}
 .cf-field input::placeholder,.cf-field textarea::placeholder{color:rgba(255,255,255,.4)}
 .cf-field select option{background:#0a0e1a;color:#fff}
 .cf-agree{display:flex;align-items:flex-start;gap:10px;font-size:12px;color:rgba(255,255,255,.6);line-height:1.55}
 .cf-agree input{margin-top:3px;accent-color:var(--gold-bright)}
 .cf-agree a{color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.3)}
-.cf-submit{
-  background:var(--gold);color:#fff;font-size:14px;font-weight:600;letter-spacing:.06em;
-  border:none;padding:14px 22px;border-radius:6px;cursor:pointer;
-  transition:all .18s ease;
-}
+.cf-submit{background:var(--gold);color:#fff;font-size:14px;font-weight:600;letter-spacing:.06em;border:none;padding:14px 22px;border-radius:6px;cursor:pointer;transition:all .18s ease}
 .cf-submit:hover{background:#8c6e44;transform:translateY(-1px)}
 .cf-message{font-size:13px;padding:12px 16px;border-radius:6px;line-height:1.5;display:none}
 .cf-message.show{display:block}
 .cf-message.ok{background:rgba(15,81,50,.18);border:1px solid rgba(15,81,50,.5);color:#86efac}
 .cf-message.err{background:rgba(220,38,38,.18);border:1px solid rgba(220,38,38,.5);color:#fca5a5}
 
-/* ─── FOOTER ───────────────────────────────────────────── */
-footer.f{
-  background:#06080f;color:#94a3b8;
-  padding:64px 0 32px;border-top:1px solid var(--line-dark);
-}
+/* FOOTER */
+footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px solid var(--line-dark)}
 .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
 .f-brand .logo{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px}
 .f-brand p{color:#64748b;font-size:13px;line-height:1.6;max-width:38ch}
@@ -473,23 +293,12 @@ footer.f{
 .f-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .f-col li a{font-size:13px;color:#94a3b8;transition:color .15s ease}
 .f-col li a:hover{color:#fff}
-.f-bottom{
-  border-top:1px solid var(--line-dark);padding-top:24px;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-}
+.f-bottom{border-top:1px solid var(--line-dark);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom span{font-size:12px;color:#64748b}
-.f-disclaimer{
-  margin-top:18px;background:rgba(160,129,86,.06);border:1px solid rgba(160,129,86,.18);
-  border-radius:var(--radius);padding:16px 20px;
-  font-size:12px;color:#cbd5e1;line-height:1.6;
-}
+.f-disclaimer{margin-top:18px;background:rgba(160,129,86,.06);border:1px solid rgba(160,129,86,.18);border-radius:var(--radius);padding:16px 20px;font-size:12px;color:#cbd5e1;line-height:1.6}
 
-/* ─── Responsive ───────────────────────────────────────── */
-@media (max-width:1080px){
-  .intel-grid{grid-template-columns:1fr 1fr}
-  .process-list{grid-template-columns:1fr 1fr}
-  .own-grid{grid-template-columns:1fr 1fr}
-}
+/* RESPONSIVE */
+@media (max-width:1080px){.intel-grid{grid-template-columns:1fr 1fr}.process-list{grid-template-columns:1fr 1fr}.own-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:980px){
   .cat-grid{grid-template-columns:1fr}
   .mech-grid,.gidr-grid,.loc-grid{grid-template-columns:1fr;gap:36px}
@@ -529,17 +338,20 @@ footer.f{
   <div class="topbar-inner">
     <a href="/" class="topbar-brand">
       <span class="name">CP Property</span>
-      <span class="tag">Charter Capital · Phuket real estate desk</span>
+      <span class="tag">Charter Capital · Бюро недвижимости на Пхукете</span>
     </a>
     <nav class="topbar-nav">
-      <a href="#catalog">Catalog</a>
-      <a href="#mechanics">Mechanics</a>
-      <a href="#locations">Locations</a>
-      <a href="#process">Process</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#mechanics">Механика</a>
+      <a href="#locations">Локации</a>
+      <a href="#process">Процесс</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Контакты</a>
     </nav>
-    <a href="#contact" class="topbar-cta">Buy property</a>
+    <div class="topbar-actions">
+      <a href="/wet-agency-en.html" class="lang-switch" aria-label="Switch to English version">EN</a>
+      <a href="#contact" class="topbar-cta">Купить</a>
+    </div>
   </div>
 </header>
 
@@ -551,37 +363,37 @@ footer.f{
     <div class="hero-flags">
       <span class="hero-flag gold">
         <span class="dot"></span>
-        <span>5 curated projects · GIDR-screened</span>
+        <span>5 проектов под покрытием · скоринг GIDR</span>
       </span>
       <span class="hero-flag blue">
         <span class="dot"></span>
-        <span>Developer-direct · 0% buyer commission</span>
+        <span>Прямой контракт с застройщиком · 0% покупателю</span>
       </span>
     </div>
-    <h1>Phuket property — for <strong>disciplined investors</strong> only.</h1>
+    <h1>Недвижимость Пхукета — для <strong>дисциплинированных инвесторов</strong>.</h1>
     <p class="hero-sub">
-      Limited beachfront land. Strong tourism. Distinct rental seasons. We work as a single point of execution between the buyer and the developer — five live projects under our coverage in Bang Tao, Layan, Kata, Karon and Rawai, screened by GIDR's territory model and structured under leasehold or freehold contracts.
+      Ограниченная береговая земля. Сильный туризм. Выраженные арендные сезоны. Мы работаем как единая точка исполнения между покупателем и застройщиком — пять активных проектов под нашим покрытием в Bang Tao, Layan, Kata, Karon и Rawai, прошедших скрининг территориальной модели GIDR и оформленных по leasehold или freehold.
     </p>
     <div class="hero-actions">
-      <a href="#catalog" class="btn btn-primary btn-lg">Browse catalog <span class="arr">↓</span></a>
-      <a href="#contact" class="btn btn-ghost btn-lg">Buy property</a>
+      <a href="#catalog" class="btn btn-primary btn-lg">Открыть каталог <span class="arr">↓</span></a>
+      <a href="#contact" class="btn btn-ghost btn-lg">Купить недвижимость</a>
     </div>
     <div class="hero-meta">
       <div class="hero-meta-item">
         <div class="v">5</div>
-        <div class="l">Curated projects</div>
+        <div class="l">Подобранных проектов</div>
       </div>
       <div class="hero-meta-item">
         <div class="v">0%</div>
-        <div class="l">Buyer commission</div>
+        <div class="l">Комиссии покупателю</div>
       </div>
       <div class="hero-meta-item">
         <div class="v">5–9%</div>
-        <div class="l">Indicative rental yield</div>
+        <div class="l">Ориентировочная аренда</div>
       </div>
       <div class="hero-meta-item">
         <div class="v">100%</div>
-        <div class="l">Developer-contract execution</div>
+        <div class="l">Прямой контракт с застройщиком</div>
       </div>
     </div>
   </div>
@@ -591,30 +403,30 @@ footer.f{
 <section class="s cream" id="intelligence">
   <div class="container">
     <div class="s-head">
-      <span class="kicker gold">Why buy through us</span>
-      <h2>Four principles before we put a project on the catalog.</h2>
-      <p>We don't list everything we can sell. Each project clears a four-step screening — territory, developer, structure, exit — before it reaches the page you are reading.</p>
+      <span class="kicker">Почему через нас</span>
+      <h2>Четыре принципа отбора, прежде чем проект попадает в каталог.</h2>
+      <p>Мы не публикуем всё, что можем продать. Каждый проект проходит четырёхступенчатый скрининг — территория, застройщик, структура, выход — прежде чем оказаться на этой странице.</p>
     </div>
     <div class="intel-grid">
       <div class="intel-item">
-        <span class="num">01 · Territory</span>
-        <h4>GIDR-screened locations</h4>
-        <p>Each project is benchmarked against GIDR's territory model — geospatial, climate, infrastructure and tourism signals processed through a neural rating.</p>
+        <span class="num">01 · Территория</span>
+        <h4>Локации, прошедшие GIDR</h4>
+        <p>Каждый проект сопоставляется с территориальной моделью GIDR — геопространственные, климатические, инфраструктурные и туристические сигналы пропускаются через нейронный рейтинг.</p>
       </div>
       <div class="intel-item">
-        <span class="num">02 · Developer</span>
-        <h4>Track record, not brochures</h4>
-        <p>Developer screening on completed deliveries, project quality, construction milestones and post-handover service — not glossy renders alone.</p>
+        <span class="num">02 · Застройщик</span>
+        <h4>Реальный track record, а не глянец</h4>
+        <p>Скрининг застройщика по сданным проектам, качеству исполнения, графикам строительства и постгарантийному сервису — а не по красивым рендерам.</p>
       </div>
       <div class="intel-item">
-        <span class="num">03 · Structure</span>
-        <h4>Direct developer contracts</h4>
-        <p>You sign with the developer, on the developer's price list. No agency markup. Our compensation sits on the developer side — your buyer commission is zero.</p>
+        <span class="num">03 · Структура</span>
+        <h4>Прямой контракт с застройщиком</h4>
+        <p>Вы подписываете с застройщиком, по прайсу застройщика. Без агентской наценки. Наше вознаграждение — со стороны застройщика; ваша комиссия покупателя — ноль.</p>
       </div>
       <div class="intel-item">
-        <span class="num">04 · Exit</span>
-        <h4>Liquidity, not just yield</h4>
-        <p>We model resale demand and rental performance across cycles. A project enters the catalog only if the exit story is realistic — not just the brochure return.</p>
+        <span class="num">04 · Выход</span>
+        <h4>Ликвидность, а не только доходность</h4>
+        <p>Моделируем спрос на ресейл и арендный поток через циклы. Проект попадает в каталог только если история выхода реалистична — не одна брошюрная доходность.</p>
       </div>
     </div>
   </div>
@@ -625,11 +437,11 @@ footer.f{
   <div class="container">
     <div class="cat-toolbar">
       <div>
-        <span class="kicker gold">Live catalog · Phuket</span>
-        <h2>Five projects under coverage.</h2>
+        <span class="kicker">Активный каталог · Пхукет</span>
+        <h2>Пять проектов под нашим покрытием.</h2>
       </div>
-      <div class="cat-filters" role="tablist" aria-label="Project filter">
-        <button class="cat-filter active" type="button" data-filter="all">All</button>
+      <div class="cat-filters" role="tablist" aria-label="Фильтр проектов">
+        <button class="cat-filter active" type="button" data-filter="all">Все</button>
         <button class="cat-filter" type="button" data-filter="bangtao">Bang Tao</button>
         <button class="cat-filter" type="button" data-filter="layan">Layan</button>
         <button class="cat-filter" type="button" data-filter="kata">Kata · Karon</button>
@@ -640,8 +452,8 @@ footer.f{
     <div class="cat-grid">
       <!-- 1. THE MODEVA -->
       <article class="cat-card" data-cats="bangtao leasehold">
-        <a class="cat-cover" href="/projects/the-modeva.html" aria-label="Open The Modeva passport">
-          <img src="/images/the-modeva-exterior-2-1-1280x665.jpg" alt="The Modeva exterior, Bang Tao, Phuket" loading="lazy"/>
+        <a class="cat-cover" href="/projects/the-modeva.html" aria-label="Открыть паспорт The Modeva">
+          <img src="/images/the-modeva-exterior-2-1-1280x665.jpg" alt="The Modeva, экстерьер, Bang Tao, Пхукет" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Bang Tao</span>
@@ -651,22 +463,22 @@ footer.f{
           <span class="cat-developer">Rhom Bho · The Title</span>
           <h3>The Modeva — Bang Tao</h3>
           <div class="cat-meta">
-            <div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Leasehold</div></div>
-            <div class="cat-meta-item"><div class="l">ETA</div><div class="v">2026</div></div>
-            <div class="cat-meta-item"><div class="l">To beach</div><div class="v">≈ 500 m</div></div>
+            <div class="cat-meta-item"><div class="l">Структура</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">Сдача</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">До пляжа</div><div class="v">≈ 500 м</div></div>
           </div>
-          <p class="cat-desc">Lifestyle condo in the centre of Bang Tao, walking distance to Boat Avenue and Laguna. Indicative rental yield band 6–8% in stabilised operation.</p>
+          <p class="cat-desc">Lifestyle-кондо в центре Bang Tao, в шаговой доступности от Boat Avenue и Laguna. Ориентировочная арендная доходность 6–8% в стабилизированной операции.</p>
           <div class="cat-actions">
-            <a href="/projects/the-modeva.html">View passport →</a>
-            <a class="muted" href="#contact">Request brochure (PDF)</a>
+            <a href="/projects/the-modeva.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
           </div>
         </div>
       </article>
 
       <!-- 2. THE TITLE ARTRIO -->
       <article class="cat-card" data-cats="bangtao leasehold">
-        <a class="cat-cover" href="/projects/the-title-artrio.html" aria-label="Open The Title Artrio passport">
-          <img src="/images/the-title-artrio-exterior-2-1.jpg" alt="The Title Artrio exterior, Bang Tao, Phuket" loading="lazy"/>
+        <a class="cat-cover" href="/projects/the-title-artrio.html" aria-label="Открыть паспорт The Title Artrio">
+          <img src="/images/the-title-artrio-exterior-2-1.jpg" alt="The Title Artrio, экстерьер, Bang Tao, Пхукет" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Bang Tao</span>
@@ -676,22 +488,22 @@ footer.f{
           <span class="cat-developer">Rhom Bho · The Title</span>
           <h3>The Title Artrio — Bang Tao</h3>
           <div class="cat-meta">
-            <div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Leasehold</div></div>
-            <div class="cat-meta-item"><div class="l">ETA</div><div class="v">2026</div></div>
-            <div class="cat-meta-item"><div class="l">Type</div><div class="v">Condo</div></div>
+            <div class="cat-meta-item"><div class="l">Структура</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">Сдача</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">Тип</div><div class="v">Кондо</div></div>
           </div>
-          <p class="cat-desc">Mid-scale residential condo in Bang Tao designed for steady year-round occupancy. Strong unit-mix — studios and 1-bed for rental, 2-bed for owner stays.</p>
+          <p class="cat-desc">Среднеразмерный жилой кондоминиум в Bang Tao с фокусом на стабильную годовую заполняемость. Сильный микс — студии и 1-bed под аренду, 2-bed для собственного использования.</p>
           <div class="cat-actions">
-            <a href="/projects/the-title-artrio.html">View passport →</a>
-            <a class="muted" href="#contact">Request brochure (PDF)</a>
+            <a href="/projects/the-title-artrio.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
           </div>
         </div>
       </article>
 
       <!-- 3. THE TITLE KATABELLO -->
       <article class="cat-card" data-cats="kata leasehold">
-        <a class="cat-cover" href="/projects/the-title-katabello.html" aria-label="Open The Title Katabello passport">
-          <img src="/images/the-title-katabello-exterior-2.jpg" alt="The Title Katabello exterior, Kata-Karon, Phuket" loading="lazy"/>
+        <a class="cat-cover" href="/projects/the-title-katabello.html" aria-label="Открыть паспорт The Title Katabello">
+          <img src="/images/the-title-katabello-exterior-2.jpg" alt="The Title Katabello, экстерьер, Kata-Karon, Пхукет" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Kata · Karon</span>
@@ -701,22 +513,22 @@ footer.f{
           <span class="cat-developer">Rhom Bho · AssetWise</span>
           <h3>The Title Katabello — Kata · Karon</h3>
           <div class="cat-meta">
-            <div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Leasehold</div></div>
-            <div class="cat-meta-item"><div class="l">ETA</div><div class="v">2027</div></div>
-            <div class="cat-meta-item"><div class="l">Type</div><div class="v">Condo</div></div>
+            <div class="cat-meta-item"><div class="l">Структура</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">Сдача</div><div class="v">2027</div></div>
+            <div class="cat-meta-item"><div class="l">Тип</div><div class="v">Кондо</div></div>
           </div>
-          <p class="cat-desc">Resort-grade condo in the Kata-Karon corridor — Phuket's most established holiday-rental territory with seasonal premiums in the high season.</p>
+          <p class="cat-desc">Курортный кондоминиум в коридоре Kata-Karon — самой устоявшейся туристической арендной зоне Пхукета с премиальными ставками в высокий сезон.</p>
           <div class="cat-actions">
-            <a href="/projects/the-title-katabello.html">View passport →</a>
-            <a class="muted" href="#contact">Request brochure (PDF)</a>
+            <a href="/projects/the-title-katabello.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
           </div>
         </div>
       </article>
 
       <!-- 4. THE TITLE ADORA -->
       <article class="cat-card" data-cats="bangtao leasehold">
-        <a class="cat-cover" href="/projects/the-title-adora.html" aria-label="Open The Title Adora passport">
-          <img src="/images/the-title-adora-exterior-8.jpg" alt="The Title Adora exterior, Bang Tao, Phuket" loading="lazy"/>
+        <a class="cat-cover" href="/projects/the-title-adora.html" aria-label="Открыть паспорт The Title Adora">
+          <img src="/images/the-title-adora-exterior-8.jpg" alt="The Title Adora, экстерьер, Bang Tao, Пхукет" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Bang Tao</span>
@@ -726,22 +538,22 @@ footer.f{
           <span class="cat-developer">Rhom Bho · The Title</span>
           <h3>The Title Adora — Bang Tao</h3>
           <div class="cat-meta">
-            <div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Leasehold</div></div>
-            <div class="cat-meta-item"><div class="l">ETA</div><div class="v">2026</div></div>
-            <div class="cat-meta-item"><div class="l">Programme</div><div class="v">Indexed rent</div></div>
+            <div class="cat-meta-item"><div class="l">Структура</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">Сдача</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">Программа</div><div class="v">Индекс. аренда</div></div>
           </div>
-          <p class="cat-desc">Lifestyle condo with a developer-managed rental programme — selected layouts include indexed rental terms in THB.</p>
+          <p class="cat-desc">Lifestyle-кондо с управляемой застройщиком арендной программой — выбранные планировки включают индексируемые арендные условия в THB.</p>
           <div class="cat-actions">
-            <a href="/projects/the-title-adora.html">View passport →</a>
-            <a class="muted" href="#contact">Request brochure (PDF)</a>
+            <a href="/projects/the-title-adora.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
           </div>
         </div>
       </article>
 
       <!-- 5. TITLE VIVI -->
       <article class="cat-card" data-cats="layan leasehold">
-        <a class="cat-cover" href="/projects/title-vivi.html" aria-label="Open Title Vivi passport">
-          <img src="/images/title-vivi-exterior-2-1280x716.jpg" alt="Title Vivi exterior, Layan, Phuket" loading="lazy"/>
+        <a class="cat-cover" href="/projects/title-vivi.html" aria-label="Открыть паспорт Title Vivi">
+          <img src="/images/title-vivi-exterior-2-1280x716.jpg" alt="Title Vivi, экстерьер, Layan, Пхукет" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Layan</span>
@@ -751,14 +563,14 @@ footer.f{
           <span class="cat-developer">Rhom Bho · The Title</span>
           <h3>Title Vivi — Layan</h3>
           <div class="cat-meta">
-            <div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Leasehold</div></div>
-            <div class="cat-meta-item"><div class="l">ETA</div><div class="v">2026</div></div>
-            <div class="cat-meta-item"><div class="l">Layouts</div><div class="v">27–29 sqm</div></div>
+            <div class="cat-meta-item"><div class="l">Структура</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">Сдача</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">Площади</div><div class="v">27–29 м²</div></div>
           </div>
-          <p class="cat-desc">Compact, rental-focused units in Layan — the quieter coastline north of Bang Tao with stable demand and lower entry tickets.</p>
+          <p class="cat-desc">Компактные арендные юниты в Layan — более тихая прибрежная зона к северу от Bang Tao с устойчивым спросом и более низким порогом входа.</p>
           <div class="cat-actions">
-            <a href="/projects/title-vivi.html">View passport →</a>
-            <a class="muted" href="#contact">Request brochure (PDF)</a>
+            <a href="/projects/title-vivi.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
           </div>
         </div>
       </article>
@@ -770,69 +582,69 @@ footer.f{
 <section class="s cream" id="mechanics">
   <div class="container">
     <div class="s-head">
-      <span class="kicker gold">Investment mechanics</span>
-      <h2>Two ownership routes. One execution standard.</h2>
-      <p>Foreign buyers in Thailand typically choose between freehold within the condominium foreign quota and registered long-term leasehold. We don't push one over the other — we match the structure to your budget, holding horizon and exit plan.</p>
+      <span class="kicker">Механика инвестиций</span>
+      <h2>Два пути собственности. Один стандарт исполнения.</h2>
+      <p>Иностранные покупатели в Таиланде обычно выбирают между freehold в рамках кондоминиумной квоты для иностранцев и зарегистрированным долгосрочным leasehold. Мы не навязываем один путь — мы подбираем структуру под бюджет, горизонт владения и план выхода.</p>
     </div>
     <div class="mech-grid">
       <div class="mech-text">
-        <p>The two structures behave differently on price, on liquidity and on documentation. Below — a side-by-side reference, not legal advice. Each transaction is signed off by independent counsel before closing.</p>
-        <p><strong>Freehold</strong> applies to condominium units within the 49% foreign quota of sellable area. Registered as ownership on the chanote.</p>
-        <p><strong>Leasehold</strong> is a registered long-term right of use, typically 30+30+30 years. Mainstream structure across Thai resort property when the foreign quota is closed or the project is structured that way by the developer.</p>
+        <p>Две структуры ведут себя по-разному в цене, ликвидности и документации. Ниже — справочное сравнение, не юридическая консультация. Каждая сделка проходит независимое юридическое заключение перед закрытием.</p>
+        <p><strong>Freehold</strong> применяется к юнитам кондоминиума в рамках 49% квоты иностранцев от продаваемой площади. Регистрируется как право собственности на чанот.</p>
+        <p><strong>Leasehold</strong> — зарегистрированное долгосрочное право пользования, обычно 30+30+30 лет. Основная структура в курортной недвижимости Таиланда, когда квота закрыта или проект структурирован застройщиком таким образом.</p>
 
         <div class="mech-table">
           <div class="mech-row head">
-            <div class="mech-cell">Parameter</div>
-            <div class="mech-cell">Freehold (quota)</div>
+            <div class="mech-cell">Параметр</div>
+            <div class="mech-cell">Freehold (квота)</div>
             <div class="mech-cell">Leasehold (30+30+30)</div>
           </div>
           <div class="mech-row">
-            <div class="mech-cell"><strong>Eligibility</strong></div>
-            <div class="mech-cell">Within 49% foreign quota</div>
-            <div class="mech-cell">No quota limit</div>
+            <div class="mech-cell"><strong>Доступность</strong></div>
+            <div class="mech-cell">В рамках 49% квоты</div>
+            <div class="mech-cell">Без квотных ограничений</div>
           </div>
           <div class="mech-row">
-            <div class="mech-cell"><strong>Registration</strong></div>
-            <div class="mech-cell">Chanote, foreign owner</div>
-            <div class="mech-cell">Land Office lease registration</div>
+            <div class="mech-cell"><strong>Регистрация</strong></div>
+            <div class="mech-cell">Чанот, иностранный собственник</div>
+            <div class="mech-cell">Регистрация аренды в Земельном офисе</div>
           </div>
           <div class="mech-row">
-            <div class="mech-cell"><strong>Resale</strong></div>
-            <div class="mech-cell">Direct title transfer</div>
-            <div class="mech-cell">Lease assignment</div>
+            <div class="mech-cell"><strong>Ресейл</strong></div>
+            <div class="mech-cell">Прямая передача титула</div>
+            <div class="mech-cell">Передача аренды (assignment)</div>
           </div>
           <div class="mech-row">
-            <div class="mech-cell"><strong>Typical premium</strong></div>
-            <div class="mech-cell">+10–20% vs. leasehold</div>
-            <div class="mech-cell">Base price tier</div>
+            <div class="mech-cell"><strong>Типичная премия</strong></div>
+            <div class="mech-cell">+10–20% к leasehold</div>
+            <div class="mech-cell">Базовая ценовая категория</div>
           </div>
         </div>
 
         <div class="mech-disclaimer">
-          Indicative reference only. Specific terms depend on developer documentation, project quota status, applicable laws and counsel-vetted contracts. Project documents prevail.
+          Только для справки. Конкретные условия зависят от документации застройщика, статуса квоты проекта, применимого законодательства и контрактов, проверенных юристом. Преобладает документация по проекту.
         </div>
       </div>
 
       <div class="mech-side">
         <div class="mech-card">
-          <div class="l">Indicative rental yield</div>
-          <div class="v">5–9% p.a.</div>
-          <p>Range observed in stabilised resort projects across Bang Tao, Layan, Kata-Karon. Project documents prevail.</p>
+          <div class="l">Ориентировочная аренда</div>
+          <div class="v">5–9% годовых</div>
+          <p>Диапазон, наблюдаемый на стабилизированных курортных проектах в Bang Tao, Layan, Kata-Karon. Преобладает документация по проекту.</p>
         </div>
         <div class="mech-card">
-          <div class="l">Buyer commission</div>
+          <div class="l">Комиссия покупателю</div>
           <div class="v">0%</div>
-          <p>You pay the developer's list price. Our fee sits on the developer side — no markup, no broker commission to you.</p>
+          <p>Вы платите по прайс-листу застройщика. Наша комиссия со стороны застройщика — без наценки и без брокерской комиссии.</p>
         </div>
         <div class="mech-card">
-          <div class="l">Settlement currency</div>
+          <div class="l">Валюта расчёта</div>
           <div class="v">USD · EUR · THB</div>
-          <p>Wire transfer per developer escrow instructions, with FX recorded at execution. KYC and Source-of-Wealth applies.</p>
+          <p>Перевод по эскроу-инструкциям застройщика, FX фиксируется при исполнении. Применимы KYC и Source-of-Wealth.</p>
         </div>
         <div class="mech-card">
-          <div class="l">Programme types</div>
-          <div class="v">Self-rental · Pool · Indexed</div>
-          <p>Some developers offer fixed-rent or pool-rental programmes. Terms vary by project and contract — we map them transparently.</p>
+          <div class="l">Типы программ</div>
+          <div class="v">Самостоятельная · Pool · Индекс.</div>
+          <p>Некоторые застройщики предлагают фиксированную или pool-аренду. Условия зависят от проекта и контракта — мы прозрачно их объясняем.</p>
         </div>
       </div>
     </div>
@@ -843,9 +655,9 @@ footer.f{
 <section class="s" id="locations">
   <div class="container">
     <div class="s-head">
-      <span class="kicker gold">Location intelligence</span>
-      <h2>Five Phuket micro-markets we follow.</h2>
-      <p>We do not cover every coastline of Phuket — and we say so up front. Below are the corridors where the math, the developer base and the tourism cycle align for resort-property exposure today.</p>
+      <span class="kicker">Территориальный анализ</span>
+      <h2>Пять микрорынков Пхукета, которые мы ведём.</h2>
+      <p>Мы не покрываем всё побережье Пхукета — и говорим об этом сразу. Ниже — коридоры, где математика, база застройщиков и туристический цикл сегодня сходятся для курортной недвижимости.</p>
     </div>
     <div class="loc-grid">
       <div class="loc-list">
@@ -853,7 +665,7 @@ footer.f{
           <span class="n">01</span>
           <div>
             <h4>Bang Tao · Laguna</h4>
-            <p>Established beach corridor with international F&amp;B and infrastructure. Strong year-round rental demand.</p>
+            <p>Устоявшийся пляжный коридор с международной F&amp;B-инфраструктурой. Сильный круглогодичный арендный спрос.</p>
           </div>
           <span class="y">6–8%</span>
         </div>
@@ -861,7 +673,7 @@ footer.f{
           <span class="n">02</span>
           <div>
             <h4>Layan</h4>
-            <p>Quieter coastline north of Bang Tao. Lower entry tickets, stable demand from long-stay tenants.</p>
+            <p>Более тихое побережье к северу от Bang Tao. Низкий порог входа, стабильный спрос от долгосрочных арендаторов.</p>
           </div>
           <span class="y">5–7%</span>
         </div>
@@ -869,7 +681,7 @@ footer.f{
           <span class="n">03</span>
           <div>
             <h4>Kata · Karon</h4>
-            <p>Phuket's classic holiday-rental territory. Strong seasonality with a high-season premium.</p>
+            <p>Классическая зона курортной аренды Пхукета. Сильная сезонность с премией в высокий сезон.</p>
           </div>
           <span class="y">5–7%</span>
         </div>
@@ -877,22 +689,22 @@ footer.f{
           <span class="n">04</span>
           <div>
             <h4>Rawai · Nai Harn</h4>
-            <p>South Phuket residential corridor. Lower entry, slower rental cycle, expat-driven demand.</p>
+            <p>Жилой коридор юга Пхукета. Меньшая стоимость входа, медленнее арендный цикл, спрос экспат-резидентов.</p>
           </div>
           <span class="y">4–6%</span>
         </div>
         <div class="loc-item">
           <span class="n">05</span>
           <div>
-            <h4>Patong (selective)</h4>
-            <p>High traffic, high seasonality. Covered selectively only if developer documentation and structure clear our screen.</p>
+            <h4>Patong (выборочно)</h4>
+            <p>Высокий трафик, высокая сезонность. Покрываем выборочно — только если документация и структура застройщика проходят наш скрининг.</p>
           </div>
           <span class="y">5–8%</span>
         </div>
       </div>
 
-      <div class="loc-map" aria-label="Phuket island map with project pins">
-        <svg class="phuket-svg" viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+      <div class="loc-map" aria-label="Карта Пхукета с расположением проектов">
+        <svg class="phuket-svg" viewBox="0 0 240 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
           <defs>
             <linearGradient id="phuketFill" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stop-color="rgba(214,179,112,0.18)"/>
@@ -910,155 +722,161 @@ footer.f{
               <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
             </pattern>
           </defs>
-
-          <!-- subtle grid background -->
-          <rect width="240" height="320" fill="url(#phuketGrid)"/>
-
-          <!-- mainland hint (Phang Nga to the north-east) -->
-          <path d="M 200 0 L 240 0 L 240 70 Q 220 60 210 40 Q 205 20 200 0 Z" fill="rgba(255,255,255,0.025)"/>
-
-          <!-- Sarasin bridge dotted link -->
-          <line x1="135" y1="6" x2="170" y2="0" stroke="rgba(214,179,112,0.55)" stroke-width="1" stroke-dasharray="2 3"/>
-
-          <!-- island glow -->
-          <ellipse cx="115" cy="170" rx="95" ry="135" fill="url(#phuketGlow)"/>
-
-          <!-- Phuket island silhouette (stylised, accurate proportions) -->
+          <rect width="240" height="360" fill="url(#phuketGrid)"/>
+          <path d="M 168 0 L 240 0 L 240 90 Q 220 86 208 76 Q 196 64 188 50 Q 180 34 174 18 Q 170 8 168 0 Z" fill="rgba(255,255,255,0.022)"/>
+          <line x1="148" y1="14" x2="178" y2="6" stroke="rgba(214,179,112,0.55)" stroke-width="1" stroke-dasharray="2.5 3"/>
+          <text x="162" y="4" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="rgba(214,179,112,0.7)" letter-spacing="0.12em">МОСТ САРАСИН</text>
+          <text x="20" y="200" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="rgba(255,255,255,0.22)" letter-spacing="0.32em">А Н Д А М А Н С К О Е</text>
+          <text x="20" y="214" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="rgba(255,255,255,0.22)" letter-spacing="0.32em">М О Р Е</text>
+          <text x="208" y="160" font-family="Inter, sans-serif" font-size="8" font-weight="500" fill="rgba(255,255,255,0.22)" letter-spacing="0.22em" text-anchor="end">ЗАЛИВ ПХАНГ-НГА</text>
+          <ellipse cx="120" cy="200" rx="100" ry="155" fill="url(#phuketGlow)"/>
           <path d="
-            M 122 8
-            Q 132 6 138 14
-            Q 144 24 144 42
-            L 146 60
-            Q 154 70 158 88
-            Q 162 108 162 128
-            L 166 156
-            Q 174 178 174 200
-            L 176 220
-            Q 178 244 168 254
-            Q 156 262 142 258
-            L 138 252
-            Q 132 248 126 250
-            Q 116 254 108 252
-            Q 98 252 94 244
-            Q 90 240 86 244
-            Q 80 252 72 250
-            Q 60 244 58 230
-            Q 52 212 56 192
-            L 56 168
-            Q 52 144 56 120
-            L 58 96
-            Q 56 76 64 58
-            Q 72 38 84 26
-            Q 96 14 112 10
+            M 142 18
+            Q 150 22 152 30
+            L 150 42
+            Q 152 54 158 64
+            Q 168 76 172 88
+            Q 174 100 168 108
+            Q 162 114 168 120
+            Q 178 128 184 140
+            Q 188 152 188 166
+            Q 186 178 188 188
+            Q 192 198 198 206
+            Q 206 212 210 220
+            L 206 228
+            Q 196 232 184 230
+            Q 176 226 170 220
+            Q 164 226 162 236
+            Q 158 250 150 260
+            Q 138 268 124 270
+            Q 116 274 108 280
+            Q 100 286 92 286
+            Q 82 282 78 274
+            Q 74 264 76 256
+            Q 80 248 76 240
+            Q 70 232 68 220
+            Q 64 208 64 196
+            Q 60 186 56 176
+            Q 50 168 50 158
+            Q 52 148 50 140
+            Q 46 132 50 124
+            Q 56 116 54 108
+            Q 50 100 54 92
+            Q 60 84 60 76
+            Q 56 68 60 60
+            Q 68 50 78 42
+            Q 90 32 104 26
+            Q 116 22 130 18
+            Q 138 16 142 18
             Z
-          " fill="url(#phuketFill)" stroke="url(#phuketStroke)" stroke-width="1.3" stroke-linejoin="round"/>
-
-          <!-- topographical hint lines (interior) -->
-          <g stroke="rgba(214,179,112,0.18)" stroke-width="0.6" fill="none">
-            <path d="M 90 70 Q 110 80 130 76 Q 140 78 148 90"/>
-            <path d="M 80 120 Q 110 130 140 124 Q 152 126 160 138"/>
-            <path d="M 78 170 Q 110 178 142 172 Q 156 176 168 188"/>
-            <path d="M 82 220 Q 112 226 140 222 Q 156 222 168 230"/>
+          " fill="url(#phuketFill)" stroke="url(#phuketStroke)" stroke-width="1.4" stroke-linejoin="round"/>
+          <g stroke="rgba(214,179,112,0.22)" stroke-width="0.6" fill="none">
+            <path d="M 110 60 Q 122 80 128 100 Q 132 124 130 148 Q 128 172 132 196 Q 134 220 128 240"/>
+            <path d="M 90 90 Q 104 100 118 102"/>
+            <path d="M 80 130 Q 100 138 120 136"/>
+            <path d="M 78 174 Q 102 180 126 176 Q 144 178 156 186"/>
+            <path d="M 84 218 Q 108 224 132 220 Q 152 222 168 228"/>
+            <path d="M 96 256 Q 116 262 134 256"/>
           </g>
-
-          <!-- compass -->
-          <g transform="translate(212,28)" opacity="0.6">
-            <circle r="11" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.6"/>
-            <path d="M 0 -8 L 2 0 L 0 8 L -2 0 Z" fill="rgba(214,179,112,0.9)"/>
-            <text y="-13" text-anchor="middle" font-size="7" font-weight="700" fill="rgba(255,255,255,0.6)" letter-spacing="0.1em">N</text>
+          <g transform="translate(214,32)" opacity="0.65">
+            <circle r="12" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="0.7"/>
+            <path d="M 0 -9 L 2.5 0 L 0 9 L -2.5 0 Z" fill="rgba(214,179,112,0.9)"/>
+            <text y="-15" text-anchor="middle" font-size="7.5" font-weight="700" fill="rgba(255,255,255,0.7)" letter-spacing="0.1em">С</text>
           </g>
-
-          <!-- scale -->
-          <g transform="translate(20,300)" font-family="Inter, sans-serif">
-            <line x1="0" y1="0" x2="40" y2="0" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
-            <line x1="0" y1="-3" x2="0" y2="3" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
-            <line x1="40" y1="-3" x2="40" y2="3" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
-            <text x="20" y="14" text-anchor="middle" font-size="7" letter-spacing="0.16em" fill="rgba(255,255,255,0.55)">5 KM</text>
+          <g transform="translate(22,338)" font-family="Inter, sans-serif">
+            <line x1="0" y1="0" x2="40" y2="0" stroke="rgba(255,255,255,0.55)" stroke-width="0.9"/>
+            <line x1="0" y1="-3" x2="0" y2="3" stroke="rgba(255,255,255,0.55)" stroke-width="0.9"/>
+            <line x1="20" y1="-2" x2="20" y2="2" stroke="rgba(255,255,255,0.55)" stroke-width="0.7"/>
+            <line x1="40" y1="-3" x2="40" y2="3" stroke="rgba(255,255,255,0.55)" stroke-width="0.9"/>
+            <text x="20" y="14" text-anchor="middle" font-size="7" letter-spacing="0.16em" fill="rgba(255,255,255,0.55)">10 КМ</text>
           </g>
-
-          <!-- non-active reference dot: Phuket Town -->
-          <g transform="translate(140,150)">
-            <circle r="2.4" fill="rgba(255,255,255,0.5)"/>
-            <text x="6" y="2.4" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="rgba(255,255,255,0.45)" letter-spacing="0.05em">Phuket Town</text>
+          <g transform="translate(150,200)">
+            <circle r="2.6" fill="rgba(255,255,255,0.55)"/>
+            <text x="6" y="2.6" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="rgba(255,255,255,0.5)" letter-spacing="0.05em">Пхукет (город)</text>
           </g>
-          <!-- non-active reference dot: Airport -->
-          <g transform="translate(98,40)">
-            <circle r="2.4" fill="rgba(255,255,255,0.5)"/>
-            <text x="6" y="2.4" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="rgba(255,255,255,0.45)" letter-spacing="0.05em">HKT Airport</text>
+          <g transform="translate(115,52)">
+            <circle r="2.6" fill="rgba(255,255,255,0.55)"/>
+            <text x="6" y="2.6" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="rgba(255,255,255,0.5)" letter-spacing="0.05em">Аэропорт HKT</text>
           </g>
-
-          <!-- active project pins with numbers -->
-          <g class="map-pin" transform="translate(72,80)">
-            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+          <g transform="translate(200,222)">
+            <circle r="2.4" fill="rgba(255,255,255,0.4)"/>
+            <text x="6" y="2.4" font-family="Inter, sans-serif" font-size="7" font-weight="500" fill="rgba(255,255,255,0.4)" letter-spacing="0.05em">Мыс Панва</text>
+          </g>
+          <g transform="translate(80,288)">
+            <circle r="2.4" fill="rgba(255,255,255,0.4)"/>
+            <text x="-6" y="2.4" font-family="Inter, sans-serif" font-size="7" font-weight="500" fill="rgba(255,255,255,0.4)" letter-spacing="0.05em" text-anchor="end">Промтеп</text>
+          </g>
+          <g class="map-pin" transform="translate(64,140)">
+            <circle class="pin-glow" r="20" fill="rgba(214,179,112,0.2)"/>
             <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
             <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">1</text>
           </g>
-          <g class="map-pin" transform="translate(70,58)">
-            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+          <g class="map-pin" transform="translate(60,108)">
+            <circle class="pin-glow" r="20" fill="rgba(214,179,112,0.2)"/>
             <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
             <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">2</text>
           </g>
-          <g class="map-pin" transform="translate(64,134)">
-            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+          <g class="map-pin" transform="translate(56,184)">
+            <circle class="pin-glow" r="20" fill="rgba(214,179,112,0.2)"/>
             <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
             <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">3</text>
           </g>
-          <g class="map-pin" transform="translate(66,200)">
-            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+          <g class="map-pin" transform="translate(70,238)">
+            <circle class="pin-glow" r="20" fill="rgba(214,179,112,0.2)"/>
             <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
             <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">4</text>
           </g>
-          <g class="map-pin" transform="translate(120,250)">
-            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+          <g class="map-pin" transform="translate(120,272)">
+            <circle class="pin-glow" r="20" fill="rgba(214,179,112,0.2)"/>
             <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
             <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">5</text>
           </g>
         </svg>
         <div class="map-legend">
-          <div class="map-legend-row"><span class="map-legend-num">1</span><div><div class="map-legend-name">Bang Tao</div><div class="map-legend-meta">3 projects · Tier 1</div></div></div>
-          <div class="map-legend-row"><span class="map-legend-num">2</span><div><div class="map-legend-name">Layan</div><div class="map-legend-meta">1 project · Tier 1–2</div></div></div>
-          <div class="map-legend-row"><span class="map-legend-num">3</span><div><div class="map-legend-name">Patong</div><div class="map-legend-meta">Selective · Tier 2</div></div></div>
-          <div class="map-legend-row"><span class="map-legend-num">4</span><div><div class="map-legend-name">Kata · Karon</div><div class="map-legend-meta">1 project · Tier 2</div></div></div>
-          <div class="map-legend-row"><span class="map-legend-num">5</span><div><div class="map-legend-name">Rawai · Nai Harn</div><div class="map-legend-meta">South corridor</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">1</span><div><div class="map-legend-name">Bang Tao</div><div class="map-legend-meta">3 проекта · Tier 1</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">2</span><div><div class="map-legend-name">Layan</div><div class="map-legend-meta">1 проект · Tier 1–2</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">3</span><div><div class="map-legend-name">Patong</div><div class="map-legend-meta">Выборочно · Tier 2</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">4</span><div><div class="map-legend-name">Kata · Karon</div><div class="map-legend-meta">1 проект · Tier 2</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">5</span><div><div class="map-legend-name">Rawai · Nai Harn</div><div class="map-legend-meta">Южный коридор</div></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS (dark) -->
+<!-- PROCESS -->
 <section class="s-process" id="process">
   <div class="process-inner">
     <div class="process-header">
-      <span class="kicker gold" style="color:var(--gold-bright)">Advisory process</span>
-      <h2>From first contact to <strong>property under your name</strong>.</h2>
-      <p>Five disciplined stages. Each one ends with a deliverable in your hands — not a sales pitch.</p>
+      <span class="kicker" style="color:var(--gold-bright)">Процесс работы</span>
+      <h2>От первого контакта до <strong>собственности на ваше имя</strong>.</h2>
+      <p>Пять дисциплинированных этапов. Каждый заканчивается конкретным результатом в ваших руках — не презентацией.</p>
     </div>
     <div class="process-list">
       <div class="process-step">
-        <span class="process-num">01 · Discovery</span>
-        <h4>Brief &amp; mandate</h4>
-        <p>Budget, holding horizon, jurisdiction of residence, expected use — captured under NDA. We say no upfront if your case isn't ours.</p>
+        <span class="process-num">01 · Знакомство</span>
+        <h4>Бриф и мандат</h4>
+        <p>Бюджет, горизонт владения, юрисдикция резидентства, ожидаемое использование — фиксируем под NDA. Скажем «нет» сразу, если ваш кейс не наш.</p>
       </div>
       <div class="process-step">
-        <span class="process-num">02 · Curation</span>
-        <h4>Shortlist &amp; passports</h4>
-        <p>2–3 GIDR-screened projects matched to your brief, each with a project passport — territory, developer, structure, exit, indicative numbers.</p>
+        <span class="process-num">02 · Подбор</span>
+        <h4>Шорт-лист и паспорта</h4>
+        <p>2–3 проекта, прошедших скрининг GIDR, с паспортом по каждому — территория, застройщик, структура, выход, ориентировочные цифры.</p>
       </div>
       <div class="process-step">
-        <span class="process-num">03 · Site &amp; legal</h4>
-        <h4>Visit &amp; due diligence</h4>
-        <p>On-site viewings, developer meetings, independent legal review — title chain, lease draft, sale contract, project licences.</p>
+        <span class="process-num">03 · Осмотр и право</span>
+        <h4>Визит и due diligence</h4>
+        <p>Осмотры на месте, встречи с застройщиком, независимый юридический анализ — цепочка титулов, проект договора аренды, контракт продажи, лицензии проекта.</p>
       </div>
       <div class="process-step">
-        <span class="process-num">04 · Closing</span>
-        <h4>Contract &amp; settlement</h4>
-        <p>Sale &amp; Purchase Agreement signed direct with the developer, payment per escrow instructions, registration at Land Office.</p>
+        <span class="process-num">04 · Закрытие</span>
+        <h4>Контракт и расчёт</h4>
+        <p>SPA подписан напрямую с застройщиком, оплата по эскроу-инструкциям, регистрация в Земельном офисе.</p>
       </div>
       <div class="process-step">
-        <span class="process-num">05 · Stewardship</span>
-        <h4>Handover &amp; rental</h4>
-        <p>Construction milestones tracked, snagging, key handover, optional rental programme onboarding, ongoing reporting.</p>
+        <span class="process-num">05 · Сопровождение</span>
+        <h4>Передача и аренда</h4>
+        <p>Контролируем строительные этапы, snagging, передачу ключей, опциональное подключение к арендной программе, текущая отчётность.</p>
       </div>
     </div>
   </div>
@@ -1069,21 +887,21 @@ footer.f{
   <div class="container">
     <div class="gidr-grid">
       <div class="gidr-text">
-        <span class="kicker gold">GIDR · Hong Kong</span>
-        <h2>The screening engine behind every project we list.</h2>
-        <p>The Hong Kong Institute of Digital Research (GIDR) is an applied analytics and AI lab modelling resort real-estate markets across Asia. Founded in Hong Kong, GIDR operates as the research and data-intelligence partner powering CP Property's screening engine.</p>
-        <p>The model processes <strong>thousands of signals per property</strong> — geospatial and climatic layers, construction milestones, developer track record, price dynamics, tourism flows — to produce predictive ROI and liquidity ratings. Brochure numbers are an input, not a conclusion.</p>
-        <p>Each project on this catalog has been benchmarked against the model. Projects that fail the screen don't reach the page.</p>
-        <a href="https://ccapital.pro/" class="btn btn-secondary" style="margin-top:18px">Charter Capital ecosystem <span class="arr">→</span></a>
+        <span class="kicker">GIDR · Гонконг</span>
+        <h2>Скрининг-движок за каждым проектом в нашем каталоге.</h2>
+        <p>Hong Kong Institute of Digital Research (GIDR) — прикладная аналитическая и AI-лаборатория, моделирующая курортные рынки недвижимости в Азии. Основан в Гонконге, GIDR работает как партнёр по исследованиям и data-intelligence, обеспечивающий скрининг-движок CP Property.</p>
+        <p>Модель обрабатывает <strong>тысячи сигналов на проект</strong> — геопространственные и климатические слои, графики строительства, track record застройщика, ценовая динамика, туристические потоки — для построения предиктивных рейтингов ROI и ликвидности. Брошюрные цифры — это вход, не вывод.</p>
+        <p>Каждый проект в этом каталоге уже сопоставлен с моделью. Проекты, не прошедшие скрининг, на страницу не попадают.</p>
+        <a href="https://ccapital.pro/" class="btn btn-secondary" style="margin-top:18px">Экосистема Charter Capital <span class="arr">→</span></a>
       </div>
       <div class="gidr-card">
-        <div class="label"><span class="dot"></span><span>GIDR Neural Model — Active</span></div>
-        <h3>Resort property scoring across Phuket and adjacent Asian markets.</h3>
+        <div class="label"><span class="dot"></span><span>Нейронная модель GIDR — активна</span></div>
+        <h3>Скоринг курортной недвижимости по Пхукету и смежным азиатским рынкам.</h3>
         <div class="gidr-stats">
-          <div class="gidr-stat"><div class="v">1,000+</div><div class="l">Signals processed per project</div></div>
-          <div class="gidr-stat"><div class="v">Asia-wide</div><div class="l">Markets covered</div></div>
-          <div class="gidr-stat"><div class="v">Resort</div><div class="l">Property type focus</div></div>
-          <div class="gidr-stat"><div class="v">5</div><div class="l">Projects under coverage on this page</div></div>
+          <div class="gidr-stat"><div class="v">1 000+</div><div class="l">Сигналов на проект</div></div>
+          <div class="gidr-stat"><div class="v">Asia-wide</div><div class="l">Покрытие рынков</div></div>
+          <div class="gidr-stat"><div class="v">Курортная</div><div class="l">Тип объектов</div></div>
+          <div class="gidr-stat"><div class="v">5</div><div class="l">Проектов под покрытием</div></div>
         </div>
       </div>
     </div>
@@ -1094,36 +912,36 @@ footer.f{
 <section class="s" id="ownership">
   <div class="container">
     <div class="s-head">
-      <span class="kicker gold">Ownership structures</span>
-      <h2>What's actually realistic for a foreign buyer.</h2>
-      <p>Three lanes — explained without marketing varnish. Specific terms and applicability are reviewed by counsel before closing.</p>
+      <span class="kicker">Структуры собственности</span>
+      <h2>Что реально доступно иностранному покупателю.</h2>
+      <p>Три варианта — без маркетингового лака. Конкретные условия и применимость проверяются юристом перед закрытием.</p>
     </div>
     <div class="own-grid">
       <div class="own-card">
-        <h4>Foreign condo quota (freehold)</h4>
-        <p>Direct freehold ownership of a condominium unit within the 49% foreign quota of sellable area. Registered on the chanote in your name.</p>
+        <h4>Foreign-квота кондо (freehold)</h4>
+        <p>Прямое право собственности на юнит кондоминиума в рамках 49% квоты для иностранцев. Регистрируется на чаноте на ваше имя.</p>
         <ul>
-          <li>Title in foreign-buyer name</li>
-          <li>Direct resale via title transfer</li>
-          <li>Subject to quota availability</li>
+          <li>Титул на иностранного покупателя</li>
+          <li>Прямой ресейл через передачу титула</li>
+          <li>Зависит от наличия квоты</li>
         </ul>
       </div>
       <div class="own-card">
-        <h4>Registered leasehold (30+30+30)</h4>
-        <p>Long-term registered right of use, with a renewal mechanism documented in the contract. Mainstream structure when foreign quota is closed.</p>
+        <h4>Зарегистрированный leasehold (30+30+30)</h4>
+        <p>Долгосрочное зарегистрированное право пользования с механизмом продления, прописанным в контракте. Основная структура, если квота закрыта.</p>
         <ul>
-          <li>Lease registered at Land Office</li>
-          <li>Resale via lease assignment</li>
-          <li>Lower entry vs. freehold</li>
+          <li>Аренда зарегистрирована в Земельном офисе</li>
+          <li>Ресейл через передачу аренды</li>
+          <li>Меньший порог входа vs. freehold</li>
         </ul>
       </div>
       <div class="own-card">
-        <h4>Settlement, banking &amp; tax</h4>
-        <p>Wire from your offshore or domestic bank into developer's escrow per FET / TT3 requirements. KYC and Source-of-Wealth standard.</p>
+        <h4>Расчёт, банкинг и налоги</h4>
+        <p>Перевод с офшорного или внутреннего банка в эскроу застройщика по требованиям FET / TT3. Стандартные KYC и Source-of-Wealth.</p>
         <ul>
-          <li>FET / TT3 record of inbound funds</li>
-          <li>Withholding on rental income</li>
-          <li>Annual taxes paid via accountant</li>
+          <li>FET / TT3 запись о входящем переводе</li>
+          <li>Удержание с арендного дохода</li>
+          <li>Годовые налоги через бухгалтера</li>
         </ul>
       </div>
     </div>
@@ -1134,33 +952,33 @@ footer.f{
 <section class="s cream" id="faq">
   <div class="container">
     <div class="s-head" style="text-align:center;margin-left:auto;margin-right:auto">
-      <span class="kicker gold">FAQ</span>
-      <h2>Real questions we get from real investors.</h2>
+      <span class="kicker">FAQ</span>
+      <h2>Реальные вопросы от реальных инвесторов.</h2>
     </div>
     <div class="faq-list">
       <details class="faq-item" open>
-        <summary>Leasehold vs freehold — what's actually the difference?<span class="faq-icon">+</span></summary>
-        <p>Freehold is direct ownership registered on the chanote, available within the 49% foreign quota of a condominium project. Leasehold is a registered long-term right of use (typically 30+30+30 years). Both are mainstream structures; the right route depends on quota availability, your holding horizon, and the resale plan.</p>
+        <summary>Leasehold vs freehold — в чём реальная разница?<span class="faq-icon">+</span></summary>
+        <p>Freehold — прямое право собственности, зарегистрированное на чаноте, доступное в рамках 49% квоты для иностранцев в кондоминиумном проекте. Leasehold — зарегистрированное долгосрочное право пользования (обычно 30+30+30 лет). Обе структуры — основные; правильный путь зависит от наличия квоты, вашего горизонта владения и плана ресейла.</p>
       </details>
       <details class="faq-item">
-        <summary>Can foreigners own land in Thailand?<span class="faq-icon">+</span></summary>
-        <p>Direct freehold land ownership by foreigners is heavily restricted. Most foreign investors purchase condominium units within the quota or use long-term registered leasehold, vetted by independent local counsel. Company-route structures exist but are project-dependent and require careful legal review.</p>
+        <summary>Могут ли иностранцы владеть землёй в Таиланде?<span class="faq-icon">+</span></summary>
+        <p>Прямое freehold-владение землёй для иностранцев сильно ограничено. Большинство иностранных инвесторов покупают юниты кондоминиумов в рамках квоты или используют долгосрочный зарегистрированный leasehold с независимой юридической проверкой. Существуют структуры через тайскую компанию, но они зависят от проекта и требуют тщательного юридического анализа.</p>
       </details>
       <details class="faq-item">
-        <summary>What rental yields are realistic in resort areas?<span class="faq-icon">+</span></summary>
-        <p>Stabilised projects in strong locations typically deliver net yields in the mid-single to high-single digits. Numbers above that range usually reflect either an introductory marketing programme or higher risk. We benchmark every project against GIDR's territory model rather than trusting brochure projections.</p>
+        <summary>Какая арендная доходность реалистична в курортных зонах?<span class="faq-icon">+</span></summary>
+        <p>Стабилизированные проекты в сильных локациях обычно дают чистую доходность от среднего к высокому однозначному диапазону. Цифры выше этого диапазона обычно отражают либо вводную маркетинговую программу, либо повышенный риск. Каждый проект мы сравниваем с территориальной моделью GIDR, а не доверяем брошюрным прогнозам.</p>
       </details>
       <details class="faq-item">
-        <summary>Do you charge buyers any commission?<span class="faq-icon">+</span></summary>
-        <p>No. You pay the developer's list price; our compensation is on the developer side. The structure is disclosed in writing before any commitment.</p>
+        <summary>Берёте ли вы комиссию с покупателя?<span class="faq-icon">+</span></summary>
+        <p>Нет. Вы платите по прайс-листу застройщика; наша комиссия со стороны застройщика. Структура раскрывается в письменном виде до любых обязательств.</p>
       </details>
       <details class="faq-item">
-        <summary>How is the inbound payment recorded?<span class="faq-icon">+</span></summary>
-        <p>Funds arrive via international wire transfer into the developer's escrow per FET / TT3 requirements. The bank registers the inbound transfer in foreign currency, which is required for future repatriation of resale proceeds.</p>
+        <summary>Как фиксируется входящий перевод?<span class="faq-icon">+</span></summary>
+        <p>Средства приходят международным wire-переводом в эскроу застройщика по требованиям FET / TT3. Банк регистрирует входящий перевод в иностранной валюте — это требуется для будущей репатриации выручки от ресейла.</p>
       </details>
       <details class="faq-item">
-        <summary>What happens at the end of a 30-year lease?<span class="faq-icon">+</span></summary>
-        <p>Properly drafted leases include renewal mechanics. The real questions are the contract quality, the registration, and the counterparty. We work only with developers and legal teams that document realistic renewal terms.</p>
+        <summary>Что происходит в конце 30-летней аренды?<span class="faq-icon">+</span></summary>
+        <p>Корректно составленные leasehold-контракты включают механику продления. Реальные вопросы — качество контракта, регистрация и контрагент. Мы работаем только с застройщиками и юридическими командами, которые документируют реалистичные условия продления.</p>
       </details>
     </div>
   </div>
@@ -1172,10 +990,10 @@ footer.f{
     <div class="contact-wrap">
       <div class="contact-grid">
         <div class="contact-text">
-          <span class="kicker gold" style="color:var(--gold-bright)">Buy property</span>
-          <h2>One brief. <strong>One curated dossier.</strong> No mass funnels.</h2>
-          <p>Tell us who you are, your budget and which of the five projects looks closest. We reply from <strong>property@ccapital.pro</strong> with a curated dossier, GIDR notes and the next concrete step.</p>
-          <p>No mass mailings. No pressure tactics. We work one-to-one with investors who value structure, transparency and disciplined decisions.</p>
+          <span class="kicker" style="color:var(--gold-bright)">Купить недвижимость</span>
+          <h2>Один бриф. <strong>Одно подобранное досье.</strong> Без массовых воронок.</h2>
+          <p>Расскажите, кто вы, ваш бюджет и какой из пяти проектов выглядит ближе всего. Ответим с <strong>property@ccapital.pro</strong> подобранным досье, заметками GIDR и конкретным следующим шагом.</p>
+          <p>Без массовых рассылок. Без давления. Работаем один-к-одному с инвесторами, ценящими структуру, прозрачность и дисциплинированные решения.</p>
           <div class="contact-channels">
             <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="contact-channel"><span class="ico">💬</span> WhatsApp · +66 65 765 8782</a>
             <a href="https://t.me/charter_capital" target="_blank" rel="noopener noreferrer" class="contact-channel"><span class="ico">📨</span> Telegram · @charter_capital</a>
@@ -1187,8 +1005,8 @@ footer.f{
           <div id="formMessage" class="cf-message"></div>
           <div class="cf-row">
             <div class="cf-field">
-              <label for="name">Full name *</label>
-              <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name"/>
+              <label for="name">Полное имя *</label>
+              <input id="name" name="name" type="text" required autocomplete="name" placeholder="Ваше имя"/>
             </div>
             <div class="cf-field">
               <label for="email">Email *</label>
@@ -1197,36 +1015,36 @@ footer.f{
           </div>
           <div class="cf-row">
             <div class="cf-field">
-              <label for="phone">Phone / WhatsApp</label>
-              <input id="phone" name="phone" type="text" autocomplete="tel" placeholder="+ country code"/>
+              <label for="phone">Телефон / WhatsApp</label>
+              <input id="phone" name="phone" type="text" autocomplete="tel" placeholder="+ код страны"/>
             </div>
             <div class="cf-field">
-              <label for="budget">Budget (USD)</label>
-              <input id="budget" name="budget" type="text" placeholder="e.g. 200,000"/>
+              <label for="budget">Бюджет (USD)</label>
+              <input id="budget" name="budget" type="text" placeholder="например, 200 000"/>
             </div>
           </div>
           <div class="cf-field">
-            <label for="project">Project of interest</label>
+            <label for="project">Интересующий проект</label>
             <select id="project" name="project">
-              <option value="">Select a project</option>
+              <option value="">Выберите проект</option>
               <option value="The Modeva (Bang Tao)">The Modeva — Bang Tao</option>
               <option value="The Title Artrio (Bang Tao)">The Title Artrio — Bang Tao</option>
               <option value="The Title Katabello (Kata-Karon)">The Title Katabello — Kata · Karon</option>
               <option value="The Title Adora (Bang Tao)">The Title Adora — Bang Tao</option>
               <option value="Title Vivi (Layan)">Title Vivi — Layan</option>
-              <option value="Other / not sure yet">Other / not sure yet</option>
+              <option value="Other / not sure yet">Другое / пока не определился</option>
             </select>
           </div>
           <div class="cf-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="3" placeholder="Tenure preference, holding horizon, viewing dates…"></textarea>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="3" placeholder="Предпочтения по структуре, горизонт владения, даты осмотра…"></textarea>
           </div>
           <label class="cf-agree">
             <input type="checkbox" name="agree" required/>
-            <span>I agree to the <a href="/privacy.html">Privacy Policy</a>. I understand this is a request for information, not a binding offer.</span>
+            <span>Я согласен с <a href="/privacy.html">Политикой конфиденциальности</a>. Понимаю, что это запрос информации, не оферта.</span>
           </label>
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
-          <button type="submit" class="cf-submit">Send enquiry →</button>
+          <button type="submit" class="cf-submit">Отправить запрос →</button>
         </form>
       </div>
     </div>
@@ -1241,13 +1059,13 @@ footer.f{
     <div class="f-grid">
       <div class="f-brand">
         <div class="logo">CP Property</div>
-        <p>Curated Phuket properties under a single mandate — developer-direct contracts, GIDR-screened territory, full execution from brief to handover.</p>
+        <p>Подобранная недвижимость Пхукета под единым мандатом — прямые контракты с застройщиком, скрининг GIDR, полное исполнение от брифа до передачи.</p>
         <div class="f-disclaimer">
-          Real estate transactions are executed under independent legal review. Indicative figures are not investment advice or guarantees. Final terms depend on developer contracts, applicable laws and counsel-vetted documentation.
+          Все сделки с недвижимостью проходят независимое юридическое заключение. Ориентировочные цифры — не инвестиционная рекомендация и не гарантии. Финальные условия зависят от контрактов застройщика, применимого законодательства и документации, проверенной юристом. Подробные паспорта проектов представлены на английском языке для совместимости с банковской документацией.
         </div>
       </div>
       <div class="f-col">
-        <h5>Catalog</h5>
+        <h5>Каталог</h5>
         <ul>
           <li><a href="/projects/the-modeva.html">The Modeva</a></li>
           <li><a href="/projects/the-title-artrio.html">The Title Artrio</a></li>
@@ -1259,47 +1077,41 @@ footer.f{
       <div class="f-col">
         <h5>Charter Capital</h5>
         <ul>
-          <li><a href="https://ccapital.pro/">Charter Capital · Home</a></li>
-          <li><a href="https://ccapital.pro/homeland.html">Homeland Prep</a></li>
-          <li><a href="https://ccapital.pro/index.html">Already Abroad</a></li>
+          <li><a href="https://ccapital.pro/">Charter Capital · Главная</a></li>
+          <li><a href="https://ccapital.pro/homeland.html">Подготовка к исходу</a></li>
+          <li><a href="https://ccapital.pro/index.html">Уже за границей</a></li>
           <li><a href="https://ccapital.pro/fund.html">Charter Fund</a></li>
           <li><a href="https://ccapital.pro/private.html">Private Access</a></li>
         </ul>
       </div>
       <div class="f-col">
-        <h5>Legal &amp; contact</h5>
+        <h5>Юридическое и контакты</h5>
         <ul>
           <li><a href="mailto:property@ccapital.pro">property@ccapital.pro</a></li>
           <li><a href="https://t.me/charter_capital" target="_blank" rel="noopener noreferrer">Telegram</a></li>
           <li><a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/privacy.html">Политика конфиденциальности</a></li>
         </ul>
       </div>
     </div>
     <div class="f-bottom">
-      <span>© 2026 CP Property · Part of Charter Capital ecosystem</span>
-      <span>All real estate transactions executed under independent legal review · Hong Kong &amp; Phuket</span>
+      <span>© 2026 CP Property · Часть экосистемы Charter Capital</span>
+      <span>Все сделки с недвижимостью проходят независимое юридическое заключение · Гонконг и Пхукет</span>
     </div>
   </div>
 </footer>
 
 <script>
-// Topbar solid on scroll
 (function(){
   const bar = document.getElementById('topbar');
   if(!bar) return;
-  const onScroll = () => {
-    if(window.scrollY > 60) bar.classList.add('solid');
-    else bar.classList.remove('solid');
-  };
+  const onScroll = () => { if(window.scrollY > 60) bar.classList.add('solid'); else bar.classList.remove('solid'); };
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
 })();
 
-// Page reveal
 document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-ready'));
 
-// Catalog filter
 (function(){
   const filters = document.querySelectorAll('.cat-filter');
   const cards = document.querySelectorAll('.cat-card');
@@ -1315,7 +1127,6 @@ document.addEventListener('DOMContentLoaded', () => document.body.classList.add(
   }));
 })();
 
-// Form
 (function(){
   const form = document.getElementById('agencyForm');
   if(!form) return;
@@ -1329,14 +1140,14 @@ document.addEventListener('DOMContentLoaded', () => document.body.classList.add(
     e.preventDefault();
     const name = form.querySelector('#name').value.trim();
     const email = form.querySelector('#email').value.trim();
-    if(!name || !email){ setMsg('Please fill in name and email.', 'err'); return; }
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setMsg('Please enter a valid email address.', 'err'); return; }
+    if(!name || !email){ setMsg('Пожалуйста, заполните имя и email.', 'err'); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setMsg('Введите корректный email.', 'err'); return; }
     try {
       const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{Accept:'application/json'} });
-      if(res.ok){ form.reset(); setMsg('Thank you. Your enquiry has been received. We will reply from property@ccapital.pro shortly.', 'ok'); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
+      if(res.ok){ form.reset(); setMsg('Спасибо. Запрос принят. Ответим с property@ccapital.pro в ближайшее время.', 'ok'); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
       else throw new Error('send fail');
     } catch(err){
-      setMsg('Could not send. Please email property@ccapital.pro directly.', 'err');
+      setMsg('Не удалось отправить. Напишите напрямую на property@ccapital.pro.', 'err');
     }
   });
 })();
