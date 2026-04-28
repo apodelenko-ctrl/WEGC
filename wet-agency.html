@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>West East Real Estate — Curated Phuket properties for disciplined investors</title>
-<meta name="description" content="Developer-direct contracts. Zero buyer commission. Five GIDR-screened Phuket projects in Bang Tao, Kata, Karon, Layan and Rawai. Leasehold and freehold structures explained, executed and delivered with full documentation."/>
+<title>CP Property — Curated Phuket properties · Charter Capital</title>
+<meta name="description" content="CP Property · part of the Charter Capital ecosystem. Developer-direct Phuket real estate. Zero buyer commission. Five screened projects in Bang Tao, Layan, Kata, Karon and Rawai. Leasehold and freehold structures executed with full documentation."/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="West East Real Estate — Curated Phuket properties for disciplined investors"/>
-<meta property="og:description" content="Developer-direct contracts. Zero buyer commission. GIDR-screened Phuket portfolio under one mandate."/>
-<meta property="og:url" content="https://wegc.fund/wet-agency.html"/>
+<meta property="og:title" content="CP Property — Curated Phuket properties · Charter Capital"/>
+<meta property="og:description" content="Developer-direct contracts. Zero buyer commission. Five screened Phuket projects under one mandate."/>
+<meta property="og:url" content="https://ccapital.pro/property.html"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
-<link rel="canonical" href="https://wegc.fund/wet-agency.html"/>
+<link rel="canonical" href="https://ccapital.pro/property.html"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -278,7 +278,7 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .mech-disclaimer{margin-top:22px;font-size:12px;color:var(--muted);line-height:1.65;padding:14px 18px;background:var(--bg-soft);border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0}
 
 /* ─── LOCATION INTELLIGENCE ───────────────────────────── */
-.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.loc-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:36px;align-items:start}
 .loc-list{display:flex;flex-direction:column;gap:10px}
 .loc-item{
   display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;
@@ -291,34 +291,38 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .loc-item p{font-size:12.5px;line-height:1.55;color:var(--muted);margin:0}
 .loc-item .y{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:-.01em;font-feature-settings:'tnum';white-space:nowrap}
 .loc-map{
-  position:relative;aspect-ratio:1/1.05;background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);
+  position:relative;
+  background:radial-gradient(ellipse at 50% 50%,#0e1322 0%,#06080f 80%);
   border-radius:var(--radius-lg);overflow:hidden;color:#fff;
-  display:flex;align-items:center;justify-content:center;
+  display:grid;grid-template-columns:1fr 200px;gap:0;
   border:1px solid #1f2937;
+  min-height:560px;
 }
-.loc-map::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 50% 60%,rgba(160,129,86,.18) 0%,transparent 60%);
+.phuket-svg{
+  width:100%;height:100%;display:block;
+  padding:18px;
 }
-.loc-map svg{width:80%;max-width:340px;position:relative;z-index:1}
-.loc-pin{
-  position:absolute;width:14px;height:14px;border-radius:50%;
-  background:var(--gold-bright);border:2px solid #fff;
-  box-shadow:0 0 0 4px rgba(214,179,112,.18),0 4px 12px rgba(0,0,0,.4);
-  z-index:2;
+.phuket-svg .map-pin{cursor:pointer;transform-origin:center;transition:transform .25s ease}
+.phuket-svg .map-pin:hover{transform:translate(var(--tx,0),var(--ty,0)) scale(1.08)}
+.phuket-svg .pin-glow{transform-origin:center;animation:mapPing 2.8s cubic-bezier(0,0,.2,1) infinite}
+@keyframes mapPing{0%{transform:scale(.7);opacity:.7}80%,100%{transform:scale(1.4);opacity:0}}
+.map-legend{
+  border-left:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.18);
+  padding:24px 22px;
+  display:flex;flex-direction:column;gap:14px;
+  backdrop-filter:blur(8px);
 }
-.loc-pin::after{
-  content:'';position:absolute;inset:-7px;border-radius:50%;
-  border:1px solid rgba(214,179,112,.6);
-  animation:ping 2.6s cubic-bezier(0,0,.2,1) infinite;
+.map-legend-row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
+.map-legend-num{
+  width:26px;height:26px;border-radius:50%;
+  background:var(--gold-bright);color:#0a0e1a;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;
+  box-shadow:0 0 0 3px rgba(214,179,112,.18);
 }
-@keyframes ping{0%{transform:scale(.7);opacity:.9}80%,100%{transform:scale(1.6);opacity:0}}
-.loc-pin-label{
-  position:absolute;background:#fff;color:var(--ink);
-  font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  padding:4px 9px;border-radius:3px;box-shadow:0 4px 10px rgba(0,0,0,.4);
-  white-space:nowrap;z-index:3;
-}
+.map-legend-name{font-size:13px;font-weight:600;color:#fff;letter-spacing:-.005em}
+.map-legend-meta{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.04em;margin-top:1px}
 
 /* ─── PROCESS (dark, full-bleed) ─────────────────────── */
 .s-process{
@@ -491,6 +495,9 @@ footer.f{
   .mech-grid,.gidr-grid,.loc-grid{grid-template-columns:1fr;gap:36px}
   .contact-grid{grid-template-columns:1fr}
   .f-grid{grid-template-columns:1fr 1fr}
+  .loc-map{grid-template-columns:1fr;min-height:auto}
+  .map-legend{border-left:0;border-top:1px solid rgba(255,255,255,.08);flex-direction:row;flex-wrap:wrap;gap:12px}
+  .map-legend-row{flex:1;min-width:160px}
 }
 @media (max-width:640px){
   .container,.container-sm{padding:0 22px}
@@ -521,8 +528,8 @@ footer.f{
 <header id="topbar">
   <div class="topbar-inner">
     <a href="/" class="topbar-brand">
-      <span class="name">West East Real Estate</span>
-      <span class="tag">Phuket — disciplined investing through curated property</span>
+      <span class="name">CP Property</span>
+      <span class="tag">Charter Capital · Phuket real estate desk</span>
     </a>
     <nav class="topbar-nav">
       <a href="#catalog">Catalog</a>
@@ -884,20 +891,136 @@ footer.f{
         </div>
       </div>
 
-      <div class="loc-map" aria-label="Phuket map with project pins (illustrative)">
-        <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M84 12 C72 18 64 32 60 50 C56 64 50 72 44 86 C40 100 38 116 44 132 C50 146 56 156 64 168 C72 180 84 196 100 200 C112 202 124 196 132 184 C140 170 144 156 142 138 C138 122 140 108 134 92 C128 78 122 66 116 52 C110 38 104 24 92 14 Z" fill="rgba(214,179,112,.10)" stroke="rgba(214,179,112,.4)" stroke-width="1.2"/>
+      <div class="loc-map" aria-label="Phuket island map with project pins">
+        <svg class="phuket-svg" viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="phuketFill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="rgba(214,179,112,0.18)"/>
+              <stop offset="100%" stop-color="rgba(160,129,86,0.06)"/>
+            </linearGradient>
+            <linearGradient id="phuketStroke" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(214,179,112,0.85)"/>
+              <stop offset="100%" stop-color="rgba(160,129,86,0.45)"/>
+            </linearGradient>
+            <radialGradient id="phuketGlow" cx="50%" cy="55%" r="55%">
+              <stop offset="0%" stop-color="rgba(214,179,112,0.18)"/>
+              <stop offset="100%" stop-color="rgba(214,179,112,0)"/>
+            </radialGradient>
+            <pattern id="phuketGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+
+          <!-- subtle grid background -->
+          <rect width="240" height="320" fill="url(#phuketGrid)"/>
+
+          <!-- mainland hint (Phang Nga to the north-east) -->
+          <path d="M 200 0 L 240 0 L 240 70 Q 220 60 210 40 Q 205 20 200 0 Z" fill="rgba(255,255,255,0.025)"/>
+
+          <!-- Sarasin bridge dotted link -->
+          <line x1="135" y1="6" x2="170" y2="0" stroke="rgba(214,179,112,0.55)" stroke-width="1" stroke-dasharray="2 3"/>
+
+          <!-- island glow -->
+          <ellipse cx="115" cy="170" rx="95" ry="135" fill="url(#phuketGlow)"/>
+
+          <!-- Phuket island silhouette (stylised, accurate proportions) -->
+          <path d="
+            M 122 8
+            Q 132 6 138 14
+            Q 144 24 144 42
+            L 146 60
+            Q 154 70 158 88
+            Q 162 108 162 128
+            L 166 156
+            Q 174 178 174 200
+            L 176 220
+            Q 178 244 168 254
+            Q 156 262 142 258
+            L 138 252
+            Q 132 248 126 250
+            Q 116 254 108 252
+            Q 98 252 94 244
+            Q 90 240 86 244
+            Q 80 252 72 250
+            Q 60 244 58 230
+            Q 52 212 56 192
+            L 56 168
+            Q 52 144 56 120
+            L 58 96
+            Q 56 76 64 58
+            Q 72 38 84 26
+            Q 96 14 112 10
+            Z
+          " fill="url(#phuketFill)" stroke="url(#phuketStroke)" stroke-width="1.3" stroke-linejoin="round"/>
+
+          <!-- topographical hint lines (interior) -->
+          <g stroke="rgba(214,179,112,0.18)" stroke-width="0.6" fill="none">
+            <path d="M 90 70 Q 110 80 130 76 Q 140 78 148 90"/>
+            <path d="M 80 120 Q 110 130 140 124 Q 152 126 160 138"/>
+            <path d="M 78 170 Q 110 178 142 172 Q 156 176 168 188"/>
+            <path d="M 82 220 Q 112 226 140 222 Q 156 222 168 230"/>
+          </g>
+
+          <!-- compass -->
+          <g transform="translate(212,28)" opacity="0.6">
+            <circle r="11" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.6"/>
+            <path d="M 0 -8 L 2 0 L 0 8 L -2 0 Z" fill="rgba(214,179,112,0.9)"/>
+            <text y="-13" text-anchor="middle" font-size="7" font-weight="700" fill="rgba(255,255,255,0.6)" letter-spacing="0.1em">N</text>
+          </g>
+
+          <!-- scale -->
+          <g transform="translate(20,300)" font-family="Inter, sans-serif">
+            <line x1="0" y1="0" x2="40" y2="0" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
+            <line x1="0" y1="-3" x2="0" y2="3" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
+            <line x1="40" y1="-3" x2="40" y2="3" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/>
+            <text x="20" y="14" text-anchor="middle" font-size="7" letter-spacing="0.16em" fill="rgba(255,255,255,0.55)">5 KM</text>
+          </g>
+
+          <!-- non-active reference dot: Phuket Town -->
+          <g transform="translate(140,150)">
+            <circle r="2.4" fill="rgba(255,255,255,0.5)"/>
+            <text x="6" y="2.4" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="rgba(255,255,255,0.45)" letter-spacing="0.05em">Phuket Town</text>
+          </g>
+          <!-- non-active reference dot: Airport -->
+          <g transform="translate(98,40)">
+            <circle r="2.4" fill="rgba(255,255,255,0.5)"/>
+            <text x="6" y="2.4" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="rgba(255,255,255,0.45)" letter-spacing="0.05em">HKT Airport</text>
+          </g>
+
+          <!-- active project pins with numbers -->
+          <g class="map-pin" transform="translate(72,80)">
+            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+            <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
+            <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">1</text>
+          </g>
+          <g class="map-pin" transform="translate(70,58)">
+            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+            <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
+            <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">2</text>
+          </g>
+          <g class="map-pin" transform="translate(64,134)">
+            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+            <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
+            <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">3</text>
+          </g>
+          <g class="map-pin" transform="translate(66,200)">
+            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+            <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
+            <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">4</text>
+          </g>
+          <g class="map-pin" transform="translate(120,250)">
+            <circle class="pin-glow" r="18" fill="rgba(214,179,112,0.18)"/>
+            <circle r="11" fill="#d6b370" stroke="#fff" stroke-width="2"/>
+            <text y="3.6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0a0e1a">5</text>
+          </g>
         </svg>
-        <span class="loc-pin" style="top:34%;left:22%"></span>
-        <span class="loc-pin-label" style="top:30%;left:30%">Bang Tao</span>
-        <span class="loc-pin" style="top:24%;left:30%"></span>
-        <span class="loc-pin-label" style="top:18%;left:40%">Layan</span>
-        <span class="loc-pin" style="top:60%;left:36%"></span>
-        <span class="loc-pin-label" style="top:62%;left:48%">Kata · Karon</span>
-        <span class="loc-pin" style="top:80%;left:50%"></span>
-        <span class="loc-pin-label" style="top:84%;left:60%">Rawai</span>
-        <span class="loc-pin" style="top:48%;left:28%"></span>
-        <span class="loc-pin-label" style="top:50%;left:38%">Patong</span>
+        <div class="map-legend">
+          <div class="map-legend-row"><span class="map-legend-num">1</span><div><div class="map-legend-name">Bang Tao</div><div class="map-legend-meta">3 projects · Tier 1</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">2</span><div><div class="map-legend-name">Layan</div><div class="map-legend-meta">1 project · Tier 1–2</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">3</span><div><div class="map-legend-name">Patong</div><div class="map-legend-meta">Selective · Tier 2</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">4</span><div><div class="map-legend-name">Kata · Karon</div><div class="map-legend-meta">1 project · Tier 2</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">5</span><div><div class="map-legend-name">Rawai · Nai Harn</div><div class="map-legend-meta">South corridor</div></div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -948,10 +1071,10 @@ footer.f{
       <div class="gidr-text">
         <span class="kicker gold">GIDR · Hong Kong</span>
         <h2>The screening engine behind every project we list.</h2>
-        <p>The Hong Kong Institute of Digital Research (GIDR) is an applied analytics and AI lab modelling resort real-estate markets across Asia. Founded in Hong Kong, GIDR operates as the research and data-intelligence project of West East Gate Capital (WEGC).</p>
+        <p>The Hong Kong Institute of Digital Research (GIDR) is an applied analytics and AI lab modelling resort real-estate markets across Asia. Founded in Hong Kong, GIDR operates as the research and data-intelligence partner powering CP Property's screening engine.</p>
         <p>The model processes <strong>thousands of signals per property</strong> — geospatial and climatic layers, construction milestones, developer track record, price dynamics, tourism flows — to produce predictive ROI and liquidity ratings. Brochure numbers are an input, not a conclusion.</p>
         <p>Each project on this catalog has been benchmarked against the model. Projects that fail the screen don't reach the page.</p>
-        <a href="/til-memo.html" class="btn btn-secondary" style="margin-top:18px">Learn more about GIDR &amp; TIL <span class="arr">→</span></a>
+        <a href="https://ccapital.pro/" class="btn btn-secondary" style="margin-top:18px">Charter Capital ecosystem <span class="arr">→</span></a>
       </div>
       <div class="gidr-card">
         <div class="label"><span class="dot"></span><span>GIDR Neural Model — Active</span></div>
@@ -1051,12 +1174,12 @@ footer.f{
         <div class="contact-text">
           <span class="kicker gold" style="color:var(--gold-bright)">Buy property</span>
           <h2>One brief. <strong>One curated dossier.</strong> No mass funnels.</h2>
-          <p>Tell us who you are, your budget and which of the five projects looks closest. We reply from <strong>post@wegc.fund</strong> with a curated dossier, GIDR notes and the next concrete step.</p>
+          <p>Tell us who you are, your budget and which of the five projects looks closest. We reply from <strong>property@ccapital.pro</strong> with a curated dossier, GIDR notes and the next concrete step.</p>
           <p>No mass mailings. No pressure tactics. We work one-to-one with investors who value structure, transparency and disciplined decisions.</p>
           <div class="contact-channels">
             <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="contact-channel"><span class="ico">💬</span> WhatsApp · +66 65 765 8782</a>
             <a href="https://t.me/charter_capital" target="_blank" rel="noopener noreferrer" class="contact-channel"><span class="ico">📨</span> Telegram · @charter_capital</a>
-            <a href="mailto:post@wegc.fund" class="contact-channel"><span class="ico">✉</span> post@wegc.fund</a>
+            <a href="mailto:property@ccapital.pro" class="contact-channel"><span class="ico">✉</span> property@ccapital.pro</a>
           </div>
         </div>
 
@@ -1117,7 +1240,7 @@ footer.f{
   <div class="container">
     <div class="f-grid">
       <div class="f-brand">
-        <div class="logo">West East Real Estate</div>
+        <div class="logo">CP Property</div>
         <p>Curated Phuket properties under a single mandate — developer-direct contracts, GIDR-screened territory, full execution from brief to handover.</p>
         <div class="f-disclaimer">
           Real estate transactions are executed under independent legal review. Indicative figures are not investment advice or guarantees. Final terms depend on developer contracts, applicable laws and counsel-vetted documentation.
@@ -1134,28 +1257,28 @@ footer.f{
         </ul>
       </div>
       <div class="f-col">
-        <h5>Ecosystem</h5>
+        <h5>Charter Capital</h5>
         <ul>
-          <li><a href="/">WEGC Home</a></li>
-          <li><a href="/til.html">Terra Intelligence Lab</a></li>
-          <li><a href="/til-memo.html">TIL Deep Dive</a></li>
-          <li><a href="/fund.html">Fund</a></li>
-          <li><a href="/wet-trading-house.html">Trading House</a></li>
+          <li><a href="https://ccapital.pro/">Charter Capital · Home</a></li>
+          <li><a href="https://ccapital.pro/homeland.html">Homeland Prep</a></li>
+          <li><a href="https://ccapital.pro/index.html">Already Abroad</a></li>
+          <li><a href="https://ccapital.pro/fund.html">Charter Fund</a></li>
+          <li><a href="https://ccapital.pro/private.html">Private Access</a></li>
         </ul>
       </div>
       <div class="f-col">
         <h5>Legal &amp; contact</h5>
         <ul>
-          <li><a href="mailto:post@wegc.fund">post@wegc.fund</a></li>
+          <li><a href="mailto:property@ccapital.pro">property@ccapital.pro</a></li>
+          <li><a href="https://t.me/charter_capital" target="_blank" rel="noopener noreferrer">Telegram</a></li>
           <li><a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
           <li><a href="/privacy.html">Privacy Policy</a></li>
-          <li><a href="/cookies.html">Cookies</a></li>
         </ul>
       </div>
     </div>
     <div class="f-bottom">
-      <span>© 2026 West East. All rights reserved.</span>
-      <span>WEST EAST TRADE GROUP PTE. LTD. · UEN: 202505772C · Singapore</span>
+      <span>© 2026 CP Property · Part of Charter Capital ecosystem</span>
+      <span>All real estate transactions executed under independent legal review · Hong Kong &amp; Phuket</span>
     </div>
   </div>
 </footer>
@@ -1210,10 +1333,10 @@ document.addEventListener('DOMContentLoaded', () => document.body.classList.add(
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setMsg('Please enter a valid email address.', 'err'); return; }
     try {
       const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{Accept:'application/json'} });
-      if(res.ok){ form.reset(); setMsg('Thank you. Your enquiry has been received. We will reply from post@wegc.fund shortly.', 'ok'); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
+      if(res.ok){ form.reset(); setMsg('Thank you. Your enquiry has been received. We will reply from property@ccapital.pro shortly.', 'ok'); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
       else throw new Error('send fail');
     } catch(err){
-      setMsg('Could not send. Please email post@wegc.fund directly.', 'err');
+      setMsg('Could not send. Please email property@ccapital.pro directly.', 'err');
     }
   });
 })();
