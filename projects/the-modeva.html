@@ -17,8 +17,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/projects/_passport.css"/>
-<style>.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}</style>
+<link rel="stylesheet" href="/projects/passport.css"/>
+<style>
+/* lang switcher */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+#topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.7);padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease}
+.lang-sw-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .lang-sw-a{color:#64748b}
+.lang-sw-a.active{background:#d6b370;color:#0a0e1a}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}</style>
 </head>
 <body>
 
@@ -36,7 +45,11 @@
       <a href="/wet-agency.html#faq">FAQ</a>
     </nav>
     <div class="topbar-actions">
-      <a href="/projects/the-modeva-en.html" class="lang-switch" aria-label="Switch to English">EN</a>
+      <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/projects/the-modeva-en.html" class="lang-sw-a " hreflang="en">EN</a>
+  <a href="/projects/the-modeva.html" class="lang-sw-a active" hreflang="ru">RU</a>
+  <a href="/wet-agency-zh.html" class="lang-sw-a" hreflang="zh">中文</a>
+</div>
       <a href="#enquire" class="topbar-cta">Запрос</a>
     </div>
   </div>
@@ -128,7 +141,7 @@
 <section class="s cream-2">
   <div class="container">
     <div class="gidr-summary">
-      <div class="label"><span class="dot"></span><span>GIDR Territory Score · Активно</span></div>
+      <div class="label"><span class="dot"></span><span>Скрининг территории · Активно</span></div>
       <h3>Коридор Bang Tao — высший уровень покрытия GIDR на Пхукете.</h3>
       <p>Bang Tao — один из двух коридоров Пхукета в высшем уровне рейтинга GIDR наряду с Laguna. Модель учитывает круглогодичный международный спрос, плотность инфраструктуры (Boat Avenue, Porto, школы, госпитали) и устойчивый темп сдачи у устоявшейся базы застройщиков. The Modeva находится внутри коридора в пешей доступности от всех ключевых точек.</p>
       <div class="stats">
@@ -171,7 +184,7 @@
       <div class="f-col"><h5>WEGC</h5><ul><li><a href="/">WEGC Home</a></li><li><a href="/wet-agency.html">Real Estate</a></li><li><a href="/private-capital.html">Private Capital</a></li><li><a href="/corporate.html">Corporate</a></li></ul></div>
       <div class="f-col"><h5>Юридическое и контакты</h5><ul>
         <li><a href="mailto:property@wegc.fund">property@wegc.fund</a></li>
-        <li><a href="https://t.me/charter_capital" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+        <li></li>
         <li><a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         <li><a href="/privacy.html">Политика конфиденциальности</a></li>
       </ul></div>

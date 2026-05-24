@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>私人资本 — West East Gate Capital · 新加坡</title>
+<meta name="description" content="WEST EAST TRADE GROUP PTE. LTD. 私人实物资产参与机制。仅按请求开放,须经 KYC/AML、适配性审核与签署的私人法律文件。非公开要约;非 MAS 持牌基金。"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="私人资本 — West East Gate Capital"/>
+<meta property="og:description" content="私人实物资产参与。非公开。须经 KYC/AML。非 MAS 持牌基金。"/>
+<meta property="og:url" content="https://wegc.fund/private-capital.html"/>
+<link rel="canonical" href="https://wegc.fund/private-capital-zh.html"/>
+<link rel="alternate" hreflang="en" href="https://wegc.fund/private-capital.html"/>
+<link rel="alternate" hreflang="ru" href="https://wegc.fund/private-capital-ru.html"/>
+<link rel="alternate" hreflang="zh" href="https://wegc.fund/private-capital-zh.html"/>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/projects/passport.css"/>
+<style>
+.private-hero{background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);color:#fff;padding:160px 32px 100px;position:relative;overflow:hidden}
+.private-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 30%,rgba(160,129,86,.18) 0%,transparent 55%);pointer-events:none}
+.private-hero-inner{position:relative;max-width:1240px;margin:0 auto}
+.private-hero h1{color:#fff;font-weight:300;letter-spacing:-.045em;line-height:1.05;margin-bottom:24px;max-width:22ch}
+.private-hero h1 strong{color:#d6b370;font-weight:500}
+.private-hero p{color:rgba(255,255,255,.78);font-size:1.15rem;line-height:1.6;font-weight:300;max-width:64ch}
+.warn-banner{background:#fef3c7;border:1px solid #fcd34d;color:#78350f;padding:18px 24px;border-radius:8px;font-size:14px;line-height:1.65;margin:32px auto 0;max-width:920px}
+.warn-banner strong{color:#451a03;font-weight:700}
+.private-section{padding:90px 0;border-top:1px solid #e2e8f0}
+.private-section.cream{background:#fbfaf6;border-top:0;border-bottom:1px solid #e2e8f0}
+.two-col{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
+.disclaimer-box{background:#fff;border:1px solid #e2e8f0;border-left:3px solid #a08156;padding:24px 28px;border-radius:8px;font-size:14px;line-height:1.7;color:#334155}
+.disclaimer-box strong{color:#0f172a;font-weight:600}
+.gate-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+.gate-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:28px}
+.gate-card h4{font-size:1rem;font-weight:600;letter-spacing:-.01em;color:#0f172a;margin-bottom:8px}
+.gate-card p{font-size:14px;color:#334155;line-height:1.65}
+.gate-card .num{font-size:11px;font-weight:700;letter-spacing:.18em;color:#a08156;margin-bottom:10px}
+.eoi-form{max-width:760px;margin:32px auto 0;background:#0a0e1a;border-radius:14px;padding:36px;color:#fff}
+.eoi-form h3{color:#fff;font-weight:300;letter-spacing:-.02em;font-size:1.5rem;margin-bottom:8px}
+.eoi-form .sub{color:rgba(255,255,255,.6);font-size:13px;line-height:1.6;margin-bottom:24px}
+.eoi-form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.eoi-form label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600;margin-bottom:6px}
+.eoi-form input,.eoi-form select,.eoi-form textarea{width:100%;font-family:inherit;font-size:14px;color:#fff;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);padding:11px 14px;border-radius:6px;outline:none;transition:border-color .15s ease}
+.eoi-form input:focus,.eoi-form select:focus,.eoi-form textarea:focus{border-color:#d6b370}
+.eoi-form select option{background:#0a0e1a;color:#fff}
+.eoi-form .ack{display:flex;align-items:flex-start;gap:10px;font-size:12px;color:rgba(255,255,255,.7);line-height:1.55;margin:18px 0;padding:14px 16px;background:rgba(214,179,112,.08);border:1px solid rgba(214,179,112,.25);border-radius:6px}
+.eoi-form .ack input{width:auto;margin-top:3px;accent-color:#d6b370}
+.eoi-form .submit{background:#fff;color:#0f172a;font-size:14px;font-weight:600;letter-spacing:.06em;border:none;padding:14px 24px;border-radius:6px;cursor:pointer;width:100%;transition:transform .18s ease}
+.eoi-form .submit:hover{transform:translateY(-1px)}
+@media(max-width:980px){.two-col{grid-template-columns:1fr;gap:36px}.gate-grid{grid-template-columns:1fr}.eoi-form .row{grid-template-columns:1fr}}
+@media(max-width:640px){.private-hero{padding:120px 22px 64px}.private-section{padding:64px 0}.eoi-form{padding:24px}}
+/* lang switcher (universal) */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+#topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.7);padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease}
+.lang-sw-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .lang-sw-a{color:#64748b}
+#topbar.solid .lang-sw-a:hover{color:#0f172a;background:#fff}
+.lang-sw-a.active{background:#d6b370;color:#0a0e1a}
+.lang-sw-a.active:hover{background:#d6b370;color:#0a0e1a}
+#topbar.solid .lang-sw-a.active{background:#a08156;color:#fff}
+.legal-topbar .lang-sw{background:#fff;border-color:#e2e8f0}
+.legal-topbar .lang-sw-a{color:#64748b}
+.legal-topbar .lang-sw-a:hover{color:#0f172a;background:#fbfaf6}
+.legal-topbar .lang-sw-a.active{background:#a08156;color:#fff}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+
+/* lang switcher */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+#topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.7);padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease}
+.lang-sw-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .lang-sw-a{color:#64748b}
+.lang-sw-a.active{background:#d6b370;color:#0a0e1a}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+</style>
+</head>
+<body>
+
+<header id="topbar">
+  <div class="topbar-inner">
+    <a href="/index-zh.html" class="topbar-brand">
+      <span class="name">West East Gate Capital</span>
+      <span class="tag">私人资本 · 非公开</span>
+    </a>
+    <nav class="topbar-nav">
+      <a href="/index-zh.html">首页</a>
+      <a href="/wet-agency-zh.html">房地产</a>
+      <a href="/research.html">研究</a>
+      <a href="/corporate.html">公司</a>
+    </nav>
+    <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/private-capital.html" class="lang-sw-a active" hreflang="en">EN</a>
+  <a href="/private-capital-ru.html" class="lang-sw-a " hreflang="ru">RU</a>
+  <a href="/private-capital-zh.html" class="lang-sw-a " hreflang="zh">中文</a>
+</div>
+    <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/private-capital.html" class="lang-sw-a " hreflang="en">EN</a>
+  <a href="/private-capital-ru.html" class="lang-sw-a " hreflang="ru">RU</a>
+  <a href="/private-capital-zh.html" class="lang-sw-a active" hreflang="zh">中文</a>
+</div>
+    <a href="#eoi" class="topbar-cta">提交意向</a>
+  </div>
+</header>
+
+<main>
+
+<section class="private-hero">
+  <div class="private-hero-inner">
+    <span class="kicker" style="color:#d6b370">私人实物资产 · 非公开</span>
+    <h1>私人参与。<strong>仅按请求</strong>。</h1>
+    <p>West East Gate Capital 为有限数量的私人客户在精选的普吉岛房地产机会中安排私人参与。参与不向公众发售,仅在完成入职、KYC/AML 与签署私人文件后开放。</p>
+    <div class="warn-banner">
+      <strong>重要提示。</strong> West East Gate Capital 不是 MAS 持牌基金管理人或财务顾问。本页面任何内容均不构成公开要约、投资建议、吸收存款或回报担保。任何参与条款、回报或经济条款均不公开披露。所有经济条款因交易而异,仅在 KYC/AML 与适配性审核后,在私人文件中披露。
+    </div>
+  </div>
+</section>
+
+<section class="private-section">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="kicker">流程说明</span>
+        <h2 style="font-weight:300;letter-spacing:-.035em;line-height:1.1;margin-bottom:18px">从意向表到私人文件。</h2>
+        <p style="font-size:17px;line-height:1.75;color:#334155;margin-bottom:14px">私人资本关系始于一份简短的意向表 (EOI)。随后,我们进行 KYC/AML、适配性审核,并确认您的情况是否在我们的覆盖范围内。只有在此之后我们才共享私人材料。</p>
+        <p style="font-size:17px;line-height:1.75;color:#334155">参与为非公开、规模有限,取决于项目可用性与签署的法律文件。我们刻意不做零售平台。</p>
+      </div>
+      <div class="disclaimer-box">
+        <strong>我们刻意回避的公开表述</strong>
+        <p style="margin-top:12px">无固定收益、无保证收益、无"立即投资"按钮、无公开 IRR 数据、无公开最低投资额。具体经济条款 — 优先回报、配售期、架构 — 仅出现在私人文件中,受适用法律与签署协议约束。</p>
+      </div>
+    </div>
+    <div class="gate-grid">
+      <div class="gate-card"><div class="num">01 · EOI</div><h4>意向表</h4><p>您通过下方表单提交简短请求。无任何承诺。本阶段不交换公开细节。</p></div>
+      <div class="gate-card"><div class="num">02 · KYC / AML</div><h4>入职与适配性</h4><p>身份、资金来源、制裁与 PEP 筛查,以及针对您司法管辖区的适配性与承载力审核。</p></div>
+      <div class="gate-card"><div class="num">03 · Private materials</div><h4>信息备忘录</h4><p>审核通过后,您将在 NDA 下获得私人材料:项目、架构、经济条款、时间线、风险因素。</p></div>
+      <div class="gate-card"><div class="num">04 · Documentation</div><h4>已签署的法律协议</h4><p>参与通过经独立律师审核的私人协议记录。未签署文件即无参与。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="private-section cream">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="kicker">2025 / 2026</span>
+        <h2 style="font-weight:300;letter-spacing:-.035em;line-height:1.1;margin-bottom:18px">2025 周期已结束。2026 轮次筹备中。</h2>
+        <p style="font-size:17px;line-height:1.75;color:#334155;margin-bottom:14px"><strong style="color:#0f172a">2025 年试点配售周期</strong>聚焦于精选的普吉岛度假房地产项目、开发商关系与运营流程。在保守假设下达到目标运营指标后结束。详细业绩仅在 NDA 下与合格对手方私下共享。</p>
+        <p style="font-size:17px;line-height:1.75;color:#334155"><strong style="color:#0f172a">2026 年私人配售轮次</strong>目前正在筹备。意向表已开放。参与名额有限、非公开,取决于项目可用性、KYC/AML、适配性审核与签署的私人文件。</p>
+      </div>
+      <div class="disclaimer-box">
+        <strong>前瞻性陈述</strong>
+        <p style="margin-top:12px">所提目标周期 (通常为 24–36 个月,视项目架构而定) 为参考性工作假设。回报因交易而异,不作担保,取决于开发商条款、租赁表现、转售流动性、税费、监管环境与市场条件。过往业绩不预示未来表现。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="private-section" id="eoi">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;text-align:center">
+      <span class="kicker">提交意向</span>
+      <h2 style="font-weight:300;letter-spacing:-.035em;line-height:1.1;margin-bottom:14px">申请私人信息。</h2>
+      <p style="font-size:16px;color:#64748b;line-height:1.65">本表单不交换任何公开细节。提交请求不构成任何义务或关系。</p>
+    </div>
+    <form id="eoiForm" class="eoi-form" action="https://formspree.io/f/xrbyywrr" method="POST" novalidate>
+      <h3>私人资本 — 意向表</h3>
+      <p class="sub">所有字段保密。我们将从 <strong style="color:#fff">post@wegc.fund</strong> 回复。须经 KYC/AML 与适配性审核。</p>
+      <div class="row">
+        <div><label for="name">全名 *</label><input id="name" name="name" type="text" required autocomplete="name" placeholder="您的全名"/></div>
+        <div><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="name@company.com"/></div>
+      </div>
+      <div class="row">
+        <div><label for="jurisdiction">居住司法管辖区</label><input id="jurisdiction" name="jurisdiction" type="text" placeholder="国家 / 地区"/></div>
+        <div><label for="ticket">预期投资额范围</label>
+          <select id="ticket" name="ticket">
+            <option value="">不愿透露</option>
+            <option value="under-100k">低于 USD 100k</option>
+            <option value="100-500k">USD 100k–500k</option>
+            <option value="500k-1m">USD 500k–1M</option>
+            <option value="1m-plus">USD 1M+</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-bottom:12px">
+        <label for="purpose">您的需求</label>
+        <select id="purpose" name="purpose">
+          <option value="">Select…</option>
+          <option value="property-purchase">房产购置 (普吉岛)</option>
+          <option value="private-information">私人资本信息 (须经 KYC/AML)</option>
+          <option value="both">两者皆可</option>
+          <option value="other">其他 / 介绍性通话</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">简要背景 (可选)</label>
+        <textarea id="message" name="message" rows="3" placeholder="背景、时间线、感兴趣的具体项目…"></textarea>
+      </div>
+      <label class="ack">
+        <input type="checkbox" name="ack" required/>
+        <span>我确认此为私人信息申请,而非要约或邀约;本表单不提供投资建议;任何参与均须经 KYC/AML、适配性审核与签署的私人文件;并已阅读 <a href="/privacy.html" style="color:#d6b370;border-bottom:1px solid #d6b370">《隐私政策》</a> 与 <a href="/terms.html" style="color:#d6b370;border-bottom:1px solid #d6b370">《条款》</a>.</span>
+      </label>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+      <button type="submit" class="submit">提交意向表 →</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="f">
+  <div class="container">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="logo">West East Gate Capital</div>
+        <p>The real estate access 与 private real-assets brand of WEST EAST TRADE GROUP PTE. LTD., Singapore.</p>
+        <div style="margin-top:18px;padding-top:14px;border-top:1px solid #1f2937;font-size:12px;color:#64748b;line-height:1.7">
+          <strong style="color:#cbd5e1;font-weight:600">WEST EAST TRADE GROUP PTE. LTD.</strong><br>
+          UEN 202505772C · 注册于 2025 年 2 月 11 日<br>
+          注册地址: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987<br>
+          Email: <a href="mailto:post@wegc.fund" style="color:#cbd5e1">post@wegc.fund</a>
+        </div>
+      </div>
+      <div class="f-col"><h5>业务</h5><ul>
+        <li><a href="/wet-agency-zh.html">普吉岛房地产</a></li>
+        <li><a href="/private-capital.html">私人资本</a></li>
+        <li><a href="/research.html">研究方法</a></li>
+      </ul></div>
+      <div class="f-col"><h5>公司</h5><ul>
+        <li><a href="/corporate.html">公司与合规</a></li>
+        <li><a href="/2025-review.html">2025 回顾</a></li>
+        <li><a href="/2026-round.html">2026 轮次</a></li>
+      </ul></div>
+      <div class="f-col"><h5>法律</h5><ul>
+        <li><a href="/privacy.html">《隐私政策》</a></li>
+        <li><a href="/terms.html">服务条款</a></li>
+        <li><a href="/cookies.html">Cookies</a></li>
+      </ul></div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 WEST EAST TRADE GROUP PTE. LTD. 版权所有。</span>
+      <span>Singapore · UEN 202505772C</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){const bar=document.getElementById('topbar');if(!bar)return;const f=()=>{if(window.scrollY>60)bar.classList.add('solid');else bar.classList.remove('solid')};window.addEventListener('scroll',f,{passive:true});f();})();
+document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('page-ready'));
+(function(){
+  const form=document.getElementById('eoiForm');if(!form)return;
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const name=form.querySelector('#name').value.trim();
+    const email=form.querySelector('#email').value.trim();
+    if(!name||!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Please fill in your name 与 a valid email.');return}
+    try{
+      const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+      if(res.ok){form.reset();alert('感谢您。我们已收到您的意向表,将从 post@wegc.fund 回复。')}
+      else throw new Error('send fail');
+    }catch(err){alert('发送失败。请直接发邮件至 post@wegc.fund。')}
+  });
+})();
+</script>
+</body>
+</html>

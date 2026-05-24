@@ -330,6 +330,22 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
   .mech-cell{border-right:0;border-bottom:1px solid var(--line)}
   .mech-row:last-child .mech-cell:last-child{border-bottom:0}
 }
+/* lang switcher (universal) */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+#topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.7);padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease}
+.lang-sw-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .lang-sw-a{color:#64748b}
+#topbar.solid .lang-sw-a:hover{color:#0f172a;background:#fff}
+.lang-sw-a.active{background:#d6b370;color:#0a0e1a}
+.lang-sw-a.active:hover{background:#d6b370;color:#0a0e1a}
+#topbar.solid .lang-sw-a.active{background:#a08156;color:#fff}
+.legal-topbar .lang-sw{background:#fff;border-color:#e2e8f0}
+.legal-topbar .lang-sw-a{color:#64748b}
+.legal-topbar .lang-sw-a:hover{color:#0f172a;background:#fbfaf6}
+.legal-topbar .lang-sw-a.active{background:#a08156;color:#fff}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+
 </style>
 </head>
 <body>
@@ -349,8 +365,12 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
       <a href="#contact">Контакты</a>
     </nav>
     <div class="topbar-actions">
-      <a href="/wet-agency-en.html" class="lang-switch" aria-label="Switch to English version">EN</a>
-      <a href="#contact" class="topbar-cta">Купить</a>
+      <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/wet-agency-en.html" class="lang-sw-a active" hreflang="en">EN</a>
+  <a href="/wet-agency.html" class="lang-sw-a " hreflang="ru">RU</a>
+  <a href="/wet-agency-zh.html" class="lang-sw-a " hreflang="zh">中文</a>
+</div>
+    <a href="#contact" class="topbar-cta">Купить</a>
     </div>
   </div>
 </header>
@@ -370,7 +390,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
         <span>Прямой контракт с застройщиком · 0% покупателю</span>
       </span>
     </div>
-    <h1>Недвижимость Пхукета — для <strong>дисциплинированных инвесторов</strong>.</h1>
+    <h1>Недвижимость Пхукета — для <strong>частных покупателей и долгосрочных клиентов</strong>.</h1>
     <p class="hero-sub">
       Ограниченная береговая земля. Сильный туризм. Выраженные арендные сезоны. Мы работаем как единая точка исполнения между покупателем и застройщиком — пять активных проектов под нашим покрытием в Bang Tao, Layan, Kata, Karon и Rawai, прошедших скрининг территориальной модели GIDR и оформленных по leasehold или freehold.
     </p>
@@ -378,6 +398,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
       <a href="#catalog" class="btn btn-primary btn-lg">Открыть каталог <span class="arr">↓</span></a>
       <a href="#contact" class="btn btn-ghost btn-lg">Купить недвижимость</a>
     </div>
+    <p style="font-size:11px;color:rgba(255,255,255,.5);max-width:64ch;line-height:1.55;margin:-26px 0 32px;letter-spacing:.02em"><sup style="color:#d6b370">[1]</sup> Ориентировочные диапазоны арендной доходности на сайте отражают типичные наблюдаемые показатели стабилизированных курортных проектов в соответствующих микрорынках Пхукета. Это общая ориентация, не прогноз и не обязательство, не гарантия конкретной доходности. Конкретные экономические показатели зависят от проекта, условий застройщика, арендных потоков, налогов, комиссий, валюты, изменений в регулировании и рыночных условий. Прошлая результативность не предсказывает будущих результатов.</p>
     <div class="hero-meta">
       <div class="hero-meta-item">
         <div class="v">8</div>
@@ -389,7 +410,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
       </div>
       <div class="hero-meta-item">
         <div class="v">5–9%</div>
-        <div class="l">Ориентировочная аренда</div>
+        <div class="l">Ориентировочная аренда<sup style="font-size:8px;color:#d6b370;margin-left:4px">[1]</sup></div>
       </div>
       <div class="hero-meta-item">
         <div class="v">100%</div>
@@ -411,7 +432,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
       <div class="intel-item">
         <span class="num">01 · Территория</span>
         <h4>Локации, прошедшие GIDR</h4>
-        <p>Каждый проект сопоставляется с территориальной моделью GIDR — геопространственные, климатические, инфраструктурные и туристические сигналы пропускаются через нейронный рейтинг.</p>
+        <p>Каждый проект сопоставляется с территориальной моделью GIDR — геопространственные, климатические, инфраструктурные и туристические сигналы пропускаются через наш внутренний research framework.</p>
       </div>
       <div class="intel-item">
         <span class="num">02 · Застройщик</span>
@@ -580,8 +601,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
 
       <!-- 6. THE TITLE BALCONY -->
       <article class="cat-card" data-cats="naiyang leasehold">
-        <a class="cat-cover" href="/projects/the-title-balcony.html" aria-label="Открыть паспорт The Title Balcony" style="background:linear-gradient(135deg,#0a0e1a 0%,#1a2438 50%,#2d3e5f 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:300;letter-spacing:.18em;text-transform:uppercase;font-size:13px">
-          <span style="opacity:.85">The Title Balcony</span>
+        <a class="cat-cover" href="/projects/the-title-balcony.html" aria-label="The Title Balcony"><img src="/images/projects/balcony-hero.jpg" alt="The Title Balcony, Nai Yang" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Nai Yang</span>
@@ -605,8 +625,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
 
       <!-- 7. THE TITLE BIANCANA -->
       <article class="cat-card" data-cats="surin leasehold">
-        <a class="cat-cover" href="/projects/the-title-biancana.html" aria-label="Открыть паспорт The Title Biancana" style="background:linear-gradient(135deg,#06080f 0%,#1f2937 60%,#312e1d 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:300;letter-spacing:.18em;text-transform:uppercase;font-size:13px">
-          <span style="opacity:.85">The Title Biancana</span>
+        <a class="cat-cover" href="/projects/the-title-biancana.html" aria-label="The Title Biancana"><img src="/images/projects/biancana-hero.jpg" alt="The Title Biancana, Surin" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Surin</span>
@@ -630,8 +649,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
 
       <!-- 8. CASA DE MONTE -->
       <article class="cat-card" data-cats="villa leasehold">
-        <a class="cat-cover" href="/projects/casa-de-monte.html" aria-label="Открыть паспорт Casa de Monte" style="background:linear-gradient(135deg,#0f172a 0%,#3a2418 60%,#5c3b1e 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:300;letter-spacing:.18em;text-transform:uppercase;font-size:13px">
-          <span style="opacity:.85">Casa de Monte · Villas</span>
+        <a class="cat-cover" href="/projects/casa-de-monte.html" aria-label="Casa de Monte"><img src="/images/projects/casademonte-hero.jpg" alt="Casa de Monte villas" loading="lazy"/>
           <div class="cat-tags">
             <span class="cat-tag gold">Villa</span>
             <span class="cat-tag">Inland</span>
@@ -988,12 +1006,12 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
         <span class="kicker">GIDR · Гонконг</span>
         <h2>Скрининг-движок за каждым проектом в нашем каталоге.</h2>
         <p>Hong Kong Institute of Digital Research (GIDR) — прикладная аналитическая и AI-лаборатория, моделирующая курортные рынки недвижимости в Азии. Основан в Гонконге, GIDR работает как партнёр по исследованиям и data-intelligence, обеспечивающий скрининг-движок West East Gate Real Estate.</p>
-        <p>Модель обрабатывает <strong>тысячи сигналов на проект</strong> — геопространственные и климатические слои, графики строительства, track record застройщика, ценовая динамика, туристические потоки — для построения предиктивных рейтингов ROI и ликвидности. Брошюрные цифры — это вход, не вывод.</p>
+        <p>Модель обрабатывает <strong>тысячи сигналов на проект</strong> — геопространственные и климатические слои, графики строительства, track record застройщика, ценовая динамика, туристические потоки — для поддержки внутреннего due-diligence чек-листа по территории, застройщику и сценариям выхода. Материалы застройщика — один из нескольких источников, не единственный.</p>
         <p>Каждый проект в этом каталоге уже сопоставлен с моделью. Проекты, не прошедшие скрининг, на страницу не попадают.</p>
         <a href="/" class="btn btn-secondary" style="margin-top:18px">WEGC структура <span class="arr">→</span></a>
       </div>
       <div class="gidr-card">
-        <div class="label"><span class="dot"></span><span>Нейронная модель GIDR — активна</span></div>
+        <div class="label"><span class="dot"></span><span>Скрининг территории · Активно</span></div>
         <h3>Скоринг курортной недвижимости по Пхукету и смежным азиатским рынкам.</h3>
         <div class="gidr-stats">
           <div class="gidr-stat"><div class="v">1 000+</div><div class="l">Сигналов на проект</div></div>
@@ -1094,7 +1112,6 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
           <p>Без массовых рассылок. Без давления. Работаем один-к-одному с инвесторами, ценящими структуру, прозрачность и дисциплинированные решения.</p>
           <div class="contact-channels">
             <a href="https://wa.me/66657658782" target="_blank" rel="noopener noreferrer" class="contact-channel"><span class="ico">💬</span> WhatsApp · +66 65 765 8782</a>
-            <a href="https://t.me/charter_capital" target="_blank" rel="noopener noreferrer" class="contact-channel"><span class="ico">📨</span> Telegram · @charter_capital</a>
             <a href="mailto:property@wegc.fund" class="contact-channel"><span class="ico">✉</span> property@wegc.fund</a>
           </div>
         </div>

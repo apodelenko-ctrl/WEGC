@@ -11,11 +11,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/_legal.css"/>
+<link rel="stylesheet" href="/legal.css"/>
+<style>
+/* lang switcher */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:#fff;border:1px solid #e2e8f0;border-radius:999px}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:#64748b;padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease;border:0}
+.lang-sw-a:hover{color:#0f172a;background:#fbfaf6;border:0}
+.lang-sw-a.active{background:#a08156;color:#fff}
+.lang-sw-a.active:hover{background:#a08156;color:#fff}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+</style>
 </head>
 <body>
 <header class="legal-topbar"><div class="legal-topbar-inner">
   <a href="/" class="legal-brand">West East Gate Capital</a>
+  <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/cookies.html" class="lang-sw-a active" hreflang="en">EN</a>
+  <a href="/index-ru.html" class="lang-sw-a" hreflang="ru">RU</a>
+  <a href="/index-zh.html" class="lang-sw-a" hreflang="zh">中文</a>
+</div>
   <a href="/" class="legal-back">← Back to home</a>
 </div></header>
 

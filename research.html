@@ -11,12 +11,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/_legal.css"/>
+<link rel="stylesheet" href="/legal.css"/>
 <style>
 .legal-topbar-inner{max-width:1240px}
 main.research{max-width:1080px;margin:0 auto;padding:64px 28px}
-.r-hero{background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);color:#fff;padding:80px 32px;border-radius:14px;margin-bottom:48px;position:relative;overflow:hidden}
-.r-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(160,129,86,.18) 0%,transparent 60%);pointer-events:none}
+.r-hero{background:linear-gradient(135deg,rgba(6,8,15,.92) 0%,rgba(10,14,26,.72) 60%,rgba(10,14,26,.55) 100%),url('/images/wegc-hero-research.jpg') center/cover no-repeat,#06080f;color:#fff;padding:120px 48px;border-radius:14px;margin-bottom:48px;position:relative;overflow:hidden;min-height:380px}
+.r-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 60%,rgba(160,129,86,.14) 0%,transparent 60%);pointer-events:none}
 .r-hero-inner{position:relative;max-width:780px}
 .r-hero h1{color:#fff;font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:300;letter-spacing:-.025em;line-height:1.15;margin-bottom:14px}
 .r-hero h1 strong{color:#d6b370;font-weight:500}
@@ -39,11 +39,32 @@ main.research{max-width:1080px;margin:0 auto;padding:64px 28px}
 .r-not-list li::before{content:'×';color:#dc2626;font-weight:700;font-size:18px;line-height:1;flex-shrink:0}
 .r-not-list strong{color:#0f172a}
 @media(max-width:760px){.r-grid{grid-template-columns:1fr}.r-block{padding:24px}}
+/* lang switcher (universal) */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+#topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.7);padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease}
+.lang-sw-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .lang-sw-a{color:#64748b}
+#topbar.solid .lang-sw-a:hover{color:#0f172a;background:#fff}
+.lang-sw-a.active{background:#d6b370;color:#0a0e1a}
+.lang-sw-a.active:hover{background:#d6b370;color:#0a0e1a}
+#topbar.solid .lang-sw-a.active{background:#a08156;color:#fff}
+.legal-topbar .lang-sw{background:#fff;border-color:#e2e8f0}
+.legal-topbar .lang-sw-a{color:#64748b}
+.legal-topbar .lang-sw-a:hover{color:#0f172a;background:#fbfaf6}
+.legal-topbar .lang-sw-a.active{background:#a08156;color:#fff}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+
 </style>
 </head>
 <body>
 <header class="legal-topbar"><div class="legal-topbar-inner">
   <a href="/" class="legal-brand">West East Gate Capital</a>
+  <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/research.html" class="lang-sw-a active" hreflang="en">EN</a>
+  <a href="/index-ru.html" class="lang-sw-a " hreflang="ru">RU</a>
+  <a href="/index-zh.html" class="lang-sw-a " hreflang="zh">中文</a>
+</div>
   <a href="/" class="legal-back">← Back to home</a>
 </div></header>
 

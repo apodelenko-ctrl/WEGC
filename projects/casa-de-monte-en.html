@@ -16,8 +16,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/projects/_passport.css"/>
-<style>.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}.p-hero-grad{background:linear-gradient(135deg,#0f172a 0%,#3a2418 60%,#5c3b1e 100%)}</style>
+<link rel="stylesheet" href="/projects/passport.css"/>
+<style>
+/* lang switcher */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+#topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.7);padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease}
+.lang-sw-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .lang-sw-a{color:#64748b}
+.lang-sw-a.active{background:#d6b370;color:#0a0e1a}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}.p-hero-grad{background:linear-gradient(180deg,rgba(6,8,15,.55) 0%,rgba(6,8,15,.35) 50%,rgba(6,8,15,.85) 100%),url("/images/projects/casademonte-hero.jpg") center/cover no-repeat,#0a0e1a}</style>
 </head>
 <body>
 
@@ -35,7 +44,11 @@
       <a href="/wet-agency-en.html#faq">FAQ</a>
     </nav>
     <div class="topbar-actions">
-      <a href="/projects/casa-de-monte.html" class="lang-switch" aria-label="Switch to Russian">RU</a>
+      <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/projects/casa-de-monte-en.html" class="lang-sw-a active" hreflang="en">EN</a>
+  <a href="/projects/casa-de-monte.html" class="lang-sw-a " hreflang="ru">RU</a>
+  <a href="/wet-agency-zh.html" class="lang-sw-a" hreflang="zh">中文</a>
+</div>
       <a href="#enquire" class="topbar-cta">Enquire</a>
     </div>
   </div>
@@ -110,7 +123,7 @@
 <section class="s cream-2">
   <div class="container">
     <div class="gidr-summary">
-      <div class="label"><span class="dot"></span><span>GIDR Territory Score · Active</span></div>
+      <div class="label"><span class="dot"></span><span>Territory Screening · Active</span></div>
       <h3>Inland villa community — privacy-first, lower seasonality.</h3>
       <p>Inland villa products serve a different demand pattern than beach condos: longer stays, family / expat tenants, reduced exposure to short-term seasonality. GIDR rates the territory Tier 2 with a stable demand profile and a lower yield ceiling but higher predictability and lower management intensity per unit.</p>
       <div class="stats">
@@ -118,6 +131,21 @@
         <div class="stat"><div class="v">Stable</div><div class="l">Demand profile</div></div>
         <div class="stat"><div class="v">Resident</div><div class="l">Primary use case</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="s">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Visualisation</span>
+      <h2>Project gallery.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte-aerial.jpg" alt="Casa De Monte — Aerial view / Вид сверху" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte-interior.jpg" alt="Casa De Monte — Interior / Интерьер" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte-bedroom.jpg" alt="Casa De Monte — Bedroom / Спальня" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
     </div>
   </div>
 </section>

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/projects/_passport.css"/>
+<link rel="stylesheet" href="/projects/passport.css"/>
 <style>
 .private-hero{background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);color:#fff;padding:160px 32px 100px;position:relative;overflow:hidden}
 .private-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 30%,rgba(160,129,86,.18) 0%,transparent 55%);pointer-events:none}
@@ -49,6 +49,22 @@
 .eoi-form .submit:hover{transform:translateY(-1px)}
 @media(max-width:980px){.two-col{grid-template-columns:1fr;gap:36px}.gate-grid{grid-template-columns:1fr}.eoi-form .row{grid-template-columns:1fr}}
 @media(max-width:640px){.private-hero{padding:120px 22px 64px}.private-section{padding:64px 0}.eoi-form{padding:24px}}
+/* lang switcher (universal) */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+#topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
+.lang-sw-a{font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.7);padding:6px 12px;border-radius:999px;text-decoration:none;line-height:1;transition:all .15s ease}
+.lang-sw-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .lang-sw-a{color:#64748b}
+#topbar.solid .lang-sw-a:hover{color:#0f172a;background:#fff}
+.lang-sw-a.active{background:#d6b370;color:#0a0e1a}
+.lang-sw-a.active:hover{background:#d6b370;color:#0a0e1a}
+#topbar.solid .lang-sw-a.active{background:#a08156;color:#fff}
+.legal-topbar .lang-sw{background:#fff;border-color:#e2e8f0}
+.legal-topbar .lang-sw-a{color:#64748b}
+.legal-topbar .lang-sw-a:hover{color:#0f172a;background:#fbfaf6}
+.legal-topbar .lang-sw-a.active{background:#a08156;color:#fff}
+@media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+
 </style>
 </head>
 <body>
@@ -65,6 +81,11 @@
       <a href="/research.html">Research</a>
       <a href="/corporate.html">Corporate</a>
     </nav>
+    <div class="lang-sw" role="navigation" aria-label="Language">
+  <a href="/private-capital.html" class="lang-sw-a active" hreflang="en">EN</a>
+  <a href="/private-capital-ru.html" class="lang-sw-a " hreflang="ru">RU</a>
+  <a href="/private-capital-zh.html" class="lang-sw-a " hreflang="zh">中文</a>
+</div>
     <a href="#eoi" class="topbar-cta">Express interest</a>
   </div>
 </header>
@@ -93,7 +114,7 @@
       </div>
       <div class="disclaimer-box">
         <strong>Public language we deliberately avoid</strong>
-        <p style="margin-top:12px">No fixed coupon, no guaranteed yield, no “invest now” button, no public IRR figures, no public minimum ticket. Specific economics — preferred return, allocation periods, structure — are part of private documentation only and subject to applicable law and signed agreements.</p>
+        <p style="margin-top:12px">No fixed yield, no guaranteed return, no “invest now” button, no public IRR figures, no public minimum ticket. Specific economics — preferred return, allocation periods, structure — are part of private documentation only and subject to applicable law and signed agreements.</p>
       </div>
     </div>
     <div class="gate-grid">
