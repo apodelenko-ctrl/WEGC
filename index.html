@@ -198,6 +198,52 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 .f-bottom span{font-size:11.5px;color:#64748b;letter-spacing:.02em}
 @media(max-width:1080px){.f-grid{grid-template-columns:1fr 1fr 1fr;gap:36px}.f-col-brand,.f-col-contact{grid-column:1/-1}.f-col-brand p{max-width:62ch}}
 @media(max-width:640px){.f-grid{grid-template-columns:1fr;gap:28px}.f-col-brand,.f-col-contact{grid-column:auto}}
+/* RESPONSIVE — added 2026-05-24 */
+@media (max-width:1080px){
+  .compliance-grid{grid-template-columns:1fr 1fr}
+  .topbar-nav{gap:2px}
+  .topbar-nav a{padding:7px 10px;font-size:11px;letter-spacing:.08em}
+}
+@media (max-width:980px){
+  .topbar-nav{display:none}
+  .topbar-brand .tag{display:none}
+  .path-grid{grid-template-columns:1fr;gap:40px}
+  .research-grid{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .what-grid{grid-template-columns:1fr}
+  .compliance-grid{grid-template-columns:1fr 1fr;gap:18px}
+  .hero h1{max-width:none}
+}
+@media (max-width:640px){
+  .container,.container-sm{padding:0 22px}
+  section.s{padding:72px 0}
+  .s-head{margin-bottom:34px}
+  .s-head p{font-size:15px}
+  .hero{min-height:auto;padding:120px 22px 64px}
+  .hero-badge{margin-bottom:22px;font-size:10px;padding:6px 13px}
+  .hero h1{font-size:clamp(2rem,8.4vw,3rem);margin-bottom:18px}
+  .hero-sub{font-size:15px;line-height:1.55;margin-bottom:30px}
+  .hero-actions{flex-direction:column;gap:10px;margin-bottom:44px;width:100%}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .hero-meta{gap:22px 28px;padding-top:26px}
+  .hero-meta-item{flex:1 1 calc(50% - 14px);min-width:130px}
+  .hero-meta-item .v{font-size:1.2rem}
+  .hero-meta-item .l{font-size:10.5px}
+  .topbar-inner{padding:14px 22px;gap:12px}
+  .topbar-brand .name{font-size:13px;letter-spacing:.12em}
+  .topbar-cta{padding:8px 13px;font-size:10px;letter-spacing:.1em}
+  .what-grid{grid-template-columns:1fr}
+  .what-item{padding:28px 24px}
+  .what-item h3{font-size:1.2rem}
+  .compliance-grid{grid-template-columns:1fr;gap:14px}
+  .comp-card{padding:24px 22px}
+  .research-card{padding:28px 24px}
+  .contact-wrap{padding:40px 22px;border-radius:12px}
+  .contact-form{padding:24px 20px}
+  .cf-row{grid-template-columns:1fr;gap:10px}
+  .path-card{padding:22px 22px}
+  .path-card .h{flex-wrap:wrap;gap:8px}
+}
 /* lang switcher (universal) */
 .lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
 #topbar.solid .lang-sw{background:#f8fafc;border-color:#e2e8f0}
