@@ -472,27 +472,25 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 .cf-message.err{background:rgba(220,38,38,.18);border:1px solid rgba(220,38,38,.5);color:#fca5a5}
 
 /* ─── FOOTER ───────────────────────────────────────────── */
-footer.f{
-  background:#06080f;color:#94a3b8;
-  padding:64px 0 32px;border-top:1px solid var(--line-dark);
-}
-.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
-.f-brand .logo{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px}
-.f-brand p{color:#64748b;font-size:13px;line-height:1.6;max-width:38ch}
+footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px solid var(--line-dark)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.4fr;gap:44px;margin-bottom:36px;align-items:start}
 .f-col h5{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px}
-.f-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.f-col li a{font-size:13px;color:#94a3b8;transition:color .15s ease}
+.f-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.f-col li a{font-size:13px;color:#94a3b8;transition:color .15s ease;text-decoration:none}
 .f-col li a:hover{color:#fff}
-.f-bottom{
-  border-top:1px solid var(--line-dark);padding-top:24px;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-}
-.f-bottom span{font-size:12px;color:#64748b}
-.f-disclaimer{
-  margin-top:18px;background:rgba(160,129,86,.06);border:1px solid rgba(160,129,86,.18);
-  border-radius:var(--radius);padding:16px 20px;
-  font-size:12px;color:#cbd5e1;line-height:1.6;
-}
+.f-col-brand .logo{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.f-col-brand p{color:#64748b;font-size:13px;line-height:1.65;margin:0}
+.f-col-contact .f-contact{display:flex;flex-direction:column;gap:8px}
+.f-col-contact .f-corpname{font-size:12px;font-weight:600;color:#cbd5e1;letter-spacing:.04em;margin:0}
+.f-col-contact .f-meta{font-size:11.5px;color:#64748b;line-height:1.55;margin:0}
+.f-col-contact .f-channels{font-size:12.5px;line-height:1.85;color:#94a3b8;margin:6px 0 0}
+.f-col-contact .f-channels a{color:#cbd5e1;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08);transition:color .15s ease,border-color .15s ease}
+.f-col-contact .f-channels a:hover{color:#fff;border-bottom-color:#a08156}
+.f-disclaimer{margin:0 0 28px;padding:18px 22px;background:rgba(160,129,86,.06);border:1px solid rgba(160,129,86,.18);border-radius:8px;font-size:12px;color:#cbd5e1;line-height:1.7}
+.f-bottom{border-top:1px solid var(--line-dark);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.f-bottom span{font-size:11.5px;color:#64748b;letter-spacing:.02em}
+@media(max-width:1080px){.f-grid{grid-template-columns:1fr 1fr 1fr;gap:36px}.f-col-brand,.f-col-contact{grid-column:1/-1}.f-col-brand p{max-width:62ch}}
+@media(max-width:640px){.f-grid{grid-template-columns:1fr;gap:28px}.f-col-brand,.f-col-contact{grid-column:auto}}
 
 /* ─── Responsive ───────────────────────────────────────── */
 @media (max-width:1080px){
@@ -1277,39 +1275,40 @@ footer.f{
 <footer class="f">
   <div class="container">
     <div class="f-grid">
-      <div class="f-brand">
-        <div class="logo">West East Gate Real Estate</div>
-        <p>统一委托下的精选普吉岛房产 — 开发商直签合同,内部研究框架审核的地段,从简报到交付的完整执行。</p>
-        <div class="f-disclaimer">
-          所有房地产交易均在独立法律审核下进行。指示性数据不构成投资建议或担保。最终条款取决于开发商合同、适用法律与经律师审核的文件。
+      <div class="f-col f-col-brand">
+        <div class="logo">West East Gate Capital</div>
+        <p>WEST EAST TRADE GROUP PTE. LTD. (新加坡) 旗下的房地产渠道与私人实物资产品牌。普吉岛开发商直签房产以及在严格尽职调查下的私人实物资产委托业务。</p>
+      </div>
+      <div class="f-col">
+        <h5>业务</h5>
+        <ul><li><a href="/wet-agency-zh.html">普吉岛房地产</a></li><li><a href="/private-capital-zh.html">私人资本</a></li><li><a href="/research.html">研究方法</a></li></ul>
+      </div>
+      <div class="f-col">
+        <h5>公司</h5>
+        <ul><li><a href="/corporate.html">公司与合规</a></li><li><a href="/2025-review.html">2025 周期回顾</a></li><li><a href="/2026-round.html">2026 轮次</a></li></ul>
+      </div>
+      <div class="f-col">
+        <h5>法律</h5>
+        <ul><li><a href="/privacy.html">隐私政策</a></li><li><a href="/terms.html">服务条款</a></li><li><a href="/cookies.html">Cookies</a></li></ul>
+      </div>
+      <div class="f-col f-col-contact">
+        <h5>联系</h5>
+        <div class="f-contact">
+          <p class="f-corpname">WEST EAST TRADE GROUP PTE. LTD.</p>
+          <p class="f-meta">UEN 202505772C · 注册于 2025 年 2 月 11 日</p>
+          <p class="f-meta">7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</p>
+          <p class="f-channels">
+            <a href="mailto:post@wegc.fund">post@wegc.fund</a><br>
+            <a href="mailto:dpo@wegc.fund">dpo@wegc.fund (DPO)</a><br>
+            <a href="https://wa.me/66821492172" target="_blank" rel="noopener noreferrer">WhatsApp · +66 82 149 2172</a>
+          </p>
         </div>
       </div>
-      <div class="f-col">
-        <h5>项目目录</h5>
-        <ul>
-          <li><a href="/projects/the-modeva.html">The Modeva</a></li>
-          <li><a href="/projects/the-title-artrio.html">The Title Artrio</a></li>
-          <li><a href="/projects/the-title-katabello.html">The Title Katabello</a></li>
-          <li><a href="/projects/the-title-adora.html">The Title Adora</a></li>
-          <li><a href="/projects/title-vivi.html">Title Vivi</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>WEGC</h5><ul><li><a href="/index-zh.html">WEGC 首页</a></li><li><a href="/private-capital-zh.html">私人资本</a></li><li><a href="/research.html">Research</a></li><li><a href="/corporate.html">公司与合规</a></li></ul>
-      </div>
-      <div class="f-col">
-        <h5>法律与联系</h5>
-        <ul>
-          <li><a href="mailto:property@wegc.fund">property@wegc.fund</a></li>
-          <li></li>
-          <li><a href="https://wa.me/66821492172" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-          <li><a href="/privacy.html">隐私政策</a></li>
-        </ul>
-      </div>
     </div>
+    <div class="f-disclaimer">West East Gate Capital 不是 MAS 持牌基金管理人或财务顾问。私人实物资产机会的信息仅按请求提供,须经 KYC/AML、适配性审核与签署的私人法律文件。本网站任何内容均不构成公开要约、投资建议、吸收存款或回报担保。</div>
     <div class="f-bottom">
-      <span>© 2026 West East Gate Real Estate · Part of WEGC structure</span><span>UEN 202505772C · Singapore</span>
-      <span>所有房地产交易均在独立法律审核下进行 · 香港与普吉岛</span>
+      <span>© 2026 WEST EAST TRADE GROUP PTE. LTD. 版权所有。</span>
+      <span>新加坡 · UEN 202505772C</span>
     </div>
   </div>
 </footer>

@@ -68,6 +68,25 @@
 .legal-topbar .lang-sw-a.active{background:#a08156;color:#fff}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
 
+footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px solid var(--line-dark)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.4fr;gap:44px;margin-bottom:36px;align-items:start}
+.f-col h5{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.f-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.f-col li a{font-size:13px;color:#94a3b8;transition:color .15s ease;text-decoration:none}
+.f-col li a:hover{color:#fff}
+.f-col-brand .logo{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.f-col-brand p{color:#64748b;font-size:13px;line-height:1.65;margin:0}
+.f-col-contact .f-contact{display:flex;flex-direction:column;gap:8px}
+.f-col-contact .f-corpname{font-size:12px;font-weight:600;color:#cbd5e1;letter-spacing:.04em;margin:0}
+.f-col-contact .f-meta{font-size:11.5px;color:#64748b;line-height:1.55;margin:0}
+.f-col-contact .f-channels{font-size:12.5px;line-height:1.85;color:#94a3b8;margin:6px 0 0}
+.f-col-contact .f-channels a{color:#cbd5e1;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08);transition:color .15s ease,border-color .15s ease}
+.f-col-contact .f-channels a:hover{color:#fff;border-bottom-color:#a08156}
+.f-disclaimer{margin:0 0 28px;padding:18px 22px;background:rgba(160,129,86,.06);border:1px solid rgba(160,129,86,.18);border-radius:8px;font-size:12px;color:#cbd5e1;line-height:1.7}
+.f-bottom{border-top:1px solid var(--line-dark);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.f-bottom span{font-size:11.5px;color:#64748b;letter-spacing:.02em}
+@media(max-width:1080px){.f-grid{grid-template-columns:1fr 1fr 1fr;gap:36px}.f-col-brand,.f-col-contact{grid-column:1/-1}.f-col-brand p{max-width:62ch}}
+@media(max-width:640px){.f-grid{grid-template-columns:1fr;gap:28px}.f-col-brand,.f-col-contact{grid-column:auto}}
 </style>
 </head>
 <body>
@@ -201,35 +220,40 @@
 <footer class="f">
   <div class="container">
     <div class="f-grid">
-      <div class="f-brand">
+      <div class="f-col f-col-brand">
         <div class="logo">West East Gate Capital</div>
-        <p>The real estate access и private real-assets brand of WEST EAST TRADE GROUP PTE. LTD., Singapore.</p>
-        <div style="margin-top:18px;padding-top:14px;border-top:1px solid #1f2937;font-size:12px;color:#64748b;line-height:1.7">
-          <strong style="color:#cbd5e1;font-weight:600">WEST EAST TRADE GROUP PTE. LTD.</strong><br>
-          UEN 202505772C · Зарегистрирована 11 февраля 2025<br>
-          Юр. адрес: 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987<br>
-          Email: <a href="mailto:post@wegc.fund" style="color:#cbd5e1">post@wegc.fund</a>
+        <p>Real-estate и private real-assets бренд WEST EAST TRADE GROUP PTE. LTD., Сингапур. Прямая недвижимость от застройщиков Пхукета и частные real-asset мандаты под дисциплинированный due diligence.</p>
+      </div>
+      <div class="f-col">
+        <h5>Бизнес</h5>
+        <ul><li><a href="/wet-agency.html">Недвижимость Пхукета</a></li><li><a href="/private-capital-ru.html">Частный капитал</a></li><li><a href="/research.html">Research / методология</a></li></ul>
+      </div>
+      <div class="f-col">
+        <h5>Корпоративное</h5>
+        <ul><li><a href="/corporate.html">Корпоративное и комплаенс</a></li><li><a href="/2025-review.html">Обзор 2025 цикла</a></li><li><a href="/2026-round.html">2026 раунд</a></li></ul>
+      </div>
+      <div class="f-col">
+        <h5>Юридическое</h5>
+        <ul><li><a href="/privacy.html">Политика конфиденциальности</a></li><li><a href="/terms.html">Условия использования</a></li><li><a href="/cookies.html">Cookies</a></li></ul>
+      </div>
+      <div class="f-col f-col-contact">
+        <h5>Контакты</h5>
+        <div class="f-contact">
+          <p class="f-corpname">WEST EAST TRADE GROUP PTE. LTD.</p>
+          <p class="f-meta">UEN 202505772C · Зарегистрирована 11 февраля 2025</p>
+          <p class="f-meta">7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</p>
+          <p class="f-channels">
+            <a href="mailto:post@wegc.fund">post@wegc.fund</a><br>
+            <a href="mailto:dpo@wegc.fund">dpo@wegc.fund (DPO)</a><br>
+            <a href="https://wa.me/66821492172" target="_blank" rel="noopener noreferrer">WhatsApp · +66 82 149 2172</a>
+          </p>
         </div>
       </div>
-      <div class="f-col"><h5>Бизнес</h5><ul>
-        <li><a href="/wet-agency.html">Недвижимость Пхукета</a></li>
-        <li><a href="/private-capital-ru.html">Частный капитал</a></li>
-        <li><a href="/research.html">Research / методология</a></li>
-      </ul></div>
-      <div class="f-col"><h5>Корпоративное</h5><ul>
-        <li><a href="/corporate.html">Корпоративное и комплаенс</a></li>
-        <li><a href="/2025-review.html">Обзор 2025</a></li>
-        <li><a href="/2026-round.html">2026 раунд</a></li>
-      </ul></div>
-      <div class="f-col"><h5>Юридическое</h5><ul>
-        <li><a href="/privacy.html">Политику конфиденциальности</a></li>
-        <li><a href="/terms.html">Условия использования</a></li>
-        <li><a href="/cookies.html">Cookies</a></li>
-      </ul></div>
     </div>
+    <div class="f-disclaimer">West East Gate Capital не является MAS-licensed fund manager или financial adviser. Информация о частных real-asset возможностях предоставляется только по запросу, после KYC/AML, проверки приемлемости и подписанной частной документации. Ничто на этом сайте не является публичной офертой, инвестиционным советом, deposit-taking или гарантией доходности.</div>
     <div class="f-bottom">
       <span>© 2026 WEST EAST TRADE GROUP PTE. LTD. Все права защищены.</span>
-      <span>Singapore · UEN 202505772C</span>
+      <span>Сингапур · UEN 202505772C</span>
     </div>
   </div>
 </footer>
