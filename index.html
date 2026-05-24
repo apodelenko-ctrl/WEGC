@@ -519,20 +519,31 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
       form.addEventListener('submit', async function(e){
         e.preventDefault();
         var fd = new FormData(form);
-        fd.append('_subject','New WEGC enquiry — '+(fd.get('name')||'no name'));
-        fd.append('_template','table');
-        fd.append('_captcha','false');
+        var data = {};
+        fd.forEach(function(v,k){ if(k!=='_gotcha' && !k.startsWith('_')) data[k]=v; });
+        data._subject = 'New WEGC enquiry — '+(data.name||'no name');
+        data._template = 'table';
+        data._captcha = 'false';
         try{
           var res = await fetch('https://formsubmit.co/ajax/'+decode(),{
             method:'POST',
-            headers:{'Accept':'application/json'},
-            body: fd
+            headers:{
+              'Content-Type':'application/json',
+              'Accept':'application/json'
+            },
+            body: JSON.stringify(data)
           });
-          if(res.ok){
+          var json = null;
+          try{ json = await res.json(); } catch(_){}
+          if(res.ok && json && (json.success==='true' || json.success===true)){
             form.reset();
             alert(form.dataset.successMsg || 'Thank you. Your request has been received.');
-          } else { throw new Error('send fail'); }
+          } else {
+            console.error('FormSubmit response:', res.status, json);
+            throw new Error('send fail');
+          }
         } catch(err){
+          console.error('Form delivery error:', err);
           alert(form.dataset.errorMsg || 'Could not send. Please email us at post@wegc.fund.');
         }
       });
