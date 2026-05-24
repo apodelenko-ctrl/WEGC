@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
     var fd = new FormData(form);
     var lines = [];
     fd.forEach(function(v,k){
-      if(k.startsWith('_') || k==='_gotcha' || !v) return;
+      if(k.indexOf('_')===0 || k==='_gotcha' || !v) return;
       lines.push(k.toUpperCase().replace(/_/g,' ') + ': ' + v);
     });
     var subject = 'New WEGC enquiry — '+(fd.get('name')||'no name');
@@ -532,45 +532,52 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
 — sent via wegc.fund';
     return 'mailto:post@wegc.fund?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   }
-  document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('form[data-wegc-form="1"]').forEach(function(form){
-      if(form._wegcBound) return;
-      form._wegcBound=true;
-      form.addEventListener('submit', async function(e){
-        e.preventDefault();
-        var fd = new FormData(form);
-        var delivered = false;
-        try{
-          var ctrl = new AbortController();
-          var timer = setTimeout(function(){ctrl.abort();}, 8000);
-          var res = await fetch(ENDPOINT,{
-            method:'POST',
-            headers:{'Accept':'application/json'},
-            body: fd,
-            signal: ctrl.signal
-          });
-          clearTimeout(timer);
-          if(res.ok){
-            delivered = true;
-          } else {
-            console.error('Formspree response:', res.status);
-          }
-        } catch(err){
-          console.error('Form delivery error:', err);
-        }
-        if(delivered){
-          form.reset();
-          alert(form.dataset.successMsg || 'Thank you. Your request has been received.');
+  function bindForm(form){
+    if(form._wegcBound) return;
+    form._wegcBound=true;
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var fd = new FormData(form);
+      var delivered = false;
+      try{
+        var ctrl = new AbortController();
+        var timer = setTimeout(function(){ctrl.abort();}, 8000);
+        var res = await fetch(ENDPOINT,{
+          method:'POST',
+          headers:{'Accept':'application/json'},
+          body: fd,
+          signal: ctrl.signal
+        });
+        clearTimeout(timer);
+        if(res.ok){
+          delivered = true;
         } else {
-          /* fallback: open user's email client */
-          window.location.href = buildMailto(form);
-          setTimeout(function(){
-            alert(form.dataset.fallbackMsg || 'Your email client should open with the message ready to send. If nothing happens, write to us at post@wegc.fund.');
-          }, 400);
+          console.error('Formspree response:', res.status);
         }
-      });
+      } catch(err){
+        console.error('Form delivery error:', err);
+      }
+      if(delivered){
+        form.reset();
+        alert(form.dataset.successMsg || 'Thank you. Your request has been received.');
+      } else {
+        window.location.href = buildMailto(form);
+        setTimeout(function(){
+          alert(form.dataset.fallbackMsg || 'Your email client should open with the message ready to send. If nothing happens, write to us at post@wegc.fund.');
+        }, 400);
+      }
     });
-  });
+  }
+  function init(){
+    var forms = document.querySelectorAll('form[data-wegc-form="1"]');
+    forms.forEach(bindForm);
+    console.log('[WEGC] form handler bound to '+forms.length+' form(s)');
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
 </script>
 </body>
