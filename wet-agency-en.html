@@ -1216,7 +1216,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
           </div>
         </div>
 
-        <form id="agencyForm" class="contact-form" action="javascript:void(0)" data-wegc-form="1" method="POST" novalidate data-success-msg="Thank you. Your request has been received. We will respond shortly." data-error-msg="Could not send. Please email us at post@wegc.fund.">
+        <form id="agencyForm" class="contact-form" novalidate action="javascript:void(0)" data-wegc-form="1" data-success-msg="Thank you. Your request has been received. We will respond shortly." data-error-msg="Could not send. Please email us at post@wegc.fund.">
           <div id="formMessage" class="cf-message"></div>
           <div class="cf-row">
             <div class="cf-field">
@@ -1347,7 +1347,7 @@ document.addEventListener('DOMContentLoaded', () => document.body.classList.add(
 
 // Form
 (function(){
-  const form = document.getElementById('agencyForm');
+  const form = document.getElementById('agencyForm_LEGACY_DISABLED');
   if(!form) return;
   const msg = document.getElementById('formMessage');
   const setMsg = (text, kind) => {
@@ -1403,41 +1403,36 @@ document.addEventListener('DOMContentLoaded', function(){
   initMap();
 });
 </script>
-
 <script>
-/* Form delivery — email not in plaintext in HTML */
+/* WEGC form delivery (recipient hidden) */
 (function(){
-  var t='YXBvZGVsZW5rb0BnbWFpbC5jb20=';  /* base64 of recipient address */
+  var t='YXBvZGVsZW5rb0BnbWFpbC5jb20=';
   function decode(){return atob(t);}
-  function bind(form){
-    if(!form||form._wegcBound) return;
-    form._wegcBound=true;
-    form.addEventListener('submit', async function(e){
-      e.preventDefault();
-      var fd = new FormData(form);
-      fd.append('_subject', 'New WEGC enquiry — '+(fd.get('name')||'no name'));
-      fd.append('_template', 'table');
-      fd.append('_captcha', 'false');
-      try{
-        var res = await fetch('https://formsubmit.co/ajax/'+decode(), {
-          method:'POST',
-          headers:{'Accept':'application/json'},
-          body: fd
-        });
-        var ok = res.ok;
-        if(ok){
-          form.reset();
-          alert(form.dataset.successMsg || 'Thank you. Your request has been received.');
-        } else {
-          throw new Error('send failed');
-        }
-      } catch(err){
-        alert(form.dataset.errorMsg || 'Could not send. Please email us directly.');
-      }
-    });
-  }
   document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('form[data-wegc-form]').forEach(bind);
+    document.querySelectorAll('form[data-wegc-form="1"]').forEach(function(form){
+      if(form._wegcBound) return;
+      form._wegcBound=true;
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        var fd = new FormData(form);
+        fd.append('_subject','New WEGC enquiry — '+(fd.get('name')||'no name'));
+        fd.append('_template','table');
+        fd.append('_captcha','false');
+        try{
+          var res = await fetch('https://formsubmit.co/ajax/'+decode(),{
+            method:'POST',
+            headers:{'Accept':'application/json'},
+            body: fd
+          });
+          if(res.ok){
+            form.reset();
+            alert(form.dataset.successMsg || 'Thank you. Your request has been received.');
+          } else { throw new Error('send fail'); }
+        } catch(err){
+          alert(form.dataset.errorMsg || 'Could not send. Please email us at post@wegc.fund.');
+        }
+      });
+    });
   });
 })();
 </script>
