@@ -288,11 +288,7 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
       lines.push(k.toUpperCase().replace(/_/g,' ') + ': ' + v);
     });
     var subject = 'New WEGC enquiry — '+(fd.get('name')||'no name');
-    var body = lines.join('
-
-') + '
-
-— sent via wegc.fund';
+    var body = lines.join('\n\n') + '\n\n— sent via wegc.fund';
     return 'mailto:post@wegc.fund?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   }
   function bindForm(form){
