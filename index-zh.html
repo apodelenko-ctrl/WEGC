@@ -43,6 +43,7 @@
   --gold-bright:#d6b370;
   --radius:8px;
   --radius-lg:14px;
+  --hero-bg:url('/images/hero/hero-phuket-aerial-sunset.jpg');
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -96,7 +97,7 @@ p{color:var(--body);font-weight:400;line-height:1.7}
 #topbar.solid .topbar-cta{color:var(--ink);border-color:var(--line)}
 #topbar.solid .topbar-cta:hover{border-color:#cbd5e1;background:var(--bg-soft)}
 
-.hero{position:relative;min-height:92vh;background:linear-gradient(95deg,rgba(6,8,15,.92) 0%,rgba(6,8,15,.7) 50%,rgba(6,8,15,.45) 100%),url('/images/the-modeva-exterior-5-1.jpg') center/cover no-repeat,var(--bg-darker);display:flex;flex-direction:column;justify-content:center;padding:140px 32px 80px;color:#fff}
+.hero{position:relative;min-height:92vh;background:linear-gradient(95deg,rgba(6,8,15,.92) 0%,rgba(6,8,15,.7) 50%,rgba(6,8,15,.45) 100%),var(--hero-bg) center/cover no-repeat,var(--bg-darker);display:flex;flex-direction:column;justify-content:center;padding:140px 32px 80px;color:#fff}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.16) 0%,transparent 55%);pointer-events:none}
 .hero-inner{position:relative;max-width:1240px;margin:0 auto;width:100%}
 .hero-badge{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:rgba(160,129,86,.18);border:1px solid rgba(160,129,86,.5);color:var(--gold-bright);margin-bottom:32px}
@@ -220,6 +221,20 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
 
 </style>
+<script>
+/* Hero rotation: random choice of 4 background photos on each page load */
+(function(){
+  var heroes=[
+    '/images/hero/hero-phuket-aerial-sunset.jpg',
+    '/images/hero/hero-phuket-infinity-pool.jpg',
+    '/images/hero/hero-phuket-villa-architecture.jpg',
+    '/images/hero/hero-phuket-bay-karst.jpg'
+  ];
+  var pick=heroes[Math.floor(Math.random()*heroes.length)];
+  document.documentElement.style.setProperty('--hero-bg',"url('"+pick+"')");
+  var img=new Image(); img.src=pick;
+})();
+</script>
 </head>
 <body>
 
