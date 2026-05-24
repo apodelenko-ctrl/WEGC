@@ -1,5 +1,26 @@
 User-agent: *
 Allow: /
 
-# GitHub Pages sitemap location
+# Block archive and dev preview pages from search index
+Disallow: /_archive-fund-public.html
+Disallow: /_archive-til-homepage.html
+Disallow: /index1.html
+Disallow: /fund.html
+Disallow: /til.html
+Disallow: /til-memo.html
+Disallow: /til-brokerage.html
+Disallow: /wet-trading-house.html
+Disallow: /passport.html
+Disallow: /passport-en.html
+Disallow: /fund-alt.html
+Disallow: /fund-new.html
+Disallow: /fund-redesigned.html
+Disallow: /fund-with-tax-disclaimer.html
+Disallow: /fund.backup.20251017.html
+Disallow: /fund_backup_20251017.html
+Disallow: /fund_backup_20251014_113831.html
+Disallow: /fund_backup_before_text_update.html
+Disallow: /SECRETARY-NOTE-SSIC.md
+Disallow: /INTEGRATION-PROPERTY.md
+
 Sitemap: https://wegc.fund/sitemap.xml
