@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Партнёрская программа для риэлторов · West East Gate Capital</title>
+<meta name="robots" content="noindex, nofollow"/>
+<meta name="description" content="Партнёрская программа WEGC для риэлторов: 50% от нашей комиссии за приведённого клиента, прямые цены застройщика The Title, расчёт в юрисдикции клиента. Каталог объектов и методика расчёта."/>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#0f172a;--body:#334155;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--cream:#fbfaf6;--gold:#a08156;--gold-br:#d6b370;--dark:#0a0e1a;--darker:#06080f;--r:10px;--rl:16px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+h1,h2,h3{font-weight:300;letter-spacing:-.03em;line-height:1.12}
+h1{font-size:clamp(2rem,4.5vw,3.1rem)}
+h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:14px}
+h2 strong,h1 strong{font-weight:600;color:var(--gold)}
+.kick{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+/* header */
+.hd{background:linear-gradient(160deg,var(--dark),var(--darker));color:#fff;padding:64px 0 56px;position:relative;overflow:hidden}
+.hd::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 82% 12%,rgba(160,129,86,.22),transparent 55%);pointer-events:none}
+.hd .wrap{position:relative;z-index:1}
+.hd .brand{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:26px}
+.hd h1{color:#fff;max-width:20ch;margin-bottom:18px}
+.hd p{color:rgba(255,255,255,.8);font-size:18px;font-weight:300;max-width:60ch}
+.hd .badge{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:rgba(214,179,112,.16);border:1px solid rgba(214,179,112,.45);color:var(--gold-br);font-weight:700;font-size:15px;letter-spacing:.02em;padding:12px 20px;border-radius:999px}
+/* sections */
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+section.cream{background:var(--cream)}
+.lead{font-size:17px;color:var(--body);max-width:70ch}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--rl);padding:24px 22px}
+.card .n{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.card h3{font-size:1.15rem;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
+.card p{font-size:14px;color:var(--body);line-height:1.6}
+ol.steps{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:14px;margin-top:24px;max-width:760px}
+ol.steps li{counter-increment:s;position:relative;padding-left:52px;font-size:15.5px;color:var(--body)}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center}
+ol.steps li b{color:var(--ink)}
+/* commission */
+.formula{background:var(--ink);color:#fff;border-radius:var(--rl);padding:28px 30px;margin:24px 0;font-size:17px;line-height:1.7}
+.formula b{color:var(--gold-br)}
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14.5px;background:#fff;border:1px solid var(--line);border-radius:var(--rl);overflow:hidden}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line)}
+th{background:var(--soft);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+tr:last-child td{border-bottom:none}
+td.hl{color:var(--gold);font-weight:700}
+.note{font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:80ch}
+/* objects */
+.obj{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}
+.obj a.row{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:15px 18px;text-decoration:none;transition:all .15s ease}
+.obj a.row:hover{border-color:var(--gold);box-shadow:0 10px 24px -14px rgba(15,23,42,.2)}
+.obj .nm{font-weight:600;color:var(--ink)}
+.obj .lc{font-size:13.5px;color:var(--muted)}
+.obj .pr{font-size:13.5px;color:var(--gold);font-weight:700}
+.obj .go{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap}
+.catlink{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:var(--gold);font-size:15px}
+/* contact */
+.contact{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+.contact a{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:14px 24px;border-radius:var(--r);transition:all .15s ease}
+.contact a.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.contact a:hover{transform:translateY(-1px)}
+.foot{padding:34px 0 48px;font-size:12px;color:var(--muted);line-height:1.7}
+.print{font-size:13px;color:var(--muted);margin-top:10px}
+@media(max-width:760px){.grid3{grid-template-columns:1fr}.obj a.row{grid-template-columns:1fr;gap:4px}.obj .go{display:none}}
+@media print{.hd{background:#0a0e1a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.contact,.print{display:none}section{padding:28px 0}}
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap">
+    <div class="brand">West East Gate Capital · Singapore</div>
+    <h1>Партнёрская программа <strong>для риэлторов</strong>.</h1>
+    <p>Приводите клиентов на недвижимость Пхукета от застройщика The Title — мы ведём всю сделку, вы получаете половину нашей комиссии.</p>
+    <div class="badge">★ 50% от комиссии WEGC за каждого приведённого клиента</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="kick">О партнёрстве</span>
+    <h2>Кто мы и что предлагаем.</h2>
+    <p class="lead">West East Gate Capital (WEST EAST TRADE GROUP PTE. LTD., Сингапур, UEN 202505772C) — официальный агент застройщика <strong>The Title (Rhom Bho Property PLC)</strong> по недвижимости Пхукета. Мы предлагаем риэлторам и агентствам из Москвы и СНГ реферальное партнёрство: вы знакомите нас с клиентом — мы проводим всю сделку (подбор, KYC/AML, документы, расчёты, передача), а по её завершении выплачиваем вам <strong>50% от нашей комиссии</strong>.</p>
+    <div class="grid3">
+      <div class="card"><div class="n">Прямые цены</div><h3>Без наценки</h3><p>Клиент покупает по официальной прайс-цене застройщика. Ваша комиссия — из нашей агентской комиссии, не из кармана клиента.</p></div>
+      <div class="card"><div class="n">Оплата у клиента</div><h3>Расчёт в его юрисдикции</h3><p>Как сингапурская группа с международной инфраструктурой, мы можем организовать расчёт с застройщиком в стране и валюте клиента, где это возможно.</p></div>
+      <div class="card"><div class="n">Сопровождение</div><h3>Всё берём на себя</h3><p>Юр. документация, проверка, договор с застройщиком, расчёты и передача — на стороне WEGC. Вам не нужна лицензия в Таиланде.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cream">
+  <div class="wrap">
+    <span class="kick">Комиссия</span>
+    <h2>Методика расчёта <strong>вашего вознаграждения</strong>.</h2>
+    <p class="lead">Застройщик The Title выплачивает WEGC агентскую комиссию с каждого проданного юнита. Ставка зависит от проекта и подтверждается по каждой сделке. Партнёр получает <strong>50% от чистой комиссии WEGC</strong> по сделке приведённого им клиента.</p>
+    <div class="formula">
+      Вознаграждение партнёра = <b>50%</b> × (комиссия застройщика × стоимость юнита)
+    </div>
+    <p style="font-weight:600;color:var(--ink)">Пример расчёта (иллюстрация при ставке застройщика 5%):</p>
+    <table>
+      <thead><tr><th>Стоимость юнита</th><th>Комиссия WEGC (пример 5%)</th><th>Доля партнёра (50%)</th></tr></thead>
+      <tbody>
+        <tr><td>5 000 000 THB</td><td>250 000 THB</td><td class="hl">125 000 THB</td></tr>
+        <tr><td>10 000 000 THB</td><td>500 000 THB</td><td class="hl">250 000 THB</td></tr>
+        <tr><td>28 200 000 THB</td><td>1 410 000 THB</td><td class="hl">705 000 THB</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Ставка 5% приведена исключительно для иллюстрации механики расчёта. Фактическая комиссия застройщика отличается по проектам и фиксируется по каждой конкретной сделке — точную сумму вашего вознаграждения подтверждаем до подписания клиентом. Выплата производится после получения WEGC комиссии от застройщика (как правило, при передаче/завершении сделки), в удобной партнёру валюте и юрисдикции, по реферальному соглашению. Это B2B-партнёрство; WEGC не является банком или лицензированной платёжной организацией.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kick">Процесс</span>
+    <h2>Как это работает.</h2>
+    <ol class="steps">
+      <li><b>Регистрация лида.</b> Вы присылаете контакт клиента и интересующий объект — мы фиксируем лид за вами (защита от двойной комиссии).</li>
+      <li><b>Работа с клиентом.</b> WEGC проводит подбор, презентацию, KYC/AML и согласование условий с застройщиком.</li>
+      <li><b>Сделка.</b> Резервирование → договор купли-продажи / аренды → поэтапные платежи → передача. Всю документацию и расчёты ведём мы.</li>
+      <li><b>Выплата.</b> После получения комиссии от застройщика выплачиваем вам 50% — в вашей валюте и юрисдикции.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="cream">
+  <div class="wrap">
+    <span class="kick">Каталог</span>
+    <h2>Объекты для предложения клиентам.</h2>
+    <p class="lead">Все проекты — застройщик The Title (Rhom Bho Property). Ссылки ведут на паспорта объектов с описанием, ценами, планировками и инфраструктурой.</p>
+    <div class="obj">
+      <a class="row" href="https://wegc.fund/projects/casa-de-monte.html" target="_blank" rel="noopener"><span class="nm">Casa de Monte</span><span class="lc">Кох Кео · виллы с бассейном</span><span class="pr">от 28,2 млн THB</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-title-vivana.html" target="_blank" rel="noopener"><span class="nm">The Title Vivana</span><span class="lc">Камала · кондо</span><span class="pr">от ~3,75 млн THB</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-title-sierra.html" target="_blank" rel="noopener"><span class="nm">The Title Sierra</span><span class="lc">Банг Тао · кондо</span><span class="pr">от 2,87 млн THB</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-olive.html" target="_blank" rel="noopener"><span class="nm">The Olive</span><span class="lc">Най Янг · кондо</span><span class="pr">от 4,99 млн THB</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-title-balcony.html" target="_blank" rel="noopener"><span class="nm">The Title Balcony</span><span class="lc">Най Янг · кондо у пляжа</span><span class="pr">по запросу</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-title-biancana.html" target="_blank" rel="noopener"><span class="nm">The Title Biancana</span><span class="lc">Сурин</span><span class="pr">по запросу</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-modeva.html" target="_blank" rel="noopener"><span class="nm">The Modeva</span><span class="lc">Банг Тао</span><span class="pr">по запросу</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-title-artrio.html" target="_blank" rel="noopener"><span class="nm">The Title Artrio</span><span class="lc">Банг Тао</span><span class="pr">по запросу</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-title-katabello.html" target="_blank" rel="noopener"><span class="nm">The Title Katabello</span><span class="lc">Ката</span><span class="pr">по запросу</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/the-title-adora.html" target="_blank" rel="noopener"><span class="nm">The Title Adora</span><span class="lc">Раваи</span><span class="pr">по запросу</span><span class="go">Открыть →</span></a>
+      <a class="row" href="https://wegc.fund/projects/title-vivi.html" target="_blank" rel="noopener"><span class="nm">Title Vivi</span><span class="lc">Банг Тао · кондо</span><span class="pr">по запросу</span><span class="go">Открыть →</span></a>
+    </div>
+    <a class="catlink" href="https://wegc.fund/wet-agency.html#catalog" target="_blank" rel="noopener">Полный каталог на сайте →</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kick">Связаться</span>
+    <h2>Готовы начать?</h2>
+    <p class="lead">Напишите нам — пришлём реферальное соглашение и поможем оформить первого клиента.</p>
+    <div class="contact">
+      <a href="mailto:property@wegc.fund?subject=Партнёрство%20риэлтор">property@wegc.fund</a>
+      <a class="alt" href="https://wa.me/66821492172" target="_blank" rel="noopener">WhatsApp · +66 82 149 2172</a>
+    </div>
+    <p class="print">Чтобы сохранить как PDF: Cmd/Ctrl + P → «Сохранить как PDF».</p>
+  </div>
+</section>
+
+<div class="foot">
+  <div class="wrap">
+    © 2026 WEST EAST TRADE GROUP PTE. LTD. · Singapore · UEN 202505772C. Документ предназначен для риэлторов-партнёров и носит информационный характер; не является публичной офертой. Условия партнёрства, ставки и порядок выплат фиксируются в реферальном соглашении. WEGC — официальный агент застройщика, не банк и не лицензированная платёжная организация; не оказывает услуги денежных переводов. Сделки проходят KYC/AML и проводятся в соответствии с применимым правом.
+  </div>
+</div>
+
+</body>
+</html>

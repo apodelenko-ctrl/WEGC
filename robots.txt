@@ -20,6 +20,7 @@ Disallow: /fund.backup.20251017.html
 Disallow: /fund_backup_20251017.html
 Disallow: /fund_backup_20251014_113831.html
 Disallow: /fund_backup_before_text_update.html
+Disallow: /partners-ru.html
 Disallow: /SECRETARY-NOTE-SSIC.md
 Disallow: /INTEGRATION-PROPERTY.md
 
