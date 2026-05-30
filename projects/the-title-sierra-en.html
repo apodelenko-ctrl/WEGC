@@ -42,7 +42,7 @@
 .lang-sw-a.active{background:#d6b370;color:#0a0e1a}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
 .topbar-actions{display:flex;align-items:center;gap:10px}
-.p-hero-grad{background:linear-gradient(120deg,#0a0e1a 0%,#0d1424 55%,#06080f 100%)}
+.p-hero-grad{background:linear-gradient(180deg,rgba(6,8,15,.55) 0%,rgba(6,8,15,.35) 50%,rgba(6,8,15,.85) 100%),url("/images/projects/sierra/facade.jpg") center/cover no-repeat,#0a0e1a}
 .p-hero-grad::after{background:radial-gradient(circle at 80% 20%,rgba(160,129,86,.18) 0%,transparent 55%)!important}
 /* photo placeholders */
 .ph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px}
@@ -140,7 +140,14 @@
 <section class="s">
   <div class="container">
     <div class="s-head"><span class="kicker">Visualisation</span><h2>Project gallery.</h2></div>
-    <div class="ph-grid"><figure class="ph-fig"><span class="ph-label">Exterior render</span><img src="" alt="The Title Sierra — Exterior render" loading="lazy"/></figure><figure class="ph-fig"><span class="ph-label">Pool & facilities</span><img src="" alt="The Title Sierra — Pool & facilities" loading="lazy"/></figure><figure class="ph-fig"><span class="ph-label">Interior render</span><img src="" alt="The Title Sierra — Interior render" loading="lazy"/></figure></div>
+    <div class="js-gallery" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px">
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/sierra/facade.jpg" alt="The Title Sierra — entrance" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/sierra/rooftop-pool.jpg" alt="The Title Sierra — rooftop pool" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/sierra/aerial.jpg" alt="The Title Sierra — aerial view" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/sierra/surroundings.jpg" alt="The Title Sierra — facade" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/sierra/living.jpg" alt="The Title Sierra — living area" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/sierra/bedroom.jpg" alt="The Title Sierra — bedroom" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
+    </div>
   </div>
 </section>
 
