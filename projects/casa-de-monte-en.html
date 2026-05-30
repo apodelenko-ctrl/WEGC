@@ -26,7 +26,49 @@
 #topbar.solid .lang-sw-a{color:#64748b}
 .lang-sw-a.active{background:#d6b370;color:#0a0e1a}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
-.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}.p-hero-grad{background:linear-gradient(180deg,rgba(6,8,15,.55) 0%,rgba(6,8,15,.35) 50%,rgba(6,8,15,.85) 100%),url("/images/projects/casademonte-hero.jpg") center/cover no-repeat,#0a0e1a}</style>
+.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}.p-hero-grad{background:linear-gradient(180deg,rgba(6,8,15,.55) 0%,rgba(6,8,15,.35) 50%,rgba(6,8,15,.85) 100%),url("/images/projects/casademonte-hero.jpg") center/cover no-repeat,#0a0e1a}
+/* Pricing summary */
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:44px}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 32px;position:relative;overflow:hidden}
+.price-card.featured{background:linear-gradient(180deg,#0a0e1a,#06080f);border-color:#1f2937;color:#fff}
+.price-card.featured::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 0%,rgba(160,129,86,.22) 0%,transparent 60%);pointer-events:none}
+.price-card .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px;position:relative}
+.price-card.featured .l{color:var(--gold-bright)}
+.price-card .v{font-size:2.1rem;font-weight:600;letter-spacing:-.03em;color:var(--ink);line-height:1.05;position:relative}
+.price-card.featured .v{color:#fff}
+.price-card .sub{font-size:13px;color:var(--muted);margin-top:8px;position:relative}
+.price-card.featured .sub{color:rgba(255,255,255,.62)}
+/* Floor plan tabs */
+.fp-tabs{display:flex;gap:8px;margin-bottom:26px;flex-wrap:wrap}
+.fp-tab{font-family:inherit;font-size:13px;font-weight:600;letter-spacing:.03em;padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:all .15s ease}
+.fp-tab:hover{border-color:#cbd5e1;color:var(--ink)}
+.fp-tab.active{background:var(--gold);border-color:var(--gold);color:#fff}
+.fp-panel{display:none;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+.fp-panel.active{display:grid}
+.fp-figure{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);background:var(--bg-soft);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
+.fp-figure img{width:100%;height:100%;object-fit:cover}
+.fp-figure .ph{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--muted);text-align:center;padding:24px}
+.fp-figure .ph svg{opacity:.35}
+.fp-figure .ph span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.fp-info h3{font-size:1.5rem;font-weight:500;margin-bottom:6px}
+.fp-info .fp-price{font-size:1.05rem;font-weight:700;color:var(--gold);margin-bottom:18px;letter-spacing:-.01em}
+.fp-specs{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.fp-specs .row{display:flex;justify-content:space-between;gap:16px;padding:13px 16px;border-bottom:1px solid var(--line-soft);font-size:14px}
+.fp-specs .row:last-child{border-bottom:none}
+.fp-specs .row .k{color:var(--muted);font-weight:500}
+.fp-specs .row .val{color:var(--ink);font-weight:600}
+/* Payment timeline */
+.pay-timeline{border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:#fff}
+.pay-step{display:grid;grid-template-columns:42px 1fr auto;gap:18px;align-items:center;padding:18px 26px;border-bottom:1px solid var(--line-soft)}
+.pay-step:last-child{border-bottom:none}
+.pay-step .n{width:34px;height:34px;border-radius:50%;background:var(--bg-cream-2);color:var(--gold);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.pay-step.final .n{background:var(--gold);color:#fff}
+.pay-step .lbl{font-size:15px;font-weight:600;color:var(--ink)}
+.pay-step .lbl small{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:3px;line-height:1.5}
+.pay-step .pct{font-size:1.25rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;white-space:nowrap}
+.pay-note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.65;max-width:72ch}
+@media(max-width:980px){.fp-panel.active{grid-template-columns:1fr;gap:24px}}
+@media(max-width:640px){.price-grid{grid-template-columns:1fr}.pay-step{grid-template-columns:34px 1fr auto;gap:12px;padding:16px 18px}.pay-step .pct{font-size:1.05rem}.fp-tab{flex:1;text-align:center;padding:11px 14px}}</style>
 </head>
 <body>
 
@@ -61,18 +103,18 @@
     <a class="p-hero-back" href="/wet-agency-en.html#catalog">← Back to catalog</a>
     <div class="p-hero-tags">
       <span class="p-hero-tag gold">Leasehold / Freehold villa</span>
-      <span class="p-hero-tag">Phuket · inland villa community</span>
-      <span class="p-hero-tag">ETA 2029 Q1</span>
+      <span class="p-hero-tag">Koh Kaew, Phuket</span>
+      <span class="p-hero-tag">ETA Jul 2029</span>
     </div>
-    <h1>Casa de Monte — <strong>Phuket inland</strong>.</h1>
-    <p class="p-hero-sub">Private 37-villa community in a quiet inland part of Phuket, 13.5 km from Patong. 3- and 4-bedroom villas with 307–439 m² built area, single- and two-storey layouts. Italian-style architecture, dedicated infrastructure, professional management. Completion Q1 2029.</p>
+    <h1>Casa de Monte — <strong>Koh Kaew, Phuket</strong>.</h1>
+    <p class="p-hero-sub">Private 36-villa pool community in Koh Kaew, a quiet inland part of Phuket. 3- and 4-bedroom pool villas with 297–450 m² built area, single- and two-storey layouts. Italian-style architecture, dedicated infrastructure, professional management. Completion July 2029.</p>
     <div class="p-hero-meta">
       <div class="p-hero-meta-item"><div class="v">Leasehold / Freehold villa</div><div class="l">Tenure</div></div>
-      <div class="p-hero-meta-item"><div class="v">2029 Q1</div><div class="l">Completion</div></div>
-      <div class="p-hero-meta-item"><div class="v">37 villas</div><div class="l">Total inventory</div></div>
+      <div class="p-hero-meta-item"><div class="v">Jul 2029</div><div class="l">Completion</div></div>
+      <div class="p-hero-meta-item"><div class="v">36 villas</div><div class="l">Total inventory</div></div>
       <div class="p-hero-meta-item"><div class="v">3–4 bed</div><div class="l">Layouts</div></div>
-      <div class="p-hero-meta-item"><div class="v">307–439 m²</div><div class="l">Built area</div></div>
-      <div class="p-hero-meta-item"><div class="v">Rhom Bho · The Title</div><div class="l">Developer</div></div>
+      <div class="p-hero-meta-item"><div class="v">297–450 m²</div><div class="l">Built area</div></div>
+      <div class="p-hero-meta-item"><div class="v">The Title</div><div class="l">Developer</div></div>
     </div>
   <p style="font-size:11px;color:rgba(255,255,255,.55);max-width:64ch;line-height:1.55;margin-top:18px;font-weight:300">Indicative yield bands are general guidance based on observed performance in the relevant Phuket micro-market. Not a forecast, not a commitment, not a guarantee. Specific economics depend on the project, developer terms, rental performance, taxes, fees and market conditions.</p>
     </div>
@@ -86,14 +128,14 @@
     </div>
     <div class="over-grid">
       <div class="over-text">
-        <p><strong>Casa de Monte</strong> is a private villa community of 37 homes in a quiet inland section of Phuket, deliberately set away from active tourist zones (≈ 13.5 km from Patong Beach). The territory is delivered with consistent Italian-style architecture and a unified landscape concept.</p>
-        <p>Layouts are 3- and 4-bedroom, ranging from 307 to 439 m² built area, in single- and two-storey configurations. The project is positioned for personal residence as the primary use case, with rental yield as a secondary path supported by the management company.</p>
+        <p><strong>Casa de Monte</strong> is a private community of 36 exclusive pool villas in Koh Kaew, a quiet inland section of Phuket, deliberately set away from active tourist zones. The territory is delivered with consistent Italian-style architecture and a unified landscape concept by developer <strong>The Title</strong>.</p>
+        <p>Layouts are 3- and 4-bedroom pool villas, ranging from 297 to 450 m² built area, in single- and two-storey configurations. The project is positioned for personal residence as the primary use case, with rental yield as a secondary path supported by the management company.</p>
         <p>On-site infrastructure includes a swimming pool and children's pool, fitness area, sauna, lobby with public spaces, dedicated coworking, kids' room and playroom, plus parking. Management is performed under a single operating standard for the entire community to preserve common appearance and asset quality.</p>
-        <p>Tenure: registered leasehold for foreign buyers in standard structures, with freehold paths available subject to project documentation and counsel review. Completion Q1 2029.</p>
+        <p>Tenure: registered leasehold for foreign buyers in standard structures, with freehold paths available subject to project documentation and counsel review. Completion July 2029.</p>
       </div>
       <div class="over-side">
         <div class="over-card"><div class="l">Tenure</div><div class="v">Leasehold / Freehold villa</div><p>Subject to structure and counsel review.</p></div>
-        <div class="over-card"><div class="l">Concept</div><div class="v">Private villa community</div><p>37 homes, single managed standard.</p></div>
+        <div class="over-card"><div class="l">Concept</div><div class="v">Private pool-villa community</div><p>36 villas, single managed standard.</p></div>
         <div class="over-card"><div class="l">Use case</div><div class="v">Personal residence first</div><p>Rental as secondary path.</p></div>
       </div>
     </div>
@@ -108,16 +150,109 @@
     </div>
     <div class="spec-grid">
       <div class="spec-row"><span class="l">Project name</span><span class="v">Casa de Monte</span></div>
-      <div class="spec-row"><span class="l">Developer</span><span class="v">Rhom Bho · The Title</span></div>
-      <div class="spec-row"><span class="l">Location</span><span class="v">Phuket, inland community (≈ 13.5 km from Patong)</span></div>
+      <div class="spec-row"><span class="l">Developer</span><span class="v">The Title</span></div>
+      <div class="spec-row"><span class="l">Location</span><span class="v">Koh Kaew, Phuket</span></div>
       <div class="spec-row"><span class="l">Tenure</span><span class="v">Leasehold / Freehold (per structure)</span></div>
-      <div class="spec-row"><span class="l">Completion (ETA)</span><span class="v">Q1 2029</span></div>
-      <div class="spec-row"><span class="l">Inventory</span><span class="v">37 villas</span></div>
-      <div class="spec-row"><span class="l">Layouts</span><span class="v">3-bed (307–310 m²) · 4-bed (429–435 m²)</span></div>
+      <div class="spec-row"><span class="l">Completion (ETA)</span><span class="v">July 2029</span></div>
+      <div class="spec-row"><span class="l">Inventory</span><span class="v">36 exclusive pool villas</span></div>
+      <div class="spec-row"><span class="l">Villa sizes</span><span class="v">297–450 m²</span></div>
+      <div class="spec-row"><span class="l">Layouts</span><span class="v">3-bedroom &amp; 4-bedroom pool villas</span></div>
       <div class="spec-row"><span class="l">Floors</span><span class="v">Single- or two-storey</span></div>
+      <div class="spec-row"><span class="l">Price range</span><span class="v">28.2M – 47.2M THB</span></div>
       <div class="spec-row"><span class="l">Indicative yield band</span><span class="v">5–7% per annum</span></div>
       <div class="spec-row"><span class="l">Settlement currency</span><span class="v">USD · EUR · THB</span></div>
     </div>
+  </div>
+</section>
+
+<section class="s" id="pricing">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Pricing &amp; floor plans</span>
+      <h2>Indicative pricing and villa layouts.</h2>
+      <p>Pool villas across two layouts, set by developer The Title. Pricing is indicative and subject to availability, unit selection and final developer confirmation — not an offer.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="l">Starting from</div>
+        <div class="v">28.2M THB</div>
+        <div class="sub">approx. $850,000 · 3-Bedroom Pool Villa</div>
+      </div>
+      <div class="price-card featured">
+        <div class="l">Up to</div>
+        <div class="v">47.2M THB</div>
+        <div class="sub">4-Bedroom Pool Villa · top configuration</div>
+      </div>
+    </div>
+
+    <div class="fp-tabs" role="tablist" aria-label="Floor plans">
+      <button class="fp-tab active" data-fp="fp3" role="tab" aria-selected="true">3-Bedroom Pool Villa</button>
+      <button class="fp-tab" data-fp="fp4" role="tab" aria-selected="false">4-Bedroom Pool Villa</button>
+    </div>
+
+    <div class="fp-panel active" id="fp3" role="tabpanel">
+      <figure class="fp-figure" style="margin:0">
+        <!-- When the floor plan render is ready, set the src below and add style="display:block" -->
+        <img src="" alt="Casa de Monte — 3-Bedroom Pool Villa floor plan" style="display:none" onload="if(this.getAttribute('src')){this.style.display='block';var p=this.parentNode.querySelector('.ph');if(p)p.style.display='none';}"/>
+        <div class="ph">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h7M10 9V3M10 14h11M14 14v7"/></svg>
+          <span>Floor plan · 3-Bedroom</span>
+        </div>
+      </figure>
+      <div class="fp-info">
+        <h3>3-Bedroom Pool Villa</h3>
+        <div class="fp-price">From 28.2M THB <span style="color:var(--muted);font-weight:400;font-size:13px">· approx. $850,000</span></div>
+        <div class="fp-specs">
+          <div class="row"><span class="k">Bedrooms</span><span class="val">3</span></div>
+          <div class="row"><span class="k">Built area</span><span class="val">from 297 m²</span></div>
+          <div class="row"><span class="k">Private pool</span><span class="val">Yes</span></div>
+          <div class="row"><span class="k">Storeys</span><span class="val">Single / two-storey</span></div>
+          <div class="row"><span class="k">Tenure</span><span class="val">Leasehold / Freehold</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fp-panel" id="fp4" role="tabpanel">
+      <figure class="fp-figure" style="margin:0">
+        <!-- When the floor plan render is ready, set the src below and add style="display:block" -->
+        <img src="" alt="Casa de Monte — 4-Bedroom Pool Villa floor plan" style="display:none" onload="if(this.getAttribute('src')){this.style.display='block';var p=this.parentNode.querySelector('.ph');if(p)p.style.display='none';}"/>
+        <div class="ph">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h7M10 9V3M10 14h11M14 14v7"/></svg>
+          <span>Floor plan · 4-Bedroom</span>
+        </div>
+      </figure>
+      <div class="fp-info">
+        <h3>4-Bedroom Pool Villa</h3>
+        <div class="fp-price">Up to 47.2M THB</div>
+        <div class="fp-specs">
+          <div class="row"><span class="k">Bedrooms</span><span class="val">4</span></div>
+          <div class="row"><span class="k">Built area</span><span class="val">up to 450 m²</span></div>
+          <div class="row"><span class="k">Private pool</span><span class="val">Yes</span></div>
+          <div class="row"><span class="k">Storeys</span><span class="val">Single / two-storey</span></div>
+          <div class="row"><span class="k">Tenure</span><span class="val">Leasehold / Freehold</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s cream" id="payment">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Payment plan</span>
+      <h2>Construction-linked payment schedule.</h2>
+      <p>Staged payments tied to construction milestones, per the developer The Title standard schedule. Indicative — final terms are confirmed in the reservation agreement and sale &amp; purchase agreement.</p>
+    </div>
+    <div class="pay-timeline">
+      <div class="pay-step"><div class="n">1</div><div class="lbl">Reservation Deposit<small>On reservation — credited against the purchase price</small></div><div class="pct">300–500K THB</div></div>
+      <div class="pay-step"><div class="n">2</div><div class="lbl">Contract Signing<small>On execution of the sale &amp; purchase agreement</small></div><div class="pct">25%</div></div>
+      <div class="pay-step"><div class="n">3</div><div class="lbl">Foundation Completion</div><div class="pct">15%</div></div>
+      <div class="pay-step"><div class="n">4</div><div class="lbl">Main Structure &amp; Roof</div><div class="pct">15%</div></div>
+      <div class="pay-step"><div class="n">5</div><div class="lbl">Wall Construction</div><div class="pct">15%</div></div>
+      <div class="pay-step"><div class="n">6</div><div class="lbl">Floors, Windows &amp; Paint</div><div class="pct">15%</div></div>
+      <div class="pay-step final"><div class="n">7</div><div class="lbl">Handover / Transfer of Ownership<small>Keys handover and registration of title</small></div><div class="pct">15%</div></div>
+    </div>
+    <p class="pay-note">Percentages are of the total villa price. The reservation deposit is credited against the first instalment. Schedule is indicative and confirmed in the reservation agreement and sale &amp; purchase agreement; subject to developer terms, applicable taxes and fees. Not an offer.</p>
   </div>
 </section>
 
@@ -204,6 +339,21 @@
 <script>
 (function(){const bar=document.getElementById('topbar');if(!bar)return;const f=()=>{if(window.scrollY>60)bar.classList.add('solid');else bar.classList.remove('solid')};window.addEventListener('scroll',f,{passive:true});f();})();
 document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('page-ready'));
+/* Floor-plan tabs */
+(function(){
+  var tabs=document.querySelectorAll('.fp-tab');
+  if(!tabs.length)return;
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      var id=t.getAttribute('data-fp');
+      document.querySelectorAll('.fp-tab').forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false');});
+      document.querySelectorAll('.fp-panel').forEach(function(x){x.classList.remove('active');});
+      t.classList.add('active');t.setAttribute('aria-selected','true');
+      var panel=document.getElementById(id);
+      if(panel)panel.classList.add('active');
+    });
+  });
+})();
 </script>
 </body>
 </html>
