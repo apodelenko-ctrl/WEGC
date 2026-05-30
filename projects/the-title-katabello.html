@@ -28,6 +28,8 @@
 .lang-sw-a.active{background:#d6b370;color:#0a0e1a}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
 .lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 </head>
 <body>
 
@@ -123,6 +125,8 @@
   <div class="container">
     <div class="s-head"><span class="kicker">Локация</span><h2>Ката — в шаге от пляжа.</h2><p>The Title Katabello — рядом с пляжем Ката на западном побережье, недалеко Карон и Патонг.</p></div>
     <div class="loc-list"><div class="loc-row"><span class="p">Пляж Ката</span><span class="d">≈ 5 мин</span></div><div class="loc-row"><span class="p">Пляж Карон</span><span class="d">≈ 10 мин</span></div><div class="loc-row"><span class="p">Патонг</span><span class="d">≈ 20 мин</span></div><div class="loc-row"><span class="p">Большой Будда</span><span class="d">≈ 20 мин</span></div><div class="loc-row"><span class="p">Пхукет-Таун</span><span class="d">≈ 30 мин</span></div><div class="loc-row"><span class="p">Аэропорт Пхукета</span><span class="d">≈ 45 мин</span></div></div>
+    <div id="pmap" class="loc-map"></div>
+    <p class="loc-map-note">Карта показывает район проекта (приблизительно).</p>
   </div>
 </section>
 
@@ -262,5 +266,8 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
 </script>
 <script src="/chat-widget.js" defer></script>
 <script src="/promo-toast.js" defer></script>
+<script>
+(function(){var el;function init(){if(!window.L){return setTimeout(init,200);}el=document.getElementById("pmap");if(!el||el._m)return;el._m=1;var m=L.map(el,{scrollWheelZoom:false}).setView([7.821,98.298],14);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"\u00a9 OpenStreetMap"}).addTo(m);var ic=L.divIcon({className:"wegc-pin",html:"<span class=\"wegc-pin-dot\"></span>",iconSize:[22,22],iconAnchor:[11,11]});L.marker([7.821,98.298],{icon:ic}).addTo(m).bindTooltip('The Title Katabello · Ката',{className:"wegc-tip",direction:"top",offset:[0,-8]});}if(document.readyState!=="loading")init();else document.addEventListener("DOMContentLoaded",init);})();
+</script>
 </body>
 </html>

@@ -53,6 +53,8 @@
 /* investment block CTA */
 .invest-cta{margin-top:24px;position:relative;z-index:1}
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 </head><style>
 .faq-list{display:flex;flex-direction:column;gap:12px;max-width:880px}
 .faq-item{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;overflow:hidden}
@@ -141,6 +143,8 @@
   <div class="container">
     <div class="s-head"><span class="kicker">Локация</span><h2>Камала — пляж западного побережья, между Патонгом и Банг Тао.</h2><p>The Title Vivana расположен в Камале на западном побережье Пхукета — сбалансированный пляжный район примерно в 1,5 км от пляжа Камала, между энергией Патонга и лоском Банг Тао.</p></div>
     <div class="loc-list"><div class="loc-row"><span class="p">Пляж Камала</span><span class="d">≈ 1,5 км</span></div><div class="loc-row"><span class="p">Патонг</span><span class="d">≈ 15 мин</span></div><div class="loc-row"><span class="p">Банг Тао / Laguna</span><span class="d">≈ 15 мин</span></div><div class="loc-row"><span class="p">Central Phuket (Floresta)</span><span class="d">≈ 25 мин</span></div><div class="loc-row"><span class="p">Аэропорт Пхукета</span><span class="d">≈ 30 км</span></div><div class="loc-row"><span class="p">Пхукет-Таун</span><span class="d">≈ 30 мин</span></div></div>
+    <div id="pmap" class="loc-map"></div>
+    <p class="loc-map-note">Карта показывает район проекта (приблизительно).</p>
   </div>
 </section>
 
@@ -266,5 +270,8 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
 </script>
 <script src="/chat-widget.js" defer></script>
 <script src="/promo-toast.js" defer></script>
+<script>
+(function(){var el;function init(){if(!window.L){return setTimeout(init,200);}el=document.getElementById("pmap");if(!el||el._m)return;el._m=1;var m=L.map(el,{scrollWheelZoom:false}).setView([7.9545,98.2845],14);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"\u00a9 OpenStreetMap"}).addTo(m);var ic=L.divIcon({className:"wegc-pin",html:"<span class=\"wegc-pin-dot\"></span>",iconSize:[22,22],iconAnchor:[11,11]});L.marker([7.9545,98.2845],{icon:ic}).addTo(m).bindTooltip('The Title Vivana · Камала',{className:"wegc-tip",direction:"top",offset:[0,-8]});}if(document.readyState!=="loading")init();else document.addEventListener("DOMContentLoaded",init);})();
+</script>
 </body>
 </html>

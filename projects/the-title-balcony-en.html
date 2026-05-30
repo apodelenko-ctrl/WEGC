@@ -27,6 +27,8 @@
 .lang-sw-a.active{background:#d6b370;color:#0a0e1a}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
 .lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}.p-hero-grad{background:linear-gradient(180deg,rgba(6,8,15,.55) 0%,rgba(6,8,15,.35) 50%,rgba(6,8,15,.85) 100%),url("/images/projects/balcony-hero.jpg") center/cover no-repeat,#0a0e1a}</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 </head>
 <body>
 
@@ -141,6 +143,8 @@
   <div class="container">
     <div class="s-head"><span class="kicker">Location</span><h2>Nai Yang — quiet northern coast by the airport.</h2><p>The Title Balcony sits about 130 m from Nai Yang Beach, inside the calm Sirinat National Park corridor, minutes from the airport.</p></div>
     <div class="loc-list"><div class="loc-row"><span class="p">Nai Yang Beach</span><span class="d">≈ 130 m</span></div><div class="loc-row"><span class="p">Phuket International Airport</span><span class="d">≈ 10 min</span></div><div class="loc-row"><span class="p">Sirinat National Park</span><span class="d">adjacent</span></div><div class="loc-row"><span class="p">Boat Avenue / Bang Tao</span><span class="d">≈ 20 min</span></div><div class="loc-row"><span class="p">Blue Tree Phuket</span><span class="d">≈ 15 min</span></div><div class="loc-row"><span class="p">Phuket Town</span><span class="d">≈ 35 min</span></div></div>
+    <div id="pmap" class="loc-map"></div>
+    <p class="loc-map-note">Map shows the project area (approximate).</p>
   </div>
 </section>
 
@@ -271,5 +275,8 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
 </script>
 <script src="/chat-widget.js" defer></script>
 <script src="/promo-toast.js" defer></script>
+<script>
+(function(){var el;function init(){if(!window.L){return setTimeout(init,200);}el=document.getElementById("pmap");if(!el||el._m)return;el._m=1;var m=L.map(el,{scrollWheelZoom:false}).setView([8.089,98.299],14);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"\u00a9 OpenStreetMap"}).addTo(m);var ic=L.divIcon({className:"wegc-pin",html:"<span class=\"wegc-pin-dot\"></span>",iconSize:[22,22],iconAnchor:[11,11]});L.marker([8.089,98.299],{icon:ic}).addTo(m).bindTooltip('The Title Balcony · Nai Yang',{className:"wegc-tip",direction:"top",offset:[0,-8]});}if(document.readyState!=="loading")init();else document.addEventListener("DOMContentLoaded",init);})();
+</script>
 </body>
 </html>
