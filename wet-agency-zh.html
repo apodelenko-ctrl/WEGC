@@ -1466,7 +1466,7 @@ document.addEventListener('DOMContentLoaded', function(){
       var fd = new FormData(form);
       var delivered = false;
       // 1) Telegram relay (Cloudflare Worker) — preferred if configured
-      var RELAY = (typeof window!=='undefined' && window.WEGC_RELAY) ? window.WEGC_RELAY : '';
+      var RELAY = (typeof window!=='undefined' && window.WEGC_RELAY) ? window.WEGC_RELAY : 'https://wegc-form-relay.wegc.workers.dev';
       if(RELAY){
         try{
           var obj={}; fd.forEach(function(v,k){ if(k!=='_gotcha') obj[k]=v; });
