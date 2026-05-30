@@ -265,6 +265,22 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 .legal-topbar .lang-sw-a:hover{color:#0f172a;background:#fbfaf6}
 .legal-topbar .lang-sw-a.active{background:#a08156;color:#fff}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
+/* Featured project announcement */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 22px 60px -28px rgba(15,23,42,.32)}
+.feat-img{position:relative;min-height:380px;background:#0a0e1a}
+.feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat-img .ribbon{position:absolute;top:18px;left:18px;background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:6px 13px;border-radius:4px;z-index:1;box-shadow:0 6px 16px rgba(160,129,86,.4)}
+.feat-body{padding:48px 52px;display:flex;flex-direction:column;justify-content:center}
+.feat-body .k{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.feat-body h3{font-size:1.95rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;color:var(--ink)}
+.feat-body h3 strong{font-weight:600}
+.feat-body > p{font-size:15px;color:var(--body);line-height:1.7;margin-bottom:24px;max-width:46ch}
+.feat-stats{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:28px;padding-top:22px;border-top:1px solid var(--line)}
+.feat-stats .v{font-size:1.15rem;font-weight:600;color:var(--ink);letter-spacing:-.02em}
+.feat-stats .l{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.feat-actions{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:880px){.feat{grid-template-columns:1fr}.feat-img{min-height:240px}.feat-body{padding:34px 28px}.feat-body h3{font-size:1.6rem}}
+@media(max-width:640px){.feat-actions{flex-direction:column}.feat-actions .btn{width:100%;justify-content:center}.feat-stats{gap:22px}}
 
 </style>
 <script>
@@ -328,6 +344,32 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       <div class="hero-meta-item"><div class="v">8</div><div class="l">在管普吉岛项目</div></div>
       <div class="hero-meta-item"><div class="v">Private</div><div class="l">仅限非公开配售</div></div>
       <div class="hero-meta-item"><div class="v">符合银行标准</div><div class="l">KYC / AML / PDPA</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT — CASA DE MONTE -->
+<section class="s" style="padding-top:80px;padding-bottom:24px">
+  <div class="container">
+    <div class="feat">
+      <div class="feat-img">
+        <span class="ribbon">精选项目</span>
+        <img src="/images/projects/casademonte-hero.jpg" alt="Casa de Monte — 普吉岛 Koh Kaew 泳池别墅" loading="lazy"/>
+      </div>
+      <div class="feat-body">
+        <div class="k">全新 · 普吉岛房产</div>
+        <h3>Casa de Monte — <strong>Koh Kaew, 普吉岛</strong></h3>
+        <p>由开发商 The Title 打造的 36 栋专属泳池别墅,3–4 居室,建筑面积 297–450 m²。意式建筑风格,坐落于静谧内陆社区,统一物业管理标准。</p>
+        <div class="feat-stats">
+          <div><div class="v">起价 2,820 万泰铢</div><div class="l">参考价格</div></div>
+          <div><div class="v">36 栋别墅</div><div class="l">泳池别墅</div></div>
+          <div><div class="v">2029年7月</div><div class="l">交付</div></div>
+        </div>
+        <div class="feat-actions">
+          <a href="/projects/casa-de-monte.html" class="btn btn-primary">查看项目档案 <span class="arr">→</span></a>
+          <a href="/wet-agency-zh.html#catalog" class="btn btn-secondary">所有普吉岛项目</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
