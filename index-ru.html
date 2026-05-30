@@ -283,6 +283,19 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 .feat-actions{display:flex;gap:12px;flex-wrap:wrap}
 @media(max-width:880px){.feat{grid-template-columns:1fr}.feat-img{min-height:240px}.feat-body{padding:34px 28px}.feat-body h3{font-size:1.6rem}}
 @media(max-width:640px){.feat-actions{flex-direction:column}.feat-actions .btn{width:100%;justify-content:center}.feat-stats{gap:22px}}
+/* Settlement differentiator */
+.settle-wrap{background:linear-gradient(180deg,#0a0e1a,#06080f);border:1px solid #1f2937;border-radius:var(--radius-lg);padding:56px 48px;color:#fff;position:relative;overflow:hidden}
+.settle-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 0%,rgba(160,129,86,.18) 0%,transparent 55%);pointer-events:none}
+.settle-head{max-width:820px;position:relative;z-index:1}
+.settle-head h2{color:#fff;margin-bottom:14px}
+.settle-head h2 strong{color:var(--gold-bright);font-weight:500}
+.settle-head p{color:rgba(255,255,255,.8);font-size:16px;line-height:1.7}
+.settle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:34px;position:relative;z-index:1}
+.settle-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:22px 24px}
+.settle-card .r{font-size:1.05rem;font-weight:600;color:var(--gold-bright);letter-spacing:-.01em;margin-bottom:6px}
+.settle-card .d{font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.55}
+.settle-note{position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,.5);line-height:1.65;margin-top:26px;max-width:84ch}
+@media(max-width:640px){.settle-wrap{padding:38px 22px}}
 
 </style>
 <script>
@@ -417,6 +430,24 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <p>Ограниченный, непубличный формат для частного участия в отобранных real-estate возможностях на Пхукете. Только по запросу, после онбординга, KYC/AML и подписания частной юридической документации. Не публичная оферта; не регулируемый фонд.</p>
         <a href="/private-capital-ru.html" class="more">Страница частного капитала →</a>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- SETTLEMENT DIFFERENTIATOR -->
+<section class="s">
+  <div class="container">
+    <div class="settle-wrap">
+      <div class="settle-head">
+        <span class="kicker" style="color:var(--gold-bright)">Наше отличие</span>
+        <h2>Сингапурская структура — <strong>оплата в вашей юрисдикции</strong>.</h2>
+        <p>При прямой покупке недвижимости — не через фонд — WEGC выступает как назначенный агент застройщика в составе сингапурской группы с международной банковской инфраструктурой. Где это возможно, мы организуем расчёт с застройщиком через счета группы — в вашей валюте и вашей юрисдикции, чтобы вы проводили сделку ближе к дому, а не переводили средства за рубеж самостоятельно.</p>
+      </div>
+      <div class="settle-grid">
+        <div class="settle-card"><div class="r">Россия</div><div class="d">Расчёты на территории РФ.</div></div>
+        <div class="settle-card"><div class="r">Беларусь</div><div class="d">Расчёты через банки Беларуси.</div></div>
+      </div>
+      <p class="settle-note">Средства всегда направляются за выбранный вами объект застройщику по подписанным документам. Любой расчёт проходит онбординг, KYC/AML, проверку источника средств и осуществляется в соответствии с применимым правом. WEGC не является банком или лицензированной платёжной организацией и не оказывает услуги денежных переводов.</p>
     </div>
   </div>
 </section>
