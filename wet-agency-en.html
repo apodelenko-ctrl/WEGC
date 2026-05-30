@@ -237,7 +237,9 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 }
 .cat-filter:hover{border-color:var(--gold);color:var(--ink)}
 .cat-filter.active{border-color:var(--gold);background:var(--gold);color:#fff}
-.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:1100px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+.cat-cover.ph{background:linear-gradient(135deg,#0d1424,#06080f)}.cat-cover img[src=""]{opacity:0}.cat-cover .phl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;z-index:1}
 .cat-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
   display:flex;flex-direction:column;
@@ -724,6 +726,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <button class="cat-filter" type="button" data-filter="bangtao">Bang Tao</button>
         <button class="cat-filter" type="button" data-filter="layan">Layan</button>
         <button class="cat-filter" type="button" data-filter="surin">Surin</button>
+        <button class="cat-filter" type="button" data-filter="kamala">Kamala</button>
         <button class="cat-filter" type="button" data-filter="naiyang">Nai Yang</button>
         <button class="cat-filter" type="button" data-filter="kata">Kata · Karon</button>
         <button class="cat-filter" type="button" data-filter="villa">Villa</button>
@@ -752,6 +755,57 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
           <p class="cat-desc">36 exclusive pool villas with 3–4 bedrooms in Koh Kaew, a quiet inland part of Phuket. From 28.2M THB. Italian-style architecture, single management standard, residence-first focus.</p>
           <div class="cat-actions">
             <a href="/projects/casa-de-monte-en.html">View passport →</a>
+            <a class="muted" href="#contact">Request brochure (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Title Vivana — Kamala -->
+      <article class="cat-card" data-cats="kamala freehold">
+        <a class="cat-cover ph" href="/projects/the-title-vivana-en.html" aria-label="The Title Vivana — Kamala"><span class="phl">Render</span><img src="" alt="The Title Vivana — Kamala" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">New</span><span class="cat-tag">Condo</span><span class="cat-tag">Kamala</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Vivana — Kamala</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">ETA</div><div class="v">Q4 2028</div></div><div class="cat-meta-item"><div class="l">Price</div><div class="v">From ~3.75M THB</div></div></div>
+          <p class="cat-desc">360 fully-furnished apartments ≈ 1.5 km from Kamala Beach. Resort facilities, pet-friendly. Freehold under foreign quota.</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-vivana-en.html">View passport →</a>
+            <a class="muted" href="#contact">Request brochure (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Title Sierra — Bang Tao -->
+      <article class="cat-card" data-cats="bangtao freehold">
+        <a class="cat-cover ph" href="/projects/the-title-sierra-en.html" aria-label="The Title Sierra — Bang Tao"><span class="phl">Render</span><img src="" alt="The Title Sierra — Bang Tao" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">New</span><span class="cat-tag">Condo</span><span class="cat-tag">Bang Tao</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Sierra — Bang Tao</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">ETA</div><div class="v">2028</div></div><div class="cat-meta-item"><div class="l">Price</div><div class="v">From 2.87M THB</div></div></div>
+          <p class="cat-desc">New condominium in the Bang Tao corridor — Laguna, Boat Avenue, Porto de Phuket. One of the most accessible entries into Bang Tao.</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-sierra-en.html">View passport →</a>
+            <a class="muted" href="#contact">Request brochure (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Olive — Nai Yang -->
+      <article class="cat-card" data-cats="naiyang freehold">
+        <a class="cat-cover ph" href="/projects/the-olive-en.html" aria-label="The Olive — Nai Yang"><span class="phl">Render</span><img src="" alt="The Olive — Nai Yang" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">New</span><span class="cat-tag">Condo</span><span class="cat-tag">Nai Yang</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Olive — Nai Yang</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">Tenure</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">ETA</div><div class="v">Oct 2028</div></div><div class="cat-meta-item"><div class="l">Price</div><div class="v">From 4.99M THB</div></div></div>
+          <p class="cat-desc">Beachside Mediterranean condominium ≈ 450 m from Nai Yang Beach, minutes from the airport. 287 units across two 8-storey buildings.</p>
+          <div class="cat-actions">
+            <a href="/projects/the-olive-en.html">View passport →</a>
             <a class="muted" href="#contact">Request brochure (PDF)</a>
           </div>
         </div>

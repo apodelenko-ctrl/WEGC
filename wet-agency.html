@@ -148,7 +148,9 @@ section.s.dark p{color:rgba(255,255,255,.74)}
 .cat-filter{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--muted);padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .15s ease}
 .cat-filter:hover{border-color:var(--gold);color:var(--ink)}
 .cat-filter.active{border-color:var(--gold);background:var(--gold);color:#fff}
-.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:1100px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+.cat-cover.ph{background:linear-gradient(135deg,#0d1424,#06080f)}.cat-cover img[src=""]{opacity:0}.cat-cover .phl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;z-index:1}
 .cat-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .cat-card:hover{transform:translateY(-3px);box-shadow:0 18px 38px -10px rgba(15,23,42,.18);border-color:#d4cfa8}
 .cat-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0f172a}
@@ -531,6 +533,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <button class="cat-filter" type="button" data-filter="bangtao">Bang Tao</button>
         <button class="cat-filter" type="button" data-filter="layan">Layan</button>
         <button class="cat-filter" type="button" data-filter="surin">Surin</button>
+        <button class="cat-filter" type="button" data-filter="kamala">Камала</button>
         <button class="cat-filter" type="button" data-filter="naiyang">Nai Yang</button>
         <button class="cat-filter" type="button" data-filter="kata">Kata · Karon</button>
         <button class="cat-filter" type="button" data-filter="villa">Villa</button>
@@ -559,6 +562,57 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
           <p class="cat-desc">36 эксклюзивных вилл с бассейном, 3–4 спальни, в Кох Кео — спокойной внутренней части Пхукета. От 28,2 млн THB. Архитектура в итальянском стиле, единый стандарт управления, фокус на резиденцию.</p>
           <div class="cat-actions">
             <a href="/projects/casa-de-monte.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Title Vivana — Камала -->
+      <article class="cat-card" data-cats="kamala freehold">
+        <a class="cat-cover ph" href="/projects/the-title-vivana.html" aria-label="The Title Vivana — Камала"><span class="phl">Render</span><img src="" alt="The Title Vivana — Камала" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">Новинка</span><span class="cat-tag">Кондо</span><span class="cat-tag">Камала</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Vivana — Камала</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">Структура</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">Сдача</div><div class="v">Q4 2028</div></div><div class="cat-meta-item"><div class="l">Цена</div><div class="v">От ~3,75 млн THB</div></div></div>
+          <p class="cat-desc">360 меблированных апартаментов ≈ 1,5 км от пляжа Камала. Курортная инфраструктура, pet-friendly. Freehold по квоте для иностранцев.</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-vivana.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Title Sierra — Банг Тао -->
+      <article class="cat-card" data-cats="bangtao freehold">
+        <a class="cat-cover ph" href="/projects/the-title-sierra.html" aria-label="The Title Sierra — Банг Тао"><span class="phl">Render</span><img src="" alt="The Title Sierra — Банг Тао" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">Новинка</span><span class="cat-tag">Кондо</span><span class="cat-tag">Банг Тао</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Sierra — Банг Тао</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">Структура</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">Сдача</div><div class="v">2028</div></div><div class="cat-meta-item"><div class="l">Цена</div><div class="v">От 2,87 млн THB</div></div></div>
+          <p class="cat-desc">Новый кондоминиум в районе Банг Тао — Laguna, Boat Avenue, Porto de Phuket. Один из самых доступных входов в Банг Тао.</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-sierra.html">Открыть паспорт →</a>
+            <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Olive — Най Янг -->
+      <article class="cat-card" data-cats="naiyang freehold">
+        <a class="cat-cover ph" href="/projects/the-olive.html" aria-label="The Olive — Най Янг"><span class="phl">Render</span><img src="" alt="The Olive — Най Янг" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">Новинка</span><span class="cat-tag">Кондо</span><span class="cat-tag">Най Янг</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Olive — Най Янг</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">Структура</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">Сдача</div><div class="v">Окт 2028</div></div><div class="cat-meta-item"><div class="l">Цена</div><div class="v">От 4,99 млн THB</div></div></div>
+          <p class="cat-desc">Прибрежный средиземноморский кондоминиум ≈ 450 м от пляжа Най Янг, минуты до аэропорта. 287 юнитов в двух 8-этажных корпусах.</p>
+          <div class="cat-actions">
+            <a href="/projects/the-olive.html">Открыть паспорт →</a>
             <a class="muted" href="#contact">Запросить брошюру (PDF)</a>
           </div>
         </div>

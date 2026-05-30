@@ -237,7 +237,9 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 }
 .cat-filter:hover{border-color:var(--gold);color:var(--ink)}
 .cat-filter.active{border-color:var(--gold);background:var(--gold);color:#fff}
-.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:1100px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+.cat-cover.ph{background:linear-gradient(135deg,#0d1424,#06080f)}.cat-cover img[src=""]{opacity:0}.cat-cover .phl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;z-index:1}
 .cat-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
   display:flex;flex-direction:column;
@@ -724,6 +726,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <button class="cat-filter" type="button" data-filter="bangtao">Bang Tao</button>
         <button class="cat-filter" type="button" data-filter="layan">Layan</button>
         <button class="cat-filter" type="button" data-filter="surin">Surin</button>
+        <button class="cat-filter" type="button" data-filter="kamala">卡马拉</button>
         <button class="cat-filter" type="button" data-filter="naiyang">Nai Yang</button>
         <button class="cat-filter" type="button" data-filter="kata">Kata · Karon</button>
         <button class="cat-filter" type="button" data-filter="villa">别墅</button>
@@ -752,6 +755,57 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
           <p class="cat-desc">位于普吉岛 Koh Kaew 静谧内陆区域的 36 栋专属泳池别墅,3–4 居室。起价 2,820 万泰铢。意式建筑风格,统一物业管理标准,以自住为核心。</p>
           <div class="cat-actions">
             <a href="/projects/casa-de-monte.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Title Vivana — 卡马拉 -->
+      <article class="cat-card" data-cats="kamala freehold">
+        <a class="cat-cover ph" href="/projects/the-title-vivana.html" aria-label="The Title Vivana — 卡马拉"><span class="phl">Render</span><img src="" alt="The Title Vivana — 卡马拉" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">卡马拉</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Vivana — 卡马拉</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">产权</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">交付</div><div class="v">2028 Q4</div></div><div class="cat-meta-item"><div class="l">价格</div><div class="v">约 375 万泰铢起</div></div></div>
+          <p class="cat-desc">360 套精装公寓,距卡马拉海滩约 1.5 公里。度假设施,可养宠物。外国人可按 Freehold 配额持有。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-vivana.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Title Sierra — 邦涛 -->
+      <article class="cat-card" data-cats="bangtao freehold">
+        <a class="cat-cover ph" href="/projects/the-title-sierra.html" aria-label="The Title Sierra — 邦涛"><span class="phl">Render</span><img src="" alt="The Title Sierra — 邦涛" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">邦涛</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Sierra — 邦涛</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">产权</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">交付</div><div class="v">2028</div></div><div class="cat-meta-item"><div class="l">价格</div><div class="v">287 万泰铢起</div></div></div>
+          <p class="cat-desc">邦涛片区全新公寓 — 邻近 Laguna、Boat Avenue、Porto de Phuket。进入邦涛市场最具性价比的选择之一。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-sierra.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Olive — 奈杨 -->
+      <article class="cat-card" data-cats="naiyang freehold">
+        <a class="cat-cover ph" href="/projects/the-olive.html" aria-label="The Olive — 奈杨"><span class="phl">Render</span><img src="" alt="The Olive — 奈杨" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">奈杨</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Olive — 奈杨</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">产权</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">交付</div><div class="v">2028年10月</div></div><div class="cat-meta-item"><div class="l">价格</div><div class="v">499 万泰铢起</div></div></div>
+          <p class="cat-desc">奈杨海滨地中海风格公寓,距海滩约 450 米,几分钟到机场。287 套,两栋 8 层建筑。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-olive.html">查看项目档案 →</a>
             <a class="muted" href="#contact">索取项目册 (PDF)</a>
           </div>
         </div>
