@@ -304,7 +304,20 @@ document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('pa
       e.preventDefault();
       var fd = new FormData(form);
       var delivered = false;
-      try{
+      // 1) Telegram relay (Cloudflare Worker) — preferred if configured
+      var RELAY = (typeof window!=='undefined' && window.WEGC_RELAY) ? window.WEGC_RELAY : '';
+      if(RELAY){
+        try{
+          var obj={}; fd.forEach(function(v,k){ if(k!=='_gotcha') obj[k]=v; });
+          obj._page=location.pathname; obj._lang=document.documentElement.lang||'';
+          var rc=new AbortController(); var rt=setTimeout(function(){rc.abort();},8000);
+          var rr=await fetch(RELAY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(obj),signal:rc.signal});
+          clearTimeout(rt);
+          if(rr.ok){ delivered=true; }
+        }catch(err){ console.error('Relay error:',err); }
+      }
+      // 2) Formspree fallback
+      if(!delivered) try{
         var ctrl = new AbortController();
         var timer = setTimeout(function(){ctrl.abort();}, 8000);
         var res = await fetch(ENDPOINT,{

@@ -1,0 +1,11 @@
+name = "wegc-form-relay"
+main = "wegc-form-relay.js"
+compatibility_date = "2025-01-01"
+
+# Secrets (do NOT put real values here — set them with `wrangler secret put`):
+#   wrangler secret put TELEGRAM_BOT_TOKEN
+#   wrangler secret put TELEGRAM_CHAT_ID
+#
+# Optional non-secret override:
+[vars]
+ALLOWED_ORIGINS = "https://wegc.fund,https://www.wegc.fund"
