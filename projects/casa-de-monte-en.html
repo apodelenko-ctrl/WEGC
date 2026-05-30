@@ -107,6 +107,15 @@
 .lb-close:hover{background:rgba(255,255,255,.18);border-color:#fff}
 .js-gallery img{cursor:zoom-in}
 .fp-figure a{cursor:zoom-in}
+/* FAQ accordion */
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:880px}
+.faq-item{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:1.02rem;font-weight:600;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.5rem;font-weight:300;color:var(--gold);line-height:1}
+.faq-item[open] summary::after{content:'\\2013'}
+.faq-item .a{padding:0 24px 22px;color:var(--body);font-size:14.5px;line-height:1.72}
+.faq-item .a a{color:var(--gold);border-bottom:1px solid rgba(160,129,86,.4)}
 </style>
 </head>
 <body>
@@ -122,7 +131,7 @@
       <a href="/wet-agency-en.html#mechanics">Mechanics</a>
       <a href="/wet-agency-en.html#locations">Locations</a>
       <a href="/wet-agency-en.html#process">Process</a>
-      <a href="/wet-agency-en.html#faq">FAQ</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <div class="topbar-actions">
       <div class="lang-sw" role="navigation" aria-label="Language">
@@ -376,6 +385,49 @@
       <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte/silvora-ext.jpg" alt="Casa de Monte — pool villa exterior" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
       <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte/aurelia-int.jpg" alt="Casa de Monte — villa interior" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
       <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte/masterplan.png" alt="Casa de Monte — community master plan" loading="lazy" style="width:100%;height:280px;object-fit:contain;background:#f3f0e8;display:block"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s cream" id="faq">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">FAQ</span>
+      <h2>Frequently asked questions.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Can a foreigner own a villa at Casa de Monte?</summary>
+        <div class="a">Yes. In Thailand, the building (the house itself) can be owned by a foreign national in their name. The land underneath is typically held through a registered leasehold or a Thai company structure; freehold paths may be available depending on the project documentation. We structure each purchase with independent legal review so ownership is clear and documented.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How does leasehold work — and is it secure?</summary>
+        <div class="a">A registered lease is protected under Thai law for its term. Developers commonly offer a primary term with contractual renewal options. Before signing we review who the lessor is, your rights under the lease, and inheritance/succession provisions, so you understand exactly what you are securing.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What is the price range and what are the villa types?</summary>
+        <div class="a">Five pool-villa types, 297–450 m², indicatively from 28.2M THB (3-bedroom) up to 47.2M THB (4-bedroom, top configuration). Exact pricing per unit and what is included are confirmed in the developer quote. See the <a href="#pricing">pricing &amp; floor plans</a> section above.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How does the payment schedule work?</summary>
+        <div class="a">A reservation deposit (300,000–500,000 THB) secures the unit, followed by 25% on contract signing and staged instalments tied to construction milestones, with the balance at handover. Completion is scheduled for July 2029. Full breakdown in the <a href="#payment">payment plan</a> section.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What are the ongoing costs of ownership?</summary>
+        <div class="a">Owners pay a monthly common-area maintenance (CAM) fee based on the indoor area, plus utilities at government rates. For new-build projects it is common to prepay 1–3 years of CAM at the transfer of ownership. Exact figures are provided in the project dossier.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I pay in my own country and currency?</summary>
+        <div class="a">In many cases, yes. As the developer's appointed sales agent within a Singapore corporate group with international banking infrastructure, we can arrange settlement to the developer in your own jurisdiction and currency where available — subject to onboarding, KYC/AML, source-of-funds verification and applicable law. WEGC is not a bank or licensed payment institution.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is the villa suitable for rental?</summary>
+        <div class="a">Casa de Monte is positioned residence-first, with rental as a secondary path supported by a management company. Indicative yields in this inland micro-market are around 5–7% per annum — general guidance only, not a forecast or guarantee.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What is the buying process with WEGC?</summary>
+        <div class="a">Enquiry → onboarding and KYC/AML → unit selection and reservation → sale &amp; purchase agreement / lease → staged payments → snagging → transfer of ownership. Every step is documented, and we act on a direct contract with the developer.</div>
+      </details>
     </div>
   </div>
 </section>

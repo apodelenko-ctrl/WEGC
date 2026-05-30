@@ -107,6 +107,15 @@
 .lb-close:hover{background:rgba(255,255,255,.18);border-color:#fff}
 .js-gallery img{cursor:zoom-in}
 .fp-figure a{cursor:zoom-in}
+/* FAQ accordion */
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:880px}
+.faq-item{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:1.02rem;font-weight:600;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.5rem;font-weight:300;color:var(--gold);line-height:1}
+.faq-item[open] summary::after{content:'\\2013'}
+.faq-item .a{padding:0 24px 22px;color:var(--body);font-size:14.5px;line-height:1.72}
+.faq-item .a a{color:var(--gold);border-bottom:1px solid rgba(160,129,86,.4)}
 </style>
 </head>
 <body>
@@ -122,7 +131,7 @@
       <a href="/wet-agency.html#mechanics">Механика</a>
       <a href="/wet-agency.html#locations">Локации</a>
       <a href="/wet-agency.html#process">Процесс</a>
-      <a href="/wet-agency.html#faq">FAQ</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <div class="topbar-actions">
       <div class="lang-sw" role="navigation" aria-label="Language">
@@ -376,6 +385,49 @@
       <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte/silvora-ext.jpg" alt="Casa de Monte — экстерьер виллы с бассейном" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
       <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte/aurelia-int.jpg" alt="Casa de Monte — интерьер виллы" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"/></figure>
       <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/casademonte/masterplan.png" alt="Casa de Monte — генплан коммьюнити" loading="lazy" style="width:100%;height:280px;object-fit:contain;background:#f3f0e8;display:block"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s cream" id="faq">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Вопросы и ответы</span>
+      <h2>Частые вопросы.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Может ли иностранец владеть виллой в Casa de Monte?</summary>
+        <div class="a">Да. В Таиланде само строение (дом) может быть оформлено на иностранца в его имя. Земля под ним, как правило, оформляется через зарегистрированный leasehold или структуру тайской компании; freehold-путь возможен в зависимости от документации проекта. Каждую сделку мы структурируем с независимым юридическим заключением, чтобы право собственности было ясным и задокументированным.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Как работает leasehold — и насколько это надёжно?</summary>
+        <div class="a">Зарегистрированный договор аренды защищён тайским правом на весь срок. Застройщики обычно предлагают основной срок с опциями договорного продления. Перед подписанием мы проверяем, кто выступает арендодателем, ваши права по договору и положения о наследовании — чтобы вы точно понимали, что закрепляете за собой.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Какой диапазон цен и какие типы вилл?</summary>
+        <div class="a">Пять типов вилл с бассейном, 297–450 м², ориентировочно от 28,2 млн THB (3 спальни) до 47,2 млн THB (4 спальни, топовая конфигурация). Точная цена за юнит и состав включённого подтверждаются в предложении застройщика. См. раздел <a href="#pricing">цены и планировки</a> выше.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Как устроен график платежей?</summary>
+        <div class="a">Депозит резервирования (300 000–500 000 THB) закрепляет юнит, далее 25% при подписании договора и поэтапные платежи, привязанные к строительным вехам, с остатком при передаче. Сдача запланирована на июль 2029. Полная разбивка — в разделе <a href="#payment">график платежей</a>.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Каковы регулярные расходы на владение?</summary>
+        <div class="a">Собственник платит ежемесячный сбор за обслуживание общих зон (CAM) исходя из площади, плюс коммунальные услуги по государственным тарифам. Для новостроек принято при передаче права оплатить 1–3 года CAM авансом. Точные суммы указаны в досье проекта.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Можно ли оплатить в своей стране и валюте?</summary>
+        <div class="a">Во многих случаях — да. Как назначенный агент застройщика в составе сингапурской группы с международной банковской инфраструктурой, мы можем организовать расчёт с застройщиком в вашей юрисдикции и валюте, где это возможно — при онбординге, KYC/AML, проверке источника средств и в соответствии с применимым правом. WEGC не является банком или лицензированной платёжной организацией.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Подходит ли вилла для сдачи в аренду?</summary>
+        <div class="a">Casa de Monte позиционируется в первую очередь для проживания, аренда — вторичный путь под управлением УК. Ориентировочная доходность в этом внутреннем микрорынке — около 5–7% годовых; это общая ориентация, не прогноз и не гарантия.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Как проходит процесс покупки с WEGC?</summary>
+        <div class="a">Заявка → онбординг и KYC/AML → выбор юнита и резервирование → договор купли-продажи / аренды → поэтапные платежи → приёмка → передача права собственности. Каждый шаг задокументирован, мы работаем по прямому контракту с застройщиком.</div>
+      </details>
     </div>
   </div>
 </section>
