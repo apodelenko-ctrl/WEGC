@@ -240,3 +240,30 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 32px;border-top:1px sol
   .cta-strip h3{font-size:1.3rem}
   .f-grid{grid-template-columns:1fr;gap:28px}
 }
+
+/* FAQ accordion (shared) */
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:880px}
+.faq-item{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:1.02rem;font-weight:600;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.5rem;font-weight:300;color:var(--gold);line-height:1}
+.faq-item[open] summary::after{content:'\2013'}
+.faq-item .a{padding:0 24px 22px;color:var(--body);font-size:14.5px;line-height:1.72}
+.faq-item .a a{color:var(--gold);border-bottom:1px solid rgba(160,129,86,.4)}
+
+/* Similar projects (shared) */
+.sim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sim-card{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px;transition:all .15s ease}
+.sim-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(15,23,42,.18)}
+.sim-card .nm{font-size:1.05rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.sim-card .lc{font-size:13px;color:var(--muted)}
+.sim-card .go{margin-top:8px;font-size:13px;font-weight:600;color:var(--gold)}
+@media(max-width:880px){.sim-grid{grid-template-columns:1fr}}
+
+/* Lightbox (shared) */
+.lb-overlay{position:fixed;inset:0;z-index:9999;background:rgba(6,8,15,.93);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;backdrop-filter:blur(4px)}
+.lb-overlay.open{display:flex}
+.lb-overlay img{max-width:96vw;max-height:92vh;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6);cursor:default}
+.lb-close{position:absolute;top:18px;right:22px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.lb-close:hover{background:rgba(255,255,255,.18);border-color:#fff}
+.gal img,.js-gallery img,.ph-grid img{cursor:zoom-in}

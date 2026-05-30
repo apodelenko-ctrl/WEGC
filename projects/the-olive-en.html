@@ -151,6 +151,30 @@
   </div>
 </section>
 
+<section class="s" id="about-dev">
+  <div class="container">
+    <div class="s-head"><span class="kicker">Developer</span><h2>The Title — by Rhom Bho Property.</h2></div>
+    <div class="over-grid">
+      <div class="over-text">
+        <p>Every project in this catalogue is built by <strong>Rhom Bho Property Public Company Limited</strong> under the well-established <strong>The Title</strong> brand. Based in Phuket, the company has delivered a portfolio of <strong>20+ residential projects</strong> across the island's prime corridors — Bang Tao, Kamala, Surin, Nai Yang, Rawai, Kata and Koh Kaew — with a focus on amenity-rich, design-led leisure residences.</p>
+        <p>WEGC works on a <strong>direct contract with the developer</strong> as an official sales channel — you buy at the developer's list price, with no buyer-side agency markup.</p>
+      </div>
+      <div class="over-side">
+        <div class="over-card"><div class="l">Brand</div><div class="v">The Title</div><p>Rhom Bho Property PLC.</p></div>
+        <div class="over-card"><div class="l">Portfolio</div><div class="v">20+ projects</div><p>Across Phuket's prime corridors.</p></div>
+        <div class="over-card"><div class="l">Our role</div><div class="v">Direct contract</div><p>Official channel · developer list price.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s cream" id="similar-projects">
+  <div class="container">
+    <div class="s-head"><span class="kicker">Explore more</span><h2>Other projects.</h2></div>
+    <div class="sim-grid"><a class="sim-card" href="/projects/casa-de-monte-en.html"><span class="nm">Casa de Monte</span><span class="lc">Koh Kaew, Phuket</span><span class="go">View passport →</span></a><a class="sim-card" href="/projects/the-title-vivana-en.html"><span class="nm">The Title Vivana</span><span class="lc">Kamala, Phuket</span><span class="go">View passport →</span></a><a class="sim-card" href="/projects/the-title-sierra-en.html"><span class="nm">The Title Sierra</span><span class="lc">Bang Tao, Phuket</span><span class="go">View passport →</span></a></div>
+  </div>
+</section>
+
 <section class="s" id="enquire">
   <div class="container">
     <div class="cta-strip">
@@ -199,6 +223,25 @@
 <script>
 (function(){const bar=document.getElementById('topbar');if(!bar)return;const f=()=>{if(window.scrollY>60)bar.classList.add('solid');else bar.classList.remove('solid')};window.addEventListener('scroll',f,{passive:true});f();})();
 document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('page-ready'));
+
+/* Lightbox (shared, gallery + floor plans) */
+(function(){
+  if(window.__wegcLb) return; window.__wegcLb=1;
+  var ov=document.createElement('div'); ov.className='lb-overlay';
+  ov.innerHTML='<button class="lb-close" type="button" aria-label="Close">\u00d7</button><img alt=""/>';
+  document.body.appendChild(ov);
+  var im=ov.querySelector('img');
+  function open(src,alt){ if(!src)return; im.src=src; im.alt=alt||''; ov.classList.add('open'); document.body.style.overflow='hidden'; }
+  function close(){ ov.classList.remove('open'); document.body.style.overflow=''; im.removeAttribute('src'); }
+  ov.addEventListener('click',function(e){ if(e.target!==im) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  document.querySelectorAll('.gal img,.js-gallery img,.ph-grid img').forEach(function(g){
+    g.addEventListener('click',function(){ open(g.currentSrc||g.getAttribute('src'), g.alt); });
+  });
+  document.querySelectorAll('.fp-figure a').forEach(function(a){
+    a.addEventListener('click',function(e){ e.preventDefault(); var x=a.querySelector('img'); open(a.getAttribute('href'), x?x.alt:''); });
+  });
+})();
 </script>
 </body>
 </html>

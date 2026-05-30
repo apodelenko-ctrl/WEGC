@@ -152,6 +152,37 @@
   </div>
 </section>
 
+<section class="s cream" id="faq">
+  <div class="container">
+    <div class="s-head"><span class="kicker">Вопросы и ответы</span><h2>Частые вопросы.</h2></div>
+    <div class="faq-list"><details class="faq-item"><summary>Может ли иностранец купить здесь?</summary><div class="a">Иностранцы, как правило, могут владеть юнитами в кондоминиуме в рамках тайской freehold-квоты, либо виллой через зарегистрированный leasehold или структуру тайской компании. Мы подтверждаем точный путь по этому проекту и структурируем сделку с документацией и юридическим заключением.</div></details><details class="faq-item"><summary>Какая стартовая цена и что включено?</summary><div class="a">Мы называем актуальную прайс-цену застройщика и состав меблировки/отделки по запросу — без отдельной агентской наценки со стороны покупателя. Точная цена зависит от юнита, этажа и наличия.</div></details><details class="faq-item"><summary>Как устроены платежи и сдача?</summary><div class="a">Депозит резервирования закрепляет юнит, далее платёж по договору и поэтапные платежи по графику застройщика, остаток — при передаче. Полный график и срок сдачи — в досье.</div></details><details class="faq-item"><summary>Можно ли оплатить в своей стране и валюте?</summary><div class="a">Во многих случаях — да. Как официальный агент застройщика в составе сингапурской группы с международной банковской инфраструктурой, мы можем организовать расчёт в вашей юрисдикции и валюте, где это возможно — при KYC/AML, проверке источника средств и в соответствии с применимым правом.</div></details></div>
+  </div>
+</section>
+
+<section class="s" id="about-dev">
+  <div class="container">
+    <div class="s-head"><span class="kicker">Застройщик</span><h2>The Title — от Rhom Bho Property.</h2></div>
+    <div class="over-grid">
+      <div class="over-text">
+        <p>Все проекты в этом каталоге строит <strong>Rhom Bho Property Public Company Limited</strong> под известным брендом <strong>«The Title»</strong>. Компания базируется на Пхукете и реализовала портфель из <strong>20+ жилых проектов</strong> в ключевых районах острова — Банг Тао, Камала, Сурин, Най Янг, Раваи, Ката и Кох Кео — с фокусом на курортные резиденции с насыщенной инфраструктурой и продуманным дизайном.</p>
+        <p>WEGC работает по <strong>прямому контракту с застройщиком</strong> как официальный канал продаж — вы покупаете по прайс-цене застройщика, без агентской наценки со стороны покупателя.</p>
+      </div>
+      <div class="over-side">
+        <div class="over-card"><div class="l">Бренд</div><div class="v">The Title</div><p>Rhom Bho Property PLC.</p></div>
+        <div class="over-card"><div class="l">Портфель</div><div class="v">20+ проектов</div><p>В ключевых районах Пхукета.</p></div>
+        <div class="over-card"><div class="l">Наша роль</div><div class="v">Прямой контракт</div><p>Официальный канал · прайс-цена застройщика.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s cream" id="similar-projects">
+  <div class="container">
+    <div class="s-head"><span class="kicker">Смотрите также</span><h2>Другие проекты.</h2></div>
+    <div class="sim-grid"><a class="sim-card" href="/projects/casa-de-monte.html"><span class="nm">Casa de Monte</span><span class="lc">Кох Кео, Phuket</span><span class="go">Открыть паспорт →</span></a><a class="sim-card" href="/projects/the-title-vivana.html"><span class="nm">The Title Vivana</span><span class="lc">Камала, Phuket</span><span class="go">Открыть паспорт →</span></a><a class="sim-card" href="/projects/the-title-sierra.html"><span class="nm">The Title Sierra</span><span class="lc">Банг Тао, Phuket</span><span class="go">Открыть паспорт →</span></a></div>
+  </div>
+</section>
+
 <section class="s" id="enquire">
   <div class="container">
     <div class="cta-strip">
@@ -205,6 +236,25 @@
 <script>
 (function(){const bar=document.getElementById('topbar');if(!bar)return;const f=()=>{if(window.scrollY>60)bar.classList.add('solid');else bar.classList.remove('solid')};window.addEventListener('scroll',f,{passive:true});f();})();
 document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('page-ready'));
+
+/* Lightbox (shared, gallery + floor plans) */
+(function(){
+  if(window.__wegcLb) return; window.__wegcLb=1;
+  var ov=document.createElement('div'); ov.className='lb-overlay';
+  ov.innerHTML='<button class="lb-close" type="button" aria-label="Close">\u00d7</button><img alt=""/>';
+  document.body.appendChild(ov);
+  var im=ov.querySelector('img');
+  function open(src,alt){ if(!src)return; im.src=src; im.alt=alt||''; ov.classList.add('open'); document.body.style.overflow='hidden'; }
+  function close(){ ov.classList.remove('open'); document.body.style.overflow=''; im.removeAttribute('src'); }
+  ov.addEventListener('click',function(e){ if(e.target!==im) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  document.querySelectorAll('.gal img,.js-gallery img,.ph-grid img').forEach(function(g){
+    g.addEventListener('click',function(){ open(g.currentSrc||g.getAttribute('src'), g.alt); });
+  });
+  document.querySelectorAll('.fp-figure a').forEach(function(a){
+    a.addEventListener('click',function(e){ e.preventDefault(); var x=a.querySelector('img'); open(a.getAttribute('href'), x?x.alt:''); });
+  });
+})();
 </script>
 </body>
 </html>
