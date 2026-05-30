@@ -26,7 +26,15 @@
 #topbar.solid .lang-sw-a{color:#64748b}
 .lang-sw-a.active{background:#d6b370;color:#0a0e1a}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
-.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}.p-hero-grad{background:linear-gradient(180deg,rgba(6,8,15,.55) 0%,rgba(6,8,15,.35) 50%,rgba(6,8,15,.85) 100%),url("/images/projects/casademonte-hero.jpg") center/cover no-repeat,#0a0e1a}</style>
+.lang-switch{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s ease;text-decoration:none}.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}#topbar.solid .lang-switch{color:#64748b;border-color:#e2e8f0}#topbar.solid .lang-switch:hover{color:#0f172a;background:#f8fafc;border-color:#cbd5e1}.topbar-actions{display:flex;align-items:center;gap:10px}.p-hero-grad{background:linear-gradient(180deg,rgba(6,8,15,.55) 0%,rgba(6,8,15,.35) 50%,rgba(6,8,15,.85) 100%),url("/images/projects/casademonte-hero.jpg") center/cover no-repeat,#0a0e1a}
+/* Hero video card */
+.p-hero-video{position:absolute;top:50%;right:0;transform:translateY(-50%);width:296px;aspect-ratio:9/16;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.28);box-shadow:0 30px 80px -24px rgba(0,0,0,.78);z-index:3;background:#0a0e1a}
+.p-hero-video video{width:100%;height:100%;object-fit:cover;display:block}
+.p-hero-video .snd{position:absolute;bottom:12px;right:12px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(10,14,26,.55);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s ease}
+.p-hero-video .snd:hover{background:rgba(10,14,26,.85);border-color:#fff}
+@media(min-width:1101px){.p-hero-sub{max-width:600px}.p-hero-meta{max-width:600px}}
+@media(max-width:1100px){.p-hero-video{position:static;transform:none;width:240px;margin:30px 0 4px}}
+@media(max-width:640px){.p-hero-video{width:200px;margin:24px auto 4px}}</style>
 </head>
 <body>
 
@@ -75,6 +83,14 @@
       <div class="p-hero-meta-item"><div class="v">Rhom Bho · The Title</div><div class="l">Застройщик</div></div>
     </div>
   <p style="font-size:11px;color:rgba(255,255,255,.55);max-width:64ch;line-height:1.55;margin-top:18px;font-weight:300">Ориентировочные диапазоны аренды — общая ориентация на основе наблюдаемых показателей в соответствующем микрорынке Пхукета. Не прогноз, не обязательство, не гарантия. Конкретные экономические показатели зависят от проекта, условий застройщика, арендных потоков, налогов, комиссий и рыночных условий.</p>
+    <div class="p-hero-video">
+      <video id="cdmVideo" autoplay muted loop playsinline preload="metadata" poster="/images/projects/casademonte-video-poster.jpg">
+        <source src="/videos/casa-de-monte.mp4" type="video/mp4"/>
+      </video>
+      <button class="snd" id="cdmSound" type="button" aria-label="Включить звук">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+      </button>
+    </div>
     </div>
 </section>
 
@@ -204,6 +220,19 @@
 <script>
 (function(){const bar=document.getElementById('topbar');if(!bar)return;const f=()=>{if(window.scrollY>60)bar.classList.add('solid');else bar.classList.remove('solid')};window.addEventListener('scroll',f,{passive:true});f();})();
 document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('page-ready'));
+/* Hero video sound toggle */
+(function(){
+  var v=document.getElementById('cdmVideo'), b=document.getElementById('cdmSound');
+  if(!v||!b)return;
+  var ICON_OFF='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
+  var ICON_ON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>';
+  b.addEventListener('click',function(){
+    v.muted=!v.muted;
+    if(!v.muted){var p=v.play();if(p&&p.catch){p.catch(function(){});}}
+    b.innerHTML=v.muted?ICON_OFF:ICON_ON;
+    b.setAttribute('aria-label',v.muted?'Включить звук':'Выключить звук');
+  });
+})();
 </script>
 </body>
 </html>
