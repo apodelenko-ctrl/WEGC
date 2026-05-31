@@ -6,7 +6,7 @@
 (function () {
   if (window.__wegcNotes) return; window.__wegcNotes = true;
 
-  var SEL = '.why-note,.mech-disclaimer,.f-disclaimer,.cases-note,.settle-note,.note,.disclaimer,.hero-foot-note';
+  var SEL = '.why-note,.mech-disclaimer,.f-disclaimer,.f-disc,.cases-note,.settle-note,.note,.disclaimer,.hero-foot-note';
 
   var css = '' +
     '.wegc-note{cursor:pointer;position:relative;padding-right:26px}' +
