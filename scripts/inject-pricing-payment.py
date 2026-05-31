@@ -149,6 +149,23 @@ def pay_olive(lang):
         {'lbl': 'Передача права собственности', 'sub': 'Сдача и выдача ключей · Q1 2029', 'pct': '25%'},
     ]
 
+def pay_katabello(lang):
+    if lang == 'en':
+        return [
+            {'lbl': 'Reservation deposit', 'sub': 'On booking', 'pct': '100,000 THB'},
+            {'lbl': 'Contract signing', 'sub': 'Within 30 days of the reservation agreement', 'pct': '25%'},
+            {'lbl': '2nd instalment', 'sub': '3 months after contract signing', 'pct': '25%'},
+            {'lbl': '3rd instalment', 'sub': '3 months after the 2nd payment', 'pct': '25%'},
+            {'lbl': 'Transfer of ownership', 'sub': 'On completion · Q3 2027', 'pct': '25%'},
+        ]
+    return [
+        {'lbl': 'Депозит бронирования', 'sub': 'При бронировании', 'pct': '100 000 THB'},
+        {'lbl': 'Подписание договора', 'sub': 'В течение 30 дней после договора бронирования', 'pct': '25%'},
+        {'lbl': '2-й платёж', 'sub': 'Через 3 месяца после подписания', 'pct': '25%'},
+        {'lbl': '3-й платёж', 'sub': 'Через 3 месяца после 2-го платежа', 'pct': '25%'},
+        {'lbl': 'Передача права собственности', 'sub': 'По завершении · Q3 2027', 'pct': '25%'},
+    ]
+
 NOTE_EN = 'Interest-free instalments during construction. Percentages are of the total unit price; the reservation deposit is credited against the first instalment. Schedule is indicative and confirmed in the reservation agreement and sale & purchase agreement; subject to developer terms, applicable taxes and fees. Not an offer.'
 NOTE_RU = 'Беспроцентная рассрочка на период строительства. Проценты от полной стоимости; депозит бронирования зачитывается в первый платёж. График ориентировочный и подтверждается в договоре бронирования и договоре купли-продажи; с учётом условий застройщика, налогов и сборов. Не оферта.'
 
@@ -400,10 +417,236 @@ PROJECTS = {
             'pay_steps': pay_biancana('ru'), 'pay_note': NOTE_RU,
         },
     },
+    'modeva': {
+        'files': {'en': 'the-modeva-en.html', 'ru': 'the-modeva.html'},
+        'en': {
+            'pricing_kicker': 'Pricing & floor plans', 'pricing_h2': 'Indicative pricing and apartment layouts.',
+            'pricing_p': 'Lifestyle condominium in Bang Tao — seven 7-storey buildings, 859 units, ~200–500 m to the beach. Layouts from compact one-bedroom to three-bedroom. Pricing is indicative — not an offer.',
+            'from_l': 'Starting from', 'from_v': '4.78M THB', 'from_sub': 'approx. $147,000 · 1 Bedroom S (29 m²)',
+            'to_l': 'Layouts', 'to_v': '1–3 bed', 'to_sub': '29–148 m² · 859 units · 5% discount on full payment',
+            'tabs_aria': 'Apartment types',
+            'tabs': [
+                {'id': 'fpM1s', 'label': '1BR S', 'title': '1 Bedroom S', 'price': 'From 4.78M THB',
+                 'rows': [('Area', '29 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpM1m', 'label': '1BR M', 'title': '1 Bedroom M', 'price': 'From 5.34M THB',
+                 'rows': [('Area', '33 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpM1l', 'label': '1BR L', 'title': '1 Bedroom L', 'price': 'From 6.48M THB',
+                 'rows': [('Area', '37–41 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpM1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'On request',
+                 'rows': [('Area', '55–58 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpM2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'On request',
+                 'rows': [('Area', '65–118 m²'), ('Bedrooms', '2'), ('Bathrooms', '2'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpM3', 'label': '3BR', 'title': '3 Bedroom Penthouse', 'price': 'On request',
+                 'rows': [('Area', '130–148 m²'), ('Bedrooms', '3'), ('Bathrooms', '3'), ('Completion', 'Q1 2027')]},
+            ],
+            'pay_kicker': 'Payment plan', 'pay_h2': 'Interest-free instalment schedule.',
+            'pay_p': 'Four equal 25% instalments during construction. Completion targeted Q1 2027.',
+            'pay_steps': pay_std('en', 'Q1 2027'), 'pay_note': NOTE_EN,
+        },
+        'ru': {
+            'pricing_kicker': 'Цены и планировки', 'pricing_h2': 'Ориентировочные цены и типы апартаментов.',
+            'pricing_p': 'Lifestyle-кондоминиум в Банг Тао — семь 7-этажных корпусов, 859 юнитов, ~200–500 м до пляжа. Планировки от компактных однушек до трёхспальных. Цены ориентировочные — не оферта.',
+            'from_l': 'От', 'from_v': '4,78 млн THB', 'from_sub': '≈ $147 000 · 1 Bedroom S (29 m²)',
+            'to_l': 'Планировки', 'to_v': '1–3 спальни', 'to_sub': '29–148 m² · 859 юнитов · скидка 5% при полной оплате',
+            'tabs_aria': 'Типы апартаментов',
+            'tabs': [
+                {'id': 'fpM1s', 'label': '1BR S', 'title': '1 Bedroom S', 'price': 'От 4,78 млн THB',
+                 'rows': [('Площадь', '29 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpM1m', 'label': '1BR M', 'title': '1 Bedroom M', 'price': 'От 5,34 млн THB',
+                 'rows': [('Площадь', '33 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpM1l', 'label': '1BR L', 'title': '1 Bedroom L', 'price': 'От 6,48 млн THB',
+                 'rows': [('Площадь', '37–41 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpM1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'По запросу',
+                 'rows': [('Площадь', '55–58 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpM2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'По запросу',
+                 'rows': [('Площадь', '65–118 m²'), ('Спальни', '2'), ('С/у', '2'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpM3', 'label': '3BR', 'title': '3 Bedroom Penthouse', 'price': 'По запросу',
+                 'rows': [('Площадь', '130–148 m²'), ('Спальни', '3'), ('С/у', '3'), ('Сдача', 'Q1 2027')]},
+            ],
+            'pay_kicker': 'График платежей', 'pay_h2': 'Беспроцентная рассрочка.',
+            'pay_p': 'Четыре равных платежа по 25% в период строительства. Сдача — Q1 2027.',
+            'pay_steps': pay_std('ru', 'Q1 2027'), 'pay_note': NOTE_RU,
+        },
+    },
+    'artrio': {
+        'files': {'en': 'the-title-artrio-en.html', 'ru': 'the-title-artrio.html'},
+        'en': {
+            'pricing_kicker': 'Pricing & floor plans', 'pricing_h2': 'Indicative pricing and apartment layouts.',
+            'pricing_p': 'Art-inspired condominium in Bang Tao — four 7-storey buildings, 435 units. Layouts from compact one-bedroom to two-bedroom duplexes. Pricing is indicative — not an offer.',
+            'from_l': 'Starting from', 'from_v': '4.26M THB', 'from_sub': 'approx. $131,000 · 1 Bedroom S (28 m²)',
+            'to_l': 'Layouts', 'to_v': '1–2 bed', 'to_sub': '28–132 m² · 435 units · 5% discount on full payment',
+            'tabs_aria': 'Apartment types',
+            'tabs': [
+                {'id': 'fpA1s', 'label': '1BR S', 'title': '1 Bedroom S (1BS)', 'price': 'From 4.26M THB',
+                 'rows': [('Area', '28–29 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpA1m', 'label': '1BR M', 'title': '1 Bedroom M (1BM)', 'price': 'From 4.70M THB',
+                 'rows': [('Area', '32–34 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpA1l', 'label': '1BR L', 'title': '1 Bedroom L (1BL)', 'price': 'From 5.88M THB',
+                 'rows': [('Area', '40–43 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpA1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'On request',
+                 'rows': [('Area', '57–58 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpAd', 'label': '1BR Duplex', 'title': '1 Bedroom Duplex', 'price': 'On request',
+                 'rows': [('Area', '61–63 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpA2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'On request',
+                 'rows': [('Area', '65–132 m²'), ('Bedrooms', '2'), ('Bathrooms', '2'), ('Completion', 'Q1 2027')]},
+            ],
+            'pay_kicker': 'Payment plan', 'pay_h2': 'Interest-free instalment schedule.',
+            'pay_p': 'Four equal 25% instalments during construction. Completion targeted Q1 2027.',
+            'pay_steps': pay_std('en', 'Q1 2027'), 'pay_note': NOTE_EN,
+        },
+        'ru': {
+            'pricing_kicker': 'Цены и планировки', 'pricing_h2': 'Ориентировочные цены и типы апартаментов.',
+            'pricing_p': 'Кондоминиум в Банг Тао с «галерейной» концепцией — четыре 7-этажных корпуса, 435 юнитов. Планировки от компактных однушек до двухспальных дуплексов. Цены ориентировочные — не оферта.',
+            'from_l': 'От', 'from_v': '4,26 млн THB', 'from_sub': '≈ $131 000 · 1 Bedroom S (28 m²)',
+            'to_l': 'Планировки', 'to_v': '1–2 спальни', 'to_sub': '28–132 m² · 435 юнитов · скидка 5% при полной оплате',
+            'tabs_aria': 'Типы апартаментов',
+            'tabs': [
+                {'id': 'fpA1s', 'label': '1BR S', 'title': '1 Bedroom S (1BS)', 'price': 'От 4,26 млн THB',
+                 'rows': [('Площадь', '28–29 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpA1m', 'label': '1BR M', 'title': '1 Bedroom M (1BM)', 'price': 'От 4,70 млн THB',
+                 'rows': [('Площадь', '32–34 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpA1l', 'label': '1BR L', 'title': '1 Bedroom L (1BL)', 'price': 'От 5,88 млн THB',
+                 'rows': [('Площадь', '40–43 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpA1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'По запросу',
+                 'rows': [('Площадь', '57–58 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpAd', 'label': '1BR Duplex', 'title': '1 Bedroom Duplex', 'price': 'По запросу',
+                 'rows': [('Площадь', '61–63 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpA2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'По запросу',
+                 'rows': [('Площадь', '65–132 m²'), ('Спальни', '2'), ('С/у', '2'), ('Сдача', 'Q1 2027')]},
+            ],
+            'pay_kicker': 'График платежей', 'pay_h2': 'Беспроцентная рассрочка.',
+            'pay_p': 'Четыре равных платежа по 25% в период строительства. Сдача — Q1 2027.',
+            'pay_steps': pay_std('ru', 'Q1 2027'), 'pay_note': NOTE_RU,
+        },
+    },
+    'adora': {
+        'files': {'en': 'the-title-adora-en.html', 'ru': 'the-title-adora.html'},
+        'en': {
+            'pricing_kicker': 'Pricing & floor plans', 'pricing_h2': 'Indicative pricing and apartment layouts.',
+            'pricing_p': 'Low-rise lifestyle condominium near the ocean — eight 4-storey buildings, 210 units. Layouts from one-bedroom to two-bedroom. Pricing is indicative — not an offer.',
+            'from_l': 'Starting from', 'from_v': '4.2M THB', 'from_sub': 'approx. $122,000 · 1 Bedroom (32 m²)',
+            'to_l': 'Layouts', 'to_v': '1–2 bed', 'to_sub': '32–81 m² · 210 units · interest-free instalments',
+            'tabs_aria': 'Apartment types',
+            'tabs': [
+                {'id': 'fpAdo1', 'label': '1BR', 'title': '1 Bedroom', 'price': 'From 4.2M THB',
+                 'rows': [('Area', '32–43 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpAdo1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'On request',
+                 'rows': [('Area', '49–57 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q1 2027')]},
+                {'id': 'fpAdo2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'On request',
+                 'rows': [('Area', '63–81 m²'), ('Bedrooms', '2'), ('Bathrooms', '2'), ('Completion', 'Q1 2027')]},
+            ],
+            'pay_kicker': 'Payment plan', 'pay_h2': 'Interest-free instalment schedule.',
+            'pay_p': 'Four equal 25% instalments during construction, or full payment within 30 days. Completion targeted Q1 2027.',
+            'pay_steps': pay_std('en', 'Q1 2027'), 'pay_note': NOTE_EN,
+        },
+        'ru': {
+            'pricing_kicker': 'Цены и планировки', 'pricing_h2': 'Ориентировочные цены и типы апартаментов.',
+            'pricing_p': 'Малоэтажный lifestyle-кондоминиум у океана — восемь 4-этажных корпусов, 210 юнитов. Планировки от однушек до двухспальных. Цены ориентировочные — не оферта.',
+            'from_l': 'От', 'from_v': '4,2 млн THB', 'from_sub': '≈ $122 000 · 1 Bedroom (32 m²)',
+            'to_l': 'Планировки', 'to_v': '1–2 спальни', 'to_sub': '32–81 m² · 210 юнитов · беспроцентная рассрочка',
+            'tabs_aria': 'Типы апартаментов',
+            'tabs': [
+                {'id': 'fpAdo1', 'label': '1BR', 'title': '1 Bedroom', 'price': 'От 4,2 млн THB',
+                 'rows': [('Площадь', '32–43 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpAdo1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'По запросу',
+                 'rows': [('Площадь', '49–57 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q1 2027')]},
+                {'id': 'fpAdo2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'По запросу',
+                 'rows': [('Площадь', '63–81 m²'), ('Спальни', '2'), ('С/у', '2'), ('Сдача', 'Q1 2027')]},
+            ],
+            'pay_kicker': 'График платежей', 'pay_h2': 'Беспроцентная рассрочка.',
+            'pay_p': 'Четыре равных платежа по 25% в период строительства или полная оплата в течение 30 дней. Сдача — Q1 2027.',
+            'pay_steps': pay_std('ru', 'Q1 2027'), 'pay_note': NOTE_RU,
+        },
+    },
+    'katabello': {
+        'files': {'en': 'the-title-katabello-en.html', 'ru': 'the-title-katabello.html'},
+        'en': {
+            'pricing_kicker': 'Pricing & floor plans', 'pricing_h2': 'Indicative pricing and apartment layouts.',
+            'pricing_p': 'Mediterranean-style leisure condo resort near Kata Beach — eight 7-storey buildings, 760 units. Layouts from one-bedroom to sea-view penthouses. Pricing is indicative — not an offer.',
+            'from_l': 'Starting from', 'from_v': '3.83M THB', 'from_sub': 'approx. $118,000 · 1 Bedroom (28 m²)',
+            'to_l': 'Up to', 'to_v': '11.97M THB', 'to_sub': 'Penthouse · 68–168 m²',
+            'tabs_aria': 'Apartment types',
+            'tabs': [
+                {'id': 'fpK1', 'label': '1BR', 'title': '1 Bedroom', 'price': 'From 3.83M THB',
+                 'rows': [('Area', '28–41 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q3 2027')]},
+                {'id': 'fpK1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'From 6.01M THB',
+                 'rows': [('Area', '47–56 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q3 2027')]},
+                {'id': 'fpK2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'From 8.32M THB',
+                 'rows': [('Area', '66–71 m²'), ('Bedrooms', '2'), ('Bathrooms', '2'), ('Completion', 'Q3 2027')]},
+                {'id': 'fpKph', 'label': 'Penthouse', 'title': 'Penthouse', 'price': 'From 11.97M THB',
+                 'rows': [('Area', '68–168 m²'), ('Bedrooms', '2–3'), ('Bathrooms', '2–3'), ('Completion', 'Q3 2027')]},
+            ],
+            'pay_kicker': 'Payment plan', 'pay_h2': 'Interest-free instalment schedule.',
+            'pay_p': 'Four equal 25% instalments tied to a fixed timeline during construction. Completion targeted Q3 2027.',
+            'pay_steps': pay_katabello('en'), 'pay_note': NOTE_EN,
+        },
+        'ru': {
+            'pricing_kicker': 'Цены и планировки', 'pricing_h2': 'Ориентировочные цены и типы апартаментов.',
+            'pricing_p': 'Курортный кондоминиум в средиземноморском стиле у пляжа Ката — восемь 7-этажных корпусов, 760 юнитов. Планировки от однушек до пентхаусов с видом на море. Цены ориентировочные — не оферта.',
+            'from_l': 'От', 'from_v': '3,83 млн THB', 'from_sub': '≈ $118 000 · 1 Bedroom (28 m²)',
+            'to_l': 'До', 'to_v': '11,97 млн THB', 'to_sub': 'Пентхаус · 68–168 m²',
+            'tabs_aria': 'Типы апартаментов',
+            'tabs': [
+                {'id': 'fpK1', 'label': '1BR', 'title': '1 Bedroom', 'price': 'От 3,83 млн THB',
+                 'rows': [('Площадь', '28–41 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q3 2027')]},
+                {'id': 'fpK1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'От 6,01 млн THB',
+                 'rows': [('Площадь', '47–56 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q3 2027')]},
+                {'id': 'fpK2', 'label': '2BR', 'title': '2 Bedroom', 'price': 'От 8,32 млн THB',
+                 'rows': [('Площадь', '66–71 m²'), ('Спальни', '2'), ('С/у', '2'), ('Сдача', 'Q3 2027')]},
+                {'id': 'fpKph', 'label': 'Penthouse', 'title': 'Пентхаус', 'price': 'От 11,97 млн THB',
+                 'rows': [('Площадь', '68–168 m²'), ('Спальни', '2–3'), ('С/у', '2–3'), ('Сдача', 'Q3 2027')]},
+            ],
+            'pay_kicker': 'График платежей', 'pay_h2': 'Беспроцентная рассрочка.',
+            'pay_p': 'Четыре равных платежа по 25% по фиксированному графику в период строительства. Сдача — Q3 2027.',
+            'pay_steps': pay_katabello('ru'), 'pay_note': NOTE_RU,
+        },
+    },
+    'vivi': {
+        'files': {'en': 'title-vivi-en.html', 'ru': 'title-vivi.html'},
+        'en': {
+            'pricing_kicker': 'Pricing & floor plans', 'pricing_h2': 'Indicative pricing and apartment layouts.',
+            'pricing_p': 'Compact resort condominium in Bang Tao — 181 units, sea and mountain views. One-bedroom layouts. Pricing is indicative — not an offer.',
+            'from_l': 'Starting from', 'from_v': '3.16M THB', 'from_sub': 'approx. $97,000 · 1 Bedroom S (28 m²)',
+            'to_l': 'Layouts', 'to_v': '1 bed', 'to_sub': '28–46 m² · 181 units · completion Q4 2027',
+            'tabs_aria': 'Apartment types',
+            'tabs': [
+                {'id': 'fpVi1s', 'label': '1BR S', 'title': '1 Bedroom S', 'price': 'From 3.16M THB',
+                 'rows': [('Area', '28 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q4 2027')]},
+                {'id': 'fpVi1m', 'label': '1BR M', 'title': '1 Bedroom M', 'price': 'On request',
+                 'rows': [('Area', '30 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q4 2027')]},
+                {'id': 'fpVi1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'On request',
+                 'rows': [('Area', '46 m²'), ('Bedrooms', '1'), ('Bathrooms', '1'), ('Completion', 'Q4 2027')]},
+            ],
+            'pay_kicker': 'Payment plan', 'pay_h2': 'Interest-free instalment schedule.',
+            'pay_p': 'Four equal 25% instalments during construction. Completion targeted Q4 2027.',
+            'pay_steps': pay_std('en', 'Q4 2027'), 'pay_note': NOTE_EN,
+        },
+        'ru': {
+            'pricing_kicker': 'Цены и планировки', 'pricing_h2': 'Ориентировочные цены и типы апартаментов.',
+            'pricing_p': 'Компактный курортный кондоминиум в Банг Тао — 181 юнит, виды на море и горы. Планировки с одной спальней. Цены ориентировочные — не оферта.',
+            'from_l': 'От', 'from_v': '3,16 млн THB', 'from_sub': '≈ $97 000 · 1 Bedroom S (28 m²)',
+            'to_l': 'Планировки', 'to_v': '1 спальня', 'to_sub': '28–46 m² · 181 юнит · сдача Q4 2027',
+            'tabs_aria': 'Типы апартаментов',
+            'tabs': [
+                {'id': 'fpVi1s', 'label': '1BR S', 'title': '1 Bedroom S', 'price': 'От 3,16 млн THB',
+                 'rows': [('Площадь', '28 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q4 2027')]},
+                {'id': 'fpVi1m', 'label': '1BR M', 'title': '1 Bedroom M', 'price': 'По запросу',
+                 'rows': [('Площадь', '30 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q4 2027')]},
+                {'id': 'fpVi1p', 'label': '1BR Plus', 'title': '1 Bedroom Plus', 'price': 'По запросу',
+                 'rows': [('Площадь', '46 m²'), ('Спальни', '1'), ('С/у', '1'), ('Сдача', 'Q4 2027')]},
+            ],
+            'pay_kicker': 'График платежей', 'pay_h2': 'Беспроцентная рассрочка.',
+            'pay_p': 'Четыре равных платежа по 25% в период строительства. Сдача — Q4 2027.',
+            'pay_steps': pay_std('ru', 'Q4 2027'), 'pay_note': NOTE_RU,
+        },
+    },
 }
 
-MARKER_AFTER = re.compile(
-    r'</section>\s*\n\s*(?=<section class="s cream-2" id="investment">|<section class="s[^"]*" id="location">|<section class="s cream" id="location">)'
+# Insert the block immediately BEFORE the opening tag of the investment
+# section (new projects) or the location section (older projects).
+MARKER_BEFORE = re.compile(
+    r'(?:<!--[^>]*-->\s*\n\s*)?<section class="s cream-2" id="investment">'
+    r'|(?:<!--[^>]*-->\s*\n\s*)?<section class="s[^"]*" id="location">'
 )
 
 def process_file(path, lang, meta):
@@ -413,29 +656,27 @@ def process_file(path, lang, meta):
         return False
 
     block = build_pricing_section(lang, meta) + '\n\n' + build_payment_section(lang, meta) + '\n\n'
-    m = MARKER_AFTER.search(text)
+    m = MARKER_BEFORE.search(text)
     if not m:
         print(f'  ERROR: no insertion point in {path.name}')
         return False
     text = text[:m.start()] + block + text[m.start():]
 
-    if 'Floor-plan tabs' not in text and '.fp-tab' in block:
-        # Insert fp-tab JS before closing script tag near footer
-        if '</footer>' in text:
-            script_block = f'<script>{FP_JS}\n</script>\n'
-            text = text.replace('</footer>', script_block + '</footer>', 1)
+    needle = "document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('page-ready'));"
+    if 'Floor-plan tabs' not in text and needle in text:
+        text = text.replace(needle, needle + FP_JS, 1)
 
-    # Update lowPrice in JSON-LD if present
+    # Update lowPrice in JSON-LD if present (per project, THB)
     low_prices = {
-        'vivana': ('3620000', '3750000'),
-        'sierra': ('3047000', None),
-        'olive': ('3700000', None),
-        'balcony': ('5242000', None),
-        'biancana': ('6302000', None),
+        'the-modeva': '4781000',
+        'the-title-artrio': '4263000',
+        'the-title-adora': '4200000',
+        'the-title-katabello': '3830000',
+        'title-vivi': '3160000',
     }
-    for key, (en_p, _) in low_prices.items():
-        if key in path.stem:
-            text = re.sub(r'"lowPrice":\s*"[^"]*"', f'"lowPrice": "{en_p}"', text, count=1)
+    for key, p in low_prices.items():
+        if path.stem == key + '-en' or path.stem == key:
+            text = re.sub(r'"lowPrice":\s*"[^"]*"', f'"lowPrice": "{p}"', text, count=1)
             break
 
     path.write_text(text, encoding='utf-8')
