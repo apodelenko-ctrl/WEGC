@@ -4,10 +4,10 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>West East Gate Real Estate — 精选普吉岛房产 · West East Gate Capital</title>
-<meta name="description" content="West East Gate Real Estate · West East Gate Capital 旗下普吉岛房地产业务。开发商直签合同。买方零佣金。8 个精选项目位于 Bang Tao、Layan、Surin、Nai Yang、Kata、Karon 及内陆别墅区。Leasehold 与 freehold 架构,配备完整文件。"/>
+<meta name="description" content="West East Gate Real Estate · West East Gate Capital 旗下普吉岛房地产业务。开发商直签合同。买方零佣金。11 个精选项目位于 Bang Tao、Layan、Surin、Nai Yang、Kata、Karon 及内陆别墅区。Leasehold 与 freehold 架构,配备完整文件。"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="West East Gate Real Estate — 精选普吉岛房产"/>
-<meta property="og:description" content="开发商直签合同。买方零佣金。8 个普吉岛精选项目,统一委托。"/>
+<meta property="og:description" content="开发商直签合同。买方零佣金。11 个普吉岛精选项目,统一委托。"/>
 <meta property="og:url" content="https://wegc.fund/index-zh.html"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
 <link rel="canonical" href="https://wegc.fund/index-zh.html"/>
@@ -158,20 +158,19 @@ p{color:var(--body);font-weight:400;line-height:1.7}
 /* ─── HERO ──────────────────────────────────────────────── */
 .hero{
   position:relative;min-height:100vh;
-  background:
-    linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%),
-    url('/images/the-modeva-exterior-5-1.jpg') center/cover no-repeat,
-    var(--bg-darker);
+  background:var(--bg-darker);
   display:flex;flex-direction:column;justify-content:center;
   padding:140px 32px 80px;overflow:hidden;color:#fff;
 }
 .hero::before{
-  content:'';position:absolute;inset:0;
+  content:'';position:absolute;inset:0;z-index:2;
   background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.18) 0%,transparent 55%),
              radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);
   pointer-events:none;
 }
-.hero-inner{position:relative;max-width:1240px;margin:0 auto;width:100%}
+.hero-inner{position:relative;z-index:3;max-width:1240px;margin:0 auto;width:100%}
+.hero-bg-layer{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1.4s ease}
+.hero-bg-layer.on{opacity:1}
 .hero-flags{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
 .hero-flag{
   display:inline-flex;align-items:center;gap:10px;
@@ -640,11 +639,12 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 
 <!-- HERO -->
 <section class="hero" id="hero">
+  <div class="hero-bg-layer"></div><div class="hero-bg-layer"></div>
   <div class="hero-inner">
     <div class="hero-flags">
       <span class="hero-flag gold">
         <span class="dot"></span>
-        <span>8 个精选项目 · 内部研究框架已审核</span>
+        <span>11 个精选项目 · 内部研究框架已审核</span>
       </span>
       <span class="hero-flag blue">
         <span class="dot"></span>
@@ -653,7 +653,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     </div>
     <h1>普吉岛房地产 — 面向<strong>私人买家与长期房地产客户</strong>。</h1>
     <p class="hero-sub">
-      有限的海滨土地。强劲的旅游业。明显的租赁旺季。我们是买方与开发商之间唯一的执行节点 — 目前在 Bang Tao、Layan、Surin、Nai Yang、Kata、Karon 与内陆地区拥有 8 个在管项目,均经过我们的内部研究框架筛选,采用 leasehold 或 freehold 合同架构。
+      有限的海滨土地。强劲的旅游业。明显的租赁旺季。我们是买方与开发商之间唯一的执行节点 — 目前在 Bang Tao、Layan、Surin、Nai Yang、Kata、Karon 与内陆地区拥有 11 个在管项目,均经过我们的内部研究框架筛选,采用 leasehold 或 freehold 合同架构。
     </p>
     <div class="hero-actions">
       <a href="#catalog" class="btn btn-primary btn-lg">浏览目录 <span class="arr">↓</span></a>
@@ -662,7 +662,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     <p style="font-size:11px;color:rgba(255,255,255,.5);max-width:64ch;line-height:1.55;margin:-26px 0 32px;letter-spacing:.02em"><sup style="color:#d6b370">[1]</sup> 指示性租赁收益 ranges shown anywhere on this site reflect typical observed performance for stabilised resort projects in the relevant Phuket micro-markets. They are general guidance, not a forecast, not a commitment, and not a guarantee of any particular return. Specific economics depend on the project, developer terms, rental performance, taxes, fees, currency, regulatory changes and market conditions. Past performance does not predict future results.</p>
     <div class="hero-meta">
       <div class="hero-meta-item">
-        <div class="v">8</div>
+        <div class="v">11</div>
         <div class="l">精选项目</div>
       </div>
       <div class="hero-meta-item">
@@ -720,7 +720,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     <div class="cat-toolbar">
       <div>
         <span class="kicker gold">在管目录 · 普吉岛</span>
-        <h2>在管 8 个项目。</h2>
+        <h2>在管 11 个项目。</h2>
       </div>
       <div class="cat-filters" role="tablist" aria-label="项目筛选">
         <button class="cat-filter active" type="button" data-filter="all">全部</button>
@@ -1304,7 +1304,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="contact-text">
           <span class="kicker gold" style="color:var(--gold-bright)">购置房产</span>
           <h2>一份简报。<strong>一份精选档案。</strong>没有大众漏斗。</h2>
-          <p>告诉我们您的身份、预算与 8 个项目中最感兴趣的方向。我们将从 <strong>property@wegc.fund</strong> 回复一份精选档案、内部研究备注以及下一具体步骤。</p>
+          <p>告诉我们您的身份、预算与 11 个项目中最感兴趣的方向。我们将从 <strong>property@wegc.fund</strong> 回复一份精选档案、内部研究备注以及下一具体步骤。</p>
           <p>不群发邮件。不施压销售。我们与重视架构、透明度与稳健决策的客户一对一合作。</p>
           <div class="contact-channels">
             
@@ -1576,5 +1576,27 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 <script src="/chat-widget.js" defer></script>
 <script src="/promo-toast.js" defer></script>
+<script>
+/* Hero: 4 high-quality Phuket photos, random start + gentle crossfade rotation */
+(function(){
+  var GRAD="linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%)";
+  var imgs=['/images/hero/hero-phuket-aerial-sunset.jpg','/images/hero/hero-phuket-infinity-pool.jpg','/images/hero/hero-phuket-villa-architecture.jpg','/images/hero/hero-phuket-bay-karst.jpg'];
+  var layers=document.querySelectorAll('.hero .hero-bg-layer');
+  if(layers.length<2) return;
+  imgs.forEach(function(s){var im=new Image();im.src=s;});
+  var i=Math.floor(Math.random()*imgs.length), cur=0;
+  layers[0].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+  layers[0].classList.add('on');
+  setInterval(function(){
+    i=(i+1)%imgs.length;
+    var nxt=cur^1;
+    layers[nxt].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+    layers[nxt].style.zIndex='1';
+    layers[cur].style.zIndex='0';
+    layers[nxt].classList.add('on');
+    cur=nxt;
+  },6500);
+})();
+</script>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Phuket Real Estate · Eight curated developer-direct projects · West East Gate Capital</title>
-<meta name="description" content="Curated Phuket real-estate desk: eight developer-direct projects across Bang Tao, Layan, Surin, Nai Yang, Kata-Karon and an inland villa community. Direct contracts, due diligence, freehold and leasehold structures, full transaction support."/>
+<title>Phuket Real Estate · Eleven curated developer-direct projects · West East Gate Capital</title>
+<meta name="description" content="Curated Phuket real-estate desk: eleven developer-direct projects across Bang Tao, Layan, Surin, Nai Yang, Kata-Karon and an inland villa community. Direct contracts, due diligence, freehold and leasehold structures, full transaction support."/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="West East Gate Real Estate — Curated Phuket properties · West East Gate Capital"/>
-<meta property="og:description" content="Developer-direct contracts. Zero buyer commission. Eight screened Phuket projects under one mandate."/>
+<meta property="og:description" content="Developer-direct contracts. Zero buyer commission. Eleven screened Phuket projects under one mandate."/>
 <meta property="og:url" content="https://wegc.fund/"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
 <link rel="canonical" href="https://wegc.fund/"/>
@@ -158,20 +158,19 @@ p{color:var(--body);font-weight:400;line-height:1.7}
 /* ─── HERO ──────────────────────────────────────────────── */
 .hero{
   position:relative;min-height:100vh;
-  background:
-    linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%),
-    url('/images/the-modeva-exterior-5-1.jpg') center/cover no-repeat,
-    var(--bg-darker);
+  background:var(--bg-darker);
   display:flex;flex-direction:column;justify-content:center;
   padding:140px 32px 80px;overflow:hidden;color:#fff;
 }
 .hero::before{
-  content:'';position:absolute;inset:0;
+  content:'';position:absolute;inset:0;z-index:2;
   background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.18) 0%,transparent 55%),
              radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);
   pointer-events:none;
 }
-.hero-inner{position:relative;max-width:1240px;margin:0 auto;width:100%}
+.hero-inner{position:relative;z-index:3;max-width:1240px;margin:0 auto;width:100%}
+.hero-bg-layer{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1.4s ease}
+.hero-bg-layer.on{opacity:1}
 .hero-flags{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
 .hero-flag{
   display:inline-flex;align-items:center;gap:10px;
@@ -640,11 +639,12 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 
 <!-- HERO -->
 <section class="hero" id="hero">
+  <div class="hero-bg-layer"></div><div class="hero-bg-layer"></div>
   <div class="hero-inner">
     <div class="hero-flags">
       <span class="hero-flag gold">
         <span class="dot"></span>
-        <span>8 curated projects · GIDR-screened</span>
+        <span>11 curated projects · GIDR-screened</span>
       </span>
       <span class="hero-flag blue">
         <span class="dot"></span>
@@ -653,7 +653,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     </div>
     <h1>Phuket property — for <strong>private buyers and long-term real-estate clients</strong>.</h1>
     <p class="hero-sub">
-      Limited beachfront land. Strong tourism. Distinct rental seasons. We work as a single point of execution between the buyer and the developer — eight live projects under our coverage across Bang Tao, Layan, Surin, Nai Yang, Kata, Karon and an inland villa community, screened by GIDR's territory model and structured under leasehold or freehold contracts.
+      Limited beachfront land. Strong tourism. Distinct rental seasons. We work as a single point of execution between the buyer and the developer — eleven live projects under our coverage across Bang Tao, Layan, Surin, Nai Yang, Kata, Karon and an inland villa community, screened by GIDR's territory model and structured under leasehold or freehold contracts.
     </p>
     <div class="hero-actions">
       <a href="#catalog" class="btn btn-primary btn-lg">Browse catalog <span class="arr">↓</span></a>
@@ -662,7 +662,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     <p style="font-size:11px;color:rgba(255,255,255,.5);max-width:64ch;line-height:1.55;margin:-26px 0 32px;letter-spacing:.02em"><sup style="color:#d6b370">[1]</sup> Indicative rental yield ranges shown anywhere on this site reflect typical observed performance for stabilised resort projects in the relevant Phuket micro-markets. They are general guidance, not a forecast, not a commitment, and not a guarantee of any particular return. Specific economics depend on the project, developer terms, rental performance, taxes, fees, currency, regulatory changes and market conditions. Past performance does not predict future results.</p>
     <div class="hero-meta">
       <div class="hero-meta-item">
-        <div class="v">8</div>
+        <div class="v">11</div>
         <div class="l">Curated projects</div>
       </div>
       <div class="hero-meta-item">
@@ -720,7 +720,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     <div class="cat-toolbar">
       <div>
         <span class="kicker gold">Live catalog · Phuket</span>
-        <h2>Eight projects under coverage.</h2>
+        <h2>Eleven projects under coverage.</h2>
       </div>
       <div class="cat-filters" role="tablist" aria-label="Project filter">
         <button class="cat-filter active" type="button" data-filter="all">All</button>
@@ -1304,7 +1304,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="contact-text">
           <span class="kicker gold" style="color:var(--gold-bright)">Buy property</span>
           <h2>One brief. <strong>One curated dossier.</strong> No mass funnels.</h2>
-          <p>Tell us who you are, your budget and which of the eight projects looks closest. We reply from <strong>property@wegc.fund</strong> with a curated dossier, GIDR notes and the next concrete step.</p>
+          <p>Tell us who you are, your budget and which of the eleven projects looks closest. We reply from <strong>property@wegc.fund</strong> with a curated dossier, GIDR notes and the next concrete step.</p>
           <p>No mass mailings. No pressure tactics. We work one-to-one with private buyers who value structure, transparency and disciplined decisions.</p>
           <div class="contact-channels">
             
@@ -1576,5 +1576,27 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 <script src="/chat-widget.js" defer></script>
 <script src="/promo-toast.js" defer></script>
+<script>
+/* Hero: 4 high-quality Phuket photos, random start + gentle crossfade rotation */
+(function(){
+  var GRAD="linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%)";
+  var imgs=['/images/hero/hero-phuket-aerial-sunset.jpg','/images/hero/hero-phuket-infinity-pool.jpg','/images/hero/hero-phuket-villa-architecture.jpg','/images/hero/hero-phuket-bay-karst.jpg'];
+  var layers=document.querySelectorAll('.hero .hero-bg-layer');
+  if(layers.length<2) return;
+  imgs.forEach(function(s){var im=new Image();im.src=s;});
+  var i=Math.floor(Math.random()*imgs.length), cur=0;
+  layers[0].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+  layers[0].classList.add('on');
+  setInterval(function(){
+    i=(i+1)%imgs.length;
+    var nxt=cur^1;
+    layers[nxt].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+    layers[nxt].style.zIndex='1';
+    layers[cur].style.zIndex='0';
+    layers[nxt].classList.add('on');
+    cur=nxt;
+  },6500);
+})();
+</script>
 </body>
 </html>

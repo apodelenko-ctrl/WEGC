@@ -4,10 +4,10 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>West East Gate Real Estate — Подобранная недвижимость Пхукета · West East Gate Capital</title>
-<meta name="description" content="West East Gate Real Estate · инвестиционный и real-estate бренд WEST EAST TRADE GROUP PTE. LTD.. Прямые контракты с застройщиками Пхукета. Ноль комиссии покупателю. Восемь прошедших скрининг проектов в Bang Tao, Layan, Surin, Nai Yang, Kata, Karon и внутреннее вилла-коммьюнити. Leasehold и freehold структуры с полной документацией."/>
+<meta name="description" content="West East Gate Real Estate · инвестиционный и real-estate бренд WEST EAST TRADE GROUP PTE. LTD.. Прямые контракты с застройщиками Пхукета. Ноль комиссии покупателю. Одиннадцать прошедших скрининг проектов в Bang Tao, Layan, Surin, Nai Yang, Kata, Karon и внутреннее вилла-коммьюнити. Leasehold и freehold структуры с полной документацией."/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="West East Gate Real Estate — Подобранная недвижимость Пхукета · West East Gate Capital"/>
-<meta property="og:description" content="Прямые контракты с застройщиком. Ноль комиссии покупателю. Восемь подобранных проектов Пхукета под единым мандатом."/>
+<meta property="og:description" content="Прямые контракты с застройщиком. Ноль комиссии покупателю. Одиннадцать подобранных проектов Пхукета под единым мандатом."/>
 <meta property="og:url" content="https://wegc.fund/index-ru.html"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
 <meta property="og:locale" content="ru_RU"/>
@@ -102,9 +102,11 @@ p{color:var(--body);font-weight:400;line-height:1.7}
 #topbar.solid .lang-switch:hover{color:var(--ink);background:var(--bg-soft);border-color:#cbd5e1}
 
 /* HERO */
-.hero{position:relative;min-height:100vh;background:linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%),url('/images/the-modeva-exterior-5-1.jpg') center/cover no-repeat,var(--bg-darker);display:flex;flex-direction:column;justify-content:center;padding:140px 32px 80px;overflow:hidden;color:#fff}
+.hero{position:relative;min-height:100vh;background:var(--bg-darker);display:flex;flex-direction:column;justify-content:center;padding:140px 32px 80px;overflow:hidden;color:#fff}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.18) 0%,transparent 55%),radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);pointer-events:none}
-.hero-inner{position:relative;max-width:1240px;margin:0 auto;width:100%}
+.hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;width:100%}
+.hero-bg-layer{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1.4s ease}
+.hero-bg-layer.on{opacity:1}
 .hero-flags{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
 .hero-flag{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 .hero-flag.gold{background:rgba(160,129,86,.18);border:1px solid rgba(160,129,86,.5);color:var(--gold-bright)}
@@ -425,6 +427,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     </a>
     <nav class="topbar-nav">
       <a href="#catalog">Каталог</a>
+      <a href="/rayony-phuket.html">Районы</a>
       <a href="#mechanics">Механика</a>
       <a href="#locations">Локации</a>
       <a href="#process">Процесс</a>
@@ -447,6 +450,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 
 <!-- HERO -->
 <section class="hero" id="hero">
+  <div class="hero-bg-layer"></div><div class="hero-bg-layer"></div>
   <div class="hero-inner">
     <div class="hero-flags">
       <span class="hero-flag gold">
@@ -959,7 +963,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="loc-item">
           <span class="n">01</span>
           <div>
-            <h4>Bang Tao · Laguna</h4>
+            <h4><a href="/rayony/bang-tao.html" style="color:inherit">Bang Tao · Laguna →</a></h4>
             <p>Обжитой пляжный район с ресторанами и кафе международного уровня. Высокий спрос на аренду круглый год.</p>
           </div>
           <span class="y">6–8%</span>
@@ -967,7 +971,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="loc-item">
           <span class="n">02</span>
           <div>
-            <h4>Layan</h4>
+            <h4><a href="/rayony/layan.html" style="color:inherit">Layan →</a></h4>
             <p>Более тихое побережье к северу от Банг Тао. Невысокий порог входа и стабильный спрос со стороны тех, кто снимает надолго.</p>
           </div>
           <span class="y">5–7%</span>
@@ -975,7 +979,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="loc-item">
           <span class="n">03</span>
           <div>
-            <h4>Surin</h4>
+            <h4><a href="/rayony/surin.html" style="color:inherit">Surin →</a></h4>
             <p>Самый премиальный район Пхукета. Земли мало, аудитория международная, ставки аренды в сезон высокие.</p>
           </div>
           <span class="y">6–9%</span>
@@ -983,7 +987,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="loc-item">
           <span class="n">04</span>
           <div>
-            <h4>Nai Yang · Mai Khao</h4>
+            <h4><a href="/rayony/nai-yang.html" style="color:inherit">Nai Yang · Mai Khao →</a></h4>
             <p>Северо-западное побережье у национального парка Sirinat. Рядом аэропорт, предложение ограничено, спрос круглый год.</p>
           </div>
           <span class="y">6–10%</span>
@@ -991,7 +995,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="loc-item">
           <span class="n">05</span>
           <div>
-            <h4>Kata · Karon</h4>
+            <h4><a href="/rayony/kata-karon.html" style="color:inherit">Kata · Karon →</a></h4>
             <p>Классическая курортная зона Пхукета. Выраженная сезонность с заметной прибавкой к ставкам в высокий сезон.</p>
           </div>
           <span class="y">5–7%</span>
@@ -999,7 +1003,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         <div class="loc-item">
           <span class="n">06</span>
           <div>
-            <h4>Inland (villas)</h4>
+            <h4><a href="/rayony/koh-kaew.html" style="color:inherit">Inland · Ко Кео (villas) →</a></h4>
             <p>Внутренние посёлки вилл — для постоянного проживания. Меньше сезонности и больше предсказуемости, но и потолок доходности ниже.</p>
           </div>
           <span class="y">5–7%</span>
@@ -1242,7 +1246,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       </div>
       <div class="f-col">
         <h5>Бизнес</h5>
-        <ul><li><a href="/index-ru.html">Недвижимость Пхукета</a></li><li><a href="/fund-ru.html">Фонд</a></li><li><a href="/private-capital-ru.html">Частный капитал</a></li><li><a href="/research-ru.html">Research / методология</a></li></ul>
+        <ul><li><a href="/index-ru.html">Недвижимость Пхукета</a></li><li><a href="/rayony-phuket.html">Районы Пхукета</a></li><li><a href="/sravnenie/phuket-vs-dubai.html">Пхукет vs Дубай</a></li><li><a href="/fund-ru.html">Фонд</a></li><li><a href="/private-capital-ru.html">Частный капитал</a></li></ul>
       </div>
       <div class="f-col">
         <h5>Корпоративное</h5>
@@ -1434,5 +1438,27 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 <script src="/chat-widget.js" defer></script>
 <script src="/promo-toast.js" defer></script>
+<script>
+/* Hero: 4 high-quality Phuket photos, random start + gentle crossfade rotation */
+(function(){
+  var GRAD="linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%)";
+  var imgs=['/images/hero/hero-phuket-aerial-sunset.jpg','/images/hero/hero-phuket-infinity-pool.jpg','/images/hero/hero-phuket-villa-architecture.jpg','/images/hero/hero-phuket-bay-karst.jpg'];
+  var layers=document.querySelectorAll('.hero .hero-bg-layer');
+  if(layers.length<2) return;
+  imgs.forEach(function(s){var im=new Image();im.src=s;});
+  var i=Math.floor(Math.random()*imgs.length), cur=0;
+  layers[0].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+  layers[0].classList.add('on');
+  setInterval(function(){
+    i=(i+1)%imgs.length;
+    var nxt=cur^1;
+    layers[nxt].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+    layers[nxt].style.zIndex='1';
+    layers[cur].style.zIndex='0';
+    layers[nxt].classList.add('on');
+    cur=nxt;
+  },6500);
+})();
+</script>
 </body>
 </html>
