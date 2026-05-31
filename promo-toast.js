@@ -26,7 +26,7 @@
   var T = (window.WEGC_PROMO && window.WEGC_PROMO[lang]) || DEF[lang];
 
   var css = '' +
-    '.wegc-promo{position:fixed;left:20px;bottom:20px;z-index:99997;width:330px;max-width:calc(100vw - 40px);background:linear-gradient(180deg,#0d1424,#06080f);border:1px solid #1f2937;border-left:3px solid #d6b370;border-radius:14px;box-shadow:0 26px 60px -20px rgba(0,0,0,.7);padding:18px 20px 18px 20px;font-family:inherit;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease}' +
+    '.wegc-promo{position:fixed;right:20px;top:88px;z-index:99997;width:320px;max-width:calc(100vw - 40px);background:linear-gradient(180deg,#0d1424,#06080f);border:1px solid #1f2937;border-left:3px solid #d6b370;border-radius:14px;box-shadow:0 26px 60px -20px rgba(0,0,0,.7);padding:18px 20px 18px 20px;font-family:inherit;opacity:0;transform:translateY(-12px);transition:opacity .35s ease,transform .35s ease}' +
     '.wegc-promo.show{opacity:1;transform:none}' +
     '.wegc-promo .pk{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d6b370;margin-bottom:7px}' +
     '.wegc-promo h5{margin:0 0 6px;color:#fff;font-size:15px;font-weight:600;letter-spacing:-.01em}' +
@@ -35,7 +35,7 @@
     '.wegc-promo .pc:hover{background:#c9a45f}' +
     '.wegc-promo .px{position:absolute;top:10px;right:12px;width:24px;height:24px;border:none;background:transparent;color:rgba(255,255,255,.55);font-size:18px;line-height:1;cursor:pointer}' +
     '.wegc-promo .px:hover{color:#fff}' +
-    '@media(max-width:640px){.wegc-promo{left:12px;right:12px;width:auto;bottom:14px}}';
+    '@media(max-width:640px){.wegc-promo{display:none!important}}';
   var style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
   var el = document.createElement('div');

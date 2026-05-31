@@ -81,8 +81,10 @@ p{color:var(--body);font-weight:400;line-height:1.7}
 #topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s ease,border-color .25s ease}
 #topbar.solid{background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom-color:var(--line)}
 .topbar-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.topbar-brand{display:flex;align-items:baseline;gap:14px;color:#fff}
-.topbar-brand .name{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.topbar-brand{display:flex;align-items:baseline;gap:14px;color:#fff;flex-shrink:0;min-width:0}
+.topbar-brand .name{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+.topbar-brand .tag{white-space:nowrap}
+@media(max-width:1240px){.topbar-brand .tag{display:none}}
 .topbar-brand .tag{font-size:11px;font-weight:300;color:rgba(255,255,255,.6);border-left:1px solid rgba(255,255,255,.2);padding-left:14px;letter-spacing:.04em}
 #topbar.solid .topbar-brand,#topbar.solid .topbar-brand .name{color:var(--ink)}
 #topbar.solid .topbar-brand .tag{color:var(--muted);border-left-color:var(--line)}
@@ -1526,5 +1528,6 @@ document.addEventListener('DOMContentLoaded', function(){
   },6500);
 })();
 </script>
+<script src="/collapse-notes.js" defer></script>
 </body>
 </html>
