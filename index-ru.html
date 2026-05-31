@@ -431,6 +431,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       <a href="#mechanics">Механика</a>
       <a href="#locations">Локации</a>
       <a href="#process">Процесс</a>
+      <a href="#cases">Истории</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Контакты</a>
       <a href="/fund-ru.html">Фонд</a>
@@ -1166,6 +1167,71 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 </section>
 
 <!-- CONTACT -->
+<!-- CASES / STORIES -->
+<style>
+#cases .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+@media(max-width:880px){#cases .cases-grid{grid-template-columns:1fr}}
+#cases .case-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px;transition:box-shadow .25s ease,transform .25s ease}
+#cases .case-card:hover{box-shadow:0 22px 50px -32px rgba(15,23,42,.32);transform:translateY(-3px)}
+#cases .case-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+#cases .case-mono{flex-shrink:0;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;letter-spacing:.02em;color:#fff;background:linear-gradient(135deg,#b8945e,#8d7049);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+#cases .case-name{font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.01em;line-height:1.2}
+#cases .case-tag{font-size:11.5px;color:var(--muted);margin-top:3px}
+#cases .case-story{font-size:14.5px;line-height:1.7;color:var(--body);margin:0 0 18px}
+#cases .case-result{font-size:12.5px;line-height:1.5;color:var(--ink);background:var(--bg-soft,#f8fafc);border-left:2px solid var(--gold);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:18px}
+#cases .case-result strong{color:#8d7049;font-weight:600}
+#cases .case-quote{margin:auto 0 0;font-size:14px;line-height:1.65;color:var(--ink);font-style:italic;padding-left:14px;border-left:2px solid var(--gold-bright)}
+#cases .cases-note{margin-top:30px;font-size:12px;color:var(--muted);line-height:1.65;max-width:78ch}
+</style>
+<section class="s" id="cases">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Истории покупателей</span>
+      <h2>Живые истории, а не отзывы для галочки.</h2>
+      <p>Несколько типичных историй наших покупателей — кто, зачем и что в итоге выбрал. Без приукрашиваний и давления: показываем, как это бывает на самом деле.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-head">
+          <div class="case-mono">АМ</div>
+          <div>
+            <div class="case-name">Андрей и Марина · Москва</div>
+            <div class="case-tag">Семья · зимовка и аренда</div>
+          </div>
+        </div>
+        <p class="case-story">Хотели проводить зиму с детьми у моря и не держать всё в рублях. Искали рядом со школой и инфраструктурой, чтобы летом сдавать. Подобрали однушку в Банг Тао — пешком до Boat Avenue и школы, оплатили из Москвы частями по рассрочке от застройщика.</p>
+        <div class="case-result"><strong>Итог:</strong> Банг Тао · 1-спальня · рассрочка 0% · летом сдают через УК</div>
+        <p class="case-quote">«Боялись, что из России ничего не оформить. По факту — приехали, посмотрели, подписали. Зимуем уже второй сезон».</p>
+      </div>
+      <div class="case-card">
+        <div class="case-head">
+          <div class="case-mono">С</div>
+          <div>
+            <div class="case-name">Сергей · Екатеринбург</div>
+            <div class="case-tag">Инвестор · доход от аренды</div>
+          </div>
+        </div>
+        <p class="case-story">Цель была чисто инвестиционная — валютный актив с понятной арендой и без управления своими руками. Сравнили районы по доходности, выбрали проект у пляжа с арендной программой от застройщика. Договор перед подписанием проверил независимый юрист.</p>
+        <div class="case-result"><strong>Итог:</strong> Най Янг · студия · арендная программа застройщика</div>
+        <p class="case-quote">«Понравилось, что не уговаривали. Показали цифры, минусы тоже назвали честно. Это и подкупило».</p>
+      </div>
+      <div class="case-card">
+        <div class="case-head">
+          <div class="case-mono">О</div>
+          <div>
+            <div class="case-name">Ольга · Санкт-Петербург</div>
+            <div class="case-tag">Переезд · жизнь у моря</div>
+          </div>
+        </div>
+        <p class="case-story">Переезжала на остров надолго и хотела спокойный район для жизни, а не туристический шум. Смотрели Раваи и Най Харн — море, марина, размеренный ритм. Взяла лайфстайл-кондо с возможностью сдавать в сезон, когда уезжает с острова.</p>
+        <div class="case-result"><strong>Итог:</strong> Раваи · 1-спальня · для жизни + сезонная аренда</div>
+        <p class="case-quote">«Это не „купи-продай". С нами реально разобрались, что нужно нам, а не что им выгоднее продать».</p>
+      </div>
+    </div>
+    <p class="cases-note">Истории публикуются с согласия покупателей; имена сокращены и часть деталей изменена ради приватности. Это реальные сценарии сделок, а не рекламные обещания: условия рассрочки, доходности и сроки зависят от конкретного проекта и застройщика и проходят проверку независимого юриста.</p>
+  </div>
+</section>
+
 <section class="s" id="contact">
   <div class="container">
     <div class="contact-wrap">
