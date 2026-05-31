@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>West East Gate Capital — 普吉岛房地产与私人实物资产 · 新加坡</title>
-<meta name="description" content="West East Gate Capital — 新加坡 WEST EAST TRADE GROUP PTE. LTD. 旗下的房地产渠道与私人实物资产业务。直接对接普吉岛开发商,严格的尽职调查,清晰的合同文件。"/>
-<meta name="robots" content="index, follow"/>
+<title>West East Gate Real Estate — 精选普吉岛房产 · West East Gate Capital</title>
+<meta name="description" content="West East Gate Real Estate · West East Gate Capital 旗下普吉岛房地产业务。开发商直签合同。买方零佣金。8 个精选项目位于 Bang Tao、Layan、Surin、Nai Yang、Kata、Karon 及内陆别墅区。Leasehold 与 freehold 架构,配备完整文件。"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="West East Gate Capital — 普吉岛房地产与私人实物资产"/>
-<meta property="og:description" content="通过新加坡企业架构,获取普吉岛房地产与私人实物资产机会。"/>
-<meta property="og:url" content="https://wegc.fund/"/>
-<meta property="og:image" content="https://wegc.fund/images/og/wegc-fund-1200x630.jpg"/>
-<meta property="og:locale" content="zh_CN"/>
-<meta property="og:locale:alternate" content="en_US"/>
-<meta property="og:locale:alternate" content="ru_RU"/>
+<meta property="og:title" content="West East Gate Real Estate — 精选普吉岛房产"/>
+<meta property="og:description" content="开发商直签合同。买方零佣金。8 个普吉岛精选项目,统一委托。"/>
+<meta property="og:url" content="https://wegc.fund/index-zh.html"/>
+<meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
 <link rel="canonical" href="https://wegc.fund/index-zh.html"/>
 <!--HREFLANG-->
 <link rel="alternate" hreflang="en" href="https://wegc.fund/"/>
@@ -21,7 +17,6 @@
 <link rel="alternate" hreflang="zh" href="https://wegc.fund/index-zh.html"/>
 <link rel="alternate" hreflang="x-default" href="https://wegc.fund/"/>
 <!--/HREFLANG-->
-<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -39,19 +34,31 @@
   --line:#e2e8f0;
   --line-soft:#f1f5f9;
   --line-dark:#1f2937;
-  --blue:#1e3a8a;
-  --blue-light:#3b82f6;
+  --blue:#2563eb;
+  --red:#dc2626;
+  --red-dark:#991b1b;
+  --amber:#d97706;
+  --green:#0f5132;
   --gold:#a08156;
+  --gold-soft:#cfc4a2;
   --gold-bright:#d6b370;
   --radius:8px;
   --radius-lg:14px;
-  --hero-bg:url('/images/hero/hero-phuket-aerial-sunset.jpg');
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;opacity:0;transition:opacity .35s ease}
+body{
+  font-family:'Inter',-apple-system,sans-serif;
+  background:#fff;color:var(--ink);
+  font-size:16px;line-height:1.6;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  opacity:0;transition:opacity .35s ease;
+}
 body.page-ready{opacity:1}
-::selection{background:var(--blue);color:#fff}
+::selection{background:var(--gold);color:#fff}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f1f5f9}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit}
@@ -60,61 +67,146 @@ button{font-family:inherit}
 .container-sm{max-width:920px;margin:0 auto;padding:0 32px}
 
 h1,h2,h3,h4{font-weight:300;letter-spacing:-.035em;line-height:1.08;color:var(--ink)}
-h1{font-size:clamp(2.2rem,5.2vw,4.2rem);font-weight:300}
-h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:300}
+h1{font-size:clamp(2.2rem,5.5vw,4.4rem);font-weight:300}
+h2{font-size:clamp(1.8rem,3.6vw,2.8rem);font-weight:300}
 h3{font-size:1.25rem;font-weight:500;letter-spacing:-.02em}
 h4{font-size:1rem;font-weight:600;letter-spacing:-.01em}
 p{color:var(--body);font-weight:400;line-height:1.7}
 
-.kicker{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.kicker{
+  display:inline-block;font-size:11px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;
+}
 .kicker.muted{color:var(--muted)}
+.kicker.amber{color:var(--amber)}
+.kicker.green{color:var(--green)}
 .kicker.blue{color:var(--blue)}
+.kicker.gold{color:var(--gold)}
 
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:14px;font-weight:500;padding:14px 26px;border-radius:var(--radius);cursor:pointer;border:none;text-decoration:none;transition:all .18s ease;white-space:nowrap}
-.btn-primary{background:var(--ink);color:#fff}
-.btn-primary:hover{background:#000;transform:translateY(-1px);box-shadow:0 8px 20px rgba(15,23,42,.18)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:inherit;font-size:14px;font-weight:500;
+  padding:14px 26px;border-radius:var(--radius);
+  cursor:pointer;border:none;text-decoration:none;
+  transition:all .18s ease;white-space:nowrap;
+}
+.btn-primary{background:var(--gold);color:#fff}
+.btn-primary:hover{background:#8c6e44;transform:translateY(-1px);box-shadow:0 8px 20px rgba(160,129,86,.32)}
 .btn-secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .btn-secondary:hover{border-color:#cbd5e1;background:var(--bg-soft)}
 .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
 .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.btn-dark{background:var(--ink);color:#fff;border:none}
+.btn-dark:hover{background:#000;transform:translateY(-1px)}
 .btn-lg{padding:16px 30px;font-size:15px}
 .btn .arr{transition:transform .18s ease}
 .btn:hover .arr{transform:translateX(3px)}
 
-#topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s ease,border-color .25s ease}
-#topbar.solid{background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom-color:var(--line)}
-.topbar-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+/* ─── TOPBAR ─────────────────────────────────────────────── */
+#topbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:transparent;border-bottom:1px solid rgba(255,255,255,.08);
+  transition:background .25s ease,border-color .25s ease;
+}
+#topbar.solid{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:saturate(180%) blur(10px);
+  border-bottom-color:var(--line);
+}
+.topbar-inner{
+  max-width:1320px;margin:0 auto;padding:18px 32px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
 .topbar-brand{display:flex;align-items:baseline;gap:14px;color:#fff}
-.topbar-brand .name{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
-.topbar-brand .tag{font-size:11px;font-weight:300;color:rgba(255,255,255,.6);border-left:1px solid rgba(255,255,255,.2);padding-left:14px;letter-spacing:.04em}
+.topbar-brand .name{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.topbar-brand .tag{
+  font-size:11px;font-weight:300;color:rgba(255,255,255,.6);
+  border-left:1px solid rgba(255,255,255,.2);padding-left:14px;letter-spacing:.04em;
+}
 #topbar.solid .topbar-brand,#topbar.solid .topbar-brand .name{color:var(--ink)}
 #topbar.solid .topbar-brand .tag{color:var(--muted);border-left-color:var(--line)}
 .topbar-nav{display:flex;align-items:center;gap:6px}
-.topbar-nav a{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.78);padding:8px 14px;border-radius:6px;transition:color .15s ease,background .15s ease}
+.topbar-nav a{
+  font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.78);padding:8px 14px;border-radius:6px;
+  transition:color .15s ease,background .15s ease;
+}
 .topbar-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
 #topbar.solid .topbar-nav a{color:var(--muted)}
 #topbar.solid .topbar-nav a:hover{color:var(--ink);background:var(--bg-soft)}
-.topbar-cta{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:transparent;color:#fff;cursor:pointer;border:1px solid rgba(255,255,255,.4);padding:10px 18px;border-radius:6px;transition:all .15s ease;font-family:inherit}
+.topbar-cta{
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  background:transparent;color:#fff;cursor:pointer;
+  border:1px solid rgba(255,255,255,.4);padding:10px 18px;border-radius:6px;
+  transition:all .15s ease;font-family:inherit;
+}
 .topbar-cta:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 #topbar.solid .topbar-cta{color:var(--ink);border-color:var(--line)}
 #topbar.solid .topbar-cta:hover{border-color:#cbd5e1;background:var(--bg-soft)}
+.topbar-actions{display:flex;align-items:center;gap:10px}
+.lang-switch{
+  font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);padding:9px 12px;border-radius:6px;
+  border:1px solid rgba(255,255,255,.15);
+  transition:all .15s ease;
+}
+.lang-switch:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35)}
+#topbar.solid .lang-switch{color:var(--muted);border-color:var(--line)}
+#topbar.solid .lang-switch:hover{color:var(--ink);background:var(--bg-soft);border-color:#cbd5e1}
 
-.hero{position:relative;min-height:92vh;background:linear-gradient(95deg,rgba(6,8,15,.92) 0%,rgba(6,8,15,.7) 50%,rgba(6,8,15,.45) 100%),var(--hero-bg) center/cover no-repeat,var(--bg-darker);display:flex;flex-direction:column;justify-content:center;padding:140px 32px 80px;color:#fff}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.16) 0%,transparent 55%);pointer-events:none}
+/* ─── HERO ──────────────────────────────────────────────── */
+.hero{
+  position:relative;min-height:100vh;
+  background:
+    linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%),
+    url('/images/the-modeva-exterior-5-1.jpg') center/cover no-repeat,
+    var(--bg-darker);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:140px 32px 80px;overflow:hidden;color:#fff;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 18% 35%,rgba(160,129,86,.18) 0%,transparent 55%),
+             radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);
+  pointer-events:none;
+}
 .hero-inner{position:relative;max-width:1240px;margin:0 auto;width:100%}
-.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:rgba(160,129,86,.18);border:1px solid rgba(160,129,86,.5);color:var(--gold-bright);margin-bottom:32px}
-.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-bright);animation:pulse 2.4s ease infinite}
+.hero-flags{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.hero-flag{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:7px 16px;border-radius:999px;
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+}
+.hero-flag.gold{background:rgba(160,129,86,.18);border:1px solid rgba(160,129,86,.5);color:var(--gold-bright)}
+.hero-flag.blue{background:rgba(37,99,235,.14);border:1px solid rgba(37,99,235,.45);color:#93c5fd}
+.hero-flag .dot{width:6px;height:6px;border-radius:50%;animation:pulse 2.4s ease infinite}
+.hero-flag.gold .dot{background:var(--gold-bright)}
+.hero-flag.blue .dot{background:#60a5fa}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{color:#fff;max-width:24ch;font-weight:300;letter-spacing:-.045em;line-height:1.04;margin-bottom:26px}
+.hero h1{
+  color:#fff;max-width:22ch;
+  font-size:clamp(2.2rem,5.4vw,4.4rem);
+  letter-spacing:-.045em;line-height:1.04;
+  font-weight:300;margin-bottom:26px;
+}
 .hero h1 strong{font-weight:600;color:var(--gold-bright)}
-.hero-sub{color:rgba(255,255,255,.78);font-size:clamp(1rem,1.4vw,1.2rem);max-width:64ch;line-height:1.6;font-weight:300;margin-bottom:42px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
-.hero-meta{display:flex;gap:48px;flex-wrap:wrap;padding-top:34px;border-top:1px solid rgba(255,255,255,.12);max-width:880px}
+.hero-sub{
+  color:rgba(255,255,255,.74);
+  font-size:clamp(1rem,1.4vw,1.25rem);
+  max-width:62ch;line-height:1.55;font-weight:300;margin-bottom:42px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:80px}
+.hero-meta{
+  display:flex;gap:48px;flex-wrap:wrap;
+  padding-top:34px;border-top:1px solid rgba(255,255,255,.12);max-width:840px;
+}
 .hero-meta-item{display:flex;flex-direction:column;gap:4px}
-.hero-meta-item .v{font-size:1.4rem;font-weight:600;color:#fff;letter-spacing:-.02em}
+.hero-meta-item .v{font-size:1.5rem;font-weight:600;color:#fff;letter-spacing:-.02em}
 .hero-meta-item .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 
-section.s{padding:110px 0;position:relative}
+/* ─── SECTION ──────────────────────────────────────────── */
+section.s{padding:120px 0;position:relative}
 section.s.cream{background:var(--bg-cream)}
 section.s.cream-2{background:var(--bg-cream-2)}
 section.s.dark{background:var(--bg-darker);color:#fff}
@@ -123,70 +215,271 @@ section.s.dark p{color:rgba(255,255,255,.74)}
 .s-head{margin-bottom:54px;max-width:760px}
 .s-head h2{margin-bottom:14px}
 .s-head p{font-size:17px;color:var(--muted);font-weight:400}
+section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 
-.what-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden}
-.what-item{background:#fff;padding:36px 32px;display:flex;flex-direction:column;gap:14px;transition:background .15s ease}
-.what-item:hover{background:var(--bg-soft)}
-.what-item .num{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--gold)}
-.what-item h3{font-size:1.4rem;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
-.what-item p{font-size:14px;line-height:1.7;color:var(--body)}
-.what-item a.more{margin-top:8px;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid var(--line);padding-bottom:6px;width:max-content;transition:border-color .15s ease}
-.what-item a.more:hover{border-bottom-color:var(--ink)}
+/* ─── INTELLIGENCE LAYER ───────────────────────────────── */
+.intel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden}
+.intel-item{background:#fff;padding:32px 28px;display:flex;flex-direction:column;gap:10px;transition:background .15s ease}
+.intel-item:hover{background:var(--bg-soft)}
+.intel-item .num{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--gold)}
+.intel-item h4{font-size:15.5px;font-weight:600;color:var(--ink);line-height:1.25;letter-spacing:-.005em}
+.intel-item p{font-size:13.5px;line-height:1.6;color:var(--body)}
 
-.path-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
-.path-text > p{font-size:17px;line-height:1.75;color:var(--body);margin-bottom:14px}
-.path-text strong{color:var(--ink);font-weight:600}
-.path-cards{display:flex;flex-direction:column;gap:14px}
-.path-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 28px;display:flex;flex-direction:column;gap:8px}
-.path-card .h{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.path-card h4{font-size:1rem;font-weight:600;color:var(--ink)}
-.path-card .badge-status{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border-radius:3px}
-.path-card .badge-status.closed{background:#ecfdf5;color:#0f5132;border:1px solid #a7f3d0}
-.path-card .badge-status.open{background:rgba(160,129,86,.16);color:var(--gold);border:1px solid rgba(160,129,86,.4)}
-.path-card p{font-size:14px;color:var(--body);line-height:1.65}
+/* ─── CATALOG ───────────────────────────────────────────── */
+.cat-toolbar{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:36px}
+.cat-toolbar h2{margin:0}
+.cat-filters{display:flex;gap:8px;flex-wrap:wrap}
+.cat-filter{
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  border:1px solid var(--line);background:#fff;color:var(--muted);
+  padding:9px 16px;border-radius:999px;cursor:pointer;
+  transition:all .15s ease;
+}
+.cat-filter:hover{border-color:var(--gold);color:var(--ink)}
+.cat-filter.active{border-color:var(--gold);background:var(--gold);color:#fff}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:1100px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+.cat-cover.ph{background:linear-gradient(135deg,#0d1424,#06080f)}.cat-cover img[src=""]{opacity:0}.cat-cover .phl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;z-index:1}
+.cat-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.cat-card:hover{transform:translateY(-3px);box-shadow:0 18px 38px -10px rgba(15,23,42,.18);border-color:#d4cfa8}
+.cat-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0f172a}
+.cat-cover img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.cat-card:hover .cat-cover img{transform:scale(1.04)}
+.cat-tags{position:absolute;top:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap}
+.cat-tag{
+  font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(15,23,42,.78);color:#fff;padding:5px 10px;border-radius:3px;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.cat-tag.gold{background:rgba(160,129,86,.92)}
+.cat-tag.blue{background:rgba(37,99,235,.88)}
+.cat-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
+.cat-body h3{font-size:1.4rem;font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.cat-developer{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.cat-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cat-meta-item .l{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.cat-meta-item .v{font-size:14px;font-weight:600;color:var(--ink)}
+.cat-desc{font-size:14px;line-height:1.6;color:var(--body)}
+.cat-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto}
+.cat-actions a{
+  font-size:13px;font-weight:600;letter-spacing:.06em;
+  color:var(--ink);display:inline-flex;align-items:center;gap:6px;
+  padding:8px 0;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;
+}
+.cat-actions a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.cat-actions a.muted{color:var(--muted)}
+.cat-actions a.muted:hover{color:var(--ink);border-bottom-color:var(--ink)}
 
-.compliance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.comp-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 28px;display:flex;flex-direction:column;gap:14px}
-.comp-card h4{font-size:1.05rem;font-weight:600;color:var(--ink);letter-spacing:-.01em;margin-bottom:4px}
-.comp-card p{font-size:14px;line-height:1.7;color:var(--body)}
-.comp-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.comp-card li{position:relative;padding-left:18px;font-size:13px;color:var(--body);line-height:1.55}
-.comp-card li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+/* ─── MECHANICS ────────────────────────────────────────── */
+.mech-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
+.mech-text > p{font-size:17px;line-height:1.7;color:var(--body);margin-bottom:14px}
+.mech-text strong{color:var(--ink);font-weight:600}
+.mech-table{margin-top:32px;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:#fff}
+.mech-row{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--line)}
+.mech-row:last-child{border-bottom:0}
+.mech-row.head{background:var(--bg-soft)}
+.mech-cell{padding:14px 18px;font-size:13.5px;color:var(--body);border-right:1px solid var(--line)}
+.mech-cell:last-child{border-right:0}
+.mech-row.head .mech-cell{font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11px;color:var(--muted)}
+.mech-cell strong{color:var(--ink);font-weight:600}
+.mech-side{display:flex;flex-direction:column;gap:14px}
+.mech-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px;
+}
+.mech-card .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
+.mech-card .v{font-size:1.6rem;font-weight:500;letter-spacing:-.02em;color:var(--ink);margin-bottom:6px}
+.mech-card p{font-size:13px;color:var(--muted);line-height:1.6}
+.mech-disclaimer{margin-top:22px;font-size:12px;color:var(--muted);line-height:1.65;padding:14px 18px;background:var(--bg-soft);border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0}
 
-.research-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.research-text > p{font-size:17px;line-height:1.7;color:rgba(255,255,255,.78);margin-bottom:14px;font-weight:300}
-.research-text strong{color:#fff;font-weight:500}
-.research-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:36px 32px}
-.research-card h4{font-size:.85rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:18px}
-.research-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
-.research-card li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
-.research-card li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold-bright);margin-top:9px}
-.research-card li span{font-size:14px;line-height:1.55;color:rgba(255,255,255,.85)}
+/* ─── LOCATION INTELLIGENCE ───────────────────────────── */
+.loc-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:36px;align-items:start}
+.loc-list{display:flex;flex-direction:column;gap:10px}
+.loc-item{
+  display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;
+  padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  transition:border-color .15s ease,background .15s ease;
+}
+.loc-item:hover{border-color:var(--gold);background:#fffaf0}
+.loc-item .n{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--gold)}
+.loc-item h4{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.loc-item p{font-size:12.5px;line-height:1.55;color:var(--muted);margin:0}
+.loc-item .y{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:-.01em;font-feature-settings:'tnum';white-space:nowrap}
+.loc-map{
+  position:relative;
+  background:radial-gradient(ellipse at 50% 50%,#0e1322 0%,#06080f 80%);
+  border-radius:var(--radius-lg);overflow:hidden;color:#fff;
+  display:grid;grid-template-columns:1fr 200px;gap:0;
+  border:1px solid #1f2937;
+  min-height:560px;
+}
+.phuket-svg{
+  width:100%;height:100%;display:block;
+  padding:18px;
+}
+.phuket-svg .map-pin{cursor:pointer;transform-origin:center;transition:transform .25s ease}
+.phuket-svg .map-pin:hover{transform:translate(var(--tx,0),var(--ty,0)) scale(1.08)}
+.phuket-svg .pin-glow{transform-origin:center;animation:mapPing 2.8s cubic-bezier(0,0,.2,1) infinite}
+@keyframes mapPing{0%{transform:scale(.7);opacity:.7}80%,100%{transform:scale(1.4);opacity:0}}
+.map-legend{
+  border-left:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.18);
+  padding:24px 22px;
+  display:flex;flex-direction:column;gap:14px;
+  backdrop-filter:blur(8px);
+}
+.map-legend-row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
+.map-legend-num{
+  width:26px;height:26px;border-radius:50%;
+  background:var(--gold-bright);color:#0a0e1a;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;
+  box-shadow:0 0 0 3px rgba(214,179,112,.18);
+}
+.map-legend-name{font-size:13px;font-weight:600;color:#fff;letter-spacing:-.005em}
+.map-legend-meta{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.04em;margin-top:1px}
 
-.contact-wrap{background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);border-radius:var(--radius-lg);padding:64px 48px;color:#fff;position:relative;overflow:hidden}
-.contact-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(160,129,86,.16) 0%,transparent 60%);pointer-events:none}
+/* ─── PROCESS (dark, full-bleed) ─────────────────────── */
+.s-process{
+  position:relative;color:#fff;overflow:hidden;isolation:isolate;
+  padding:140px 32px;
+  background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);
+}
+.s-process::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 12% 30%,rgba(160,129,86,.16) 0%,transparent 55%),
+             radial-gradient(circle at 86% 60%,rgba(37,99,235,.10) 0%,transparent 55%);
+  pointer-events:none;
+}
+.process-inner{position:relative;max-width:1240px;margin:0 auto}
+.process-header{margin-bottom:54px;max-width:680px}
+.process-header h2{color:#fff;font-weight:300;margin-bottom:14px}
+.process-header h2 strong{color:var(--gold-bright);font-weight:500}
+.process-header p{color:rgba(255,255,255,.74);font-size:17px;line-height:1.65;font-weight:300}
+.process-list{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.process-step{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);padding:24px 22px;
+  display:flex;flex-direction:column;gap:14px;
+  transition:border-color .18s ease,background .18s ease;
+}
+.process-step:hover{border-color:rgba(214,179,112,.45);background:rgba(255,255,255,.06)}
+.process-num{font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--gold-bright)}
+.process-step h4{font-size:15px;font-weight:600;color:#fff;letter-spacing:-.005em;line-height:1.25}
+.process-step p{font-size:13px;line-height:1.55;color:rgba(255,255,255,.65);margin:0}
+
+/* ─── GIDR / TIL ──────────────────────────────────────── */
+.gidr-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.gidr-text > p{font-size:17px;line-height:1.7;color:var(--body);margin-bottom:14px}
+.gidr-text strong{color:var(--ink);font-weight:600}
+.gidr-card{
+  background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);
+  border:1px solid #1f2937;border-radius:var(--radius-lg);
+  padding:38px 36px;color:#fff;position:relative;overflow:hidden;
+}
+.gidr-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 80% 0%,rgba(160,129,86,.18) 0%,transparent 55%);
+  pointer-events:none;
+}
+.gidr-card .label{
+  display:flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-bright);font-weight:700;margin-bottom:24px;
+}
+.gidr-card .label .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-bright);animation:pulse 2.4s ease infinite}
+.gidr-card h3{font-size:1.6rem;font-weight:300;color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:24px;max-width:24ch}
+.gidr-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.gidr-stat{padding:16px 0;border-top:1px solid rgba(255,255,255,.1)}
+.gidr-stat .v{font-size:1.5rem;font-weight:600;color:#fff;letter-spacing:-.02em}
+.gidr-stat .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:4px}
+
+/* ─── OWNERSHIP ────────────────────────────────────────── */
+.own-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.own-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.own-card h4{font-size:1.05rem;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin-bottom:4px}
+.own-card p{font-size:14px;line-height:1.65;color:var(--body)}
+.own-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.own-card li{position:relative;padding-left:18px;font-size:13.5px;color:var(--body);line-height:1.55}
+.own-card li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+/* ─── FAQ ──────────────────────────────────────────────── */
+.faq-list{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;cursor:pointer}
+.faq-item summary{
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;
+  font-size:15.5px;font-weight:500;color:var(--ink);letter-spacing:-.005em;line-height:1.4;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-icon{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+  font-size:14px;color:var(--muted);transition:all .2s ease;
+}
+.faq-item[open] .faq-icon{transform:rotate(45deg);color:var(--gold);border-color:var(--gold)}
+.faq-item p{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--body);line-height:1.7}
+
+/* ─── CONTACT ──────────────────────────────────────────── */
+.contact-wrap{
+  background:linear-gradient(180deg,#0a0e1a 0%,#06080f 100%);
+  border-radius:var(--radius-lg);padding:64px 48px;
+  color:#fff;position:relative;overflow:hidden;
+}
+.contact-wrap::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 0%,rgba(160,129,86,.16) 0%,transparent 60%);
+  pointer-events:none;
+}
 .contact-grid{position:relative;display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}
 .contact-text h2{color:#fff;font-weight:300;margin-bottom:16px}
 .contact-text h2 strong{color:var(--gold-bright);font-weight:500}
-.contact-text p{color:rgba(255,255,255,.78);font-size:16px;line-height:1.65;margin-bottom:14px}
+.contact-text p{color:rgba(255,255,255,.74);font-size:16px;line-height:1.65;margin-bottom:14px}
 .contact-text strong{color:#fff;font-weight:600}
 .contact-channels{display:flex;flex-direction:column;gap:10px;margin-top:24px}
-.contact-channel{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);font-size:13.5px;color:#fff;font-weight:500;background:rgba(255,255,255,.04);transition:all .15s ease}
+.contact-channel{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 18px;border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);
+  font-size:13.5px;color:#fff;font-weight:500;
+  background:rgba(255,255,255,.04);
+  transition:all .15s ease;
+}
 .contact-channel:hover{border-color:var(--gold-bright);background:rgba(255,255,255,.08)}
-.contact-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:32px;display:flex;flex-direction:column;gap:14px}
+.contact-channel .ico{width:18px;height:18px;display:inline-flex}
+.contact-form{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius-lg);padding:32px;display:flex;flex-direction:column;gap:14px;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .cf-field{display:flex;flex-direction:column;gap:6px}
 .cf-field label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600}
-.cf-field input,.cf-field select,.cf-field textarea{font-family:inherit;font-size:14px;color:#fff;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);padding:11px 14px;border-radius:6px;outline:none;transition:border-color .15s ease}
+.cf-field input,.cf-field select,.cf-field textarea{
+  font-family:inherit;font-size:14px;color:#fff;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);
+  padding:11px 14px;border-radius:6px;outline:none;
+  transition:border-color .15s ease,background .15s ease;
+}
 .cf-field input:focus,.cf-field select:focus,.cf-field textarea:focus{border-color:var(--gold-bright);background:rgba(255,255,255,.07)}
-.cf-field input::placeholder,.cf-field textarea::placeholder{color:rgba(255,255,255,.38)}
+.cf-field input::placeholder,.cf-field textarea::placeholder{color:rgba(255,255,255,.4)}
 .cf-field select option{background:#0a0e1a;color:#fff}
 .cf-agree{display:flex;align-items:flex-start;gap:10px;font-size:12px;color:rgba(255,255,255,.6);line-height:1.55}
 .cf-agree input{margin-top:3px;accent-color:var(--gold-bright)}
 .cf-agree a{color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.3)}
-.cf-submit{background:#fff;color:var(--ink);font-size:14px;font-weight:600;letter-spacing:.06em;border:none;padding:14px 22px;border-radius:6px;cursor:pointer;transition:all .18s ease}
-.cf-submit:hover{background:#f1f5f9;transform:translateY(-1px)}
+.cf-submit{
+  background:var(--gold);color:#fff;font-size:14px;font-weight:600;letter-spacing:.06em;
+  border:none;padding:14px 22px;border-radius:6px;cursor:pointer;
+  transition:all .18s ease;
+}
+.cf-submit:hover{background:#8c6e44;transform:translateY(-1px)}
+.cf-message{font-size:13px;padding:12px 16px;border-radius:6px;line-height:1.5;display:none}
+.cf-message.show{display:block}
+.cf-message.ok{background:rgba(15,81,50,.18);border:1px solid rgba(15,81,50,.5);color:#86efac}
+.cf-message.err{background:rgba(220,38,38,.18);border:1px solid rgba(220,38,38,.5);color:#fca5a5}
 
+/* ─── FOOTER ───────────────────────────────────────────── */
 footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px solid var(--line-dark)}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.4fr;gap:44px;margin-bottom:36px;align-items:start}
 .f-col h5{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px}
@@ -206,51 +499,43 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 .f-bottom span{font-size:11.5px;color:#64748b;letter-spacing:.02em}
 @media(max-width:1080px){.f-grid{grid-template-columns:1fr 1fr 1fr;gap:36px}.f-col-brand,.f-col-contact{grid-column:1/-1}.f-col-brand p{max-width:62ch}}
 @media(max-width:640px){.f-grid{grid-template-columns:1fr;gap:28px}.f-col-brand,.f-col-contact{grid-column:auto}}
-/* RESPONSIVE — added 2026-05-24 */
+
+/* ─── Responsive ───────────────────────────────────────── */
 @media (max-width:1080px){
-  .compliance-grid{grid-template-columns:1fr 1fr}
-  .topbar-nav{gap:2px}
-  .topbar-nav a{padding:7px 10px;font-size:11px;letter-spacing:.08em}
+  .intel-grid{grid-template-columns:1fr 1fr}
+  .process-list{grid-template-columns:1fr 1fr}
+  .own-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:980px){
-  .topbar-nav{display:none}
-  .topbar-brand .tag{display:none}
-  .path-grid{grid-template-columns:1fr;gap:40px}
-  .research-grid{grid-template-columns:1fr;gap:40px}
-  .contact-grid{grid-template-columns:1fr;gap:36px}
-  .what-grid{grid-template-columns:1fr}
-  .compliance-grid{grid-template-columns:1fr 1fr;gap:18px}
-  .hero h1{max-width:none}
+  .cat-grid{grid-template-columns:1fr}
+  .mech-grid,.gidr-grid,.loc-grid{grid-template-columns:1fr;gap:36px}
+  .contact-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .loc-map{grid-template-columns:1fr;min-height:auto}
+  .map-legend{border-left:0;border-top:1px solid rgba(255,255,255,.08);flex-direction:row;flex-wrap:wrap;gap:12px}
+  .map-legend-row{flex:1;min-width:160px}
 }
 @media (max-width:640px){
   .container,.container-sm{padding:0 22px}
-  section.s{padding:72px 0}
-  .s-head{margin-bottom:34px}
-  .s-head p{font-size:15px}
-  .hero{min-height:auto;padding:120px 22px 64px}
-  .hero-badge{margin-bottom:22px;font-size:10px;padding:6px 13px}
-  .hero h1{font-size:clamp(2rem,8.4vw,3rem);margin-bottom:18px}
-  .hero-sub{font-size:15px;line-height:1.55;margin-bottom:30px}
-  .hero-actions{flex-direction:column;gap:10px;margin-bottom:44px;width:100%}
+  section.s{padding:80px 0}
+  .s-process{padding:80px 22px}
+  .hero{padding:120px 22px 64px}
   .hero-actions .btn{width:100%;justify-content:center}
-  .hero-meta{gap:22px 28px;padding-top:26px}
-  .hero-meta-item{flex:1 1 calc(50% - 14px);min-width:130px}
-  .hero-meta-item .v{font-size:1.2rem}
-  .hero-meta-item .l{font-size:10.5px}
-  .topbar-inner{padding:14px 22px;gap:12px}
-  .topbar-brand .name{font-size:13px;letter-spacing:.12em}
-  .topbar-cta{padding:8px 13px;font-size:10px;letter-spacing:.1em}
-  .what-grid{grid-template-columns:1fr}
-  .what-item{padding:28px 24px}
-  .what-item h3{font-size:1.2rem}
-  .compliance-grid{grid-template-columns:1fr;gap:14px}
-  .comp-card{padding:24px 22px}
-  .research-card{padding:28px 24px}
-  .contact-wrap{padding:40px 22px;border-radius:12px}
-  .contact-form{padding:24px 20px}
-  .cf-row{grid-template-columns:1fr;gap:10px}
-  .path-card{padding:22px 22px}
-  .path-card .h{flex-wrap:wrap;gap:8px}
+  .topbar-inner{padding:14px 22px}
+  .topbar-brand .tag{display:none}
+  .topbar-nav{display:none}
+  .intel-grid{grid-template-columns:1fr}
+  .process-list{grid-template-columns:1fr}
+  .own-grid{grid-template-columns:1fr}
+  .cat-meta{grid-template-columns:1fr 1fr}
+  .cf-row{grid-template-columns:1fr}
+  .contact-wrap{padding:40px 24px}
+  .f-grid{grid-template-columns:1fr;gap:28px}
+  .hero-meta{gap:24px}
+  .hero-meta-item .v{font-size:1.25rem}
+  .mech-row{grid-template-columns:1fr}
+  .mech-cell{border-right:0;border-bottom:1px solid var(--line)}
+  .mech-row:last-child .mech-cell:last-child{border-bottom:0}
 }
 /* lang switcher (universal) */
 .lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px}
@@ -267,22 +552,45 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 .legal-topbar .lang-sw-a:hover{color:#0f172a;background:#fbfaf6}
 .legal-topbar .lang-sw-a.active{background:#a08156;color:#fff}
 @media(max-width:640px){.lang-sw{padding:2px}.lang-sw-a{padding:5px 10px;font-size:10px}}
-/* Featured project announcement */
-.feat{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 22px 60px -28px rgba(15,23,42,.32)}
-.feat-img{position:relative;min-height:380px;background:#0a0e1a}
-.feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.feat-img .ribbon{position:absolute;top:18px;left:18px;background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:6px 13px;border-radius:4px;z-index:1;box-shadow:0 6px 16px rgba(160,129,86,.4)}
-.feat-body{padding:48px 52px;display:flex;flex-direction:column;justify-content:center}
-.feat-body .k{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.feat-body h3{font-size:1.95rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;color:var(--ink)}
-.feat-body h3 strong{font-weight:600}
-.feat-body > p{font-size:15px;color:var(--body);line-height:1.7;margin-bottom:24px;max-width:46ch}
-.feat-stats{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:28px;padding-top:22px;border-top:1px solid var(--line)}
-.feat-stats .v{font-size:1.15rem;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-.feat-stats .l{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-.feat-actions{display:flex;gap:12px;flex-wrap:wrap}
-@media(max-width:880px){.feat{grid-template-columns:1fr}.feat-img{min-height:240px}.feat-body{padding:34px 28px}.feat-body h3{font-size:1.6rem}}
-@media(max-width:640px){.feat-actions{flex-direction:column}.feat-actions .btn{width:100%;justify-content:center}.feat-stats{gap:22px}}
+
+
+/* Leaflet map styling */
+.phuket-leaflet-map-wrap{position:relative;width:100%;height:100%;min-height:560px}
+#phuket-leaflet-map{font-family:'Inter',sans-serif}
+.wegc-pin .wegc-pin-dot{
+  width:32px;height:32px;border-radius:50%;
+  background:#d6b370;color:#0a0e1a;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;font-family:'Inter',sans-serif;
+  border:2px solid #fff;
+  box-shadow:0 0 0 4px rgba(214,179,112,.18),0 4px 14px rgba(0,0,0,.45);
+  cursor:pointer;transition:transform .18s ease;
+}
+.wegc-pin:hover .wegc-pin-dot{transform:scale(1.12)}
+.wegc-tip{
+  background:rgba(10,14,26,.95)!important;color:#fff!important;
+  border:1px solid rgba(214,179,112,.4)!important;
+  border-radius:6px!important;padding:4px 10px!important;
+  font-size:12px!important;font-weight:600!important;letter-spacing:.04em;
+  box-shadow:0 4px 14px rgba(0,0,0,.4)!important;
+}
+.wegc-tip::before{display:none!important}
+.leaflet-control-zoom a{
+  background:rgba(10,14,26,.85)!important;color:#fff!important;
+  border-color:rgba(255,255,255,.18)!important;
+}
+.leaflet-control-zoom a:hover{background:rgba(214,179,112,.85)!important;color:#0a0e1a!important}
+.leaflet-control-attribution{
+  background:rgba(0,0,0,.55)!important;color:rgba(255,255,255,.6)!important;
+  font-size:9px!important;
+}
+.leaflet-control-attribution a{color:rgba(255,255,255,.78)!important}
+@media (max-width:980px){
+  .loc-map{grid-template-columns:1fr!important;min-height:auto!important}
+  #phuket-leaflet-map{min-height:420px;border-radius:14px 14px 0 0!important}
+}
+
+
 /* Settlement differentiator */
 .settle-wrap{background:linear-gradient(180deg,#0a0e1a,#06080f);border:1px solid #1f2937;border-radius:var(--radius-lg);padding:56px 48px;color:#fff;position:relative;overflow:hidden}
 .settle-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 0%,rgba(160,129,86,.18) 0%,transparent 55%);pointer-events:none}
@@ -296,140 +604,461 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 .settle-card .d{font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.55}
 .settle-note{position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,.5);line-height:1.65;margin-top:26px;max-width:84ch}
 @media(max-width:640px){.settle-wrap{padding:38px 22px}}
-
 </style>
-<script>
-/* Hero rotation: random choice of 4 background photos on each page load */
-(function(){
-  var heroes=[
-    '/images/hero/hero-phuket-aerial-sunset.jpg',
-    '/images/hero/hero-phuket-infinity-pool.jpg',
-    '/images/hero/hero-phuket-villa-architecture.jpg',
-    '/images/hero/hero-phuket-bay-karst.jpg'
-  ];
-  var pick=heroes[Math.floor(Math.random()*heroes.length)];
-  document.documentElement.style.setProperty('--hero-bg',"url('"+pick+"')");
-  var img=new Image(); img.src=pick;
-})();
-</script>
-<!--JSONLD-->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "West East Gate Capital",
-  "legalName": "WEST EAST TRADE GROUP PTE. LTD.",
-  "url": "https://wegc.fund/",
-  "logo": "https://wegc.fund/images/og/wegc-fund-1200x630.jpg",
-  "image": "https://wegc.fund/images/og/wegc-fund-1200x630.jpg",
-  "description": "Singapore-incorporated access to Phuket developer-direct real estate and private real-asset mandates. Disciplined due diligence, KYC/AML, signed legal documentation.",
-  "email": "post@wegc.fund",
-  "telephone": "",
-  "areaServed": ["Phuket, Thailand", "Singapore"],
-  "address": {"@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore"},
-  "identifier": {"@type": "PropertyValue", "name": "UEN", "value": "202505772C"},
-  "knowsLanguage": ["en", "ru", "zh"]
-}
-</script>
-<!--/JSONLD-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 </head>
 <body>
 
 <header id="topbar">
   <div class="topbar-inner">
     <a href="/index-zh.html" class="topbar-brand">
-      <span class="name">West East Gate Capital</span>
-      <span class="tag">WEST EAST TRADE GROUP PTE. LTD. · 新加坡</span>
+      <span class="name">West East Gate Real Estate</span>
+      <span class="tag">West East Gate Capital · 普吉岛房地产部门</span>
     </a>
     <nav class="topbar-nav">
-      <a href="#what">业务</a>
-      <a href="/wet-agency-zh.html">房地产</a>
-      <a href="/private-capital-zh.html">私人资本</a>
-      <a href="/research-zh.html">研究</a>
-      <a href="/corporate.html">公司</a>
+      <a href="#catalog">项目目录</a>
+      <a href="#mechanics">所有权机制</a>
+      <a href="#locations">地段</a>
+      <a href="#process">流程</a>
+      <a href="#faq">常见问题</a>
       <a href="#contact">联系</a>
+      <a href="/fund-zh.html">基金</a>
     </nav>
-    <div class="lang-sw" role="navigation" aria-label="Language">
+    <div class="topbar-actions">
+      <div class="lang-sw" role="navigation" aria-label="Language">
   <a href="/" class="lang-sw-a " hreflang="en">EN</a>
   <a href="/index-ru.html" class="lang-sw-a " hreflang="ru">RU</a>
   <a href="/index-zh.html" class="lang-sw-a active" hreflang="zh">中文</a>
 </div>
-    <a href="#contact" class="topbar-cta">申请信息</a>
+    <a href="#contact" class="topbar-cta">购置房产</a>
+    </div>
   </div>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-inner">
-    <div class="hero-badge">
-      <span class="dot"></span>
-      <span>新加坡私人公司 · 普吉岛房地产渠道</span>
+    <div class="hero-flags">
+      <span class="hero-flag gold">
+        <span class="dot"></span>
+        <span>8 个精选项目 · 内部研究框架已审核</span>
+      </span>
+      <span class="hero-flag blue">
+        <span class="dot"></span>
+        <span>开发商直签 · 买方零佣金</span>
+      </span>
     </div>
-    <h1>普吉岛房地产与<strong>私人实物资产</strong>。</h1>
+    <h1>普吉岛房地产 — 面向<strong>私人买家与长期房地产客户</strong>。</h1>
     <p class="hero-sub">
-      West East Gate Capital 是新加坡 WEST EAST TRADE GROUP PTE. LTD. 旗下的房地产渠道与私人实物资产业务品牌。我们通过严格的尽职调查与清晰的合同文件,为私人客户对接精选的普吉岛度假地产、直接的开发商合同,以及私人实物资产委托业务。
+      有限的海滨土地。强劲的旅游业。明显的租赁旺季。我们是买方与开发商之间唯一的执行节点 — 目前在 Bang Tao、Layan、Surin、Nai Yang、Kata、Karon 与内陆地区拥有 8 个在管项目,均经过我们的内部研究框架筛选,采用 leasehold 或 freehold 合同架构。
     </p>
     <div class="hero-actions">
-      <a href="/wet-agency-zh.html" class="btn btn-secondary btn-lg">普吉岛房地产 <span class="arr">→</span></a>
-      <a href="#contact" class="btn btn-ghost btn-lg">申请私人信息</a>
+      <a href="#catalog" class="btn btn-primary btn-lg">浏览目录 <span class="arr">↓</span></a>
+      <a href="#contact" class="btn btn-ghost btn-lg">购置房产</a>
     </div>
+    <p style="font-size:11px;color:rgba(255,255,255,.5);max-width:64ch;line-height:1.55;margin:-26px 0 32px;letter-spacing:.02em"><sup style="color:#d6b370">[1]</sup> 指示性租赁收益 ranges shown anywhere on this site reflect typical observed performance for stabilised resort projects in the relevant Phuket micro-markets. They are general guidance, not a forecast, not a commitment, and not a guarantee of any particular return. Specific economics depend on the project, developer terms, rental performance, taxes, fees, currency, regulatory changes and market conditions. Past performance does not predict future results.</p>
     <div class="hero-meta">
-      <div class="hero-meta-item"><div class="v">2025</div><div class="l">新加坡注册</div></div>
-      <div class="hero-meta-item"><div class="v">8</div><div class="l">在管普吉岛项目</div></div>
-      <div class="hero-meta-item"><div class="v">Private</div><div class="l">仅限非公开配售</div></div>
-      <div class="hero-meta-item"><div class="v">符合银行标准</div><div class="l">KYC / AML / PDPA</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED PROJECT — CASA DE MONTE -->
-<section class="s" style="padding-top:80px;padding-bottom:24px">
-  <div class="container">
-    <div class="feat">
-      <div class="feat-img">
-        <span class="ribbon">精选项目</span>
-        <img src="/images/projects/casademonte-hero.jpg" alt="Casa de Monte — 普吉岛 Koh Kaew 泳池别墅" loading="lazy"/>
+      <div class="hero-meta-item">
+        <div class="v">8</div>
+        <div class="l">精选项目</div>
       </div>
-      <div class="feat-body">
-        <div class="k">全新 · 普吉岛房产</div>
-        <h3>Casa de Monte — <strong>Koh Kaew, 普吉岛</strong></h3>
-        <p>由开发商 The Title 打造的 36 栋专属泳池别墅,3–4 居室,建筑面积 297–450 m²。意式建筑风格,坐落于静谧内陆社区,统一物业管理标准。</p>
-        <div class="feat-stats">
-          <div><div class="v">起价 2,820 万泰铢</div><div class="l">参考价格</div></div>
-          <div><div class="v">36 栋别墅</div><div class="l">泳池别墅</div></div>
-          <div><div class="v">2029年7月</div><div class="l">交付</div></div>
-        </div>
-        <div class="feat-actions">
-          <a href="/projects/casa-de-monte-zh.html" class="btn btn-primary">查看项目档案 <span class="arr">→</span></a>
-          <a href="/wet-agency-zh.html#catalog" class="btn btn-secondary">所有普吉岛项目</a>
-        </div>
+      <div class="hero-meta-item">
+        <div class="v">0%</div>
+        <div class="l">买方佣金</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="v">5–9%</div>
+        <div class="l">指示性租赁收益<sup style="font-size:8px;color:#d6b370;margin-left:4px">[1]</sup></div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="v">100%</div>
+        <div class="l">开发商合同执行</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT WE DO -->
-<section class="s cream" id="what">
+<!-- INTELLIGENCE LAYER -->
+<section class="s cream" id="intelligence">
   <div class="container">
     <div class="s-head">
-      <span class="kicker">业务</span>
-      <h2>两条业务线。一个新加坡企业架构。</h2>
-      <p>WEGC 不是公开投资基金、财务顾问或 MAS 持牌基金管理人。我们以新加坡私人公司形式开展房地产顾问与私人实物资产渠道业务;所有客户关系均须经过 KYC/AML、适配性审核与签署的法律文件。</p>
+      <span class="kicker gold">为何通过我们购买</span>
+      <h2>项目纳入目录前的四大原则。</h2>
+      <p>我们不会上架所有可售项目。每个项目须通过四步筛选 — 地段、开发商、架构、退出 — 之后才会出现在您正阅读的页面上。</p>
     </div>
-    <div class="what-grid">
-      <article class="what-item">
-        <span class="num">01 · 房地产渠道</span>
-        <h3>开发商直签的普吉岛房产</h3>
-        <p>精选覆盖 Bang Tao、Layan、Kata、Karon 与 Rawai 等普吉岛度假项目。按开发商挂牌价直接签约,尽职调查,leasehold 或 freehold 架构,端到端交易支持。</p>
-        <a href="/wet-agency-zh.html" class="more">打开房地产模块 →</a>
+    <div class="intel-grid">
+      <div class="intel-item">
+        <span class="num">01 · 地段</span>
+        <h4>内部框架筛选的地段</h4>
+        <p>每个项目均通过我们内部的领地研究框架进行比对 — 地理空间、气候、基础设施与旅游相关数据均纳入考量。</p>
+      </div>
+      <div class="intel-item">
+        <span class="num">02 · 开发商</span>
+        <h4>以履历而非宣传册为准</h4>
+        <p>基于已交付项目、施工质量、建设节点与交付后服务进行开发商筛选 — 不只看精美渲染图。</p>
+      </div>
+      <div class="intel-item">
+        <span class="num">03 · 架构</span>
+        <h4>开发商直签合同</h4>
+        <p>您与开发商按其挂牌价直接签约。无中介加价。我们的酬劳由开发商支付 — 买方佣金为零。</p>
+      </div>
+      <div class="intel-item">
+        <span class="num">04 · 退出</span>
+        <h4>重视流动性,不只是收益</h4>
+        <p>我们对转售需求与不同周期内的租赁表现进行建模。只有在退出路径切实可行的情况下,项目才会进入目录 — 不仅看宣传册上的回报。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="s" id="catalog">
+  <div class="container">
+    <div class="cat-toolbar">
+      <div>
+        <span class="kicker gold">在管目录 · 普吉岛</span>
+        <h2>在管 8 个项目。</h2>
+      </div>
+      <div class="cat-filters" role="tablist" aria-label="项目筛选">
+        <button class="cat-filter active" type="button" data-filter="all">全部</button>
+        <button class="cat-filter" type="button" data-filter="bangtao">Bang Tao</button>
+        <button class="cat-filter" type="button" data-filter="layan">Layan</button>
+        <button class="cat-filter" type="button" data-filter="surin">Surin</button>
+        <button class="cat-filter" type="button" data-filter="kamala">卡马拉</button>
+        <button class="cat-filter" type="button" data-filter="naiyang">Nai Yang</button>
+        <button class="cat-filter" type="button" data-filter="kata">Kata · Karon</button>
+        <button class="cat-filter" type="button" data-filter="rawai">Rawai</button>
+        <button class="cat-filter" type="button" data-filter="villa">别墅</button>
+        <button class="cat-filter" type="button" data-filter="leasehold">Leasehold</button>
+      </div>
+    </div>
+
+    <div class="cat-grid">
+      <!-- FEATURED: CASA DE MONTE -->
+      <article class="cat-card" data-cats="villa leasehold">
+        <a class="cat-cover" href="/projects/casa-de-monte-zh.html" aria-label="Casa de Monte"><img src="/images/projects/casademonte-hero.jpg" alt="Casa de Monte villas" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">精选</span>
+            <span class="cat-tag">别墅</span>
+            <span class="cat-tag">Koh Kaew</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>Casa de Monte — Koh Kaew</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold / Freehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">2029年7月</div></div>
+            <div class="cat-meta-item"><div class="l">建筑面积</div><div class="v">297–450 m²</div></div>
+          </div>
+          <p class="cat-desc">位于普吉岛 Koh Kaew 静谧内陆区域的 36 栋专属泳池别墅,3–4 居室。起价 2,820 万泰铢。意式建筑风格,统一物业管理标准,以自住为核心。</p>
+          <div class="cat-actions">
+            <a href="/projects/casa-de-monte-zh.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
       </article>
-      <article class="what-item">
-        <span class="num">02 · 私人实物资产</span>
-        <h3>私人实物资产参与</h3>
-        <p>面向有限数量私人客户的非公开参与机制,仅在精选普吉岛房地产机会中提供。仅在请求后,完成入职、KYC/AML 与私人法律文件签署后开放。无公开要约;非受监管基金产品。</p>
-        <a href="/private-capital-zh.html" class="more">私人资本页面 →</a>
+
+      <!-- NEW: The Title Vivana — 卡马拉 -->
+      <article class="cat-card" data-cats="kamala freehold">
+        <a class="cat-cover" href="/projects/the-title-vivana-zh.html" aria-label="The Title Vivana — 卡马拉"><img src="/images/projects/vivana/facade.jpg" alt="The Title Vivana — 卡马拉" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">卡马拉</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Vivana — 卡马拉</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">产权</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">交付</div><div class="v">2028 Q4</div></div><div class="cat-meta-item"><div class="l">价格</div><div class="v">约 375 万泰铢起</div></div></div>
+          <p class="cat-desc">360 套精装公寓,距卡马拉海滩约 1.5 公里。度假设施,可养宠物。外国人可按 Freehold 配额持有。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-vivana-zh.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
       </article>
+
+      <!-- NEW: The Title Sierra — 邦涛 -->
+      <article class="cat-card" data-cats="bangtao freehold">
+        <a class="cat-cover" href="/projects/the-title-sierra-zh.html" aria-label="The Title Sierra — 邦涛"><img src="/images/projects/sierra/facade.jpg" alt="The Title Sierra — 邦涛" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">邦涛</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Title Sierra — 邦涛</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">产权</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">交付</div><div class="v">2028</div></div><div class="cat-meta-item"><div class="l">价格</div><div class="v">287 万泰铢起</div></div></div>
+          <p class="cat-desc">邦涛片区全新公寓 — 邻近 Laguna、Boat Avenue、Porto de Phuket。进入邦涛市场最具性价比的选择之一。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-sierra-zh.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- NEW: The Olive — 奈杨 -->
+      <article class="cat-card" data-cats="naiyang freehold">
+        <a class="cat-cover" href="/projects/the-olive-zh.html" aria-label="The Olive — 奈杨"><img src="/images/projects/olive/facade.jpg" alt="The Olive — 奈杨" loading="lazy"/>
+          <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">奈杨</span></div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">The Title</span>
+          <h3>The Olive — 奈杨</h3>
+          <div class="cat-meta"><div class="cat-meta-item"><div class="l">产权</div><div class="v">Freehold</div></div><div class="cat-meta-item"><div class="l">交付</div><div class="v">2028年10月</div></div><div class="cat-meta-item"><div class="l">价格</div><div class="v">499 万泰铢起</div></div></div>
+          <p class="cat-desc">奈杨海滨地中海风格公寓,距海滩约 450 米,几分钟到机场。287 套,两栋 8 层建筑。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-olive-zh.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 1. THE MODEVA -->
+      <article class="cat-card" data-cats="bangtao leasehold">
+        <a class="cat-cover" href="/projects/the-modeva.html" aria-label="Open The Modeva passport">
+          <img src="/images/the-modeva-exterior-2-1-1280x665.jpg" alt="The Modeva exterior, Bang Tao, Phuket" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">Leasehold</span>
+            <span class="cat-tag">Bang Tao</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">Rhom Bho · The Title</span>
+          <h3>The Modeva — Bang Tao</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">距海滩</div><div class="v">≈ 500 m</div></div>
+          </div>
+          <p class="cat-desc">Lifestyle condo in the centre of Bang Tao, walking distance to Boat Avenue and Laguna. 指示性租赁收益 band 6–8% in stabilised operation.</p>
+          <div class="cat-actions">
+            <a href="/projects/the-modeva.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. THE TITLE ARTRIO -->
+      <article class="cat-card" data-cats="bangtao leasehold">
+        <a class="cat-cover" href="/projects/the-title-artrio.html" aria-label="Open The Title Artrio passport">
+          <img src="/images/the-title-artrio-exterior-2-1.jpg" alt="The Title Artrio exterior, Bang Tao, Phuket" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">Leasehold</span>
+            <span class="cat-tag">Bang Tao</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">Rhom Bho · The Title</span>
+          <h3>The Title Artrio — Bang Tao</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">类型</div><div class="v">Condo</div></div>
+          </div>
+          <p class="cat-desc">位于 Bang Tao 的中等规模住宅公寓,设计目标为全年稳定入住。户型搭配合理 — 开间与 1 居用于出租,2 居用于业主自用。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-artrio.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. THE TITLE KATABELLO -->
+      <article class="cat-card" data-cats="kata leasehold">
+        <a class="cat-cover" href="/projects/the-title-katabello.html" aria-label="Open The Title Katabello passport">
+          <img src="/images/the-title-katabello-exterior-2.jpg" alt="The Title Katabello exterior, Kata-Karon, Phuket" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">Leasehold</span>
+            <span class="cat-tag">Kata · Karon</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">Rhom Bho · AssetWise</span>
+          <h3>The Title Katabello — Kata · Karon</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">2027</div></div>
+            <div class="cat-meta-item"><div class="l">类型</div><div class="v">Condo</div></div>
+          </div>
+          <p class="cat-desc">位于 Kata-Karon 走廊的度假级公寓 — 普吉岛最成熟的度假租赁地段,旺季存在季节性溢价。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-katabello.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. THE TITLE ADORA -->
+      <article class="cat-card" data-cats="rawai leasehold">
+        <a class="cat-cover" href="/projects/the-title-adora.html" aria-label="Open The Title Adora passport">
+          <img src="/images/the-title-adora-exterior-8.jpg" alt="The Title Adora exterior, Rawai, Phuket" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">Leasehold</span>
+            <span class="cat-tag">Rawai</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">Rhom Bho · The Title</span>
+          <h3>The Title Adora — Rawai</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">租赁计划</div><div class="v">Indexed rent</div></div>
+          </div>
+          <p class="cat-desc">生活方式公寓,配有开发商管理的租赁计划 — 部分户型采用以泰铢挂钩的指数化租金条款。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-adora.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. TITLE VIVI -->
+      <article class="cat-card" data-cats="layan leasehold">
+        <a class="cat-cover" href="/projects/title-vivi.html" aria-label="Open Title Vivi passport">
+          <img src="/images/title-vivi-exterior-2-1280x716.jpg" alt="Title Vivi exterior, Layan, Phuket" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">Leasehold</span>
+            <span class="cat-tag">Layan</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">Rhom Bho · The Title</span>
+          <h3>Title Vivi — Layan</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">2026</div></div>
+            <div class="cat-meta-item"><div class="l">户型</div><div class="v">27–29 sqm</div></div>
+          </div>
+          <p class="cat-desc">位于 Layan 的紧凑型出租导向单元 — Bang Tao 以北较安静的海岸线,需求稳定,入门价较低。</p>
+          <div class="cat-actions">
+            <a href="/projects/title-vivi-en.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. THE TITLE BALCONY -->
+      <article class="cat-card" data-cats="naiyang leasehold">
+        <a class="cat-cover" href="/projects/the-title-balcony.html" aria-label="The Title Balcony"><img src="/images/projects/balcony-hero.jpg" alt="The Title Balcony, Nai Yang" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">Leasehold</span>
+            <span class="cat-tag">Nai Yang</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">Rhom Bho · The Title</span>
+          <h3>The Title Balcony — Nai Yang</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">Q4 2027</div></div>
+            <div class="cat-meta-item"><div class="l">距海滩</div><div class="v">130 m</div></div>
+          </div>
+          <p class="cat-desc">10 栋五层楼共 542 套公寓,33–70 m²。位于宁静的 Nai Yang 海滨综合体 — 紧邻 Sirinat 国家公园与机场。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-balcony-en.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. THE TITLE BIANCANA -->
+      <article class="cat-card" data-cats="surin leasehold">
+        <a class="cat-cover" href="/projects/the-title-biancana.html" aria-label="The Title Biancana"><img src="/images/projects/biancana-hero.jpg" alt="The Title Biancana, Surin" loading="lazy"/>
+          <div class="cat-tags">
+            <span class="cat-tag gold">Leasehold</span>
+            <span class="cat-tag">Surin</span>
+          </div>
+        </a>
+        <div class="cat-body">
+          <span class="cat-developer">Rhom Bho · The Title</span>
+          <h3>The Title Biancana — Surin</h3>
+          <div class="cat-meta">
+            <div class="cat-meta-item"><div class="l">产权</div><div class="v">Leasehold</div></div>
+            <div class="cat-meta-item"><div class="l">交付</div><div class="v">Q4 2028</div></div>
+            <div class="cat-meta-item"><div class="l">距海滩</div><div class="v">100 m</div></div>
+          </div>
+          <p class="cat-desc">Surin 区域 2026 年超高端预售。约 350 套公寓,4 栋低层建筑,5★ 配套,带精装交付。起价 USD 155k。</p>
+          <div class="cat-actions">
+            <a href="/projects/the-title-biancana-en.html">查看项目档案 →</a>
+            <a class="muted" href="#contact">索取项目册 (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MECHANICS -->
+<section class="s cream" id="mechanics">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker gold">所有权机制</span>
+      <h2>两种产权路径。统一的执行标准。</h2>
+      <p>泰国的外国买家通常在公寓外国人配额下的 freehold 与已登记长期 leasehold 之间选择。我们不偏向任何一方 — 我们根据您的预算、持有周期与退出计划匹配合适的架构。</p>
+    </div>
+    <div class="mech-grid">
+      <div class="mech-text">
+        <p>两种架构在价格、流动性与文件方面表现不同。下方为对照参考,而非法律意见。每笔交易在交割前均经独立律师签字。</p>
+        <p><strong>Freehold</strong> 适用于公寓可售面积 49% 外国人配额内的单元,产权登记在 chanote (地契) 上。</p>
+        <p><strong>Leasehold</strong> 是已登记的长期使用权,通常为 30+30+30 年。在外国人配额已满或开发商采用此架构时,是泰国度假地产的主流方案。</p>
+
+        <div class="mech-table">
+          <div class="mech-row head">
+            <div class="mech-cell">参数</div>
+            <div class="mech-cell">Freehold (配额)</div>
+            <div class="mech-cell">Leasehold (30+30+30)</div>
+          </div>
+          <div class="mech-row">
+            <div class="mech-cell"><strong>资格</strong></div>
+            <div class="mech-cell">49% 外国人配额内</div>
+            <div class="mech-cell">无配额限制</div>
+          </div>
+          <div class="mech-row">
+            <div class="mech-cell"><strong>登记</strong></div>
+            <div class="mech-cell">Chanote, 外国所有权</div>
+            <div class="mech-cell">土地登记处租赁登记</div>
+          </div>
+          <div class="mech-row">
+            <div class="mech-cell"><strong>转售</strong></div>
+            <div class="mech-cell">产权直接转让</div>
+            <div class="mech-cell">租赁权转让</div>
+          </div>
+          <div class="mech-row">
+            <div class="mech-cell"><strong>典型溢价</strong></div>
+            <div class="mech-cell">相比 leasehold +10–20%</div>
+            <div class="mech-cell">基础价位</div>
+          </div>
+        </div>
+
+        <div class="mech-disclaimer">
+          仅作参考。具体条款取决于开发商文件、项目配额状态、适用法律与经律师审核的合同。以项目文件为准。
+        </div>
+      </div>
+
+      <div class="mech-side">
+        <div class="mech-card">
+          <div class="l">指示性租赁收益</div>
+          <div class="v">5–9% 年化</div>
+          <p>Bang Tao、Layan、Kata-Karon 稳定运营度假项目的观测区间。以项目文件为准。</p>
+        </div>
+        <div class="mech-card">
+          <div class="l">买方佣金</div>
+          <div class="v">0%</div>
+          <p>您按开发商挂牌价支付。我们的费用由开发商支付 — 无加价,买方无中介佣金。</p>
+        </div>
+        <div class="mech-card">
+          <div class="l">结算币种</div>
+          <div class="v">USD · EUR · THB</div>
+          <p>按开发商托管账户指示电汇,执行时记录汇率。须经 KYC 与资金来源审核。</p>
+        </div>
+        <div class="mech-card">
+          <div class="l">租赁计划类型</div>
+          <div class="v">自租 · 入池 · 指数化</div>
+          <p>部分开发商提供固定租金或租金池计划。条款因项目与合同而异 — 我们会进行透明梳理。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -452,113 +1081,217 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
   </div>
 </section>
 
-<!-- 2025 / 2026 PATH -->
-<section class="s">
+<!-- LOCATIONS -->
+<section class="s" id="locations">
   <div class="container">
     <div class="s-head">
-      <span class="kicker">历程</span>
-      <h2>2025 周期已结束。2026 轮次筹备中。</h2>
-      <p>稳健节奏,无公开认购窗口。详细业绩与经济条款仅在 NDA 下与合格对手方私下共享。</p>
+      <span class="kicker gold">地段研究</span>
+      <h2>我们关注的 6 个普吉岛微市场。</h2>
+      <p>我们并不覆盖普吉岛每一段海岸 — 我们直接说明。下方为目前在数学、开发商基础与旅游周期方面契合度假地产配置的走廊地段。</p>
     </div>
-    <div class="path-grid">
-      <div class="path-text">
-        <p><strong>2025 年试点配售周期</strong>  聚焦于精选的普吉岛度假房地产项目、开发商关系与运营流程。周期在保守假设下达到目标运营指标后结束。</p>
-        <p><strong>2026 年私人配售轮次</strong>  目前正在筹备。意向表 (EOI) 已开放。最终参与名额有限、非公开,取决于项目可用性、KYC/AML、适配性审核与私人法律文件。</p>
-        <p>详细经济条款与项目文件仅与合格的私人对手方共享 — 不会发布在本公开网站上。</p>
+    <div class="loc-grid">
+      <div class="loc-list">
+        <div class="loc-item">
+          <span class="n">01</span>
+          <div>
+            <h4>Bang Tao · Laguna</h4>
+            <p>成熟的海滩走廊,具备国际餐饮与配套设施。全年租赁需求强劲。</p>
+          </div>
+          <span class="y">6–8%</span>
+        </div>
+        <div class="loc-item">
+          <span class="n">02</span>
+          <div>
+            <h4>Layan</h4>
+            <p>Bang Tao 以北较为安静的海岸线。入门价较低,长期租客需求稳定。</p>
+          </div>
+          <span class="y">5–7%</span>
+        </div>
+        <div class="loc-item">
+          <span class="n">03</span>
+          <div>
+            <h4>Surin</h4>
+            <p>普吉岛最成熟的奢华海滩走廊。可建土地稀缺,国际租客基础强,旺季单价高。</p>
+          </div>
+          <span class="y">6–9%</span>
+        </div>
+        <div class="loc-item">
+          <span class="n">04</span>
+          <div>
+            <h4>Nai Yang · Mai Khao</h4>
+            <p>位于 Sirinat 国家公园内的西北海岸。靠近机场,供应有限,全年需求稳定。</p>
+          </div>
+          <span class="y">6–10%</span>
+        </div>
+        <div class="loc-item">
+          <span class="n">05</span>
+          <div>
+            <h4>Kata · Karon</h4>
+            <p>普吉岛经典的度假租赁地段。季节性明显,旺季溢价显著。</p>
+          </div>
+          <span class="y">5–7%</span>
+        </div>
+        <div class="loc-item">
+          <span class="n">06</span>
+          <div>
+            <h4>内陆 (别墅)</h4>
+            <p>内陆别墅社区,以自住为主。季节性较弱,可预测性较高,收益上限较低。</p>
+          </div>
+          <span class="y">5–7%</span>
+        </div>
       </div>
-      <div class="path-cards">
-        <div class="path-card">
-          <div class="h">
-            <h4>2025 pilot cycle</h4>
-            <span class="badge-status closed">已结束</span>
-          </div>
-          <p>试点配售完成。在保守假设下达到目标运营指标。详细结果仅在 NDA 下私下共享。</p>
-        </div>
-        <div class="path-card">
-          <div class="h">
-            <h4>2026 年私人配售轮次</h4>
-            <span class="badge-status open">意向开放</span>
-          </div>
-          <p>意向已开放。参与名额有限,取决于项目可用性、尽职调查、KYC/AML 与签署的私人文件。目标周期:24–36 个月,视架构而定。</p>
-        </div>
-        <div class="path-card">
-          <div class="h">
-            <h4>公开预期</h4>
-            <span class="badge-status" style="background:var(--bg-soft);color:var(--muted);border:1px solid var(--line)">参考</span>
-          </div>
-          <p>回报因交易而异,不作担保。取决于开发商条款、租赁表现、转售流动性、税费与市场条件。无固定收益,无保证收益。</p>
+
+      <div class="loc-map" aria-label="Phuket island map with project pins">
+        <div class="phuket-leaflet-map-wrap"><div id="phuket-leaflet-map" aria-label="普吉岛项目位置地图" style="width:100%;height:100%;min-height:560px;border-radius:14px 0 0 14px;background:#0e1322"></div></div>
+        <div class="map-legend">
+          <div class="map-legend-row"><span class="map-legend-num">1</span><div><div class="map-legend-name">Bang Tao</div><div class="map-legend-meta">3 个项目 · 一级</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">2</span><div><div class="map-legend-name">Layan</div><div class="map-legend-meta">1 个项目 · 一至二级</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">3</span><div><div class="map-legend-name">Surin</div><div class="map-legend-meta">1 个项目 · 一级</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">4</span><div><div class="map-legend-name">Nai Yang</div><div class="map-legend-meta">1 个项目 · 一至二级</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">5</span><div><div class="map-legend-name">Kata · Karon</div><div class="map-legend-meta">1 个项目 · 二级</div></div></div>
+          <div class="map-legend-row"><span class="map-legend-num">6</span><div><div class="map-legend-name">内陆 (别墅)</div><div class="map-legend-meta">1 个项目 · 二级</div></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CORPORATE & COMPLIANCE -->
-<section class="s cream-2">
-  <div class="container">
-    <div class="s-head">
-      <span class="kicker blue">公司与合规</span>
-      <h2>Singapore private company. 符合银行标准 governance.</h2>
-      <p>面向新加坡关系银行的标准问题进行设计:我们是谁、我们做什么、我们如何收入、我们不做什么。</p>
+<!-- PROCESS (dark) -->
+<section class="s-process" id="process">
+  <div class="process-inner">
+    <div class="process-header">
+      <span class="kicker gold" style="color:var(--gold-bright)">顾问流程</span>
+      <h2>从首次接触到<strong>房产登记在您名下</strong>。</h2>
+      <p>五个有纪律的阶段。每个阶段都以您手中的具体交付物结束 — 不是销售话术。</p>
     </div>
-    <div class="compliance-grid">
-      <div class="comp-card">
-        <h4>法律与司法管辖</h4>
-        <ul>
-          <li>WEST EAST TRADE GROUP PTE. LTD.</li>
-          <li>UEN 202505772C · Singapore</li>
-          <li>Registered office in Suntec Tower One</li>
-          <li>私人公司,成员上限 50 人</li>
-          <li>不向公众邀请认购股份或存款</li>
-        </ul>
+    <div class="process-list">
+      <div class="process-step">
+        <span class="process-num">01 · 摸底</span>
+        <h4>简报与委托</h4>
+        <p>预算、持有周期、居住司法管辖区、预期用途 — 在 NDA 下记录。如不在我们覆盖范围,我们会直接说明。</p>
       </div>
-      <div class="comp-card">
-        <h4>我们不是</h4>
-        <ul>
-          <li>非 MAS 持牌基金管理人</li>
-          <li>非财务顾问</li>
-          <li>非公开 CIS</li>
-          <li>非吸收存款机构</li>
-          <li>非公开零售投资平台</li>
-        </ul>
+      <div class="process-step">
+        <span class="process-num">02 · 精选</span>
+        <h4>短名单与项目档案</h4>
+        <p>2–3 个匹配您简报的精选项目,每个均附项目档案 — 地段、开发商、架构、退出、指示性数据。</p>
       </div>
-      <div class="comp-card">
-        <h4>客户入职</h4>
-        <ul>
-          <li>KYC 与资金来源审核</li>
-          <li>制裁与 PEP 筛查</li>
-          <li>适配性与承载力审核</li>
-          <li>按委托配套的私人法律文件</li>
-          <li>符合 PDPA 的数据处理,可索取 DPO 联系方式</li>
-        </ul>
+      <div class="process-step">
+        <span class="process-num">03 · 实地与法律</h4>
+        <h4>考察与尽职调查</h4>
+        <p>现场看房、与开发商会面、独立法律审核 — 产权链、租赁草案、买卖合同、项目许可证。</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">04 · 交易完成</span>
+        <h4>合同与结算</h4>
+        <p>与开发商直接签署购房协议 (SPA),按托管账户指示付款,并在土地登记处办理登记。</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">05 · 后续管家</span>
+        <h4>交付与租赁</h4>
+        <p>跟踪建设节点、瑕疵清单、交钥匙、可选的租赁计划入驻、持续汇报。</p>
       </div>
     </div>
-    <div style="margin-top:32px;text-align:center"><a href="/corporate.html" class="btn btn-secondary">公司与合规 details <span class="arr">→</span></a></div>
   </div>
 </section>
 
-<!-- RESEARCH -->
-<section class="s dark">
+<!-- GIDR -->
+<section class="s cream-2" id="gidr">
   <div class="container">
-    <div class="research-grid">
-      <div class="research-text">
-        <span class="kicker" style="color:var(--gold-bright)">研究方法</span>
-        <h2>内部研究框架 — 非投资承诺。</h2>
-        <p>我们内部的 <strong>Territory Intelligence Layer</strong> 是用于筛选地段、开发商记录、项目经济、租赁假设与退出流动性的研究方法。它支持人工尽职调查与法律审核。</p>
-        <p>不替代独立的法律或财务建议。不提供自动化买卖信号、保证性预测或受监管的投资服务。</p>
-        <a href="/research.html" class="btn btn-secondary" style="margin-top:18px">研究方法 <span class="arr">→</span></a>
+    <div class="gidr-grid">
+      <div class="gidr-text">
+        <span class="kicker gold">内部研究 · 香港</span>
+        <h2>我们目录中每个项目背后的筛选引擎。</h2>
+        <p>The Hong Kong Institute of Digital Research (GIDR) is an applied analytics and AI lab modelling resort real-estate markets across Asia. Founded in Hong Kong, GIDR operates as the research and data-intelligence partner powering West East Gate Real Estate's screening engine.</p>
+        <p>该模型对<strong>每个项目处理数千个信号</strong> — 地理空间与气候层、施工节点、开发商履历、价格走势、旅游流量 — 用于支持我们关于地段、开发商与退出逻辑的内部尽职调查清单。我们将开发商材料作为多项输入之一。</p>
+        <p>本目录中每个项目均经过模型比对。未通过筛选的项目不会出现在页面上。</p>
+        <a href="/index-zh.html" class="btn btn-secondary" style="margin-top:18px">WEGC structure <span class="arr">→</span></a>
       </div>
-      <div class="research-card">
-        <h4>涵盖范围</h4>
+      <div class="gidr-card">
+        <div class="label"><span class="dot"></span><span>地段筛选 · 进行中</span></div>
+        <h3>普吉岛及邻近亚洲市场的度假地产评分。</h3>
+        <div class="gidr-stats">
+          <div class="gidr-stat"><div class="v">1,000+</div><div class="l">每个项目处理的信号数</div></div>
+          <div class="gidr-stat"><div class="v">全亚洲</div><div class="l">覆盖市场</div></div>
+          <div class="gidr-stat"><div class="v">度假</div><div class="l">物业类型聚焦</div></div>
+          <div class="gidr-stat"><div class="v">5</div><div class="l">本页在管项目</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNERSHIP STRUCTURES -->
+<section class="s" id="ownership">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker gold">所有权架构</span>
+      <h2>外国买家实际可行的方案。</h2>
+      <p>三条路径 — 无市场化包装地予以说明。具体条款与适用性在交割前经律师审核。</p>
+    </div>
+    <div class="own-grid">
+      <div class="own-card">
+        <h4>公寓外国人配额 (freehold)</h4>
+        <p>在公寓可售面积 49% 外国人配额内直接持有 freehold,产权以您姓名登记在 chanote 上。</p>
         <ul>
-          <li><span>普吉岛微市场地段筛选</span></li>
-          <li><span>开发商履历与交付记录</span></li>
-          <li><span>价格与租赁对比</span></li>
-          <li><span>施工进度与里程碑审核</span></li>
-          <li><span>流动性与转售逻辑</span></li>
-          <li><span>风险标记与红旗升级</span></li>
+          <li>产权登记在外国买家名下</li>
+          <li>通过产权转让直接转售</li>
+          <li>取决于配额可用性</li>
         </ul>
       </div>
+      <div class="own-card">
+        <h4>已登记 leasehold (30+30+30)</h4>
+        <p>已登记的长期使用权,续期机制写入合同。在外国人配额已满时为主流架构。</p>
+        <ul>
+          <li>在土地登记处办理租赁登记</li>
+          <li>转售 via lease assignment</li>
+          <li>相比 freehold 入门价更低</li>
+        </ul>
+      </div>
+      <div class="own-card">
+        <h4>结算、银行与税务</h4>
+        <p>按 FET / TT3 要求,从您的境外或境内银行电汇至开发商托管账户。须经 KYC 与资金来源审核。</p>
+        <ul>
+          <li>FET / TT3 留存入境资金记录</li>
+          <li>租赁收入预扣税</li>
+          <li>通过会计师缴纳年度税款</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="s cream" id="faq">
+  <div class="container">
+    <div class="s-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="kicker gold">常见问题</span>
+      <h2>真实投资者提出的真实问题。</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Leasehold 与 freehold — 实际区别是什么?<span class="faq-icon">+</span></summary>
+        <p>Freehold 是登记在 chanote 上的直接产权,适用于公寓项目 49% 外国人配额内的单元。Leasehold 是已登记的长期使用权 (通常 30+30+30 年)。两者均为主流架构;最适合您的方案取决于配额可用性、您的持有周期与转售计划。</p>
+      </details>
+      <details class="faq-item">
+        <summary>外国人可以在泰国持有土地吗?<span class="faq-icon">+</span></summary>
+        <p>外国人直接持有 freehold 土地受到严格限制。多数外国投资者选择在配额内购买公寓,或采用经独立本地律师审核的长期登记 leasehold。公司持有架构存在但因项目而异,需要细致的法律审核。</p>
+      </details>
+      <details class="faq-item">
+        <summary>度假区合理的租赁收益是多少?<span class="faq-icon">+</span></summary>
+        <p>位于优质地段的稳定运营项目通常实现中至高个位数的净收益。超过此区间的数字通常反映促销期或更高风险。我们以内部地段研究框架对每个项目进行比对,而非依赖宣传册预测。</p>
+      </details>
+      <details class="faq-item">
+        <summary>你们向买家收取佣金吗?<span class="faq-icon">+</span></summary>
+        <p>不收取。您按开发商挂牌价付款;我们的酬劳由开发商支付。该结构在任何承诺之前以书面形式披露。</p>
+      </details>
+      <details class="faq-item">
+        <summary>入境款项如何记录?<span class="faq-icon">+</span></summary>
+        <p>资金按 FET / TT3 要求通过国际电汇进入开发商托管账户。银行以外币登记入境款项,这对日后将转售款汇出境外是必要的。</p>
+      </details>
+      <details class="faq-item">
+        <summary>30 年租赁期到期后会怎样?<span class="faq-icon">+</span></summary>
+        <p>规范起草的租赁合同包含续期机制。真正关键的是合同质量、登记情况与对手方。我们只与能够以切实可行的续期条款书面化的开发商与法律团队合作。</p>
+      </details>
     </div>
   </div>
 </section>
@@ -569,39 +1302,63 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     <div class="contact-wrap">
       <div class="contact-grid">
         <div class="contact-text">
-          <span class="kicker" style="color:var(--gold-bright)">申请信息</span>
-          <h2>私人信息,<strong>按请求提供</strong>。</h2>
-          <p>请告诉我们您的需求与所在司法管辖区。我们将从 <strong>post@wegc.fund</strong> 回复,并给出合适的下一步 — 普吉岛房产介绍、私人资本信息流程,或在不匹配时礼貌婉拒。</p>
-          <p>我们不运营公开认购漏斗。每段客户关系均始于 KYC/AML、适配性审核与签署的文件。</p>
+          <span class="kicker gold" style="color:var(--gold-bright)">购置房产</span>
+          <h2>一份简报。<strong>一份精选档案。</strong>没有大众漏斗。</h2>
+          <p>告诉我们您的身份、预算与 8 个项目中最感兴趣的方向。我们将从 <strong>property@wegc.fund</strong> 回复一份精选档案、内部研究备注以及下一具体步骤。</p>
+          <p>不群发邮件。不施压销售。我们与重视架构、透明度与稳健决策的客户一对一合作。</p>
           <div class="contact-channels">
-            <a href="mailto:post@wegc.fund" class="contact-channel">✉ post@wegc.fund</a>
             
+            <a href="mailto:property@wegc.fund" class="contact-channel"><span class="ico">✉</span> property@wegc.fund</a>
           </div>
         </div>
-        <form id="enquiryForm" class="contact-form" novalidate action="javascript:void(0)" data-wegc-form="1" data-success-msg="感谢您。我们已收到您的请求,将尽快回复。" data-error-msg="发送失败。请直接发送邮件至 post@wegc.fund。" data-fallback-msg="您的邮件客户端应已打开,信息已预填好。如果没有,请直接发送至 post@wegc.fund。">
+
+        <form id="agencyForm" class="contact-form" novalidate action="javascript:void(0)" data-wegc-form="1" data-success-msg="感谢您。我们已收到您的请求,将尽快回复。" data-error-msg="发送失败。请直接发送邮件至 post@wegc.fund。" data-fallback-msg="您的邮件客户端应已打开,信息已预填好。如果没有,请直接发送至 post@wegc.fund。">
+          <div id="form留言" class="cf-message"></div>
           <div class="cf-row">
-            <div class="cf-field"><label for="name">全名 *</label><input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name"/></div>
-            <div class="cf-field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="name@company.com"/></div>
+            <div class="cf-field">
+              <label for="name">全名 *</label>
+              <input id="name" name="name" type="text" required autocomplete="name" placeholder="您的姓名"/>
+            </div>
+            <div class="cf-field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="name@company.com"/>
+            </div>
           </div>
           <div class="cf-row">
-            <div class="cf-field"><label for="jurisdiction">司法管辖区</label><input id="jurisdiction" name="jurisdiction" type="text" placeholder="居住国 / 地区"/></div>
-            <div class="cf-field"><label for="company">公司 (可选)</label><input id="company" name="company" type="text"/></div>
+            <div class="cf-field">
+              <label for="phone">电话 / WhatsApp</label>
+              <input id="phone" name="phone" type="text" autocomplete="tel" placeholder="+ 国家代码"/>
+            </div>
+            <div class="cf-field">
+              <label for="budget">预算 (USD)</label>
+              <input id="budget" name="budget" type="text" placeholder="例如 200,000"/>
+            </div>
           </div>
           <div class="cf-field">
-            <label for="interest">您的需求</label>
-            <select id="interest" name="interest">
-              <option value="">Select…</option>
-              <option value="普吉岛房产购置">普吉岛房产购置</option>
-              <option value="Private real-asset information">私人实物资产信息 (须经 KYC/AML)</option>
-              <option value="研究 / 方法">研究 / 方法</option>
-              <option value="公司 / 媒体">公司 / 媒体</option>
-              <option value="Other">其他</option>
+            <label for="project">感兴趣的项目</label>
+            <select id="project" name="project">
+              <option value="">选择一个项目</option>
+              <option value="The Modeva (Bang Tao)">The Modeva — Bang Tao</option>
+              <option value="The Title Artrio (Bang Tao)">The Title Artrio — Bang Tao</option>
+              <option value="The Title Katabello (Kata-Karon)">The Title Katabello — Kata · Karon</option>
+              <option value="The Title Adora (Rawai)">The Title Adora — Rawai</option>
+              <option value="Title Vivi (Layan)">Title Vivi — Layan</option>
+              <option value="The Title Balcony (Nai Yang)">The Title Balcony — Nai Yang</option>
+              <option value="The Title Biancana (Surin)">The Title Biancana — Surin</option>
+              <option value="Casa de Monte (Villa)">Casa de Monte — Villa community</option>
+              <option value="其他 / 暂未决定">其他 / 暂未决定</option>
             </select>
           </div>
-          <div class="cf-field"><label for="message">Message</label><textarea id="message" name="message" rows="3" placeholder="简要背景、目标投资额范围、时间线…"></textarea></div>
-          <label class="cf-agree"><input type="checkbox" name="agree" required/><span>我确认此为信息申请,而非要约;本表单不提供投资建议;并同意 <a href="/privacy.html">《隐私政策》</a> and <a href="/terms.html">《条款》</a>.</span></label>
+          <div class="cf-field">
+            <label for="message">留言</label>
+            <textarea id="message" name="message" rows="3" placeholder="产权偏好、持有周期、看房日期…"></textarea>
+          </div>
+          <label class="cf-agree">
+            <input type="checkbox" name="agree" required/>
+            <span>我同意 <a href="/privacy.html">隐私政策</a>。我理解此为信息申请,并非有约束力的要约。</span>
+          </label>
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
-          <button type="submit" class="cf-submit">提交申请 →</button>
+          <button type="submit" class="cf-submit">提交咨询 →</button>
         </form>
       </div>
     </div>
@@ -610,6 +1367,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 
 </main>
 
+<!-- FOOTER -->
 <footer class="f">
   <div class="container">
     <div class="f-grid">
@@ -619,7 +1377,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       </div>
       <div class="f-col">
         <h5>业务</h5>
-        <ul><li><a href="/wet-agency-zh.html">普吉岛房地产</a></li><li><a href="/private-capital-zh.html">私人资本</a></li><li><a href="/research-zh.html">研究方法</a></li></ul>
+        <ul><li><a href="/index-zh.html">普吉岛房地产</a></li><li><a href="/fund-zh.html">基金</a></li><li><a href="/private-capital-zh.html">私人资本</a></li><li><a href="/research-zh.html">研究方法</a></li></ul>
       </div>
       <div class="f-col">
         <h5>公司</h5>
@@ -651,22 +1409,94 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 </footer>
 
 <script>
-(function(){const bar=document.getElementById('topbar');if(!bar)return;const f=()=>{if(window.scrollY>60)bar.classList.add('solid');else bar.classList.remove('solid')};window.addEventListener('scroll',f,{passive:true});f();})();
-document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('page-ready'));
+// Topbar solid on scroll
 (function(){
-  const form=document.getElementById('enquiryForm_LEGACY_DISABLED');if(!form)return;
-  form.addEventListener('submit',async e=>{
+  const bar = document.getElementById('topbar');
+  if(!bar) return;
+  const onScroll = () => {
+    if(window.scrollY > 60) bar.classList.add('solid');
+    else bar.classList.remove('solid');
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+
+// Page reveal
+document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-ready'));
+
+// Catalog filter
+(function(){
+  const filters = document.querySelectorAll('.cat-filter');
+  const cards = document.querySelectorAll('.cat-card');
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.getAttribute('data-filter');
+    cards.forEach(card => {
+      const cats = (card.getAttribute('data-cats') || '').split(' ');
+      const show = (f === 'all') || cats.includes(f);
+      card.style.display = show ? '' : 'none';
+    });
+  }));
+})();
+
+// Form
+(function(){
+  const form = document.getElementById('agencyForm_LEGACY_DISABLED');
+  if(!form) return;
+  const msg = document.getElementById('form留言');
+  const setMsg = (text, kind) => {
+    if(!msg) return;
+    msg.textContent = text;
+    msg.className = 'cf-message show ' + (kind === 'ok' ? 'ok' : 'err');
+  };
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name=form.querySelector('#name').value.trim();
-    const email=form.querySelector('#email').value.trim();
-    if(!name||!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('请填写姓名和有效的邮箱地址。');return}
-    try{
-      const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
-      if(res.ok){form.reset();alert('感谢您。我们已收到您的请求,将从 post@wegc.fund 回复。')}
+    const name = form.querySelector('#name').value.trim();
+    const email = form.querySelector('#email').value.trim();
+    if(!name || !email){ setMsg('请填写姓名和邮箱。', 'err'); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setMsg('请输入有效的邮箱地址。', 'err'); return; }
+    try {
+      const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{Accept:'application/json'} });
+      if(res.ok){ form.reset(); setMsg('感谢您。我们已收到您的咨询,将很快从 property@wegc.fund 回复。', 'ok'); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
       else throw new Error('send fail');
-    }catch(err){alert('发送失败。请直接发邮件至 post@wegc.fund。')}
+    } catch(err){
+      setMsg('发送失败。请直接发邮件至 property@wegc.fund。', 'err');
+    }
   });
 })();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  function initMap() {
+    if (typeof L === 'undefined') { setTimeout(initMap, 80); return; }
+    var el = document.getElementById('phuket-leaflet-map');
+    if (!el) return;
+    var map = L.map(el, {
+      zoomControl: false, scrollWheelZoom: false, dragging: true,
+      doubleClickZoom: true, touchZoom: true
+    }).setView([7.96, 98.32], 11);
+    L.control.zoom({position:'topright'}).addTo(map);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains:'abcd', maxZoom:19
+    }).addTo(map);
+    var pins = [[1, "Bang Tao", 7.9912, 98.2961, "6–8%"], [2, "Layan", 8.0269, 98.2858, "5–7%"], [3, "Surin", 7.9758, 98.2796, "6–9%"], [4, "Nai Yang", 8.0817, 98.2955, "6–10%"], [5, "Kata · Karon", 7.826, 98.295, "5–7%"], [6, "Inland (villas)", 7.945, 98.34, "5–7%"]];
+    pins.forEach(function(p){
+      var n=p[0], name=p[1], lat=p[2], lng=p[3], y=p[4];
+      var icon = L.divIcon({
+        className: 'wegc-pin',
+        html: '<div class="wegc-pin-dot">'+n+'</div>',
+        iconSize: [32,32], iconAnchor:[16,16]
+      });
+      L.marker([lat,lng], {icon: icon})
+        .addTo(map)
+        .bindTooltip(name+' · '+y, {permanent:false, direction:'top', offset:[0,-10], className:'wegc-tip'});
+    });
+  }
+  initMap();
+});
 </script>
 <script>
 /* WEGC form delivery — Formspree primary, mailto fallback */
