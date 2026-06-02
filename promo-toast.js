@@ -55,7 +55,10 @@
       seen();
       var chat = document.querySelector('.wegc-chat-btn');
       if (chat) { chat.click(); el.remove(); }
-      else { location.href = '/wet-agency-en.html#contact'; }
+      else {
+        var home = lang === 'ru' ? '/index-ru.html' : (lang === 'zh' ? '/index-zh.html' : '/');
+        location.href = home + '#contact';
+      }
     });
     setTimeout(function () { el.classList.add('show'); }, 50);
   }

@@ -38,11 +38,11 @@
 - [ ] EN-версия `buy-property-phuket-en.html` (+ hreflang-связка ru↔en)
 
 ### P3
-- [ ] `phuket-property-taxes-ru.html` — налоги и расходы сделки (transfer fee, stamp, sinking fund, land&building tax, PIT)
+- [x] `phuket-property-taxes-ru.html` — налоги и расходы сделки (transfer fee 2%, stamp 0,5%, регистрация лизхолда 1,1%, sinking fund, CAM, land&building tax, налог с аренды, перепродажа) + Schema; ссылка из buy-property (шаг расходов)
+- [x] Гигиена индекса: `<meta name="robots" content="noindex, nofollow">` во все backup/archive HTML (18 файлов)
+- [x] Убрать `wet-agency*` из внутренних ссылок (promo-toast.js → язык-зависимый `#contact`); в sitemap их нет
+- [x] sitemap: `xhtml:link rel="alternate" hreflang` для трёхъязычных групп (генерируется из on-page hreflang, 130 аннотаций)
 - [ ] ZH-версии хабов (buy / freehold-leasehold) — `*-zh.html`
-- [ ] Гигиена индекса: добавить `<meta name="robots" content="noindex">` в backup-файлы (`fund_backup_*`, `_archive-*`, `fund-alt/new/redesigned/with-tax-disclaimer`), которые сейчас закрыты только в robots.txt
-- [ ] Убрать `wet-agency*` (редиректы) из внутренних ссылок; проверить, что их нет в sitemap (уже нет)
-- [ ] sitemap: добавить `xhtml:link rel="alternate" hreflang` для трёхъязычных пар
 - [ ] PageSpeed/Lighthouse прогон `index-ru.html` + гайдов; `width/height` и WebP для тяжёлых JPG
 
 ### Контент / доверие (после структуры)
