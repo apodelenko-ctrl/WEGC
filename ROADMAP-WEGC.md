@@ -25,9 +25,9 @@
 ## Спринт 2 — план
 
 ### P1 — добить ядро гайдов (RU)
-- [ ] `freehold-leasehold-thailand-ru.html` — формы собственности, квота 49%, 30+30+30, FET (FAQPage+Breadcrumb)
+- [x] `freehold-leasehold-thailand-ru.html` — формы собственности, квота 49%, 30+30+30, FET (WebPage+FAQPage+Breadcrumb+RealEstateAgent)
+- [x] Schema-инъекция на главные `index-ru/en/zh`: `Organization` + `WebSite` + `RealEstateAgent`
 - [ ] `phuket-investment-yield-ru.html` — реальная доходность: gross vs net (4–6%), расходы (УК, простои, налоги), без «гарантий»
-- [ ] Schema-инъекция на главные `index-ru/en/zh`: `RealEstateAgent` + `Organization` + `WebSite`(SearchAction)
 - [ ] Schema `FAQPage` + `BreadcrumbList` на `rayony/*` и `sravnenie/*` (answer-блоки)
 
 ### P2
