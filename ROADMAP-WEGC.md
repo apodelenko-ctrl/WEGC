@@ -32,8 +32,9 @@
 - [x] Sitemap + llms.txt + футер «Справочник» + кросс-ссылки на страницу доходности
 
 ### P2
-- [ ] `remote-purchase-phuket-ru.html` — удалённая сделка: доверенность, маршрут оплаты, FET, риски
-- [ ] `safe-buy-due-diligence-ru.html` — DD и безопасная сделка (роль WET, чек-лист проверки застройщика)
+- [x] `remote-purchase-phuket-ru.html` — удалённая сделка: доверенность, маршрут оплаты, FET, риски (WebPage+FAQPage+Breadcrumb+RealEstateAgent)
+- [x] `safe-buy-due-diligence-ru.html` — DD и безопасная сделка (роль WEGC, чек-лист застройщика, red flags) (WebPage+FAQPage+Breadcrumb+RealEstateAgent)
+- [x] Sitemap + llms.txt + футер «Справочник» + кросс-ссылки (buy-property шаги 2/5, freehold, yield, главные/fund)
 - [ ] EN-версия `buy-property-phuket-en.html` (+ hreflang-связка ru↔en)
 
 ### P3
