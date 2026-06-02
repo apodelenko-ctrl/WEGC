@@ -35,14 +35,14 @@
 - [x] `remote-purchase-phuket-ru.html` — удалённая сделка: доверенность, маршрут оплаты, FET, риски (WebPage+FAQPage+Breadcrumb+RealEstateAgent)
 - [x] `safe-buy-due-diligence-ru.html` — DD и безопасная сделка (роль WEGC, чек-лист застройщика, red flags) (WebPage+FAQPage+Breadcrumb+RealEstateAgent)
 - [x] Sitemap + llms.txt + футер «Справочник» + кросс-ссылки (buy-property шаги 2/5, freehold, yield, главные/fund)
-- [ ] EN-версия `buy-property-phuket-en.html` (+ hreflang-связка ru↔en)
+- [~] ~~EN-версия `buy-property-phuket-en.html`~~ — ОТМЕНЕНО: SEO-гайды только на RU (трафик из РФ/СНГ)
 
 ### P3
 - [x] `phuket-property-taxes-ru.html` — налоги и расходы сделки (transfer fee 2%, stamp 0,5%, регистрация лизхолда 1,1%, sinking fund, CAM, land&building tax, налог с аренды, перепродажа) + Schema; ссылка из buy-property (шаг расходов)
 - [x] Гигиена индекса: `<meta name="robots" content="noindex, nofollow">` во все backup/archive HTML (18 файлов)
 - [x] Убрать `wet-agency*` из внутренних ссылок (promo-toast.js → язык-зависимый `#contact`); в sitemap их нет
 - [x] sitemap: `xhtml:link rel="alternate" hreflang` для трёхъязычных групп (генерируется из on-page hreflang, 130 аннотаций)
-- [ ] ZH-версии хабов (buy / freehold-leasehold) — `*-zh.html`
+- [~] ~~ZH-версии хабов (buy / freehold-leasehold)~~ — ОТМЕНЕНО: SEO-гайды только на RU
 - [ ] PageSpeed/Lighthouse прогон `index-ru.html` + гайдов; `width/height` и WebP для тяжёлых JPG
 
 ### Контент / доверие (после структуры)
@@ -56,5 +56,5 @@
 - Не переписывать главные/`fund-*` — только новые страницы + точечные meta/schema/футер.
 - Не засорять topbar SEO-хабами — перелинковка через футер «Справочник» + контекстные cross-links.
 - Дисклеймер на каждой странице: не оферта, не гарантия доходности, не инвест/налоговая консультация; сделку проверяет независимый юрист.
-- Три языка: приоритет RU → EN → ZH.
+- SEO/GEO-хабы (справочник) — только на RU. EN/ZH-версии этих гайдов не делаем (основной трафик из РФ/СНГ). Существующие EN/ZH страницы сайта (главные, фонд, паспорта) остаются как есть.
 - Фактологичный тон без хайпа; преимущества (0% комиссии, прямой контракт, DD) — только где это правда.
