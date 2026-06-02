@@ -19,6 +19,64 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://wegc.fund/index-ru.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Сравнения"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Пхукет или Бали"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что надёжнее для инвестиций — Пхукет или Бали?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "По устойчивости актива Пхукет, как правило, надёжнее: кондо можно оформить во freehold, титул Chanote проверяем, инфраструктура развитее. На Бали freehold иностранцу недоступен, лизхолд короче (часто 25–30 лет), выше юридические риски nominee-схем."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где выше доходность — на Пхукете или на Бали?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Бали показывает более высокую валовую доходность (10–15%), но за счёт короткого лизхолда и юридических рисков — актив «тает» по сроку. На Пхукете доходность 6–10% при более устойчивой структуре владения и лучшей ликвидности при выходе."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Может ли иностранец купить freehold на Бали?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. На Бали иностранцу freehold недоступен — только лизхолд или рискованные nominee-структуры. На Пхукете кондо доступно во freehold в рамках 49% квоты, а земля под виллами — зарегистрированный долгосрочный лизхолд."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#fff;--bg-soft:#f8fafc;--bg-cream:#fbfaf6;--bg-dark:#0a0e1a;--bg-darker:#06080f;--ink:#0f172a;--body:#334155;--muted:#64748b;--line:#e2e8f0;--gold:#a08156;--gold-bright:#d6b370;--radius:8px;--radius-lg:14px}
@@ -133,6 +191,13 @@ footer.f{background:#06080f;color:#94a3b8;padding:52px 0 26px;border-top:1px sol
 .f-links a{display:block;font-size:13px;color:#94a3b8;margin-bottom:8px}
 .f-links a:hover{color:#fff}
 .f-disc{font-size:12px;color:#64748b;line-height:1.7;border-top:1px solid #1f2937;padding-top:20px}
+.faq{margin-top:30px;display:flex;flex-direction:column;gap:12px;max-width:880px}
+.faq details{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:1.02rem;font-weight:500;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-size:1.5rem;font-weight:300;color:var(--gold);line-height:1}
+.faq details[open] summary::after{content:'\2013'}
+.faq .a{padding:0 24px 22px;color:var(--body);font-size:14.5px;line-height:1.72}
 .crumbs{font-size:12px;color:var(--muted);padding:14px 0 0}
 .crumbs a{color:var(--gold)}
 </style>
@@ -179,6 +244,15 @@ footer.f{background:#06080f;color:#94a3b8;padding:52px 0 26px;border-top:1px sol
   <div class="prose"><p>Бали может показать более высокую валовую доходность, но за счёт короткого лизхолда и более высоких юридических рисков — актив «тает» по сроку, а выход сложнее. Пхукет даёт более устойчивую структуру владения (freehold на кондо), понятный титул и лучшую инфраструктуру при сопоставимой доходности.</p><p>Для покупателя, который смотрит на сохранность капитала и предсказуемый выход, Пхукет, как правило, надёжнее. Мы поможем выбрать структуру (freehold или leasehold) под вашу цель и проверим документы до сделки.</p></div>
 </div></section>
 
+<section class="s cream"><div class="wrap">
+  <h2>Частые вопросы</h2>
+  <div class="faq">
+    <details><summary>Что надёжнее для инвестиций — Пхукет или Бали?</summary><div class="a">По устойчивости актива Пхукет, как правило, надёжнее: кондо можно оформить во freehold, титул Chanote проверяем, инфраструктура развитее. На Бали freehold иностранцу недоступен, лизхолд короче (часто 25–30 лет), выше юридические риски nominee-схем.</div></details>
+    <details><summary>Где выше доходность — на Пхукете или на Бали?</summary><div class="a">Бали показывает более высокую валовую доходность (10–15%), но за счёт короткого лизхолда и юридических рисков — актив «тает» по сроку. На Пхукете доходность 6–10% при более устойчивой структуре владения и лучшей ликвидности при выходе.</div></details>
+    <details><summary>Может ли иностранец купить freehold на Бали?</summary><div class="a">Нет. На Бали иностранцу freehold недоступен — только лизхолд или рискованные nominee-структуры. На Пхукете кондо доступно во freehold в рамках 49% квоты, а земля под виллами — зарегистрированный долгосрочный лизхолд.</div></details>
+  </div>
+</div></section>
+
 <section class="cta"><div class="wrap">
   <h2>Рассматриваете Пхукет?</h2>
   <p>Поможем сравнить конкретные объекты, посчитать доходность и оформить сделку напрямую с застройщиком — ноль комиссии покупателю.</p>
@@ -202,6 +276,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:52px 0 26px;border-top:1px sol
       <div><h5>Справочник</h5>
         <a href="/buy-property-phuket-ru.html">Как купить на Пхукете</a>
         <a href="/freehold-leasehold-thailand-ru.html">Freehold и Leasehold</a>
+        <a href="/phuket-investment-yield-ru.html">Доходность аренды</a>
       </div>
       <div><h5>Компания</h5>
         <a href="/fund-ru.html">Фонд</a>

@@ -27,8 +27,9 @@
 ### P1 — добить ядро гайдов (RU)
 - [x] `freehold-leasehold-thailand-ru.html` — формы собственности, квота 49%, 30+30+30, FET (WebPage+FAQPage+Breadcrumb+RealEstateAgent)
 - [x] Schema-инъекция на главные `index-ru/en/zh`: `Organization` + `WebSite` + `RealEstateAgent`
-- [ ] `phuket-investment-yield-ru.html` — реальная доходность: gross vs net (4–6%), расходы (УК, простои, налоги), без «гарантий»
-- [ ] Schema `FAQPage` + `BreadcrumbList` на `rayony/*` и `sravnenie/*` (answer-блоки)
+- [x] `phuket-investment-yield-ru.html` — реальная доходность: gross vs net (4–6%), расходы (УК, простои, налоги), доходность по районам, без «гарантий» (WebPage+FAQPage+Breadcrumb+RealEstateAgent)
+- [x] Schema `FAQPage` + `BreadcrumbList` + видимые answer-блоки на `rayony/*` (8 районов), `rayony-phuket.html` (хаб) и `sravnenie/*` (Дубай, Бали)
+- [x] Sitemap + llms.txt + футер «Справочник» + кросс-ссылки на страницу доходности
 
 ### P2
 - [ ] `remote-purchase-phuket-ru.html` — удалённая сделка: доверенность, маршрут оплаты, FET, риски
