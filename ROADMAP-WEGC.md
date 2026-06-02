@@ -44,7 +44,7 @@
 - [x] sitemap: `xhtml:link rel="alternate" hreflang` для трёхъязычных групп (генерируется из on-page hreflang, 130 аннотаций)
 - [~] ~~ZH-версии хабов (buy / freehold-leasehold)~~ — ОТМЕНЕНО: SEO-гайды только на RU
 - [x] PageSpeed: `width/height` (интринсик-размеры из файлов) + `decoding="async"` на 226 `<img>` в 33 файлах (lazy уже был) — устраняет CLS
-- [ ] PageSpeed (опц.): WebP для тяжёлых JPG (через `<picture>` + fallback) — отдельной задачей
+- [x] PageSpeed: WebP для всех растровых изображений (через `<picture>` + JPG-fallback) — 78 файлов сгенерировано (37,5 МБ → 11,9 МБ, −68%), 226 `<img>` обёрнуты в `<picture>` на 33 живых страницах; `picture{display:contents}` сохраняет вёрстку
 
 ### Контент / доверие (после структуры)
 - [ ] Анонимизированные кейсы покупателей (расширить блок «Истории» в гайды)

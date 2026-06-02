@@ -102,7 +102,7 @@
 .ph-fig img[src]:not([src=""]){opacity:1}
 /* investment block CTA */
 .invest-cta{margin-top:24px;position:relative;z-index:1}
-</style>
+picture{display:contents}</style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 </head><style>
@@ -284,9 +284,9 @@
   <div class="container">
     <div class="s-head"><span class="kicker">Визуализация</span><h2>Галерея проекта.</h2></div>
     <div class="js-gallery" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px">
-      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/olive/facade.jpg" width="1600" height="651" alt="The Olive — фасад" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block" decoding="async"/></figure>
-      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/olive/pool1.jpg" width="1600" height="643" alt="The Olive — бассейн" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block" decoding="async"/></figure>
-      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><img src="/images/projects/olive/pool2.jpg" width="1600" height="643" alt="The Olive — зона у бассейна" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block" decoding="async"/></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><picture><source srcset="/images/projects/olive/facade.webp" type="image/webp"><img src="/images/projects/olive/facade.jpg" width="1600" height="651" alt="The Olive — фасад" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block" decoding="async"/></picture></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><picture><source srcset="/images/projects/olive/pool1.webp" type="image/webp"><img src="/images/projects/olive/pool1.jpg" width="1600" height="643" alt="The Olive — бассейн" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block" decoding="async"/></picture></figure>
+      <figure style="margin:0;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;background:#fff"><picture><source srcset="/images/projects/olive/pool2.webp" type="image/webp"><img src="/images/projects/olive/pool2.jpg" width="1600" height="643" alt="The Olive — зона у бассейна" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block" decoding="async"/></picture></figure>
     </div>
   </div>
 </section>
