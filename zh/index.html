@@ -10,6 +10,11 @@
 <meta property="og:description" content="开发商直签合同。买方零佣金。11 个普吉岛精选项目,统一委托。"/>
 <meta property="og:url" content="https://wegc.fund/zh/"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="West East Gate Real Estate — 精选普吉岛房产"/>
+<meta name="twitter:description" content="开发商直签合同。买方零佣金。11 个普吉岛精选项目,统一委托。"/>
+<meta name="twitter:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
 <link rel="canonical" href="https://wegc.fund/zh/"/>
 <!--HREFLANG-->
 <link rel="alternate" hreflang="en" href="https://wegc.fund/"/>
@@ -24,6 +29,21 @@
     {"@type":"Organization","@id":"https://wegc.fund/#org","name":"WEST EAST TRADE GROUP PTE. LTD.","url":"https://wegc.fund/","identifier":"UEN 202505772C","address":{"@type":"PostalAddress","streetAddress":"7 Temasek Boulevard, #12-07, Suntec Tower One","postalCode":"038987","addressLocality":"Singapore","addressCountry":"SG"},"email":"post@wegc.fund"},
     {"@type":"WebSite","@id":"https://wegc.fund/#website","name":"West East Gate Real Estate","url":"https://wegc.fund/","inLanguage":"zh-CN","publisher":{"@id":"https://wegc.fund/#org"}},
     {"@type":"RealEstateAgent","@id":"https://wegc.fund/#agent","name":"West East Gate Real Estate","url":"https://wegc.fund/zh/","email":"property@wegc.fund","areaServed":{"@type":"Place","name":"Phuket, Thailand"},"knowsLanguage":["zh","en","ru"],"parentOrganization":{"@id":"https://wegc.fund/#org"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "inLanguage":"zh-CN",
+  "mainEntity":[
+    {"@type":"Question","name":"Leasehold 与 freehold — 实际区别是什么?","acceptedAnswer":{"@type":"Answer","text":"Freehold 是登记在 chanote 上的直接产权,适用于公寓项目 49% 外国人配额内的单元。Leasehold 是已登记的长期使用权 (通常 30+30+30 年)。两者均为主流架构;最适合您的方案取决于配额可用性、您的持有周期与转售计划。"}},
+    {"@type":"Question","name":"外国人可以在泰国持有土地吗?","acceptedAnswer":{"@type":"Answer","text":"外国人直接持有 freehold 土地受到严格限制。多数外国投资者选择在配额内购买公寓,或采用经独立本地律师审核的长期登记 leasehold。公司持有架构存在但因项目而异,需要细致的法律审核。"}},
+    {"@type":"Question","name":"度假区合理的租赁收益是多少?","acceptedAnswer":{"@type":"Answer","text":"位于优质地段的稳定运营项目通常实现中至高个位数的净收益。超过此区间的数字通常反映促销期或更高风险。我们以内部地段研究框架对每个项目进行比对,而非依赖宣传册预测。"}},
+    {"@type":"Question","name":"你们向买家收取佣金吗?","acceptedAnswer":{"@type":"Answer","text":"不收取。您按开发商挂牌价付款;我们的酬劳由开发商支付。该结构在任何承诺之前以书面形式披露。"}},
+    {"@type":"Question","name":"入境款项如何记录?","acceptedAnswer":{"@type":"Answer","text":"资金按 FET / TT3 要求通过国际电汇进入开发商托管账户。银行以外币登记入境款项,这对日后将转售款汇出境外是必要的。"}},
+    {"@type":"Question","name":"30 年租赁期到期后会怎样?","acceptedAnswer":{"@type":"Answer","text":"规范起草的租赁合同包含续期机制。真正关键的是合同质量、登记情况与对手方。我们只与能够以切实可行的续期条款书面化的开发商与法律团队合作。"}}
   ]
 }
 </script>
@@ -268,6 +288,12 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 }
 .cat-tag.gold{background:rgba(160,129,86,.92)}
 .cat-tag.blue{background:rgba(37,99,235,.88)}
+.cat-tags{z-index:3}
+/* 目录卡片视频看房预览（仅桌面端悬停；移动端 0 字节，preload=none） */
+.cat-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:1;pointer-events:none;background:#0f172a}
+.cat-card.is-playing .cat-video{opacity:1}
+.cat-tour-badge{position:absolute;top:14px;right:14px;z-index:3;display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0a0e1a;background:linear-gradient(135deg,var(--gold-bright),var(--gold));padding:5px 10px;border-radius:3px;box-shadow:0 2px 10px rgba(10,14,26,.4);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.cat-tour-badge .pl{font-size:9px;line-height:1}
 .cat-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
 .cat-body h3{font-size:1.4rem;font-weight:500;letter-spacing:-.02em;line-height:1.2}
 .cat-developer{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
@@ -752,6 +778,8 @@ picture{display:contents}</style>
       <!-- FEATURED: CASA DE MONTE -->
       <article class="cat-card" data-cats="villa leasehold">
         <a class="cat-cover" href="/projects/casa-de-monte-zh.html" aria-label="Casa de Monte"><picture><source srcset="/images/projects/casademonte-hero.webp" type="image/webp"><img src="/images/projects/casademonte-hero.jpg" width="1920" height="797" alt="Casa de Monte villas" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/casa-de-monte/dossier/video/casa-de-monte-tour-poster.jpg" aria-hidden="true"><source src="/images/projects/casa-de-monte/dossier/video/casa-de-monte-tour.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags">
             <span class="cat-tag gold">精选</span>
             <span class="cat-tag">别墅</span>
@@ -777,6 +805,8 @@ picture{display:contents}</style>
       <!-- NEW: The Title Vivana — 卡马拉 -->
       <article class="cat-card" data-cats="kamala freehold">
         <a class="cat-cover" href="/projects/the-title-vivana-zh.html" aria-label="The Title Vivana — 卡马拉"><picture><source srcset="/images/projects/vivana/facade.webp" type="image/webp"><img src="/images/projects/vivana/facade.jpg" width="1600" height="675" alt="The Title Vivana — 卡马拉" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-vivana/dossier/video/the-title-vivana-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-vivana/dossier/video/the-title-vivana-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">卡马拉</span></div>
         </a>
         <div class="cat-body">
@@ -794,6 +824,8 @@ picture{display:contents}</style>
       <!-- NEW: The Title Sierra — 邦涛 -->
       <article class="cat-card" data-cats="bangtao freehold">
         <a class="cat-cover" href="/projects/the-title-sierra-zh.html" aria-label="The Title Sierra — 邦涛"><picture><source srcset="/images/projects/sierra/facade.webp" type="image/webp"><img src="/images/projects/sierra/facade.jpg" width="1600" height="756" alt="The Title Sierra — 邦涛" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-sierra/dossier/video/the-title-sierra-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-sierra/dossier/video/the-title-sierra-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">邦涛</span></div>
         </a>
         <div class="cat-body">
@@ -811,6 +843,8 @@ picture{display:contents}</style>
       <!-- NEW: The Olive — 奈杨 -->
       <article class="cat-card" data-cats="naiyang freehold">
         <a class="cat-cover" href="/projects/the-olive-zh.html" aria-label="The Olive — 奈杨"><picture><source srcset="/images/projects/olive/facade.webp" type="image/webp"><img src="/images/projects/olive/facade.jpg" width="1600" height="651" alt="The Olive — 奈杨" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-olive/dossier/video/the-olive-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-olive/dossier/video/the-olive-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags"><span class="cat-tag gold">全新</span><span class="cat-tag">公寓</span><span class="cat-tag">奈杨</span></div>
         </a>
         <div class="cat-body">
@@ -829,6 +863,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="bangtao leasehold">
         <a class="cat-cover" href="/projects/the-modeva.html" aria-label="Open The Modeva passport">
           <picture><source srcset="/images/the-modeva-exterior-2-1-1280x665.webp" type="image/webp"><img src="/images/the-modeva-exterior-2-1-1280x665.jpg" width="1280" height="665" alt="The Modeva exterior, Bang Tao, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-modeva/dossier/video/the-modeva-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-modeva/dossier/video/the-modeva-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Bang Tao</span>
@@ -879,6 +915,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="kata leasehold">
         <a class="cat-cover" href="/projects/the-title-katabello.html" aria-label="Open The Title Katabello passport">
           <picture><source srcset="/images/the-title-katabello-exterior-2.webp" type="image/webp"><img src="/images/the-title-katabello-exterior-2.jpg" width="1194" height="825" alt="The Title Katabello exterior, Kata-Karon, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-katabello/dossier/video/the-title-katabello-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-katabello/dossier/video/the-title-katabello-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Kata · Karon</span>
@@ -904,6 +942,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="rawai leasehold">
         <a class="cat-cover" href="/projects/the-title-adora.html" aria-label="Open The Title Adora passport">
           <picture><source srcset="/images/the-title-adora-exterior-8.webp" type="image/webp"><img src="/images/the-title-adora-exterior-8.jpg" width="1248" height="685" alt="The Title Adora exterior, Rawai, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-adora/dossier/video/the-title-adora-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-adora/dossier/video/the-title-adora-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Rawai</span>
@@ -929,6 +969,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="bangtao leasehold">
         <a class="cat-cover" href="/projects/title-vivi-zh.html" aria-label="Open The Title Vivi passport">
           <picture><source srcset="/images/title-vivi-exterior-2-1280x716.webp" type="image/webp"><img src="/images/title-vivi-exterior-2-1280x716.jpg" width="1280" height="716" alt="The Title Vivi exterior, Bang Tao, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/title-vivi/dossier/video/title-vivi-tour-poster.jpg" aria-hidden="true"><source src="/images/projects/title-vivi/dossier/video/title-vivi-tour.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Bang Tao</span>
@@ -953,6 +995,8 @@ picture{display:contents}</style>
       <!-- 6. THE TITLE BALCONY -->
       <article class="cat-card" data-cats="naiyang leasehold">
         <a class="cat-cover" href="/projects/the-title-balcony.html" aria-label="The Title Balcony"><picture><source srcset="/images/projects/balcony-hero.webp" type="image/webp"><img src="/images/projects/balcony-hero.jpg" width="1536" height="1024" alt="The Title Balcony, Nai Yang" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-balcony/dossier/video/the-title-balcony-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-balcony/dossier/video/the-title-balcony-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Nai Yang</span>
@@ -977,6 +1021,8 @@ picture{display:contents}</style>
       <!-- 7. THE TITLE BIANCANA -->
       <article class="cat-card" data-cats="surin leasehold">
         <a class="cat-cover" href="/projects/the-title-biancana.html" aria-label="The Title Biancana"><picture><source srcset="/images/projects/biancana-hero.webp" type="image/webp"><img src="/images/projects/biancana-hero.jpg" width="1536" height="1024" alt="The Title Biancana, Surin" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-biancana/dossier/video/the-title-biancana-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-biancana/dossier/video/the-title-biancana-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> 视频看房</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Surin</span>
@@ -1450,6 +1496,28 @@ document.addEventListener('DOMContentLoaded', () => document.body.classList.add(
       card.style.display = show ? '' : 'none';
     });
   }));
+})();
+
+// 视频看房：仅桌面端悬停预览，无自动播放，移动端 0 字节（preload=none）
+(function(){
+  const canHover = window.matchMedia('(hover:hover) and (pointer:fine) and (min-width:1024px)');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(!canHover.matches || reduce.matches) return;
+  document.querySelectorAll('.cat-card').forEach(card => {
+    const video = card.querySelector('.cat-video');
+    if(!video) return;
+    card.addEventListener('mouseenter', () => {
+      if(!canHover.matches || reduce.matches) return;
+      card.classList.add('is-playing');
+      const p = video.play();
+      if(p && p.catch) p.catch(() => {});
+    });
+    card.addEventListener('mouseleave', () => {
+      card.classList.remove('is-playing');
+      video.pause();
+      try { video.currentTime = 0; } catch(e) {}
+    });
+  });
 })();
 
 // Form

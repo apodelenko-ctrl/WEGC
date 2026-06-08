@@ -6,6 +6,9 @@
  *   window.WEGC_PROMO = { en:{title,text}, ru:{...}, zh:{...} };
  */
 (function () {
+  // DISABLED: no active developer incentives to show yet (per request).
+  // Re-enable later by removing this early return.
+  return;
   if (window.__wegcPromo) return; window.__wegcPromo = true;
   try { if (sessionStorage.getItem('wegcPromoSeen')) return; } catch (e) {}
 

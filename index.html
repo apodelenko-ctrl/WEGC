@@ -10,6 +10,11 @@
 <meta property="og:description" content="Developer-direct contracts. Zero buyer commission. Eleven screened Phuket projects under one mandate."/>
 <meta property="og:url" content="https://wegc.fund/"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="West East Gate Real Estate — Curated Phuket properties · West East Gate Capital"/>
+<meta name="twitter:description" content="Developer-direct contracts. Zero buyer commission. Eleven screened Phuket projects under one mandate."/>
+<meta name="twitter:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
 <link rel="canonical" href="https://wegc.fund/"/>
 <!--HREFLANG-->
 <link rel="alternate" hreflang="en" href="https://wegc.fund/"/>
@@ -24,6 +29,21 @@
     {"@type":"Organization","@id":"https://wegc.fund/#org","name":"WEST EAST TRADE GROUP PTE. LTD.","url":"https://wegc.fund/","identifier":"UEN 202505772C","address":{"@type":"PostalAddress","streetAddress":"7 Temasek Boulevard, #12-07, Suntec Tower One","postalCode":"038987","addressLocality":"Singapore","addressCountry":"SG"},"email":"post@wegc.fund"},
     {"@type":"WebSite","@id":"https://wegc.fund/#website","name":"West East Gate Real Estate","url":"https://wegc.fund/","inLanguage":"en","publisher":{"@id":"https://wegc.fund/#org"}},
     {"@type":"RealEstateAgent","@id":"https://wegc.fund/#agent","name":"West East Gate Real Estate","url":"https://wegc.fund/","email":"property@wegc.fund","areaServed":{"@type":"Place","name":"Phuket, Thailand"},"knowsLanguage":["en","ru","zh"],"parentOrganization":{"@id":"https://wegc.fund/#org"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "inLanguage":"en",
+  "mainEntity":[
+    {"@type":"Question","name":"Leasehold vs freehold — what's actually the difference?","acceptedAnswer":{"@type":"Answer","text":"Freehold is direct ownership registered on the chanote, available within the 49% foreign quota of a condominium project. Leasehold is a registered long-term right of use (typically 30+30+30 years). Both are mainstream structures; the right route depends on quota availability, your holding horizon, and the resale plan."}},
+    {"@type":"Question","name":"Can foreigners own land in Thailand?","acceptedAnswer":{"@type":"Answer","text":"Direct freehold land ownership by foreigners is heavily restricted. Most foreign private buyers purchase condominium units within the quota or use long-term registered leasehold, vetted by independent local counsel. Company-route structures exist but are project-dependent and require careful legal review."}},
+    {"@type":"Question","name":"What rental yields are realistic in resort areas?","acceptedAnswer":{"@type":"Answer","text":"Stabilised projects in strong locations typically deliver net yields in the mid-single to high-single digits. Numbers above that range usually reflect either an introductory marketing programme or higher risk. We benchmark every project against GIDR's territory model rather than trusting brochure projections."}},
+    {"@type":"Question","name":"Do you charge buyers any commission?","acceptedAnswer":{"@type":"Answer","text":"No. You pay the developer's list price; our compensation is on the developer side. The structure is disclosed in writing before any commitment."}},
+    {"@type":"Question","name":"How is the inbound payment recorded?","acceptedAnswer":{"@type":"Answer","text":"Funds arrive via international wire transfer into the developer's escrow per FET / TT3 requirements. The bank registers the inbound transfer in foreign currency, which is required for future repatriation of resale proceeds."}},
+    {"@type":"Question","name":"What happens at the end of a 30-year lease?","acceptedAnswer":{"@type":"Answer","text":"Properly drafted leases include renewal mechanics. The real questions are the contract quality, the registration, and the counterparty. We work only with developers and legal teams that document realistic renewal terms."}}
   ]
 }
 </script>
@@ -268,6 +288,12 @@ section.s.dark .s-head p{color:rgba(255,255,255,.7)}
 }
 .cat-tag.gold{background:rgba(160,129,86,.92)}
 .cat-tag.blue{background:rgba(37,99,235,.88)}
+.cat-tags{z-index:3}
+/* Video-tour preview on catalog cards (desktop hover only; zero bytes on mobile via preload=none) */
+.cat-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:1;pointer-events:none;background:#0f172a}
+.cat-card.is-playing .cat-video{opacity:1}
+.cat-tour-badge{position:absolute;top:14px;right:14px;z-index:3;display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0a0e1a;background:linear-gradient(135deg,var(--gold-bright),var(--gold));padding:5px 10px;border-radius:3px;box-shadow:0 2px 10px rgba(10,14,26,.4);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.cat-tour-badge .pl{font-size:9px;line-height:1}
 .cat-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
 .cat-body h3{font-size:1.4rem;font-weight:500;letter-spacing:-.02em;line-height:1.2}
 .cat-developer{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
@@ -752,6 +778,8 @@ picture{display:contents}</style>
       <!-- FEATURED: CASA DE MONTE -->
       <article class="cat-card" data-cats="villa leasehold">
         <a class="cat-cover" href="/projects/casa-de-monte-en.html" aria-label="Casa de Monte"><picture><source srcset="/images/projects/casademonte-hero.webp" type="image/webp"><img src="/images/projects/casademonte-hero.jpg" width="1920" height="797" alt="Casa de Monte villas" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/casa-de-monte/dossier/video/casa-de-monte-tour-poster.jpg" aria-hidden="true"><source src="/images/projects/casa-de-monte/dossier/video/casa-de-monte-tour.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Featured</span>
             <span class="cat-tag">Villa</span>
@@ -777,6 +805,8 @@ picture{display:contents}</style>
       <!-- NEW: The Title Vivana — Kamala -->
       <article class="cat-card" data-cats="kamala freehold">
         <a class="cat-cover" href="/projects/the-title-vivana-en.html" aria-label="The Title Vivana — Kamala"><picture><source srcset="/images/projects/vivana/facade.webp" type="image/webp"><img src="/images/projects/vivana/facade.jpg" width="1600" height="675" alt="The Title Vivana — Kamala" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-vivana/dossier/video/the-title-vivana-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-vivana/dossier/video/the-title-vivana-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags"><span class="cat-tag gold">New</span><span class="cat-tag">Condo</span><span class="cat-tag">Kamala</span></div>
         </a>
         <div class="cat-body">
@@ -794,6 +824,8 @@ picture{display:contents}</style>
       <!-- NEW: The Title Sierra — Bang Tao -->
       <article class="cat-card" data-cats="bangtao freehold">
         <a class="cat-cover" href="/projects/the-title-sierra-en.html" aria-label="The Title Sierra — Bang Tao"><picture><source srcset="/images/projects/sierra/facade.webp" type="image/webp"><img src="/images/projects/sierra/facade.jpg" width="1600" height="756" alt="The Title Sierra — Bang Tao" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-sierra/dossier/video/the-title-sierra-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-sierra/dossier/video/the-title-sierra-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags"><span class="cat-tag gold">New</span><span class="cat-tag">Condo</span><span class="cat-tag">Bang Tao</span></div>
         </a>
         <div class="cat-body">
@@ -811,6 +843,8 @@ picture{display:contents}</style>
       <!-- NEW: The Olive — Nai Yang -->
       <article class="cat-card" data-cats="naiyang freehold">
         <a class="cat-cover" href="/projects/the-olive-en.html" aria-label="The Olive — Nai Yang"><picture><source srcset="/images/projects/olive/facade.webp" type="image/webp"><img src="/images/projects/olive/facade.jpg" width="1600" height="651" alt="The Olive — Nai Yang" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-olive/dossier/video/the-olive-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-olive/dossier/video/the-olive-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags"><span class="cat-tag gold">New</span><span class="cat-tag">Condo</span><span class="cat-tag">Nai Yang</span></div>
         </a>
         <div class="cat-body">
@@ -829,6 +863,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="bangtao leasehold">
         <a class="cat-cover" href="/projects/the-modeva-en.html" aria-label="Open The Modeva passport">
           <picture><source srcset="/images/the-modeva-exterior-2-1-1280x665.webp" type="image/webp"><img src="/images/the-modeva-exterior-2-1-1280x665.jpg" width="1280" height="665" alt="The Modeva exterior, Bang Tao, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-modeva/dossier/video/the-modeva-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-modeva/dossier/video/the-modeva-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Bang Tao</span>
@@ -879,6 +915,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="kata leasehold">
         <a class="cat-cover" href="/projects/the-title-katabello-en.html" aria-label="Open The Title Katabello passport">
           <picture><source srcset="/images/the-title-katabello-exterior-2.webp" type="image/webp"><img src="/images/the-title-katabello-exterior-2.jpg" width="1194" height="825" alt="The Title Katabello exterior, Kata-Karon, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-katabello/dossier/video/the-title-katabello-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-katabello/dossier/video/the-title-katabello-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Kata · Karon</span>
@@ -904,6 +942,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="rawai leasehold">
         <a class="cat-cover" href="/projects/the-title-adora-en.html" aria-label="Open The Title Adora passport">
           <picture><source srcset="/images/the-title-adora-exterior-8.webp" type="image/webp"><img src="/images/the-title-adora-exterior-8.jpg" width="1248" height="685" alt="The Title Adora exterior, Rawai, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-adora/dossier/video/the-title-adora-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-adora/dossier/video/the-title-adora-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Rawai</span>
@@ -929,6 +969,8 @@ picture{display:contents}</style>
       <article class="cat-card" data-cats="bangtao leasehold">
         <a class="cat-cover" href="/projects/title-vivi-en.html" aria-label="Open The Title Vivi passport">
           <picture><source srcset="/images/title-vivi-exterior-2-1280x716.webp" type="image/webp"><img src="/images/title-vivi-exterior-2-1280x716.jpg" width="1280" height="716" alt="The Title Vivi exterior, Bang Tao, Phuket" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/title-vivi/dossier/video/title-vivi-tour-poster.jpg" aria-hidden="true"><source src="/images/projects/title-vivi/dossier/video/title-vivi-tour.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Bang Tao</span>
@@ -953,6 +995,8 @@ picture{display:contents}</style>
       <!-- 6. THE TITLE BALCONY -->
       <article class="cat-card" data-cats="naiyang leasehold">
         <a class="cat-cover" href="/projects/the-title-balcony-en.html" aria-label="The Title Balcony"><picture><source srcset="/images/projects/balcony-hero.webp" type="image/webp"><img src="/images/projects/balcony-hero.jpg" width="1536" height="1024" alt="The Title Balcony, Nai Yang" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-balcony/dossier/video/the-title-balcony-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-balcony/dossier/video/the-title-balcony-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Nai Yang</span>
@@ -977,6 +1021,8 @@ picture{display:contents}</style>
       <!-- 7. THE TITLE BIANCANA -->
       <article class="cat-card" data-cats="surin leasehold">
         <a class="cat-cover" href="/projects/the-title-biancana-en.html" aria-label="The Title Biancana"><picture><source srcset="/images/projects/biancana-hero.webp" type="image/webp"><img src="/images/projects/biancana-hero.jpg" width="1536" height="1024" alt="The Title Biancana, Surin" loading="lazy" decoding="async"/></picture>
+          <video class="cat-video" muted loop playsinline preload="none" poster="/images/projects/the-title-biancana/dossier/video/the-title-biancana-tour-1-poster.jpg" aria-hidden="true"><source src="/images/projects/the-title-biancana/dossier/video/the-title-biancana-tour-1.mp4" type="video/mp4"></video>
+          <span class="cat-tour-badge"><span class="pl">▶</span> Video tour</span>
           <div class="cat-tags">
             <span class="cat-tag gold">Leasehold</span>
             <span class="cat-tag">Surin</span>
@@ -1450,6 +1496,28 @@ document.addEventListener('DOMContentLoaded', () => document.body.classList.add(
       card.style.display = show ? '' : 'none';
     });
   }));
+})();
+
+// Catalog video-tour hover preview — desktop pointers only, no autoplay, zero bytes on mobile (preload=none)
+(function(){
+  const canHover = window.matchMedia('(hover:hover) and (pointer:fine) and (min-width:1024px)');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(!canHover.matches || reduce.matches) return;
+  document.querySelectorAll('.cat-card').forEach(card => {
+    const video = card.querySelector('.cat-video');
+    if(!video) return;
+    card.addEventListener('mouseenter', () => {
+      if(!canHover.matches || reduce.matches) return;
+      card.classList.add('is-playing');
+      const p = video.play();
+      if(p && p.catch) p.catch(() => {});
+    });
+    card.addEventListener('mouseleave', () => {
+      card.classList.remove('is-playing');
+      video.pause();
+      try { video.currentTime = 0; } catch(e) {}
+    });
+  });
 })();
 
 // Form

@@ -464,19 +464,21 @@
   </url>
   <url>
     <loc>https://wegc.fund/projects/the-title-vivana-zh.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wegc.fund/projects/the-title-vivana-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wegc.fund/projects/the-title-vivana-en.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wegc.fund/projects/the-title-vivana.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://wegc.fund/projects/the-title-vivana-zh.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wegc.fund/projects/the-title-vivana-zh.html"/>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wegc.fund/projects/the-title-sierra-zh.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wegc.fund/projects/the-title-sierra-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wegc.fund/projects/the-title-sierra-en.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wegc.fund/projects/the-title-sierra.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://wegc.fund/projects/the-title-sierra-zh.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wegc.fund/projects/the-title-sierra-zh.html"/>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -486,15 +488,17 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://wegc.fund/projects/title-vivi.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://wegc.fund/projects/title-vivi-zh.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wegc.fund/projects/title-vivi-zh.html"/>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wegc.fund/projects/the-olive-zh.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wegc.fund/projects/the-olive-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wegc.fund/projects/the-olive-en.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wegc.fund/projects/the-olive.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://wegc.fund/projects/the-olive-zh.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wegc.fund/projects/the-olive-zh.html"/>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
