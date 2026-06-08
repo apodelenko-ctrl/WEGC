@@ -1,0 +1,11 @@
+# --- Palma brand (lives in its own repo, must NOT publish to wegc.fund) ---
+palma.html
+palma-*.html
+palma-passport.css
+_gen_palma_*.py
+
+# --- Internal docs / infra artifacts (not for the public site) ---
+LINKTREE-ASSETS.md
+VIDEO-ASSETS.md
+CLOUDFLARE-REDIRECTS.md
+_redirects
