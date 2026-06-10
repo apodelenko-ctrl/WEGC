@@ -136,7 +136,7 @@ strong{color:var(--ink);font-weight:600}
 .lang-sw a.active{background:#d6b370;color:#0a0e1a}
 @media(max-width:900px){.tb-nav,.tb-brand .tag{display:none}}
 /* hero */
-.hero{position:relative;min-height:62vh;display:flex;align-items:center;padding:150px 0 70px;color:#fff;background:linear-gradient(100deg,rgba(6,8,15,.92) 0%,rgba(6,8,15,.66) 55%,rgba(6,8,15,.4) 100%),var(--hero-bg) center/cover no-repeat,var(--bg-darker)}
+.hero{position:relative;min-height:62vh;display:flex;align-items:center;padding:150px 0 70px;color:#fff;background:var(--bg-darker);overflow:hidden}
 .hero h1{color:#fff;max-width:18ch;margin-bottom:20px}
 .hero h1 strong{color:var(--gold-bright);font-weight:600}
 .hero-sub{color:rgba(255,255,255,.8);font-size:1.1rem;max-width:60ch;font-weight:300;margin-bottom:30px}
@@ -208,6 +208,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:52px 0 26px;border-top:1px sol
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/109732633" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<link rel="preload" as="image" href="/images/hero/hero-phuket-aerial-sunset.jpg" fetchpriority="high"/>
 </head>
 <body>
 <header id="topbar"><div class="tb-inner">
@@ -227,7 +228,41 @@ footer.f{background:#06080f;color:#94a3b8;padding:52px 0 26px;border-top:1px sol
   </div>
 </div></header>
 <main>
-<section class="hero" style="--hero-bg:url('/images/the-title-adora-exterior-9.jpg')"><div class="wrap">
+<style>
+/* hbg-: hero photo rotator (namespaced separately from pcar) */
+.hero .hbg-layer{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1.8s ease;will-change:opacity,transform;pointer-events:none}
+.hero .hbg-layer.on{opacity:1;animation:hbgKb 14s ease-out forwards}
+@keyframes hbgKb{from{transform:scale(1)}to{transform:scale(1.05)}}
+@media(prefers-reduced-motion:reduce){.hero .hbg-layer{transition:none;animation:none!important}}
+.hero>.wrap{position:relative;z-index:2}
+</style>
+<section class="hero">
+  <div class="hbg-layer" aria-hidden="true"></div><div class="hbg-layer" aria-hidden="true"></div>
+<script>
+/* hbg-: hero bg rotator — first image set eagerly (LCP), rest preloaded after load, reduced-motion safe */
+(function(){
+  var GRAD="linear-gradient(100deg,rgba(6,8,15,.94) 0%,rgba(6,8,15,.8) 55%,rgba(6,8,15,.62) 100%)";
+  var imgs=['/images/hero/hero-phuket-aerial-sunset.jpg','/images/hero/hero-phuket-villa-architecture.jpg','/images/hero/hero-phuket-infinity-pool.jpg','/images/hero/hero-phuket-bay-karst.jpg'];
+  var layers=document.querySelectorAll('.hero .hbg-layer');if(layers.length<2)return;
+  layers[0].style.backgroundImage=GRAD+",url('"+imgs[0]+"')";
+  layers[0].classList.add('on');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var i=0,cur=0;
+  window.addEventListener('load',function(){for(var k=1;k<imgs.length;k++){(new Image()).src=imgs[k];}});
+  setInterval(function(){
+    i=(i+1)%imgs.length;
+    var nxt=cur^1;
+    layers[nxt].classList.remove('on');
+    layers[nxt].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+    layers[nxt].style.zIndex='1';
+    layers[cur].style.zIndex='0';
+    void layers[nxt].offsetWidth;
+    layers[nxt].classList.add('on');
+    cur=nxt;
+  },5600);
+})();
+</script>
+<div class="wrap">
   <span class="kicker">Сравнение рынков · 2026</span>
   <h1>Пхукет или Паттайя</h1>
   <p class="hero-sub">Бюджетный вход против качества среды: где покупать недвижимость в Таиланде в 2026. Сравниваем цену входа, пляжи и море, аудиторию аренды, конкуренцию и ликвидность.</p>

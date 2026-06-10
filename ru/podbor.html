@@ -239,6 +239,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
   .topbar-inner{padding:14px 22px}
 }
 </style>
+<link rel="preload" as="image" href="/images/hero/hero-phuket-aerial-sunset.jpg" fetchpriority="high"/>
 </head>
 <body>
 
@@ -262,7 +263,39 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
 
 <main>
 
+<style>
+/* hbg-: hero photo rotator (namespaced separately from pcar) */
+.hero .hbg-layer{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1.8s ease;will-change:opacity,transform;pointer-events:none}
+.hero .hbg-layer.on{opacity:1;animation:hbgKb 14s ease-out forwards}
+@keyframes hbgKb{from{transform:scale(1)}to{transform:scale(1.05)}}
+@media(prefers-reduced-motion:reduce){.hero .hbg-layer{transition:none;animation:none!important}}
+</style>
 <section class="hero">
+  <div class="hbg-layer" aria-hidden="true"></div><div class="hbg-layer" aria-hidden="true"></div>
+<script>
+/* hbg-: hero bg rotator — first image set eagerly (LCP), rest preloaded after load, reduced-motion safe */
+(function(){
+  var GRAD="linear-gradient(180deg,rgba(6,8,15,.92) 0%,rgba(6,8,15,.78) 50%,rgba(6,8,15,.92) 100%)";
+  var imgs=['/images/hero/hero-phuket-aerial-sunset.jpg','/images/hero/hero-phuket-infinity-pool.jpg','/images/hero/hero-phuket-villa-architecture.jpg','/images/hero/hero-phuket-bay-karst.jpg'];
+  var layers=document.querySelectorAll('.hero .hbg-layer');if(layers.length<2)return;
+  layers[0].style.backgroundImage=GRAD+",url('"+imgs[0]+"')";
+  layers[0].classList.add('on');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var i=0,cur=0;
+  window.addEventListener('load',function(){for(var k=1;k<imgs.length;k++){(new Image()).src=imgs[k];}});
+  setInterval(function(){
+    i=(i+1)%imgs.length;
+    var nxt=cur^1;
+    layers[nxt].classList.remove('on');
+    layers[nxt].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+    layers[nxt].style.zIndex='1';
+    layers[cur].style.zIndex='0';
+    void layers[nxt].offsetWidth;
+    layers[nxt].classList.add('on');
+    cur=nxt;
+  },5600);
+})();
+</script>
   <div class="hero-inner">
     <span class="hero-flag"><span class="dot"></span><span>5 вопросов · 2 минуты · без комиссии покупателю</span></span>
     <h1>Подбор объекта на Пхукете <strong>за 2 минуты</strong></h1>
