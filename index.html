@@ -1646,9 +1646,11 @@ document.addEventListener('DOMContentLoaded', function(){
         console.error('Form delivery error:', err);
       }
       if(delivered){
+        if (typeof ym !== 'undefined') ym(109732633,'reachGoal','form_submit');
         form.reset();
         alert(form.dataset.successMsg || 'Thank you. Your request has been received.');
       } else {
+        if (typeof ym !== 'undefined') ym(109732633,'reachGoal','form_submit');
         window.location.href = buildMailto(form);
         setTimeout(function(){
           alert(form.dataset.fallbackMsg || 'Your email client should open with the message ready to send. If nothing happens, write to us at post@wegc.fund.');

@@ -69,7 +69,13 @@
     document.body.appendChild(btn); document.body.appendChild(panel);
     var x = panel.querySelector('.wegc-chat-x');
     var send = panel.querySelector('#wegc-c-send');
-    btn.addEventListener('click', function () { panel.classList.toggle('open'); if (panel.classList.contains('open')) panel.querySelector('#wegc-c-msg').focus(); });
+    btn.addEventListener('click', function () {
+      panel.classList.toggle('open');
+      if (panel.classList.contains('open')) {
+        if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'chat_open');
+        panel.querySelector('#wegc-c-msg').focus();
+      }
+    });
     x.addEventListener('click', function () { panel.classList.remove('open'); });
     send.addEventListener('click', async function () {
       if (panel.querySelector('#wegc-c-gotcha').value) { done(); return; }
@@ -88,7 +94,10 @@
         clearTimeout(t); ok = r.ok;
       } catch (e) { ok = false; }
       send.disabled = false;
-      if (ok) done(); else showNote(T.err);
+      if (ok) {
+        if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'chat_send');
+        done();
+      } else showNote(T.err);
     });
     function done() { showNote(T.ok); }
     function showNote(text) {
@@ -96,4 +105,15 @@
     }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
+
+  // Metrika goal: first <video> playback per page view (passport tours, homepage card previews)
+  var videoGoalFired = false;
+  document.addEventListener('play', function (e) {
+    if (videoGoalFired) return;
+    var el = e.target;
+    if (el && el.tagName === 'VIDEO') {
+      videoGoalFired = true;
+      if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'video_play');
+    }
+  }, true);
 })();
