@@ -1610,8 +1610,16 @@ document.addEventListener('DOMContentLoaded', function(){
   function bindForm(form){
     if(form._wegcBound) return;
     form._wegcBound=true;
+    function showStatus(ok,msg){
+      var el=form.querySelector('.wegc-form-status');
+      if(!el){ el=document.createElement('div'); el.className='wegc-form-status'; el.setAttribute('role','status'); form.appendChild(el); }
+      el.textContent=msg;
+      el.style.cssText='margin-top:14px;padding:12px 16px;border-radius:8px;font-size:14px;line-height:1.5;'+(ok?'background:rgba(96,190,130,.12);border:1px solid rgba(96,190,130,.5);color:#7ed29a':'background:rgba(220,100,90,.12);border:1px solid rgba(220,100,90,.5);color:#e69b90');
+    }
     form.addEventListener('submit', async function(e){
       e.preventDefault();
+      var btn=form.querySelector('[type="submit"]');
+      if(btn){ btn.disabled=true; btn.style.opacity='.6'; }
       var fd = new FormData(form);
       var delivered = false;
       // 1) Telegram relay (Cloudflare Worker) — preferred if configured
@@ -1645,16 +1653,14 @@ document.addEventListener('DOMContentLoaded', function(){
       } catch(err){
         console.error('Form delivery error:', err);
       }
+      if(btn){ btn.disabled=false; btn.style.opacity=''; }
+      if (typeof ym !== 'undefined') ym(109732633,'reachGoal','form_submit');
       if(delivered){
-        if (typeof ym !== 'undefined') ym(109732633,'reachGoal','form_submit');
         form.reset();
-        alert(form.dataset.successMsg || 'Thank you. Your request has been received.');
+        showStatus(true, form.dataset.successMsg || 'Thank you. Your request has been received.');
       } else {
-        if (typeof ym !== 'undefined') ym(109732633,'reachGoal','form_submit');
+        showStatus(true, form.dataset.fallbackMsg || 'Your email client should open with the message ready to send. If nothing happens, write to us at post@wegc.fund.');
         window.location.href = buildMailto(form);
-        setTimeout(function(){
-          alert(form.dataset.fallbackMsg || 'Your email client should open with the message ready to send. If nothing happens, write to us at post@wegc.fund.');
-        }, 400);
       }
     });
   }
