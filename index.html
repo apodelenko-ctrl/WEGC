@@ -1618,6 +1618,14 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     form.addEventListener('submit', async function(e){
       e.preventDefault();
+      var bad=null;
+      form.querySelectorAll('[required]').forEach(function(el){
+        var v=(el.value||'').trim();
+        var invalid = el.type==='checkbox' ? !el.checked : (!v||(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)));
+        if(invalid){ if(!bad)bad=el; el.style.borderColor='#e07b6a'; el.style.outline='1px solid #e07b6a'; }
+        else { el.style.borderColor=''; el.style.outline=''; }
+      });
+      if(bad){ bad.focus(); return; }
       var btn=form.querySelector('[type="submit"]');
       if(btn){ btn.disabled=true; btn.style.opacity='.6'; }
       var fd = new FormData(form);

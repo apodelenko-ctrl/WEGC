@@ -13,15 +13,18 @@
     en: { btn: 'Chat', title: 'Chat with WEGC', sub: 'Tell us what you are looking for — our team replies shortly.',
           name: 'Your name', contact: 'Email or Telegram', msg: 'Your message…', send: 'Send',
           ok: 'Thank you — your message has been sent. We will reply shortly.',
-          err: 'Could not send. Please write to post@wegc.fund.', need: 'Please enter a message.' },
+          err: 'Could not send. Please write to post@wegc.fund.', need: 'Please enter a message.',
+          needContact: 'Please leave an email or Telegram so we can reply to you.' },
     ru: { btn: 'Чат', title: 'Чат с WEGC', sub: 'Напишите, что вы ищете — команда ответит в ближайшее время.',
           name: 'Ваше имя', contact: 'Email или Telegram', msg: 'Ваше сообщение…', send: 'Отправить',
           ok: 'Спасибо — сообщение отправлено. Мы скоро ответим.',
-          err: 'Не удалось отправить. Напишите на post@wegc.fund.', need: 'Введите сообщение.' },
+          err: 'Не удалось отправить. Напишите на post@wegc.fund.', need: 'Введите сообщение.',
+          needContact: 'Оставьте email или Telegram — иначе мы не сможем вам ответить.' },
     zh: { btn: '咨询', title: '在线咨询 WEGC', sub: '告诉我们您的需求,我们会尽快回复。',
           name: '您的称呼', contact: '邮箱或 Telegram', msg: '您的留言…', send: '发送',
           ok: '感谢您,信息已发送,我们会尽快回复。',
-          err: '发送失败,请发送邮件至 post@wegc.fund。', need: '请输入留言。' }
+          err: '发送失败,请发送邮件至 post@wegc.fund。', need: '请输入留言。',
+          needContact: '请留下邮箱或 Telegram,以便我们回复您。' }
   }[lang];
 
   var css = '' +
@@ -80,7 +83,14 @@
     send.addEventListener('click', async function () {
       if (panel.querySelector('#wegc-c-gotcha').value) { done(); return; }
       var msg = panel.querySelector('#wegc-c-msg').value.trim();
-      if (!msg) { panel.querySelector('#wegc-c-msg').focus(); return; }
+      if (!msg) { hint(T.need); panel.querySelector('#wegc-c-msg').focus(); return; }
+      var contactEl = panel.querySelector('#wegc-c-contact');
+      var contact = contactEl.value.trim();
+      // must contain something usable: @handle/email, t.me link, or a phone-like number
+      if (!contact || !(/@|t\.me|[\d][\d\s().-]{5,}/.test(contact))) {
+        hint(T.needContact); contactEl.style.borderColor = '#e07b6a'; contactEl.focus(); return;
+      }
+      contactEl.style.borderColor = '';
       send.disabled = true;
       var payload = {
         name: panel.querySelector('#wegc-c-name').value.trim(),
@@ -102,6 +112,15 @@
     function done() { showNote(T.ok); }
     function showNote(text) {
       panel.querySelector('.wegc-chat-body').innerHTML = '<p class="wegc-chat-note">' + text + '</p>';
+    }
+    function hint(text) {
+      var h = panel.querySelector('.wegc-chat-hint');
+      if (!h) {
+        h = document.createElement('p'); h.className = 'wegc-chat-hint';
+        h.style.cssText = 'margin:0;color:#e07b6a;font-size:12.5px;line-height:1.45';
+        panel.querySelector('.wegc-chat-body').insertBefore(h, send);
+      }
+      h.textContent = text;
     }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
