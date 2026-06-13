@@ -247,24 +247,33 @@ async function askClaude(env, messages, opts) {
   const body = {
     model,
     max_tokens: 700,
-    system: buildSystemPrompt(opts || {}),
+    // Cache the (large) system prompt so bursts of concurrent users reuse it:
+    // ~90% cheaper + faster on repeated calls. A few variants (lang/channel) each warm up once.
+    system: [{ type: "text", text: buildSystemPrompt(opts || {}), cache_control: { type: "ephemeral" } }],
     tools: [HANDOFF_TOOL],
     messages: messages.map((m) => ({ role: m.role, content: m.content })),
   };
 
-  const res = await fetch(ANTHROPIC_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": env.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!res.ok) {
-    const detail = await res.text().catch(() => "");
-    throw new Error(`anthropic ${res.status}: ${detail.slice(0, 300)}`);
+  // Retry transient rate-limit / overload / 5xx with short backoff to smooth bursts.
+  let res, lastDetail = "";
+  for (let attempt = 0; attempt < 3; attempt++) {
+    res = await fetch(ANTHROPIC_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify(body),
+    });
+    if (res.ok) break;
+    lastDetail = await res.text().catch(() => "");
+    const retriable = res.status === 429 || res.status === 529 || res.status >= 500;
+    if (!retriable || attempt === 2) {
+      throw new Error(`anthropic ${res.status}: ${lastDetail.slice(0, 300)}`);
+    }
+    const wait = 400 * Math.pow(2, attempt) + Math.floor(Math.random() * 300); // 0.4s, 0.8s (+jitter)
+    await new Promise((r) => setTimeout(r, wait));
   }
 
   const data = await res.json();
