@@ -1,0 +1,29 @@
+name = "wegc-ai-agent"
+main = "wegc-ai-agent.js"
+compatibility_date = "2025-01-01"
+
+# Deploy this worker with an explicit config (so it does not clash with the
+# relay's wrangler.toml in the same folder):
+#   wrangler deploy -c wrangler-agent.toml
+#
+# Secrets (set with `wrangler secret put <NAME> -c wrangler-agent.toml`):
+#   AGENT_BOT_TOKEN    Telegram bot token (@BotFather) — client-facing bot
+#   ANTHROPIC_API_KEY  Anthropic API key
+#   OWNER_CHAT_ID      Telegram chat id for warm-lead notifications
+#   WEBHOOK_SECRET     random string (also used in setWebhook)
+
+[vars]
+ANTHROPIC_MODEL = "claude-sonnet-4-6"
+MAX_HISTORY = "24"
+
+# Conversation memory. Create the namespace once and paste its id below:
+#   wrangler kv namespace create CONV
+[[kv_namespaces]]
+binding = "CONV"
+id = "499add41ff3248cd8fa48dbe589e3100"
+
+# Lead log (mini-CRM). Created with `wrangler d1 create wegc-leads`.
+[[d1_databases]]
+binding = "DB"
+database_name = "wegc-leads"
+database_id = "12fb5c3a-54e8-46d4-ac10-cab2b7fbdc8a"
