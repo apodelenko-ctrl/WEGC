@@ -496,7 +496,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
     layers[0].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
     layers[0].classList.add('on');
     if(reduced)return;
-    imgs.forEach(function(s){var im=new Image();im.src=s;});
+    var _heroIdle=window.requestIdleCallback||function(c){return setTimeout(c,1500)};_heroIdle(function(){imgs.forEach(function(s){var im=new Image();im.src=s;});});
     setInterval(function(){
       i=(i+1)%imgs.length;
       var nxt=cur^1;

@@ -1693,7 +1693,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var imgs=['/images/hero/hero-phuket-aerial-sunset.jpg','/images/hero/hero-phuket-infinity-pool.jpg','/images/hero/hero-phuket-villa-architecture.jpg','/images/hero/hero-phuket-bay-karst.jpg'];
   var layers=document.querySelectorAll('.hero .hero-bg-layer');
   if(layers.length<2) return;
-  imgs.forEach(function(s){var im=new Image();im.src=s;});
+  var _heroIdle=window.requestIdleCallback||function(c){return setTimeout(c,1500)};_heroIdle(function(){imgs.forEach(function(s){var im=new Image();im.src=s;});});
   var i=Math.floor(Math.random()*imgs.length), cur=0;
   layers[0].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
   layers[0].classList.add('on');

@@ -53,6 +53,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="image" href="/images/hero/hero-phuket-infinity-pool-m.jpg" media="(max-width:640px)" fetchpriority="high"/>
+<link rel="preload" as="image" href="/images/hero/hero-phuket-infinity-pool.jpg" media="(min-width:641px)" fetchpriority="high"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -1632,22 +1634,31 @@ document.addEventListener('DOMContentLoaded', function(){
 /* Hero: 4 high-quality Phuket photos, random start + gentle crossfade rotation */
 (function(){
   var GRAD="linear-gradient(95deg,rgba(6,8,15,.85) 0%,rgba(6,8,15,.6) 48%,rgba(6,8,15,.35) 100%)";
-  var imgs=['/images/hero/hero-phuket-aerial-sunset.jpg','/images/hero/hero-phuket-infinity-pool.jpg','/images/hero/hero-phuket-villa-architecture.jpg','/images/hero/hero-phuket-bay-karst.jpg'];
+  // Mobile gets ~960px variants (-m.jpg); first image is the lightest (LCP). Order matters: index 0 loads immediately.
+  var bases=['hero-phuket-infinity-pool','hero-phuket-aerial-sunset','hero-phuket-villa-architecture','hero-phuket-bay-karst'];
+  var m=window.matchMedia&&window.matchMedia('(max-width:640px)').matches;
+  function url(b){return '/images/hero/'+b+(m?'-m':'')+'.jpg';}
   var layers=document.querySelectorAll('.hero .hero-bg-layer');
-  if(layers.length<2) return;
-  imgs.forEach(function(s){var im=new Image();im.src=s;});
-  var i=Math.floor(Math.random()*imgs.length), cur=0;
-  layers[0].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
+  if(!layers.length) return;
+  var cur=0, i=0;
+  layers[0].style.backgroundImage=GRAD+",url('"+url(bases[0])+"')";
   layers[0].classList.add('on');
-  setInterval(function(){
-    i=(i+1)%imgs.length;
-    var nxt=cur^1;
-    layers[nxt].style.backgroundImage=GRAD+",url('"+imgs[i]+"')";
-    layers[nxt].style.zIndex='1';
-    layers[cur].style.zIndex='0';
-    layers[nxt].classList.add('on');
-    cur=nxt;
-  },6500);
+  if(layers.length<2) return;
+  // Defer the other images until after first paint/idle so the first load stays light on mobile.
+  function start(){
+    for(var k=1;k<bases.length;k++){var im=new Image();im.src=url(bases[k]);}
+    setInterval(function(){
+      i=(i+1)%bases.length;
+      var nxt=cur^1;
+      layers[nxt].style.backgroundImage=GRAD+",url('"+url(bases[i])+"')";
+      layers[nxt].style.zIndex='1';
+      layers[cur].style.zIndex='0';
+      layers[nxt].classList.add('on');
+      cur=nxt;
+    },6500);
+  }
+  var idle=window.requestIdleCallback||function(cb){return setTimeout(cb,1500);};
+  if(document.readyState==='complete') idle(start); else window.addEventListener('load',function(){idle(start);});
 })();
 </script>
 <script src="/collapse-notes.js" defer></script>
