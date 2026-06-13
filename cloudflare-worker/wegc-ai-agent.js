@@ -196,7 +196,10 @@ async function converse(env, identity, userText) {
   const state = (await kvGet(env, identity.convKey)) || { messages: [], handoff: false };
   state.messages.push({ role: "user", content: userText });
 
-  const { reply, toolCall } = await askClaude(env, state.messages);
+  const { reply, toolCall } = await askClaude(env, state.messages, {
+    lang: (identity.lang || "ru").slice(0, 2).toLowerCase(),
+    channel: String(identity.convKey).startsWith("web:") ? "web" : "tg",
+  });
   if (reply) state.messages.push({ role: "assistant", content: reply });
 
   let handedOff = false;
@@ -215,12 +218,12 @@ async function converse(env, identity, userText) {
   return { reply, toolCall, handedOff };
 }
 
-async function askClaude(env, messages) {
+async function askClaude(env, messages, opts) {
   const model = env.ANTHROPIC_MODEL || DEFAULT_MODEL;
   const body = {
     model,
     max_tokens: 700,
-    system: buildSystemPrompt(),
+    system: buildSystemPrompt(opts || {}),
     tools: [HANDOFF_TOOL],
     messages: messages.map((m) => ({ role: m.role, content: m.content })),
   };
