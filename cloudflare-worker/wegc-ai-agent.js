@@ -196,10 +196,12 @@ async function converse(env, identity, userText) {
   const state = (await kvGet(env, identity.convKey)) || { messages: [], handoff: false };
   state.messages.push({ role: "user", content: userText });
 
-  const { reply, toolCall } = await askClaude(env, state.messages, {
+  const out = await askClaude(env, state.messages, {
     lang: (identity.lang || "ru").slice(0, 2).toLowerCase(),
     channel: String(identity.convKey).startsWith("web:") ? "web" : "tg",
   });
+  const reply = stripMarkdown(out.reply);
+  const toolCall = out.toolCall;
   if (reply) state.messages.push({ role: "assistant", content: reply });
 
   let handedOff = false;
@@ -216,6 +218,28 @@ async function converse(env, identity, userText) {
   await logTurn(env, identity, state);
 
   return { reply, toolCall, handedOff };
+}
+
+// Strip Markdown artifacts so replies render cleanly as plain text in
+// Telegram and the on-site chat (model sometimes uses **bold**, ##, ---, especially in ZH/EN).
+function stripMarkdown(s) {
+  if (!s) return s;
+  let t = String(s);
+  t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, "$1: $2"); // [text](url) -> text: url
+  t = t.replace(/```[a-zA-Z]*\n?/g, "").replace(/`([^`]+)`/g, "$1"); // code fences/inline
+  t = t.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/__([^_]+)__/g, "$1"); // bold
+  t = t.replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1$2"); // italic *text*
+  t = t
+    .split("\n")
+    .map((line) => {
+      if (/^\s*([-*_=~])\1{2,}\s*$/.test(line)) return ""; // hr: ---, ***, ===
+      line = line.replace(/^\s*#{1,6}\s+/, ""); // headings
+      line = line.replace(/^(\s*)[*+]\s+/, "$1— "); // * / + bullets -> —
+      return line;
+    })
+    .join("\n");
+  t = t.replace(/\*\*/g, "").replace(/\n{3,}/g, "\n\n"); // stray markers, collapse blanks
+  return t.trim();
 }
 
 async function askClaude(env, messages, opts) {
