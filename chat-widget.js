@@ -60,7 +60,7 @@
     '.wegc-chat-go{flex-shrink:0;background:#d6b370;color:#0a0e1a;border:none;font-weight:700;font-size:13px;padding:0 15px;height:40px;border-radius:10px;cursor:pointer;font-family:inherit;transition:background .15s ease}' +
     '.wegc-chat-go:hover{background:#c9a45f}.wegc-chat-go:disabled{opacity:.5;cursor:default}' +
     '.wegc-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}' +
-    '@media(max-width:640px){.wegc-chat-panel{right:10px;left:10px;width:auto;bottom:72px;height:calc(100vh - 96px)}.wegc-chat-btn{right:14px;bottom:14px}}';
+    '@media(max-width:640px){.wegc-chat-panel{right:8px;left:8px;width:auto;top:calc(8px + env(safe-area-inset-top));bottom:calc(8px + env(safe-area-inset-bottom));height:auto;max-height:none;border-radius:14px}.wegc-chat-panel.open{display:flex}.wegc-chat-btn{right:14px;bottom:14px}}';
 
   var style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
