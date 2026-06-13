@@ -49,6 +49,7 @@
     '.wegc-msg{max-width:84%;padding:9px 13px;border-radius:13px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}' +
     '.wegc-msg.a{align-self:flex-start;background:#1a2233;color:#e9eef6;border-bottom-left-radius:4px}' +
     '.wegc-msg.u{align-self:flex-end;background:#d6b370;color:#0a0e1a;border-bottom-right-radius:4px}' +
+    '.wegc-msg.a a{color:#e3c07f;text-decoration:underline;word-break:break-all}' +
     '.wegc-typing{align-self:flex-start;display:inline-flex;gap:4px;padding:11px 14px;background:#1a2233;border-radius:13px;border-bottom-left-radius:4px}' +
     '.wegc-typing span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);animation:wegcb 1s infinite}' +
     '.wegc-typing span:nth-child(2){animation-delay:.16s}.wegc-typing span:nth-child(3){animation-delay:.32s}' +
@@ -91,8 +92,15 @@
     var opened = false, firstSent = false, busy = false;
 
     function scroll() { log.scrollTop = log.scrollHeight; }
+    function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+    function linkify(s) {
+      return escHtml(s).replace(/(https?:\/\/[^\s<]+[^\s<.,;:!?)\]])/g, function (u) {
+        return '<a href="' + u + '" target="_blank" rel="noopener">' + u + '</a>';
+      });
+    }
     function bubble(text, cls) {
-      var d = document.createElement('div'); d.className = 'wegc-msg ' + cls; d.textContent = text;
+      var d = document.createElement('div'); d.className = 'wegc-msg ' + cls;
+      if (cls === 'a') d.innerHTML = linkify(text); else d.textContent = text;
       log.appendChild(d); scroll(); return d;
     }
     function typing(on) {
