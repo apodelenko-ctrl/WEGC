@@ -6,6 +6,8 @@
   "description": "Morning digest of new Phuket property launches/presales collected from Telegram channels.",
   "scripts": {
     "login": "node login.mjs",
+    "discover": "node discover.mjs",
+    "apply": "node apply.mjs",
     "collect": "node collect.mjs"
   },
   "dependencies": {

@@ -1,0 +1,16 @@
+{
+  "_comment": "Поисковые запросы для глобального поиска каналов Telegram. Расширяй по вкусу (районы, имена застройщиков, бренды).",
+  "queries": [
+    "Phuket property", "Phuket real estate", "Phuket condo", "Phuket villa",
+    "Phuket investment", "Phuket presale", "Phuket new project", "Phuket developer",
+    "Пхукет недвижимость", "Пхукет квартиры", "Пхукет инвестиции", "Пхукет виллы",
+    "недвижимость Таиланд", "Thailand property", "Phuket launch",
+    "Bang Tao property", "Layan Phuket", "Kamala Phuket", "Rawai Phuket",
+    "The Title Phuket", "Laguna Phuket", "Banyan Tree Phuket", "AssetWise Phuket"
+  ],
+  "relevanceWords": [
+    "phuket", "пхукет", "thailand", "таиланд", "property", "real estate",
+    "недвиж", "condo", "кондо", "villa", "вилл", "квартир", "invest", "инвест",
+    "presale", "пресейл", "застройщ", "developer", "новострой"
+  ]
+}
