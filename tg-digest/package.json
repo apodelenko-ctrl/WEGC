@@ -1,0 +1,15 @@
+{
+  "name": "phuket-tg-digest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Morning digest of new Phuket property launches/presales collected from Telegram channels.",
+  "scripts": {
+    "login": "node login.mjs",
+    "collect": "node collect.mjs"
+  },
+  "dependencies": {
+    "input": "^1.0.1",
+    "telegram": "^2.26.22"
+  }
+}

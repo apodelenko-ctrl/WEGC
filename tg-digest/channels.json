@@ -1,0 +1,16 @@
+{
+  "_comment": "Список Telegram-каналов для мониторинга анонсов новостроек Пхукета. Укажи @username публичных каналов (или t.me/... ссылку). Важно: с аккаунта-коллектора ЗАЙДИ в каждый канал заранее. Замени примеры на реальные.",
+  "channels": [
+    "@example_phuket_developer",
+    "@example_phuket_agency",
+    "@example_phuket_news"
+  ],
+  "keywords": [
+    "presale", "pre-sale", "пресейл", "пре-сейл",
+    "launch", "soft launch", "grand launch", "запуск", "старт продаж", "старт прода",
+    "презентац", "presentation", "event", "открыт",
+    "новый проект", "new project", "new launch", "новинка",
+    "new phase", "новый этап", "phase 2", "phase 3",
+    "price", "цены", "повышение цен", "price increase", "early bird"
+  ]
+}
