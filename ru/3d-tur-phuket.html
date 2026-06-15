@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>3D-облёт Пхукета — пролёт над нашими проектами · West East Gate Real Estate</title>
+<meta name="description" content="Интерактивный 3D-пролёт над Пхукетом с заходом на каждый объект West East Gate Real Estate: 11 проектов The Title / Rhom Bho в фотореалистичном 3D, как с дрона. Кликните — и смотрите паспорт проекта."/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="3D-облёт Пхукета над нашими проектами · WEGC"/>
+<meta property="og:description" content="Фотореалистичный 3D-пролёт над Пхукетом с заходом на 11 объектов от застройщика. Как с дрона, прямо в браузере."/>
+<meta property="og:url" content="https://wegc.fund/ru/3d-tur-phuket.html"/>
+<meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
+<link rel="canonical" href="https://wegc.fund/ru/3d-tur-phuket.html"/>
+<link rel="alternate" hreflang="ru" href="https://wegc.fund/ru/3d-tur-phuket.html"/>
+<link rel="alternate" hreflang="x-default" href="https://wegc.fund/ru/3d-tur-phuket.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/cesium@1.118.0/Build/Cesium/Widgets/widgets.css" rel="stylesheet"/>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109732633', 'ym');
+    ym(109732633, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109732633" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<style>
+:root{
+  --bg-dark:#0a0e1a;--bg-darker:#06080f;--ink:#0f172a;--body:#334155;--muted:#64748b;
+  --gold:#a08156;--gold-soft:#cfc4a2;--gold-bright:#d6b370;--radius:8px;--radius-lg:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%;background:var(--bg-darker);font-family:'Inter',system-ui,sans-serif;color:#fff;overflow:hidden}
+a{color:inherit}
+
+/* Topbar */
+#topbar{position:fixed;top:0;left:0;right:0;z-index:30;background:linear-gradient(180deg,rgba(6,8,15,.92),rgba(6,8,15,.45) 70%,transparent);backdrop-filter:blur(6px)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1320px;margin:0 auto;padding:14px 20px;padding-top:max(14px,env(safe-area-inset-top))}
+.topbar-brand{display:flex;align-items:baseline;gap:14px;color:#fff;text-decoration:none;flex-shrink:0;min-width:0}
+.topbar-brand .name{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+.topbar-nav{display:flex;gap:22px;align-items:center}
+.topbar-nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:13.5px;font-weight:500;letter-spacing:.01em}
+.topbar-nav a:hover{color:#fff}
+.topbar-cta{background:var(--gold);color:#0a0e1a !important;padding:9px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+.topbar-cta:hover{background:var(--gold-bright)}
+@media(max-width:880px){.topbar-nav{display:none}}
+
+/* Cesium canvas */
+#cesiumContainer{position:absolute;inset:0;width:100%;height:100%}
+#cesiumContainer .cesium-widget-credits{display:none !important}
+.cesium-viewer-bottom{display:none !important}
+
+/* Loading */
+#loader{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(ellipse at 50% 35%,#0f1830,#06080f);text-align:center;padding:24px}
+#loader .ring{width:48px;height:48px;border:3px solid rgba(214,179,112,.25);border-top-color:var(--gold-bright);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#loader p{margin:0;color:var(--gold-soft);font-size:14px;letter-spacing:.04em}
+#loader small{color:var(--muted);font-size:12px;max-width:340px;line-height:1.5}
+
+/* Project card */
+#card{position:absolute;left:50%;transform:translateX(-50%);bottom:max(96px,calc(env(safe-area-inset-bottom) + 96px));z-index:15;width:min(560px,calc(100% - 32px));
+  background:rgba(10,14,26,.78);backdrop-filter:blur(14px);border:1px solid rgba(207,196,162,.22);border-radius:var(--radius-lg);
+  padding:18px 20px;opacity:0;transition:opacity .5s ease,transform .5s ease;pointer-events:none;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+#card.show{opacity:1;pointer-events:auto}
+#card .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;margin-bottom:6px}
+#card h2{margin:0 0 4px;font-size:23px;font-weight:700;letter-spacing:-.01em}
+#card .area{color:var(--gold-soft);font-size:14px;margin-bottom:14px}
+#card .row{display:flex;gap:10px;flex-wrap:wrap}
+#card a.btn,#card button.btn{display:inline-flex;align-items:center;gap:7px;font-family:inherit;font-size:13.5px;font-weight:600;border-radius:999px;padding:10px 18px;cursor:pointer;text-decoration:none;border:1px solid transparent}
+#card a.btn{background:var(--gold);color:#0a0e1a}
+#card a.btn:hover{background:var(--gold-bright)}
+#card button.btn.ghost{background:transparent;border-color:rgba(207,196,162,.35);color:#fff}
+#card button.btn.ghost:hover{border-color:var(--gold-soft);background:rgba(207,196,162,.1)}
+
+/* Controls bar */
+#controls{position:absolute;left:50%;transform:translateX(-50%);bottom:max(24px,calc(env(safe-area-inset-bottom) + 24px));z-index:16;
+  display:flex;align-items:center;gap:6px;background:rgba(10,14,26,.78);backdrop-filter:blur(14px);
+  border:1px solid rgba(207,196,162,.18);border-radius:999px;padding:6px}
+#controls button{width:42px;height:42px;border-radius:50%;border:none;background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+#controls button:hover{background:rgba(207,196,162,.16)}
+#controls button svg{width:20px;height:20px;fill:currentColor}
+#controls .play{background:var(--gold);color:#0a0e1a;width:48px;height:48px}
+#controls .play:hover{background:var(--gold-bright)}
+#counter{font-size:12.5px;color:var(--gold-soft);min-width:54px;text-align:center;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+
+/* Project chips menu */
+#chips{position:absolute;top:max(72px,calc(env(safe-area-inset-top) + 58px));left:50%;transform:translateX(-50%);z-index:14;
+  display:flex;gap:7px;max-width:calc(100% - 24px);overflow-x:auto;padding:4px;scrollbar-width:none}
+#chips::-webkit-scrollbar{display:none}
+#chips button{white-space:nowrap;font-family:inherit;font-size:12.5px;font-weight:500;color:rgba(255,255,255,.85);
+  background:rgba(10,14,26,.7);backdrop-filter:blur(10px);border:1px solid rgba(207,196,162,.18);border-radius:999px;padding:7px 14px;cursor:pointer;transition:all .2s}
+#chips button:hover{border-color:var(--gold-soft);color:#fff}
+#chips button.active{background:var(--gold);color:#0a0e1a;border-color:var(--gold);font-weight:600}
+
+/* Config-missing overlay */
+#setup{position:absolute;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:24px;background:radial-gradient(ellipse at 50% 30%,#101a33,#06080f)}
+#setup .box{max-width:520px;background:rgba(10,14,26,.9);border:1px solid rgba(207,196,162,.22);border-radius:16px;padding:30px 28px}
+#setup h2{margin:0 0 6px;font-size:20px}
+#setup p{color:#9fb0c9;font-size:14px;line-height:1.6;margin:0 0 14px}
+#setup ol{color:#cdd7e6;font-size:13.5px;line-height:1.7;padding-left:20px;margin:0 0 16px}
+#setup code{background:rgba(207,196,162,.14);color:var(--gold-bright);padding:2px 7px;border-radius:5px;font-size:12.5px}
+#setup a{color:var(--gold-bright)}
+#setup .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;margin-bottom:8px}
+
+.hint{position:absolute;top:max(72px,calc(env(safe-area-inset-top) + 56px));right:18px;z-index:14;font-size:11.5px;color:rgba(255,255,255,.55);background:rgba(10,14,26,.55);padding:6px 12px;border-radius:999px;backdrop-filter:blur(8px)}
+@media(max-width:640px){.hint{display:none}#card h2{font-size:20px}}
+</style>
+</head>
+<body>
+
+<header id="topbar">
+  <div class="topbar-inner">
+    <a href="/ru/" class="topbar-brand"><span class="name">West East Gate Real Estate</span></a>
+    <nav class="topbar-nav">
+      <a href="/ru/#catalog">Каталог</a>
+      <a href="/ru/tseny.html">Цены 2026</a>
+      <a href="/ru/podbor.html">Подбор объекта</a>
+      <a href="/rayony-phuket.html">Районы</a>
+    </nav>
+    <div class="topbar-actions">
+      <a href="/ru/#contact" class="topbar-cta">Купить</a>
+    </div>
+  </div>
+</header>
+
+<div id="cesiumContainer"></div>
+
+<div id="loader">
+  <div class="ring"></div>
+  <p>Загружаем 3D-Пхукет…</p>
+  <small>Фотореалистичная 3D-модель острова. Первая загрузка может занять несколько секунд.</small>
+</div>
+
+<div class="hint">Перетаскивайте мышью · колесо — зум</div>
+
+<div id="chips"></div>
+
+<div id="card">
+  <div class="eyebrow" id="card-eyebrow">Проект</div>
+  <h2 id="card-title">—</h2>
+  <div class="area" id="card-area">—</div>
+  <div class="row">
+    <a class="btn" id="card-link" href="#" target="_blank" rel="noopener">Смотреть паспорт проекта →</a>
+    <button class="btn ghost" id="card-next">Следующий объект</button>
+  </div>
+</div>
+
+<div id="controls">
+  <button id="prev" title="Назад" aria-label="Предыдущий объект"><svg viewBox="0 0 24 24"><path d="M15.5 5l-7 7 7 7V5z"/></svg></button>
+  <button id="play" class="play" title="Авто-облёт" aria-label="Старт/пауза"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+  <button id="next" title="Вперёд" aria-label="Следующий объект"><svg viewBox="0 0 24 24"><path d="M8.5 5l7 7-7 7V5z"/></svg></button>
+  <span id="counter">— / —</span>
+</div>
+
+<div id="setup">
+  <div class="box">
+    <div class="eyebrow">Настройка 3D-тура</div>
+    <h2>Нужен Google Maps API-ключ</h2>
+    <p>Фотореалистичный 3D-облёт работает на Google Photorealistic 3D Tiles. Чтобы включить его на боевом домене:</p>
+    <ol>
+      <li>В <a href="https://console.cloud.google.com/google/maps-apis/" target="_blank" rel="noopener">Google Cloud Console</a> создайте проект и включите <b>Map Tiles API</b>.</li>
+      <li>Создайте API-ключ и ограничьте его по домену <code>wegc.fund</code> (HTTP referrers).</li>
+      <li>Вставьте ключ в <code>GOOGLE_MAPS_API_KEY</code> в начале скрипта этой страницы.</li>
+    </ol>
+    <p style="margin:0;color:#6b7a90;font-size:12.5px">Бесплатная квота Google покрывает обычный трафик лендинга. Ключ ограничен по домену, поэтому его безопасно держать в коде фронтенда.</p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/cesium@1.118.0/Build/Cesium/Cesium.js"></script>
+<script>
+// === КОНФИГ =================================================================
+// Вставьте сюда Google Maps API-ключ с включённым Map Tiles API.
+// Ключ ограничьте по домену wegc.fund в Google Cloud Console.
+const GOOGLE_MAPS_API_KEY = "";
+// ===========================================================================
+
+// Маршрут облёта: с севера на юг острова. Координаты — из паспортов проектов.
+const STOPS = [
+  { name:"The Olive",           area:"Най Янг",  lat:8.093,  lng:98.303,  url:"/projects/the-olive.html" },
+  { name:"The Title Balcony",   area:"Най Янг",  lat:8.089,  lng:98.299,  url:"/projects/the-title-balcony.html" },
+  { name:"The Modeva",          area:"Банг Тао", lat:7.9925, lng:98.2965, url:"/projects/the-modeva.html" },
+  { name:"The Title Artrio",    area:"Банг Тао", lat:7.995,  lng:98.2985, url:"/projects/the-title-artrio.html" },
+  { name:"The Title Sierra",    area:"Банг Тао", lat:7.993,  lng:98.296,  url:"/projects/the-title-sierra.html" },
+  { name:"The Title Vivi",      area:"Банг Тао", lat:7.992,  lng:98.2995, url:"/projects/title-vivi.html" },
+  { name:"The Title Biancana",  area:"Сурин",    lat:7.976,  lng:98.28,   url:"/projects/the-title-biancana.html" },
+  { name:"The Title Vivana",    area:"Камала",   lat:7.9545, lng:98.2845, url:"/projects/the-title-vivana.html" },
+  { name:"Casa de Monte",       area:"Ко Кео",   lat:7.901,  lng:98.379,  url:"/projects/casa-de-monte.html" },
+  { name:"The Title Katabello", area:"Ката",     lat:7.821,  lng:98.298,  url:"/projects/the-title-katabello.html" },
+  { name:"The Title Adora",     area:"Раваи",    lat:7.778,  lng:98.325,  url:"/projects/the-title-adora.html" }
+];
+
+const el = (id)=>document.getElementById(id);
+
+if (!GOOGLE_MAPS_API_KEY) {
+  el("loader").style.display = "none";
+  el("setup").style.display = "flex";
+} else {
+  initTour().catch(err=>{
+    console.error(err);
+    el("loader").innerHTML = '<p style="color:#e7b3b3">Не удалось загрузить 3D-сцену</p><small>Проверьте API-ключ и включённый Map Tiles API.</small>';
+  });
+}
+
+async function initTour(){
+  Cesium.GoogleMaps.defaultApiKey = GOOGLE_MAPS_API_KEY;
+
+  const viewer = new Cesium.Viewer("cesiumContainer", {
+    baseLayer:false, globe:false,
+    baseLayerPicker:false, geocoder:false, homeButton:false, sceneModePicker:false,
+    navigationHelpButton:false, animation:false, timeline:false, fullscreenButton:false,
+    selectionIndicator:false, infoBox:false, requestRenderMode:false, skyBox:false
+  });
+  viewer.scene.skyAtmosphere.show = true;
+  viewer.scene.fog.enabled = true;
+  viewer.scene.screenSpaceCameraController.enableCollisionDetection = true;
+
+  const tileset = await Cesium.createGooglePhotorealistic3DTileset();
+  viewer.scene.primitives.add(tileset);
+
+  // Состояние
+  let idx = -1, playing = false, orbiting = false, dwellHandle = null;
+
+  // Открывающий вид: высоко над островом
+  viewer.camera.setView({
+    destination: Cesium.Cartesian3.fromDegrees(98.34, 7.70, 32000),
+    orientation:{ heading:Cesium.Math.toRadians(0), pitch:Cesium.Math.toRadians(-40), roll:0 }
+  });
+
+  el("loader").style.display = "none";
+
+  // Чипсы-меню
+  const chipsWrap = el("chips");
+  STOPS.forEach((s,i)=>{
+    const b = document.createElement("button");
+    b.textContent = s.name.replace("The Title ","").replace("The ","");
+    b.onclick = ()=>{ stopAuto(); goTo(i); };
+    chipsWrap.appendChild(b);
+  });
+  function syncChips(){ [...chipsWrap.children].forEach((c,i)=>c.classList.toggle("active", i===idx)); }
+
+  function showCard(i){
+    const s = STOPS[i];
+    el("card-title").textContent = s.name;
+    el("card-area").textContent = "Район: " + s.area;
+    el("card-link").href = s.url;
+    el("card").classList.add("show");
+    el("counter").textContent = (i+1) + " / " + STOPS.length;
+    syncChips();
+  }
+
+  function stopOrbit(){
+    orbiting = false;
+    viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
+    if(dwellHandle){ clearTimeout(dwellHandle); dwellHandle=null; }
+  }
+
+  // Плавный орбитальный облёт вокруг точки во время "стоянки"
+  let orbitListener = null;
+  function startOrbit(i){
+    const s = STOPS[i];
+    const center = Cesium.Cartesian3.fromDegrees(s.lng, s.lat, 40);
+    orbiting = true;
+    let heading = viewer.camera.heading;
+    if(orbitListener){ viewer.clock.onTick.removeEventListener(orbitListener); }
+    orbitListener = ()=>{
+      if(!orbiting) return;
+      heading += Cesium.Math.toRadians(0.18);
+      viewer.camera.lookAt(center, new Cesium.HeadingPitchRange(heading, Cesium.Math.toRadians(-28), 620));
+    };
+    viewer.clock.onTick.addEventListener(orbitListener);
+  }
+
+  function goTo(i, opts={}){
+    stopOrbit();
+    idx = (i + STOPS.length) % STOPS.length;
+    const s = STOPS[idx];
+    el("card").classList.remove("show");
+    viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(s.lng, s.lat - 0.0075, 720),
+      orientation:{ heading:Cesium.Math.toRadians(0), pitch:Cesium.Math.toRadians(-26), roll:0 },
+      duration: opts.fast ? 2.2 : 4.2,
+      complete: ()=>{
+        showCard(idx);
+        startOrbit(idx);
+        if(playing){
+          dwellHandle = setTimeout(()=>{ if(playing) goTo(idx+1); }, 6500);
+        }
+      }
+    });
+  }
+
+  // Управление
+  function setPlayIcon(){
+    el("play").innerHTML = playing
+      ? '<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>'
+      : '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+  }
+  function startAuto(){ playing = true; setPlayIcon(); ym(109732633,'reachGoal','tour3d_play'); goTo(idx<0?0:idx); }
+  function stopAuto(){ playing = false; setPlayIcon(); if(dwellHandle){clearTimeout(dwellHandle);dwellHandle=null;} }
+
+  el("play").onclick = ()=> playing ? stopAuto() : startAuto();
+  el("next").onclick = ()=>{ stopAuto(); goTo(idx+1, {fast:true}); };
+  el("prev").onclick = ()=>{ stopAuto(); goTo(idx-1, {fast:true}); };
+  el("card-next").onclick = ()=>{ stopAuto(); goTo(idx+1, {fast:true}); };
+  el("card-link").addEventListener("click", ()=> ym(109732633,'reachGoal','tour3d_project'));
+
+  // Если пользователь сам начал крутить камеру — снимаем орбиту
+  viewer.canvas.addEventListener("pointerdown", ()=>{ if(orbiting) stopOrbit(); });
+
+  // Старт: показываем первый объект, ждём действия пользователя для авто-облёта
+  setTimeout(()=> goTo(0, {fast:true}), 600);
+}
+</script>
+
+</body>
+</html>
