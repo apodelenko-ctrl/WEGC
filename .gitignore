@@ -9,3 +9,7 @@ LINKTREE-ASSETS.md
 VIDEO-ASSETS.md
 CLOUDFLARE-REDIRECTS.md
 _redirects
+
+# --- Telegram digest local secrets / scratch (NEVER commit) ---
+tg-digest/.session
+tg-digest/_sessiontest.mjs
