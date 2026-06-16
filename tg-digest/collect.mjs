@@ -42,6 +42,12 @@ function matchesKeyword(text) {
   const t = text.toLowerCase();
   return keywords.some((k) => t.includes(k));
 }
+// Slicing by UTF-16 length can cut an emoji's surrogate pair in half, leaving a
+// lone surrogate that breaks JSON.stringify (Anthropic rejects it as invalid
+// JSON). Strip any unpaired surrogates.
+function cleanText(s) {
+  return (s || "").replace(/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/g, "");
+}
 
 // GramJS has no per-request timeout and disconnect() can hang in CI; guard both
 // so the unattended daily job can never freeze.
@@ -80,10 +86,10 @@ for (const raw of channels) {
       if (!matchesKeyword(text)) continue;
       const link = entity.username ? `https://t.me/${entity.username}/${m.id}` : `(${uname})`;
       candidates.push({
-        channel: entity.title || uname,
+        channel: cleanText(entity.title || uname),
         date: new Date(m.date * 1000).toISOString().slice(0, 16).replace("T", " "),
         link,
-        text: text.slice(0, 600),
+        text: cleanText(text.slice(0, 600)),
       });
     }
     newState[uname] = maxId;
