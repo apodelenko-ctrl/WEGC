@@ -1,0 +1,47 @@
+name: Phuket channel discovery
+
+on:
+  workflow_dispatch: {} # run manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phuket-discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install deps
+        working-directory: tg-digest
+        run: npm install --no-audit --no-fund
+
+      - name: Discover channels & send shortlist
+        working-directory: tg-digest
+        env:
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_SESSION: ${{ secrets.TG_SESSION }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          OWNER_CHAT_ID: ${{ secrets.OWNER_CHAT_ID }}
+        run: npm run discover
+
+      - name: Persist discovered.json
+        run: |
+          if [ -n "$(git status --porcelain tg-digest/discovered.json)" ]; then
+            git config user.name "phuket-digest-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add tg-digest/discovered.json
+            git commit -m "chore(digest): update discovered channels [skip ci]"
+            git push
+          else
+            echo "No discovered.json change."
+          fi
