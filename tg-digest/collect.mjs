@@ -43,8 +43,21 @@ function matchesKeyword(text) {
   return keywords.some((k) => t.includes(k));
 }
 
-const client = new TelegramClient(new StringSession(session), apiId, apiHash, { connectionRetries: 5 });
-await client.connect();
+// GramJS has no per-request timeout and disconnect() can hang in CI; guard both
+// so the unattended daily job can never freeze.
+const CALL_TIMEOUT_MS = Number(process.env.CALL_TIMEOUT_MS || 25000);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+function withTimeout(promise, ms, label) {
+  let t;
+  const timeout = new Promise((_, rej) => { t = setTimeout(() => rej(new Error(`timeout after ${ms}ms: ${label}`)), ms); });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(t));
+}
+async function safeDisconnect() {
+  await Promise.race([client.disconnect().catch(() => {}), sleep(5000)]);
+}
+
+const client = new TelegramClient(new StringSession(session), apiId, apiHash, { connectionRetries: 3 });
+await withTimeout(client.connect(), CALL_TIMEOUT_MS, "connect");
 
 const sinceTs = Math.floor(Date.now() / 1000) - LOOKBACK_HOURS * 3600;
 const candidates = [];
@@ -53,11 +66,11 @@ const newState = { ...state };
 for (const raw of channels) {
   const uname = normUser(raw);
   try {
-    const entity = await client.getEntity(uname);
+    const entity = await withTimeout(client.getEntity(uname), CALL_TIMEOUT_MS, `getEntity ${uname}`);
     const lastId = state[uname] || 0;
     const opts = { limit: MAX_PER_CHANNEL };
     if (lastId) opts.minId = lastId;
-    const msgs = await client.getMessages(entity, opts);
+    const msgs = await withTimeout(client.getMessages(entity, opts), CALL_TIMEOUT_MS, `getMessages ${uname}`);
     let maxId = lastId;
     for (const m of msgs) {
       if (m.id > maxId) maxId = m.id;
@@ -79,7 +92,8 @@ for (const raw of channels) {
     console.error(`[${uname}] ERROR: ${e.message}`);
   }
 }
-await client.disconnect();
+// Read phase done; disconnect under a timeout so it can't freeze the job.
+await safeDisconnect();
 
 fs.writeFileSync(STATE_FILE, JSON.stringify(newState, null, 2));
 
