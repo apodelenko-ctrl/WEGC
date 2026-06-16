@@ -115,8 +115,6 @@ for (const c of toEnrich) {
     await handleFlood(e);
   }
 }
-await client.disconnect();
-
 // 4) Filter by relevance, sort, write file
 const ranked = [...found.values()]
   .filter((c) => c.username && relevant(c.title, c.about))
@@ -147,4 +145,11 @@ if (BOT_TOKEN && OWNER_CHAT_ID && ranked.length) {
   }
   console.log(`Sent shortlist (top ${TOP_TO_SEND}) to Telegram.`);
 }
+
+// Disconnect can hang in CI (GramJS); never let it block the run. The file is
+// already written and the shortlist already sent above.
+await Promise.race([
+  client.disconnect().catch(() => {}),
+  sleep(5000),
+]);
 process.exit(0);
