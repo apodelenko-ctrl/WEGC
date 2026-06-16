@@ -65,14 +65,28 @@ function addChannel(ch) {
   });
 }
 
-const client = new TelegramClient(new StringSession(session), apiId, apiHash, { connectionRetries: 5 });
-await client.connect();
+// GramJS has no per-request timeout: a single client.invoke() can hang forever
+// (no response, no error), which would freeze the whole run and bypass our
+// time-budget checks. Race every network call against a timeout so a stuck call
+// rejects and the loop can continue / the budget can trigger.
+const CALL_TIMEOUT_MS = Number(process.env.CALL_TIMEOUT_MS || 20000);
+function withTimeout(promise, ms, label) {
+  let t;
+  const timeout = new Promise((_, rej) => {
+    t = setTimeout(() => rej(new Error(`timeout after ${ms}ms: ${label}`)), ms);
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(t));
+}
+const invokeT = (req, label) => withTimeout(client.invoke(req), CALL_TIMEOUT_MS, label);
+
+const client = new TelegramClient(new StringSession(session), apiId, apiHash, { connectionRetries: 3 });
+await withTimeout(client.connect(), CALL_TIMEOUT_MS, "connect");
 
 // 1) Global search by queries
 for (const q of queries) {
   if (overBudget()) { console.error("time budget reached during search — stopping queries"); break; }
   try {
-    const res = await client.invoke(new Api.contacts.Search({ q, limit: 50 }));
+    const res = await invokeT(new Api.contacts.Search({ q, limit: 50 }), `search ${q}`);
     (res.chats || []).forEach(addChannel);
     console.log(`search "${q}": +${(res.chats || []).length} chats (total ${found.size})`);
     await sleep(700);
@@ -87,7 +101,7 @@ const seeds = [...found.values()].filter((c) => c.username).slice(0, 25);
 for (const seed of seeds) {
   if (overBudget()) { console.error("time budget reached during recommendations — stopping"); break; }
   try {
-    const rec = await client.invoke(new Api.channels.GetChannelRecommendations({ channel: seed._entity }));
+    const rec = await invokeT(new Api.channels.GetChannelRecommendations({ channel: seed._entity }), `rec ${seed.username}`);
     (rec.chats || []).forEach(addChannel);
     await sleep(700);
   } catch (e) {
@@ -104,7 +118,7 @@ const toEnrich = list.slice(0, ENRICH_CAP);
 for (const c of toEnrich) {
   if (overBudget()) { console.error("time budget reached during enrichment — stopping"); break; }
   try {
-    const full = await client.invoke(new Api.channels.GetFullChannel({ channel: c._entity }));
+    const full = await invokeT(new Api.channels.GetFullChannel({ channel: c._entity }), `full ${c.username}`);
     const fc = full.fullChat;
     if (fc) {
       c.participants = fc.participantsCount || c.participants;
@@ -136,12 +150,17 @@ if (BOT_TOKEN && OWNER_CHAT_ID && ranked.length) {
   const text = header + lines.join("\n") + `\n\nОтветь номерами нужных (например: 1,3,5,8) — добавлю их в мониторинг.`;
   for (let i = 0; i < text.length; i += 3800) {
     const chunk = text.slice(i, i + 3800);
-    const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ chat_id: OWNER_CHAT_ID, text: chunk, disable_web_page_preview: true }),
-    });
-    if (!res.ok) console.error("telegram send failed:", res.status, await res.text().catch(() => ""));
+    try {
+      const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: OWNER_CHAT_ID, text: chunk, disable_web_page_preview: true }),
+        signal: AbortSignal.timeout(15000),
+      });
+      if (!res.ok) console.error("telegram send failed:", res.status, await res.text().catch(() => ""));
+    } catch (e) {
+      console.error("telegram send error:", e.message);
+    }
   }
   console.log(`Sent shortlist (top ${TOP_TO_SEND}) to Telegram.`);
 }
