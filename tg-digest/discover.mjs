@@ -25,6 +25,25 @@ const relWords = (cfg.relevanceWords || []).map((w) => w.toLowerCase());
 const TOP_TO_SEND = Number(process.env.TOP_TO_SEND || 40);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Fresh accounts get hit with long FLOOD_WAITs. Never block the whole run on
+// one huge wait: skip calls whose required wait exceeds MAX_WAIT_S, and stop the
+// expensive phases once the overall TIME_BUDGET is exhausted. We still write
+// whatever was collected so the shortlist is always produced.
+const MAX_WAIT_S = Number(process.env.MAX_WAIT_S || 45);
+const TIME_BUDGET_MS = Number(process.env.TIME_BUDGET_MS || 5 * 60 * 1000);
+const startedAt = Date.now();
+const overBudget = () => Date.now() - startedAt > TIME_BUDGET_MS;
+// Returns true if we slept (wait acceptable), false if the wait was skipped.
+async function handleFlood(e) {
+  if (e.seconds == null) return false;
+  if (e.seconds > MAX_WAIT_S) {
+    console.error(`flood wait ${e.seconds}s > ${MAX_WAIT_S}s — skipping call`);
+    return false;
+  }
+  await sleep((e.seconds + 1) * 1000);
+  return true;
+}
+
 const found = new Map(); // id -> {id, username, title, participants, about}
 
 function relevant(title, about) {
@@ -51,6 +70,7 @@ await client.connect();
 
 // 1) Global search by queries
 for (const q of queries) {
+  if (overBudget()) { console.error("time budget reached during search — stopping queries"); break; }
   try {
     const res = await client.invoke(new Api.contacts.Search({ q, limit: 50 }));
     (res.chats || []).forEach(addChannel);
@@ -58,19 +78,20 @@ for (const q of queries) {
     await sleep(700);
   } catch (e) {
     console.error(`search "${q}" error: ${e.message}`);
-    if (e.seconds) await sleep((e.seconds + 1) * 1000);
+    await handleFlood(e);
   }
 }
 
 // 2) Expand via "similar channels" for the strongest seeds (only those with username)
 const seeds = [...found.values()].filter((c) => c.username).slice(0, 25);
 for (const seed of seeds) {
+  if (overBudget()) { console.error("time budget reached during recommendations — stopping"); break; }
   try {
     const rec = await client.invoke(new Api.channels.GetChannelRecommendations({ channel: seed._entity }));
     (rec.chats || []).forEach(addChannel);
     await sleep(700);
   } catch (e) {
-    if (e.seconds) await sleep((e.seconds + 1) * 1000);
+    await handleFlood(e);
   }
 }
 console.log(`After recommendations: ${found.size} channels`);
@@ -78,8 +99,10 @@ console.log(`After recommendations: ${found.size} channels`);
 // 3) Enrich top candidates with participants + about (cap calls to avoid flood)
 const list = [...found.values()].filter((c) => c.username);
 list.sort((a, b) => b.participants - a.participants);
-const toEnrich = list.slice(0, 120);
+const ENRICH_CAP = Number(process.env.ENRICH_CAP || 60);
+const toEnrich = list.slice(0, ENRICH_CAP);
 for (const c of toEnrich) {
+  if (overBudget()) { console.error("time budget reached during enrichment — stopping"); break; }
   try {
     const full = await client.invoke(new Api.channels.GetFullChannel({ channel: c._entity }));
     const fc = full.fullChat;
@@ -89,7 +112,7 @@ for (const c of toEnrich) {
     }
     await sleep(350);
   } catch (e) {
-    if (e.seconds) { await sleep((e.seconds + 1) * 1000); }
+    await handleFlood(e);
   }
 }
 await client.disconnect();
