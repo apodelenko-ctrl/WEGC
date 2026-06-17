@@ -8,8 +8,17 @@
   if (window.__wegcChat) return; window.__wegcChat = true;
   var AGENT = (window.WEGC_AGENT || 'https://wegc-ai-agent.wegc.workers.dev/web');
 
-  var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
-  if (lang !== 'ru' && lang !== 'zh') lang = 'en';
+  function pickLang() {
+    var supported = { ru: 1, zh: 1, en: 1 };
+    var nav = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || navigator.userLanguage || ''];
+    for (var i = 0; i < nav.length; i++) {
+      var code = String(nav[i] || '').slice(0, 2).toLowerCase();
+      if (supported[code]) return code;
+    }
+    var page = String(document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+    return supported[page] ? page : 'en';
+  }
+  var lang = pickLang();
   var T = {
     en: {
       btn: 'Chat', title: 'Anna · WEGC consultant', sub: 'Phuket real estate — ask me anything',
