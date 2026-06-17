@@ -11,21 +11,47 @@
   var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
   if (lang !== 'ru' && lang !== 'zh') lang = 'en';
   var T = {
-    en: { btn: 'Chat', title: 'Anna · WEGC consultant', sub: 'Phuket real estate — ask me anything',
-          ph: 'Type a message…', send: 'Send',
-          hi: "Hi! I'm Anna, a WEGC consultant for Phuket real estate. I'll help you find a property for your goal and budget and answer questions on payment, instalments and ownership.\n\nWhat are you looking for — a home, a rental, or an investment? And what budget do you have in mind?",
-          err: 'Connection hiccup. Please try again in a moment.' },
-    ru: { btn: 'Чат', title: 'Анна · консультант WEGC', sub: 'Недвижимость Пхукета — спросите что угодно',
-          ph: 'Напишите сообщение…', send: 'Отпр.',
-          hi: 'Здравствуйте! Меня зовут Анна, я консультант WEGC по недвижимости на Пхукете. Помогу подобрать объект под вашу цель и бюджет и отвечу на вопросы по оплате, рассрочке и оформлению.\n\nРасскажите, что ищете — для жизни, под аренду или как инвестицию? И в каком бюджете ориентируетесь?',
-          err: 'Связь подвисла. Попробуйте ещё раз через секунду.' },
-    zh: { btn: '咨询', title: 'Anna · WEGC 顾问', sub: '普吉岛房产 — 欢迎咨询',
-          ph: '输入消息…', send: '发送',
-          hi: '您好!我是 WEGC 普吉岛房产顾问 Anna。我可以根据您的目标和预算帮您挑选房产,并解答付款、分期与产权方面的问题。\n\n请问您想找什么样的房产 — 自住、出租还是投资?预算大概多少?',
-          err: '连接出现问题,请稍后再试。' }
+    en: {
+      btn: 'Chat', title: 'Anna · WEGC consultant', sub: 'Phuket real estate — ask me anything',
+      ph: 'Type a message…', send: 'Send',
+      hi: "Hi! I'm Anna, WEGC consultant for Phuket real estate. Pick a topic below or type your question.",
+      qprompt: 'What are you looking for?',
+      chips: [
+        { label: '🏠 Home for family', text: 'Looking for a home in Phuket for my family — what do you recommend?' },
+        { label: '📈 Investment', text: 'Interested in a new launch for investment — typical yields and entry budget?' },
+        { label: '💰 Up to 5M THB', text: 'Budget up to 5 million THB — which projects fit?' },
+        { label: '📋 Pay from abroad', text: 'How can I pay from outside Thailand? Instalments, freehold options?' }
+      ],
+      err: 'Connection hiccup. Please try again in a moment.'
+    },
+    ru: {
+      btn: 'Чат', title: 'Анна · консультант WEGC', sub: 'Недвижимость Пхукета — спросите что угодно',
+      ph: 'Напишите сообщение…', send: 'Отпр.',
+      hi: 'Здравствуйте! Я Анна, консультант WEGC по недвижимости на Пхукете. Выберите тему ниже или напишите свой вопрос.',
+      qprompt: 'Что вас интересует?',
+      chips: [
+        { label: '🏠 Для жизни', text: 'Ищу недвижимость на Пхукете для жизни семьёй — что посоветуете?' },
+        { label: '📈 Инвестиция', text: 'Интересует инвестиция в новостройку — какая доходность и с какого бюджета?' },
+        { label: '💰 До 5 млн ฿', text: 'Бюджет до 5 млн бат — какие проекты подойдут?' },
+        { label: '📋 Оплата из РФ', text: 'Как оплатить из России? Рассрочка, freehold, что нужно для сделки?' }
+      ],
+      err: 'Связь подвисла. Попробуйте ещё раз через секунду.'
+    },
+    zh: {
+      btn: '咨询', title: 'Anna · WEGC 顾问', sub: '普吉岛房产 — 欢迎咨询',
+      ph: '输入消息…', send: '发送',
+      hi: '您好!我是 WEGC 普吉岛房产顾问 Anna。请选择下方主题或直接输入您的问题。',
+      qprompt: '您想了解什么?',
+      chips: [
+        { label: '🏠 自住', text: '想在普吉岛为家人买一套自住房 — 有什么推荐?' },
+        { label: '📈 投资', text: '考虑投资新房 — 典型回报率和入门预算是多少?' },
+        { label: '💰 500万泰铢内', text: '预算500万泰铢以内 — 有哪些项目?' },
+        { label: '📋 海外付款', text: '如何从海外付款?分期、freehold 怎么操作?' }
+      ],
+      err: '连接出现问题,请稍后再试。'
+    }
   }[lang];
 
-  // Persistent session id (server keeps the conversation memory)
   var sid;
   try {
     sid = localStorage.getItem('wegc_chat_sid');
@@ -50,6 +76,11 @@
     '.wegc-msg.a{align-self:flex-start;background:#1a2233;color:#e9eef6;border-bottom-left-radius:4px}' +
     '.wegc-msg.u{align-self:flex-end;background:#d6b370;color:#0a0e1a;border-bottom-right-radius:4px}' +
     '.wegc-msg.a a{color:#e3c07f;text-decoration:underline;word-break:break-all}' +
+    '.wegc-chips{align-self:flex-start;display:flex;flex-direction:column;gap:7px;max-width:92%}' +
+    '.wegc-chips .q{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:2px}' +
+    '.wegc-chip{display:block;width:100%;text-align:left;border:1px solid rgba(214,179,112,.35);background:rgba(214,179,112,.08);color:#e9eef6;border-radius:10px;padding:9px 12px;font:inherit;font-size:13px;line-height:1.35;cursor:pointer;transition:background .12s ease,border-color .12s ease}' +
+    '.wegc-chip:hover{background:rgba(214,179,112,.18);border-color:rgba(214,179,112,.55)}' +
+    '.wegc-chip:disabled{opacity:.45;cursor:default}' +
     '.wegc-typing{align-self:flex-start;display:inline-flex;gap:4px;padding:11px 14px;background:#1a2233;border-radius:13px;border-bottom-left-radius:4px}' +
     '.wegc-typing span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);animation:wegcb 1s infinite}' +
     '.wegc-typing span:nth-child(2){animation-delay:.16s}.wegc-typing span:nth-child(3){animation-delay:.32s}' +
@@ -89,7 +120,7 @@
     var input = panel.querySelector('#wegc-c-msg');
     var send = panel.querySelector('#wegc-c-send');
     var x = panel.querySelector('.wegc-chat-x');
-    var opened = false, firstSent = false, busy = false;
+    var opened = false, firstSent = false, busy = false, chipsShown = false;
 
     function scroll() { log.scrollTop = log.scrollHeight; }
     function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
@@ -108,11 +139,47 @@
       if (on && !ex) { var t = document.createElement('div'); t.className = 'wegc-typing'; t.innerHTML = '<span></span><span></span><span></span>'; log.appendChild(t); scroll(); }
       else if (!on && ex) ex.remove();
     }
+    function hideChips() {
+      var box = log.querySelector('.wegc-chips');
+      if (box) box.remove();
+      chipsShown = false;
+    }
+    function showChips() {
+      if (chipsShown || firstSent) return;
+      chipsShown = true;
+      var box = document.createElement('div'); box.className = 'wegc-chips';
+      var q = document.createElement('div'); q.className = 'q'; q.textContent = T.qprompt;
+      box.appendChild(q);
+      T.chips.forEach(function (c) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'wegc-chip'; b.textContent = c.label;
+        b.addEventListener('click', function () {
+          if (busy || firstSent) return;
+          box.querySelectorAll('.wegc-chip').forEach(function (el) { el.disabled = true; });
+          doSend(c.text);
+        });
+        box.appendChild(b);
+      });
+      log.appendChild(box); scroll();
+    }
+    function pingOpen() {
+      fetch(AGENT, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sid: sid, lang: lang, event: 'open' }),
+        keepalive: true
+      }).catch(function () {});
+    }
 
     btn.addEventListener('click', function () {
       var isOpen = panel.classList.toggle('open');
       if (isOpen) {
-        if (!opened) { opened = true; bubble(T.hi, 'a'); if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'chat_open'); }
+        if (!opened) {
+          opened = true;
+          bubble(T.hi, 'a');
+          showChips();
+          pingOpen();
+          if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'chat_open');
+        }
         input.focus();
       }
     });
@@ -120,13 +187,14 @@
 
     input.addEventListener('input', function () { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 96) + 'px'; });
     input.addEventListener('keydown', function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSend(); } });
-    send.addEventListener('click', doSend);
+    send.addEventListener('click', function () { doSend(); });
 
-    async function doSend() {
+    async function doSend(forcedText) {
       if (busy) return;
-      if (panel.querySelector('#wegc-c-gotcha').value) return; // honeypot
-      var text = input.value.trim();
+      if (panel.querySelector('#wegc-c-gotcha').value) return;
+      var text = (typeof forcedText === 'string' ? forcedText : input.value).trim();
       if (!text) { input.focus(); return; }
+      hideChips();
       bubble(text, 'u');
       input.value = ''; input.style.height = 'auto';
       busy = true; send.disabled = true;
@@ -151,7 +219,6 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
 
-  // Metrika goal: first <video> playback per page view (passport tours, homepage card previews)
   var videoGoalFired = false;
   document.addEventListener('play', function (e) {
     if (videoGoalFired) return;

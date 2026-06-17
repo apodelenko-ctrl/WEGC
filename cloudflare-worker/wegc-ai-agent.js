@@ -44,6 +44,25 @@ export default {
       return new Response("WEGC AI agent is running.", { status: 200 });
     }
 
+    if (request.method === "GET" && url.pathname === "/health") {
+      let dialogs = null;
+      if (env.DB) {
+        try {
+          const row = await env.DB.prepare(
+            "SELECT COUNT(*) AS c FROM leads WHERE updated_at >= datetime('now', '-1 day')"
+          ).first();
+          dialogs = row?.c ?? 0;
+        } catch (_) {}
+      }
+      return Response.json({
+        ok: true,
+        service: "wegc-ai-agent",
+        ts: new Date().toISOString(),
+        dialogs_24h: dialogs,
+        d1_ok: dialogs !== null,
+      });
+    }
+
     // Admin dashboard — lead log
     if (request.method === "GET" && url.pathname === "/admin") {
       if (!env.ADMIN_KEY || url.searchParams.get("key") !== env.ADMIN_KEY) {
@@ -162,8 +181,17 @@ async function handleWeb(request, env, cors) {
   if (data._gotcha) return jsonResp({ reply: "" }, 200, cors); // honeypot
 
   const sid = String(data.sid || "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 64);
+  const lang = String(data.lang || "ru").slice(0, 5);
+  if (!sid) return jsonResp({ error: "sid required" }, 400, cors);
+
+  // Widget open ping — logs funnel step without calling Claude.
+  if (data.event === "open") {
+    await logOpen(env, sid, lang);
+    return jsonResp({ ok: true }, 200, cors);
+  }
+
   const text = String(data.text || "").trim().slice(0, 2000);
-  if (!sid || !text) return jsonResp({ error: "sid and text required" }, 400, cors);
+  if (!text) return jsonResp({ error: "text required" }, 400, cors);
 
   const identity = {
     convKey: `web:${sid}`,
@@ -171,7 +199,7 @@ async function handleWeb(request, env, cors) {
     source: "Сайт",
     name: String(data.name || "").slice(0, 80),
     username: String(data.contact || "").slice(0, 120),
-    lang: String(data.lang || "ru").slice(0, 5),
+    lang,
   };
 
   try {
@@ -372,16 +400,59 @@ function jsonResp(obj, status, cors) {
 }
 
 // --- D1 lead log ---
+async function logOpen(env, sid, lang) {
+  if (!env.DB) return;
+  const now = new Date().toISOString();
+  const chatId = `web:${sid}`;
+  try {
+    await env.DB.prepare(
+      `INSERT INTO leads (chat_id, created_at, updated_at, lang, opened, msg_count, transcript)
+       VALUES (?1, ?2, ?2, ?3, 1, 0, '[]')
+       ON CONFLICT(chat_id) DO UPDATE SET opened=1, updated_at=?2, lang=COALESCE(?3, lang)`
+    )
+      .bind(chatId, now, lang || "")
+      .run();
+  } catch (e) {
+    console.error("logOpen", e);
+  }
+}
+
+function countUserMsgs(transcriptJson) {
+  let msgs = [];
+  try { msgs = JSON.parse(transcriptJson || "[]"); } catch {}
+  return msgs.filter((m) => m.role === "user").length;
+}
+
+function isTestSession(r) {
+  const s = `${r.chat_id || ""} ${r.username || ""}`;
+  return /(?:^|\/)(?:dt_|testweb|burst_|ent\d|pay\d|fpay|lnk|nodown|finish|adversarial|smqc|smqb)/i.test(s)
+    || s.includes("olga_test");
+}
+
+function funnelStats(rows) {
+  const live = rows.filter((r) => !isTestSession(r));
+  let opens = 0, sends = 0, engaged = 0, handed = 0;
+  for (const r of live) {
+    const users = countUserMsgs(r.transcript);
+    const total = (() => { try { return JSON.parse(r.transcript || "[]").length; } catch { return 0; } })();
+    if (r.opened || users > 0 || total > 0) opens++;
+    if (users >= 1) sends++;
+    if (users >= 1 && total >= 3) engaged++;
+    if (r.status === "handed_off") handed++;
+  }
+  return { live: live.length, opens, sends, engaged, handed };
+}
+
 async function logTurn(env, identity, state) {
   if (!env.DB) return;
   const now = new Date().toISOString();
   try {
     await env.DB.prepare(
-      `INSERT INTO leads (chat_id, created_at, updated_at, name, username, lang, msg_count, transcript)
-       VALUES (?1, ?2, ?2, ?3, ?4, ?5, ?6, ?7)
+      `INSERT INTO leads (chat_id, created_at, updated_at, name, username, lang, opened, msg_count, transcript)
+       VALUES (?1, ?2, ?2, ?3, ?4, ?5, 1, ?6, ?7)
        ON CONFLICT(chat_id) DO UPDATE SET
          updated_at=?2, name=COALESCE(NULLIF(?3,''),name), username=COALESCE(NULLIF(?4,''),username),
-         lang=?5, msg_count=?6, transcript=?7`
+         lang=?5, opened=1, msg_count=?6, transcript=?7`
     )
       .bind(identity.logId, now, identity.name || "", identity.username || "", identity.lang || "", state.messages.length, JSON.stringify(state.messages))
       .run();
@@ -436,6 +507,8 @@ async function renderAdmin(env, url) {
   const key = esc(url.searchParams.get("key") || "");
   const total = rows.length;
   const handed = rows.filter((r) => r.status === "handed_off").length;
+  const funnel = funnelStats(rows);
+  const pct = (n, d) => (d ? Math.round((n / d) * 100) : 0);
 
   const fmtTime = (iso) => {
     if (!iso) return "—";
@@ -499,15 +572,28 @@ async function renderAdmin(env, url) {
   .b{padding:8px 11px;border-radius:9px;font-size:13.5px;white-space:pre-wrap;max-width:90%}
   .b .who{display:block;font-size:10.5px;color:var(--muted);margin-bottom:2px;text-transform:uppercase;letter-spacing:.05em}
   .b.u{background:#1b2231;align-self:flex-end}.b.a{background:#10261c;align-self:flex-start}
+  .funnel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 18px}
+  .fstep{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .fstep .n{font-size:22px;font-weight:700;color:var(--gold)}.fstep .l{font-size:12px;color:var(--muted);margin-top:2px}
+  .fstep .p{font-size:11px;color:#6b7585;margin-top:4px}
+  .funnel-note{color:var(--muted);font-size:12px;margin:-8px 0 14px}
+  @media(max-width:720px){.funnel{grid-template-columns:repeat(2,1fr)}}
 </style></head><body>
 <div class="top">
-  <div><h1>WEGC · База обращений</h1><div class="stat">Всего: ${total} · передано менеджеру: ${handed}</div></div>
+  <div><h1>WEGC · База обращений</h1><div class="stat">Всего: ${total} · передано менеджеру: ${handed} · без тестов: ${funnel.live}</div></div>
   <div class="filters">Фильтр:
     <a href="?key=${key}">все</a>
     <a href="?key=${key}&status=handed_off">🔥 тёплые</a>
     <a href="?key=${key}&status=new">в работе</a>
   </div>
 </div>
+<div class="funnel">
+  <div class="fstep"><div class="n">${funnel.opens}</div><div class="l">Открыли чат</div><div class="p">chat_open</div></div>
+  <div class="fstep"><div class="n">${funnel.sends}</div><div class="l">Написали</div><div class="p">${pct(funnel.sends, funnel.opens)}% от open · chat_send</div></div>
+  <div class="fstep"><div class="n">${funnel.engaged}</div><div class="l">Диалог 3+ сообщ.</div><div class="p">${pct(funnel.engaged, funnel.sends)}% от send</div></div>
+  <div class="fstep"><div class="n">${funnel.handed}</div><div class="l">Тёплые лиды</div><div class="p">${pct(funnel.handed, funnel.sends)}% от send · chat_lead</div></div>
+</div>
+<div class="funnel-note">Воронка без тестовых сессий (dt_, burst_, olga_test и др.). «Открыли» — ping с сайта + сессии с сообщениями.</div>
 ${cards || '<div class="stat">Пока пусто — обращений нет.</div>'}
 </body></html>`;
 

@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS leads (
   interested_projects TEXT,
   summary      TEXT,
   msg_count    INTEGER DEFAULT 0,
+  opened       INTEGER DEFAULT 0,     -- 1 = chat widget opened (web ping)
   transcript   TEXT                   -- JSON array of {role, content}
 );
 CREATE INDEX IF NOT EXISTS idx_leads_updated ON leads(updated_at DESC);
