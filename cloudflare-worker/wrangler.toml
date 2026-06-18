@@ -9,3 +9,9 @@ compatibility_date = "2025-01-01"
 # Optional non-secret override:
 [vars]
 ALLOWED_ORIGINS = "https://wegc.fund,https://www.wegc.fund"
+
+# Shared lead log (same D1 as the AI agent) so form enquiries land in /admin too.
+[[d1_databases]]
+binding = "DB"
+database_name = "wegc-leads"
+database_id = "12fb5c3a-54e8-46d4-ac10-cab2b7fbdc8a"

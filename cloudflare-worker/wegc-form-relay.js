@@ -50,6 +50,11 @@ export default {
       .filter(Boolean);
     const origin = request.headers.get("Origin") || "";
     const cors = corsHeaders(origin, allowed);
+    const path = new URL(request.url).pathname.replace(/\/+$/, "") || "/";
+
+    if (request.method === "GET" && (path === "/health" || path === "/")) {
+      return json({ ok: true, service: "wegc-form-relay", ts: new Date().toISOString() }, 200, cors);
+    }
 
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: cors });
@@ -118,9 +123,63 @@ export default {
       const detail = await tg.text().catch(() => "");
       return json({ ok: false, error: "telegram failed", detail }, 502, cors);
     }
+
+    if (env.DB) {
+      await logFormLead(env, data).catch((e) => console.error("logFormLead", e));
+    }
+
+    if (env.ORCHESTRATOR_INGEST_URL && env.ORCHESTRATOR_INGEST_SECRET) {
+      forwardIngest(env, data, text).catch(() => {});
+    }
+
     return json({ ok: true }, 200, cors);
   },
 };
+
+// Mirror the form enquiry into the shared `leads` table (same DB as the AI
+// agent), so site forms and chat conversations show up together in /admin.
+async function logFormLead(env, data) {
+  const str = (v, n) => String(v == null ? "" : v).slice(0, n);
+  const now = new Date().toISOString();
+  const chatId = `form:${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+  const name = str(data.name, 120);
+  const contact = str(data.phone || data.email, 160);
+  const lang = str(data._lang, 8);
+  const budget = str(data.budget, 120);
+  const interest = str(data.project || data.interest, 200);
+  const parts = [];
+  if (data.email) parts.push(`Email: ${str(data.email, 160)}`);
+  if (data.phone) parts.push(`Тел: ${str(data.phone, 60)}`);
+  if (data.company) parts.push(`Компания: ${str(data.company, 120)}`);
+  if (data.jurisdiction) parts.push(`Юрисдикция: ${str(data.jurisdiction, 80)}`);
+  if (data.message) parts.push(`Сообщение: ${str(data.message, 800)}`);
+  const page = str(data._page, 120);
+  const summary = `📩 Заявка с формы${page ? ` (${page})` : ""}. ${parts.join(" · ")}`.slice(0, 1200);
+  await env.DB.prepare(
+    `INSERT INTO leads (chat_id, created_at, updated_at, name, username, lang, status, budget, interested_projects, summary, msg_count, opened, transcript)
+     VALUES (?1, ?2, ?2, ?3, ?4, ?5, 'form', ?6, ?7, ?8, 0, 0, '[]')`
+  )
+    .bind(chatId, now, name, contact, lang, budget, interest, summary)
+    .run();
+}
+
+async function forwardIngest(env, data, text) {
+  const base = String(env.ORCHESTRATOR_INGEST_URL || "").replace(/\/$/, "");
+  await fetch(`${base}/api/ingest/lead`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${env.ORCHESTRATOR_INGEST_SECRET}`,
+    },
+    body: JSON.stringify({
+      system_id: "wegc-form-relay",
+      title: data.project || data.interest || "WEGC enquiry",
+      contact: data.phone || data.email,
+      source: data._page || "wegc.fund",
+      metadata: data,
+    }),
+  });
+}
 
 function json(obj, status, cors) {
   return new Response(JSON.stringify(obj), {

@@ -430,7 +430,7 @@ function isTestSession(r) {
 }
 
 function funnelStats(rows) {
-  const live = rows.filter((r) => !isTestSession(r));
+  const live = rows.filter((r) => !isTestSession(r) && r.status !== "form");
   let opens = 0, sends = 0, engaged = 0, handed = 0;
   for (const r of live) {
     const users = countUserMsgs(r.transcript);
@@ -507,6 +507,7 @@ async function renderAdmin(env, url) {
   const key = esc(url.searchParams.get("key") || "");
   const total = rows.length;
   const handed = rows.filter((r) => r.status === "handed_off").length;
+  const forms = rows.filter((r) => r.status === "form").length;
   const funnel = funnelStats(rows);
   const pct = (n, d) => (d ? Math.round((n / d) * 100) : 0);
 
@@ -536,6 +537,8 @@ async function renderAdmin(env, url) {
     ].filter(([, v]) => v).map(([k, v]) => `<span class="chip"><b>${k}:</b> ${esc(v)}</span>`).join("");
     const badge = r.status === "handed_off"
       ? '<span class="badge hot">🔥 Передан</span>'
+      : r.status === "form"
+      ? '<span class="badge form">📩 Заявка</span>'
       : '<span class="badge new">в работе</span>';
     return `<div class="card">
       <div class="hd">
@@ -563,6 +566,7 @@ async function renderAdmin(env, url) {
   .nm{font-weight:600;font-size:15px}.meta{color:var(--muted);font-size:12.5px;margin-top:3px}
   .badge{font-size:11px;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
   .badge.hot{background:rgba(214,120,90,.18);color:#e88b6f}.badge.new{background:rgba(120,160,255,.14);color:#8fb0ff}
+  .badge.form{background:rgba(184,148,94,.2);color:#d8b277}
   .chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
   .chip{background:rgba(184,148,94,.1);border:1px solid rgba(184,148,94,.3);color:#d8c3a0;font-size:12px;padding:3px 9px;border-radius:6px}
   .chip b{color:#b8945e;font-weight:600}
@@ -580,9 +584,10 @@ async function renderAdmin(env, url) {
   @media(max-width:720px){.funnel{grid-template-columns:repeat(2,1fr)}}
 </style></head><body>
 <div class="top">
-  <div><h1>WEGC · База обращений</h1><div class="stat">Всего: ${total} · передано менеджеру: ${handed} · без тестов: ${funnel.live}</div></div>
+  <div><h1>WEGC · База обращений</h1><div class="stat">Всего: ${total} · заявки с форм: ${forms} · передано менеджеру: ${handed} · без тестов: ${funnel.live}</div></div>
   <div class="filters">Фильтр:
     <a href="?key=${key}">все</a>
+    <a href="?key=${key}&status=form">📩 заявки</a>
     <a href="?key=${key}&status=handed_off">🔥 тёплые</a>
     <a href="?key=${key}&status=new">в работе</a>
   </div>
