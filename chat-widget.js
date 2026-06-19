@@ -8,18 +8,23 @@
   if (window.__wegcChat) return; window.__wegcChat = true;
   var AGENT = (window.WEGC_AGENT || 'https://wegc-ai-agent.wegc.workers.dev/web');
 
+  var SUPPORTED = { ru: 1, zh: 1, en: 1 };
   function pickLang() {
-    var supported = { ru: 1, zh: 1, en: 1 };
+    try {
+      var saved = localStorage.getItem('wegc_chat_lang');
+      if (saved && SUPPORTED[saved]) return saved;
+    } catch (e) {}
+    var page = String(document.documentElement.lang || '').slice(0, 2).toLowerCase();
+    if (SUPPORTED[page]) return page;
     var nav = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || navigator.userLanguage || ''];
     for (var i = 0; i < nav.length; i++) {
       var code = String(nav[i] || '').slice(0, 2).toLowerCase();
-      if (supported[code]) return code;
+      if (SUPPORTED[code]) return code;
     }
-    var page = String(document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
-    return supported[page] ? page : 'en';
+    return 'en';
   }
   var lang = pickLang();
-  var T = {
+  var DICT = {
     en: {
       btn: 'Chat', title: 'Anna · WEGC consultant', sub: 'Phuket real estate — ask me anything',
       ph: 'Type a message…', send: 'Send',
@@ -59,7 +64,9 @@
       ],
       err: '连接出现问题,请稍后再试。'
     }
-  }[lang];
+  };
+  var T = DICT[lang];
+  var LANGS = [['ru', 'РУ'], ['en', 'EN'], ['zh', '中']];
 
   var sid;
   try {
@@ -80,6 +87,10 @@
     '.wegc-chat-dot{width:7px;height:7px;border-radius:50%;background:#46d17f;display:inline-block;margin-right:5px;vertical-align:middle}' +
     '.wegc-chat-x{position:absolute;top:12px;right:12px;width:26px;height:26px;border:none;background:rgba(255,255,255,.08);color:#fff;border-radius:50%;cursor:pointer;font-size:16px;line-height:1}' +
     '.wegc-chat-x:hover{background:rgba(255,255,255,.18)}' +
+    '.wegc-lang{position:absolute;top:13px;right:46px;display:inline-flex;gap:2px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:2px}' +
+    '.wegc-lang button{border:none;background:transparent;color:rgba(255,255,255,.6);font:inherit;font-size:11px;font-weight:600;line-height:1;padding:4px 6px;border-radius:6px;cursor:pointer}' +
+    '.wegc-lang button:hover{color:#fff}' +
+    '.wegc-lang button.on{background:#d6b370;color:#0a0e1a}' +
     '.wegc-chat-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}' +
     '.wegc-msg{max-width:84%;padding:9px 13px;border-radius:13px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}' +
     '.wegc-msg.a{align-self:flex-start;background:#1a2233;color:#e9eef6;border-bottom-left-radius:4px}' +
@@ -110,10 +121,14 @@
 
   var panel = document.createElement('div');
   panel.className = 'wegc-chat-panel'; panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', T.title);
+  var langBtns = LANGS.map(function (l) {
+    return '<button type="button" data-lang="' + l[0] + '"' + (l[0] === lang ? ' class="on"' : '') + '>' + l[1] + '</button>';
+  }).join('');
   panel.innerHTML =
     '<div class="wegc-chat-hd">' +
       '<div class="wegc-chat-av">A</div>' +
-      '<div><h4>' + T.title + '</h4><p><span class="wegc-chat-dot"></span>' + T.sub + '</p></div>' +
+      '<div><h4 id="wegc-title">' + T.title + '</h4><p><span class="wegc-chat-dot"></span><span id="wegc-sub">' + T.sub + '</span></p></div>' +
+      '<div class="wegc-lang" id="wegc-lang">' + langBtns + '</div>' +
       '<button class="wegc-chat-x" type="button" aria-label="Close">\u00d7</button>' +
     '</div>' +
     '<div class="wegc-chat-log" id="wegc-log"></div>' +
@@ -129,7 +144,41 @@
     var input = panel.querySelector('#wegc-c-msg');
     var send = panel.querySelector('#wegc-c-send');
     var x = panel.querySelector('.wegc-chat-x');
+    var titleEl = panel.querySelector('#wegc-title');
+    var subEl = panel.querySelector('#wegc-sub');
+    var langBox = panel.querySelector('#wegc-lang');
     var opened = false, firstSent = false, busy = false, chipsShown = false;
+
+    function applyLang() {
+      T = DICT[lang];
+      titleEl.textContent = T.title;
+      subEl.textContent = T.sub;
+      input.placeholder = T.ph;
+      send.textContent = T.send;
+      btn.setAttribute('aria-label', T.title);
+      btn.querySelector('span').textContent = T.btn;
+      Array.prototype.forEach.call(langBox.children, function (b) {
+        b.className = (b.getAttribute('data-lang') === lang) ? 'on' : '';
+      });
+    }
+
+    function setLang(next) {
+      if (!SUPPORTED[next] || next === lang) { applyLang(); return; }
+      lang = next;
+      try { localStorage.setItem('wegc_chat_lang', lang); } catch (e) {}
+      applyLang();
+      if (opened && !firstSent) {
+        log.innerHTML = '';
+        chipsShown = false;
+        bubble(T.hi, 'a');
+        showChips();
+      }
+    }
+
+    langBox.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-lang]');
+      if (b) setLang(b.getAttribute('data-lang'));
+    });
 
     function scroll() { log.scrollTop = log.scrollHeight; }
     function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
