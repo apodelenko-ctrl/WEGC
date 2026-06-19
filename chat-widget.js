@@ -36,7 +36,8 @@
         { label: '💰 Up to 5M THB', text: 'Budget up to 5 million THB — which projects fit?' },
         { label: '📋 Pay from abroad', text: 'How can I pay from outside Thailand? Instalments, freehold options?' }
       ],
-      err: 'Connection hiccup. Please try again in a moment.'
+      err: 'Connection hiccup. Please try again in a moment.',
+      nudge: 'I can shortlist Phuket options for your budget — just tell me what you\u2019re looking for 👋'
     },
     ru: {
       btn: 'Чат', title: 'Анна · консультант WEGC', sub: 'Недвижимость Пхукета — спросите что угодно',
@@ -49,7 +50,8 @@
         { label: '💰 До 5 млн ฿', text: 'Бюджет до 5 млн бат — какие проекты подойдут?' },
         { label: '📋 Оплата из РФ', text: 'Как оплатить из России? Рассрочка, freehold, что нужно для сделки?' }
       ],
-      err: 'Связь подвисла. Попробуйте ещё раз через секунду.'
+      err: 'Связь подвисла. Попробуйте ещё раз через секунду.',
+      nudge: 'Помогу подобрать варианты на Пхукете под ваш бюджет — напишите, что ищете 👋'
     },
     zh: {
       btn: '咨询', title: 'Anna · WEGC 顾问', sub: '普吉岛房产 — 欢迎咨询',
@@ -62,7 +64,8 @@
         { label: '💰 500万泰铢内', text: '预算500万泰铢以内 — 有哪些项目?' },
         { label: '📋 海外付款', text: '如何从海外付款?分期、freehold 怎么操作?' }
       ],
-      err: '连接出现问题,请稍后再试。'
+      err: '连接出现问题,请稍后再试。',
+      nudge: '我可以根据您的预算推荐普吉岛房源 — 告诉我您的需求 👋'
     }
   };
   var T = DICT[lang];
@@ -111,6 +114,12 @@
     '.wegc-chat-go{flex-shrink:0;background:#d6b370;color:#0a0e1a;border:none;font-weight:700;font-size:13px;padding:0 15px;height:40px;border-radius:10px;cursor:pointer;font-family:inherit;transition:background .15s ease}' +
     '.wegc-chat-go:hover{background:#c9a45f}.wegc-chat-go:disabled{opacity:.5;cursor:default}' +
     '.wegc-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}' +
+    '.wegc-nudge{position:fixed;right:20px;bottom:78px;z-index:99997;max-width:264px;background:#141925;border:1px solid #2a3447;color:#e9eef6;border-radius:14px;border-bottom-right-radius:4px;padding:13px 32px 13px 14px;font-size:13.5px;line-height:1.45;box-shadow:0 16px 40px -12px rgba(0,0,0,.6);cursor:pointer;animation:wegcpop .25s ease}' +
+    '.wegc-nudge:hover{border-color:#3a4861}' +
+    '.wegc-nudge-x{position:absolute;top:6px;right:8px;border:none;background:transparent;color:#8b95a7;font-size:15px;line-height:1;cursor:pointer;padding:2px}' +
+    '.wegc-nudge-x:hover{color:#fff}' +
+    '@keyframes wegcpop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}' +
+    '@media(max-width:640px){.wegc-nudge{right:14px;bottom:70px;max-width:calc(100vw - 90px)}}' +
     '@media(max-width:640px){.wegc-chat-panel{right:8px;left:8px;width:auto;top:calc(8px + env(safe-area-inset-top));bottom:calc(8px + env(safe-area-inset-bottom));height:auto;max-height:none;border-radius:14px}.wegc-chat-panel.open{display:flex}.wegc-chat-btn{right:14px;bottom:14px}}';
 
   var style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
@@ -148,6 +157,7 @@
     var subEl = panel.querySelector('#wegc-sub');
     var langBox = panel.querySelector('#wegc-lang');
     var opened = false, firstSent = false, busy = false, chipsShown = false;
+    var nudgeEl = null, nudgeShown = false, nudgeTimer = null;
 
     function applyLang() {
       T = DICT[lang];
@@ -157,6 +167,7 @@
       send.textContent = T.send;
       btn.setAttribute('aria-label', T.title);
       btn.querySelector('span').textContent = T.btn;
+      if (nudgeEl) nudgeEl.querySelector('.wegc-nudge-txt').textContent = T.nudge;
       Array.prototype.forEach.call(langBox.children, function (b) {
         b.className = (b.getAttribute('data-lang') === lang) ? 'on' : '';
       });
@@ -228,20 +239,50 @@
       }).catch(function () {});
     }
 
-    btn.addEventListener('click', function () {
-      var isOpen = panel.classList.toggle('open');
-      if (isOpen) {
-        if (!opened) {
-          opened = true;
-          bubble(T.hi, 'a');
-          showChips();
-          pingOpen();
-          if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'chat_open');
-        }
-        input.focus();
+    function nudgeOff() {
+      if (nudgeTimer) { clearTimeout(nudgeTimer); nudgeTimer = null; }
+      if (nudgeEl) { nudgeEl.remove(); nudgeEl = null; }
+    }
+    function nudgeDismissed() {
+      try { return sessionStorage.getItem('wegc_nudge') === 'off'; } catch (e) { return false; }
+    }
+    function showNudge() {
+      if (nudgeShown || opened || nudgeEl || nudgeDismissed() || panel.classList.contains('open')) return;
+      nudgeShown = true;
+      nudgeEl = document.createElement('div');
+      nudgeEl.className = 'wegc-nudge';
+      nudgeEl.innerHTML = '<button class="wegc-nudge-x" type="button" aria-label="Close">\u00d7</button><div class="wegc-nudge-txt"></div>';
+      nudgeEl.querySelector('.wegc-nudge-txt').textContent = T.nudge;
+      nudgeEl.addEventListener('click', function () { openChat(); });
+      nudgeEl.querySelector('.wegc-nudge-x').addEventListener('click', function (e) {
+        e.stopPropagation();
+        nudgeOff();
+        try { sessionStorage.setItem('wegc_nudge', 'off'); } catch (_) {}
+      });
+      document.body.appendChild(nudgeEl);
+    }
+
+    function openChat() {
+      nudgeOff();
+      panel.classList.add('open');
+      if (!opened) {
+        opened = true;
+        bubble(T.hi, 'a');
+        showChips();
+        pingOpen();
+        if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'chat_open');
       }
+      input.focus();
+    }
+
+    btn.addEventListener('click', function () {
+      if (panel.classList.contains('open')) panel.classList.remove('open');
+      else openChat();
     });
     x.addEventListener('click', function () { panel.classList.remove('open'); });
+
+    nudgeTimer = setTimeout(showNudge, 18000);
+    document.addEventListener('mouseleave', function (e) { if (e.clientY <= 0) showNudge(); });
 
     input.addEventListener('input', function () { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 96) + 'px'; });
     input.addEventListener('keydown', function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSend(); } });
