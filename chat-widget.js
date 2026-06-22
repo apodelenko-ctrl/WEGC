@@ -31,10 +31,14 @@
       hi: "Hi! I'm Anna, WEGC consultant for Phuket real estate. Pick a topic below or type your question.",
       qprompt: 'What are you looking for?',
       chips: [
-        { label: '🏠 Home for family', text: 'Looking for a home in Phuket for my family — what do you recommend?' },
-        { label: '📈 Investment', text: 'Interested in a new launch for investment — typical yields and entry budget?' },
-        { label: '💰 Up to 5M THB', text: 'Budget up to 5 million THB — which projects fit?' },
-        { label: '📋 Pay from abroad', text: 'How can I pay from outside Thailand? Instalments, freehold options?' }
+        { label: '🏠 Home for family', text: 'Looking for a home in Phuket for my family — what do you recommend?',
+          answer: 'For family living, most clients look at spacious condos or villas in calm, well-served areas — Layan, Bang Tao, Rawai: close to beaches, schools and shops. We work directly with developers, so buyer commission is 0%.\n\nTell me your budget and how many bedrooms you need — I\u2019ll shortlist 2–3 options.' },
+        { label: '📈 Investment', text: 'Interested in a new launch for investment — typical yields and entry budget?',
+          answer: 'For investment, units in strong tourist areas — Bang Tao, Surin, Kamala — work best. Realistic net yield is 5–9% a year, and we check every project against a financial model, no brochure promises. Entry is roughly from 2.87M THB.\n\nShare your budget and I\u2019ll show projects with real yield numbers.' },
+        { label: '💰 Up to 5M THB', text: 'Budget up to 5 million THB — which projects fit?',
+          answer: 'Up to 5M THB you can get studios and 1-bedroom units in off-plan projects with 0% developer instalments — a solid entry for both rental and resale.\n\nFor your own use or for rental? And which area? I\u2019ll pick specific units.' },
+        { label: '📋 Pay from abroad', text: 'How can I pay from outside Thailand? Instalments, freehold options?',
+          answer: 'You can pay from abroad legally: sign the contract with the developer, transfer to a non-resident account, and the bank issues an FET form (needed to repatriate funds later). Developer instalments are 0%, and both freehold and leasehold are available.\n\nWant me to map the steps for a specific project and budget?' }
       ],
       err: 'Connection hiccup. Please try again in a moment.',
       nudge: 'I can shortlist Phuket options for your budget — just tell me what you\u2019re looking for 👋'
@@ -45,10 +49,14 @@
       hi: 'Здравствуйте! Я Анна, консультант WEGC по недвижимости на Пхукете. Выберите тему ниже или напишите свой вопрос.',
       qprompt: 'Что вас интересует?',
       chips: [
-        { label: '🏠 Для жизни', text: 'Ищу недвижимость на Пхукете для жизни семьёй — что посоветуете?' },
-        { label: '📈 Инвестиция', text: 'Интересует инвестиция в новостройку — какая доходность и с какого бюджета?' },
-        { label: '💰 До 5 млн ฿', text: 'Бюджет до 5 млн бат — какие проекты подойдут?' },
-        { label: '📋 Оплата из РФ', text: 'Как оплатить из России? Рассрочка, freehold, что нужно для сделки?' }
+        { label: '🏠 Для жизни', text: 'Ищу недвижимость на Пхукете для жизни семьёй — что посоветуете?',
+          answer: 'Для жизни семьёй обычно смотрят просторные кондо или виллы в спокойных районах с инфраструктурой — Лаян, Банг Тао, Раваи: рядом пляжи, школы, магазины. Работаем напрямую с застройщиком — комиссия для покупателя 0%.\n\nНапишите бюджет и сколько нужно спален — подберу 2–3 варианта под вас.' },
+        { label: '📈 Инвестиция', text: 'Интересует инвестиция в новостройку — какая доходность и с какого бюджета?',
+          answer: 'Под инвестицию берут юниты в сильных туристических районах — Банг Тао, Сурин, Камала. Реалистичная чистая доходность 5–9% годовых, каждый проект сверяем с финмоделью, без обещаний из брошюр. Вход — примерно от 2,87 млн ฿.\n\nНазовите бюджет — покажу проекты с конкретными цифрами доходности.' },
+        { label: '💰 До 5 млн ฿', text: 'Бюджет до 5 млн бат — какие проекты подойдут?',
+          answer: 'В бюджет до 5 млн ฿ попадают студии и 1-спальные в строящихся проектах с рассрочкой от застройщика 0%. Рабочий вход и под аренду, и под перепродажу.\n\nДля себя или под аренду? И какой район интересен? Подберу конкретные юниты.' },
+        { label: '📋 Оплата из РФ', text: 'Как оплатить из России? Рассрочка, freehold, что нужно для сделки?',
+          answer: 'Оплатить из России можно легально, в рублях:\n1) договор с застройщиком;\n2) перевод рублей нашему фин. представителю в РФ;\n3) он платит застройщику от вашего имени, банк фиксирует FET для будущего вывода средств.\nРассрочка застройщика 0%, freehold и leasehold — оба варианта.\n\nПод какой проект и бюджет рассчитать схему?' }
       ],
       err: 'Связь подвисла. Попробуйте ещё раз через секунду.',
       nudge: 'Помогу подобрать варианты на Пхукете под ваш бюджет — напишите, что ищете 👋'
@@ -59,10 +67,14 @@
       hi: '您好!我是 WEGC 普吉岛房产顾问 Anna。请选择下方主题或直接输入您的问题。',
       qprompt: '您想了解什么?',
       chips: [
-        { label: '🏠 自住', text: '想在普吉岛为家人买一套自住房 — 有什么推荐?' },
-        { label: '📈 投资', text: '考虑投资新房 — 典型回报率和入门预算是多少?' },
-        { label: '💰 500万泰铢内', text: '预算500万泰铢以内 — 有哪些项目?' },
-        { label: '📋 海外付款', text: '如何从海外付款?分期、freehold 怎么操作?' }
+        { label: '🏠 自住', text: '想在普吉岛为家人买一套自住房 — 有什么推荐?',
+          answer: '自住的客户通常会看莱扬、邦涛、拉威等安静且配套齐全的区域的大户型公寓或别墅 — 靠近海滩、学校和商场。我们与开发商直接合作,买家佣金为 0%。\n\n请告诉我您的预算和需要几间卧室 — 我帮您筛选 2–3 个方案。' },
+        { label: '📈 投资', text: '考虑投资新房 — 典型回报率和入门预算是多少?',
+          answer: '投资首选邦涛、苏林、卡马拉等热门旅游区的房源。实际净收益约为每年 5–9%,每个项目都会用财务模型核对,不做夸大承诺。入门门槛约从 287 万泰铢起。\n\n告诉我您的预算,我会展示带有具体收益数据的项目。' },
+        { label: '💰 500万泰铢内', text: '预算500万泰铢以内 — 有哪些项目?',
+          answer: '500 万泰铢以内可以买到期房项目的开间和一居室,开发商提供 0% 分期 — 自住或出租出售都很合适。\n\n是自住还是出租?想看哪个区域?我帮您挑选具体房源。' },
+        { label: '📋 海外付款', text: '如何从海外付款?分期、freehold 怎么操作?',
+          answer: '海外可合法付款:与开发商签约,汇款至非居民账户,银行出具 FET 表(日后资金汇出所需)。开发商分期为 0%,freehold 和 leasehold 均可。\n\n需要我针对具体项目和预算说明步骤吗?' }
       ],
       err: '连接出现问题,请稍后再试。',
       nudge: '我可以根据您的预算推荐普吉岛房源 — 告诉我您的需求 👋'
@@ -225,7 +237,7 @@
         b.addEventListener('click', function () {
           if (busy || firstSent) return;
           box.querySelectorAll('.wegc-chip').forEach(function (el) { el.disabled = true; });
-          doSend(c.text);
+          if (c.answer) sendChip(c); else doSend(c.text);
         });
         box.appendChild(b);
       });
@@ -287,6 +299,20 @@
     input.addEventListener('input', function () { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 96) + 'px'; });
     input.addEventListener('keydown', function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSend(); } });
     send.addEventListener('click', function () { doSend(); });
+
+    function sendChip(c) {
+      if (busy) return;
+      hideChips();
+      bubble(c.text, 'u');
+      busy = true; send.disabled = true;
+      if (!firstSent) { firstSent = true; if (typeof ym !== 'undefined') ym(109732633, 'reachGoal', 'chat_send'); }
+      typing(true);
+      setTimeout(function () {
+        typing(false);
+        bubble(c.answer, 'a');
+        busy = false; send.disabled = false; input.focus();
+      }, 450);
+    }
 
     async function doSend(forcedText) {
       if (busy) return;
