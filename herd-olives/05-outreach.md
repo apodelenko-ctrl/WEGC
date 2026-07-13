@@ -23,7 +23,13 @@ Could you please share, for the 0.37 L can and other retail formats:
 3. Shelf life and storage conditions;
 4. Food-safety certificates (IFS/BRC/ISO 22000/HACCP) for the producing plant;
 5. Label/barcode specs and whether Thai-compliant labeling is possible;
-6. Lead time and export documents provided (COA, health/free-sale cert, certificate of origin).
+6. Lead time and export documents provided (COA, health/free-sale cert, certificate of origin);
+7. **Exclusivity:** would you consider an exclusive distribution arrangement for SARASA in Thailand
+   for our company (so the brand is supplied to Thailand only through us)? What conditions/volumes
+   would this require?
+8. **Thai labeling at your plant:** can you apply Thai-language sticker labels (artwork supplied by
+   us, including our importer details) to each can before shipping, so the goods are compliant at
+   Thai customs entry? If yes, what is the cost/lead time and minimum quantity per SKU?
 
 We plan a trial shipment now and a container-scale program if sell-through is confirmed, ideally
 under an exclusive Thailand distribution arrangement.
@@ -46,7 +52,14 @@ premium (Villa Market, Gourmet Market, Tops) y HORECA.
 3. Vida útil y condiciones de almacenamiento;
 4. Certificados de seguridad alimentaria (IFS/BRC/ISO 22000/HACCP) de la planta;
 5. Especificaciones de etiqueta/código de barras y posibilidad de etiquetado conforme a Tailandia;
-6. Plazo de entrega y documentación de exportación (COA, certificado sanitario, origen).
+6. Plazo de entrega y documentación de exportación (COA, certificado sanitario, origen);
+7. **Exclusividad:** ¿considerarían un acuerdo de distribución exclusiva de SARASA para Tailandia a
+   favor de nuestra empresa (que la marca se suministre a Tailandia únicamente a través de nosotros)?
+   ¿Qué condiciones/volúmenes requeriría?
+8. **Etiquetado tailandés en fábrica:** ¿pueden aplicar etiquetas adhesivas en tailandés (arte
+   gráfico proporcionado por nosotros, con los datos de nuestro importador) en cada lata antes del
+   envío, para que la mercancía sea conforme en la aduana tailandesa? Si es así, ¿coste/plazo y
+   cantidad mínima por referencia?
 
 Planeamos un envío de prueba ahora y un programa a escala de contenedor si se confirma la rotación,
 idealmente en régimen de distribución exclusiva para Tailandia.
