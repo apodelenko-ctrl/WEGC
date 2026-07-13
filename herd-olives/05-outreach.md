@@ -1,7 +1,8 @@
 # 05 — Аутрич: RFQ, питч байеру, контакты
 
 > Файлы отправляй со своей почты. Агент в облаке письма НЕ отправляет.
-> Подставь: имя/компанию/сайт/телефон; при необходимости поправь название компании (HERD).
+> Подставь: email + телефон/WhatsApp. Торговое лицо сделки = **WET Solutions Limited (Гонконг)** —
+> оно и есть контрагент/покупатель; HERD Research упомянут как научный проект. Ссылки уже вставлены.
 
 ## Контакты производителя
 - **Aceitunas Sarasa** (историч.): info@aceitunas-sarasa.com · +34 948 674 064 · aceitunassarasa.es
@@ -18,9 +19,11 @@ Dear SARASA / Freshara Agro Exports team,
 
 Warm greetings from Phuket, Thailand.
 
-My name is Artem, founder of HERD — a multi-disciplinary group working across science and finance,
-with extensive experience in international trade (including food and meat products). We are now
-actively building our ventures here in Thailand.
+My name is Artem Podelenko. I run WET Solutions (wet-solutions.com), an international B2B
+food-trading company operating across Asia — supplier sourcing, export operations, cold-chain
+logistics and shipment documentation for frozen poultry and other food products. I am also the
+founder of HERD Research (herdresearch.org), an open science lab based here in Phuket. In short,
+international food trade and its logistics are part of my daily work.
 
 I write to you not only as a businessman, but as a long-time fan of your olives. I am originally
 from Russia, and I first came to know SARASA on the shelves of our stores in Kaliningrad. Years
@@ -53,7 +56,10 @@ is proven — ideally as your exclusive partner for Thailand.
 Thank you, and I look forward to hearing from you.
 
 Warm regards,
-Artem · Founder, HERD · [email] · [phone] · [website]
+Artem Podelenko
+WET Solutions Limited (Hong Kong) — wet-solutions.com
+HERD Research — herdresearch.org
+[email] · [phone / WhatsApp]
 
 ---
 
@@ -64,9 +70,12 @@ Estimado equipo de SARASA / Freshara Agro Exports:
 
 Un cordial saludo desde Phuket, Tailandia.
 
-Me llamo Artem, fundador de HERD, un grupo multidisciplinar que trabaja en ciencia y finanzas, con
-amplia experiencia en comercio internacional (incluidos productos alimentarios y cárnicos).
-Actualmente estamos desarrollando activamente nuestros proyectos aquí, en Tailandia.
+Me llamo Artem Podelenko. Dirijo WET Solutions (wet-solutions.com), una empresa internacional de
+comercio B2B de alimentos que opera en toda Asia — sourcing de proveedores, operaciones de
+exportación, logística de cadena de frío y documentación de envíos de aves y otros productos
+alimentarios. Además, soy fundador de HERD Research (herdresearch.org), un laboratorio científico
+abierto con base aquí, en Phuket. En resumen, el comercio internacional de alimentos y su logística
+forman parte de mi trabajo diario.
 
 Les escribo no solo como empresario, sino como admirador de sus aceitunas desde hace muchos años.
 Soy de Rusia y conocí SARASA en las estanterías de nuestras tiendas en Kaliningrado. Años después
@@ -100,7 +109,10 @@ confirmada la rotación, idealmente como su socio exclusivo para Tailandia.
 Muchas gracias. Quedo a la espera de su respuesta.
 
 Un cordial saludo,
-Artem · Fundador, HERD · [email] · [teléfono] · [web]
+Artem Podelenko
+WET Solutions Limited (Hong Kong) — wet-solutions.com
+HERD Research — herdresearch.org
+[email] · [teléfono / WhatsApp]
 
 ---
 
