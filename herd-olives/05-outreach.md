@@ -1,6 +1,7 @@
 # 05 — Аутрич: RFQ, питч байеру, контакты
 
 > Файлы отправляй со своей почты. Агент в облаке письма НЕ отправляет.
+> Подставь: имя/компанию/сайт/телефон; при необходимости поправь название компании (HERD).
 
 ## Контакты производителя
 - **Aceitunas Sarasa** (историч.): info@aceitunas-sarasa.com · +34 948 674 064 · aceitunassarasa.es
@@ -8,16 +9,31 @@
   commercial@fresharapicklz.com · +91 44 4357 0138 · fresharaagroexports.com
 - Слать **на оба адреса** (переходный период).
 
-## RFQ — English (ready to send)
-**Subject:** Distribution / import inquiry — SARASA olives for Thailand
+---
 
-Dear Sarasa / Freshara Agro Exports export team,
+## RFQ — English (personal, ready to send)
+**Subject:** From a long-time admirer in Phuket — bringing SARASA olives to Thailand
 
-We are a Singapore-based trading company evaluating the import and distribution of your SARASA
-olives (Hechizos del Sur, La Picantona, Morenas del Sur) into Thailand, targeting premium retail
-(Villa Market, Gourmet Market, Tops) and HORECA.
+Dear SARASA / Freshara Agro Exports team,
 
-Could you please share, for the 0.37 L can and other retail formats:
+Warm greetings from Phuket, Thailand.
+
+My name is Artem, founder of HERD — a multi-disciplinary group working across science and finance,
+with extensive experience in international trade (including food and meat products). We are now
+actively building our ventures here in Thailand.
+
+I write to you not only as a businessman, but as a long-time fan of your olives. I am originally
+from Russia, and I first came to know SARASA on the shelves of our stores in Kaliningrad. Years
+later I found your olives again in Kuala Lumpur. When I moved to Phuket about a year and a half ago,
+I was genuinely surprised — and a little disappointed — that SARASA is nowhere to be found in
+Thailand. I had grown used to your olives, and I truly love them.
+
+That surprise turned into an idea. Honestly, the olive selection here is poor: Phuket and Thailand
+are home to a large community of expats and wine lovers, yet good olives are scarce and sold at very
+high prices. I would like to change that — by bringing SARASA to the local premium chains (Tops,
+Villa Market, Gourmet Market) and to HORECA.
+
+To explore this properly, could you please share, for the 0.37 L can and other retail formats:
 1. EXW/FOB price list and current availability;
 2. Minimum order quantity (and whether mixed pallets / LCL are possible for a first trial order);
 3. Shelf life and storage conditions;
@@ -31,22 +47,39 @@ Could you please share, for the 0.37 L can and other retail formats:
    us, including our importer details) to each can before shipping, so the goods are compliant at
    Thai customs entry? If yes, what is the cost/lead time and minimum quantity per SKU?
 
-We plan a trial shipment now and a container-scale program if sell-through is confirmed, ideally
-under an exclusive Thailand distribution arrangement.
+I would be glad to start with a trial shipment now and scale to container volumes once sell-through
+is proven — ideally as your exclusive partner for Thailand.
 
-Best regards,
-[Name] · [Company, website] · [Phone]
+Thank you, and I look forward to hearing from you.
 
-## RFQ — Español (listo para enviar)
-**Asunto:** Consulta de importación / distribución — aceitunas SARASA para Tailandia
+Warm regards,
+Artem · Founder, HERD · [email] · [phone] · [website]
 
-Estimado equipo de exportación de Sarasa / Freshara Agro Exports:
+---
 
-Somos una empresa comercial con sede en Singapur y estamos evaluando la importación y distribución
-de sus aceitunas SARASA (Hechizos del Sur, La Picantona, Morenas del Sur) en Tailandia, para retail
-premium (Villa Market, Gourmet Market, Tops) y HORECA.
+## RFQ — Español (personal, listo para enviar)
+**Asunto:** Un admirador desde Phuket — llevar las aceitunas SARASA a Tailandia
 
-¿Podrían facilitarnos, para la lata de 0,37 L y otros formatos de retail?:
+Estimado equipo de SARASA / Freshara Agro Exports:
+
+Un cordial saludo desde Phuket, Tailandia.
+
+Me llamo Artem, fundador de HERD, un grupo multidisciplinar que trabaja en ciencia y finanzas, con
+amplia experiencia en comercio internacional (incluidos productos alimentarios y cárnicos).
+Actualmente estamos desarrollando activamente nuestros proyectos aquí, en Tailandia.
+
+Les escribo no solo como empresario, sino como admirador de sus aceitunas desde hace muchos años.
+Soy de Rusia y conocí SARASA en las estanterías de nuestras tiendas en Kaliningrado. Años después
+volví a encontrar sus aceitunas en Kuala Lumpur. Cuando me mudé a Phuket hace aproximadamente año y
+medio, me sorprendió —y me decepcionó un poco— que SARASA no se encuentre en Tailandia. Me había
+acostumbrado a sus aceitunas y realmente me encantan.
+
+Esa sorpresa se convirtió en una idea. Con sinceridad, aquí la oferta de aceitunas es pobre: Phuket
+y Tailandia tienen una gran comunidad de expatriados y amantes del buen vino, pero hay pocas
+aceitunas de calidad y se venden a precios muy altos. Me gustaría cambiar eso llevando SARASA a las
+cadenas premium locales (Tops, Villa Market, Gourmet Market) y al canal HORECA.
+
+Para estudiarlo bien, ¿podrían facilitarnos, para la lata de 0,37 L y otros formatos de retail?:
 1. Lista de precios EXW/FOB y disponibilidad actual;
 2. Pedido mínimo (y si es posible palés mixtos / grupaje LCL para un primer pedido de prueba);
 3. Vida útil y condiciones de almacenamiento;
@@ -61,11 +94,15 @@ premium (Villa Market, Gourmet Market, Tops) y HORECA.
    envío, para que la mercancía sea conforme en la aduana tailandesa? Si es así, ¿coste/plazo y
    cantidad mínima por referencia?
 
-Planeamos un envío de prueba ahora y un programa a escala de contenedor si se confirma la rotación,
-idealmente en régimen de distribución exclusiva para Tailandia.
+Con gusto empezaría con un envío de prueba ahora y escalaría a volúmenes de contenedor una vez
+confirmada la rotación, idealmente como su socio exclusivo para Tailandia.
+
+Muchas gracias. Quedo a la espera de su respuesta.
 
 Un cordial saludo,
-[Nombre] · [Empresa, web] · [Teléfono]
+Artem · Fundador, HERD · [email] · [teléfono] · [web]
+
+---
 
 ## Питч байеру (Villa / Gourmet / Tops / HORECA) — one-liner
 «Authentic Andalusian *aliñada* Verdial olives (brand SARASA, Spain) — a seasoned, cracked-style
