@@ -4,6 +4,12 @@
 > Подставь: email + телефон/WhatsApp. Торговое лицо сделки = **WET Solutions Limited (Гонконг)** —
 > оно и есть контрагент/покупатель; HERD Research упомянут как научный проект. Ссылки уже вставлены.
 
+## Landing page (для письма / звонка другу)
+- **Файл:** `wet-olives-thailand.html` (корень репозитория)
+- **Идеальный URL в письме:** https://wet-solutions.com/olives-thailand.html — загрузить файл на хостинг WET Solutions (переименовать при загрузке в `olives-thailand.html`)
+- **Временный URL (если деплой из WEGC на main):** https://wegc.fund/wet-olives-thailand.html
+- В письме добавить строку: *For more about our Thailand distribution plan: [link]*
+
 ## Контакты производителя
 - **Aceitunas Sarasa** (историч.): info@aceitunas-sarasa.com · +34 948 674 064 · aceitunassarasa.es
 - **Freshara Agro Exports Ltd** (новый владелец): cs@fresharaagroexports.com ·
@@ -35,6 +41,9 @@ That surprise turned into an idea. Honestly, the olive selection here is poor: P
 are home to a large community of expats and wine lovers, yet good olives are scarce and sold at very
 high prices. I would like to change that — by bringing SARASA to the local premium chains (Tops,
 Villa Market, Gourmet Market) and to HORECA.
+
+More about our Thailand distribution plan: https://wet-solutions.com/olives-thailand.html
+(overview, company details and product lines)
 
 To explore this properly, could you please share, for the 0.37 L can and other retail formats:
 1. EXW/FOB price list and current availability;
@@ -87,6 +96,8 @@ Esa sorpresa se convirtió en una idea. Con sinceridad, aquí la oferta de aceit
 y Tailandia tienen una gran comunidad de expatriados y amantes del buen vino, pero hay pocas
 aceitunas de calidad y se venden a precios muy altos. Me gustaría cambiar eso llevando SARASA a las
 cadenas premium locales (Tops, Villa Market, Gourmet Market) y al canal HORECA.
+
+Más información sobre nuestro plan de distribución en Tailandia: https://wet-solutions.com/olives-thailand.html
 
 Para estudiarlo bien, ¿podrían facilitarnos, para la lata de 0,37 L y otros formatos de retail?:
 1. Lista de precios EXW/FOB y disponibilidad actual;
