@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Калькулятор доходности недвижимости на Пхукете · чистая доходность с учётом простоя, налогов и leasehold · WEGC</title>
-<meta name="description" content="Посчитайте чистую доходность и окупаемость квартиры или виллы на Пхукете: расходы на входе, простой, комиссия управляющей, maintenance, налог на землю и строения, налог на доход и срок leasehold. Цены и площади подставляются из паспортов проектов WEGC."/>
+<meta name="description" content="Посчитайте чистую доходность и окупаемость квартиры или виллы на Пхукете: расходы на входе, простой, комиссия управляющей, maintenance, налог на землю и строения и налог на доход по реальной прогрессивной шкале Таиланда с вычетом 30%. Цены и площади подставляются из паспортов проектов WEGC."/>
 <meta name="robots" content="index,follow"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Калькулятор чистой доходности недвижимости Пхукета · WEGC"/>
@@ -25,7 +25,7 @@
       {"@type":"ListItem","position":1,"name":"Главная","item":"https://wegc.fund/ru/"},
       {"@type":"ListItem","position":2,"name":"Калькулятор доходности","item":"https://wegc.fund/ru/dohodnost-calculator.html"}
     ]},
-    {"@type":"WebApplication","@id":"https://wegc.fund/ru/dohodnost-calculator.html#calculator","name":"Калькулятор чистой доходности недвижимости на Пхукете","url":"https://wegc.fund/ru/dohodnost-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","inLanguage":"ru","description":"Расчёт чистой доходности, валовой доходности и срока окупаемости объекта на Пхукете с учётом расходов на входе, простоя, комиссии управляющей компании, maintenance, налога на землю и строения, налога на доход и остатка срока leasehold.","offers":{"@type":"Offer","price":"0","priceCurrency":"THB"},"featureList":["Подстановка цены и площади из паспортов проектов","Годовой контракт и краткосрочная аренда","Учёт простоя и вакантности","Налог на землю и строения","Резерв на ремонт и замену мебели","Анализ окупаемости в пределах срока leasehold","Стресс-тест на падение арендной ставки"],"publisher":{"@type":"RealEstateAgent","@id":"https://wegc.fund/#agent"}},
+    {"@type":"WebApplication","@id":"https://wegc.fund/ru/dohodnost-calculator.html#calculator","name":"Калькулятор чистой доходности недвижимости на Пхукете","url":"https://wegc.fund/ru/dohodnost-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","inLanguage":"ru","description":"Расчёт чистой доходности, валовой доходности и срока окупаемости объекта на Пхукете с учётом расходов на входе, простоя, комиссии управляющей компании, maintenance, налога на землю и строения, налога на доход и остатка срока leasehold.","offers":{"@type":"Offer","price":"0","priceCurrency":"THB"},"featureList":["Подстановка цены и площади из паспортов проектов","Годовой контракт и краткосрочная аренда","Учёт простоя и вакантности","Налог на доход по прогрессивной шкале Таиланда со стандартным вычетом 30%","Налог на землю и строения","Резерв на ремонт и замену мебели","Анализ окупаемости в пределах срока leasehold","Стресс-тест на падение арендной ставки"],"publisher":{"@type":"RealEstateAgent","@id":"https://wegc.fund/#agent"}},
     {"@type":"WebPage","@id":"https://wegc.fund/ru/dohodnost-calculator.html","url":"https://wegc.fund/ru/dohodnost-calculator.html","name":"Калькулятор доходности недвижимости на Пхукете","inLanguage":"ru","isPartOf":{"@type":"WebSite","@id":"https://wegc.fund/#website"}}
   ]
 }
@@ -39,7 +39,8 @@
     {"@type":"Question","name":"Чем чистая доходность отличается от валовой?","acceptedAnswer":{"@type":"Answer","text":"Валовая доходность — это годовая арендная плата, поделённая на цену объекта. Она не учитывает ничего из того, что реально уменьшает доход собственника: месяцы простоя между арендаторами, комиссию управляющей компании или агента, maintenance-взнос кондоминиума, налог на землю и строения, страхование, износ мебели и налог на доход. На Пхукете разница между валовой и чистой доходностью обычно составляет от 2 до 4 процентных пунктов. Именно чистая доходность показывает, что фактически останется у собственника."}},
     {"@type":"Question","name":"Какие расходы возникают при покупке недвижимости на Пхукете?","acceptedAnswer":{"@type":"Answer","text":"Помимо цены юнита обычно оплачиваются регистрационные сборы (для leasehold — регистрация права аренды, для freehold — сбор за перевод права собственности, который часто делится с застройщиком), единоразовый взнос в резервный фонд кондоминиума (sinking fund) из расчёта за квадратный метр, подключение счётчиков воды и электричества, а также мебель и оснащение, если юнит сдаётся в аренду. Все эти суммы входят в реальную стоимость входа, и доходность корректно считать именно от неё, а не от одной цены юнита."}},
     {"@type":"Question","name":"Почему для leasehold важен срок окупаемости?","acceptedAnswer":{"@type":"Answer","text":"Leasehold — это право аренды на конечный срок, типично 30 лет с возможностью продления по условиям договора. Доход от объекта поступает только в пределах этого срока, поэтому окупаемость надо сопоставлять с остатком срока: окупаемость в 12 лет из 30 означает, что около 40% срока уходит на возврат вложенного, а оставшиеся годы формируют доход. Если расчётная окупаемость приближается к сроку договора, экономика объекта как источника дохода становится крайне чувствительной к простою и падению ставки. Калькулятор показывает это соотношение отдельным блоком."}},
-    {"@type":"Question","name":"Как считается налог на доход от аренды в Таиланде?","acceptedAnswer":{"@type":"Answer","text":"Режим зависит от того, кто получает доход, налогового резидентства и структуры владения. Для физического лица доход от сдачи недвижимости в аренду в Таиланде может учитываться с применением стандартного вычета в размере 30% от полученной суммы с последующим применением прогрессивной шкалы; при выплатах в адрес нерезидента может применяться удержание у источника. Калькулятор даёт несколько упрощённых режимов, чтобы вы увидели чувствительность результата к налогу, но фактическая ставка определяется вашей персональной ситуацией. Это не налоговая консультация — расчёт по вашему случаю нужно подтвердить у налогового консультанта в Таиланде и в стране вашего резидентства."}},
+    {"@type":"Question","name":"Как считается налог на доход от аренды в Таиланде?","acceptedAnswer":{"@type":"Answer","text":"Аренда недвижимости — доход по статье 40(5) Налогового кодекса Таиланда. Из валовой арендной платы вычитается стандартный вычет 30% для строений (либо фактические расходы, если они подтверждены документами), затем личная льгота налогоплательщика 60 000 THB, и к остатку применяется прогрессивная шкала: до 150 000 THB — 0%, далее ступени 5%, 10%, 15%, 20%, 25%, 30% и 35% свыше 5 млн THB. Отдельно действует минимальный налог 0,5% от валового дохода, но только если он превышает налог по шкале и составляет не менее 5 000 THB — то есть при выручке от 1 млн THB в год. Калькулятор считает именно так и показывает эффективную ставку к валовой выручке."}},
+    {"@type":"Question","name":"Правда ли, что нерезидент платит с аренды 15%?","acceptedAnswer":{"@type":"Answer","text":"Нет, это распространённая ошибка. Ставки налога на доход в Таиланде одинаковы для резидентов и нерезидентов: прогрессивная шкала от 0% до 35%, тот же стандартный вычет 30% и та же личная льгота. Цифра 15% — это ставка удержания у источника по статье 50(3), которую удерживает арендатор-юридическое лицо при выплате аренды нерезиденту. Удержание не является итоговым налогом: оно засчитывается против начисленного по шкале и при обычных суммах аренды почти всегда возвращается переплатой. При валовой аренде 1 000 000 THB в год налог по шкале составит 48 500 THB, тогда как удержание 15% даст 150 000 THB, то есть свыше 100 000 THB подлежат возврату по итогам декларации."}},
     {"@type":"Question","name":"Откуда берутся цены и площади в калькуляторе?","acceptedAnswer":{"@type":"Answer","text":"Цена «от» и площадь стартового юнита подставляются из паспортов проектов, с которыми WEGC работает по прямому договору с застройщиком. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, они не являются гарантией и обязательно требуют проверки по конкретному юниту: этаж, вид, корпус и меблировка меняют ставку существенно. Мы можем предоставить расчёт по вашему юниту с фактическими цифрами из договора и актуальным арендным анализом."}}
   ]
 }
@@ -163,6 +164,15 @@ section.s.cream{background:var(--bg-cream)}
 .y-seg input:checked+.y-segbox{border-color:var(--gold);background:rgba(160,129,86,.05);box-shadow:inset 0 0 0 1px var(--gold)}
 .y-segbox{display:block;border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;transition:all .15s ease;background:#fff}
 .y-segbox:hover{border-color:#cbd5e1}
+
+/* effective tax rate readout */
+.y-effrate{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:var(--bg-cream);border:1px solid var(--bg-cream-2);border-radius:var(--radius);padding:11px 14px}
+.y-effrate b{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;color:var(--gold);line-height:1}
+.y-effrate span{font-size:11.5px;color:var(--muted);line-height:1.45}
+
+/* withholding note */
+.y-wht{font-size:11.5px;color:var(--body);line-height:1.65;background:var(--bg-soft);border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:12px 15px;margin-bottom:16px}
+.y-wht b{color:var(--ink);font-weight:600}
 
 /* advanced toggle */
 .y-adv{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg-soft)}
@@ -355,11 +365,11 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
           <div class="y-two" style="margin-top:16px">
             <div class="y-field">
               <label for="yPrice">Цена юнита</label>
-              <span class="y-unit"><input id="yPrice" type="number" inputmode="numeric" min="0" step="100000" value="4780000"/ autocomplete="off"><span>฿</span></span>
+              <span class="y-unit"><input id="yPrice" type="number" inputmode="numeric" min="0" step="100000" value="4780000" autocomplete="off"/><span>฿</span></span>
             </div>
             <div class="y-field">
               <label for="yArea">Площадь</label>
-              <span class="y-unit"><input id="yArea" type="number" inputmode="numeric" min="1" step="1" value="41"/ autocomplete="off"><span>м²</span></span>
+              <span class="y-unit"><input id="yArea" type="number" inputmode="numeric" min="1" step="1" value="41" autocomplete="off"/><span>м²</span></span>
             </div>
           </div>
           <div class="y-two">
@@ -372,7 +382,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
             </div>
             <div class="y-field" id="yLeaseWrap">
               <label for="yLeaseTerm">Срок leasehold</label>
-              <span class="y-unit"><input id="yLeaseTerm" type="number" inputmode="numeric" min="1" max="90" step="1" value="30"/ autocomplete="off"><span>лет</span></span>
+              <span class="y-unit"><input id="yLeaseTerm" type="number" inputmode="numeric" min="1" max="90" step="1" value="30" autocomplete="off"/><span>лет</span></span>
             </div>
           </div>
         </div>
@@ -389,22 +399,22 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
             <div class="y-adv-body">
               <div class="y-field">
                 <label for="yRegPct">Регистрационные сборы, % от цены</label>
-                <span class="y-unit"><input id="yRegPct" type="number" inputmode="decimal" min="0" max="10" step="0.1" value="1.1"/ autocomplete="off"><span>%</span></span>
+                <span class="y-unit"><input id="yRegPct" type="number" inputmode="decimal" min="0" max="10" step="0.1" value="1.1" autocomplete="off"/><span>%</span></span>
                 <span class="y-hint">Leasehold — регистрация права аренды ≈1,1%. Freehold — сбор за перевод права 2%, обычно делится с застройщиком, поэтому ≈1%.</span>
               </div>
               <div class="y-field">
                 <label for="ySink">Sinking fund, разово за м²</label>
-                <span class="y-unit"><input id="ySink" type="number" inputmode="numeric" min="0" step="50" value="600"/ autocomplete="off"><span>฿/м²</span></span>
+                <span class="y-unit"><input id="ySink" type="number" inputmode="numeric" min="0" step="50" value="600" autocomplete="off"/><span>฿/м²</span></span>
                 <span class="y-hint">Единоразовый взнос в резервный фонд кондоминиума при передаче.</span>
               </div>
               <div class="y-field">
                 <label for="yFurn">Мебель и оснащение, за м²</label>
-                <span class="y-unit"><input id="yFurn" type="number" inputmode="numeric" min="0" step="500" value="8000"/ autocomplete="off"><span>฿/м²</span></span>
+                <span class="y-unit"><input id="yFurn" type="number" inputmode="numeric" min="0" step="500" value="8000" autocomplete="off"/><span>฿/м²</span></span>
                 <span class="y-hint">Если юнит сдаётся в аренду, без меблировки ставка будет существенно ниже. Поставьте 0, если пакет уже включён застройщиком.</span>
               </div>
               <div class="y-field" style="margin-bottom:0">
                 <label for="yOther">Прочее разово — счётчики, юрист, перевод</label>
-                <span class="y-unit"><input id="yOther" type="number" inputmode="numeric" min="0" step="5000" value="60000"/ autocomplete="off"><span>฿</span></span>
+                <span class="y-unit"><input id="yOther" type="number" inputmode="numeric" min="0" step="5000" value="60000" autocomplete="off"/><span>฿</span></span>
               </div>
             </div>
           </details>
@@ -417,24 +427,24 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
             <span class="h">Сценарий сдачи</span>
           </div>
           <div class="y-seg two" style="margin-bottom:18px">
-            <label><input type="radio" name="yMode" value="long" checked/ autocomplete="off"><span class="y-segbox"><b>Годовой контракт</b><small>Фиксированная ставка, длинный арендатор</small></span></label>
-            <label><input type="radio" name="yMode" value="short"/ autocomplete="off"><span class="y-segbox"><b>Краткосрочная</b><small>Суточная ставка и загрузка</small></span></label>
+            <label><input type="radio" name="yMode" value="long" checked autocomplete="off"/><span class="y-segbox"><b>Годовой контракт</b><small>Фиксированная ставка, длинный арендатор</small></span></label>
+            <label><input type="radio" name="yMode" value="short" autocomplete="off"/><span class="y-segbox"><b>Краткосрочная</b><small>Суточная ставка и загрузка</small></span></label>
           </div>
 
           <div id="yLongBox">
             <div class="y-two">
               <div class="y-field">
                 <label for="yRent">Ставка в месяц</label>
-                <span class="y-unit"><input id="yRent" type="number" inputmode="numeric" min="0" step="1000" value="34000"/ autocomplete="off"><span>฿</span></span>
+                <span class="y-unit"><input id="yRent" type="number" inputmode="numeric" min="0" step="1000" value="34000" autocomplete="off"/><span>฿</span></span>
               </div>
               <div class="y-field">
                 <label for="yVac">Простой в году</label>
-                <span class="y-unit"><input id="yVac" type="number" inputmode="decimal" min="0" max="12" step="0.5" value="1"/ autocomplete="off"><span>мес.</span></span>
+                <span class="y-unit"><input id="yVac" type="number" inputmode="decimal" min="0" max="12" step="0.5" value="1" autocomplete="off"/><span>мес.</span></span>
               </div>
             </div>
             <div class="y-field">
               <label for="yAgent">Комиссия агента за поиск арендатора</label>
-              <span class="y-unit"><input id="yAgent" type="number" inputmode="decimal" min="0" max="3" step="0.5" value="1"/ autocomplete="off"><span>мес.</span></span>
+              <span class="y-unit"><input id="yAgent" type="number" inputmode="decimal" min="0" max="3" step="0.5" value="1" autocomplete="off"/><span>мес.</span></span>
               <span class="y-hint">По годовым контрактам на Пхукете обычно одна месячная ставка за каждую новую сделку.</span>
             </div>
           </div>
@@ -443,16 +453,16 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
             <div class="y-two">
               <div class="y-field">
                 <label for="yAdr">Ставка за ночь</label>
-                <span class="y-unit"><input id="yAdr" type="number" inputmode="numeric" min="0" step="100" value="2500"/ autocomplete="off"><span>฿</span></span>
+                <span class="y-unit"><input id="yAdr" type="number" inputmode="numeric" min="0" step="100" value="2500" autocomplete="off"/><span>฿</span></span>
               </div>
               <div class="y-field">
                 <label for="yOcc">Загрузка за год</label>
-                <span class="y-unit"><input id="yOcc" type="number" inputmode="numeric" min="0" max="100" step="1" value="70"/ autocomplete="off"><span>%</span></span>
+                <span class="y-unit"><input id="yOcc" type="number" inputmode="numeric" min="0" max="100" step="1" value="70" autocomplete="off"/><span>%</span></span>
               </div>
             </div>
             <div class="y-field">
               <label for="yMgmt">Комиссия управляющей компании</label>
-              <span class="y-unit"><input id="yMgmt" type="number" inputmode="numeric" min="0" max="60" step="1" value="25"/ autocomplete="off"><span>%</span></span>
+              <span class="y-unit"><input id="yMgmt" type="number" inputmode="numeric" min="0" max="60" step="1" value="25" autocomplete="off"/><span>%</span></span>
               <span class="y-hint">Управление краткосрочной арендой на Пхукете обычно 20–30% от выручки. В программах застройщика условия фиксируются в договоре.</span>
             </div>
           </div>
@@ -465,39 +475,56 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
             <span class="h" id="ySumOpex">—</span>
           </div>
           <div class="y-field">
-            <label for="yTaxMode">Режим налога на доход</label>
+            <label for="yTaxMode">Налог на доход от аренды</label>
             <select id="yTaxMode" autocomplete="off">
-              <option value="pit" selected>Таиланд, физлицо — вычет 30%, затем ставка</option>
-              <option value="flat5">Упрощённо — 5% от дохода после расходов</option>
-              <option value="nr15">Нерезидент — 15% с валовой выручки</option>
+              <option value="std" selected>Таиланд, физлицо — вычет 30% и шкала</option>
+              <option value="actual">Таиланд, физлицо — вычет по фактическим расходам</option>
               <option value="none">Без налога — до налогообложения</option>
             </select>
+            <span class="y-hint" id="yTaxHint">Шкала считается по закону: из валовой аренды вычитается 30% (стандартный вычет для строений), затем личная льгота, дальше прогрессивные ступени от 0% до 35%. Ставка одинаковая для резидентов и нерезидентов.</span>
           </div>
-          <div class="y-field" id="yPitWrap">
-            <label for="yPitRate">Ставка после вычета</label>
-            <span class="y-unit"><input id="yPitRate" type="number" inputmode="numeric" min="0" max="40" step="1" value="5"/ autocomplete="off"><span>%</span></span>
-            <span class="y-hint">Шкала Таиланда прогрессивная: первые 150 тыс. ฿ дохода не облагаются, далее 5%, 10%, 15% и выше по мере роста базы. Для одного юнита база обычно попадает в нижние ступени — поэтому по умолчанию 5%. Если у вас несколько объектов или иной доход в Таиланде, ставка будет выше.</span>
+          <div class="y-field" id="yTaxRateOut">
+            <span class="y-lbl">Эффективная ставка к валовой выручке</span>
+            <div class="y-effrate"><b id="yEffRate">—</b><span id="yEffNote">—</span></div>
+          </div>
+          <details class="y-adv" style="margin-bottom:16px">
+            <summary><span>Личная льгота и прочий доход в Таиланде</span><span class="sum"><span class="chev">+</span></span></summary>
+            <div class="y-adv-body">
+              <div class="y-field">
+                <label for="yAllow">Личная льгота за год</label>
+                <span class="y-unit"><input id="yAllow" type="number" inputmode="numeric" min="0" step="10000" value="60000" autocomplete="off"/><span>฿</span></span>
+                <span class="y-hint">Базовая льгота налогоплательщика — 60 000 ฿. Доступна и нерезидентам. Если вы уже используете её на другой доход в Таиланде, поставьте 0.</span>
+              </div>
+              <div class="y-field" style="margin-bottom:0">
+                <label for="yOtherInc">Прочий налогооблагаемый доход в Таиланде</label>
+                <span class="y-unit"><input id="yOtherInc" type="number" inputmode="numeric" min="0" step="100000" value="0" autocomplete="off"/><span>฿/год</span></span>
+                <span class="y-hint">Аренда суммируется с остальным тайским доходом, поэтому ставка на неё зависит от общей базы. Укажите прочий доход — и налог на аренду посчитается по её реальной, верхней ступени.</span>
+              </div>
+            </div>
+          </details>
+          <div class="y-wht">
+            <b>15% у источника — это не итоговый налог.</b> Если арендатор — тайская компания и арендодатель нерезидент, она удерживает 15% с аренды по ст. 50(3) Налогового кодекса. Это аванс: он засчитывается против начисленного налога, и при обычной ставке по шкале почти всегда возвращается переплатой. Итоговая нагрузка — та, что посчитана выше.
           </div>
           <details class="y-adv">
             <summary><span>Maintenance, налог на имущество, резерв</span><span class="sum"><span class="chev">+</span></span></summary>
             <div class="y-adv-body">
               <div class="y-field">
                 <label for="yMaint">Maintenance — содержание, за м² в месяц</label>
-                <span class="y-unit"><input id="yMaint" type="number" inputmode="numeric" min="0" step="5" value="60"/ autocomplete="off"><span>฿/м²</span></span>
+                <span class="y-unit"><input id="yMaint" type="number" inputmode="numeric" min="0" step="5" value="60" autocomplete="off"/><span>฿/м²</span></span>
                 <span class="y-hint">Взнос кондоминиума за общие зоны, бассейн, охрану и управление. Для вилл — взнос за содержание территории.</span>
               </div>
               <div class="y-field">
                 <label for="yPropTax">Налог на землю и строения, % в год</label>
-                <span class="y-unit"><input id="yPropTax" type="number" inputmode="decimal" min="0" max="2" step="0.01" value="0.03"/ autocomplete="off"><span>%</span></span>
+                <span class="y-unit"><input id="yPropTax" type="number" inputmode="decimal" min="0" max="2" step="0.01" value="0.03" autocomplete="off"/><span>%</span></span>
                 <span class="y-hint">Land and Building Tax. Для жилой недвижимости, сдаваемой в аренду, ставка невысокая, но она есть — в валовых расчётах её обычно забывают.</span>
               </div>
               <div class="y-field">
                 <label for="yIns">Страхование, в год</label>
-                <span class="y-unit"><input id="yIns" type="number" inputmode="numeric" min="0" step="1000" value="6000"/ autocomplete="off"><span>฿</span></span>
+                <span class="y-unit"><input id="yIns" type="number" inputmode="numeric" min="0" step="1000" value="6000" autocomplete="off"/><span>฿</span></span>
               </div>
               <div class="y-field" style="margin-bottom:0">
                 <label for="yCapex">Резерв на ремонт и замену мебели</label>
-                <span class="y-unit"><input id="yCapex" type="number" inputmode="numeric" min="0" max="30" step="1" value="5"/ autocomplete="off"><span>% выручки</span></span>
+                <span class="y-unit"><input id="yCapex" type="number" inputmode="numeric" min="0" max="30" step="1" value="5" autocomplete="off"/><span>% выручки</span></span>
                 <span class="y-hint">Мебель, техника и отделка изнашиваются — особенно в краткосрочной аренде. Без этого резерва доходность выглядит выше, чем окажется на практике.</span>
               </div>
             </div>
@@ -558,7 +585,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         </div>
 
         <div class="y-disc">
-          Расчёт носит справочный характер, не является публичной офертой, инвестиционным, налоговым или финансовым советом и не гарантирует доходность. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, а не обязательство WEGC: фактическая ставка зависит от корпуса, этажа, вида, меблировки и сезона. Налоговые режимы даны упрощённо, чтобы показать чувствительность результата; ваш фактический налог определяется персональной ситуацией и требует подтверждения у налогового консультанта в Таиланде и в стране резидентства.
+          Расчёт носит справочный характер, не является публичной офертой, инвестиционным, налоговым или финансовым советом и не гарантирует доходность. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, а не обязательство WEGC: фактическая ставка зависит от корпуса, этажа, вида, меблировки и сезона. Налог на доход считается по прогрессивной шкале Таиланда со стандартным вычетом 30% и личной льготой, но модель не учитывает всех персональных вычетов, двойного налогообложения и обязательств в стране вашего резидентства — фактический налог требует подтверждения у налогового консультанта.
         </div>
       </div>
     </div>
@@ -590,8 +617,8 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       </div>
       <div class="m-card">
         <div class="n">4</div>
-        <h3>Налог — с выбором режима</h3>
-        <p>Налог зависит от структуры владения и резидентства, поэтому одной цифры здесь быть не может. Мы даём несколько режимов, включая учёт стандартного вычета 30% для физлица в Таиланде, чтобы вы увидели, насколько результат чувствителен к налоговому решению.</p>
+        <h3>Налог — по шкале, а не «15% нерезиденту»</h3>
+        <p>Считаем как в законе: <code>(аренда − вычет 30% − льгота) → прогрессивная шкала 0–35%</code>, плюс минимум 0,5% от выручки, если он выше. Ставки Таиланда одинаковы для резидентов и нерезидентов. Часто встречающиеся «15% для нерезидента» — это удержание у источника по ст. 50(3), которое засчитывается против налога и обычно возвращается переплатой.</p>
       </div>
       <div class="m-card">
         <div class="n">5</div>
@@ -628,7 +655,11 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       </details>
       <details class="faq-item">
         <summary>Как считается налог на доход от аренды в Таиланде?<span class="faq-icon">+</span></summary>
-        <p>Режим зависит от того, кто получает доход, налогового резидентства и структуры владения. Для физического лица доход от сдачи недвижимости в аренду в Таиланде может учитываться с применением стандартного вычета в размере 30% от полученной суммы с последующим применением прогрессивной шкалы; при выплатах в адрес нерезидента может применяться удержание у источника. Калькулятор даёт несколько упрощённых режимов, чтобы вы увидели чувствительность результата к налогу, но фактическая ставка определяется вашей персональной ситуацией. Это не налоговая консультация — расчёт по вашему случаю нужно подтвердить у налогового консультанта в Таиланде и в стране вашего резидентства.</p>
+        <p>Аренда недвижимости — доход по статье 40(5) Налогового кодекса Таиланда. Из валовой арендной платы вычитается стандартный вычет 30% для строений (либо фактические расходы, если они подтверждены документами), затем личная льгота налогоплательщика 60 000 ฿, и к остатку применяется прогрессивная шкала: до 150 000 ฿ — 0%, далее ступени 5%, 10%, 15%, 20%, 25%, 30% и 35% свыше 5 млн ฿. Отдельно действует минимальный налог 0,5% от валового дохода, но только если он превышает налог по шкале и составляет не менее 5 000 ฿ — то есть при выручке от 1 млн ฿ в год. Калькулятор считает именно так и показывает эффективную ставку к валовой выручке.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Правда ли, что нерезидент платит с аренды 15%?<span class="faq-icon">+</span></summary>
+        <p>Нет — это самая частая ошибка в расчётах доходности. Ставки налога на доход в Таиланде одинаковы для резидентов и нерезидентов: прогрессивная шкала от 0% до 35%, тот же стандартный вычет 30% и та же личная льгота. Цифра 15% — это ставка удержания у источника по статье 50(3): её удерживает арендатор-юридическое лицо при выплате аренды нерезиденту. Удержание не является итоговым налогом, оно засчитывается против начисленного по шкале и при обычных суммах аренды почти всегда возвращается переплатой. Пример: при валовой аренде 1 000 000 ฿ в год налог по шкале составит 48 500 ฿, тогда как удержание 15% даст 150 000 ฿ — то есть свыше 100 000 ฿ подлежат возврату по итогам декларации. Расчёт доходности по «15% нерезиденту» занижает результат втрое по налогу.</p>
       </details>
       <details class="faq-item">
         <summary>Откуда берутся цены и площади в калькуляторе?<span class="faq-icon">+</span></summary>
@@ -757,7 +788,7 @@ window.WEGC_KIND_DEFAULTS={
     regPct:el('yRegPct'), sink:el('ySink'), furn:el('yFurn'), other:el('yOther'),
     rent:el('yRent'), vac:el('yVac'), agent:el('yAgent'),
     adr:el('yAdr'), occ:el('yOcc'), mgmt:el('yMgmt'),
-    taxMode:el('yTaxMode'), pitRate:el('yPitRate'), pitWrap:el('yPitWrap'),
+    taxMode:el('yTaxMode'), allow:el('yAllow'), otherInc:el('yOtherInc'),
     maint:el('yMaint'), propTax:el('yPropTax'), ins:el('yIns'), capex:el('yCapex')
   };
 
@@ -776,6 +807,28 @@ window.WEGC_KIND_DEFAULTS={
     if(v===Math.floor(v)){ if(i===1&&t!==11) w='год'; else if(i>=2&&i<=4&&(t<12||t>14)) w='года'; }
     else w='года';
     return v.toLocaleString('ru-RU')+' '+w;
+  }
+
+  /* Прогрессивная шкала НДФЛ Таиланда (ставки 2017 г. и далее).
+     Границы и накопленные суммы — Guide to ภ.ง.ด.94, Revenue Department, п. C.10. */
+  var PIT=[
+    [150000,0.00,0],
+    [300000,0.05,0],
+    [500000,0.10,7500],
+    [750000,0.15,27500],
+    [1000000,0.20,65000],
+    [2000000,0.25,115000],
+    [5000000,0.30,365000],
+    [Infinity,0.35,1265000]
+  ];
+  function pitScale(base){
+    if(base<=150000) return 0;
+    var lower=150000;
+    for(var i=1;i<PIT.length;i++){
+      if(base<=PIT[i][0]) return PIT[i][2] + (base-lower)*PIT[i][1];
+      lower=PIT[i][0];
+    }
+    return 0;
   }
 
   /* ── core model ──
@@ -806,10 +859,30 @@ window.WEGC_KIND_DEFAULTS={
     var opex    = maint + propTax + o.ins + capex;
 
     var beforeTax = gross - letting - opex;
-    var tax = 0;
-    if(o.taxMode==='pit')       tax = Math.max(0, gross*0.7) * o.pitRate/100;
-    else if(o.taxMode==='flat5')tax = Math.max(0, beforeTax) * 0.05;
-    else if(o.taxMode==='nr15') tax = gross * 0.15;
+
+    /* Налог на доход от аренды по Налоговому кодексу Таиланда.
+       Аренда строений — доход по ст. 40(5): стандартный вычет 30% либо фактические
+       расходы, затем личная льгота, затем прогрессивная шкала (ставки одинаковы для
+       резидентов и нерезидентов). Аренда суммируется с прочим тайским доходом,
+       поэтому берём предельный налог: налог с общей базы минус налог без аренды.
+       Отдельно применяется минимум 0,5% от валового дохода по ст. 40(5)-(8):
+       он действует, только если сам составляет не менее 5 000 ฿ и превышает налог
+       по шкале (Guide to ภ.ง.ด.94, п. C.11-C.12). */
+    var tax = 0, taxable = 0;
+    if(o.taxMode !== 'none'){
+      var deductible = (o.taxMode==='actual') ? (letting + opex) : gross*0.30;
+      var rentNet    = Math.max(0, gross - deductible);
+      taxable        = Math.max(0, rentNet + o.otherInc - o.allow);
+      var baseNoRent = Math.max(0, o.otherInc - o.allow);
+      var byScale    = Math.max(0, pitScale(taxable) - pitScale(baseNoRent));
+
+      var floor = 0;
+      if(gross >= 120000){
+        var half = gross * 0.005;
+        if(half >= 5000 && half > byScale) floor = half;
+      }
+      tax = Math.max(byScale, floor);
+    }
 
     var net = beforeTax - tax;
 
@@ -817,7 +890,8 @@ window.WEGC_KIND_DEFAULTS={
       base:base, entryExtra:entryExtra, gross:gross,
       letting:letting, lettingLabel:lettingLabel,
       maint:maint, propTax:propTax, ins:o.ins, capex:capex, opex:opex,
-      beforeTax:beforeTax, tax:tax, net:net,
+      beforeTax:beforeTax, tax:tax, taxable:taxable, net:net,
+      effTax: gross>0 ? tax/gross*100 : 0,
       grossYield: base>0 ? gross/base*100 : 0,
       netYield:   base>0 ? net/base*100   : 0,
       payback:    net>0  ? base/net       : Infinity
@@ -832,7 +906,7 @@ window.WEGC_KIND_DEFAULTS={
       mode: modeEl ? modeEl.value : 'long',
       rent:num('yRent'), vac:num('yVac'), agent:num('yAgent'),
       adr:num('yAdr'), occ:num('yOcc'), mgmt:num('yMgmt'),
-      taxMode:F.taxMode.value, pitRate:num('yPitRate'),
+      taxMode:F.taxMode.value, allow:num('yAllow'), otherInc:num('yOtherInc'),
       maint:num('yMaint'), propTax:num('yPropTax'), ins:num('yIns'), capex:num('yCapex')
     };
   }
@@ -885,11 +959,35 @@ window.WEGC_KIND_DEFAULTS={
     row('Налог на землю и строения', '− '+thb(r.propTax), 'neg');
     row('Страхование', '− '+thb(r.ins), 'neg');
     row('Резерв на износ и ремонт', '− '+thb(r.capex), 'neg');
-    var taxNote={pit:'налог: вычет 30%, ставка '+pct(o.pitRate),flat5:'налог 5% с дохода после расходов',nr15:'налог 15% с валовой выручки',none:'без налога'}[o.taxMode];
     row('Налог на доход', '− '+thb(r.tax), 'neg');
     row('Чистый доход за год', thb(r.net), 'sum');
-    rows+='<p style="font-size:11.5px;color:rgba(255,255,255,.45);margin-top:12px;line-height:1.6">Режим — '+taxNote+'. Площадь '+o.area+' м², maintenance '+o.maint+' ฿/м² в месяц.</p>';
+    var taxNote;
+    if(o.taxMode==='none'){
+      taxNote='Налог не считается — это результат до налогообложения.';
+    }else{
+      var ded=(o.taxMode==='actual')?'фактические расходы ('+thb(r.letting+r.opex)+')':'стандартный вычет 30% ('+thb(r.gross*0.3)+')';
+      taxNote='Налог: из валовой выручки вычтен '+ded+', затем личная льгота '+thb(o.allow)+
+        (o.otherInc>0?' и учтён прочий тайский доход '+thb(o.otherInc):'')+
+        '. Налогооблагаемая база — '+thb(r.taxable)+', налог по прогрессивной шкале — '+thb(r.tax)+
+        ', это '+(Math.round(r.effTax*10)/10).toLocaleString('ru-RU')+'% от валовой выручки.';
+    }
+    rows+='<p style="font-size:11.5px;color:rgba(255,255,255,.45);margin-top:12px;line-height:1.6">'+taxNote+' Площадь '+o.area+' м², maintenance '+o.maint+' ฿/м² в месяц.</p>';
     el('yBreakBody').innerHTML=rows;
+
+    /* эффективная ставка налога */
+    if(o.taxMode==='none'){
+      el('yEffRate').textContent='—';
+      el('yEffNote').textContent='режим «без налога»: показан результат до налогообложения';
+    }else{
+      el('yEffRate').textContent=(Math.round(r.effTax*10)/10).toLocaleString('ru-RU')+'%';
+      var note='база '+thb(r.taxable)+' → налог '+thb(r.tax)+' в год';
+      if(r.tax>0 && r.gross>=120000 && Math.abs(r.tax-r.gross*0.005)<1) note+=' · сработал минимум 0,5% от валовой выручки';
+      /* Вычет — это выбор налогоплательщика: подсказываем, какой из двух выгоднее. */
+      var stdDed=r.gross*0.30, actDed=r.letting+r.opex;
+      if(o.taxMode==='actual' && stdDed>actDed) note+=' · стандартный вычет 30% здесь выгоднее';
+      if(o.taxMode==='std'    && actDed>stdDed) note+=' · вычет по фактическим расходам здесь выгоднее';
+      el('yEffNote').textContent=note;
+    }
 
     /* stress test */
     var scen=[];
@@ -973,7 +1071,13 @@ window.WEGC_KIND_DEFAULTS={
     render();
   }
   function syncTax(){
-    F.pitWrap.style.display=(F.taxMode.value==='pit')?'':'none';
+    var m=F.taxMode.value;
+    el('yTaxHint').textContent = m==='actual'
+      ? 'Вместо стандартного вычета 30% из выручки вычитаются фактические расходы — комиссия, maintenance, налог на имущество, страхование и резерв. Законом это разрешено, но все расходы нужно подтверждать документами.'
+      : m==='none'
+      ? 'Налог не начисляется — режим для сравнения «до и после налогов».'
+      : 'Шкала считается по закону: из валовой аренды вычитается 30% (стандартный вычет для строений), затем личная льгота, дальше прогрессивные ступени от 0% до 35%. Ставка одинаковая для резидентов и нерезидентов.';
+    el('yTaxRateOut').style.display = m==='none' ? 'none' : '';
     render();
   }
   function syncStruct(){
@@ -990,7 +1094,7 @@ window.WEGC_KIND_DEFAULTS={
     r.addEventListener('change',syncMode);
   });
   ['yPrice','yArea','yLeaseTerm','yRegPct','ySink','yFurn','yOther','yRent','yVac','yAgent',
-   'yAdr','yOcc','yMgmt','yPitRate','yMaint','yPropTax','yIns','yCapex'].forEach(function(id){
+   'yAdr','yOcc','yMgmt','yAllow','yOtherInc','yMaint','yPropTax','yIns','yCapex'].forEach(function(id){
     var n=el(id); if(n) n.addEventListener('input',render);
   });
 
