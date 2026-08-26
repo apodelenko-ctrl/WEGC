@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Калькулятор доходности недвижимости на Пхукете · чистая доходность с учётом простоя, налогов и leasehold · WEGC</title>
+<meta name="description" content="Посчитайте чистую доходность и окупаемость квартиры или виллы на Пхукете: расходы на входе, простой, комиссия управляющей, maintenance, налог на землю и строения, налог на доход и срок leasehold. Цены и площади подставляются из паспортов проектов WEGC."/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Калькулятор чистой доходности недвижимости Пхукета · WEGC"/>
+<meta property="og:description" content="Не валовая, а чистая доходность: простой, управление, maintenance, налоги и остаток срока leasehold. Со стресс-тестом на падение ставки."/>
+<meta property="og:url" content="https://wegc.fund/ru/dohodnost-calculator.html"/>
+<meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
+<link rel="canonical" href="https://wegc.fund/ru/dohodnost-calculator.html"/>
+<link rel="alternate" hreflang="ru" href="https://wegc.fund/ru/dohodnost-calculator.html"/>
+<link rel="alternate" hreflang="x-default" href="https://wegc.fund/ru/dohodnost-calculator.html"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Главная","item":"https://wegc.fund/ru/"},
+      {"@type":"ListItem","position":2,"name":"Калькулятор доходности","item":"https://wegc.fund/ru/dohodnost-calculator.html"}
+    ]},
+    {"@type":"WebApplication","@id":"https://wegc.fund/ru/dohodnost-calculator.html#calculator","name":"Калькулятор чистой доходности недвижимости на Пхукете","url":"https://wegc.fund/ru/dohodnost-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","inLanguage":"ru","description":"Расчёт чистой доходности, валовой доходности и срока окупаемости объекта на Пхукете с учётом расходов на входе, простоя, комиссии управляющей компании, maintenance, налога на землю и строения, налога на доход и остатка срока leasehold.","offers":{"@type":"Offer","price":"0","priceCurrency":"THB"},"featureList":["Подстановка цены и площади из паспортов проектов","Годовой контракт и краткосрочная аренда","Учёт простоя и вакантности","Налог на землю и строения","Резерв на ремонт и замену мебели","Анализ окупаемости в пределах срока leasehold","Стресс-тест на падение арендной ставки"],"publisher":{"@type":"RealEstateAgent","@id":"https://wegc.fund/#agent"}},
+    {"@type":"WebPage","@id":"https://wegc.fund/ru/dohodnost-calculator.html","url":"https://wegc.fund/ru/dohodnost-calculator.html","name":"Калькулятор доходности недвижимости на Пхукете","inLanguage":"ru","isPartOf":{"@type":"WebSite","@id":"https://wegc.fund/#website"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "inLanguage":"ru",
+  "mainEntity":[
+    {"@type":"Question","name":"Чем чистая доходность отличается от валовой?","acceptedAnswer":{"@type":"Answer","text":"Валовая доходность — это годовая арендная плата, поделённая на цену объекта. Она не учитывает ничего из того, что реально уменьшает доход собственника: месяцы простоя между арендаторами, комиссию управляющей компании или агента, maintenance-взнос кондоминиума, налог на землю и строения, страхование, износ мебели и налог на доход. На Пхукете разница между валовой и чистой доходностью обычно составляет от 2 до 4 процентных пунктов. Именно чистая доходность показывает, что фактически останется у собственника."}},
+    {"@type":"Question","name":"Какие расходы возникают при покупке недвижимости на Пхукете?","acceptedAnswer":{"@type":"Answer","text":"Помимо цены юнита обычно оплачиваются регистрационные сборы (для leasehold — регистрация права аренды, для freehold — сбор за перевод права собственности, который часто делится с застройщиком), единоразовый взнос в резервный фонд кондоминиума (sinking fund) из расчёта за квадратный метр, подключение счётчиков воды и электричества, а также мебель и оснащение, если юнит сдаётся в аренду. Все эти суммы входят в реальную стоимость входа, и доходность корректно считать именно от неё, а не от одной цены юнита."}},
+    {"@type":"Question","name":"Почему для leasehold важен срок окупаемости?","acceptedAnswer":{"@type":"Answer","text":"Leasehold — это право аренды на конечный срок, типично 30 лет с возможностью продления по условиям договора. Доход от объекта поступает только в пределах этого срока, поэтому окупаемость надо сопоставлять с остатком срока: окупаемость в 12 лет из 30 означает, что около 40% срока уходит на возврат вложенного, а оставшиеся годы формируют доход. Если расчётная окупаемость приближается к сроку договора, экономика объекта как источника дохода становится крайне чувствительной к простою и падению ставки. Калькулятор показывает это соотношение отдельным блоком."}},
+    {"@type":"Question","name":"Как считается налог на доход от аренды в Таиланде?","acceptedAnswer":{"@type":"Answer","text":"Режим зависит от того, кто получает доход, налогового резидентства и структуры владения. Для физического лица доход от сдачи недвижимости в аренду в Таиланде может учитываться с применением стандартного вычета в размере 30% от полученной суммы с последующим применением прогрессивной шкалы; при выплатах в адрес нерезидента может применяться удержание у источника. Калькулятор даёт несколько упрощённых режимов, чтобы вы увидели чувствительность результата к налогу, но фактическая ставка определяется вашей персональной ситуацией. Это не налоговая консультация — расчёт по вашему случаю нужно подтвердить у налогового консультанта в Таиланде и в стране вашего резидентства."}},
+    {"@type":"Question","name":"Откуда берутся цены и площади в калькуляторе?","acceptedAnswer":{"@type":"Answer","text":"Цена «от» и площадь стартового юнита подставляются из паспортов проектов, с которыми WEGC работает по прямому договору с застройщиком. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, они не являются гарантией и обязательно требуют проверки по конкретному юниту: этаж, вид, корпус и меблировка меняют ставку существенно. Мы можем предоставить расчёт по вашему юниту с фактическими цифрами из договора и актуальным арендным анализом."}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109732633', 'ym');
+
+    ym(109732633, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109732633" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<style>
+:root{
+  --bg:#fff;--bg-soft:#f8fafc;--bg-cream:#fbfaf6;--bg-cream-2:#f3f0e8;--bg-dark:#0a0e1a;--bg-darker:#06080f;
+  --ink:#0f172a;--body:#334155;--muted:#64748b;--line:#e2e8f0;--line-soft:#f1f5f9;--line-dark:#1f2937;
+  --gold:#a08156;--gold-soft:#cfc4a2;--gold-bright:#d6b370;--red:#dc2626;--green:#0f766e;--radius:8px;--radius-lg:14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;opacity:0;transition:opacity .35s ease}
+body.page-ready{opacity:1}
+::selection{background:var(--gold);color:#fff}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3,h4{font-weight:300;letter-spacing:-.035em;line-height:1.08;color:var(--ink)}
+h1{font-size:clamp(2rem,5vw,3.6rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.8rem)}
+h3{font-size:1.25rem;font-weight:500;letter-spacing:-.02em}
+p{color:var(--body);line-height:1.7}
+.kicker{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:14px 26px;border-radius:var(--radius);cursor:pointer;border:none;text-decoration:none;transition:all .18s ease;white-space:nowrap}
+.btn-primary{background:var(--gold);color:#fff}
+.btn-primary:hover{background:#8c6e44;transform:translateY(-1px);box-shadow:0 8px 20px rgba(160,129,86,.32)}
+.btn-secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-secondary:hover{border-color:#cbd5e1;background:var(--bg-soft)}
+
+/* TOPBAR */
+#topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s ease,border-color .25s ease}
+#topbar.solid{background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom-color:var(--line)}
+.topbar-inner{max-width:1320px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.topbar-brand{display:flex;align-items:baseline;gap:14px;color:#fff;flex-shrink:0;min-width:0}
+.topbar-brand .name{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+#topbar.solid .topbar-brand,#topbar.solid .topbar-brand .name{color:var(--ink)}
+.topbar-nav{display:flex;align-items:center;gap:2px}
+.topbar-nav a{font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.78);padding:8px 11px;border-radius:6px;transition:color .15s ease,background .15s ease}
+.topbar-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .topbar-nav a{color:var(--muted)}
+#topbar.solid .topbar-nav a:hover{color:var(--ink);background:var(--bg-soft)}
+.topbar-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.topbar-cta{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:transparent;color:#fff;cursor:pointer;border:1px solid rgba(255,255,255,.4);padding:10px 18px;border-radius:6px;transition:all .15s ease}
+.topbar-cta:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .topbar-cta{color:var(--ink);border-color:var(--line)}
+#topbar.solid .topbar-cta:hover{border-color:#cbd5e1;background:var(--bg-soft)}
+@media(max-width:1080px){.topbar-nav{display:none}}
+
+/* HERO */
+.hero{position:relative;background:var(--bg-darker);padding:150px 32px 80px;color:#fff;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 25%,rgba(160,129,86,.18) 0%,transparent 55%),radial-gradient(circle at 86% 70%,rgba(37,99,235,.10) 0%,transparent 55%);pointer-events:none;z-index:2}
+.hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center}
+.hero-inner{position:relative;z-index:3;max-width:1240px;margin:0 auto}
+.hero h1{color:#fff;max-width:26ch;letter-spacing:-.045em;line-height:1.06;margin-bottom:20px}
+.hero h1 strong{font-weight:600;color:var(--gold-bright)}
+.hero-sub{color:rgba(255,255,255,.74);font-size:clamp(1rem,1.3vw,1.15rem);max-width:64ch;line-height:1.6;font-weight:300}
+.hero-flag{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:rgba(160,129,86,.18);border:1px solid rgba(160,129,86,.5);color:var(--gold-bright);margin-bottom:28px}
+.hero-flag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-bright);animation:pulse 2.4s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+section.s{padding:100px 0}
+section.s.cream{background:var(--bg-cream)}
+.s-head{margin-bottom:44px;max-width:800px}
+.s-head h2{margin-bottom:14px}
+.s-head p{font-size:17px;color:var(--muted)}
+
+/* ============ YIELD CALCULATOR (y-) ============ */
+.y-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.y-panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:8px 0 4px}
+.y-step{border-bottom:1px solid var(--line-soft);padding:22px 28px}
+.y-step:last-child{border-bottom:none}
+.y-step-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px}
+.y-step-head .t{font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.y-step-head .t i{font-style:normal;color:var(--gold);font-weight:700;margin-right:8px}
+.y-step-head .h{font-size:11.5px;color:var(--muted);text-align:right;line-height:1.4}
+.y-field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.y-field:last-child{margin-bottom:0}
+.y-field>label,.y-lbl{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.y-field select,.y-field input[type=number],.y-field input[type=text]{font-family:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line);padding:12px 14px;border-radius:var(--radius);outline:none;transition:border-color .15s ease;width:100%}
+.y-field select:focus,.y-field input:focus{border-color:var(--gold)}
+.y-hint{font-size:11.5px;color:var(--muted);line-height:1.5}
+.y-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.y-three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.y-unit{position:relative;display:block}
+.y-unit>input{padding-right:44px!important}
+.y-unit>span{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:12.5px;color:var(--muted);pointer-events:none;font-weight:500}
+
+/* project meta chips */
+.y-meta{display:none;grid-template-columns:1fr 1fr;gap:10px 14px;background:var(--bg-cream);border:1px solid var(--bg-cream-2);border-radius:var(--radius);padding:14px 16px;margin-bottom:16px}
+.y-meta.show{display:grid}
+.y-meta .l{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:2px}
+.y-meta .v{font-size:13.5px;font-weight:600;color:var(--ink)}
+.y-projlink{font-size:12.5px;font-weight:600;color:var(--gold);display:none;margin-top:2px}
+.y-projlink.show{display:inline-block}
+
+/* segmented control */
+.y-seg{display:grid;gap:10px}
+.y-seg.two{grid-template-columns:1fr 1fr}
+.y-seg label{display:block;cursor:pointer;position:relative}
+.y-seg input{position:absolute;opacity:0;pointer-events:none}
+.y-seg label b{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.y-seg label small{display:block;font-size:11px;color:var(--muted);line-height:1.4}
+.y-seg input:checked+.y-segbox{border-color:var(--gold);background:rgba(160,129,86,.05);box-shadow:inset 0 0 0 1px var(--gold)}
+.y-segbox{display:block;border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;transition:all .15s ease;background:#fff}
+.y-segbox:hover{border-color:#cbd5e1}
+
+/* advanced toggle */
+.y-adv{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg-soft)}
+.y-adv summary{list-style:none;cursor:pointer;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12.5px;font-weight:600;color:var(--ink)}
+.y-adv summary::-webkit-details-marker{display:none}
+.y-adv summary .sum{font-size:11.5px;color:var(--muted);font-weight:500}
+.y-adv summary .chev{color:var(--gold);font-size:15px;line-height:1}
+.y-adv[open] summary{border-bottom:1px solid var(--line)}
+.y-adv[open] summary .chev{transform:rotate(45deg)}
+.y-adv-body{padding:16px 15px;background:#fff}
+
+/* RESULT */
+.y-res{background:linear-gradient(180deg,#0a0e1a,#06080f);border:1px solid var(--line-dark);border-radius:var(--radius-lg);padding:32px 30px;color:#fff;position:relative;overflow:hidden}
+.y-res::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 0%,rgba(160,129,86,.20) 0%,transparent 60%);pointer-events:none}
+.y-res>*{position:relative}
+.y-res .cap{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:8px}
+.y-res h3{color:#fff;font-size:1.5rem;font-weight:300;letter-spacing:-.03em;margin-bottom:26px}
+.y-kpi{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;margin-bottom:26px}
+.y-kpi .k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px}
+.y-kpi .v{font-size:1.85rem;font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1.05}
+.y-kpi .v.big{color:var(--gold-bright)}
+.y-kpi .s{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4}
+
+/* lease band */
+.y-lease{border-radius:var(--radius);padding:16px 18px;margin-bottom:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.y-lease.warn{background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.45)}
+.y-lease .lt{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:7px}
+.y-lease.warn .lt{color:#fca5a5}
+.y-lease p{font-size:12.5px;color:rgba(255,255,255,.78);line-height:1.6;margin:0}
+.y-bar{height:5px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden;margin:10px 0 9px}
+.y-bar span{display:block;height:100%;background:var(--gold-bright);border-radius:99px;transition:width .3s ease}
+.y-lease.warn .y-bar span{background:#f87171}
+
+/* breakdown */
+.y-break{border-top:1px solid rgba(255,255,255,.12);margin-top:4px}
+.y-break summary{list-style:none;cursor:pointer;padding:16px 0 0;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--gold-bright)}
+.y-break summary::-webkit-details-marker{display:none}
+.y-break summary .chev{font-size:15px;line-height:1}
+.y-break[open] summary .chev{transform:rotate(45deg)}
+.y-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid rgba(255,255,255,.07);font-size:13px}
+.y-row:first-of-type{border-top:none;padding-top:14px}
+.y-row .k{color:rgba(255,255,255,.6)}
+.y-row .v{font-weight:600;color:#fff;text-align:right;white-space:nowrap}
+.y-row.neg .v{color:#fca5a5}
+.y-row.sum{border-top:1px solid rgba(255,255,255,.24);margin-top:5px;padding-top:12px}
+.y-row.sum .k{color:#fff;font-weight:600}
+.y-row.sum .v{color:var(--gold-bright);font-size:1.02rem}
+
+/* stress test */
+.y-stress{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 26px}
+.y-stress h4{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.y-stress .sh{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.y-scen{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-top:1px solid var(--line-soft)}
+.y-scen .n{font-size:13.5px;color:var(--ink);font-weight:500}
+.y-scen .n small{display:block;font-size:11.5px;color:var(--muted);font-weight:400;margin-top:2px}
+.y-scen .r{text-align:right;white-space:nowrap}
+.y-scen .r b{font-size:1.1rem;font-weight:700;letter-spacing:-.02em}
+.y-scen .r small{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.y-scen.base .r b{color:var(--ink)}
+.y-scen.ok .r b{color:var(--green)}
+.y-scen.bad .r b{color:var(--red)}
+
+.y-cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.y-disc{margin-top:26px;font-size:12px;color:var(--muted);line-height:1.7;padding:16px 20px;background:var(--bg-soft);border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0}
+
+/* METHOD */
+.m-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.m-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px 26px;min-width:0}
+.m-card .n{width:32px;height:32px;border-radius:50%;background:var(--bg-cream-2);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.m-card h3{font-size:1.08rem;font-weight:600;margin-bottom:10px}
+.m-card p{font-size:13.5px;line-height:1.7;color:var(--body)}
+.m-card code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:var(--bg-cream);border:1px solid var(--bg-cream-2);border-radius:5px;padding:2px 6px;color:var(--ink);overflow-wrap:anywhere}
+
+/* FAQ */
+.faq-list{max-width:880px;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;cursor:pointer}
+.faq-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:15.5px;font-weight:500;color:var(--ink);line-height:1.4}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-icon{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--muted);transition:all .2s ease}
+.faq-item[open] .faq-icon{transform:rotate(45deg);color:var(--gold);border-color:var(--gold)}
+.faq-item p{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--body);line-height:1.7}
+
+/* CTA */
+.cta-band{background:linear-gradient(180deg,#0a0e1a,#06080f);border-radius:var(--radius-lg);padding:54px 48px;color:#fff;position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 0%,rgba(160,129,86,.2) 0%,transparent 55%);pointer-events:none}
+.cta-band h2{color:#fff;font-size:clamp(1.5rem,2.6vw,2.1rem);max-width:26ch;position:relative}
+.cta-band h2 strong{color:var(--gold-bright);font-weight:500}
+.cta-band .acts{display:flex;gap:14px;flex-wrap:wrap;position:relative}
+
+/* FOOTER */
+footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px solid var(--line-dark)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:36px;align-items:start}
+.f-col h5{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.f-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.f-col li a{font-size:13px;color:#94a3b8;transition:color .15s ease}
+.f-col li a:hover{color:#fff}
+.f-col-brand .logo{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.f-col-brand p{font-size:13px;color:#94a3b8;line-height:1.7}
+.f-corpname{font-size:12.5px;color:#cbd5e1;font-weight:600;margin-bottom:6px}
+.f-meta{font-size:11.5px;color:#64748b;line-height:1.6;margin-bottom:10px}
+.f-channels a{font-size:12.5px;color:#94a3b8}
+.f-channels a:hover{color:#fff}
+.f-disclaimer{font-size:11.5px;color:#64748b;line-height:1.7;padding-top:26px;border-top:1px solid var(--line-dark)}
+.f-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11.5px;color:#64748b;padding-top:22px;margin-top:22px;border-top:1px solid var(--line-dark)}
+
+@media(max-width:1080px){
+  .y-grid{grid-template-columns:1fr}
+  .m-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media(max-width:720px){
+  .container{padding:0 20px}
+  .hero{padding:120px 20px 60px}
+  section.s{padding:64px 0}
+  .y-step{padding:20px 18px}
+  .y-res{padding:26px 20px}
+  .y-kpi{grid-template-columns:1fr 1fr;gap:18px 14px}
+  .y-kpi .v{font-size:1.5rem}
+  .y-three{grid-template-columns:1fr}
+  .y-seg.two{grid-template-columns:1fr}
+  .cta-band{padding:36px 24px}
+  .f-grid{grid-template-columns:1fr}
+  .topbar-inner{padding:14px 20px;gap:10px}
+  .topbar-brand .name{font-size:11px;letter-spacing:.09em}
+  .topbar-cta{padding:9px 13px;font-size:10px;letter-spacing:.1em}
+}
+</style>
+</head>
+<body>
+
+<header id="topbar">
+  <div class="topbar-inner">
+    <a href="/ru/" class="topbar-brand">
+      <span class="name">West East Gate Real Estate</span>
+    </a>
+    <nav class="topbar-nav">
+      <a href="/ru/#catalog">Каталог</a>
+      <a href="/ru/podbor.html">Подбор за 2 минуты</a>
+      <a href="/ru/rassrochka-calculator.html">Рассрочка 0%</a>
+      <a href="/ru/tseny.html">Цены 2026</a>
+      <a href="/ru/#contact">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <a href="/ru/#contact" class="topbar-cta">Купить</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true" style="background-image:linear-gradient(180deg,rgba(6,8,15,.92) 0%,rgba(6,8,15,.78) 50%,rgba(6,8,15,.94) 100%),url('/images/hero/hero-phuket-infinity-pool.jpg')"></div>
+  <div class="hero-inner">
+    <span class="hero-flag"><span class="dot"></span><span>Считает не валовую, а чистую доходность</span></span>
+    <h1>Калькулятор <strong>доходности</strong> недвижимости Пхукета</h1>
+    <p class="hero-sub">Валовая доходность в рекламе — это арендная ставка, поделённая на цену. Здесь считается то, что реально останется у собственника: после расходов на входе, простоя, управления, maintenance, налогов и с поправкой на срок leasehold. Цену и площадь можно подставить из паспорта любого нашего проекта.</p>
+  </div>
+</section>
+
+<section class="s cream" id="calc">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Интерактивный расчёт</span>
+      <h2>Что останется у собственника</h2>
+      <p>Выберите объект из нашего каталога или введите свои цифры. Все значения по умолчанию — ориентировочные рыночные уровни Пхукета, они меняются: правьте любое поле, результат пересчитывается сразу.</p>
+    </div>
+
+    <div class="y-grid">
+      <!-- ============ INPUTS ============ -->
+      <div class="y-panel">
+
+        <!-- STEP 1 -->
+        <div class="y-step">
+          <div class="y-step-head">
+            <span class="t"><i>1</i>Объект</span>
+            <span class="h">Из паспорта или свои цифры</span>
+          </div>
+          <div class="y-field">
+            <label for="yProject">Проект из каталога WEGC</label>
+            <select id="yProject" autocomplete="off"></select>
+            <span class="y-hint">Цена «от», площадь стартового юнита, район и структура владения подставятся из паспорта проекта.</span>
+          </div>
+          <div class="y-meta" id="yMeta">
+            <div><div class="l">Район</div><div class="v" id="yMetaDistrict">—</div></div>
+            <div><div class="l">Срок сдачи</div><div class="v" id="yMetaDelivery">—</div></div>
+            <div><div class="l">Тип</div><div class="v" id="yMetaKind">—</div></div>
+            <div><div class="l">Цена за м²</div><div class="v" id="yMetaPsm">—</div></div>
+          </div>
+          <a class="y-projlink" id="yProjLink" href="#">Открыть паспорт проекта →</a>
+          <div class="y-two" style="margin-top:16px">
+            <div class="y-field">
+              <label for="yPrice">Цена юнита</label>
+              <span class="y-unit"><input id="yPrice" type="number" inputmode="numeric" min="0" step="100000" value="4780000"/ autocomplete="off"><span>฿</span></span>
+            </div>
+            <div class="y-field">
+              <label for="yArea">Площадь</label>
+              <span class="y-unit"><input id="yArea" type="number" inputmode="numeric" min="1" step="1" value="41"/ autocomplete="off"><span>м²</span></span>
+            </div>
+          </div>
+          <div class="y-two">
+            <div class="y-field">
+              <label for="yStruct">Структура владения</label>
+              <select id="yStruct" autocomplete="off">
+                <option value="leasehold">Leasehold — право аренды</option>
+                <option value="freehold">Freehold — собственность</option>
+              </select>
+            </div>
+            <div class="y-field" id="yLeaseWrap">
+              <label for="yLeaseTerm">Срок leasehold</label>
+              <span class="y-unit"><input id="yLeaseTerm" type="number" inputmode="numeric" min="1" max="90" step="1" value="30"/ autocomplete="off"><span>лет</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="y-step">
+          <div class="y-step-head">
+            <span class="t"><i>2</i>Расходы на входе</span>
+            <span class="h" id="ySumEntry">—</span>
+          </div>
+          <p class="y-hint" style="margin-bottom:14px">Разово при покупке. Доходность считается от полной стоимости входа, а не от одной цены юнита — иначе результат завышается.</p>
+          <details class="y-adv">
+            <summary><span>Регистрация, sinking fund, мебель</span><span class="sum"><span class="chev">+</span></span></summary>
+            <div class="y-adv-body">
+              <div class="y-field">
+                <label for="yRegPct">Регистрационные сборы, % от цены</label>
+                <span class="y-unit"><input id="yRegPct" type="number" inputmode="decimal" min="0" max="10" step="0.1" value="1.1"/ autocomplete="off"><span>%</span></span>
+                <span class="y-hint">Leasehold — регистрация права аренды ≈1,1%. Freehold — сбор за перевод права 2%, обычно делится с застройщиком, поэтому ≈1%.</span>
+              </div>
+              <div class="y-field">
+                <label for="ySink">Sinking fund, разово за м²</label>
+                <span class="y-unit"><input id="ySink" type="number" inputmode="numeric" min="0" step="50" value="600"/ autocomplete="off"><span>฿/м²</span></span>
+                <span class="y-hint">Единоразовый взнос в резервный фонд кондоминиума при передаче.</span>
+              </div>
+              <div class="y-field">
+                <label for="yFurn">Мебель и оснащение, за м²</label>
+                <span class="y-unit"><input id="yFurn" type="number" inputmode="numeric" min="0" step="500" value="8000"/ autocomplete="off"><span>฿/м²</span></span>
+                <span class="y-hint">Если юнит сдаётся в аренду, без меблировки ставка будет существенно ниже. Поставьте 0, если пакет уже включён застройщиком.</span>
+              </div>
+              <div class="y-field" style="margin-bottom:0">
+                <label for="yOther">Прочее разово — счётчики, юрист, перевод</label>
+                <span class="y-unit"><input id="yOther" type="number" inputmode="numeric" min="0" step="5000" value="60000"/ autocomplete="off"><span>฿</span></span>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="y-step">
+          <div class="y-step-head">
+            <span class="t"><i>3</i>Доход от аренды</span>
+            <span class="h">Сценарий сдачи</span>
+          </div>
+          <div class="y-seg two" style="margin-bottom:18px">
+            <label><input type="radio" name="yMode" value="long" checked/ autocomplete="off"><span class="y-segbox"><b>Годовой контракт</b><small>Фиксированная ставка, длинный арендатор</small></span></label>
+            <label><input type="radio" name="yMode" value="short"/ autocomplete="off"><span class="y-segbox"><b>Краткосрочная</b><small>Суточная ставка и загрузка</small></span></label>
+          </div>
+
+          <div id="yLongBox">
+            <div class="y-two">
+              <div class="y-field">
+                <label for="yRent">Ставка в месяц</label>
+                <span class="y-unit"><input id="yRent" type="number" inputmode="numeric" min="0" step="1000" value="34000"/ autocomplete="off"><span>฿</span></span>
+              </div>
+              <div class="y-field">
+                <label for="yVac">Простой в году</label>
+                <span class="y-unit"><input id="yVac" type="number" inputmode="decimal" min="0" max="12" step="0.5" value="1"/ autocomplete="off"><span>мес.</span></span>
+              </div>
+            </div>
+            <div class="y-field">
+              <label for="yAgent">Комиссия агента за поиск арендатора</label>
+              <span class="y-unit"><input id="yAgent" type="number" inputmode="decimal" min="0" max="3" step="0.5" value="1"/ autocomplete="off"><span>мес.</span></span>
+              <span class="y-hint">По годовым контрактам на Пхукете обычно одна месячная ставка за каждую новую сделку.</span>
+            </div>
+          </div>
+
+          <div id="yShortBox" style="display:none">
+            <div class="y-two">
+              <div class="y-field">
+                <label for="yAdr">Ставка за ночь</label>
+                <span class="y-unit"><input id="yAdr" type="number" inputmode="numeric" min="0" step="100" value="2500"/ autocomplete="off"><span>฿</span></span>
+              </div>
+              <div class="y-field">
+                <label for="yOcc">Загрузка за год</label>
+                <span class="y-unit"><input id="yOcc" type="number" inputmode="numeric" min="0" max="100" step="1" value="70"/ autocomplete="off"><span>%</span></span>
+              </div>
+            </div>
+            <div class="y-field">
+              <label for="yMgmt">Комиссия управляющей компании</label>
+              <span class="y-unit"><input id="yMgmt" type="number" inputmode="numeric" min="0" max="60" step="1" value="25"/ autocomplete="off"><span>%</span></span>
+              <span class="y-hint">Управление краткосрочной арендой на Пхукете обычно 20–30% от выручки. В программах застройщика условия фиксируются в договоре.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="y-step">
+          <div class="y-step-head">
+            <span class="t"><i>4</i>Расходы и налоги</span>
+            <span class="h" id="ySumOpex">—</span>
+          </div>
+          <div class="y-field">
+            <label for="yTaxMode">Режим налога на доход</label>
+            <select id="yTaxMode" autocomplete="off">
+              <option value="pit" selected>Таиланд, физлицо — вычет 30%, затем ставка</option>
+              <option value="flat5">Упрощённо — 5% от дохода после расходов</option>
+              <option value="nr15">Нерезидент — 15% с валовой выручки</option>
+              <option value="none">Без налога — до налогообложения</option>
+            </select>
+          </div>
+          <div class="y-field" id="yPitWrap">
+            <label for="yPitRate">Ставка после вычета</label>
+            <span class="y-unit"><input id="yPitRate" type="number" inputmode="numeric" min="0" max="40" step="1" value="5"/ autocomplete="off"><span>%</span></span>
+            <span class="y-hint">Шкала Таиланда прогрессивная: первые 150 тыс. ฿ дохода не облагаются, далее 5%, 10%, 15% и выше по мере роста базы. Для одного юнита база обычно попадает в нижние ступени — поэтому по умолчанию 5%. Если у вас несколько объектов или иной доход в Таиланде, ставка будет выше.</span>
+          </div>
+          <details class="y-adv">
+            <summary><span>Maintenance, налог на имущество, резерв</span><span class="sum"><span class="chev">+</span></span></summary>
+            <div class="y-adv-body">
+              <div class="y-field">
+                <label for="yMaint">Maintenance — содержание, за м² в месяц</label>
+                <span class="y-unit"><input id="yMaint" type="number" inputmode="numeric" min="0" step="5" value="60"/ autocomplete="off"><span>฿/м²</span></span>
+                <span class="y-hint">Взнос кондоминиума за общие зоны, бассейн, охрану и управление. Для вилл — взнос за содержание территории.</span>
+              </div>
+              <div class="y-field">
+                <label for="yPropTax">Налог на землю и строения, % в год</label>
+                <span class="y-unit"><input id="yPropTax" type="number" inputmode="decimal" min="0" max="2" step="0.01" value="0.03"/ autocomplete="off"><span>%</span></span>
+                <span class="y-hint">Land and Building Tax. Для жилой недвижимости, сдаваемой в аренду, ставка невысокая, но она есть — в валовых расчётах её обычно забывают.</span>
+              </div>
+              <div class="y-field">
+                <label for="yIns">Страхование, в год</label>
+                <span class="y-unit"><input id="yIns" type="number" inputmode="numeric" min="0" step="1000" value="6000"/ autocomplete="off"><span>฿</span></span>
+              </div>
+              <div class="y-field" style="margin-bottom:0">
+                <label for="yCapex">Резерв на ремонт и замену мебели</label>
+                <span class="y-unit"><input id="yCapex" type="number" inputmode="numeric" min="0" max="30" step="1" value="5"/ autocomplete="off"><span>% выручки</span></span>
+                <span class="y-hint">Мебель, техника и отделка изнашиваются — особенно в краткосрочной аренде. Без этого резерва доходность выглядит выше, чем окажется на практике.</span>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ============ RESULTS ============ -->
+      <div>
+        <div class="y-res">
+          <p class="cap">Результат</p>
+          <h3 id="yResTitle">Чистая доходность объекта</h3>
+
+          <div class="y-kpi">
+            <div>
+              <div class="k">Чистая доходность</div>
+              <div class="v big" id="yNetYield">—</div>
+              <div class="s">от полной стоимости входа</div>
+            </div>
+            <div>
+              <div class="k">Чистый доход в год</div>
+              <div class="v" id="yNetIncome">—</div>
+              <div class="s" id="yNetIncomeRub">—</div>
+            </div>
+            <div>
+              <div class="k">Валовая доходность</div>
+              <div class="v" id="yGrossYield">—</div>
+              <div class="s" id="yGrossGap">—</div>
+            </div>
+            <div>
+              <div class="k">Окупаемость</div>
+              <div class="v" id="yPayback">—</div>
+              <div class="s">только за счёт аренды</div>
+            </div>
+          </div>
+
+          <div class="y-lease" id="yLeaseBand">
+            <div class="lt" id="yLeaseTitle">Срок leasehold</div>
+            <div class="y-bar"><span id="yLeaseBar" style="width:0%"></span></div>
+            <p id="yLeaseText">—</p>
+          </div>
+
+          <details class="y-break" id="yBreak">
+            <summary><span>Расчёт по шагам</span><span class="chev">+</span></summary>
+            <div id="yBreakBody"></div>
+          </details>
+        </div>
+
+        <div class="y-stress">
+          <h4>Стресс-тест</h4>
+          <p class="sh">Доходность на дефолтных допущениях — это лучший сценарий. Полезнее смотреть, что произойдёт, если рынок пойдёт против вас: на Пхукете конкуренция за арендатора растёт вместе с объёмом ввода новых корпусов.</p>
+          <div id="yScenarios"></div>
+        </div>
+
+        <div class="y-cta">
+          <a class="btn btn-primary" href="/ru/podbor.html">Запросить расчёт по конкретному юниту</a>
+          <a class="btn btn-secondary" href="/ru/rassrochka-calculator.html">Калькулятор рассрочки 0% →</a>
+        </div>
+
+        <div class="y-disc">
+          Расчёт носит справочный характер, не является публичной офертой, инвестиционным, налоговым или финансовым советом и не гарантирует доходность. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, а не обязательство WEGC: фактическая ставка зависит от корпуса, этажа, вида, меблировки и сезона. Налоговые режимы даны упрощённо, чтобы показать чувствительность результата; ваш фактический налог определяется персональной ситуацией и требует подтверждения у налогового консультанта в Таиланде и в стране резидентства.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="method">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Методика</span>
+      <h2>Как считается и чем это отличается от валовой доходности</h2>
+      <p>Мы показываем формулу целиком, потому что в рекламе недвижимости Пхукета цифру доходности обычно берут в самой выгодной интерпретации. Проверить наш расчёт можно по каждому шагу.</p>
+    </div>
+    <div class="m-grid">
+      <div class="m-card">
+        <div class="n">1</div>
+        <h3>База — стоимость входа</h3>
+        <p>Знаменатель доходности — не цена юнита, а всё, что вы фактически заплатили, чтобы объект начал приносить доход: <code>цена + регистрация + sinking fund + мебель + прочее</code>. Расчёт от одной цены юнита завышает доходность примерно на 5–10% относительно реальности.</p>
+      </div>
+      <div class="m-card">
+        <div class="n">2</div>
+        <h3>Выручка — с поправкой на простой</h3>
+        <p>По годовому контракту: <code>ставка × (12 − простой)</code>. Между арендаторами объект стоит пустым, и один месяц простоя в год — это уже минус 8% выручки. По краткосрочной аренде: <code>ставка за ночь × 365 × загрузка</code>, где загрузка на Пхукете сильно сезонна.</p>
+      </div>
+      <div class="m-card">
+        <div class="n">3</div>
+        <h3>Расходы — включая те, о которых молчат</h3>
+        <p>Из выручки вычитаются комиссия агента или управляющей компании, maintenance кондоминиума, налог на землю и строения, страхование и резерв на износ мебели и ремонт. Последние три пункта почти никогда не попадают в рекламные расчёты, а вместе они дают заметную часть разницы.</p>
+      </div>
+      <div class="m-card">
+        <div class="n">4</div>
+        <h3>Налог — с выбором режима</h3>
+        <p>Налог зависит от структуры владения и резидентства, поэтому одной цифры здесь быть не может. Мы даём несколько режимов, включая учёт стандартного вычета 30% для физлица в Таиланде, чтобы вы увидели, насколько результат чувствителен к налоговому решению.</p>
+      </div>
+      <div class="m-card">
+        <div class="n">5</div>
+        <h3>Leasehold — конечный срок</h3>
+        <p>Право аренды даёт доход только в пределах своего срока. Поэтому окупаемость мы сопоставляем с остатком договора и показываем, какую долю срока займёт возврат вложенного. Ни один валовой расчёт этого не делает, хотя для Пхукета это ключевой параметр.</p>
+      </div>
+      <div class="m-card">
+        <div class="n">6</div>
+        <h3>Стресс-тест вместо обещаний</h3>
+        <p>Мы считаем не только базовый сценарий, но и падение ставки на 20% и рост простоя. Объект, который остаётся в плюсе под давлением, — это другое качество решения, чем объект, красиво выглядящий только на дефолтных допущениях.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s cream" id="faq">
+  <div class="container">
+    <div class="s-head">
+      <span class="kicker">Вопросы</span>
+      <h2>Частые вопросы о доходности</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Чем чистая доходность отличается от валовой?<span class="faq-icon">+</span></summary>
+        <p>Валовая доходность — это годовая арендная плата, поделённая на цену объекта. Она не учитывает ничего из того, что реально уменьшает доход собственника: месяцы простоя между арендаторами, комиссию управляющей компании или агента, maintenance-взнос кондоминиума, налог на землю и строения, страхование, износ мебели и налог на доход. На Пхукете разница между валовой и чистой доходностью обычно составляет от 2 до 4 процентных пунктов. Именно чистая доходность показывает, что фактически останется у собственника.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Какие расходы возникают при покупке недвижимости на Пхукете?<span class="faq-icon">+</span></summary>
+        <p>Помимо цены юнита обычно оплачиваются регистрационные сборы (для leasehold — регистрация права аренды, для freehold — сбор за перевод права собственности, который часто делится с застройщиком), единоразовый взнос в резервный фонд кондоминиума (sinking fund) из расчёта за квадратный метр, подключение счётчиков воды и электричества, а также мебель и оснащение, если юнит сдаётся в аренду. Все эти суммы входят в реальную стоимость входа, и доходность корректно считать именно от неё, а не от одной цены юнита.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Почему для leasehold важен срок окупаемости?<span class="faq-icon">+</span></summary>
+        <p>Leasehold — это право аренды на конечный срок, типично 30 лет с возможностью продления по условиям договора. Доход от объекта поступает только в пределах этого срока, поэтому окупаемость надо сопоставлять с остатком срока: окупаемость в 12 лет из 30 означает, что около 40% срока уходит на возврат вложенного, а оставшиеся годы формируют доход. Если расчётная окупаемость приближается к сроку договора, экономика объекта как источника дохода становится крайне чувствительной к простою и падению ставки. Калькулятор показывает это соотношение отдельным блоком.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Как считается налог на доход от аренды в Таиланде?<span class="faq-icon">+</span></summary>
+        <p>Режим зависит от того, кто получает доход, налогового резидентства и структуры владения. Для физического лица доход от сдачи недвижимости в аренду в Таиланде может учитываться с применением стандартного вычета в размере 30% от полученной суммы с последующим применением прогрессивной шкалы; при выплатах в адрес нерезидента может применяться удержание у источника. Калькулятор даёт несколько упрощённых режимов, чтобы вы увидели чувствительность результата к налогу, но фактическая ставка определяется вашей персональной ситуацией. Это не налоговая консультация — расчёт по вашему случаю нужно подтвердить у налогового консультанта в Таиланде и в стране вашего резидентства.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Откуда берутся цены и площади в калькуляторе?<span class="faq-icon">+</span></summary>
+        <p>Цена «от» и площадь стартового юнита подставляются из паспортов проектов, с которыми WEGC работает по прямому договору с застройщиком. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, они не являются гарантией и обязательно требуют проверки по конкретному юниту: этаж, вид, корпус и меблировка меняют ставку существенно. Мы можем предоставить расчёт по вашему юниту с фактическими цифрами из договора и актуальным арендным анализом.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="s">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Посчитаем доходность <strong>по вашему юниту</strong> — с ценой из договора</h2>
+      <div class="acts">
+        <a class="btn btn-primary" href="/ru/podbor.html">Подбор за 2 минуты</a>
+        <a class="btn btn-secondary" href="/ru/kontakty.html">Связаться с нами</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="f">
+  <div class="container">
+    <div class="f-grid">
+      <div class="f-col f-col-brand">
+        <div class="logo">West East Gate Capital</div>
+        <p>Real-estate и private real-assets бренд WEST EAST TRADE GROUP PTE. LTD., Сингапур. Прямая недвижимость от застройщиков Пхукета под дисциплинированный due diligence.</p>
+      </div>
+      <div class="f-col">
+        <h5>Недвижимость</h5>
+        <ul>
+          <li><a href="/ru/">Каталог Пхукета</a></li>
+          <li><a href="/ru/podbor.html">Подбор объекта за 2 минуты</a></li>
+          <li><a href="/ru/dohodnost-calculator.html">Калькулятор доходности</a></li>
+          <li><a href="/ru/rassrochka-calculator.html">Калькулятор рассрочки 0%</a></li>
+          <li><a href="/ru/tseny.html">Цены на Пхукете 2026</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Справочник</h5>
+        <ul>
+          <li><a href="/phuket-investment-yield-ru.html">Доходность недвижимости</a></li>
+          <li><a href="/buy-property-phuket-ru.html">Как купить на Пхукете</a></li>
+          <li><a href="/freehold-leasehold-thailand-ru.html">Freehold и Leasehold</a></li>
+          <li><a href="/phuket-property-taxes-ru.html">Налоги и расходы</a></li>
+          <li><a href="/arenda-upravlenie-phuket-ru.html">Аренда и управление</a></li>
+        </ul>
+      </div>
+      <div class="f-col f-col-contact">
+        <h5>Контакты</h5>
+        <ul style="margin-bottom:12px"><li><a href="/ru/kontakty.html">Контакты и региональная информация</a></li></ul>
+        <p class="f-corpname">WEST EAST TRADE GROUP PTE. LTD.</p>
+        <p class="f-meta">UEN 202505772C · 7 Temasek Boulevard, #12-07, Suntec Tower One, Singapore 038987</p>
+        <p class="f-channels">
+          <a href="mailto:property@wegc.fund">property@wegc.fund</a><br>
+          <a href="mailto:post@wegc.fund">post@wegc.fund</a>
+        </p>
+      </div>
+    </div>
+    <div class="f-disclaimer">Информация на этой странице носит справочный характер и не является публичной офертой, инвестиционным, налоговым или финансовым советом, гарантией доходности или обещанием арендного дохода. Значения по умолчанию — ориентировочные рыночные уровни, требующие проверки по конкретному объекту. West East Gate Real Estate — независимый агент застройщика The Title / Rhom Bho.</div>
+    <div class="f-bottom">
+      <span>© 2026 WEST EAST TRADE GROUP PTE. LTD. Все права защищены.</span>
+      <span>Сингапур · UEN 202505772C</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Датасет: цены «от» и площади стартовых юнитов из паспортов /projects/*.html.
+      Не менять цифры без сверки с паспортами. ── */
+window.WEGC_FX={THB_RUB:2.5,label:'ориентировочно'};
+
+/* Ориентировочные рыночные ставки годовой аренды по районам, ฿/м² в месяц.
+   Это рыночный ориентир для первого прикидочного расчёта, не обязательство WEGC. */
+window.WEGC_RENT_PSM={
+  'Банг Тао':800,'Сурин':950,'Камала':800,'Най Янг':620,
+  'Ката · Карон':800,'Раваи':700,'Ко Кео':420
+};
+
+window.WEGC_YIELD_PROJECTS=[
+ {slug:'the-title-sierra',   name:'The Title Sierra',      district:'Банг Тао',   kind:'condo', url:'/projects/the-title-sierra.html',    price:2870000,  area:28,  delivery:'3 кв. 2028', struct:'Freehold / Leasehold', lease:'both'},
+ {slug:'title-vivi',         name:'The Title Vivi',        district:'Банг Тао',   kind:'condo', url:'/projects/title-vivi.html',          price:3160000,  area:27,  delivery:'4 кв. 2027', struct:'Leasehold',            lease:'leasehold'},
+ {slug:'the-title-artrio',   name:'The Title Artrio',      district:'Банг Тао',   kind:'condo', url:'/projects/the-title-artrio.html',    price:4260000,  area:28,  delivery:'2026',       struct:'Leasehold',            lease:'leasehold'},
+ {slug:'the-modeva',         name:'The Modeva',            district:'Банг Тао',   kind:'condo', url:'/projects/the-modeva.html',          price:4780000,  area:41,  delivery:'1 кв. 2027', struct:'Leasehold',            lease:'leasehold'},
+ {slug:'the-title-vivana',   name:'The Title Vivana',      district:'Камала',     kind:'condo', url:'/projects/the-title-vivana.html',    price:3620000,  area:30,  delivery:'4 кв. 2028', struct:'Freehold / Leasehold', lease:'both'},
+ {slug:'the-title-biancana', name:'The Title Biancana',    district:'Сурин',      kind:'condo', url:'/projects/the-title-biancana.html',  price:6300000,  area:31,  delivery:'4 кв. 2028', struct:'Leasehold',            lease:'leasehold'},
+ {slug:'the-title-balcony',  name:'The Title Balcony',     district:'Най Янг',    kind:'condo', url:'/projects/the-title-balcony.html',   price:5240000,  area:33,  delivery:'4 кв. 2027', struct:'Leasehold',            lease:'leasehold'},
+ {slug:'the-olive',          name:'The Olive',             district:'Най Янг',    kind:'condo', url:'/projects/the-olive.html',           price:4990000,  area:32,  delivery:'окт. 2028',  struct:'Freehold / Leasehold', lease:'both'},
+ {slug:'the-title-katabello',name:'The Title Katabello',   district:'Ката · Карон',kind:'condo',url:'/projects/the-title-katabello.html', price:3830000,  area:28,  delivery:'3 кв. 2027', struct:'Leasehold',            lease:'leasehold'},
+ {slug:'the-title-adora',    name:'The Title Adora',       district:'Раваи',      kind:'condo', url:'/projects/the-title-adora.html',     price:4200000,  area:32,  delivery:'1 кв. 2027', struct:'Leasehold',            lease:'leasehold'},
+ {slug:'casa-de-monte',      name:'Casa de Monte · виллы', district:'Ко Кео',     kind:'villa', url:'/projects/casa-de-monte.html',       price:28200000, area:297, delivery:'июль 2029',  struct:'Leasehold / Freehold', lease:'both'}
+];
+
+/* Дефолты расходов по типу объекта */
+window.WEGC_KIND_DEFAULTS={
+  condo:{sink:600,furn:8000,maint:60,other:60000},
+  villa:{sink:400,furn:6000,maint:30,other:120000}
+};
+</script>
+
+<script>
+/* topbar + page reveal */
+(function(){
+  var bar=document.getElementById('topbar');
+  var onScroll=function(){ if(window.scrollY>60) bar.classList.add('solid'); else bar.classList.remove('solid'); };
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('page-ready');});
+  if(document.readyState!=='loading') document.body.classList.add('page-ready');
+})();
+
+/* ============================ YIELD CALCULATOR ============================ */
+(function(){
+  var P=window.WEGC_YIELD_PROJECTS, FX=window.WEGC_FX,
+      RPSM=window.WEGC_RENT_PSM, KD=window.WEGC_KIND_DEFAULTS;
+
+  function el(id){ return document.getElementById(id); }
+  function num(id){ var v=parseFloat(el(id).value); return isFinite(v)?v:0; }
+
+  var F={
+    project:el('yProject'), price:el('yPrice'), area:el('yArea'),
+    struct:el('yStruct'), leaseTerm:el('yLeaseTerm'), leaseWrap:el('yLeaseWrap'),
+    regPct:el('yRegPct'), sink:el('ySink'), furn:el('yFurn'), other:el('yOther'),
+    rent:el('yRent'), vac:el('yVac'), agent:el('yAgent'),
+    adr:el('yAdr'), occ:el('yOcc'), mgmt:el('yMgmt'),
+    taxMode:el('yTaxMode'), pitRate:el('yPitRate'), pitWrap:el('yPitWrap'),
+    maint:el('yMaint'), propTax:el('yPropTax'), ins:el('yIns'), capex:el('yCapex')
+  };
+
+  /* ── formatters ── */
+  function thb(n){ return Math.round(n).toLocaleString('ru-RU')+' ฿'; }
+  function thbShort(n){
+    n=Math.round(n);
+    if(Math.abs(n)>=1000000) return (Math.round(n/10000)/100).toLocaleString('ru-RU')+' млн ฿';
+    return n.toLocaleString('ru-RU')+' ฿';
+  }
+  function pct(n){ return (Math.round(n*10)/10).toLocaleString('ru-RU')+'%'; }
+  function years(n){
+    if(!isFinite(n)||n<=0) return '—';
+    if(n>200) return '200+ лет';
+    var v=Math.round(n*10)/10, i=Math.floor(v)%10, t=Math.floor(v)%100, w='лет';
+    if(v===Math.floor(v)){ if(i===1&&t!==11) w='год'; else if(i>=2&&i<=4&&(t<12||t>14)) w='года'; }
+    else w='года';
+    return v.toLocaleString('ru-RU')+' '+w;
+  }
+
+  /* ── core model ──
+     Стоимость входа = цена + регистрация + sinking fund + мебель + прочее
+     Годовой контракт: выручка = ставка × (12 − простой); комиссия агента = ставка × мес.
+     Краткосрочная:    выручка = ставка/ночь × 365 × загрузка; управление = % выручки
+     Опекс = maintenance + налог на имущество + страхование + резерв на износ
+     Налог: pit (вычет 30% → ставка) | flat5 | nr15 (с валовой) | none
+  */
+  function model(o){
+    var entryExtra = o.price*o.regPct/100 + o.sink*o.area + o.furn*o.area + o.other;
+    var base = o.price + entryExtra;
+
+    var gross, letting, lettingLabel;
+    if(o.mode==='long'){
+      gross = o.rent * Math.max(0, 12 - o.vac);
+      letting = o.rent * o.agent;
+      lettingLabel = 'Комиссия агента';
+    }else{
+      gross = o.adr * 365 * (o.occ/100);
+      letting = gross * o.mgmt/100;
+      lettingLabel = 'Управляющая компания';
+    }
+
+    var maint   = o.maint * o.area * 12;
+    var propTax = o.price * o.propTax/100;
+    var capex   = gross * o.capex/100;
+    var opex    = maint + propTax + o.ins + capex;
+
+    var beforeTax = gross - letting - opex;
+    var tax = 0;
+    if(o.taxMode==='pit')       tax = Math.max(0, gross*0.7) * o.pitRate/100;
+    else if(o.taxMode==='flat5')tax = Math.max(0, beforeTax) * 0.05;
+    else if(o.taxMode==='nr15') tax = gross * 0.15;
+
+    var net = beforeTax - tax;
+
+    return {
+      base:base, entryExtra:entryExtra, gross:gross,
+      letting:letting, lettingLabel:lettingLabel,
+      maint:maint, propTax:propTax, ins:o.ins, capex:capex, opex:opex,
+      beforeTax:beforeTax, tax:tax, net:net,
+      grossYield: base>0 ? gross/base*100 : 0,
+      netYield:   base>0 ? net/base*100   : 0,
+      payback:    net>0  ? base/net       : Infinity
+    };
+  }
+
+  function readInputs(){
+    var modeEl=document.querySelector('input[name="yMode"]:checked');
+    return {
+      price:num('yPrice'), area:Math.max(1,num('yArea')),
+      regPct:num('yRegPct'), sink:num('ySink'), furn:num('yFurn'), other:num('yOther'),
+      mode: modeEl ? modeEl.value : 'long',
+      rent:num('yRent'), vac:num('yVac'), agent:num('yAgent'),
+      adr:num('yAdr'), occ:num('yOcc'), mgmt:num('yMgmt'),
+      taxMode:F.taxMode.value, pitRate:num('yPitRate'),
+      maint:num('yMaint'), propTax:num('yPropTax'), ins:num('yIns'), capex:num('yCapex')
+    };
+  }
+
+  /* ── render ── */
+  function render(){
+    var o=readInputs(), r=model(o);
+
+    el('yNetYield').textContent   = r.net>0 ? pct(r.netYield) : 'убыток';
+    el('yNetIncome').textContent  = thbShort(r.net);
+    el('yNetIncomeRub').textContent = '≈ '+Math.round(r.net*FX.THB_RUB/1000).toLocaleString('ru-RU')+' тыс. ₽ в год';
+    el('yGrossYield').textContent = pct(r.grossYield);
+    var gap=Math.max(0,r.grossYield-r.netYield);
+    el('yGrossGap').textContent   = 'расходы и налоги съедают '+(Math.round(gap*10)/10).toLocaleString('ru-RU')+' п.п.';
+    el('yPayback').textContent    = years(r.payback);
+
+    el('ySumEntry').textContent = '+ '+thbShort(r.entryExtra)+' к цене';
+    el('ySumOpex').textContent  = thbShort(r.opex+r.tax)+' в год';
+
+    /* leasehold band */
+    var band=el('yLeaseBand'), isLease=(F.struct.value==='leasehold');
+    F.leaseWrap.style.display = isLease ? '' : 'none';
+    if(isLease){
+      var term=Math.max(1,num('yLeaseTerm'));
+      var share = isFinite(r.payback) ? Math.min(100, r.payback/term*100) : 100;
+      band.style.display='';
+      el('yLeaseBar').style.width = share.toFixed(0)+'%';
+      if(!isFinite(r.payback)||r.payback>=term){
+        band.className='y-lease warn';
+        el('yLeaseTitle').textContent='Окупаемость не укладывается в срок';
+        el('yLeaseText').textContent='При этих допущениях арендный доход не возвращает вложенное за '+term+' лет договора. Такой объект имеет смысл рассматривать как жильё для себя или ставку на рост стоимости, но не как источник арендного дохода.';
+      }else{
+        band.className = share>75 ? 'y-lease warn' : 'y-lease';
+        el('yLeaseTitle').textContent='Окупаемость внутри срока leasehold';
+        el('yLeaseText').textContent='Возврат вложенного займёт '+years(r.payback)+' из '+term+' лет договора — это '+Math.round(share)+'% срока. Остальные '+years(term-r.payback)+' формируют доход. '+(share>75?'Доля высокая: результат станет очень чувствителен к простою и снижению ставки, а запас на продление договора минимальный.':'Условия и стоимость продления договора всё равно стоит проверить до покупки — они фиксируются в договоре с застройщиком.');
+      }
+    }else{
+      band.style.display='none';
+    }
+
+    /* breakdown */
+    var rows='';
+    function row(k,v,cls){ rows+='<div class="y-row '+(cls||'')+'"><span class="k">'+k+'</span><span class="v">'+v+'</span></div>'; }
+    row('Цена юнита', thb(o.price));
+    row('Расходы на входе', '+ '+thb(r.entryExtra));
+    row('Стоимость входа', thb(r.base), 'sum');
+    row('Валовая выручка за год', thb(r.gross));
+    row(r.lettingLabel, '− '+thb(r.letting), 'neg');
+    row('Maintenance', '− '+thb(r.maint), 'neg');
+    row('Налог на землю и строения', '− '+thb(r.propTax), 'neg');
+    row('Страхование', '− '+thb(r.ins), 'neg');
+    row('Резерв на износ и ремонт', '− '+thb(r.capex), 'neg');
+    var taxNote={pit:'налог: вычет 30%, ставка '+pct(o.pitRate),flat5:'налог 5% с дохода после расходов',nr15:'налог 15% с валовой выручки',none:'без налога'}[o.taxMode];
+    row('Налог на доход', '− '+thb(r.tax), 'neg');
+    row('Чистый доход за год', thb(r.net), 'sum');
+    rows+='<p style="font-size:11.5px;color:rgba(255,255,255,.45);margin-top:12px;line-height:1.6">Режим — '+taxNote+'. Площадь '+o.area+' м², maintenance '+o.maint+' ฿/м² в месяц.</p>';
+    el('yBreakBody').innerHTML=rows;
+
+    /* stress test */
+    var scen=[];
+    scen.push({n:'Базовый сценарий', s:'ваши текущие допущения', y:r.netYield, p:r.payback, cls:'base'});
+    if(o.mode==='long'){
+      var s1=model(Object.assign({},o,{rent:o.rent*0.8}));
+      var s2=model(Object.assign({},o,{vac:Math.min(12,o.vac+2)}));
+      scen.push({n:'Ставка ниже на 20%', s:'рост конкуренции за арендатора', y:s1.netYield, p:s1.payback});
+      scen.push({n:'Простой +2 месяца', s:'простой '+(o.vac+2)+' мес. вместо '+o.vac, y:s2.netYield, p:s2.payback});
+      var s3=model(Object.assign({},o,{rent:o.rent*0.8,vac:Math.min(12,o.vac+2)}));
+      scen.push({n:'Оба фактора вместе', s:'стрессовый сценарий', y:s3.netYield, p:s3.payback});
+    }else{
+      var t1=model(Object.assign({},o,{adr:o.adr*0.8}));
+      var t2=model(Object.assign({},o,{occ:Math.max(0,o.occ-15)}));
+      var t3=model(Object.assign({},o,{adr:o.adr*0.8,occ:Math.max(0,o.occ-15)}));
+      scen.push({n:'Ставка за ночь ниже на 20%', s:'демпинг новых корпусов', y:t1.netYield, p:t1.payback});
+      scen.push({n:'Загрузка ниже на 15 п.п.', s:'загрузка '+Math.max(0,o.occ-15)+'% вместо '+o.occ+'%', y:t2.netYield, p:t2.payback});
+      scen.push({n:'Оба фактора вместе', s:'стрессовый сценарий', y:t3.netYield, p:t3.payback});
+    }
+    var html='';
+    scen.forEach(function(s){
+      var cls=s.cls||(s.y>=4?'ok':'bad');
+      html+='<div class="y-scen '+cls+'"><span class="n">'+s.n+'<small>'+s.s+'</small></span>'+
+            '<span class="r"><b>'+(s.y>0?pct(s.y):'убыток')+'</b><small>окупаемость '+years(s.p)+'</small></span></div>';
+    });
+    el('yScenarios').innerHTML=html;
+  }
+
+  /* ── project prefill ── */
+  function fillProjects(){
+    var html='<option value="">— свой объект, ввести вручную —</option>';
+    P.forEach(function(p){
+      html+='<option value="'+p.slug+'">'+p.name+' · '+p.district+' · от '+Math.round(p.price/100000)/10+' млн ฿</option>';
+    });
+    F.project.innerHTML=html;
+    F.project.value='the-modeva';
+  }
+
+  function applyProject(){
+    var slug=F.project.value, p=null;
+    for(var i=0;i<P.length;i++){ if(P[i].slug===slug) p=P[i]; }
+    var meta=el('yMeta'), link=el('yProjLink');
+    if(!p){
+      meta.classList.remove('show');
+      link.classList.remove('show');
+      render(); return;
+    }
+    var d=KD[p.kind]||KD.condo;
+    F.price.value=p.price;
+    F.area.value=p.area;
+    F.sink.value=d.sink;
+    F.furn.value=d.furn;
+    F.maint.value=d.maint;
+    F.other.value=d.other;
+    /* Для проектов с обеими структурами по умолчанию берём leasehold — типовой маршрут
+       для иностранного покупателя; переключатель структуры остаётся доступным. */
+    F.struct.value='leasehold';
+    F.regPct.value=1.1;
+
+    var psm=RPSM[p.district]||700;
+    var rentMonth=Math.round(psm*p.area/500)*500;
+    F.rent.value=rentMonth;
+    F.adr.value=Math.round(rentMonth/30*2.2/50)*50;
+
+    el('yMetaDistrict').textContent=p.district;
+    el('yMetaDelivery').textContent=p.delivery;
+    el('yMetaKind').textContent=(p.kind==='villa'?'Вилла':'Кондоминиум')+' · '+p.struct;
+    el('yMetaPsm').textContent=Math.round(p.price/p.area).toLocaleString('ru-RU')+' ฿/м²';
+    meta.classList.add('show');
+    link.href=p.url; link.classList.add('show');
+    el('yResTitle').textContent=p.name+' · '+p.area+' м²';
+    render();
+  }
+
+  /* ── mode / tax toggles ── */
+  function syncMode(){
+    var m=document.querySelector('input[name="yMode"]:checked');
+    var isLong=!m||m.value==='long';
+    el('yLongBox').style.display=isLong?'':'none';
+    el('yShortBox').style.display=isLong?'none':'';
+    render();
+  }
+  function syncTax(){
+    F.pitWrap.style.display=(F.taxMode.value==='pit')?'':'none';
+    render();
+  }
+  function syncStruct(){
+    F.regPct.value=(F.struct.value==='leasehold')?1.1:1.0;
+    render();
+  }
+
+  /* ── wire up ── */
+  fillProjects();
+  F.project.addEventListener('change',applyProject);
+  F.struct.addEventListener('change',syncStruct);
+  F.taxMode.addEventListener('change',syncTax);
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="yMode"]'),function(r){
+    r.addEventListener('change',syncMode);
+  });
+  ['yPrice','yArea','yLeaseTerm','yRegPct','ySink','yFurn','yOther','yRent','yVac','yAgent',
+   'yAdr','yOcc','yMgmt','yPitRate','yMaint','yPropTax','yIns','yCapex'].forEach(function(id){
+    var n=el(id); if(n) n.addEventListener('input',render);
+  });
+
+  syncTax();
+  syncMode();
+  applyProject();
+  /* Некоторые браузеры восстанавливают значения полей уже после разбора документа —
+     пересобираем состояние после load, чтобы панель и результат не разъезжались. */
+  window.addEventListener('load',function(){ syncMode(); applyProject(); });
+
+  /* Metrika: первое взаимодействие с калькулятором */
+  var touched=false;
+  document.getElementById('calc').addEventListener('input',function(){
+    if(touched) return; touched=true;
+    if(typeof ym!=='undefined') ym(109732633,'reachGoal','yield_calc_use');
+  },{passive:true});
+})();
+</script>
+
+</body>
+</html>
