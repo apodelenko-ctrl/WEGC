@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Калькулятор налога при продаже недвижимости в Таиланде — SBT, withholding tax, сборы 2026 | WEGC</title>
+<meta name="description" content="Считает все налоги и сборы при продаже квартиры в Таиланде: сбор за перевод права 2%, специальный налог на бизнес 3,3% или гербовый сбор 0,5%, подоходный налог у источника по прогрессивной шкале с вычетом за срок владения. Показывает сумму на руки, реальную прибыль и экономию от продажи после 5 лет владения."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Калькулятор налога при продаже недвижимости в Таиланде | WEGC"/>
+<meta property="og:description" content="Сбор за перевод права, SBT 3,3% или гербовый сбор 0,5%, подоходный налог у источника по формуле Налогового кодекса Таиланда. Сколько останется на руки и сколько экономит выдержка 5 лет."/>
+<meta property="og:url" content="https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html"/>
+<meta property="og:image" content="https://wegc.fund/images/projects/casademonte/drone.jpg"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html"/>
+<link rel="alternate" hreflang="ru" href="https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html"/>
+<link rel="alternate" hreflang="x-default" href="https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"RealEstateAgent",
+      "@id":"https://wegc.fund/#agent",
+      "name":"West East Gate Real Estate",
+      "url":"https://wegc.fund/",
+      "email":"property@wegc.fund",
+      "areaServed":{"@type":"Place","name":"Phuket, Thailand"},
+      "parentOrganization":{"@type":"Organization","name":"WEST EAST TRADE GROUP PTE. LTD.","identifier":"UEN 202505772C","address":{"@type":"PostalAddress","addressCountry":"SG"}}
+    },
+    {
+      "@type":"WebApplication",
+      "@id":"https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html#app",
+      "name":"Калькулятор налога при продаже недвижимости в Таиланде",
+      "url":"https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Web",
+      "inLanguage":"ru",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"THB"},
+      "description":"Расчёт сбора за перевод права, специального налога на бизнес, гербового сбора и подоходного налога у источника при продаже квартиры в Таиланде, с суммой на руки и реальной прибылью.",
+      "provider":{"@id":"https://wegc.fund/#agent"}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Главная","item":"https://wegc.fund/ru/"},
+        {"@type":"ListItem","position":2,"name":"Инструменты","item":"https://wegc.fund/ru/dohodnost-calculator.html"},
+        {"@type":"ListItem","position":3,"name":"Налог при продаже"}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Какие налоги платит продавец недвижимости в Таиланде?","acceptedAnswer":{"@type":"Answer","text":"При переводе права собственности в Земельном департаменте возникают четыре платежа. Сбор за перевод права — 2% от оценочной стоимости, по обычаю делится между сторонами пополам. Специальный налог на бизнес (SBT) — 3,3% от большей из двух величин: цены сделки или оценочной стоимости. Гербовый сбор — 0,5% от той же базы, но он взимается только если SBT не применяется: одновременно оба платежа не начисляются никогда. Подоходный налог у источника — для физического лица считается по формуле Налогового кодекса от оценочной стоимости с вычетом за срок владения, для компании это 1% от большей из двух величин."}},
+        {"@type":"Question","name":"Как считается подоходный налог у источника при продаже квартиры?","acceptedAnswer":{"@type":"Answer","text":"Для физического лица расчёт идёт в пять шагов по статье 48(4) Налогового кодекса Таиланда. Берётся оценочная стоимость Земельного департамента, а не цена сделки. Из неё вычитается норматив расходов, который зависит от срока владения: 92% за один год, 84% за два, 77% за три, 71% за четыре, 65% за пять, 60% за шесть, 55% за семь и 50% за восемь лет и более. Остаток делится на число лет владения. К полученной годовой сумме применяется прогрессивная шкала, причём вычет первых 150 000 батов здесь не действует и ставка 5% начинается с нуля. Полученный годовой налог умножается обратно на число лет владения. Срок свыше десяти лет считается как десять, а начатый год считается полным."}},
+        {"@type":"Question","name":"Почему выгодно продавать после пяти лет владения?","acceptedAnswer":{"@type":"Answer","text":"Специальный налог на бизнес в 3,3% задуман как мера против спекулятивной перепродажи и применяется, если продавец владел объектом менее пяти лет. Если пять полных лет прошло, SBT не начисляется, а вместо него платится гербовый сбор 0,5%. Разница в 2,8 процентных пункта от цены сделки — на квартире за 5 млн батов это около 140 000 батов. Отсчёт ведётся по точной дате внесения вашего имени в титул, поэтому четыре года и 364 дня льготы не дают. Калькулятор показывает эту экономию отдельной строкой."}},
+        {"@type":"Question","name":"Что такое оценочная стоимость и где её узнать?","acceptedAnswer":{"@type":"Answer","text":"Оценочная стоимость — это официальная оценка Департамента казны, которая используется как база для расчёта сбора за перевод права и подоходного налога у источника. Она почти всегда ниже рыночной цены сделки, что снижает налог. Точную цифру по конкретному юниту сообщают в Земельном офисе перед сделкой; заранее её можно запросить через юриста. Для предварительного расчёта в калькуляторе используется оценка как доля от цены сделки, по умолчанию 80% — это ориентир, а не гарантия."}},
+        {"@type":"Question","name":"Является ли налог у источника окончательным для физического лица?","acceptedAnswer":{"@type":"Answer","text":"По статье 48(4) Налогового кодекса продавец-физическое лицо при продаже недвижимости, приобретённой не в коммерческих целях, вправе не включать этот доход в годовую декларацию — тогда удержанный при сделке налог является окончательным. Альтернативно доход можно включить в декларацию и рассчитать по общим правилам, что иногда даёт возврат. Выбор зависит от полной картины ваших доходов в Таиланде за год, и его стоит просчитать с бухгалтером до сделки."}},
+        {"@type":"Question","name":"Подходит ли калькулятор для leasehold и для вилл?","acceptedAnswer":{"@type":"Answer","text":"Калькулятор считает продажу квартиры во freehold, то есть переход права собственности с регистрацией в Земельном департаменте. При leasehold выход из объекта оформляется как переуступка права аренды, и структура платежей другая: регистрационный сбор около 1% и гербовый сбор около 0,1% от суммы арендных платежей за весь срок, а налогообложение дохода от переуступки определяется отдельно. Продажа виллы с землёй тоже устроена иначе, поскольку это не квартира в кондоминиуме. Для этих случаев расчёт нужно делать индивидуально."}},
+        {"@type":"Question","name":"Можно ли вывести деньги от продажи за рубеж?","acceptedAnswer":{"@type":"Answer","text":"Да, но для этого важно сохранить документы о том, как деньги приходили в Таиланд. При покупке квартиры во freehold иностранцем оформляется FET — подтверждение поступления валюты из-за рубежа. Он нужен не только для регистрации права при покупке, но и как обоснование обратного вывода средств после продажи. Храните FET, договор купли-продажи и документы Земельного офиса: без них репатриация суммы усложняется."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#fff;--bg-soft:#f8fafc;--bg-cream:#fbfaf6;--bg-cream-2:#f3f0e8;--bg-dark:#0a0e1a;--bg-darker:#06080f;
+  --ink:#0f172a;--body:#334155;--muted:#64748b;--line:#e2e8f0;--line-soft:#f1f5f9;--line-dark:#1f2937;
+  --gold:#a08156;--gold-soft:#cfc4a2;--gold-bright:#d6b370;--red:#dc2626;--green:#0f766e;--radius:8px;--radius-lg:14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;opacity:0;transition:opacity .35s ease}
+body.page-ready{opacity:1}
+::selection{background:var(--gold);color:#fff}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3,h4{font-weight:300;letter-spacing:-.035em;line-height:1.08;color:var(--ink)}
+h1{font-size:clamp(2rem,5vw,3.6rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.8rem)}
+h3{font-size:1.25rem;font-weight:500;letter-spacing:-.02em}
+p{color:var(--body);line-height:1.7}
+.kicker{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:14px 26px;border-radius:var(--radius);cursor:pointer;border:none;text-decoration:none;transition:all .18s ease;white-space:nowrap}
+.btn-primary{background:var(--gold);color:#fff}
+.btn-primary:hover{background:#8c6e44;transform:translateY(-1px);box-shadow:0 8px 20px rgba(160,129,86,.32)}
+.btn-secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-secondary:hover{border-color:#cbd5e1;background:var(--bg-soft)}
+
+/* TOPBAR */
+#topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s ease,border-color .25s ease}
+#topbar.solid{background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom-color:var(--line)}
+.topbar-inner{max-width:1320px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.topbar-brand{display:flex;align-items:baseline;gap:14px;color:#fff;flex-shrink:0;min-width:0}
+.topbar-brand .name{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+#topbar.solid .topbar-brand,#topbar.solid .topbar-brand .name{color:var(--ink)}
+.topbar-nav{display:flex;align-items:center;gap:2px}
+.topbar-nav a{font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.78);padding:8px 11px;border-radius:6px;transition:color .15s ease,background .15s ease}
+.topbar-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .topbar-nav a{color:var(--muted)}
+#topbar.solid .topbar-nav a:hover{color:var(--ink);background:var(--bg-soft)}
+.topbar-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.topbar-cta{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:transparent;color:#fff;cursor:pointer;border:1px solid rgba(255,255,255,.4);padding:10px 18px;border-radius:6px;transition:all .15s ease}
+.topbar-cta:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+#topbar.solid .topbar-cta{color:var(--ink);border-color:var(--line)}
+#topbar.solid .topbar-cta:hover{border-color:#cbd5e1;background:var(--bg-soft)}
+@media(max-width:1080px){.topbar-nav{display:none}}
+
+/* HERO */
+.hero{position:relative;background:var(--bg-darker);padding:150px 32px 80px;color:#fff;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 25%,rgba(160,129,86,.18) 0%,transparent 55%),radial-gradient(circle at 86% 70%,rgba(37,99,235,.10) 0%,transparent 55%);pointer-events:none;z-index:2}
+.hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.32}
+.hero-inner{position:relative;z-index:3;max-width:1240px;margin:0 auto}
+.hero h1{color:#fff;max-width:26ch;letter-spacing:-.045em;line-height:1.06;margin-bottom:20px}
+.hero h1 strong{font-weight:600;color:var(--gold-bright)}
+.hero-sub{color:rgba(255,255,255,.74);font-size:clamp(1rem,1.3vw,1.15rem);max-width:66ch;line-height:1.6;font-weight:300}
+.hero-flag{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:rgba(160,129,86,.18);border:1px solid rgba(160,129,86,.5);color:var(--gold-bright);margin-bottom:28px}
+.hero-flag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-bright);animation:pulse 2.4s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+section.s{padding:100px 0}
+section.s.cream{background:var(--bg-cream)}
+.s-head{margin-bottom:44px;max-width:820px}
+.s-head h2{margin-bottom:14px}
+.s-head p{font-size:17px;color:var(--muted)}
+
+/* ============ CALCULATOR (y-) ============ */
+.y-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.y-panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:8px 0 4px}
+.y-step{border-bottom:1px solid var(--line-soft);padding:22px 28px}
+.y-step:last-child{border-bottom:none}
+.y-step-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px}
+.y-step-head .t{font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.y-step-head .t i{font-style:normal;color:var(--gold);font-weight:700;margin-right:8px}
+.y-step-head .h{font-size:11.5px;color:var(--muted);text-align:right;line-height:1.4}
+.y-field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.y-field:last-child{margin-bottom:0}
+.y-field>label,.y-lbl{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.y-field select,.y-field input[type=number],.y-field input[type=text]{font-family:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line);padding:12px 14px;border-radius:var(--radius);outline:none;transition:border-color .15s ease;width:100%}
+.y-field select:focus,.y-field input:focus{border-color:var(--gold)}
+.y-hint{font-size:11.5px;color:var(--muted);line-height:1.5}
+.y-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.y-unit{position:relative;display:block}
+.y-unit>input{padding-right:44px!important}
+.y-unit>span{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:12.5px;color:var(--muted);pointer-events:none;font-weight:500}
+
+/* project meta chips */
+.y-meta{display:none;grid-template-columns:1fr 1fr;gap:10px 14px;background:var(--bg-cream);border:1px solid var(--bg-cream-2);border-radius:var(--radius);padding:14px 16px;margin-bottom:16px}
+.y-meta.show{display:grid}
+.y-meta .l{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:2px}
+.y-meta .v{font-size:13.5px;font-weight:600;color:var(--ink)}
+.y-projlink{font-size:12.5px;font-weight:600;color:var(--gold);display:none;margin-top:2px}
+.y-projlink.show{display:inline-block}
+
+/* segmented control */
+.y-seg{display:grid;gap:10px}
+.y-seg.two{grid-template-columns:1fr 1fr}
+.y-seg label{display:block;cursor:pointer;position:relative}
+.y-seg input{position:absolute;opacity:0;pointer-events:none}
+.y-seg label b{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.y-seg label small{display:block;font-size:11px;color:var(--muted);line-height:1.4}
+.y-seg input:checked+.y-segbox{border-color:var(--gold);background:rgba(160,129,86,.05);box-shadow:inset 0 0 0 1px var(--gold)}
+.y-segbox{display:block;border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;transition:all .15s ease;background:#fff}
+.y-segbox:hover{border-color:#cbd5e1}
+
+/* checkbox rows */
+.y-chk{display:flex;align-items:flex-start;gap:11px;padding:11px 13px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;cursor:pointer;margin-bottom:10px;transition:border-color .15s ease}
+.y-chk:last-child{margin-bottom:0}
+.y-chk:hover{border-color:#cbd5e1}
+.y-chk input{margin-top:3px;accent-color:var(--gold);width:16px;height:16px;flex-shrink:0}
+.y-chk b{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.y-chk small{display:block;font-size:11.5px;color:var(--muted);line-height:1.5}
+.y-chk.on{border-color:var(--gold);background:rgba(160,129,86,.04)}
+.y-chk.dim{opacity:.55}
+
+/* readouts */
+.y-effrate{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:var(--bg-cream);border:1px solid var(--bg-cream-2);border-radius:var(--radius);padding:11px 14px}
+.y-effrate b{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;color:var(--gold);line-height:1}
+.y-effrate span{font-size:11.5px;color:var(--muted);line-height:1.45}
+.y-wht{font-size:11.5px;color:var(--body);line-height:1.65;background:var(--bg-soft);border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:12px 15px;margin-bottom:16px}
+.y-wht b{color:var(--ink);font-weight:600}
+
+/* advanced toggle */
+.y-adv{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg-soft)}
+.y-adv summary{list-style:none;cursor:pointer;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12.5px;font-weight:600;color:var(--ink)}
+.y-adv summary::-webkit-details-marker{display:none}
+.y-adv summary .sum{font-size:11.5px;color:var(--muted);font-weight:500}
+.y-adv summary .chev{color:var(--gold);font-size:15px;line-height:1}
+.y-adv[open] summary{border-bottom:1px solid var(--line)}
+.y-adv[open] summary .chev{transform:rotate(45deg)}
+.y-adv-body{padding:16px 15px;background:#fff}
+
+/* RESULT */
+.y-res{background:linear-gradient(180deg,#0a0e1a,#06080f);border:1px solid var(--line-dark);border-radius:var(--radius-lg);padding:32px 30px;color:#fff;position:relative;overflow:hidden}
+.y-res::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 0%,rgba(160,129,86,.20) 0%,transparent 60%);pointer-events:none}
+.y-res>*{position:relative}
+.y-res .cap{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:8px}
+.y-res h3{color:#fff;font-size:1.5rem;font-weight:300;letter-spacing:-.03em;margin-bottom:26px}
+.y-kpi{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;margin-bottom:24px}
+.y-kpi .k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;line-height:1.35}
+.y-kpi .v{font-size:1.8rem;font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1.05}
+.y-kpi .v.big{color:var(--gold-bright)}
+.y-kpi .v.neg{color:#fca5a5}
+.y-kpi .s{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4}
+
+/* band */
+.y-lease{border-radius:var(--radius);padding:16px 18px;margin-bottom:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.y-lease.warn{background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.45)}
+.y-lease.good{background:rgba(15,118,110,.16);border-color:rgba(45,212,191,.4)}
+.y-lease .lt{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:7px}
+.y-lease.warn .lt{color:#fca5a5}
+.y-lease.good .lt{color:#5eead4}
+.y-lease p{font-size:12.5px;color:rgba(255,255,255,.78);line-height:1.6;margin:0}
+
+/* breakdown */
+.y-break{border-top:1px solid rgba(255,255,255,.12);margin-top:4px}
+.y-break summary{list-style:none;cursor:pointer;padding:16px 0 0;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--gold-bright)}
+.y-break summary::-webkit-details-marker{display:none}
+.y-break summary .chev{font-size:15px;line-height:1}
+.y-break[open] summary .chev{transform:rotate(45deg)}
+.y-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid rgba(255,255,255,.07);font-size:13px}
+.y-row:first-of-type{border-top:none;padding-top:14px}
+.y-row .k{color:rgba(255,255,255,.6)}
+.y-row .v{font-weight:600;color:#fff;text-align:right;white-space:nowrap}
+.y-row.neg .v{color:#fca5a5}
+.y-row.mute .k,.y-row.mute .v{color:rgba(255,255,255,.38);font-weight:500}
+.y-row.sum{border-top:1px solid rgba(255,255,255,.24);margin-top:5px;padding-top:12px}
+.y-row.sum .k{color:#fff;font-weight:600}
+.y-row.sum .v{color:var(--gold-bright);font-size:1.02rem}
+
+/* exit-cost handoff */
+.y-total{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 26px 22px}
+.y-total-head h4{font-size:1.1rem;font-weight:600;letter-spacing:-.02em;color:var(--ink);margin-bottom:6px}
+.y-total-head p{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.y-total-kpi{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line-soft)}
+.y-total-kpi .k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;line-height:1.35}
+.y-total-kpi .v{font-size:1.7rem;font-weight:600;letter-spacing:-.03em;color:var(--gold);line-height:1.05}
+.y-total-kpi .v.neg{color:var(--red)}
+.y-total-kpi .s{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
+.y-total-note{font-size:11.5px;color:var(--muted);line-height:1.65;margin-top:14px;padding-top:13px;border-top:1px solid var(--line-soft)}
+.y-total-note a{color:var(--gold);font-weight:600}
+
+/* scenarios */
+.y-stress{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 26px}
+.y-stress h4{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.y-stress .sh{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.y-scen{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-top:1px solid var(--line-soft)}
+.y-scen .n{font-size:13.5px;color:var(--ink);font-weight:500}
+.y-scen .n small{display:block;font-size:11.5px;color:var(--muted);font-weight:400;margin-top:2px}
+.y-scen .r{text-align:right;white-space:nowrap}
+.y-scen .r b{font-size:1.1rem;font-weight:700;letter-spacing:-.02em}
+.y-scen .r small{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.y-scen.base .r b{color:var(--ink)}
+.y-scen.ok .r b{color:var(--green)}
+.y-scen.bad .r b{color:var(--red)}
+
+.y-cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.y-disc{margin-top:26px;font-size:12px;color:var(--muted);line-height:1.7;padding:16px 20px;background:var(--bg-soft);border-left:2px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0}
+
+/* METHOD */
+.m-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.m-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px 26px;min-width:0}
+.m-card .n{width:32px;height:32px;border-radius:50%;background:var(--bg-cream-2);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.m-card h3{font-size:1.08rem;font-weight:600;margin-bottom:10px}
+.m-card p{font-size:13.5px;line-height:1.7;color:var(--body)}
+.m-card code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:var(--bg-cream);border:1px solid var(--bg-cream-2);border-radius:5px;padding:2px 6px;color:var(--ink);overflow-wrap:anywhere}
+
+/* TABLE */
+.t-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--bg-soft)}
+td strong{color:var(--ink)}
+tr:last-child td{border-bottom:none}
+
+/* FAQ */
+.faq-list{max-width:880px;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;cursor:pointer}
+.faq-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:15.5px;font-weight:500;color:var(--ink);line-height:1.4}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-icon{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--muted);transition:all .2s ease}
+.faq-item[open] .faq-icon{transform:rotate(45deg);color:var(--gold);border-color:var(--gold)}
+.faq-item p{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--body);line-height:1.7}
+
+/* CTA */
+.cta-band{background:linear-gradient(180deg,#0a0e1a,#06080f);border-radius:var(--radius-lg);padding:54px 48px;color:#fff;position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 0%,rgba(160,129,86,.2) 0%,transparent 55%);pointer-events:none}
+.cta-band h2{color:#fff;font-size:clamp(1.5rem,2.6vw,2.1rem);max-width:26ch;position:relative}
+.cta-band h2 strong{color:var(--gold-bright);font-weight:500}
+.cta-band .acts{display:flex;gap:14px;flex-wrap:wrap;position:relative}
+
+/* FOOTER */
+footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px solid var(--line-dark)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:36px;align-items:start}
+.f-col h5{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.f-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.f-col li a{font-size:13px;color:#94a3b8;transition:color .15s ease}
+.f-col li a:hover{color:#fff}
+.f-col-brand .logo{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.f-col-brand p{font-size:13px;color:#94a3b8;line-height:1.7}
+.f-corpname{font-size:12.5px;color:#cbd5e1;font-weight:600;margin-bottom:6px}
+.f-meta{font-size:11.5px;color:#64748b;line-height:1.6;margin-bottom:10px}
+.f-channels a{font-size:12.5px;color:#94a3b8}
+.f-channels a:hover{color:#fff}
+.f-disclaimer{font-size:11.5px;color:#64748b;line-height:1.7;padding-top:26px;border-top:1px solid var(--line-dark)}
+.f-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11.5px;color:#64748b;padding-top:22px;margin-top:22px;border-top:1px solid var(--line-dark)}
+
+@media(max-width:1080px){
+  .y-grid{grid-template-columns:1fr}
+  .m-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media(max-width:720px){
+  .container{padding:0 20px}
+  .hero{padding:120px 20px 60px}
+  section.s{padding:64px 0}
+  .y-step{padding:20px 18px}
+  .y-res{padding:26px 20px}
+  .y-kpi{grid-template-columns:1fr 1fr;gap:18px 14px}
+  .y-kpi .k{min-height:2.7em}
+  .y-kpi .v{font-size:1.4rem}
+  .y-total-kpi{gap:14px}
+  .y-total-kpi .k{min-height:2.7em}
+  .y-total-kpi .v{font-size:1.42rem}
+  .y-seg.two{grid-template-columns:1fr}
+  .cta-band{padding:36px 24px}
+  .f-grid{grid-template-columns:1fr}
+  .topbar-inner{padding:14px 20px;gap:10px}
+  .topbar-brand .name{font-size:11px;letter-spacing:.09em}
+  .topbar-cta{padding:9px 13px;font-size:10px;letter-spacing:.1em}
+}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109732633', 'ym');
+
+    ym(109732633, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109732633" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<header id="topbar"><div class="topbar-inner">
+  <a href="/ru/" class="topbar-brand"><span class="name">West East Gate</span></a>
+  <nav class="topbar-nav">
+    <a href="/ru/#catalog">Каталог</a>
+    <a href="/ru/podbor.html">Подбор за 2 минуты</a>
+    <a href="/ru/dohodnost-calculator.html">Доходность</a>
+    <a href="/ru/rassrochka-calculator.html">Рассрочка 0%</a>
+    <a href="/dogovor-ach22-thailand-ru.html">Правовая база</a>
+  </nav>
+  <div class="topbar-actions">
+    <a href="/ru/#contact" class="topbar-cta">Купить</a>
+  </div>
+</div></header>
+
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('/images/projects/casademonte/drone.jpg')"></div>
+  <div class="hero-inner">
+    <div class="hero-flag"><span class="dot"></span>Расчёт по Налоговому кодексу Таиланда</div>
+    <h1>Сколько заберёт налог, когда вы будете <strong>продавать</strong></h1>
+    <p class="hero-sub">Четыре платежа в Земельном департаменте считаются по разным базам и разным правилам, поэтому «примерно 6%» здесь не работает. Калькулятор собирает их вместе, показывает сумму на руки и реальную прибыль — и отдельно считает, сколько экономит выдержка пяти лет владения.</p>
+  </div>
+</section>
+
+<section class="s"><div class="container">
+  <div class="s-head">
+    <span class="kicker">Калькулятор</span>
+    <h2>Налоги и сборы при продаже</h2>
+    <p>Модель рассчитана на продажу квартиры во freehold — переход права собственности с регистрацией в Земельном департаменте. Заполните поля слева, справа появится разбор до последней строки.</p>
+  </div>
+
+  <div class="y-grid">
+    <!-- ── INPUTS ── -->
+    <div class="y-panel">
+
+      <div class="y-step">
+        <div class="y-step-head">
+          <span class="t"><i>01</i>Объект и цены</span>
+          <span class="h">Цена покупки нужна,<br/>чтобы посчитать прибыль</span>
+        </div>
+        <div class="y-field">
+          <label for="tProject">Проект из каталога WEGC</label>
+          <select id="tProject" autocomplete="off"><option value="">— свой объект —</option></select>
+          <span class="y-hint">Подставит цену «от» как ориентир для цены покупки. Дальше цифры правьте под свою сделку.</span>
+        </div>
+        <div class="y-meta" id="tMeta">
+          <div><div class="l">Район</div><div class="v" id="tmDistrict">—</div></div>
+          <div><div class="l">Структура</div><div class="v" id="tmStruct">—</div></div>
+        </div>
+        <a class="y-projlink" id="tProjLink" href="#">Открыть паспорт проекта →</a>
+        <div class="y-two" style="margin-top:16px">
+          <div class="y-field">
+            <label for="tSale">Цена продажи</label>
+            <span class="y-unit"><input id="tSale" type="number" inputmode="numeric" min="0" step="100000" value="6000000" autocomplete="off"/><span>฿</span></span>
+          </div>
+          <div class="y-field">
+            <label for="tBuy">Цена покупки</label>
+            <span class="y-unit"><input id="tBuy" type="number" inputmode="numeric" min="0" step="100000" value="4780000" autocomplete="off"/><span>฿</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="y-step">
+        <div class="y-step-head">
+          <span class="t"><i>02</i>Оценочная стоимость</span>
+          <span class="h">База для сбора за перевод<br/>и налога у источника</span>
+        </div>
+        <p class="y-hint" style="margin-bottom:14px">Официальная оценка Департамента казны, почти всегда ниже цены сделки. Точную цифру по юниту дают в Земельном офисе перед сделкой — до этого считаем от доли.</p>
+        <div class="y-two">
+          <div class="y-field">
+            <label for="tAvPct">Оценка как доля от цены</label>
+            <span class="y-unit"><input id="tAvPct" type="number" inputmode="decimal" min="20" max="100" step="1" value="80" autocomplete="off"/><span>%</span></span>
+          </div>
+          <div class="y-field">
+            <label for="tAv">Оценочная стоимость</label>
+            <span class="y-unit"><input id="tAv" type="number" inputmode="numeric" min="0" step="100000" value="4800000" autocomplete="off"/><span>฿</span></span>
+          </div>
+        </div>
+        <span class="y-hint">Правьте любое из двух полей — второе пересчитается само. Если знаете точную оценку, вводите её напрямую.</span>
+      </div>
+
+      <div class="y-step">
+        <div class="y-step-head">
+          <span class="t"><i>03</i>Срок владения и продавец</span>
+          <span class="h">Определяет вычет<br/>и режим налога</span>
+        </div>
+        <div class="y-field">
+          <label for="tYears">Полных лет владения на момент продажи</label>
+          <span class="y-unit"><input id="tYears" type="number" inputmode="numeric" min="1" max="30" step="1" value="3" autocomplete="off"/><span>лет</span></span>
+          <span class="y-hint">Отсчёт идёт от даты внесения вашего имени в титул, а не от подписания договора с застройщиком. Срок стройки в этот счёт не входит.</span>
+        </div>
+        <div class="y-field">
+          <span class="y-lbl">Кто продаёт</span>
+          <div class="y-seg two">
+            <label><input type="radio" name="tWho" value="person" checked autocomplete="off"/><span class="y-segbox"><b>Физическое лицо</b><small>Прогрессивная шкала с вычетом за срок владения</small></span></label>
+            <label><input type="radio" name="tWho" value="company" autocomplete="off"/><span class="y-segbox"><b>Компания</b><small>Налог у источника 1%, SBT всегда</small></span></label>
+          </div>
+        </div>
+        <div id="tExWrap">
+          <span class="y-lbl" style="display:block;margin-bottom:9px">Основания освобождения от SBT</span>
+          <label class="y-chk" id="tChkTabien">
+            <input type="checkbox" id="tTabien" autocomplete="off"/>
+            <span><b>Имя в домовой книге более года</b><small>Объект был основным жильём. Иностранцу доступна жёлтая книга (Tabien Baan Lem Lueang), и на практике этот путь используется редко — уточните применимость у юриста.</small></span>
+          </label>
+          <label class="y-chk" id="tChkInherit">
+            <input type="checkbox" id="tInherit" autocomplete="off"/>
+            <span><b>Получено по наследству или в дар</b><small>Норматив расходов фиксируется на уровне 50% независимо от срока владения, SBT не начисляется.</small></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="y-step">
+        <div class="y-step-head">
+          <span class="t"><i>04</i>Расходы сделки</span>
+          <span class="h">Влияют на сумму<br/>на руки</span>
+        </div>
+        <details class="y-adv">
+          <summary><span>Распределение сбора, комиссия, льготы</span><span class="sum"><span id="tAdvSum">2% пополам · 3%</span> <span class="chev">+</span></span></summary>
+          <div class="y-adv-body">
+            <div class="y-field">
+              <label for="tSplit">Сбор за перевод права — доля продавца</label>
+              <select id="tSplit" autocomplete="off">
+                <option value="0.5" selected>Пополам с покупателем — 1%</option>
+                <option value="1">Полностью на продавце — 2%</option>
+                <option value="0">Полностью на покупателе — 0%</option>
+              </select>
+              <span class="y-hint">По обычаю сбор делится пополам. По форме Аор Чор 22 застройщик не вправе перекладывать на покупателя более половины.</span>
+            </div>
+            <div class="y-field">
+              <label for="tComm">Комиссия агента при продаже</label>
+              <span class="y-unit"><input id="tComm" type="number" inputmode="decimal" min="0" max="10" step="0.5" value="3" autocomplete="off"/><span>%</span></span>
+              <span class="y-hint">Считается от цены продажи. На вторичном рынке Пхукета обычно 3–5%.</span>
+            </div>
+            <label class="y-chk" id="tChkRed" style="margin-bottom:0">
+              <input type="checkbox" id="tReduced" autocomplete="off"/>
+              <span><b>Льготная ставка сбора за перевод 0,01%</b><small>Мера господдержки, которую периодически вводят и продлевают с лимитом по цене объекта. Исторически она распространялась только на покупателей — граждан Таиланда. Включайте, лишь подтвердив действие меры и её применимость к вашей сделке.</small></span>
+            </label>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ── RESULTS ── -->
+    <div>
+      <div class="y-res">
+        <div class="cap">Земельный департамент</div>
+        <h3>Расчёт при продаже</h3>
+
+        <div class="y-kpi">
+          <div>
+            <div class="k">Всего налогов и сборов</div>
+            <div class="v big" id="rTax">—</div>
+            <div class="s" id="rTaxSub">—</div>
+          </div>
+          <div>
+            <div class="k">Эффективная ставка</div>
+            <div class="v" id="rRate">—</div>
+            <div class="s">от цены продажи</div>
+          </div>
+          <div>
+            <div class="k">На руки после сделки</div>
+            <div class="v" id="rNet">—</div>
+            <div class="s" id="rNetSub">—</div>
+          </div>
+          <div>
+            <div class="k">Прибыль к цене покупки</div>
+            <div class="v" id="rProfit">—</div>
+            <div class="s" id="rProfitSub">—</div>
+          </div>
+        </div>
+
+        <div class="y-lease" id="rBand">
+          <div class="lt" id="rBandT">Режим</div>
+          <p id="rBandP">—</p>
+        </div>
+
+        <details class="y-break" open>
+          <summary><span>Из чего складывается</span><span class="chev">+</span></summary>
+          <div class="y-row"><span class="k">Цена продажи</span><span class="v" id="rSale">—</span></div>
+          <div class="y-row"><span class="k">Оценочная стоимость</span><span class="v" id="rAv">—</span></div>
+          <div class="y-row neg"><span class="k" id="rTfK">Сбор за перевод права</span><span class="v" id="rTf">—</span></div>
+          <div class="y-row neg" id="rSbtRow"><span class="k">Специальный налог на бизнес, 3,3%</span><span class="v" id="rSbt">—</span></div>
+          <div class="y-row neg" id="rStampRow"><span class="k">Гербовый сбор, 0,5%</span><span class="v" id="rStamp">—</span></div>
+          <div class="y-row neg"><span class="k" id="rWhtK">Подоходный налог у источника</span><span class="v" id="rWht">—</span></div>
+          <div class="y-row neg"><span class="k">Комиссия агента</span><span class="v" id="rComm">—</span></div>
+          <div class="y-row sum"><span class="k">Остаётся на руки</span><span class="v" id="rNet2">—</span></div>
+        </details>
+
+        <details class="y-break">
+          <summary><span>Как посчитан налог у источника</span><span class="chev">+</span></summary>
+          <div id="rWhtCalc"></div>
+        </details>
+      </div>
+
+      <!-- exit cost handoff -->
+      <div class="y-total">
+        <div class="y-total-head">
+          <h4>Ваши реальные расходы на выходе</h4>
+          <p>Это та самая цифра, которую в калькуляторе доходности нужно поставить в поле «Расходы при продаже». По умолчанию там стоит усреднённое значение — подставьте своё, и полная доходность станет точнее.</p>
+        </div>
+        <div class="y-total-kpi">
+          <div>
+            <div class="k">Расходы при продаже</div>
+            <div class="v" id="rExit">—</div>
+            <div class="s">налоги, сборы и комиссия к цене продажи</div>
+          </div>
+          <div>
+            <div class="k">Без комиссии агента</div>
+            <div class="v" id="rExitNoComm">—</div>
+            <div class="s">только налоги и сборы</div>
+          </div>
+        </div>
+        <p class="y-total-note">Перенести значение: <a href="/ru/dohodnost-calculator.html">открыть калькулятор доходности</a> и вписать его в поле «Расходы при продаже» в блоке о горизонте владения.</p>
+      </div>
+
+      <!-- scenarios -->
+      <div class="y-stress">
+        <h4>Что меняет результат</h4>
+        <p class="sh">Одни и те же деньги при разных вводных дают разный налог. Сценарии считаются от текущих значений — меняется только один параметр.</p>
+        <div id="rScen"></div>
+      </div>
+
+      <div class="y-cta">
+        <a href="/ru/#contact" class="btn btn-primary">Посчитать по моей сделке</a>
+        <a href="/dogovor-ach22-thailand-ru.html" class="btn btn-secondary">Кто платит по закону</a>
+      </div>
+
+      <div class="y-disc">Расчёт носит справочный характер и не является налоговой консультацией. Оценочную стоимость определяет Департамент казны, и до сделки она известна только приблизительно. Итоговые суммы фиксирует Земельный офис в день сделки, а выбор между окончательным удержанием и включением дохода в годовую декларацию стоит просчитать с бухгалтером.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="s cream"><div class="container">
+  <div class="s-head">
+    <span class="kicker">Методика</span>
+    <h2>Откуда берутся цифры</h2>
+    <p>Четыре платежа, четыре разные базы. Ошибки в расчётах почти всегда возникают из-за того, что все ставки складывают на одну сумму.</p>
+  </div>
+  <div class="m-grid">
+    <div class="m-card">
+      <div class="n">1</div>
+      <h3>Сбор за перевод права — 2%</h3>
+      <p>Считается от <strong>оценочной стоимости</strong>, а не от цены сделки. По обычаю делится между покупателем и продавцом пополам, то есть по 1% с каждого, но распределение фиксируется в договоре. Периодически государство вводит льготную ставку 0,01% с лимитом по цене объекта — исторически она была доступна только покупателям с тайским гражданством.</p>
+    </div>
+    <div class="m-card">
+      <div class="n">2</div>
+      <h3>SBT или гербовый сбор — но не оба</h3>
+      <p>Специальный налог на бизнес — <code>3% + 10% муниципальной надбавки = 3,3%</code> от <strong>большей</strong> из величин: цены сделки или оценочной стоимости. Применяется, если продавец — компания либо физлицо, владевшее объектом менее пяти лет. Если освобождение есть, вместо SBT платится гербовый сбор 0,5% от той же базы. Одновременно два платежа не начисляются никогда — это самая частая ошибка в подсчётах.</p>
+    </div>
+    <div class="m-card">
+      <div class="n">3</div>
+      <h3>Налог у источника для физлица</h3>
+      <p>Пять шагов по ст. 48(4) Налогового кодекса. От <strong>оценочной стоимости</strong> вычитается норматив расходов по сроку владения, остаток делится на число лет, к годовой сумме применяется прогрессивная шкала, результат умножается обратно на число лет. Важная деталь: <code>вычет первых 150 000 ฿ здесь не действует</code> — ставка 5% идёт с нуля, поэтому шкала жёстче обычной.</p>
+    </div>
+    <div class="m-card">
+      <div class="n">4</div>
+      <h3>Норматив расходов по сроку</h3>
+      <p>Чем дольше владение, тем меньше вычитается: <code>92%</code> за год, <code>84%</code> за два, <code>77%</code> за три, <code>71%</code> за четыре, <code>65%</code> за пять, <code>60%</code> за шесть, <code>55%</code> за семь и <code>50%</code> за восемь лет и более. Начатый год считается полным, срок свыше десяти лет считается как десять. При наследстве или дарении норматив фиксируется на 50%.</p>
+    </div>
+    <div class="m-card">
+      <div class="n">5</div>
+      <h3>Почему долгое владение не всегда дешевле</h3>
+      <p>Норматив расходов перестаёт снижаться на восьмом году, а остаток делится на всё большее число лет — годовая база падает и попадает в низкие ставки. Поэтому кривая налога у источника не монотонна: у коротких сроков спасает большой вычет, у длинных — дробление по годам, а самое неприятное сочетание лежает посередине.</p>
+    </div>
+    <div class="m-card">
+      <div class="n">6</div>
+      <h3>Что модель не считает</h3>
+      <p>Модель описывает продажу квартиры во <strong>freehold</strong>. Выход из leasehold — это переуступка права аренды с другой структурой платежей: регистрационный сбор около 1% и гербовый сбор около 0,1% от суммы платежей за весь срок аренды. Продажа виллы с землёй и переуступка договора с застройщиком до сдачи считаются отдельно.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="s"><div class="container">
+  <div class="s-head">
+    <span class="kicker">Справка</span>
+    <h2>Кто что платит и от какой базы</h2>
+    <p>Сводка по четырём платежам. Колонка «по обычаю» отражает практику Пхукета, но распределение всегда фиксируется договором.</p>
+  </div>
+  <div class="t-wrap"><table>
+    <thead><tr><th>Платёж</th><th>Ставка</th><th>База расчёта</th><th>Кто платит по обычаю</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Сбор за перевод права</strong></td><td>2%</td><td>Оценочная стоимость</td><td>Пополам, по 1%</td></tr>
+      <tr><td><strong>Специальный налог на бизнес (SBT)</strong></td><td>3,3%</td><td>Большая из величин: цена сделки или оценка</td><td>Продавец</td></tr>
+      <tr><td><strong>Гербовый сбор</strong></td><td>0,5%</td><td>Большая из величин: цена сделки или оценка</td><td>Продавец, если SBT не применяется</td></tr>
+      <tr><td><strong>Налог у источника — физлицо</strong></td><td>Прогрессивная шкала</td><td>Оценочная стоимость за вычетом норматива по сроку</td><td>Продавец</td></tr>
+      <tr><td><strong>Налог у источника — компания</strong></td><td>1%</td><td>Большая из величин: цена сделки или оценка</td><td>Продавец</td></tr>
+    </tbody>
+  </table></div>
+  <p class="y-hint" style="margin-top:16px;max-width:80ch">Основания освобождения от SBT: владение пять полных лет и более; имя в домовой книге не менее года при использовании объекта как основного жилья; передача законному наследнику или наследнику по завещанию; передача родному ребёнку; получение по наследству. Отсчёт пятилетнего срока ведётся по точной дате, поэтому четыре года и 364 дня освобождения не дают.</p>
+</div></section>
+
+<section class="s cream"><div class="container">
+  <div class="s-head">
+    <span class="kicker">Вопросы</span>
+    <h2>Частые вопросы</h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Какие налоги платит продавец недвижимости в Таиланде?<span class="faq-icon">+</span></summary><p>При переводе права собственности в Земельном департаменте возникают четыре платежа. Сбор за перевод права — 2% от оценочной стоимости, по обычаю делится между сторонами пополам. Специальный налог на бизнес (SBT) — 3,3% от большей из двух величин: цены сделки или оценочной стоимости. Гербовый сбор — 0,5% от той же базы, но он взимается только если SBT не применяется: одновременно оба платежа не начисляются никогда. Подоходный налог у источника — для физического лица считается по формуле Налогового кодекса от оценочной стоимости с вычетом за срок владения, для компании это 1% от большей из двух величин.</p></details>
+    <details class="faq-item"><summary>Как считается подоходный налог у источника при продаже квартиры?<span class="faq-icon">+</span></summary><p>Для физического лица расчёт идёт в пять шагов по статье 48(4) Налогового кодекса Таиланда. Берётся оценочная стоимость Земельного департамента, а не цена сделки. Из неё вычитается норматив расходов, который зависит от срока владения: 92% за один год, 84% за два, 77% за три, 71% за четыре, 65% за пять, 60% за шесть, 55% за семь и 50% за восемь лет и более. Остаток делится на число лет владения. К полученной годовой сумме применяется прогрессивная шкала, причём вычет первых 150 000 батов здесь не действует и ставка 5% начинается с нуля. Полученный годовой налог умножается обратно на число лет владения. Срок свыше десяти лет считается как десять, а начатый год считается полным.</p></details>
+    <details class="faq-item"><summary>Почему выгодно продавать после пяти лет владения?<span class="faq-icon">+</span></summary><p>Специальный налог на бизнес в 3,3% задуман как мера против спекулятивной перепродажи и применяется, если продавец владел объектом менее пяти лет. Если пять полных лет прошло, SBT не начисляется, а вместо него платится гербовый сбор 0,5%. Разница в 2,8 процентных пункта от цены сделки — на квартире за 5 млн батов это около 140 000 батов. Отсчёт ведётся по точной дате внесения вашего имени в титул, поэтому четыре года и 364 дня льготы не дают. Калькулятор показывает эту экономию отдельной строкой.</p></details>
+    <details class="faq-item"><summary>Что такое оценочная стоимость и где её узнать?<span class="faq-icon">+</span></summary><p>Оценочная стоимость — это официальная оценка Департамента казны, которая используется как база для расчёта сбора за перевод права и подоходного налога у источника. Она почти всегда ниже рыночной цены сделки, что снижает налог. Точную цифру по конкретному юниту сообщают в Земельном офисе перед сделкой; заранее её можно запросить через юриста. Для предварительного расчёта в калькуляторе используется оценка как доля от цены сделки, по умолчанию 80% — это ориентир, а не гарантия.</p></details>
+    <details class="faq-item"><summary>Является ли налог у источника окончательным для физического лица?<span class="faq-icon">+</span></summary><p>По статье 48(4) Налогового кодекса продавец-физическое лицо при продаже недвижимости, приобретённой не в коммерческих целях, вправе не включать этот доход в годовую декларацию — тогда удержанный при сделке налог является окончательным. Альтернативно доход можно включить в декларацию и рассчитать по общим правилам, что иногда даёт возврат. Выбор зависит от полной картины ваших доходов в Таиланде за год, и его стоит просчитать с бухгалтером до сделки.</p></details>
+    <details class="faq-item"><summary>Подходит ли калькулятор для leasehold и для вилл?<span class="faq-icon">+</span></summary><p>Калькулятор считает продажу квартиры во freehold, то есть переход права собственности с регистрацией в Земельном департаменте. При leasehold выход из объекта оформляется как переуступка права аренды, и структура платежей другая: регистрационный сбор около 1% и гербовый сбор около 0,1% от суммы арендных платежей за весь срок, а налогообложение дохода от переуступки определяется отдельно. Продажа виллы с землёй тоже устроена иначе, поскольку это не квартира в кондоминиуме. Для этих случаев расчёт нужно делать индивидуально.</p></details>
+    <details class="faq-item"><summary>Можно ли вывести деньги от продажи за рубеж?<span class="faq-icon">+</span></summary><p>Да, но для этого важно сохранить документы о том, как деньги приходили в Таиланд. При покупке квартиры во freehold иностранцем оформляется FET — подтверждение поступления валюты из-за рубежа. Он нужен не только для регистрации права при покупке, но и как обоснование обратного вывода средств после продажи. Храните FET, договор купли-продажи и документы Земельного офиса: без них репатриация суммы усложняется.</p></details>
+  </div>
+</div></section>
+
+<section class="s"><div class="container">
+  <div class="cta-band">
+    <h2>Посчитаем <strong>вашу</strong> сделку с точной оценкой</h2>
+    <div class="acts">
+      <a href="/ru/#contact" class="btn btn-primary">Запросить расчёт</a>
+      <a href="/ru/dohodnost-calculator.html" class="btn btn-secondary">Калькулятор доходности</a>
+    </div>
+  </div>
+</div></section>
+
+<footer class="f"><div class="container">
+  <div class="f-grid">
+    <div class="f-col f-col-brand">
+      <div class="logo">West East Gate</div>
+      <p>Недвижимость Пхукета напрямую от застройщиков. Ноль комиссии покупателю, полная документация по каждому проекту.</p>
+    </div>
+    <div class="f-col">
+      <h5>Инструменты</h5>
+      <ul>
+        <li><a href="/ru/dohodnost-calculator.html">Калькулятор доходности</a></li>
+        <li><a href="/ru/nalog-pri-prodazhe-calculator.html">Налог при продаже</a></li>
+        <li><a href="/ru/rassrochka-calculator.html">Калькулятор рассрочки 0%</a></li>
+        <li><a href="/ru/podbor.html">Подбор за 2 минуты</a></li>
+        <li><a href="/ru/tseny.html">Цены на Пхукете 2026</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Справочник</h5>
+      <ul>
+        <li><a href="/dogovor-ach22-thailand-ru.html">Аор Чор 22 — форма договора</a></li>
+        <li><a href="/phuket-property-taxes-ru.html">Налоги и расходы</a></li>
+        <li><a href="/freehold-leasehold-thailand-ru.html">Freehold и Leasehold</a></li>
+        <li><a href="/buy-property-phuket-ru.html">Как купить на Пхукете</a></li>
+        <li><a href="/safe-buy-due-diligence-ru.html">Безопасная сделка и DD</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Контакты</h5>
+      <div class="f-corpname">WEST EAST TRADE GROUP PTE. LTD.</div>
+      <div class="f-meta">UEN 202505772C · Сингапур<br/>Бренд West East Gate Real Estate</div>
+      <div class="f-channels"><a href="mailto:property@wegc.fund">property@wegc.fund</a></div>
+    </div>
+  </div>
+  <div class="f-disclaimer">Калькулятор носит справочный характер и не является налоговой, юридической или инвестиционной консультацией, а также публичной офертой. Расчёт построен на нормах Налогового кодекса Таиланда о налоге у источника при продаже недвижимости, специальном налоге на бизнес и гербовом сборе, а также на ставке сбора за перевод права. Оценочную стоимость определяет Департамент казны, итоговые суммы фиксирует Земельный офис в день сделки. Ставки, льготы и порядок их применения могут меняться. Расчёт по конкретной сделке должен подтвердить бухгалтер или юрист, имеющий право практики в Таиланде.</div>
+  <div class="f-bottom"><span>© 2026 West East Gate Real Estate</span><span>Пхукет · Сингапур</span></div>
+</div></footer>
+
+<script src="/ru/wegc-projects-data.js"></script>
+<script>
+/* topbar + page reveal */
+(function(){
+  var bar=document.getElementById('topbar');
+  var onScroll=function(){ if(window.scrollY>60) bar.classList.add('solid'); else bar.classList.remove('solid'); };
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('page-ready');});
+  if(document.readyState!=='loading') document.body.classList.add('page-ready');
+})();
+
+/* ==================== SALE TAX CALCULATOR ==================== */
+(function(){
+  var P=window.WEGC_YIELD_PROJECTS||[];
+
+  function el(id){ return document.getElementById(id); }
+  function num(id){ var v=parseFloat(el(id).value); return isFinite(v)?v:0; }
+
+  var F={
+    project:el('tProject'), sale:el('tSale'), buy:el('tBuy'),
+    avPct:el('tAvPct'), av:el('tAv'), years:el('tYears'),
+    tabien:el('tTabien'), inherit:el('tInherit'),
+    split:el('tSplit'), comm:el('tComm'), reduced:el('tReduced')
+  };
+
+  /* ── Прогрессивная шкала для налога у источника при продаже недвижимости.
+        Отличается от обычной шкалы НДФЛ: вычет первых 150 000 ฿ не применяется,
+        поэтому ставка 5% начинается с нуля.
+        Формат: [верхняя граница, ставка, накопленный налог на нижней границе]. */
+  var WHT=[
+    [300000,   0.05, 0],
+    [500000,   0.10, 15000],
+    [750000,   0.15, 35000],
+    [1000000,  0.20, 72500],
+    [2000000,  0.25, 122500],
+    [5000000,  0.30, 372500],
+    [Infinity, 0.35, 1272500]
+  ];
+  function whtScale(x){
+    if(x<=0) return 0;
+    var lower=0;
+    for(var i=0;i<WHT.length;i++){
+      if(x<=WHT[i][0]) return WHT[i][2] + (x-lower)*WHT[i][1];
+      lower=WHT[i][0];
+    }
+    return 0;
+  }
+
+  /* Норматив расходов по сроку владения. Начатый год считается полным,
+     свыше 10 лет считается как 10. При наследстве или дарении — всегда 50%. */
+  var DED={1:0.92,2:0.84,3:0.77,4:0.71,5:0.65,6:0.60,7:0.55};
+  function dedRate(years,inherited){
+    if(inherited) return 0.50;
+    return years>=8 ? 0.50 : DED[years];
+  }
+
+  function model(o){
+    var yrsTax = Math.min(10, Math.max(1, Math.round(o.years)));
+    var base   = Math.max(o.sale, o.av);   /* база для SBT, гербового сбора и налога компании */
+
+    /* сбор за перевод права — от оценочной стоимости */
+    var tfRate = o.reduced ? 0.0001 : 0.02;
+    var tfFull = o.av * tfRate;
+    var tf     = tfFull * o.splitShare;
+
+    /* SBT либо гербовый сбор — взаимоисключающие */
+    var sbtExempt = o.company ? false : (o.years>=5 || o.tabien || o.inherit);
+    var sbtApplies = !sbtExempt;
+    var sbt   = sbtApplies ? base*0.033 : 0;
+    var stamp = sbtApplies ? 0 : base*0.005;
+
+    /* налог у источника */
+    var wht, whtSteps=null;
+    if(o.company){
+      wht = base*0.01;
+    } else {
+      var dr      = dedRate(yrsTax, o.inherit);
+      var deduct  = o.av*dr;
+      var rest    = Math.max(0, o.av-deduct);
+      var perYear = rest/yrsTax;
+      var taxYear = whtScale(perYear);
+      wht = taxYear*yrsTax;
+      whtSteps={dr:dr,deduct:deduct,rest:rest,perYear:perYear,taxYear:taxYear,yrs:yrsTax};
+    }
+
+    var comm  = o.sale*(o.comm/100);
+    var taxes = tf+sbt+stamp+wht;
+    var net   = o.sale - taxes - comm;
+
+    return {
+      tf:tf, tfFull:tfFull, tfRate:tfRate, sbt:sbt, stamp:stamp, wht:wht, comm:comm,
+      taxes:taxes, net:net, base:base, sbtApplies:sbtApplies, whtSteps:whtSteps,
+      profit:net-o.buy,
+      rate:o.sale>0 ? taxes/o.sale : 0,
+      exit:o.sale>0 ? (taxes+comm)/o.sale : 0,
+      exitNoComm:o.sale>0 ? taxes/o.sale : 0
+    };
+  }
+
+  /* ── форматирование ── */
+  function bt(v){
+    var r=Math.round(v);
+    return r.toLocaleString('ru-RU').replace(/\u00A0/g,' ')+' ฿';
+  }
+  function btShort(v){
+    var a=Math.abs(v);
+    if(a>=1000000) return (v/1000000).toFixed(a>=10000000?1:2).replace('.',',')+' млн ฿';
+    if(a>=1000)    return Math.round(v/1000)+' тыс ฿';
+    return Math.round(v)+' ฿';
+  }
+  function pct(v,d){ return (v*100).toFixed(d===undefined?1:d).replace('.',',')+'%'; }
+  function years(n){
+    var t=n%100, o=n%10;
+    if(t>10&&t<20) return n+' лет';
+    if(o===1) return n+' год';
+    if(o>=2&&o<=4) return n+' года';
+    return n+' лет';
+  }
+
+  function read(){
+    var who = document.querySelector('input[name="tWho"]:checked').value;
+    return {
+      sale:num('tSale'), buy:num('tBuy'), av:num('tAv'),
+      years:Math.max(1,Math.round(num('tYears'))),
+      company:(who==='company'),
+      tabien:F.tabien.checked, inherit:F.inherit.checked,
+      splitShare:parseFloat(F.split.value), comm:num('tComm'), reduced:F.reduced.checked
+    };
+  }
+
+  function render(){
+    var o=read(), r=model(o);
+
+    /* KPI */
+    el('rTax').textContent    = btShort(r.taxes);
+    el('rTaxSub').textContent = 'из них налог у источника ' + btShort(r.wht);
+    el('rRate').textContent   = pct(r.rate);
+    el('rNet').textContent    = btShort(r.net);
+    el('rNetSub').textContent = 'при цене продажи ' + btShort(o.sale);
+
+    var pv=el('rProfit');
+    pv.textContent = (r.profit>=0?'+':'−') + btShort(Math.abs(r.profit));
+    pv.className = 'v' + (r.profit<0?' neg':'');
+    el('rProfitSub').textContent = o.buy>0
+      ? (r.profit>=0?'рост на ':'потеря ') + pct(Math.abs(r.profit)/o.buy) + ' к цене покупки'
+      : 'укажите цену покупки';
+
+    /* режим SBT */
+    var band=el('rBand'), bt_=el('rBandT'), bp=el('rBandP');
+    band.className='y-lease';
+    if(o.company){
+      bt_.textContent='Продавец — компания';
+      bp.textContent='Для юридического лица SBT начисляется независимо от срока владения, а налог у источника составляет 1% от большей из величин: цены сделки или оценочной стоимости. Освобождения по сроку владения к компаниям не применяются.';
+    } else if(r.sbtApplies){
+      band.className='y-lease warn';
+      bt_.textContent='SBT начисляется — 3,3%';
+      var need=5-o.years;
+      bp.textContent='Владение менее пяти полных лет, поэтому вместо гербового сбора 0,5% начисляется специальный налог на бизнес 3,3%. Разница в 2,8 п.п. от базы — это '
+        + btShort(r.base*0.028) + '. До освобождения осталось ' + years(need) + '.';
+    } else {
+      band.className='y-lease good';
+      bt_.textContent='SBT не начисляется';
+      bp.textContent = o.inherit
+        ? 'Объект получен по наследству или в дар: SBT не начисляется, вместо него гербовый сбор 0,5%, а норматив расходов фиксируется на уровне 50%.'
+        : (o.years>=5
+            ? 'Владение пять полных лет и более, поэтому вместо SBT 3,3% начисляется гербовый сбор 0,5%. Экономия относительно продажи до пятилетнего рубежа — ' + btShort(r.base*0.028) + '.'
+            : 'Заявлено освобождение по домовой книге, поэтому вместо SBT 3,3% начисляется гербовый сбор 0,5%. Основание требует подтверждения в Земельном офисе.');
+    }
+
+    /* breakdown */
+    el('rSale').textContent = bt(o.sale);
+    el('rAv').textContent   = bt(o.av);
+    el('rTfK').textContent  = 'Сбор за перевод права, ' + (o.reduced?'0,01%':'2%')
+      + ' × ' + (o.splitShare===0.5?'½':(o.splitShare===1?'1':'0'));
+    el('rTf').textContent   = '− ' + bt(r.tf);
+    el('rSbtRow').style.display   = r.sbtApplies ? 'flex' : 'none';
+    el('rStampRow').style.display = r.sbtApplies ? 'none' : 'flex';
+    el('rSbt').textContent   = '− ' + bt(r.sbt);
+    el('rStamp').textContent = '− ' + bt(r.stamp);
+    el('rWhtK').textContent  = o.company ? 'Налог у источника, 1%' : 'Подоходный налог у источника';
+    el('rWht').textContent   = '− ' + bt(r.wht);
+    el('rComm').textContent  = '− ' + bt(r.comm);
+    el('rNet2').textContent  = bt(r.net);
+
+    /* пошаговый расчёт налога у источника */
+    var w=r.whtSteps, h='';
+    if(!w){
+      h='<div class="y-row"><span class="k">Ставка для юридического лица</span><span class="v">1%</span></div>'
+       + '<div class="y-row"><span class="k">База — большая из величин</span><span class="v">'+bt(r.base)+'</span></div>'
+       + '<div class="y-row sum"><span class="k">Налог у источника</span><span class="v">'+bt(r.wht)+'</span></div>';
+    } else {
+      h='<div class="y-row"><span class="k">1. Оценочная стоимость</span><span class="v">'+bt(o.av)+'</span></div>'
+       + '<div class="y-row neg"><span class="k">2. Норматив расходов, '+pct(w.dr,0)+' за '+years(w.yrs)+'</span><span class="v">− '+bt(w.deduct)+'</span></div>'
+       + '<div class="y-row"><span class="k">3. Налогооблагаемый остаток</span><span class="v">'+bt(w.rest)+'</span></div>'
+       + '<div class="y-row"><span class="k">4. Остаток ÷ '+years(w.yrs)+'</span><span class="v">'+bt(w.perYear)+'</span></div>'
+       + '<div class="y-row"><span class="k">5. Налог по шкале за год</span><span class="v">'+bt(w.taxYear)+'</span></div>'
+       + '<div class="y-row sum"><span class="k">× '+years(w.yrs)+' = налог у источника</span><span class="v">'+bt(r.wht)+'</span></div>';
+      if(o.years>10) h+='<div class="y-row mute"><span class="k">Срок владения '+years(o.years)+' учтён как 10 лет — предел по кодексу</span><span class="v"></span></div>';
+    }
+    el('rWhtCalc').innerHTML=h;
+
+    /* exit cost */
+    el('rExit').textContent       = pct(r.exit);
+    el('rExitNoComm').textContent = pct(r.exitNoComm);
+
+    /* сценарии */
+    var sc=[];
+    sc.push({cls:'base',n:'Текущий расчёт',s:years(o.years)+' владения'+(o.company?', компания':''),v:pct(r.rate),d:btShort(r.taxes)});
+
+    if(!o.company && o.years<5 && !o.tabien && !o.inherit){
+      var r5=model(Object.assign({},o,{years:5}));
+      sc.push({cls:'ok',n:'Продажа после 5 полных лет',s:'SBT заменяется гербовым сбором',v:pct(r5.rate),d:'экономия '+btShort(r.taxes-r5.taxes)});
+    }
+    if(!o.company && o.years<8){
+      var r8=model(Object.assign({},o,{years:8}));
+      sc.push({cls:r8.rate<=r.rate?'ok':'bad',n:'Продажа на 8-м году',s:'норматив расходов упирается в предел 50% — дольше не всегда дешевле',v:pct(r8.rate),d:(r8.taxes<r.taxes?'−':'+')+btShort(Math.abs(r8.taxes-r.taxes))});
+    }
+    var rAv=model(Object.assign({},o,{av:o.av*1.15}));
+    sc.push({cls:rAv.rate>r.rate?'bad':'ok',n:'Оценка выше на 15%',s:'если Земельный офис оценит дороже прогноза',v:pct(rAv.rate),d:'+'+btShort(rAv.taxes-r.taxes)});
+
+    el('rScen').innerHTML = sc.map(function(s){
+      return '<div class="y-scen '+s.cls+'"><div class="n">'+s.n+'<small>'+s.s+'</small></div>'
+           + '<div class="r"><b>'+s.v+'</b><small>'+s.d+'</small></div></div>';
+    }).join('');
+
+    /* сводка в свёрнутом блоке расходов */
+    el('tAdvSum').textContent = (o.reduced?'0,01%':'2%')
+      + (o.splitShare===0.5?' пополам':(o.splitShare===1?' на продавце':' на покупателе'))
+      + ' · ' + (o.comm+'').replace('.',',') + '%';
+
+    /* подсветка чекбоксов */
+    [['tChkTabien',F.tabien],['tChkInherit',F.inherit],['tChkRed',F.reduced]].forEach(function(p){
+      el(p[0]).classList.toggle('on', p[1].checked);
+    });
+    /* при владении 5+ лет освобождение уже есть — основания не влияют */
+    var moot = (!o.company && o.years>=5);
+    el('tChkTabien').classList.toggle('dim', moot);
+    el('tExWrap').style.display = o.company ? 'none' : 'block';
+  }
+
+  /* ── связка оценочной стоимости и доли ── */
+  function avFromPct(){
+    var sale=num('tSale'), p=num('tAvPct');
+    F.av.value = Math.round(sale*p/100);
+  }
+  function pctFromAv(){
+    var sale=num('tSale'), av=num('tAv');
+    if(sale>0) F.avPct.value = (av/sale*100).toFixed(0);
+  }
+
+  /* ── проекты ── */
+  P.forEach(function(p){
+    var op=document.createElement('option');
+    op.value=p.slug; op.textContent=p.name+' · '+p.district;
+    F.project.appendChild(op);
+  });
+
+  F.project.addEventListener('change',function(){
+    var p=P.filter(function(x){return x.slug===F.project.value;})[0];
+    var meta=el('tMeta'), link=el('tProjLink');
+    if(!p){ meta.classList.remove('show'); link.classList.remove('show'); return; }
+    el('tmDistrict').textContent=p.district;
+    el('tmStruct').textContent=p.struct;
+    meta.classList.add('show');
+    link.href=p.url; link.classList.add('show');
+    F.buy.value=p.price;
+    F.sale.value=Math.round(p.price*1.25/100000)*100000;  /* нейтральный ориентир: +25% к цене входа */
+    avFromPct();
+    render();
+  });
+
+  F.sale.addEventListener('input',function(){ avFromPct(); render(); });
+  F.avPct.addEventListener('input',function(){ avFromPct(); render(); });
+  F.av.addEventListener('input',function(){ pctFromAv(); render(); });
+
+  ['tBuy','tYears','tComm'].forEach(function(id){
+    el(id).addEventListener('input',render);
+  });
+  ['tSplit'].forEach(function(id){ el(id).addEventListener('change',render); });
+  ['tTabien','tInherit','tReduced'].forEach(function(id){ el(id).addEventListener('change',render); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="tWho"]'),function(i){
+    i.addEventListener('change',render);
+  });
+
+  render();
+  /* браузер может восстановить значения полей после render — пересчитываем на load */
+  window.addEventListener('load',render);
+})();
+</script>
+</body>
+</html>

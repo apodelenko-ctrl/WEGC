@@ -40,7 +40,23 @@
     <loc>https://wegc.fund/ru/dohodnost-calculator.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wegc.fund/ru/dohodnost-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wegc.fund/ru/dohodnost-calculator.html"/>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html"/>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wegc.fund/dogovor-ach22-thailand-ru.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wegc.fund/dogovor-ach22-thailand-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wegc.fund/dogovor-ach22-thailand-ru.html"/>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
