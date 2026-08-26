@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Калькулятор доходности недвижимости на Пхукете · чистая доходность с учётом простоя, налогов и leasehold · WEGC</title>
-<meta name="description" content="Посчитайте чистую доходность и окупаемость квартиры или виллы на Пхукете: расходы на входе, простой, комиссия управляющей, maintenance, налог на землю и строения и налог на доход по реальной прогрессивной шкале Таиланда с вычетом 30%. Цены и площади подставляются из паспортов проектов WEGC."/>
+<meta name="description" content="Посчитайте чистую доходность и окупаемость квартиры или виллы на Пхукете: расходы на входе, простой, комиссия управляющей, maintenance, налог на землю и строения и налог на доход по реальной прогрессивной шкале Таиланда с вычетом 30%. Плюс полная доходность (IRR) с учётом прироста стоимости и амортизации leasehold. Цены и площади подставляются из паспортов проектов WEGC."/>
 <meta name="robots" content="index,follow"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Калькулятор чистой доходности недвижимости Пхукета · WEGC"/>
@@ -41,6 +41,8 @@
     {"@type":"Question","name":"Почему для leasehold важен срок окупаемости?","acceptedAnswer":{"@type":"Answer","text":"Leasehold — это право аренды на конечный срок, типично 30 лет с возможностью продления по условиям договора. Доход от объекта поступает только в пределах этого срока, поэтому окупаемость надо сопоставлять с остатком срока: окупаемость в 12 лет из 30 означает, что около 40% срока уходит на возврат вложенного, а оставшиеся годы формируют доход. Если расчётная окупаемость приближается к сроку договора, экономика объекта как источника дохода становится крайне чувствительной к простою и падению ставки. Калькулятор показывает это соотношение отдельным блоком."}},
     {"@type":"Question","name":"Как считается налог на доход от аренды в Таиланде?","acceptedAnswer":{"@type":"Answer","text":"Аренда недвижимости — доход по статье 40(5) Налогового кодекса Таиланда. Из валовой арендной платы вычитается стандартный вычет 30% для строений (либо фактические расходы, если они подтверждены документами), затем личная льгота налогоплательщика 60 000 THB, и к остатку применяется прогрессивная шкала: до 150 000 THB — 0%, далее ступени 5%, 10%, 15%, 20%, 25%, 30% и 35% свыше 5 млн THB. Отдельно действует минимальный налог 0,5% от валового дохода, но только если он превышает налог по шкале и составляет не менее 5 000 THB — то есть при выручке от 1 млн THB в год. Калькулятор считает именно так и показывает эффективную ставку к валовой выручке."}},
     {"@type":"Question","name":"Правда ли, что нерезидент платит с аренды 15%?","acceptedAnswer":{"@type":"Answer","text":"Нет, это распространённая ошибка. Ставки налога на доход в Таиланде одинаковы для резидентов и нерезидентов: прогрессивная шкала от 0% до 35%, тот же стандартный вычет 30% и та же личная льгота. Цифра 15% — это ставка удержания у источника по статье 50(3), которую удерживает арендатор-юридическое лицо при выплате аренды нерезиденту. Удержание не является итоговым налогом: оно засчитывается против начисленного по шкале и при обычных суммах аренды почти всегда возвращается переплатой. При валовой аренде 1 000 000 THB в год налог по шкале составит 48 500 THB, тогда как удержание 15% даст 150 000 THB, то есть свыше 100 000 THB подлежат возврату по итогам декларации."}},
+    {"@type":"Question","name":"Учитывает ли калькулятор рост стоимости недвижимости?","acceptedAnswer":{"@type":"Answer","text":"Да, отдельным блоком «Полная доходность». Чистая доходность и окупаемость считаются только по аренде — это осознанно, потому что арендный поток можно проверить, а рост стоимости является допущением. Но полный результат складывается из двух частей, поэтому калькулятор дополнительно считает стоимость объекта на момент продажи, вычитает расходы на сделку и сводит всё в IRR — полную доходность в процентах годовых с учётом сроков поступления денег. По объектам WEGC при владении 10 лет и росте 5% в год полная доходность обычно попадает в диапазон 6,5–8,5% годовых, тогда как окупаемость только за счёт аренды составляет 18–22 года. Прирост считается от цены юнита: расходы на входе вроде мебели и регистрации при перепродаже не возвращаются."}},
+    {"@type":"Question","name":"Почему прирост стоимости у leasehold меньше, чем у freehold?","acceptedAnswer":{"@type":"Answer","text":"Потому что leasehold — истощаемый актив. Freehold это бессрочное право, его стоимость растёт вместе с рынком без поправок. Leasehold даёт право пользования на конечный срок, и по мере его истечения право дешевеет: к концу срока оно стоит ноль, продавать будет нечего. Поэтому к leasehold нельзя просто прибавить рыночный рост. Калькулятор оценивает остаток срока как приведённую стоимость, а не линейную долю: дальние годы сильно дисконтированы, поэтому за первые годы объект почти не обесценивается, а в последние обваливается быстро. Из 30-летнего права через 10 лет остаётся около 85% стоимости, через 20 лет — около 57%, через 25 лет — около трети. На практике это означает, что у leasehold есть оптимальное окно выхода: держать право до последних лет срока невыгодно."}},
     {"@type":"Question","name":"Откуда берутся цены и площади в калькуляторе?","acceptedAnswer":{"@type":"Answer","text":"Цена «от» и площадь стартового юнита подставляются из паспортов проектов, с которыми WEGC работает по прямому договору с застройщиком. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, они не являются гарантией и обязательно требуют проверки по конкретному юниту: этаж, вид, корпус и меблировка меняют ставку существенно. Мы можем предоставить расчёт по вашему юниту с фактическими цифрами из договора и актуальным арендным анализом."}}
   ]
 }
@@ -221,6 +223,22 @@ section.s.cream{background:var(--bg-cream)}
 .y-row.sum .k{color:#fff;font-weight:600}
 .y-row.sum .v{color:var(--gold-bright);font-size:1.02rem}
 
+/* total return block */
+.y-total{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 26px 22px}
+.y-total-head h4{font-size:1.1rem;font-weight:600;letter-spacing:-.02em;color:var(--ink);margin-bottom:6px}
+.y-total-head p{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.y-total-kpi{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line-soft)}
+.y-total-kpi .k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;line-height:1.35}
+.y-total-kpi .v{font-size:1.7rem;font-weight:600;letter-spacing:-.03em;color:var(--gold);line-height:1.05}
+.y-total-kpi .v.neg{color:var(--red)}
+.y-total-kpi .s{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
+.y-trow{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line-soft);font-size:13.5px}
+.y-trow:first-child{border-top:none;padding-top:14px}
+.y-trow .k{color:var(--muted)}
+.y-trow .v{font-weight:600;color:var(--ink);text-align:right;white-space:nowrap}
+.y-trow.neg .v{color:var(--red)}
+.y-total-note{font-size:11.5px;color:var(--muted);line-height:1.65;margin-top:14px;padding-top:13px;border-top:1px solid var(--line-soft)}
+
 /* stress test */
 .y-stress{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 26px}
 .y-stress h4{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
@@ -291,6 +309,11 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
   .y-res{padding:26px 20px}
   .y-kpi{grid-template-columns:1fr 1fr;gap:18px 14px}
   .y-kpi .v{font-size:1.5rem}
+  /* заголовки переносятся на разное число строк — резервируем две, чтобы значения совпали по базовой линии */
+  .y-total-kpi{gap:14px}
+  .y-total-kpi .k{min-height:2.7em}
+  .y-total-kpi .v{font-size:1.45rem}
+  .y-trow{font-size:13px}
   .y-three{grid-template-columns:1fr}
   .y-seg.two{grid-template-columns:1fr}
   .cta-band{padding:36px 24px}
@@ -328,7 +351,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
   <div class="hero-inner">
     <span class="hero-flag"><span class="dot"></span><span>Считает не валовую, а чистую доходность</span></span>
     <h1>Калькулятор <strong>доходности</strong> недвижимости Пхукета</h1>
-    <p class="hero-sub">Валовая доходность в рекламе — это арендная ставка, поделённая на цену. Здесь считается то, что реально останется у собственника: после расходов на входе, простоя, управления, maintenance, налогов и с поправкой на срок leasehold. Цену и площадь можно подставить из паспорта любого нашего проекта.</p>
+    <p class="hero-sub">Валовая доходность в рекламе — это арендная ставка, поделённая на цену. Здесь считается то, что реально останется у собственника: после расходов на входе, простоя, управления, maintenance, налогов и с поправкой на срок leasehold. Отдельно считается полная доходность — аренда вместе с приростом стоимости к моменту продажи. Цену и площадь можно подставить из паспорта любого нашего проекта.</p>
   </div>
 </section>
 
@@ -530,6 +553,30 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
             </div>
           </details>
         </div>
+
+        <!-- STEP 5 -->
+        <div class="y-step">
+          <div class="y-step-head">
+            <span class="t"><i>5</i>Выход и рост стоимости</span>
+            <span class="h">Полная доходность</span>
+          </div>
+          <p class="y-hint" style="margin-bottom:14px">Аренда — только половина результата. Вторая половина — что объект будет стоить, когда вы его продадите. Это прогноз, а не факт: меняйте ставку роста и смотрите, как расходится картина.</p>
+          <div class="y-two">
+            <div class="y-field">
+              <label for="yHold">Срок владения</label>
+              <span class="y-unit"><input id="yHold" type="number" inputmode="numeric" min="1" max="60" step="1" value="10" autocomplete="off"/><span>лет</span></span>
+            </div>
+            <div class="y-field">
+              <label for="yGrowth">Рост стоимости</label>
+              <span class="y-unit"><input id="yGrowth" type="number" inputmode="decimal" min="-10" max="20" step="0.5" value="5" autocomplete="off"/><span>%/год</span></span>
+            </div>
+          </div>
+          <div class="y-field">
+            <label for="yExitCost">Расходы при продаже</label>
+            <span class="y-unit"><input id="yExitCost" type="number" inputmode="decimal" min="0" max="20" step="0.5" value="5" autocomplete="off"/><span>% от цены</span></span>
+            <span class="y-hint">Комиссия агента при перепродаже, сборы за перевод права и налоги на сделку. Прирост считается от цены юнита: расходы на входе — мебель, регистрация, sinking fund — при продаже не возвращаются.</span>
+          </div>
+        </div>
       </div>
 
       <!-- ============ RESULTS ============ -->
@@ -573,6 +620,27 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
           </details>
         </div>
 
+        <div class="y-total">
+          <div class="y-total-head">
+            <h4>Полная доходность за <span id="yTotHold">10 лет</span></h4>
+            <p>Аренда плюс изменение стоимости объекта, за вычетом расходов на входе и при продаже.</p>
+          </div>
+          <div class="y-total-kpi">
+            <div>
+              <div class="k">Полная доходность</div>
+              <div class="v" id="yIrr">—</div>
+              <div class="s">годовых с учётом сроков платежей (IRR)</div>
+            </div>
+            <div>
+              <div class="k">Прибыль за период</div>
+              <div class="v" id="yProfit">—</div>
+              <div class="s" id="yProfitRub">—</div>
+            </div>
+          </div>
+          <div id="yTotRows"></div>
+          <p class="y-total-note" id="yTotNote">—</p>
+        </div>
+
         <div class="y-stress">
           <h4>Стресс-тест</h4>
           <p class="sh">Доходность на дефолтных допущениях — это лучший сценарий. Полезнее смотреть, что произойдёт, если рынок пойдёт против вас: на Пхукете конкуренция за арендатора растёт вместе с объёмом ввода новых корпусов.</p>
@@ -585,7 +653,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
         </div>
 
         <div class="y-disc">
-          Расчёт носит справочный характер, не является публичной офертой, инвестиционным, налоговым или финансовым советом и не гарантирует доходность. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, а не обязательство WEGC: фактическая ставка зависит от корпуса, этажа, вида, меблировки и сезона. Налог на доход считается по прогрессивной шкале Таиланда со стандартным вычетом 30% и личной льготой, но модель не учитывает всех персональных вычетов, двойного налогообложения и обязательств в стране вашего резидентства — фактический налог требует подтверждения у налогового консультанта.
+          Расчёт носит справочный характер, не является публичной офертой, инвестиционным, налоговым или финансовым советом и не гарантирует доходность. Арендные ставки по умолчанию — ориентировочные рыночные уровни по районам Пхукета, а не обязательство WEGC: фактическая ставка зависит от корпуса, этажа, вида, меблировки и сезона. Налог на доход считается по прогрессивной шкале Таиланда со стандартным вычетом 30% и личной льготой, но модель не учитывает всех персональных вычетов, двойного налогообложения и обязательств в стране вашего резидентства — фактический налог требует подтверждения у налогового консультанта. Ставка роста стоимости в блоке полной доходности — задаваемое вами допущение, а не прогноз WEGC: недвижимость может как дорожать, так и дешеветь, и историческая динамика не гарантирует будущей. Оценка остатка срока leasehold при перепродаже является расчётной моделью, а не рыночной котировкой: фактическая цена выхода зависит от спроса на вторичном рынке, условий продления договора и позиции застройщика.
         </div>
       </div>
     </div>
@@ -627,8 +695,18 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       </div>
       <div class="m-card">
         <div class="n">6</div>
+        <h3>Прирост стоимости и выход</h3>
+        <p>Аренда — только часть результата. Мы считаем и то, что объект будет стоить при продаже, за вычетом расходов на сделку, а затем сводим всё в одну ставку — <code>IRR</code>, полную доходность в процентах годовых с учётом того, когда именно приходят деньги. Прирост считаем от цены юнита: мебель, регистрация и sinking fund при перепродаже не возвращаются.</p>
+      </div>
+      <div class="m-card">
+        <div class="n">7</div>
+        <h3>Почему leasehold дешевеет</h3>
+        <p>К leasehold нельзя просто прибавить рост рынка: право аренды — истощаемый актив, к концу срока оно стоит ноль. Остаток срока мы оцениваем как приведённую стоимость, а не линейную долю: за первые годы объект почти не обесценивается, потому что дальние годы сильно дисконтированы, а в последние — обваливается быстро. Из 30-летнего права через 10 лет остаётся около 85% стоимости, через 25 лет — около трети.</p>
+      </div>
+      <div class="m-card">
+        <div class="n">8</div>
         <h3>Стресс-тест вместо обещаний</h3>
-        <p>Мы считаем не только базовый сценарий, но и падение ставки на 20% и рост простоя. Объект, который остаётся в плюсе под давлением, — это другое качество решения, чем объект, красиво выглядящий только на дефолтных допущениях.</p>
+        <p>Мы считаем не только базовый сценарий, но и падение ставки на 20%, рост простоя и — главное — нулевой рост стоимости. Ставка роста это допущение, а не прогноз: если весь результат держится только на ней, это не инвестиция, а ставка на рынок. Объект, который остаётся в плюсе под давлением, — другое качество решения.</p>
       </div>
     </div>
   </div>
@@ -660,6 +738,14 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       <details class="faq-item">
         <summary>Правда ли, что нерезидент платит с аренды 15%?<span class="faq-icon">+</span></summary>
         <p>Нет — это самая частая ошибка в расчётах доходности. Ставки налога на доход в Таиланде одинаковы для резидентов и нерезидентов: прогрессивная шкала от 0% до 35%, тот же стандартный вычет 30% и та же личная льгота. Цифра 15% — это ставка удержания у источника по статье 50(3): её удерживает арендатор-юридическое лицо при выплате аренды нерезиденту. Удержание не является итоговым налогом, оно засчитывается против начисленного по шкале и при обычных суммах аренды почти всегда возвращается переплатой. Пример: при валовой аренде 1 000 000 ฿ в год налог по шкале составит 48 500 ฿, тогда как удержание 15% даст 150 000 ฿ — то есть свыше 100 000 ฿ подлежат возврату по итогам декларации. Расчёт доходности по «15% нерезиденту» занижает результат втрое по налогу.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Учитывает ли калькулятор рост стоимости недвижимости?<span class="faq-icon">+</span></summary>
+        <p>Да — отдельным блоком «Полная доходность». Чистая доходность и окупаемость выше считаются только по аренде, и это осознанно: арендный поток можно проверить по рынку, а рост стоимости остаётся допущением. Но полный результат складывается из двух частей, поэтому калькулятор дополнительно считает стоимость объекта на момент продажи, вычитает расходы на сделку и сводит всё в <strong>IRR</strong> — полную доходность в процентах годовых с учётом того, когда именно приходят деньги. По объектам WEGC при владении 10 лет и росте 5% в год полная доходность обычно попадает в 6,5–8,5% годовых, тогда как окупаемость только за счёт аренды составляет 18–22 года. Прирост считается от цены юнита: мебель, регистрация и sinking fund при перепродаже не возвращаются. Проверьте сценарий с нулевым ростом в стресс-тесте — если весь результат держится только на подорожании, это ставка на рынок, а не инвестиция.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Почему прирост стоимости у leasehold меньше, чем у freehold?<span class="faq-icon">+</span></summary>
+        <p>Потому что leasehold — истощаемый актив. Freehold это бессрочное право, его стоимость растёт вместе с рынком без поправок. Leasehold даёт право пользования на конечный срок, и по мере истечения оно дешевеет: в последний год срока продавать уже нечего. Поэтому прибавить к leasehold рыночный рост нельзя. Мы оцениваем остаток срока как приведённую стоимость, а не линейную долю: дальние годы сильно дисконтированы, поэтому за первые годы объект почти не обесценивается, а в последние обваливается быстро. Из 30-летнего права через 10 лет остаётся около 85% стоимости, через 20 лет — около 57%, через 25 лет — примерно треть. Практический вывод: у leasehold есть оптимальное окно выхода, и держать право до последних лет срока невыгодно. На одинаковых допущениях freehold обычно даёт на 1–1,5 процентного пункта годовых больше — это и есть цена структуры права, которую валовые расчёты игнорируют.</p>
       </details>
       <details class="faq-item">
         <summary>Откуда берутся цены и площади в калькуляторе?<span class="faq-icon">+</span></summary>
@@ -789,6 +875,7 @@ window.WEGC_KIND_DEFAULTS={
     rent:el('yRent'), vac:el('yVac'), agent:el('yAgent'),
     adr:el('yAdr'), occ:el('yOcc'), mgmt:el('yMgmt'),
     taxMode:el('yTaxMode'), allow:el('yAllow'), otherInc:el('yOtherInc'),
+    hold:el('yHold'), growth:el('yGrowth'), exitCost:el('yExitCost'),
     maint:el('yMaint'), propTax:el('yPropTax'), ins:el('yIns'), capex:el('yCapex')
   };
 
@@ -829,6 +916,43 @@ window.WEGC_KIND_DEFAULTS={
       lower=PIT[i][0];
     }
     return 0;
+  }
+
+  /* Внутренняя норма доходности: NPV монотонно убывает по ставке, ищем корень делением.
+     cf[0] — вложение (отрицательное), далее годовые потоки, в последнем — выручка от продажи. */
+  function irr(cf){
+    function npv(r){ var s=0; for(var i=0;i<cf.length;i++) s+=cf[i]/Math.pow(1+r,i); return s; }
+    var lo=-0.9499, hi=3;
+    if(npv(lo)<0) return NaN;
+    if(npv(hi)>0) return hi;
+    for(var k=0;k<160;k++){ var mid=(lo+hi)/2; if(npv(mid)>0) lo=mid; else hi=mid; }
+    return (lo+hi)/2;
+  }
+
+  /* Ставка дисконтирования для оценки остатка срока leasehold. */
+  var LEASE_DISC = 0.07;
+
+  /* Выход из объекта.
+     Freehold: цена растёт по заданной ставке, право бессрочное.
+     Leasehold: право аренды — истощаемый актив. Его стоимость это приведённая
+     стоимость остатка срока, а не линейная доля: разница между 30 и 25 годами почти
+     не ощущается, потому что дальние годы сильно дисконтированы, а между 5 и 1 годом
+     разница критична. Поэтому долю остатка считаем через коэффициент аннуитета. */
+  function annuity(nYears){
+    if(nYears<=0) return 0;
+    return (1 - Math.pow(1+LEASE_DISC, -nYears)) / LEASE_DISC;
+  }
+  function exitValue(o){
+    var growth = Math.pow(1 + o.growth/100, o.hold);
+    var termFactor = 1, remaining = null;
+    if(o.isLease){
+      remaining = Math.max(0, o.leaseTerm - o.hold);
+      var full = annuity(o.leaseTerm);
+      termFactor = full>0 ? annuity(remaining)/full : 0;
+    }
+    var gross = o.price * growth * termFactor;
+    return { gross:gross, net:gross*(1-o.exitCost/100), growth:growth,
+             termFactor:termFactor, remaining:remaining };
   }
 
   /* ── core model ──
@@ -886,7 +1010,18 @@ window.WEGC_KIND_DEFAULTS={
 
     var net = beforeTax - tax;
 
+    /* Полная доходность: вложение на входе, годовая чистая аренда, продажа в конце.
+       После истечения leasehold сдавать нечего, поэтому срок владения ограничен сроком права. */
+    var holdEff = o.isLease ? Math.min(o.hold, o.leaseTerm) : o.hold;
+    var ex = exitValue(Object.assign({}, o, {hold:holdEff}));
+    var cf = [-base];
+    for(var y=1; y<=holdEff; y++) cf.push(y===holdEff ? net + ex.net : net);
+    var rate = irr(cf);
+    var profit = net*holdEff + ex.net - base;
+
     return {
+      exit:ex, irr:rate, profit:profit, rentTotal:net*holdEff,
+      holdEff:holdEff, holdCapped:(holdEff<o.hold),
       base:base, entryExtra:entryExtra, gross:gross,
       letting:letting, lettingLabel:lettingLabel,
       maint:maint, propTax:propTax, ins:o.ins, capex:capex, opex:opex,
@@ -907,6 +1042,8 @@ window.WEGC_KIND_DEFAULTS={
       rent:num('yRent'), vac:num('yVac'), agent:num('yAgent'),
       adr:num('yAdr'), occ:num('yOcc'), mgmt:num('yMgmt'),
       taxMode:F.taxMode.value, allow:num('yAllow'), otherInc:num('yOtherInc'),
+      hold:Math.max(1,num('yHold')), growth:num('yGrowth'), exitCost:num('yExitCost'),
+      isLease:F.struct.value==='leasehold', leaseTerm:Math.max(1,num('yLeaseTerm')),
       maint:num('yMaint'), propTax:num('yPropTax'), ins:num('yIns'), capex:num('yCapex')
     };
   }
@@ -989,6 +1126,45 @@ window.WEGC_KIND_DEFAULTS={
       el('yEffNote').textContent=note;
     }
 
+    /* полная доходность за период владения */
+    el('yTotHold').textContent = years(r.holdEff);
+    var irrOk = isFinite(r.irr);
+    el('yIrr').textContent = irrOk ? pct(r.irr*100) : 'убыток';
+    el('yIrr').className = 'v' + (irrOk && r.irr>0 ? '' : ' neg');
+    el('yProfit').textContent = thbShort(r.profit);
+    el('yProfit').className = 'v' + (r.profit>=0 ? '' : ' neg');
+    el('yProfitRub').textContent = '≈ '+(Math.round(r.profit*FX.THB_RUB/100000)/10).toLocaleString('ru-RU')+' млн ₽';
+
+    var trows='';
+    function trow(k,v,cls){ trows+='<div class="y-trow '+(cls||'')+'"><span class="k">'+k+'</span><span class="v">'+v+'</span></div>'; }
+    trow('Аренда за '+years(r.holdEff)+', чистыми', thb(r.rentTotal));
+    trow('Стоимость объекта на выходе', thb(r.exit.gross));
+    trow('Расходы при продаже ('+o.exitCost+'%)', '− '+thb(r.exit.gross*o.exitCost/100), 'neg');
+    trow('Вложено на входе', '− '+thb(r.base), 'neg');
+    trow('Прибыль за период', thbShort(r.profit));
+    el('yTotRows').innerHTML=trows;
+
+    var priceChange = r.exit.gross - o.price;
+    var totNote='';
+    if(r.holdCapped) totNote='Срок владения ограничен сроком leasehold: '+years(o.leaseTerm)+' вместо '+years(o.hold)+' — после истечения права сдавать и продавать нечего. ';
+    if(o.isLease){
+      if(r.exit.remaining<=0){
+        totNote+='К моменту выхода право аренды истекает полностью, поэтому объект не стоит ничего: весь результат сформирован только арендой. Рост рынка здесь не спасает.';
+      }else{
+        totNote+='Рынок за '+years(r.holdEff)+' при ставке '+o.growth+'% в год даёт множитель '+(Math.round(r.exit.growth*100)/100).toLocaleString('ru-RU')+
+          ', но право аренды за это время истощается: остаётся '+r.exit.remaining+' из '+years(o.leaseTerm)+', и такой остаток стоит около '+
+          Math.round(r.exit.termFactor*100)+'% полного срока. Считаем это не линейной долей, а приведённой стоимостью остатка — дальние годы дисконтированы, поэтому первые годы срока почти не обесценивают объект, а последние обваливают его быстро. '+
+          (priceChange>=0
+            ? 'В сумме объект дороже покупки на '+thb(priceChange)+'.'
+            : 'В сумме объект дешевле покупки на '+thb(-priceChange)+': истощение права перебивает рост рынка.');
+      }
+    }else{
+      totNote+='Freehold — право бессрочное, поправки на срок нет: за '+years(r.holdEff)+' при ставке '+o.growth+'% в год объект '+
+        (priceChange>=0?'дороже покупки на '+thb(priceChange):'дешевле покупки на '+thb(-priceChange))+
+        '. Ставка роста — ваше допущение, а не прогноз WEGC: проверьте сценарий с нулевым ростом ниже.';
+    }
+    el('yTotNote').textContent=totNote;
+
     /* stress test */
     var scen=[];
     scen.push({n:'Базовый сценарий', s:'ваши текущие допущения', y:r.netYield, p:r.payback, cls:'base'});
@@ -1013,6 +1189,13 @@ window.WEGC_KIND_DEFAULTS={
       html+='<div class="y-scen '+cls+'"><span class="n">'+s.n+'<small>'+s.s+'</small></span>'+
             '<span class="r"><b>'+(s.y>0?pct(s.y):'убыток')+'</b><small>окупаемость '+years(s.p)+'</small></span></div>';
     });
+    /* Рост стоимости — самое хрупкое допущение, поэтому проверяем его отдельно:
+       что останется, если рынок за весь срок владения не вырастет вообще. */
+    var flat=model(Object.assign({},o,{growth:0}));
+    html+='<div class="y-scen '+(isFinite(flat.irr)&&flat.irr*100>=4?'ok':'bad')+'">'+
+          '<span class="n">Рост стоимости 0%<small>рынок стоит на месте весь срок владения</small></span>'+
+          '<span class="r"><b>'+(isFinite(flat.irr)&&flat.irr>0?pct(flat.irr*100):'убыток')+'</b>'+
+          '<small>полная доходность за '+years(r.holdEff)+'</small></span></div>';
     el('yScenarios').innerHTML=html;
   }
 
@@ -1094,7 +1277,8 @@ window.WEGC_KIND_DEFAULTS={
     r.addEventListener('change',syncMode);
   });
   ['yPrice','yArea','yLeaseTerm','yRegPct','ySink','yFurn','yOther','yRent','yVac','yAgent',
-   'yAdr','yOcc','yMgmt','yAllow','yOtherInc','yMaint','yPropTax','yIns','yCapex'].forEach(function(id){
+   'yAdr','yOcc','yMgmt','yAllow','yOtherInc','yMaint','yPropTax','yIns','yCapex',
+   'yHold','yGrowth','yExitCost'].forEach(function(id){
     var n=el(id); if(n) n.addEventListener('input',render);
   });
 
