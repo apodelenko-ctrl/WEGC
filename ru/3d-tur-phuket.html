@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title>3D-облёт Пхукета — пролёт над нашими проектами · West East Gate Real Estate</title>
-<meta name="description" content="Интерактивный 3D-пролёт над Пхукетом с заходом на каждый объект West East Gate Real Estate: 11 проектов The Title / Rhom Bho в фотореалистичном 3D, как с дрона. Кликните — и смотрите паспорт проекта."/>
+<title>Карта объектов на Пхукете — 11 проектов с севера на юг · West East Gate Real Estate</title>
+<meta name="description" content="Все 11 объектов West East Gate Real Estate на карте Пхукета по маршруту с севера на юг: Най Янг, Банг Тао, Сурин, Камала, Ко Кео, Ката, Раваи. Откройте паспорт проекта — планировки, цены от застройщика, сроки сдачи."/>
 <meta name="robots" content="index,follow"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="3D-облёт Пхукета над нашими проектами · WEGC"/>
-<meta property="og:description" content="Фотореалистичный 3D-пролёт над Пхукетом с заходом на 11 объектов от застройщика. Как с дрона, прямо в браузере."/>
+<meta property="og:title" content="Карта объектов на Пхукете — 11 проектов · WEGC"/>
+<meta property="og:description" content="Все наши объекты по маршруту с севера на юг острова: от Най Янга до Раваи. Планировки, цены от застройщика, сроки сдачи."/>
 <meta property="og:url" content="https://wegc.fund/ru/3d-tur-phuket.html"/>
 <meta property="og:image" content="https://wegc.fund/images/the-modeva-exterior-4-1.jpg"/>
 <meta property="og:locale" content="ru_RU"/>
@@ -101,15 +101,30 @@ a{color:inherit}
 #chips button:hover{border-color:var(--gold-soft);color:#fff}
 #chips button.active{background:var(--gold);color:#0a0e1a;border-color:var(--gold);font-weight:600}
 
-/* Config-missing overlay */
-#setup{position:absolute;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:24px;background:radial-gradient(ellipse at 50% 30%,#101a33,#06080f)}
-#setup .box{max-width:520px;background:rgba(10,14,26,.9);border:1px solid rgba(207,196,162,.22);border-radius:16px;padding:30px 28px}
-#setup h2{margin:0 0 6px;font-size:20px}
-#setup p{color:#9fb0c9;font-size:14px;line-height:1.6;margin:0 0 14px}
-#setup ol{color:#cdd7e6;font-size:13.5px;line-height:1.7;padding-left:20px;margin:0 0 16px}
-#setup code{background:rgba(207,196,162,.14);color:var(--gold-bright);padding:2px 7px;border-radius:5px;font-size:12.5px}
-#setup a{color:var(--gold-bright)}
+/* Экран без 3D-слоя: маршрут по объектам */
+#setup{position:absolute;inset:0;z-index:25;display:none;align-items:center;justify-content:center;padding:24px;padding-top:max(84px,calc(env(safe-area-inset-top) + 84px));background:radial-gradient(ellipse at 50% 30%,#101a33,#06080f)}
+#setup .box{max-width:600px;width:100%;max-height:min(84vh,720px);overflow-y:auto;background:rgba(10,14,26,.9);border:1px solid rgba(207,196,162,.22);border-radius:16px;padding:30px 28px}
+#setup h2{margin:0 0 8px;font-size:22px;letter-spacing:-.01em}
+#setup p{color:#9fb0c9;font-size:14px;line-height:1.65;margin:0 0 20px}
 #setup .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;margin-bottom:8px}
+#stops{list-style:none;margin:0 0 22px;padding:0;border-top:1px solid rgba(207,196,162,.14)}
+#stops li{display:flex;gap:16px;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(207,196,162,.14)}
+#stops .area{flex:0 0 84px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;padding-top:2px}
+#stops .names{display:flex;flex-direction:column;gap:5px;min-width:0}
+#stops .names a{color:#eaf0f8;text-decoration:none;font-size:14.5px;font-weight:500;border-bottom:1px solid transparent;align-self:flex-start}
+#stops .names a:hover{color:#fff;border-bottom-color:var(--gold-bright)}
+#setup .acts{display:flex;gap:10px;flex-wrap:wrap}
+#setup .acts .btn{display:inline-flex;align-items:center;font-size:13.5px;font-weight:600;border-radius:999px;padding:11px 20px;text-decoration:none;border:1px solid transparent;background:var(--gold);color:#0a0e1a}
+#setup .acts .btn:hover{background:var(--gold-bright)}
+#setup .acts .btn.ghost{background:transparent;border-color:rgba(207,196,162,.35);color:#fff}
+#setup .acts .btn.ghost:hover{border-color:var(--gold-soft);background:rgba(207,196,162,.1)}
+@media(max-width:520px){
+  #setup{padding:16px}
+  #setup .box{padding:24px 20px;max-height:88vh}
+  #stops li{flex-direction:column;gap:6px}
+  #stops .area{flex:none;padding-top:0}
+  #setup .acts .btn{flex:1 1 100%;justify-content:center}
+}
 
 .hint{position:absolute;top:max(72px,calc(env(safe-area-inset-top) + 56px));right:18px;z-index:14;font-size:11.5px;color:rgba(255,255,255,.55);background:rgba(10,14,26,.55);padding:6px 12px;border-radius:999px;backdrop-filter:blur(8px)}
 @media(max-width:640px){.hint{display:none}#card h2{font-size:20px}}
@@ -163,15 +178,14 @@ a{color:inherit}
 
 <div id="setup">
   <div class="box">
-    <div class="eyebrow">Настройка 3D-тура</div>
-    <h2>Нужен Google Maps API-ключ</h2>
-    <p>Фотореалистичный 3D-облёт работает на Google Photorealistic 3D Tiles. Чтобы включить его на боевом домене:</p>
-    <ol>
-      <li>В <a href="https://console.cloud.google.com/google/maps-apis/" target="_blank" rel="noopener">Google Cloud Console</a> создайте проект и включите <b>Map Tiles API</b>.</li>
-      <li>Создайте API-ключ и ограничьте его по домену <code>wegc.fund</code> (HTTP referrers).</li>
-      <li>Вставьте ключ в <code>GOOGLE_MAPS_API_KEY</code> в начале скрипта этой страницы.</li>
-    </ol>
-    <p style="margin:0;color:#6b7a90;font-size:12.5px">Бесплатная квота Google покрывает обычный трафик лендинга. Ключ ограничен по домену, поэтому его безопасно держать в коде фронтенда.</p>
+    <div class="eyebrow">Маршрут по объектам</div>
+    <h2>Одиннадцать проектов с севера на юг</h2>
+    <p>Фотореалистичный 3D-облёт готовим к запуску. Пока — сам маршрут: все наши объекты по порядку от Най Янга до Раваи. Откройте паспорт любого проекта: планировки, цены от застройщика, сроки сдачи.</p>
+    <ul id="stops"></ul>
+    <div class="acts">
+      <a class="btn" href="/ru/podbor.html">Подбор объекта за 2 минуты</a>
+      <a class="btn ghost" href="/rayony-phuket.html">Сравнить районы</a>
+    </div>
   </div>
 </div>
 
@@ -200,13 +214,43 @@ const STOPS = [
 
 const el = (id)=>document.getElementById(id);
 
-if (!GOOGLE_MAPS_API_KEY) {
+/* Пока ключа нет, показываем маршрут по объектам вместо 3D-сцены.
+   Список строится из STOPS, чтобы не расходился с облётом. */
+function renderStops(){
+  var groups = [];
+  STOPS.forEach(function(s){
+    var g = groups[groups.length - 1];
+    if (!g || g.area !== s.area) { g = { area:s.area, items:[] }; groups.push(g); }
+    g.items.push(s);
+  });
+  el("stops").innerHTML = groups.map(function(g){
+    return '<li><span class="area">' + g.area + '</span><span class="names">' +
+      g.items.map(function(s){
+        return '<a href="' + s.url + '">' + s.name + '</a>';
+      }).join('') + '</span></li>';
+  }).join('');
+}
+
+/* Показать маршрут вместо 3D-сцены. Вызывается и когда ключа нет,
+   и когда сцена не поднялась: клиент не должен видеть техническую ошибку. */
+function showStopsScreen(){
   el("loader").style.display = "none";
+  el("controls").style.display = "none";
+  el("card").classList.remove("show");
+  el("card").style.display = "none";
+  el("chips").style.display = "none";
+  var hintEl = document.querySelector(".hint");
+  if (hintEl) hintEl.style.display = "none";
+  renderStops();
   el("setup").style.display = "flex";
+}
+
+if (!GOOGLE_MAPS_API_KEY) {
+  showStopsScreen();
 } else {
   initTour().catch(err=>{
     console.error(err);
-    el("loader").innerHTML = '<p style="color:#e7b3b3">Не удалось загрузить 3D-сцену</p><small>Проверьте API-ключ и включённый Map Tiles API.</small>';
+    showStopsScreen();
   });
 }
 
