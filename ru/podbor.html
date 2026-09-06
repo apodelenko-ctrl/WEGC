@@ -249,7 +249,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
       <span class="name">West East Gate Real Estate</span>
     </a>
     <nav class="topbar-nav">
-      <a href="/ru/#catalog">Каталог</a>
+      <a href="/ru/katalog.html">Каталог</a>
       <a href="/ru/tseny.html">Цены 2026</a>
       <a href="/ru/rassrochka-calculator.html">Рассрочка 0%</a>
       <a href="/rayony-phuket.html">Районы</a>
@@ -417,6 +417,7 @@ footer.f{background:#06080f;color:#94a3b8;padding:64px 0 28px;border-top:1px sol
           <input type="hidden" name="quiz_district" id="q_district"/>
           <input type="hidden" name="quiz_results" id="q_results"/>
           <input type="hidden" name="form_source" value="quiz-podbor"/>
+          <input type="hidden" name="requested_project" id="q_project"/>
           <label class="cf-agree">
             <input type="checkbox" name="agree" required/>
             <span>Я согласен с <a href="/privacy.html">Политикой конфиденциальности</a>. Понимаю, что это запрос информации, не оферта.</span>
@@ -638,7 +639,24 @@ window.WEGC_FMT=function(n){
   var onScroll=function(){ if(window.scrollY>60) bar.classList.add('solid'); else bar.classList.remove('solid'); };
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
-  document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('page-ready');});
+  document.addEventListener('DOMContentLoaded',function(){
+    document.body.classList.add('page-ready');
+    var params=new URLSearchParams(location.search);
+    var slug=params.get('project');
+    if(!slug) return;
+    var field=document.getElementById('q_project');
+    if(field) field.value=slug;
+    var label=slug.replace(/-/g,' ');
+    var sum=document.getElementById('quizSummary');
+    if(sum){
+      var p=document.createElement('p');
+      p.style.marginTop='12px';
+      p.innerHTML='Запрос по проекту: <strong>'+label+'</strong>. Оставьте контакты — подтвердим наличие и актуальный прайс у застройщика.';
+      sum.appendChild(p);
+    }
+    var lead=document.getElementById('lead');
+    if(lead) lead.scrollIntoView({behavior:'smooth',block:'start'});
+  });
   if(document.readyState!=='loading') document.body.classList.add('page-ready');
 })();
 
