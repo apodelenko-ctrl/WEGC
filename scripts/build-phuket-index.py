@@ -18,6 +18,10 @@ CYR = {
     "ъ": "", "ы": "y", "ь": "", "э": "e", "ю": "yu", "я": "ya",
 }
 
+COVER_CDN = "https://wegc-covers.wegc.workers.dev"
+COVER_MAP_PATH = ROOT / "cloudflare-worker" / "covers-map.json"
+OFFICIAL_COVERS = json.loads(COVER_MAP_PATH.read_text()) if COVER_MAP_PATH.exists() else {}
+
 COVERS = {
     "condo": "/images/the-modeva-exterior-4-1.jpg",
     "villa": "/images/projects/casademonte-hero.jpg",
@@ -180,7 +184,9 @@ def kind_of(name: str) -> str:
     return "condo"
 
 
-def cover_of(district: str, kind: str) -> str:
+def cover_of(district: str, kind: str, slug: str = "") -> str:
+    if slug and slug in OFFICIAL_COVERS:
+        return f"{COVER_CDN}/{slug}"
     return COVERS.get(district) or COVERS[kind]
 
 
@@ -210,7 +216,7 @@ def market_item(name: str, district=None, kind=None, developer=None) -> dict:
         "struct": struct_of(k),
         "source": "market",
         "url": f"/ru/podbor.html?project={slug}",
-        "cover": cover_of(d, k),
+        "cover": cover_of(d, k, slug),
     }
 
 
@@ -275,12 +281,15 @@ def main():
         p["slug"] = s
         if p["source"] == "market":
             p["url"] = f"/ru/podbor.html?project={s}"
+        if s in OFFICIAL_COVERS:
+            p["cover"] = f"{COVER_CDN}/{s}"
         used.add(s)
 
     out = ROOT / "ru" / "wegc-catalog-data.js"
     lines = [
         "/* Индекс проектов Пхукета. direct — паспорт WEGC; market — запрос застройщику.",
-        "   Обложки только из /images. Чужие фото и логотипы агентств не используем. */",
+        "   Обложки: официальные баннеры застройщика через wegc-covers, иначе /images.",
+        "   Чужие фото и логотипы агентств не используем. */",
         "window.WEGC_CATALOG_FX = { THB_RUB: 2.5 };",
         "",
         "window.WEGC_COVERS = " + json.dumps(COVERS, ensure_ascii=False, indent=2) + ";",

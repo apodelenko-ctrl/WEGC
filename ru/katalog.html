@@ -355,7 +355,7 @@ p{color:var(--body);line-height:1.7}
     var cta = p.source==='direct' ? 'Открыть паспорт →' : 'Запросить по проекту →';
     var cover = p.cover || '/images/hero/hero-phuket-infinity-pool.jpg';
     el.innerHTML =
-      '<a class="cover" href="'+p.url+'"><img src="'+cover+'" alt="'+p.name.replace(/"/g,'')+'" loading="lazy" decoding="async" width="800" height="500"/>'+
+      '<a class="cover" href="'+p.url+'"><img src="'+cover+'" alt="'+p.name.replace(/"/g,'')+'" loading="lazy" decoding="async" width="800" height="500" onerror="this.onerror=null;this.src=\'/images/hero/hero-phuket-infinity-pool.jpg\'"/>'+
         '<div class="badges"><span class="badge '+(p.source==='direct'?'gold':'market')+'">'+srcLabel+'</span><span class="badge">'+kindLabel+'</span><span class="badge">'+p.district+'</span></div></a>'+
       '<div class="body"><div class="dev">'+(p.developer||'Пхукет')+'</div><h3>'+p.name+'</h3>'+
         '<div class="meta"><div><div class="l">Спальни</div><div class="v">'+(p.beds||'—')+'</div></div>'+
