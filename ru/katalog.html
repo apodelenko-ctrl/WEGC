@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Каталог недвижимости Пхукета — кондо и виллы от застройщиков · WEGC</title>
-<meta name="description" content="Каталог проектов Пхукета: прямые объекты WEGC с ценой от застройщика и рыночные проекты, которые запрашиваем у девелопера. Фильтры по району, типу, цене. Комиссия покупателю 0%."/>
+<meta name="description" content="Индекс проектов Пхукета: 600+ жилых комплексов. Прямой договор с ценой от застройщика и рынок — запросим прайс. Фильтры по району и типу. Комиссия покупателю 0%."/>
 <meta name="robots" content="index,follow"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Каталог недвижимости Пхукета · West East Gate"/>
@@ -94,7 +94,7 @@ p{color:var(--body);line-height:1.7}
 .hero-stats .l{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px}
 
 .filters{background:var(--bg-cream);border-bottom:1px solid var(--line);padding:22px 0;position:sticky;top:64px;z-index:40}
-.f-row{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:10px}
+.f-row{display:grid;grid-template-columns:1.4fr repeat(5,1fr);gap:10px}
 .f-row input,.f-row select{width:100%;border:1px solid var(--line);background:#fff;border-radius:8px;padding:11px 12px;font-size:14px;color:var(--ink);outline:none}
 .f-row input:focus,.f-row select:focus{border-color:var(--gold)}
 .f-note{margin-top:12px;font-size:13px;color:var(--muted)}
@@ -125,6 +125,9 @@ p{color:var(--body);line-height:1.7}
 .acts a{font-size:13px;font-weight:500;color:var(--gold)}
 .acts a.muted{color:var(--muted)}
 .empty{grid-column:1/-1;padding:48px 20px;text-align:center;color:var(--muted)}
+.more{margin-top:28px;text-align:center}
+.more button{font:inherit;font-size:14px;font-weight:500;padding:12px 22px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.more button:hover{border-color:var(--gold)}
 
 .wa{position:fixed;right:132px;bottom:20px;z-index:99990;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-size:14px;font-weight:600;padding:13px 18px;border-radius:999px;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)}
 .wa:hover{background:#1ebe5d;transform:translateY(-1px)}
@@ -176,9 +179,9 @@ p{color:var(--body);line-height:1.7}
 <section class="hero">
   <div class="hero-bg" aria-hidden="true" style="background-image:linear-gradient(180deg,rgba(6,8,15,.88) 0%,rgba(6,8,15,.72) 50%,rgba(6,8,15,.94) 100%),url('/images/hero/hero-phuket-infinity-pool.jpg')"></div>
   <div class="hero-inner">
-    <span class="hero-flag">Пхукет · кондо и виллы</span>
-    <h1>Каталог недвижимости <strong>на Пхукете</strong></h1>
-    <p class="hero-sub">Кондо и виллы по всему острову: объекты с прямым договором и ценой от застройщика — и проекты, по которым запросим актуальный прайс. Комиссия покупателю 0%.</p>
+    <span class="hero-flag">Пхукет · индекс проектов</span>
+    <h1>Каталог <strong>жилых комплексов</strong> Пхукета</h1>
+    <p class="hero-sub">Полный индекс ЖК острова: кондо и виллы по районам. 11 проектов с прямым договором и ценой из паспорта — остальные запросим у застройщика. Комиссия покупателю 0%.</p>
     <div class="hero-stats">
       <div><div class="n" id="stAll">—</div><div class="l">проектов в каталоге</div></div>
       <div><div class="n" id="stDirect">—</div><div class="l">с прямым договором</div></div>
@@ -197,6 +200,7 @@ p{color:var(--body);line-height:1.7}
         <option value="condo">Кондо</option>
         <option value="villa">Вилла</option>
       </select>
+      <select id="developer"><option value="">Застройщик: все</option></select>
       <select id="source">
         <option value="">Источник: все</option>
         <option value="direct">Прямой договор</option>
@@ -218,6 +222,7 @@ p{color:var(--body);line-height:1.7}
 <section class="catalog">
   <div class="container">
     <div class="grid" id="grid"></div>
+    <div class="more" id="moreWrap" hidden><button type="button" id="moreBtn">Показать ещё</button></div>
   </div>
 </section>
 </main>
@@ -282,14 +287,26 @@ p{color:var(--body);line-height:1.7}
   var q = document.getElementById('q');
   var district = document.getElementById('district');
   var kind = document.getElementById('kind');
+  var developer = document.getElementById('developer');
   var source = document.getElementById('source');
   var price = document.getElementById('price');
   var note = document.getElementById('countNote');
+  var moreWrap = document.getElementById('moreWrap');
+  var moreBtn = document.getElementById('moreBtn');
+  var PAGE = 36;
+  var shown = PAGE;
 
   var districts = [];
-  DATA.forEach(function(p){ if(p.district && districts.indexOf(p.district)<0) districts.push(p.district); });
+  var devs = [];
+  DATA.forEach(function(p){
+    if(p.district && districts.indexOf(p.district)<0) districts.push(p.district);
+    if(p.developer && devs.indexOf(p.developer)<0) devs.push(p.developer);
+  });
   districts.sort().forEach(function(d){
     var o=document.createElement('option'); o.value=d; o.textContent=d; district.appendChild(o);
+  });
+  devs.sort().forEach(function(d){
+    var o=document.createElement('option'); o.value=d; o.textContent=d; developer.appendChild(o);
   });
 
   var nDirect = DATA.filter(function(p){return p.source==='direct';}).length;
@@ -322,6 +339,7 @@ p{color:var(--body);line-height:1.7}
     }
     if(district.value && p.district!==district.value) return false;
     if(kind.value && p.kind!==kind.value) return false;
+    if(developer.value && p.developer!==developer.value) return false;
     if(source.value && p.source!==source.value) return false;
     if(!inPrice(p, price.value)) return false;
     return true;
@@ -353,22 +371,27 @@ p{color:var(--body);line-height:1.7}
   function render(){
     var list = DATA.filter(match).sort(function(a,b){
       if(a.source!==b.source) return a.source==='direct'?-1:1;
-      var ap=a.price||1e12, bp=b.price||1e12;
-      return ap-bp;
+      return (a.name||'').localeCompare(b.name||'','ru');
     });
     grid.innerHTML='';
     if(!list.length){
-      grid.innerHTML='<div class="empty">Под фильтр ничего не попало. Сбросьте поиск или напишите в WhatsApp — подберём вручную, включая юниты вне опубликованного списка.</div>';
+      moreWrap.hidden=true;
+      grid.innerHTML='<div class="empty">Под фильтр ничего не попало. Сбросьте поиск или напишите в WhatsApp — подберём вручную.</div>';
     } else {
-      list.forEach(function(p){ grid.appendChild(card(p)); });
+      list.slice(0, shown).forEach(function(p){ grid.appendChild(card(p)); });
+      moreWrap.hidden = shown >= list.length;
+      moreBtn.textContent = 'Показать ещё · осталось ' + (list.length - Math.min(shown, list.length));
     }
     var d=list.filter(function(p){return p.source==='direct';}).length;
-    note.innerHTML='Показано <strong>'+list.length+'</strong> из '+DATA.length+' · прямых '+d+' · рынок '+(list.length-d)+'. Цены «от» по прямым — из паспортов. По рынку — запрос застройщику.';
+    var vis=Math.min(shown, list.length);
+    note.innerHTML='На экране <strong>'+vis+'</strong> из '+list.length+' по фильтру · всего в индексе '+DATA.length+' · прямых '+d+'.';
   }
-  [q,district,kind,source,price].forEach(function(el){
-    el.addEventListener('input',render);
-    el.addEventListener('change',render);
+  function resetPage(){ shown=PAGE; render(); }
+  [q,district,kind,developer,source,price].forEach(function(el){
+    el.addEventListener('input',resetPage);
+    el.addEventListener('change',resetPage);
   });
+  moreBtn.addEventListener('click', function(){ shown += PAGE; render(); });
   render();
 })();
 </script>
