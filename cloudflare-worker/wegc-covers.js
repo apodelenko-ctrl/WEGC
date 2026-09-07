@@ -17,6 +17,7 @@ const ALLOW = new Set([
   'www.sansiri.com',
   'assets.sansiri.com',
   'o77site.s3.ap-southeast-1.amazonaws.com',
+  's3.ap-southeast-1.amazonaws.com',
   'origin.co.th',
   'www.origin.co.th'
 ]);

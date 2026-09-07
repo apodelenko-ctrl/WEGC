@@ -192,5 +192,101 @@ window.WEGC_GALLERIES = {
   "botanika-leiksaid-ii": {
     "n": 12,
     "page": "https://www.botanicaluxuryvilla.com/projects/botanica-lakeside-ii/"
+  },
+  "laguna-bayside": {
+    "n": 9,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-beach-residences-bayside"
+  },
+  "laguna-lakeside": {
+    "n": 8,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-lake-residences-aster"
+  },
+  "laguna-aster": {
+    "n": 8,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-lake-residences-aster"
+  },
+  "cassia-phuket": {
+    "n": 8,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/cassia-phuket"
+  },
+  "angsana-oceanview": {
+    "n": 8,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/angsana-oceanview-residences-phuket"
+  },
+  "angsana-oceanview-residences": {
+    "n": 8,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/angsana-oceanview-residences-phuket"
+  },
+  "banyan-tree-beach-residences-oceanus": {
+    "n": 9,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
+  },
+  "laguna-hibiscus": {
+    "n": 10,
+    "page": "https://hibiscus.lagunaproperty.com/"
+  },
+  "rhea-by-sansiri": {
+    "n": 12,
+    "page": "https://www.sansiri.com/condominium/rhea-by-sansiri/"
+  },
+  "the-base-cherngtalay": {
+    "n": 12,
+    "page": "https://www.sansiri.com/condominium/thebase-cherng-talay/"
+  },
+  "the-base-rise": {
+    "n": 12,
+    "page": "https://www.sansiri.com/condominium/thebase-rise-phuket/"
+  },
+  "the-base-bukit-phuket": {
+    "n": 12,
+    "page": "https://www.sansiri.com/condominium/thebase-bukit-phuket/"
+  },
+  "so-origin-lagoon": {
+    "n": 12,
+    "page": "https://origin.co.th/condominium/so-lagoon-cherngtalay-by-origin/"
+  },
+  "so-origin-kata": {
+    "n": 12,
+    "page": "https://origin.co.th/condominium/so-origin-kata/"
+  },
+  "origin-residences-bangtao": {
+    "n": 12,
+    "page": "https://origin.co.th/condominium/origin-residences-phuket-bangtao/"
+  },
+  "origin-place-centre-phuket": {
+    "n": 12,
+    "page": "https://origin.co.th/condominium/origin-place-centre-phuket/"
+  },
+  "laguna-beisaid": {
+    "n": 9,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-beach-residences-bayside"
+  },
+  "laguna-leiksaid": {
+    "n": 8,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-lake-residences-aster"
+  },
+  "laguna-golf-gibiskus": {
+    "n": 10,
+    "page": "https://hibiscus.lagunaproperty.com/"
+  },
+  "angsana-oushenvyu": {
+    "n": 8,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/angsana-oceanview-residences-phuket"
+  },
+  "banyan-oceanus": {
+    "n": 9,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
+  },
+  "banyan-tri-okeanus": {
+    "n": 9,
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
+  },
+  "rhea-sansiri": {
+    "n": 12,
+    "page": "https://www.sansiri.com/condominium/rhea-by-sansiri/"
+  },
+  "origin-bangtao": {
+    "n": 12,
+    "page": "https://origin.co.th/condominium/origin-residences-phuket-bangtao/"
   }
 };

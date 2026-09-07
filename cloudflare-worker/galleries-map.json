@@ -723,5 +723,366 @@
       "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/gallery-lakeside-07.webp",
       "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/gallery-lakeside-08.webp"
     ]
+  },
+  "laguna-bayside": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-beach-residences-bayside",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Aerial_03.jpg.webp?itok=RZgmk5WA",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LGN%20Bayside%20Exterior_1_1920x1080px.jpg.webp?itok=5yv8u65V",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Exterior_03.jpg.webp?itok=lBPZURIM",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Exterior_05.jpg.webp?itok=HAAlyizX",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Penthouse_01.jpg.webp?itok=ZhD7Ui00",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Penthouse_03.jpg.webp?itok=LJkYdz9Q",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2026-06/Aerial-map_LGN_Bayside-2560x1440-px.jpg.webp?itok=D7HEoLGv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/LBRB_Exterior_05.jpg.webp?itok=-m50-XWV",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_LGN_Bayside-5760x3240-px_1.jpg"
+    ]
+  },
+  "laguna-lakeside": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-lake-residences-aster",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-2.jpg.webp?itok=76dYV9M0",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-1.jpg.webp?itok=_vnoqr0L",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-3.jpg.webp?itok=onRH66AM",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-4.jpg.webp?itok=B11U59zI",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-5.jpg.webp?itok=WzRlRNob",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_LGN_Aster-2560x1440-px%20%281%29.jpg.webp?itok=Odw4Du0x",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/Exterior-Rooftop-Pool-Hero.jpg.webp?itok=Uao1Jf6r",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_LGN_Aster-5760x3240-px%20%281%29.jpg"
+    ]
+  },
+  "laguna-aster": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-lake-residences-aster",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-2.jpg.webp?itok=76dYV9M0",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-1.jpg.webp?itok=_vnoqr0L",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-3.jpg.webp?itok=onRH66AM",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-4.jpg.webp?itok=B11U59zI",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-5.jpg.webp?itok=WzRlRNob",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_LGN_Aster-2560x1440-px%20%281%29.jpg.webp?itok=Odw4Du0x",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/Exterior-Rooftop-Pool-Hero.jpg.webp?itok=Uao1Jf6r",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_LGN_Aster-5760x3240-px%20%281%29.jpg"
+    ]
+  },
+  "cassia-phuket": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/cassia-phuket",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Cassia-Phuket-Exterior_01.jpg.webp?itok=6MhGrg6x",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Cassia-Phuket-Aerial_01.jpg.webp?itok=0idfSui3",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Cassia-Phuket-Interior_01.jpg.webp?itok=GeZABmOx",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Cassia-Phuket-Interior_02.jpg.webp?itok=KmYFz1h-",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Cassia-Phuket-Interior_03.jpg.webp?itok=MRk7WIO_",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-02/Aerial-map_Cassia_0.jpg.webp?itok=IqAuiG_W",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/Cassia-Phuket-Exterior_01.jpg.webp?itok=2rKJcS9H",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_Cassia_0.jpg"
+    ]
+  },
+  "angsana-oceanview": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/angsana-oceanview-residences-phuket",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-2.jpg.webp?itok=tIxKCLk8",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket.jpg.webp?itok=_Oqi4VeK",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-3.jpg.webp?itok=Duowudi0",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-4.jpg.webp?itok=AAvUOZc8",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-5.jpg.webp?itok=t2w-N5tU",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_Anov-5760x3240-px%20%281%29_0.jpg.webp?itok=nPzBq8Dv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/AROP-Gallery-Aerial-5.jpg.webp?itok=PdZ3kPw_",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_Anov-5760x3240-px%20%281%29.jpg"
+    ]
+  },
+  "angsana-oceanview-residences": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/angsana-oceanview-residences-phuket",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-2.jpg.webp?itok=tIxKCLk8",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket.jpg.webp?itok=_Oqi4VeK",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-3.jpg.webp?itok=Duowudi0",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-4.jpg.webp?itok=AAvUOZc8",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-5.jpg.webp?itok=t2w-N5tU",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_Anov-5760x3240-px%20%281%29_0.jpg.webp?itok=nPzBq8Dv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/AROP-Gallery-Aerial-5.jpg.webp?itok=PdZ3kPw_",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_Anov-5760x3240-px%20%281%29.jpg"
+    ]
+  },
+  "banyan-tree-beach-residences-oceanus": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTGROV-exterior-1.jpg.webp?itok=M_YVfdJI",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Aerial.jpg.webp?itok=m33Z_Y4d",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Balcony-Day.jpg.webp?itok=O7HsSnZQ",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Balcony-Sunset.jpg.webp?itok=Rqz4ZdDv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Common-Pool.jpg.webp?itok=Qmb6W4yR",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Rooftop-Pool-Penthouse-Sunset.jpg.webp?itok=copm1yG1",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_BTBR-Oceanus-2560x1440-px.jpg.webp?itok=NHWWTybr",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/BTBR-Oceanus-Aerial.jpg.webp?itok=OmUWOo7t",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_BTBR-Oceanus-5760x3240-px_0.jpg"
+    ]
+  },
+  "laguna-hibiscus": {
+    "page": "https://hibiscus.lagunaproperty.com/",
+    "images": [
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-1.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-2.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-3.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-4-jul16.png",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-5.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-6-jul16.png",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-7-jul16.png",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-8.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-9.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-10.jpg"
+    ]
+  },
+  "rhea-by-sansiri": {
+    "page": "https://www.sansiri.com/condominium/rhea-by-sansiri/",
+    "images": [
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/share/rhea-by-sansiri-condo-share.jpg",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-01.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-02.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-03.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-04.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-05.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-06.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-07.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-08.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-09.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-10.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-11.webp"
+    ]
+  },
+  "the-base-cherngtalay": {
+    "page": "https://www.sansiri.com/condominium/thebase-cherng-talay/",
+    "images": [
+      "https://o77site.s3.ap-southeast-1.amazonaws.com/webproject-source/condominium/the-base-cherngtalay/img/share/the-base-cherngtalay-house-social-media-sharing-1200x630.jpg",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-01.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-02.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-03.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-04.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-05.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-06.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-07.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-08.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-09.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-10.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-cherngtalay/img/gallery/the-base-cherngtalay-condo-gallery-11.webp"
+    ]
+  },
+  "the-base-rise": {
+    "page": "https://www.sansiri.com/condominium/thebase-rise-phuket/",
+    "images": [
+      "https://o77site.s3.ap-southeast-1.amazonaws.com/webproject-source/condominium/thebase-rise-phuket/img/share/thebase-rise-condo-share-media-sharing.jpg",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/facility/sansiri-condominium-the-base-rise-1-sunrise-pool.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/facility/sansiri-condominium-the-base-rise-2-blissful-lobby.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/facility/sansiri-condominium-the-base-rise-3-breezy-terrace.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/facility/sansiri-condominium-the-base-rise-4-coral-gym.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/facility/sansiri-condominium-the-base-rise-5-chilling-space.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/facility/sansiri-condominium-the-base-rise-6-solo-coworking-space.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/facility/sansiri-condominium-the-base-rise-7-tropical-coworking-space.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/gallery/thebase-rise-condo-gallery-01.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/gallery/thebase-rise-condo-gallery-02.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/gallery/thebase-rise-condo-gallery-03.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-rise-phuket/img/gallery/thebase-rise-condo-gallery-04.webp"
+    ]
+  },
+  "the-base-bukit-phuket": {
+    "page": "https://www.sansiri.com/condominium/thebase-bukit-phuket/",
+    "images": [
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/share/thebase-bukit-condo-sharepic.jpg",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/facility/sansiri-condominium-the-base-bukit-phuket-4-entertainment-room.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/facility/sansiri-condominium-the-base-bukit-phuket-6-fitness.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/facility/sansiri-condominium-the-base-bukit-phuket-5-swimming-pool.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/facility/sansiri-condominium-the-base-bukit-phuket-1-lobby.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/facility/sansiri-condominium-the-base-bukit-phuket-2-coworking-space.webp",
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/facility/sansiri-condominium-the-base-bukit-phuket-3-private-pod.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/gallery/thebase-bukit-condo-gallery-01.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/gallery/thebase-bukit-condo-gallery-02.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/gallery/thebase-bukit-condo-gallery-03.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/gallery/thebase-bukit-condo-gallery-04.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/the-base-bukit-phuket/img/gallery/thebase-bukit-condo-gallery-05.webp"
+    ]
+  },
+  "so-origin-lagoon": {
+    "page": "https://origin.co.th/condominium/so-lagoon-cherngtalay-by-origin/",
+    "images": [
+      "https://origin.co.th/wp-content/uploads/2026/08/Banner-So-Lagoon-Aug26-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2025/10/Banner-So-Lagoon-Oct25-Pc-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/05/Gallery-So-Lagoon-Oct25_1.jpg",
+      "https://origin.co.th/wp-content/uploads/2025/09/Banner-So-Lagoon-Sep25-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2025/08/Banner-So-Lagoon-Aug25-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/05/Banner-So-Lagoon-Apr25-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/05/Banner-So-Lagoon-Cherngtalay-Feb25-PC-V2.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/05/Banner-So-Lagoon-Cherngtalay-Feb25-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/05/Banner-So-Lagoon-Jan25-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/05/Banner-So-Lagoon-Phuket-Dec24-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/10/Gallery-So-Lagoon-Nov24_10.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/10/Gallery-So-Lagoon-Nov24_9.jpg"
+    ]
+  },
+  "so-origin-kata": {
+    "page": "https://origin.co.th/condominium/so-origin-kata/",
+    "images": [
+      "https://origin.co.th/wp-content/uploads/2026/08/Banner-So-Kata-Phuket-Aug26-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-So-Kata-Jul26-5.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-So-Kata-Jul26-4.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-So-Kata-Jul26-3.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-So-Kata-Jul26-2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-So-Kata-Jul26-1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Kata-May26_2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Kata-May26_1.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/07/Progress-So-Kata-Feb26_3.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/07/Progress-So-Kata-Feb26_2.jpg",
+      "https://origin.co.th/wp-content/uploads/2024/07/Progress-So-Kata-Feb26_1.jpg",
+      "https://origin.co.th/wp-content/uploads/2025/12/Banner-So-Kata-Dec25-PC-V2.jpg"
+    ]
+  },
+  "origin-residences-bangtao": {
+    "page": "https://origin.co.th/condominium/origin-residences-phuket-bangtao/",
+    "images": [
+      "https://origin.co.th/wp-content/uploads/2025/12/Banner-Origin-Residences-Phuket-Bangtao-Dec25-PC-V2.jpg",
+      "https://origin.co.th/wp-content/uploads/2023/10/BANNER-PC-So-origin-bangtao-sep-26.jpg",
+      "https://origin.co.th/wp-content/uploads/2023/10/Banner-So-Origin-Bangtao-Aug26-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-5.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-4.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-3.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_4.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_3.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_1.jpg"
+    ]
+  },
+  "origin-place-centre-phuket": {
+    "page": "https://origin.co.th/condominium/origin-place-centre-phuket/",
+    "images": [
+      "https://origin.co.th/wp-content/uploads/2025/10/Banner-Origin-Place-Phuket-Oct25-Pc-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/08/Banner-Origin-Place-Phuket-Aug26-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Place-Phuket-Jul26-5.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Place-Phuket-Jul26-4.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Place-Phuket-Jul26-3.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Place-Phuket-Jul26-2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Place-Phuket-Jul26-1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/06/Progress-Origin-Place-Phuket-Jun26_5.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/06/Progress-Origin-Place-Phuket-Jun26_4.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/06/Progress-Origin-Place-Phuket-Jun26_3.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/06/Progress-Origin-Place-Phuket-Jun26_2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/06/Progress-Origin-Place-Phuket-Jun26_1.jpg"
+    ]
+  },
+  "laguna-beisaid": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-beach-residences-bayside",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Aerial_03.jpg.webp?itok=RZgmk5WA",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LGN%20Bayside%20Exterior_1_1920x1080px.jpg.webp?itok=5yv8u65V",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Exterior_03.jpg.webp?itok=lBPZURIM",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Exterior_05.jpg.webp?itok=HAAlyizX",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Penthouse_01.jpg.webp?itok=ZhD7Ui00",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/LBRB_Penthouse_03.jpg.webp?itok=LJkYdz9Q",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2026-06/Aerial-map_LGN_Bayside-2560x1440-px.jpg.webp?itok=D7HEoLGv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/LBRB_Exterior_05.jpg.webp?itok=-m50-XWV",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_LGN_Bayside-5760x3240-px_1.jpg"
+    ]
+  },
+  "laguna-leiksaid": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/laguna-lake-residences-aster",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-2.jpg.webp?itok=76dYV9M0",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-1.jpg.webp?itok=_vnoqr0L",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-3.jpg.webp?itok=onRH66AM",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-4.jpg.webp?itok=B11U59zI",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Laguna-Lakeside%20Residences-5.jpg.webp?itok=WzRlRNob",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_LGN_Aster-2560x1440-px%20%281%29.jpg.webp?itok=Odw4Du0x",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/Exterior-Rooftop-Pool-Hero.jpg.webp?itok=Uao1Jf6r",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_LGN_Aster-5760x3240-px%20%281%29.jpg"
+    ]
+  },
+  "laguna-golf-gibiskus": {
+    "page": "https://hibiscus.lagunaproperty.com/",
+    "images": [
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-1.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-2.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-3.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-4-jul16.png",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-20251010-5.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-6-jul16.png",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-7-jul16.png",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-8.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-9.jpg",
+      "https://hibiscus.lagunaproperty.com/assets/images/slider/slide-img-10.jpg"
+    ]
+  },
+  "angsana-oushenvyu": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/angsana-oceanview-residences-phuket",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-2.jpg.webp?itok=tIxKCLk8",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket.jpg.webp?itok=_Oqi4VeK",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-3.jpg.webp?itok=Duowudi0",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-4.jpg.webp?itok=AAvUOZc8",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/Angsana-Residences-Oceanview-Phuket-Aerial-View-5.jpg.webp?itok=t2w-N5tU",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_Anov-5760x3240-px%20%281%29_0.jpg.webp?itok=nPzBq8Dv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/AROP-Gallery-Aerial-5.jpg.webp?itok=PdZ3kPw_",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_Anov-5760x3240-px%20%281%29.jpg"
+    ]
+  },
+  "banyan-oceanus": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTGROV-exterior-1.jpg.webp?itok=M_YVfdJI",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Aerial.jpg.webp?itok=m33Z_Y4d",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Balcony-Day.jpg.webp?itok=O7HsSnZQ",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Balcony-Sunset.jpg.webp?itok=Rqz4ZdDv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Common-Pool.jpg.webp?itok=Qmb6W4yR",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Rooftop-Pool-Penthouse-Sunset.jpg.webp?itok=copm1yG1",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_BTBR-Oceanus-2560x1440-px.jpg.webp?itok=NHWWTybr",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/BTBR-Oceanus-Aerial.jpg.webp?itok=OmUWOo7t",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_BTBR-Oceanus-5760x3240-px_0.jpg"
+    ]
+  },
+  "banyan-tri-okeanus": {
+    "page": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+    "images": [
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTGROV-exterior-1.jpg.webp?itok=M_YVfdJI",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Aerial.jpg.webp?itok=m33Z_Y4d",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Balcony-Day.jpg.webp?itok=O7HsSnZQ",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Balcony-Sunset.jpg.webp?itok=Rqz4ZdDv",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Common-Pool.jpg.webp?itok=Qmb6W4yR",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/homepage_banners/BTBR-Oceanus-Rooftop-Pool-Penthouse-Sunset.jpg.webp?itok=copm1yG1",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/2025-10/Aerial-map_BTBR-Oceanus-2560x1440-px.jpg.webp?itok=NHWWTybr",
+      "https://www.banyangroupresidences.com/sites/bgr/files/styles/full_size/public/gallery_background/BTBR-Oceanus-Aerial.jpg.webp?itok=OmUWOo7t",
+      "https://www.banyangroupresidences.com/sites/bgr/files/property_siteplan/Aerial-map_BTBR-Oceanus-5760x3240-px_0.jpg"
+    ]
+  },
+  "rhea-sansiri": {
+    "page": "https://www.sansiri.com/condominium/rhea-by-sansiri/",
+    "images": [
+      "https://assets.sansiri.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/share/rhea-by-sansiri-condo-share.jpg",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-01.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-02.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-03.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-04.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-05.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-06.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-07.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-08.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-09.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-10.webp",
+      "https://s3.ap-southeast-1.amazonaws.com/o77site/webproject-source/condominium/rhea-by-sansiri/img/gallery/rhea-by-sansiri-condo-gallery-11.webp"
+    ]
+  },
+  "origin-bangtao": {
+    "page": "https://origin.co.th/condominium/origin-residences-phuket-bangtao/",
+    "images": [
+      "https://origin.co.th/wp-content/uploads/2025/12/Banner-Origin-Residences-Phuket-Bangtao-Dec25-PC-V2.jpg",
+      "https://origin.co.th/wp-content/uploads/2023/10/BANNER-PC-So-origin-bangtao-sep-26.jpg",
+      "https://origin.co.th/wp-content/uploads/2023/10/Banner-So-Origin-Bangtao-Aug26-PC-V1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-5.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-4.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-3.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/07/Progress-Origin-Bangtao-Jul26-1.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_4.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_3.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_2.jpg",
+      "https://origin.co.th/wp-content/uploads/2026/05/Progress-So-Origin-Bangtao-May26_1.jpg"
+    ]
   }
 }
