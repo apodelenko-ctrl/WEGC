@@ -21,6 +21,8 @@ CYR = {
 COVER_CDN = "https://wegc-covers.wegc.workers.dev"
 COVER_MAP_PATH = ROOT / "cloudflare-worker" / "covers-map.json"
 OFFICIAL_COVERS = json.loads(COVER_MAP_PATH.read_text()) if COVER_MAP_PATH.exists() else {}
+GALLERY_MAP_PATH = ROOT / "cloudflare-worker" / "galleries-map.json"
+OFFICIAL_GALLERIES = json.loads(GALLERY_MAP_PATH.read_text()) if GALLERY_MAP_PATH.exists() else {}
 
 COVERS = {
     "condo": "/images/the-modeva-exterior-4-1.jpg",
@@ -280,7 +282,10 @@ def main():
             i += 1
         p["slug"] = s
         if p["source"] == "market":
-            p["url"] = f"/ru/podbor.html?project={s}"
+            if s in OFFICIAL_GALLERIES:
+                p["url"] = f"/ru/zhk.html?p={s}"
+            else:
+                p["url"] = f"/ru/podbor.html?project={s}"
         if s in OFFICIAL_COVERS:
             p["cover"] = f"{COVER_CDN}/{s}"
         used.add(s)

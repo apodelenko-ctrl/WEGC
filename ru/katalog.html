@@ -273,6 +273,7 @@ p{color:var(--body);line-height:1.7}
 </footer>
 
 <script src="/ru/wegc-catalog-data.js"></script>
+<script src="/ru/wegc-galleries.js"></script>
 <script>
 (function(){
   var bar=document.getElementById('topbar');
@@ -352,10 +353,12 @@ p{color:var(--body);line-height:1.7}
     var priceHtml = p.price
       ? '<div class="from">от ' + fmt(p.price) + ' ฿</div><div class="rub">' + rubFrom(p.price) + (p.area? ' · от '+p.area+' м²':'') + '</div>'
       : '<div class="ask">Цена по запросу</div><div class="rub">подтвердим у застройщика</div>';
-    var cta = p.source==='direct' ? 'Открыть паспорт →' : 'Запросить по проекту →';
+    var hasGal = !!(window.WEGC_GALLERIES && window.WEGC_GALLERIES[p.slug] && window.WEGC_GALLERIES[p.slug].n);
+    var href = p.source==='direct' ? p.url : (hasGal ? '/ru/zhk.html?p='+encodeURIComponent(p.slug) : p.url);
+    var cta = p.source==='direct' ? 'Открыть паспорт →' : (hasGal ? 'Смотреть фото →' : 'Запросить по проекту →');
     var cover = p.cover || '/images/hero/hero-phuket-infinity-pool.jpg';
     el.innerHTML =
-      '<a class="cover" href="'+p.url+'"><img src="'+cover+'" alt="'+p.name.replace(/"/g,'')+'" loading="lazy" decoding="async" width="800" height="500" onerror="this.onerror=null;this.src=\'/images/hero/hero-phuket-infinity-pool.jpg\'"/>'+
+      '<a class="cover" href="'+href+'"><img src="'+cover+'" alt="'+p.name.replace(/"/g,'')+'" loading="lazy" decoding="async" width="800" height="500" onerror="this.onerror=null;this.src=\'/images/hero/hero-phuket-infinity-pool.jpg\'"/>'+
         '<div class="badges"><span class="badge '+(p.source==='direct'?'gold':'market')+'">'+srcLabel+'</span><span class="badge">'+kindLabel+'</span><span class="badge">'+p.district+'</span></div></a>'+
       '<div class="body"><div class="dev">'+(p.developer||'Пхукет')+'</div><h3>'+p.name+'</h3>'+
         '<div class="meta"><div><div class="l">Спальни</div><div class="v">'+(p.beds||'—')+'</div></div>'+
@@ -364,7 +367,7 @@ p{color:var(--body);line-height:1.7}
         '<div><div class="l">Район</div><div class="v">'+p.district+'</div></div></div>'+
         (p.note?'<p style="font-size:13px">'+p.note+'</p>':'')+
         '<div class="price">'+priceHtml+'</div>'+
-        '<div class="acts"><a href="'+p.url+'">'+cta+'</a>'+
+        '<div class="acts"><a href="'+href+'">'+cta+'</a>'+
         '<a class="muted" href="https://wa.me/66657658782?text='+encodeURIComponent('Здравствуйте! Интересует '+p.name+' ('+p.district+').')+'" target="_blank" rel="noopener">WhatsApp</a></div></div>';
     return el;
   }
