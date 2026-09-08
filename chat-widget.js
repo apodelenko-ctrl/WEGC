@@ -32,11 +32,11 @@
       qprompt: 'What are you looking for?',
       chips: [
         { label: '🏠 Home for family', text: 'Looking for a home in Phuket for my family — what do you recommend?',
-          answer: 'For family living, most clients look at spacious condos or villas in calm, well-served areas — Layan, Bang Tao, Rawai: close to beaches, schools and shops. We work directly with developers, so buyer commission is 0%.\n\nTell me your budget and how many bedrooms you need — I\u2019ll shortlist 2–3 options.' },
+          answer: 'For family living, most clients look at spacious condos or villas in Bang Tao, Cherng Talay, Layan or Rawai. The site lists about 618 Phuket projects: 11 with a direct contract and passport pricing, the rest we request from the developer. Buyer commission is 0%.\n\nTell me your budget and how many bedrooms you need — I\u2019ll shortlist 2–3 options with photo links.' },
         { label: '📈 Investment', text: 'Interested in a new launch for investment — typical yields and entry budget?',
-          answer: 'For investment, units in strong tourist areas — Bang Tao, Surin, Kamala — work best. Realistic net yield is 5–9% a year, and we check every project against a financial model, no brochure promises. Entry is roughly from 2.87M THB.\n\nShare your budget and I\u2019ll show projects with real yield numbers.' },
+          answer: 'Investment works best in strong tourist areas — Bang Tao, Cherng Talay, Surin, Kamala. Realistic net yield is 5–9% a year, no brochure promises. Direct Title entry is from about 2.87M THB (Sierra). For Laguna, Sansiri, Origin and Botanica we confirm price with the developer.\n\nShare your budget and I\u2019ll send specific projects with official photos.' },
         { label: '💰 Up to 5M THB', text: 'Budget up to 5 million THB — which projects fit?',
-          answer: 'Up to 5M THB you can get studios and 1-bedroom units in off-plan projects with 0% developer instalments — a solid entry for both rental and resale.\n\nFor your own use or for rental? And which area? I\u2019ll pick specific units.' },
+          answer: 'Under 5M THB, direct contracts include Title studios — Sierra from 2.87M THB. The catalogue also has Laguna, Sansiri and Origin: we request their price lists, and official photos are already on the site.\n\nOwn use or rental? Which area? I\u2019ll shortlist 2–3 options.' },
         { label: '📋 Pay from abroad', text: 'How can I pay from outside Thailand? Instalments, freehold options?',
           answer: 'You can pay from abroad legally: sign the contract with the developer, transfer to a non-resident account, and the bank issues an FET form (needed to repatriate funds later). Developer instalments are 0%, and both freehold and leasehold are available.\n\nWant me to map the steps for a specific project and budget?' }
       ],
@@ -50,11 +50,11 @@
       qprompt: 'Что вас интересует?',
       chips: [
         { label: '🏠 Для жизни', text: 'Ищу недвижимость на Пхукете для жизни семьёй — что посоветуете?',
-          answer: 'Для жизни семьёй обычно смотрят просторные кондо или виллы в спокойных районах с инфраструктурой — Лаян, Банг Тао, Раваи: рядом пляжи, школы, магазины. Работаем напрямую с застройщиком — комиссия для покупателя 0%.\n\nНапишите бюджет и сколько нужно спален — подберу 2–3 варианта под вас.' },
+          answer: 'Для жизни семьёй обычно смотрят просторные кондо или виллы в спокойных районах — Банг Тао, Чернг Талай, Лаян, Раваи. В каталоге на сайте около 618 ЖК: 11 с прямым договором и ценой из паспорта, остальные запросим у застройщика. Комиссия покупателю 0%.\n\nНапишите бюджет и сколько нужно спален — подберу 2–3 варианта и пришлю ссылки с фото.' },
         { label: '📈 Инвестиция', text: 'Интересует инвестиция в новостройку — какая доходность и с какого бюджета?',
-          answer: 'Под инвестицию берут юниты в сильных туристических районах — Банг Тао, Сурин, Камала. Реалистичная чистая доходность 5–9% годовых, каждый проект сверяем с финмоделью, без обещаний из брошюр. Вход — примерно от 2,87 млн ฿.\n\nНазовите бюджет — покажу проекты с конкретными цифрами доходности.' },
+          answer: 'Под инвестицию берут юниты в сильных туристических районах — Банг Тао, Чернг Талай, Сурин, Камала. Реалистичная чистая доходность 5–9% годовых, без обещаний из брошюр. По прямым проектам вход примерно от 2,87 млн ฿ (The Title Sierra). По Laguna, Sansiri, Origin, Botanica цену подтверждаем у застройщика.\n\nНазовите бюджет — покажу конкретные ЖК со ссылками на фото.' },
         { label: '💰 До 5 млн ฿', text: 'Бюджет до 5 млн бат — какие проекты подойдут?',
-          answer: 'В бюджет до 5 млн ฿ попадают студии и 1-спальные в строящихся проектах с рассрочкой от застройщика 0%. Рабочий вход и под аренду, и под перепродажу.\n\nДля себя или под аренду? И какой район интересен? Подберу конкретные юниты.' },
+          answer: 'В бюджет до 5 млн ฿ по прямым договорам попадают студии Title — например Sierra от 2,87 млн ฿. В каталоге также Laguna, Sansiri, Origin: прайс по ним запросим у застройщика, на сайте уже есть официальные фото.\n\nДля себя или под аренду? Какой район? Подберу 2–3 варианта.' },
         { label: '📋 Оплата из РФ', text: 'Как оплатить из России? Рассрочка, freehold, что нужно для сделки?',
           answer: 'Оплатить из России можно легально, в рублях:\n1) договор с застройщиком;\n2) перевод рублей нашему фин. представителю в РФ;\n3) он платит застройщику от вашего имени, банк фиксирует FET для будущего вывода средств.\nРассрочка застройщика 0%, freehold и leasehold — оба варианта.\n\nПод какой проект и бюджет рассчитать схему?' }
       ],
