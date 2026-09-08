@@ -7,7 +7,7 @@
 Файлы:
 
 - `wegc-ai-agent.js` — воркер (Telegram webhook → Claude → ответ + хендофф).
-- `wegc-kb.js` — база знаний (11 проектов, районы, оплата, FAQ) + system-prompt.
+- `wegc-kb.js` — база знаний (11 прямых паспортов + market ЖК с официальными фото, районы, оплата, FAQ) + system-prompt.
 - `wrangler-agent.toml` — конфиг деплоя.
 
 Notification-relay (`wegc-form-relay.js`) — отдельный воркер, его не трогаем.

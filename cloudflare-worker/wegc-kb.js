@@ -95,8 +95,7 @@ export const PROJECTS = [
     area: null,
     priceFrom: null,
     url: "https://wegc.fund/projects/the-title-adora.html",
-    developer: "Rhom Bho Property PCL (бренд The Title, публичная компания на бирже SET, тикер TITLE)",
-    note: "Застройщик Rhom Bho Property PCL (бренд The Title). Проект ~1,4 млрд THB, 210 юнитов у пляжа Раваи. Арендная программа под управлением застройщика: для части планировок доход по аренде закреплён в договоре в батах. Ход стройки на весну 2026: свайное поле 100%, монолит начат.",
+    note: "Арендная программа под управлением застройщика: для части планировок доход по аренде закреплён в договоре в батах.",
   },
   {
     name: "The Title Vivi",
@@ -133,23 +132,78 @@ export const PROJECTS = [
   },
 ];
 
+/** Market ЖК with official developer photos on wegc.fund. No invented prices. */
+export const MARKET_PROJECTS = [
+  { name: "The Title Coralina", aliases: "Коралина", district: "Камала", type: "Кондо", developer: "The Title / Rhom Bho", slug: "the-title-coralina", note: "Линейка Title вне 11 паспортов. Цена и наличие запросим у застройщика." },
+  { name: "The Title Cielo", aliases: "Сиело", district: "Раваи", type: "Кондо", developer: "The Title / Rhom Bho", slug: "the-title-cielo", note: "Title в Раваи. Прайс по запросу." },
+  { name: "The Title Halo", aliases: "Хало", district: "Банг Тао", type: "Кондо", developer: "The Title / Rhom Bho", slug: "the-title-halo", note: "Title в Банг Тао. Прайс по запросу." },
+  { name: "The Title Heritage", aliases: "Херитидж", district: "Банг Тао", type: "Кондо", developer: "The Title / Rhom Bho", slug: "the-title-heritage", note: "Title в Банг Тао. Прайс по запросу." },
+  { name: "The Title Legendary", aliases: "Леджендари", district: "Банг Тао", type: "Кондо", developer: "The Title / Rhom Bho", slug: "the-title-legendary", note: "Title в Банг Тао. Прайс по запросу." },
+  { name: "The Title Serenity", aliases: "Серенити", district: "Най Янг", type: "Кондо", developer: "The Title / Rhom Bho", slug: "the-title-serenity", note: "Title у Най Янг. Прайс по запросу." },
+  { name: "The Title Villa Kirara", aliases: "Кирара", district: "Банг Тао", type: "Вилла", developer: "The Title / Rhom Bho", slug: "the-title-villa-kirara", note: "Виллы Title. Прайс по запросу." },
+  { name: "The Title Villa Estella", aliases: "Эстелла", district: "Банг Тао", type: "Вилла", developer: "The Title / Rhom Bho", slug: "the-title-villa-estella", note: "Виллы Title. Прайс по запросу." },
+  { name: "Botanica Grand Avenue", aliases: "Ботаника Гранд Авеню", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-grand-avenue", note: "Рынок: Agent Club ещё не подписан. Фото официальные. Не обещай квоту и цену как по прямому договору." },
+  { name: "Botanica Hythe", aliases: "Ботаника Хайт, Hythe by Botanica", district: "Чернг Талай", type: "Кондо", developer: "Botanica Luxury Phuket", slug: "botanica-hythe", note: "Рынок. Русская карточка: Ботаника Хайт." },
+  { name: "Botanica Four Seasons", aliases: "Ботаника Четыре сезона", district: "Чалонг", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-four-seasons", note: "Рынок. Не путать с отелем Four Seasons." },
+  { name: "Botanica Modern Loft", aliases: "Ботаника Модерн Лофт", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-modern-loft", note: "Рынок. Есть фаза II." },
+  { name: "Botanica Chalong Bay", aliases: "Ботаника Чалонг Бэй", district: "Чалонг", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-chalong-bay", note: "Рынок." },
+  { name: "Botanica Foresta", aliases: "Ботаника Фореста", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-foresta", note: "Рынок. Есть Foresta II." },
+  { name: "Botanica Forestique", aliases: "Ботаника Форестик", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-forestique", note: "Рынок." },
+  { name: "Botanica MontAzure", aliases: "Ботаника Монтазур", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-montazure", note: "Рынок." },
+  { name: "Botanica Sky Valley", aliases: "Ботаника Скай Валлей", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-sky-valley", note: "Рынок." },
+  { name: "Botanica Wisdom", aliases: "Ботаника Виздом", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-wisdom", note: "Рынок." },
+  { name: "Botanica Lakeside", aliases: "Ботаника Лейксайд", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-lakeside", note: "Рынок. Не путать с Laguna Lakeside." },
+  { name: "Botanica Louvre", aliases: "Ботаника Лувр", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-louvre", note: "Рынок." },
+  { name: "Botanica Grand Sea Through", aliases: "Гранд Си Тру", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanica-grand-sea-through", note: "Рынок." },
+  { name: "Botanica Pru Jampa", aliases: "Ботаника Пру Джампа", district: "Чернг Талай", type: "Вилла", developer: "Botanica Luxury Phuket", slug: "botanika-pru-dzhampa", note: "Рынок." },
+  { name: "Laguna Bayside", aliases: "Лагуна Бейсайд, Laguna Beach Residences Bayside", district: "Чернг Талай", type: "Кондо", developer: "Banyan Group Residences", slug: "laguna-bayside", note: "Официальные фото Banyan. Прайс запросим у застройщика." },
+  { name: "Laguna Lakeside / Aster", aliases: "Лагуна Лейксайд, Лагуна Астер", district: "Банг Тао", type: "Кондо", developer: "Laguna / Banyan", slug: "laguna-lakeside", note: "То же семейство, что Laguna Aster. Не путать с Botanica Lakeside." },
+  { name: "Laguna Hibiscus", aliases: "Лагуна Гольф Гибискус, Гибискус", district: "Банг Тао", type: "Кондо", developer: "Laguna Property", slug: "laguna-golf-gibiskus", note: "Официальный сайт hibiscus.lagunaproperty.com." },
+  { name: "Cassia Phuket", aliases: "Кассия", district: "Банг Тао", type: "Кондо", developer: "Banyan Group", slug: "cassia-phuket", note: "Banyan / Laguna. Прайс по запросу." },
+  { name: "Angsana Oceanview Residences", aliases: "Ангсана Оушенвью", district: "Банг Тао", type: "Кондо", developer: "Banyan Group / Laguna", slug: "angsana-oceanview-residences", note: "Прайс по запросу." },
+  { name: "Banyan Tree Beach Residences Oceanus", aliases: "Океанус, Баньян Три Океанус", district: "Банг Тао", type: "Кондо", developer: "Laguna Property", slug: "banyan-tree-beach-residences-oceanus", note: "Прайс по запросу." },
+  { name: "Rhea by Sansiri", aliases: "Рея, Rhea Sansiri", district: "Сурин", type: "Кондо", developer: "Sansiri", slug: "rhea-by-sansiri", note: "Официальная галерея Sansiri. Прайс по запросу." },
+  { name: "The Base Cherngtalay", aliases: "Бейс Чернг Талай", district: "Чернг Талай", type: "Кондо", developer: "Sansiri", slug: "the-base-cherngtalay", note: "Sansiri. Прайс по запросу." },
+  { name: "The Base Rise", aliases: "Бейс Райз", district: "Патонг", type: "Кондо", developer: "Sansiri", slug: "the-base-rise", note: "Sansiri, Патонг. Прайс по запросу." },
+  { name: "The Base Bukit Phuket", aliases: "Бейс Букит", district: "Пхукет", type: "Кондо", developer: "Sansiri", slug: "the-base-bukit-phuket", note: "Sansiri. Прайс по запросу." },
+  { name: "So Origin Lagoon", aliases: "Со Ориджин Лагун, So Lagoon Cherngtalay", district: "Чернг Талай", type: "Кондо", developer: "Origin PCL", slug: "so-origin-lagoon", note: "Официальные фото Origin. Прайс по запросу." },
+  { name: "SO Origin Kata", aliases: "Со Ориджин Ката", district: "Ката · Карон", type: "Кондо", developer: "Origin PCL", slug: "so-origin-kata", note: "Origin, Ката. Прайс по запросу." },
+  { name: "Origin Residences Bangtao", aliases: "Ориджин Бангтао", district: "Банг Тао", type: "Кондо", developer: "Origin PCL", slug: "origin-residences-bangtao", note: "Origin. Прайс по запросу." },
+  { name: "Origin Place Centre Phuket", aliases: "Ориджин Плейс", district: "Пхукет", type: "Кондо", developer: "Origin PCL", slug: "origin-place-centre-phuket", note: "Origin. Прайс по запросу." },
+];
+
+export const CATALOG_MODEL = `КАТАЛОГ НА САЙТЕ (важно):
+• На https://wegc.fund/ru/katalog.html — индекс около 618 жилых комплексов Пхукета. Это каталог ЖК, не доска чужих объявлений.
+• Два слоя:
+  1) direct — 11 проектов с прямым договором WEGC. Цена «от» из паспорта. Ссылка вида https://wegc.fund/projects/...
+  2) market — остальные. Юнит и прайс запрашиваем у застройщика. Комиссию покупателю не берём (0%). ЦЕНУ НЕ НАЗЫВАЙ, пока менеджер не подтвердил.
+• У части market есть официальные фото застройщика: страница https://wegc.fund/ru/zhk.html?p=SLUG (слаг из списка ниже).
+• Если клиент назвал ЖК, которого нет в списках, но он звучит как проект на Пхукете — НЕ говори «мы с ним не работаем». Скажи, что он в индексе, запросим актуальный прайс у застройщика. Каталог: https://wegc.fund/ru/katalog.html · заявка: https://wegc.fund/ru/podbor.html
+• Botanica Luxury Phuket — рынок: прямого Agent Club пока нет. Можно показать официальные фото и запросить прайс. Не обещай бронь «как у Title».
+• Фото только с официальных сайтов застройщиков (Title, Botanica, Banyan/Laguna, Sansiri, Origin). Чужие агентские фото не используем и не обещаем.
+• WhatsApp менеджера: +66 65 765 8782 · https://wa.me/66657658782`;
+
 export const DISTRICTS = `Районы, которые ведёт WEGC (микрорынки Пхукета):
 • Банг Тао (Bang Tao) — премиальный север-запад: Laguna, Boat Avenue, Porto de Phuket. Высокий арендный спрос, развитая инфраструктура.
-• Сурин (Surin) — престижный пляж, премиум-сегмент.
+• Чернг Талай (Cherng Talay) — рядом с Лагуной и Банг Тао: Botanica, Laguna Bayside, So Origin Lagoon, The Base Cherngtalay.
+• Сурин (Surin) — престижный пляж, премиум-сегмент (Biancana, Rhea by Sansiri).
 • Камала (Kamala) — спокойный курортный район, семейный.
 • Най Янг (Nai Yang) — тихий север у аэропорта и нацпарка Sirinat, низкий порог входа.
-• Ката · Карон (Kata · Karon) — обжитые туристические пляжи юга, сильная сезонная аренда.
+• Ката · Карон (Kata · Karon) — обжитые туристические пляжи юга, сильная сезонная аренда (Katabello, SO Origin Kata).
 • Раваи (Rawai) — юг острова, для жизни и аренды.
-• Ко Кео (Koh Kaew) — тихая внутренняя часть, виллы и резиденции.`;
+• Чалонг (Chalong) — виллы Botanica Four Seasons / Chalong Bay.
+• Патонг (Patong) — туристический центр; в каталоге есть The Base Rise (Sansiri).
+• Ко Кео (Koh Kaew) — тихая внутренняя часть, виллы и резиденции (Casa de Monte).`;
 
 export const COMPANY = `О компании WEGC (WEST EAST GATE REAL ESTATE):
-• Агентство недвижимости на Пхукете, часть сингапурской группы WEST EAST TRADE GROUP PTE. LTD.
-• Работаем по прямым договорам с застройщиком The Title / Rhom Bho (и AssetWise по отдельным проектам).
+• Агентство недвижимости на Пхукете, часть сингапурской группы WEST EAST TRADE GROUP PTE. LTD. (Сингапур, UEN 202505772C).
+• На сайте — каталог жилых комплексов Пхукета: 11 проектов с прямым договором и ценой из паспорта, остальные запрашиваем у застройщика.
+• Прямые договоры: The Title / Rhom Bho (и AssetWise по отдельным проектам). Рынок — Laguna/Banyan, Sansiri, Origin, Botanica и другие ЖК острова.
 • 0% комиссии покупателю — наше вознаграждение платит застройщик. Структура раскрывается письменно до обязательств.
-• 0% рассрочка от застройщика на срок строительства (график траншей, без банка и ипотечных ставок РФ).
+• 0% рассрочка от застройщика на срок строительства (график траншей, без банка и ипотечных ставок РФ) — уточняем по проекту.
 • Сопровождаем удалённые сделки целиком: подбор, бронь, договор (SPA), оплата, регистрация, ключи.
-• Сайт: wegc.fund · Подбор за 2 минуты: wegc.fund/ru/podbor.html · Цены по районам: wegc.fund/ru/tseny.html · Калькулятор рассрочки: wegc.fund/ru/rassrochka-calculator.html · Калькулятор доходности: wegc.fund/ru/dohodnost-calculator.html · Калькулятор налога при продаже: wegc.fund/ru/nalog-pri-prodazhe-calculator.html · Форма договора Аор Чор 22: wegc.fund/dogovor-ach22-thailand-ru.html
-• Почта: property@wegc.fund (по объектам), post@wegc.fund (общая).`;
+• Сайт: wegc.fund · Каталог: wegc.fund/ru/katalog.html · Подбор: wegc.fund/ru/podbor.html · Цены: wegc.fund/ru/tseny.html · Рассрочка: wegc.fund/ru/rassrochka-calculator.html
+• WhatsApp: +66 65 765 8782 · Почта: property@wegc.fund (по объектам), post@wegc.fund (общая).`;
 
 export const FAQ = `База знаний по частым вопросам:
 
@@ -190,28 +244,6 @@ FET: справка тайского банка о приходе валюты �
 ОТДЕЛКА И МЕБЕЛЬ (важное преимущество — упоминай при подборе):
 Все наши объекты сдаются с ПОЛНОЙ ОТДЕЛКОЙ — это НЕ «серый ключ» и не голые стены. Заезжаешь/сдаёшь в аренду сразу, без ремонта. Часть проектов идёт ещё и с БЕСПЛАТНЫМ мебельным пакетом (fully furnished) — кухня, техника, мебель уже включены в цену. Это особенно ценно для аренды: юнит готов приносить доход с первого дня. По конкретному проекту уточняй комплектацию по паспорту/у менеджера.`;
 
-export const DEVELOPERS = `ЗАСТРОЙЩИКИ И ГЕНПОДРЯДЧИК (как отвечать на «кто застройщик / кто строит / кто подрядчик»):
-• Большинство наших объектов — все проекты бренда «The Title» (Adora, Vivana, Sierra, Artrio, Katabello, Vivi, Balcony, Biancana), а также виллы Casa de Monte — строит Rhom Bho Property Public Company Limited. Это ПУБЛИЧНАЯ компания на Фондовой бирже Таиланда (SET, тикер TITLE): отчётность и ответственность застройщика прозрачны, прошлые проекты бренда распродавались быстро — это сильный аргумент надёжности.
-• Отдельные проекты могут вести другие девелоперы (например AssetWise) — уточняй по конкретному объекту, не обобщай.
-• Генеральный подрядчик (строительная компания): застройщики Пхукета публично раскрывают его не всегда. Если спрашивают имя подрядчика, а его нет в данных — честно скажи, что имя генподрядчика и полную техдокументацию по конкретному проекту менеджер поднимет по запросу, и предложи соединить с менеджером. НИКОГДА не выдумывай название подрядчика.
-• The Title Adora (Раваи): застройщик Rhom Bho Property PCL (The Title), проект ~1,4 млрд THB, 210 юнитов у пляжа Раваи; ход стройки на весну 2026 — свайное поле 100%, начаты монолитные работы.`;
-
-export const LEGAL = `ПРАВОВАЯ ЗАЩИТА ПОКУПАТЕЛЯ (форма договора «Аор Чор 22» / อ.ช. 22):
-• В Таиланде договор купли-продажи квартиры в кондоминиуме обязан соответствовать форме Аор Чор 22, утверждённой Министерством внутренних дел. Основание — ст. 6/2 Закона о кондоминиумах B.E. 2522 (1979), введена поправкой №4 B.E. 2551 (2008). За нарушение — штраф до 100 000 ฿ по ст. 63.
-• ГЛАВНОЕ ПРАВИЛО: условие договора, которое отклоняется от формы и невыгодно покупателю, НЕ ИМЕЕТ СИЛЫ. При этом договор целиком остаётся действующим. То же касается допсоглашений и приложений — через них ухудшить положение покупателя нельзя.
-• Что форма гарантирует покупателю: переуступка договора свободна и БЕЗ платы застройщику; реклама (буклеты, рендеры) считается частью договора; налог на доход, SBT и гербовый сбор при переводе права платит ПРОДАВЕЦ, а сбор за регистрацию делится пополам; предупреждение о дате сделки не менее 30 дней; проценты за просрочку покупателя не более 15% в год и в сумме не более 10% цены; гарантия на конструктив не менее 5 лет и на прочие части не менее 2 лет со дня регистрации кондоминиума.
-• ГРАНИЦЫ: форма покрывает покупку квартиры во FREEHOLD напрямую у застройщика. Она НЕ распространяется на leasehold (это договор аренды, а не купли-продажи), на виллы с землёй (не кондоминиум) и на вторичный рынок (продавец не владелец проекта). Говори об этом честно: в этих случаях защита строится условиями договора, поэтому независимый юрист особенно важен.
-• Подробный разбор всех десяти обязательных блоков формы: https://wegc.fund/dogovor-ach22-thailand-ru.html — давай эту ссылку на вопросы «какой договор», «что если застройщик обманет», «можно ли переуступить», «кто платит налоги при переводе».
-
-НАЛОГИ ПРИ ПРОДАЖЕ (выход из объекта, ориентировочно):
-• Четыре платежа с разными базами: сбор за перевод права 2% от ОЦЕНОЧНОЙ стоимости (по обычаю пополам); специальный налог на бизнес (SBT) 3,3% от большей из величин «цена сделки или оценка»; гербовый сбор 0,5% от той же базы; подоходный налог у источника.
-• SBT и гербовый сбор ВЗАИМОИСКЛЮЧАЮЩИЕ — одновременно оба не начисляются никогда. Это частая ошибка в расчётах.
-• SBT 3,3% применяется, если владели менее ПЯТИ полных лет (мера против спекулятивной перепродажи). После пяти лет вместо него гербовый сбор 0,5% — выгода около 2,8 п.п. от цены. Отсчёт по точной дате внесения имени в титул.
-• Налог у источника для физлица считается от оценочной стоимости с нормативом расходов по сроку владения (92% за год … 50% за 8 лет и более), остаток делится на число лет, применяется прогрессивная шкала (вычет первых 150 000 ฿ здесь НЕ действует), результат умножается обратно на число лет. Для компании — 1% от большей из величин.
-• Калькулятор со всеми четырьмя платежами, суммой на руки и экономией от выдержки 5 лет: https://wegc.fund/ru/nalog-pri-prodazhe-calculator.html
-• Калькулятор чистой доходности от аренды с полной доходностью и приростом стоимости: https://wegc.fund/ru/dohodnost-calculator.html
-• ВАЖНО: это ориентиры, а не налоговая консультация. Оценочную стоимость определяет Департамент казны, итог фиксирует Земельный офис в день сделки. Точный расчёт — с бухгалтером или юристом.`;
-
 /** Build the full system prompt for the agent. */
 export function buildSystemPrompt(opts = {}) {
   const langNames = { ru: "русском", en: "английском (English)", zh: "китайском (中文, упрощённый)" };
@@ -235,9 +267,13 @@ export function buildSystemPrompt(opts = {}) {
       `Сдача: ${p.handover}`,
       p.area && `Площади: ${p.area}`,
       p.priceFrom && `Цена: ${p.priceFrom}`,
-      p.developer && `Застройщик: ${p.developer}`,
     ].filter(Boolean).join(" · ");
     return `▸ ${p.name} — ${bits}\n  ${p.note}\n  Паспорт: ${p.url}`;
+  }).join("\n\n");
+
+  const market = MARKET_PROJECTS.map((p) => {
+    const aka = p.aliases ? ` · также: ${p.aliases}` : "";
+    return `▸ ${p.name}${aka} — ${p.district} · ${p.type} · ${p.developer}\n  ${p.note}\n  Фото: https://wegc.fund/ru/zhk.html?p=${p.slug}`;
   }).join("\n\n");
 
   return `${langLine}
@@ -255,8 +291,11 @@ export function buildSystemPrompt(opts = {}) {
 • ВАЖНО про формат: и в Telegram, и в онлайн-чате на сайте отображается ОБЫЧНЫЙ ТЕКСТ без разметки (в любом языке, включая английский и китайский). НЕ используй markdown: никаких ** для жирного, ## заголовков, --- разделителей и списков со звёздочкой "*". Пиши обычным текстом; для структуры используй переносы строк, тире "—" и при желании эмодзи. Звёздочки и решётки в чате выглядят как мусор.
 • Коротко и по делу: обычно 2–5 предложений. Развёрнутый ответ уместен, когда клиент прямо просит сравнить/посоветовать — но без воды. Один-два уточняющих вопроса за раз, не допрос.
 • НЕ вбрасывай сама минусы, риски, возражения и контраргументы против покупки (например «валютный риск», «управление удалённо», «другая правовая система», сравнения «а вот в России/Сочи дешевле»). Ты помогаешь клиенту купить, а не отговариваешь. Веди диалог от выгод и решений. Если клиент САМ задаёт вопрос про риск/сомнение — ответь честно, спокойно и сбалансированно, сразу показав, как мы это закрываем (сопровождение, управляющая компания, оформление, документы), и верни разговор к подбору. Не придумывай возражения за клиента.
-• Используй реальные данные из каталога. НЕ ВЫДУМЫВАЙ цены, сроки, доходность, планировки. Если точных данных нет — честно скажи, что уточнишь у менеджера / в паспорте проекта, и предложи прислать паспорт (ссылку).
-• ССЫЛКИ — ОБЯЗАТЕЛЬНО: когда называешь конкретный проект, давай прямую ссылку на его паспорт с сайта (полный адрес вида https://wegc.fund/projects/...). Ссылку бери из каталога ниже (поле «Паспорт») — НЕ выдумывай адреса. Ставь ссылку отдельной строкой сразу после описания объекта, например: «Паспорт: https://wegc.fund/projects/the-title-sierra.html». Если перечисляешь несколько проектов — ссылку к каждому. Также можно ссылаться на полезные инструменты сайта (подбор, калькулятор рассрочки, цены), если это уместно.
+• Используй реальные данные из базы. НЕ ВЫДУМЫВАЙ цены, сроки, доходность, планировки. По market-проектам цены нет — скажи, что запросишь у застройщика, и дай страницу с фото.
+• ССЫЛКИ — ОБЯЗАТЕЛЬНО, когда называешь конкретный проект:
+  — direct (11 паспортов): https://wegc.fund/projects/... из поля «Паспорт». Пример: Паспорт: https://wegc.fund/projects/the-title-sierra.html
+  — market с фото: https://wegc.fund/ru/zhk.html?p=SLUG из поля «Фото». Пример: Фото: https://wegc.fund/ru/zhk.html?p=laguna-bayside
+  — НЕ выдумывай адреса. Несколько проектов — ссылка к каждому. Каталог: https://wegc.fund/ru/katalog.html · подбор: https://wegc.fund/ru/podbor.html
 
 ГРАНИЦЫ (важно):
 • Ты НЕ даёшь юридических, налоговых или инвестиционных гарантий. Доходность — всегда «ориентировочно».
@@ -273,17 +312,17 @@ export function buildSystemPrompt(opts = {}) {
 === О КОМПАНИИ ===
 ${COMPANY}
 
-=== КАТАЛОГ (11 проектов, актуально) ===
+=== КАК УСТРОЕН КАТАЛОГ ===
+${CATALOG_MODEL}
+
+=== ПРЯМЫЕ ДОГОВОРЫ (11 проектов, цена из паспорта) ===
 ${cat}
+
+=== РЫНОК: ОФИЦИАЛЬНЫЕ ФОТО НА САЙТЕ ===
+${market}
 
 === РАЙОНЫ ===
 ${DISTRICTS}
-
-=== ЗАСТРОЙЩИКИ И ПОДРЯДЧИК ===
-${DEVELOPERS}
-
-=== ПРАВОВАЯ БАЗА И НАЛОГИ ПРИ ПРОДАЖЕ ===
-${LEGAL}
 
 === FAQ / БАЗА ЗНАНИЙ ===
 ${FAQ}`;
