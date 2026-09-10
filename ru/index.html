@@ -31,7 +31,7 @@
   "@graph":[
     {"@type":"Organization","@id":"https://wegc.fund/#org","name":"WEST EAST TRADE GROUP PTE. LTD.","url":"https://wegc.fund/","identifier":"UEN 202505772C","address":{"@type":"PostalAddress","streetAddress":"7 Temasek Boulevard, #12-07, Suntec Tower One","postalCode":"038987","addressLocality":"Singapore","addressCountry":"SG"},"email":"post@wegc.fund"},
     {"@type":"WebSite","@id":"https://wegc.fund/#website","name":"West East Gate Real Estate","url":"https://wegc.fund/","inLanguage":"ru","publisher":{"@id":"https://wegc.fund/#org"}},
-    {"@type":"RealEstateAgent","@id":"https://wegc.fund/#agent","name":"West East Gate Real Estate","url":"https://wegc.fund/ru/","email":"property@wegc.fund","areaServed":{"@type":"Place","name":"Phuket, Thailand"},"knowsLanguage":["ru","en","zh"],"parentOrganization":{"@id":"https://wegc.fund/#org"}}
+    {"@type":"RealEstateAgent","@id":"https://wegc.fund/#agent","name":"West East Gate Real Estate","url":"https://wegc.fund/ru/","email":"post@wegc.fund","areaServed":{"@type":"Place","name":"Phuket, Thailand"},"knowsLanguage":["ru","en","zh"],"parentOrganization":{"@id":"https://wegc.fund/#org"}}
   ]
 }
 </script>
@@ -1326,11 +1326,11 @@ picture{display:contents}</style>
         <div class="contact-text">
           <span class="kicker" style="color:var(--gold-bright)">Купить недвижимость</span>
           <h2>Один запрос — <strong>одно досье под вас.</strong> Без массовых рассылок.</h2>
-          <p>Расскажите, кто вы, какой бюджет и какой из проектов ближе всего. Ответим с <strong>property@wegc.fund</strong>: пришлём досье под вас, выводы по оценке GIDR и понятный следующий шаг.</p>
+          <p>Расскажите, кто вы, какой бюджет и какой из проектов ближе всего. Ответим с <strong>post@wegc.fund</strong>: пришлём досье под вас, выводы по оценке GIDR и понятный следующий шаг.</p>
           <p>Без рассылок и давления. Работаем один на один с покупателями, которым важны прозрачность и взвешенные решения.</p>
           <div class="contact-channels">
             
-            <a href="mailto:property@wegc.fund" class="contact-channel"><span class="ico">✉</span> property@wegc.fund</a>
+            <a href="mailto:post@wegc.fund" class="contact-channel"><span class="ico">✉</span> post@wegc.fund</a>
           </div>
         </div>
 
@@ -1501,10 +1501,10 @@ document.addEventListener('DOMContentLoaded', () => document.body.classList.add(
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setMsg('Введите корректный email.', 'err'); return; }
     try {
       const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{Accept:'application/json'} });
-      if(res.ok){ form.reset(); setMsg('Спасибо. Запрос принят. Ответим с property@wegc.fund в ближайшее время.', 'ok'); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
+      if(res.ok){ form.reset(); setMsg('Спасибо. Запрос принят. Ответим с post@wegc.fund в ближайшее время.', 'ok'); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
       else throw new Error('send fail');
     } catch(err){
-      setMsg('Не удалось отправить. Напишите напрямую на property@wegc.fund.', 'err');
+      setMsg('Не удалось отправить. Напишите напрямую на post@wegc.fund.', 'err');
     }
   });
 })();

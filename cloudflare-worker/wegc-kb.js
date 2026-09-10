@@ -203,7 +203,7 @@ export const COMPANY = `О компании WEGC (WEST EAST GATE REAL ESTATE):
 • 0% рассрочка от застройщика на срок строительства (график траншей, без банка и ипотечных ставок РФ) — уточняем по проекту.
 • Сопровождаем удалённые сделки целиком: подбор, бронь, договор (SPA), оплата, регистрация, ключи.
 • Сайт: wegc.fund · Каталог: wegc.fund/ru/katalog.html · Подбор: wegc.fund/ru/podbor.html · Цены: wegc.fund/ru/tseny.html · Рассрочка: wegc.fund/ru/rassrochka-calculator.html
-• WhatsApp: +66 65 765 8782 · Почта: property@wegc.fund (по объектам), post@wegc.fund (общая).`;
+• WhatsApp: +66 65 765 8782 · Почта: post@wegc.fund.`;
 
 export const FAQ = `База знаний по частым вопросам:
 
