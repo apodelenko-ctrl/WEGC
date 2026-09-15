@@ -53,3 +53,11 @@ Targets raised threefold per owner instruction: Russia 300 agencies; Belarus/CIS
 ## Current stream
 
 This launch-assets block is complete. Next: parent agent should integrate new links into README/MORNING-BRIEF and continue independent x3 streams. Blockers: trademark clearance remains legal work; payment availability and terms remain deal-specific; no outbound messages sent.
+
+
+## 2026-09-15T18:50:01Z — Russia Central/South stream
+
+- Reviewed current `agencies-russia-pilot.csv`: 101 lines including header; existing dataset contains repeated brand/URL variants and does not expose a locally mounted checkout for safe append/deduplication.
+- Candidate expansion paused at the verification gate: search results did not reliably return official agency sites, so no unsupported names, contacts, or URLs were added.
+- Blocker: GitHub connector can read/write individual files, but the working copy is absent; obtaining and validating 200 new official domains requires a repository checkout or batched source results. Existing records should be deduplicated by normalized domain before claiming 1,000 verified agencies.
+- Next: obtain a checkout or continue in 20-record batches from official sites, validate HTTP/identity, append only unique rows, commit each batch, then update counts.
