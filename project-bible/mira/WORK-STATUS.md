@@ -61,3 +61,13 @@ This launch-assets block is complete. Next: parent agent should integrate new li
 - Candidate expansion paused at the verification gate: search results did not reliably return official agency sites, so no unsupported names, contacts, or URLs were added.
 - Blocker: GitHub connector can read/write individual files, but the working copy is absent; obtaining and validating 200 new official domains requires a repository checkout or batched source results. Existing records should be deduplicated by normalized domain before claiming 1,000 verified agencies.
 - Next: obtain a checkout or continue in 20-record batches from official sites, validate HTTP/identity, append only unique rows, commit each batch, then update counts.
+
+## 2026-09-15T18:50:39Z — Russia Volga/Ural stream
+
+- Added 25 new regional agency records to `data/agencies-russia-pilot.csv` in commit `bdbbb83e3f52a34fff608abcab711aac8ca61c6d`.
+- Scope: Samara, Ufa, Yekaterinburg, Kazan, Chelyabinsk and Perm; each row includes an official site URL and source URL.
+- Current dataset size: 25 rows added in this batch; full-file count should be rechecked and normalized by domain before outreach.
+- Partner contacts, foreign-market activity and commissions remain unconfirmed and are explicitly marked for follow-up.
+- Working now: next regional batch after duplicate/domain validation.
+- Next: append another 20–25 source-backed rows and commit; mass outreach remains disabled.
+- Blocker: GitHub connector does not provide a mounted checkout, so duplicate checks are performed against fetched CSV content and require normalized-domain review.
