@@ -122,3 +122,11 @@ Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verifi
 - First-party route evidence strengthened for Botanica Agent Club, Sansiri International Agent Registration, Ozone named multilingual sales contact (Anil, EN/CN/RU), Anchan Sales Office phone/WhatsApp, and Aquella villa enquiries.
 - Public Sansiri commission wording is retained as a source claim and requires written confirmation before use. Unknown values remain `unknown`; generic routes are not promoted to named agency-relations contacts. Aquella is flagged as Greater Phuket / Phang Nga boundary-market candidate.
 - No external outreach sent. Next: extend the same schema to all TOP-60 rows and target direct agency/broker routes.
+
+
+## 2026-09-15T19:25Z — Phuket TOP-60 contact-route QA published
+
+- Published `data/phuket-top60-contact-routes-checked.csv` with 60 rows (TOP-20 direct priority plus ranks 21–60), using the same contact-route schema as the TOP-20 QA file.
+- Direct/actionable official routes currently evidenced include Botanica Agent Club; Sansiri International Agent Registration and `internationalbuyers@sansiri.com`; Origin Agent Club / 1498; Ozone sales route with Anil listed for EN/CN/RU; Anchan sales office call/WhatsApp and `info@anchanvillas.com`; Aquella villa enquiries; Laguna SILK route; and Phuket9 B2B Agency Network plus sales contact.
+- All other rows preserve official URL/form routes with `unknown` for unpublished partnership details. Project-level or branded-residence rows are not treated as separate developers for legal outreach without entity confirmation.
+- No external outreach sent. Published commit: `a132f8912efba748680fe5e3f010b95a03d5404f`.
