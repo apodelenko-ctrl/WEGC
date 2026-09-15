@@ -40,3 +40,16 @@
 ## 2026-09-15T18:35Z — x3 expansion started
 
 Targets raised threefold per owner instruction: Russia 300 agencies; Belarus/CIS 150; Phuket TOP-60; Bali/Vietnam/Dubai 60 actionable developers each; 30+ competitor battlecards; three launch variants and 90-day content plan. Every 20–25 new records must be committed separately. External outreach remains paused.
+
+
+## 2026-09-15T18:50Z — launch assets x3 stream
+
+- Added three payment copy variants (conservative, standard, agent-first), each with hero, landing section and FAQ: `research/payment-copy-pack-3-variants.md`.
+- Added three onboarding scenarios plus universal checklist: `product/onboarding-scenarios-3.md`.
+- Expanded approved 30-day Telegram plan into three 30-day cycles / 90 days: `research/telegram-content-calendar-90d.md`.
+- Deep-screened five naming finalists against public real-estate/proptech/company evidence; no finalist declared cleared: `research/naming-finalists-deep-screen.md`.
+- New commits: `6e57456`, `cba3b2d`, `8cfe094`, `a6bca7d`.
+
+## Current stream
+
+This launch-assets block is complete. Next: parent agent should integrate new links into README/MORNING-BRIEF and continue independent x3 streams. Blockers: trademark clearance remains legal work; payment availability and terms remain deal-specific; no outbound messages sent.
