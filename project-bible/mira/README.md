@@ -104,3 +104,20 @@
 
 - [Конкурентный go-to-market playbook](./research/competitor-growth-playbook.md)
 - [Карточки конкурентов](./research/competitors/): Tranio, Kalinka, Housebook, Alemica, Alnair, Whitewill, IBG Property, Emirates.Estate, New Life Bali, Mayak Global, MPD Partner.
+
+## 10. Исследовательские результаты
+
+- [Стандарт данных и QA](./data/README.md)
+- [Российские агентства — пилот CSV](./data/agencies-russia-pilot.csv)
+- [Беларусь и СНГ — пилот CSV](./data/agencies-cis-pilot.csv)
+- [Аналитика агентств РФ](./research/agencies-russia-insights.md)
+- [Аналитика Беларуси и СНГ](./research/cis-agencies-and-payments.md)
+- [Пхукет — пилотный реестр застройщиков](./data/developers-phuket-pilot.csv)
+- [Пхукет — карта предложения](./research/phuket-supply-map.md)
+- [Bali / Indonesia supply map](./research/supply-map-bali-indonesia.md)
+- [Vietnam supply map](./research/supply-map-vietnam.md)
+- [Dubai / UAE supply map](./research/supply-map-dubai-uae.md)
+- [Платёжный benchmark](./research/payment-product-benchmark.md)
+- [Нейминг — shortlist](./research/naming-shortlist.md)
+- [Протокол масштабирования](./research/scale-up-protocol.md)
+- [MORNING-BRIEF](./MORNING-BRIEF.md)
