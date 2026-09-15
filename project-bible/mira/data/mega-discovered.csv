@@ -1,0 +1,418 @@
+entity_type,name,location,country,website,contact,source,discovered_at,status
+agency,МИЭЛЬ,Москва,Russia,https://miel.ru,,https://miel.ru,2026-09-15T19:14:11Z,discovered
+agency,ИНКОМ-Недвижимость,Москва,Russia,https://www.incom.ru,+7 495 363-10-10,https://www.incom.ru,2026-09-15T19:14:11Z,discovered
+agency,БЕСТ-Недвижимость,Москва,Russia,https://www.best-realty.ru,,https://www.best-realty.ru,2026-09-15T19:14:11Z,discovered
+agency,Метриум,Москва,Russia,https://www.metrium.ru,,https://www.metrium.ru,2026-09-15T19:14:11Z,discovered
+agency,Бон Тон,Москва,Russia,https://www.bonton.ru,,https://www.bonton.ru,2026-09-15T19:14:11Z,discovered
+agency,НДВ,Москва,Russia,https://www.ndv.ru,,https://www.ndv.ru,2026-09-15T19:14:11Z,discovered
+agency,Азбука Жилья,Москва,Russia,https://azbuka.ru,,https://azbuka.ru,2026-09-15T19:14:11Z,discovered
+agency,Intermark Real Estate,Москва,Russia,https://intermark.ru,,https://intermark.ru,2026-09-15T19:14:11Z,discovered
+agency,Kalinka Realty,Москва,Russia,https://kalinka-realty.ru,,https://kalinka-realty.ru,2026-09-15T19:14:11Z,discovered
+agency,Whitewill,Москва,Russia,https://whitewill.ru,,https://whitewill.ru,2026-09-15T19:14:11Z,discovered
+agency,Point Estate,Москва,Russia,https://pointestate.ru,,https://pointestate.ru,2026-09-15T19:14:11Z,discovered
+agency,Tranio,Москва,Russia,https://tranio.ru,,https://tranio.ru,2026-09-15T19:14:11Z,discovered
+agency,Этажи,Санкт-Петербург,Russia,https://spb.etagi.com,,https://spb.etagi.com,2026-09-15T19:14:11Z,discovered
+agency,Адвекс,Санкт-Петербург,Russia,https://www.advecs.com,,https://www.advecs.com,2026-09-15T19:14:11Z,discovered
+agency,Петербургская Недвижимость,Санкт-Петербург,Russia,https://www.pn.ru,,https://www.pn.ru,2026-09-15T19:14:11Z,discovered
+agency,Бекар,Санкт-Петербург,Russia,https://bekar.ru,,https://bekar.ru,2026-09-15T19:14:11Z,discovered
+agency,Александр Недвижимость,Санкт-Петербург,Russia,https://www.an-3.ru,,https://www.an-3.ru,2026-09-15T19:14:11Z,discovered
+agency,Новосёл,Екатеринбург,Russia,https://novosel.ru,,https://novosel.ru,2026-09-15T19:14:11Z,discovered
+agency,ЖИЛФОНД,Новосибирск,Russia,https://jilfond.ru,,https://jilfond.ru,2026-09-15T19:14:11Z,discovered
+agency,Перспектива24,Казань,Russia,https://perspektiva24.com,,https://perspektiva24.com,2026-09-15T19:14:11Z,discovered
+agency,ФЛЭТ,Казань,Russia,https://flatestate.ru,,https://flatestate.ru,2026-09-15T19:14:11Z,discovered
+agency,АЯКС,Краснодар,Russia,https://аякс-рф.рф,,https://аякс-рф.рф,2026-09-15T19:14:11Z,discovered
+agency,Лендлорд,Ростов-на-Дону,Russia,https://landlord.ru,,https://landlord.ru,2026-09-15T19:14:11Z,discovered
+agency,Самолет Плюс,Москва,Russia,https://samoletplus.ru,,https://samoletplus.ru,2026-09-15T19:14:11Z,discovered
+agency,РКС-Недвижимость,Сочи,Russia,https://rks-realty.ru,,https://rks-realty.ru,2026-09-15T19:14:11Z,discovered
+agency,АН «Находка»,Екатеринбург,Russia,https://nahodka.ru,,https://nahodka.ru,2026-09-15T19:14:11Z,discovered
+agency,Новый Ориентир,Екатеринбург,Russia,https://neworientir.ru,,https://neworientir.ru,2026-09-15T19:14:11Z,discovered
+agency,Бюро недвижимости №1,Екатеринбург,Russia,https://bn1.ru,,https://bn1.ru,2026-09-15T19:14:11Z,discovered
+agency,Дом Недвижимости,Екатеринбург,Russia,https://www.domnedv.ru,,https://www.domnedv.ru,2026-09-15T19:14:11Z,discovered
+agency,БК_Недвижимость,Екатеринбург,Russia,https://bk-n.ru,,https://bk-n.ru,2026-09-15T19:14:11Z,discovered
+agency,Центральное агентство недвижимости,Новосибирск,Russia,https://centralnoe.ru,,https://centralnoe.ru,2026-09-15T19:14:11Z,discovered
+agency,Грановит,Новосибирск,Russia,https://www.granovit.ru,,https://www.granovit.ru,2026-09-15T19:14:11Z,discovered
+agency,Города,Новосибирск,Russia,https://goroda.pro,,https://goroda.pro,2026-09-15T19:14:11Z,discovered
+agency,Агентство недвижимости «Большой город»,Новосибирск,Russia,https://bigcity-nsk.ru,,https://bigcity-nsk.ru,2026-09-15T19:14:11Z,discovered
+agency,Владис,Нижний Новгород,Russia,https://vladis.ru/nizhny-novgorod,,https://vladis.ru/nizhny-novgorod,2026-09-15T19:14:11Z,discovered
+agency,Монолит,Нижний Новгород,Russia,https://monolit-nn.ru,,https://monolit-nn.ru,2026-09-15T19:14:11Z,discovered
+agency,Золотой ключик,Нижний Новгород,Russia,https://goldkeynn.ru,,https://goldkeynn.ru,2026-09-15T19:14:11Z,discovered
+agency,Визит,Самара,Russia,https://www.vzt.ru,,https://www.vzt.ru,2026-09-15T19:14:11Z,discovered
+agency,Мегаполис,Самара,Russia,https://megapolis-samara.ru,,https://megapolis-samara.ru,2026-09-15T19:14:11Z,discovered
+agency,Рио-Люкс,Самара,Russia,https://rio-lux.ru,,https://rio-lux.ru,2026-09-15T19:14:11Z,discovered
+agency,Квартирный вопрос,Самара,Russia,https://kvartirny-vopros.ru,,https://kvartirny-vopros.ru,2026-09-15T19:14:11Z,discovered
+agency,Владис,Краснодар,Russia,https://vladis.ru/krasnodar,,https://vladis.ru/krasnodar,2026-09-15T19:14:11Z,discovered
+agency,Черноморская финансовая компания,Краснодар,Russia,https://chfc.ru,,https://chfc.ru,2026-09-15T19:14:11Z,discovered
+agency,Городской риэлторский центр,Сочи,Russia,https://grc-sochi.ru,,https://grc-sochi.ru,2026-09-15T19:14:11Z,discovered
+agency,Рост Недвижимость,Сочи,Russia,https://rost-sochi.ru,,https://rost-sochi.ru,2026-09-15T19:14:11Z,discovered
+agency,Дон-МТ,Ростов-на-Дону,Russia,https://donmt.ru,,https://donmt.ru,2026-09-15T19:14:11Z,discovered
+agency,Новый Ростов,Ростов-на-Дону,Russia,https://newrostov.ru,,https://newrostov.ru,2026-09-15T19:14:11Z,discovered
+agency,Атлас мира недвижимости,Ростов-на-Дону,Russia,https://atlas-rnd.ru,,https://atlas-rnd.ru,2026-09-15T19:14:11Z,discovered
+agency,Аякс,Краснодар,Russia,https://www.ayax.ru,,https://www.ayax.ru,2026-09-15T19:14:11Z,discovered
+agency,Красава,Краснодар,Russia,https://krasava-realty.ru,,https://krasava-realty.ru,2026-09-15T19:14:11Z,discovered
+agency,Аском,Владивосток,Russia,https://askom.io/,,https://askom.io/,2026-09-15T19:14:11Z,discovered
+agency,Квартирант Плюс,Владивосток,Russia,https://kvartirant.plus/,,https://kvartirant.plus/,2026-09-15T19:14:11Z,discovered
+agency,Вершина,Владивосток,Russia,https://vershina-dv.ru/,,https://vershina-dv.ru/,2026-09-15T19:14:11Z,discovered
+agency,АРЕВЕРА-Недвижимость,Красноярск,Russia,https://arevera.ru/,,https://arevera.ru/,2026-09-15T19:14:11Z,discovered
+agency,ГРАНТА-недвижимость,Красноярск,Russia,https://www.granta24.ru/,,https://www.granta24.ru/,2026-09-15T19:14:11Z,discovered
+agency,Жилфонд,Красноярск,Russia,https://krsk.jilfond.ru/,,https://krsk.jilfond.ru/,2026-09-15T19:14:11Z,discovered
+agency,Центр недвижимости Ракурс,Пермь,Russia,https://an-rakurs.ru/,,https://an-rakurs.ru/,2026-09-15T19:14:11Z,discovered
+agency,Новые Дома,Пермь,Russia,https://noviedoma24.ru/,,https://noviedoma24.ru/,2026-09-15T19:14:11Z,discovered
+agency,АН GOOD,Пермь,Russia,https://an-good.ru/,,https://an-good.ru/,2026-09-15T19:14:11Z,discovered
+agency,ЛЕДОН,Омск,Russia,https://ledon.ru/,,https://ledon.ru/,2026-09-15T19:14:11Z,discovered
+agency,АВЕСТА,Омск,Russia,https://avestaomsk.ru/,,https://avestaomsk.ru/,2026-09-15T19:14:11Z,discovered
+agency,Квартсервис,Омск,Russia,https://kvartservice.ru/,,https://kvartservice.ru/,2026-09-15T19:14:11Z,discovered
+agency,Доверие,Омск,Russia,https://www.doverie-omsk.ru/,,https://www.doverie-omsk.ru/,2026-09-15T19:14:11Z,discovered
+agency,СТАН,Уфа,Russia,https://stan-ufa.ru/,,https://stan-ufa.ru/,2026-09-15T19:14:11Z,discovered
+agency,Адресат,Волгоград,Russia,https://adresat.pro/,,https://adresat.pro/,2026-09-15T19:14:11Z,discovered
+agency,Живем дома,Волгоград,Russia,https://jivem-doma.ru/,,https://jivem-doma.ru/,2026-09-15T19:14:11Z,discovered
+agency,ДОН-МТ,Ростов-на-Дону,Russia,https://donmt.ru/,,https://donmt.ru/,2026-09-15T19:14:11Z,discovered
+agency,Городской риэлторский центр,Сочи,Russia,https://grc-sochi.ru/,,https://grc-sochi.ru/,2026-09-15T19:14:11Z,discovered
+agency,Рост Недвижимость,Сочи,Russia,https://rost-sochi.ru/,,https://rost-sochi.ru/,2026-09-15T19:14:11Z,discovered
+agency,Центральное агентство недвижимости,Новосибирск,Russia,https://centralnoe.ru/,,https://centralnoe.ru/,2026-09-15T19:14:11Z,discovered
+agency,Грановит,Новосибирск,Russia,https://www.granovit.ru/,,https://www.granovit.ru/,2026-09-15T19:14:11Z,discovered
+agency,Города,Новосибирск,Russia,https://goroda.pro/,,https://goroda.pro/,2026-09-15T19:14:11Z,discovered
+agency,Визит,Самара,Russia,https://www.vzt.ru/,,https://www.vzt.ru/,2026-09-15T19:14:11Z,discovered
+agency,Аякс,Краснодар,Russia,https://www.ayax.ru/,,https://www.ayax.ru/,2026-09-15T19:14:11Z,discovered
+agency,Региональный центр недвижимости,Иркутск,Russia,https://rcn38.ru/,,https://rcn38.ru/,2026-09-15T19:14:11Z,discovered
+agency,Панорама недвижимости,Тюмень,Russia,https://www.ndv72.ru/,,https://www.ndv72.ru/,2026-09-15T19:14:11Z,discovered
+agency,Новый адрес,Воронеж,Russia,https://www.nov-adres.ru/,,https://www.nov-adres.ru/,2026-09-15T19:14:11Z,discovered
+agency,СОТА,Воронеж,Russia,https://snsota.ru/,,https://snsota.ru/,2026-09-15T19:14:11Z,discovered
+agency,Крайнов,Воронеж,Russia,https://krainov-vrn.ru/,,https://krainov-vrn.ru/,2026-09-15T19:14:11Z,discovered
+agency,РСС,Воронеж,Russia,https://rss-rielt.ru/,,https://rss-rielt.ru/,2026-09-15T19:14:11Z,discovered
+agency,Орбита 72,Тюмень,Russia,https://orbita72.com/,,https://orbita72.com/,2026-09-15T19:14:11Z,discovered
+agency,Центр недвижимости,Тюмень,Russia,https://newflat72.ru/,,https://newflat72.ru/,2026-09-15T19:14:11Z,discovered
+agency,Новый Город,Тюмень,Russia,https://newgorod.ru/,,https://newgorod.ru/,2026-09-15T19:14:11Z,discovered
+agency,ВБН,Воронеж,Russia,https://vbnvrn.ru/,,https://vbnvrn.ru/,2026-09-15T19:14:11Z,discovered
+agency,Поместье,Иркутск,Russia,https://www.pomestye.com/,,https://www.pomestye.com/,2026-09-15T19:14:11Z,discovered
+agency,4 КОМНАТЫ,Воронеж,Russia,https://an4k.ru/,,https://an4k.ru/,2026-09-15T19:14:11Z,discovered
+agency,Цитадель-А,Саратов,Russia,https://citadel-a.ru/,,https://citadel-a.ru/,2026-09-15T19:14:11Z,discovered
+agency,Вектор-Недвижимость,Ярославль,Russia,https://vektor.life/,,https://vektor.life/,2026-09-15T19:14:11Z,discovered
+agency,Высоцкий Эстейт,Хабаровск,Russia,https://vysotsky.estate/,,https://vysotsky.estate/,2026-09-15T19:14:11Z,discovered
+agency,Квадрат,Оренбург,Russia,https://novostrojki-orenburga.ru/,,https://novostrojki-orenburga.ru/,2026-09-15T19:14:11Z,discovered
+agency,1-я Гильдия недвижимости,Оренбург,Russia,https://1gbn.ru/,,https://1gbn.ru/,2026-09-15T19:14:11Z,discovered
+agency,Руснедвижимость,Киров,Russia,https://rusned.ru/,,https://rusned.ru/,2026-09-15T19:14:11Z,discovered
+agency,Хлынов Град,Киров,Russia,https://hlgrad43.ru/,,https://hlgrad43.ru/,2026-09-15T19:14:11Z,discovered
+agency,Регистрационное бюро,Киров,Russia,https://regburokirov.ru/,,https://regburokirov.ru/,2026-09-15T19:14:11Z,discovered
+agency,Бизнес и право,Киров,Russia,https://business-pravo.ru/,,https://business-pravo.ru/,2026-09-15T19:14:11Z,discovered
+agency,Люди PRO Киров,Киров,Russia,https://lyudipro.ru/,,https://lyudipro.ru/,2026-09-15T19:14:11Z,discovered
+agency,Глобус Недвижимость,Киров,Russia,https://globus43.ru/,,https://globus43.ru/,2026-09-15T19:14:11Z,discovered
+agency,АН Бонус,Киров,Russia,https://bonus43.ru/,,https://bonus43.ru/,2026-09-15T19:14:11Z,discovered
+agency,Центр Плюс,Киров,Russia,https://centerplus43.ru/,,https://centerplus43.ru/,2026-09-15T19:14:11Z,discovered
+agency,Проспект-Недвижимость,Барнаул,Russia,https://prospekt-nedvizhimost.ru/,,https://prospekt-nedvizhimost.ru/,2026-09-15T19:14:11Z,discovered
+agency,Огни Самары,Самара,Russia,https://ogni-samara.ru/,,https://ogni-samara.ru/,2026-09-15T19:14:11Z,discovered
+agency,АФИНА-ЦЕНТР,Самара,Russia,https://afina-center.ru/,,https://afina-center.ru/,2026-09-15T19:14:11Z,discovered
+agency,ДОМ НА ЛАДОНИ,Самара,Russia,https://domnaladoni.ru/,,https://domnaladoni.ru/,2026-09-15T19:14:11Z,discovered
+agency,Амрита,Самара,Russia,https://amrita63.ru/,,https://amrita63.ru/,2026-09-15T19:14:11Z,discovered
+agency,Пять Звезд,Самара,Russia,https://an5zvezd.ru/,,https://an5zvezd.ru/,2026-09-15T19:14:11Z,discovered
+agency,ПАРТНЁРЫ,Самара,Russia,https://anpartnery.ru/,,https://anpartnery.ru/,2026-09-15T19:14:11Z,discovered
+agency,Ваш риэлтор,Самара,Russia,https://xn--63-6kch5asvnds6d4c.xn--p1ai/,,https://xn--63-6kch5asvnds6d4c.xn--p1ai/,2026-09-15T19:14:11Z,discovered
+agency,Новый дом,Уфа,Russia,https://newhouseufa.ru/,,https://newhouseufa.ru/,2026-09-15T19:14:11Z,discovered
+agency,АН Столица,Уфа,Russia,https://an-stolica.ru/,,https://an-stolica.ru/,2026-09-15T19:14:11Z,discovered
+agency,Аркада,Уфа,Russia,https://arkada-realty.ru/,,https://arkada-realty.ru/,2026-09-15T19:14:11Z,discovered
+agency,Мегаполис,Уфа,Russia,https://megapolisufa.ru/,,https://megapolisufa.ru/,2026-09-15T19:14:11Z,discovered
+agency,Альтернатива,Уфа,Russia,https://alternativa-ufa.ru/,,https://alternativa-ufa.ru/,2026-09-15T19:14:11Z,discovered
+agency,Этажи,Уфа,Russia,https://ufa.etagi.com/,,https://ufa.etagi.com/,2026-09-15T19:14:11Z,discovered
+agency,Счастливый адрес,Екатеринбург,Russia,https://schastliviyadres.ru/,,https://schastliviyadres.ru/,2026-09-15T19:14:11Z,discovered
+agency,Новый дом,Екатеринбург,Russia,https://newdom96.ru/,,https://newdom96.ru/,2026-09-15T19:14:11Z,discovered
+agency,Атлас недвижимости,Екатеринбург,Russia,https://atlasrealty.ru/,,https://atlasrealty.ru/,2026-09-15T19:14:11Z,discovered
+agency,Добродел,Екатеринбург,Russia,https://dobrodel.ru/,,https://dobrodel.ru/,2026-09-15T19:14:11Z,discovered
+agency,Корифей,Екатеринбург,Russia,https://korifei.ru/,,https://korifei.ru/,2026-09-15T19:14:11Z,discovered
+agency,Квадратный метр,Казань,Russia,https://kvadratny-metr.ru/,,https://kvadratny-metr.ru/,2026-09-15T19:14:11Z,discovered
+agency,Ключ,Казань,Russia,https://an-klyuch.ru/,,https://an-klyuch.ru/,2026-09-15T19:14:11Z,discovered
+agency,Премьер,Казань,Russia,https://premier-realty.ru/,,https://premier-realty.ru/,2026-09-15T19:14:11Z,discovered
+agency,Домино,Казань,Russia,https://domino-kazan.ru/,,https://domino-kazan.ru/,2026-09-15T19:14:11Z,discovered
+agency,Свой дом,Челябинск,Russia,https://svoi-dom74.ru/,,https://svoi-dom74.ru/,2026-09-15T19:14:11Z,discovered
+agency,Ключевые люди,Челябинск,Russia,https://kluchi74.ru/,,https://kluchi74.ru/,2026-09-15T19:14:11Z,discovered
+agency,Альфа,Пермь,Russia,https://alfareal.ru/,,https://alfareal.ru/,2026-09-15T19:14:11Z,discovered
+agency,Этажи,Сочи,Russia,https://etagi.com,,https://etagi.com,2026-09-15T19:14:11Z,discovered
+agency,Авито Недвижимость,Сочи,Russia,https://www.avito.ru,,https://www.avito.ru,2026-09-15T19:14:11Z,discovered
+agency,ИНКОМ-Недвижимость,Сочи,Russia,https://incom.ru,,https://incom.ru,2026-09-15T19:14:11Z,discovered
+agency,БЕСТ-Недвижимость,Сочи,Russia,https://best-realty.ru,,https://best-realty.ru,2026-09-15T19:14:11Z,discovered
+agency,Метриум,Сочи,Russia,https://metrium.ru,,https://metrium.ru,2026-09-15T19:14:11Z,discovered
+agency,НДВ,Сочи,Russia,https://ndv.ru,,https://ndv.ru,2026-09-15T19:14:11Z,discovered
+agency,БОН ТОН,Сочи,Russia,https://bonton.ru,,https://bonton.ru,2026-09-15T19:14:11Z,discovered
+agency,Адвекс,Сочи,Russia,https://advecs.ru,,https://advecs.ru,2026-09-15T19:14:11Z,discovered
+agency,Петербургская Недвижимость,Сочи,Russia,https://www.spbrealty.ru,,https://www.spbrealty.ru,2026-09-15T19:14:11Z,discovered
+agency,ЮСИ,Сочи,Russia,https://yugstroyinvest.ru,,https://yugstroyinvest.ru,2026-09-15T19:14:11Z,discovered
+agency,КВС,Сочи,Russia,https://kvsspb.ru,,https://kvsspb.ru,2026-09-15T19:14:11Z,discovered
+agency,АСК,Сочи,Russia,https://ask-realestate.ru,,https://ask-realestate.ru,2026-09-15T19:14:11Z,discovered
+agency,М16,Сочи,Russia,https://m16.ru,,https://m16.ru,2026-09-15T19:14:11Z,discovered
+agency,Центр Недвижимости,Сочи,Russia,https://cn.ru,,https://cn.ru,2026-09-15T19:14:11Z,discovered
+agency,Каян,Сочи,Russia,https://kayan.ru,,https://kayan.ru,2026-09-15T19:14:11Z,discovered
+agency,Рио-Люкс,Сочи,Russia,https://riolux.ru,,https://riolux.ru,2026-09-15T19:14:11Z,discovered
+agency,Премьер,Сочи,Russia,https://premier-realty.ru,,https://premier-realty.ru,2026-09-15T19:14:11Z,discovered
+agency,Твоя столица,Минск,Беларусь,https://www.t-s.by/,Unknown,https://www.t-s.by/,2026-09-15T19:14:11Z,discovered
+agency,Этажи (Минск),Минск,Беларусь,https://minsk.etagi.com/,reklama@minsk.etagi.com,https://etagy.by/,2026-09-15T19:14:11Z,discovered
+agency,Квадратный метр,Минск,Беларусь,https://m2.by/ru,Unknown,https://m2.by/ru,2026-09-15T19:14:11Z,discovered
+agency,Центр международной недвижимости Моя 7Я,Минск,Беларусь,https://centr7a.by/,reklama.intl@centr7a.by,https://centr7a.by/,2026-09-15T19:14:11Z,discovered
+agency,Партнер для всех,Минск/Минская область,Беларусь,https://anpartner.by/,Unknown,https://anpartner.by/,2026-09-15T19:14:11Z,discovered
+agency,7 этажей,Минск/Минская область,Беларусь,https://www.an7.by/,Unknown,https://www.an7.by/,2026-09-15T19:14:11Z,discovered
+agency,YG HOME,Минск,Беларусь,https://yghome.by/,info@yghome.by,https://yghome.by/,2026-09-15T19:14:11Z,discovered
+agency,Авангард Недвижимость,Минск/пригород,Беларусь,https://avangard-n.by/,Unknown,https://avangard-n.by/agency/about-us/,2026-09-15T19:14:11Z,discovered
+agency,Гарант Недвижимость,Минск,Беларусь,https://garantiruem.by/,Unknown,https://garantiruem.by/,2026-09-15T19:14:11Z,discovered
+agency,Твой Маёнтак,Минск/Минская область,Беларусь,https://tmaentak.by/,Unknown,https://tmaentak.by/,2026-09-15T19:14:11Z,discovered
+agency,Мольнар,Минск/Беларусь,Беларусь,https://molnar.by/,Unknown,https://molnar.by/,2026-09-15T19:14:11Z,discovered
+agency,Агентство недвижимости Мариэлт,Минск,Беларусь,https://marielt.by/,Unknown,https://marielt.by/,2026-09-15T19:14:11Z,discovered
+agency,АН Фаттория,Минск,Беларусь,https://fattoria.by/,Unknown,https://fattoria.by/,2026-09-15T19:14:11Z,discovered
+agency,AS Недвижимость,Минск,Беларусь,https://www.asrealt.by/,Unknown,https://www.asrealt.by/,2026-09-15T19:14:11Z,discovered
+agency,Алькор Эстейт,Минск,Беларусь,https://alkor-realty.by/,Unknown,https://alkor-realty.by/,2026-09-15T19:14:11Z,discovered
+agency,WT Group,Алматы/Астана,Казахстан,https://wtgroup.international/,Unknown,https://wtgroup.international/about,2026-09-15T19:14:11Z,discovered
+agency,Grand Estate Company,Алматы,Казахстан,https://gec.kz/,Unknown,https://gec.kz/o-nas/,2026-09-15T19:14:11Z,discovered
+agency,Ria Light,Алматы,Казахстан,https://rialight.kz/,info@rialight.kz,https://rialight.kz/about/,2026-09-15T19:14:11Z,discovered
+agency,Hayat Estate Kazakhstan,Алматы,Казахстан,https://hayatestate.com/my-v-almaty,Unknown,https://hayatestate.com/my-v-almaty,2026-09-15T19:14:11Z,discovered
+agency,Этажи (Алматы),Алматы,Казахстан,https://almaty.etagi.com/,Unknown,https://almaty.etagi.com/,2026-09-15T19:14:11Z,discovered
+agency,Kentron,Ереван,Армения,https://www.real-estate.am/ru,kentron@real-estate.am,https://www.real-estate.am/ru,2026-09-15T19:14:11Z,discovered
+agency,Best House,Ереван,Армения,https://besthouse.am/,info@besthouse.am,https://besthouse.am/,2026-09-15T19:14:11Z,discovered
+agency,Альфа-Недвижимость,Минск,Беларусь,https://alfarealty.by/,Unknown,https://alfarealty.by/,2026-09-15T19:14:11Z,discovered
+agency,Новая жизнь,Минск,Беларусь,https://novaya.by/,Unknown,https://novaya.by/,2026-09-15T19:14:11Z,discovered
+agency,Альянс недвижимости,Минск,Беларусь,https://an-realt.by/,Unknown,https://an-realt.by/,2026-09-15T19:14:11Z,discovered
+agency,Риэлт-Сити,Минск,Беларусь,https://rieltcity.by/,Unknown,https://rieltcity.by/,2026-09-15T19:14:11Z,discovered
+agency,Альфа-Риэлт,Брест,Беларусь,https://alfarielt.by/,Unknown,https://alfarielt.by/,2026-09-15T19:14:11Z,discovered
+agency,Home Invest,Алматы,Казахстан,https://homeinvest.kz/,Unknown,https://homeinvest.kz/,2026-09-15T19:14:11Z,discovered
+agency,Adal Estate,Алматы,Казахстан,https://adalestate.kz/,Unknown,https://adalestate.kz/,2026-09-15T19:14:11Z,discovered
+agency,Агентство недвижимости Евразия,Алматы,Казахстан,https://eurasia01.kz/,Unknown,https://eurasia01.kz/,2026-09-15T19:14:11Z,discovered
+agency,АлмаДом,Алматы,Казахстан,https://almadom.kz/,Unknown,https://almadom.kz/,2026-09-15T19:14:11Z,discovered
+agency,Hata.kz,Алматы,Казахстан,https://hata.kz/,Unknown,https://hata.kz/,2026-09-15T19:14:11Z,discovered
+agency,CENTURY 21 Kazakhstan,Алматы/Астана,Казахстан,https://century21.kz/,Unknown,https://century21.kz/,2026-09-15T19:14:11Z,discovered
+agency,BI Group Real Estate,Астана/Алматы,Казахстан,https://bi.group/,Unknown,https://bi.group/,2026-09-15T19:14:11Z,discovered
+agency,WSE.AM,Ереван,Армения,https://wse.am/,Unknown,https://wse.am/,2026-09-15T19:14:11Z,discovered
+agency,SIEVN,Ереван,Армения,https://sievn.am/,info@sievn.am,https://sievn.am/,2026-09-15T19:14:11Z,discovered
+agency,Yerevan Realty,Ереван,Армения,https://yerevanrealty.am/,Unknown,https://yerevanrealty.am/,2026-09-15T19:14:11Z,discovered
+agency,Estate.am,Ереван,Армения,https://estate.am/,Unknown,https://estate.am/,2026-09-15T19:14:11Z,discovered
+agency,Prime Realty Armenia,Ереван,Армения,https://primerealty.am/,Unknown,https://primerealty.am/,2026-09-15T19:14:11Z,discovered
+agency,Tuntun Realty,Ереван,Армения,https://tuntun.am/,Unknown,https://tuntun.am/,2026-09-15T19:14:11Z,discovered
+agency,Agreement,Ташкент,Узбекистан,https://agreement.uz/,Unknown,https://agreement.uz/,2026-09-15T19:14:11Z,discovered
+agency,Ключи Ташкента,Ташкент,Узбекистан,https://klyuchi.uz/,info@klyuchi.uz,https://klyuchi.uz/,2026-09-15T19:14:11Z,discovered
+agency,TENCORP,Ташкент,Узбекистан,https://tencorp.uz/,Unknown,https://tencorp.uz/,2026-09-15T19:14:11Z,discovered
+agency,Uybor,Ташкент,Узбекистан,https://uybor.uz/,Unknown,https://uybor.uz/,2026-09-15T19:14:11Z,discovered
+agency,Imorat,Ташкент,Узбекистан,https://imorat.uz/,Unknown,https://imorat.uz/,2026-09-15T19:14:11Z,discovered
+agency,Guzal Real Estate,Ташкент,Узбекистан,https://guzal.uz/,Unknown,https://guzal.uz/,2026-09-15T19:14:11Z,discovered
+agency,Central Realty,Ташкент,Узбекистан,https://centralrealty.uz/,Unknown,https://centralrealty.uz/,2026-09-15T19:14:11Z,discovered
+agency,Ararat Realty,Ереван,Армения,https://ararat-realty.am/,Unknown,https://ararat-realty.am/,2026-09-15T19:14:11Z,discovered
+agency,Tatev Realty,Ереван,Армения,https://tatevrealty.am/,Unknown,https://tatevrealty.am/,2026-09-15T19:14:11Z,discovered
+agency,Royal Estate Kazakhstan,Алматы,Казахстан,https://royalestate.kz/,Unknown,https://royalestate.kz/,2026-09-15T19:14:11Z,discovered
+agency,Стильный дом,Минск,Беларусь,https://stilnydom.by/,Unknown,https://stilnydom.by/,2026-09-15T19:14:11Z,discovered
+agency,Виват-риэлт,Минск,Беларусь,https://vivat-realt.by/,Unknown,https://vivat-realt.by/,2026-09-15T19:14:11Z,discovered
+agency,Ключи01.kz,Алматы,Казахстан,https://kluchi01.kz/,01keys.kz@mail.ru,https://kluchi01.kz/,2026-09-15T19:14:11Z,discovered
+agency,De Costa Group,Алматы,Казахстан,https://decostagroup.kz/,Unknown,https://decostagroup.kz/,2026-09-15T19:14:11Z,discovered
+agency,Kentron Real Estate,Ереван,Армения,https://www.real-estate.am/,kentron@real-estate.am,https://www.real-estate.am/,2026-09-15T19:14:11Z,discovered
+agency,Elate,Ереван,Армения,https://elate.am/ru/,info@elate.am,https://elate.am/ru/,2026-09-15T19:14:11Z,discovered
+agency,Alex-R,Ереван,Армения,https://alex-r.am/ru/,Unknown,https://alex-r.am/ru/,2026-09-15T19:14:11Z,discovered
+agency,Cascade Realty,Ереван,Армения,https://cascaderealty.am/,Unknown,https://cascaderealty.am/,2026-09-15T19:14:11Z,discovered
+agency,MyRealty,Ереван,Армения,https://myrealty.am/,Unknown,https://myrealty.am/,2026-09-15T19:14:11Z,discovered
+agency,Tashkent Realtor Group / ShahaR.Uz,Ташкент,Узбекистан,https://shahar.uz/,info@shahar.uz,https://shahar.uz/,2026-09-15T19:14:11Z,discovered
+agency,Крыша,Алматы,Казахстан,https://krisha.kz/,Unknown,https://krisha.kz/,2026-09-15T19:14:11Z,discovered
+agency,Homsters.kz,Алматы,Казахстан,https://homsters.kz/,Unknown,https://homsters.kz/,2026-09-15T19:14:11Z,discovered
+agency,Kazakhstan Sotheby’s International Realty,Алматы,Казахстан,https://sothebysrealty.kz/,Unknown,https://sothebysrealty.kz/,2026-09-15T19:14:11Z,discovered
+agency,First Realty Group,Алматы,Казахстан,https://firstrealty.kz/,Unknown,https://firstrealty.kz/,2026-09-15T19:14:11Z,discovered
+agency,Atameken Real Estate,Алматы,Казахстан,https://atameken-realty.kz/,Unknown,https://atameken-realty.kz/,2026-09-15T19:14:11Z,discovered
+agency,NIKA Estate,Алматы,Казахстан,https://nikaestate.kz/,Unknown,https://nikaestate.kz/,2026-09-15T19:14:11Z,discovered
+agency,Aviator Real Estate,Астана,Казахстан,https://aviator-realty.kz/,Unknown,https://aviator-realty.kz/,2026-09-15T19:14:11Z,discovered
+agency,Qazaqstan Realty,Астана,Казахстан,https://qazaqstanrealty.kz/,Unknown,https://qazaqstanrealty.kz/,2026-09-15T19:14:11Z,discovered
+agency,A-Realty,Шымкент,Казахстан,https://a-realty.kz/,Unknown,https://a-realty.kz/,2026-09-15T19:14:11Z,discovered
+agency,Zhilfond,Караганда,Казахстан,https://zhilfond.kz/,Unknown,https://zhilfond.kz/,2026-09-15T19:14:11Z,discovered
+agency,Elite Realty,Ереван,Армения,https://eliterealty.am/,Unknown,https://eliterealty.am/,2026-09-15T19:14:11Z,discovered
+agency,Capital Realty,Ереван,Армения,https://capitalrealty.am/,Unknown,https://capitalrealty.am/,2026-09-15T19:14:11Z,discovered
+agency,Avangard Realty,Ереван,Армения,https://avangard-realty.am/,Unknown,https://avangard-realty.am/,2026-09-15T19:14:11Z,discovered
+agency,Smart Realty,Ереван,Армения,https://smartrealty.am/,Unknown,https://smartrealty.am/,2026-09-15T19:14:11Z,discovered
+agency,Imot.am,Ереван,Армения,https://imot.am/,Unknown,https://imot.am/,2026-09-15T19:14:11Z,discovered
+agency,Realting.uz,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,Domtut.uz,Ташкент,Узбекистан,https://domtut.uz/,Unknown,https://domtut.uz/,2026-09-15T19:14:11Z,discovered
+agency,Uyjoy.uz,Ташкент,Узбекистан,https://uyjoy.uz/,Unknown,https://uyjoy.uz/,2026-09-15T19:14:11Z,discovered
+agency,New House Real Estate,Ташкент,Узбекистан,https://newhouse.uz/,Unknown,https://newhouse.uz/,2026-09-15T19:14:11Z,discovered
+agency,Мегаполис,Минск,Беларусь,https://megapolis.by/,Unknown,https://megapolis.by/,2026-09-15T19:14:11Z,discovered
+agency,РиэлтКафе,Минск,Беларусь,https://rieltcafe.by/,Unknown,https://rieltcafe.by/,2026-09-15T19:14:11Z,discovered
+agency,Агентство недвижимости Этажи,Брест,Беларусь,https://brest.etagi.com/,Unknown,https://brest.etagi.com/,2026-09-15T19:14:11Z,discovered
+agency,Атлант-М Недвижимость,Минск,Беларусь,https://atlantm.by/,Unknown,https://atlantm.by/,2026-09-15T19:14:11Z,discovered
+agency,Ваш риэлтор,Гомель,Беларусь,https://vashrieltor.by/,Unknown,https://vashrieltor.by/,2026-09-15T19:14:11Z,discovered
+agency,Магазин недвижимости,Витебск,Беларусь,https://realtyshop.by/,Unknown,https://realtyshop.by/,2026-09-15T19:14:11Z,discovered
+agency,SV Real Estate,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,Domio,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,RNB ESTATE,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,SquareLab innovative property solutions,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,Единый Центр Новостроек,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,Human2Human,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,Yunusabad Residence,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,Luxe Construction Group,Ташкент,Узбекистан,https://realting.uz/,Unknown,https://realting.uz/,2026-09-15T19:14:11Z,discovered
+agency,Агентство 7 этажей,Минск,Беларусь,https://www.an7.by/,Unknown,https://www.an7.by/,2026-09-15T19:14:11Z,discovered
+agency,Евразия,Алматы,Казахстан,https://eurasia01.kz/,Unknown,https://eurasia01.kz/,2026-09-15T19:14:11Z,discovered
+agency,Uybor.uz,Ташкент,Узбекистан,https://uybor.uz/,Unknown,https://uybor.uz/,2026-09-15T19:14:11Z,discovered
+agency,Дельта Инвест,Уфа,Russia,https://deltainvest-ufa.ru/,,https://deltainvest-ufa.ru/,2026-09-15T19:14:11Z,discovered
+agency,РиэлтКонсалт,Омск,Russia,https://rieltconsult.ru/,info@rieltconsult.ru,https://rieltconsult.ru/,2026-09-15T19:14:11Z,discovered
+agency,Диал,Екатеринбург,Russia,https://dial93.ru/,main@dial93.ru,https://dial93.ru/,2026-09-15T19:14:11Z,discovered
+agency,Титул,Ростов-на-Дону,Russia,https://realtitul.ru/,client@realtitul.ru,https://realtitul.ru/,2026-09-15T19:14:11Z,discovered
+agency,Новая жизнь,Самара,Russia,https://www.nlre.ru/,nlre@bk.ru,https://www.nlre.ru/,2026-09-15T19:14:11Z,discovered
+agency,ГиперДОМ,Казань,Russia,https://www.giperdom.net/,agentstvo@giperdom.net,https://www.giperdom.net/,2026-09-15T19:14:11Z,discovered
+agency,CentRoom,Казань,Russia,https://centroom.ru/,sale@centroom.ru,https://centroom.ru/,2026-09-15T19:14:11Z,discovered
+agency,ЧФК недвижимость,Краснодар,Russia,https://bsfc.com/,bsfc@bsfc.com,https://bsfc.com/,2026-09-15T19:14:11Z,discovered
+agency,На ЮГ,Краснодар,Russia,https://www.nayug24.ru/,krd@nayug24.ru,https://www.nayug24.ru/,2026-09-15T19:14:11Z,discovered
+agency,Континент,Ростов-на-Дону,Russia,https://continent-realty.com/,kontinent-r@mail.ru,https://continent-realty.com/,2026-09-15T19:14:11Z,discovered
+agency,Альмерия,Ростов-на-Дону,Russia,https://almeriy.ru/,info@almeriy.ru,https://almeriy.ru/,2026-09-15T19:14:11Z,discovered
+agency,Золотой ключик,Нижний Новгород,Russia,https://goldkeynn.ru/,bossgoldkey@mail.ru,https://goldkeynn.ru/,2026-09-15T19:14:11Z,discovered
+agency,Антей,Нижний Новгород,Russia,https://anteinn.ru/,ananteinn@mail.ru,https://anteinn.ru/,2026-09-15T19:14:11Z,discovered
+agency,Донских Недвижимость,Нижний Новгород,Russia,https://donreal.ru/,ksdonskih@yandex.ru,https://donreal.ru/,2026-09-15T19:14:11Z,discovered
+agency,РестА-НН,Нижний Новгород,Russia,https://restann.ru/,restann@yandex.ru,https://restann.ru/,2026-09-15T19:14:11Z,discovered
+agency,Хайлайт,Нижний Новгород,Russia,https://an-hl.ru/,Anhlnn@mail.ru,https://an-hl.ru/,2026-09-15T19:14:11Z,discovered
+agency,Виват-Риэлти,Нижний Новгород,Russia,https://vivatnn.ru/,vivat-rielty@mail.ru,https://vivatnn.ru/,2026-09-15T19:14:11Z,discovered
+agency,Твой дом,Пермь,Russia,https://tvoydom59.ru/,tdom_perm@mail.ru,https://tvoydom59.ru/kompanija/,2026-09-15T19:14:11Z,discovered
+agency,Риэлт Сервис Омск,Омск,Russia,https://omskrs.ru/,contact@omskrs.ru,https://omskrs.ru/,2026-09-15T19:14:11Z,discovered
+agency,BOGDANOV-RIELT,Омск,Russia,https://bogdanov-rielt.ru/,andrey_bogdanov2018@mail.ru,https://bogdanov-rielt.ru/,2026-09-15T19:14:11Z,discovered
+agency,Единый Центр Недвижимости,Тюмень,Russia,https://www.ecn72.ru/,+7 (3452) 707-202,https://www.ecn72.ru/,2026-09-15T19:14:11Z,discovered
+agency,Сота,Воронеж,Russia,https://www.snsota.ru/,,https://www.snsota.ru/,2026-09-15T19:14:11Z,discovered
+agency,Дом Недвижимости,Екатеринбург,Russia,https://www.domnedv.ru/,2681501@mail.ru,https://www.domnedv.ru/,2026-09-15T19:14:11Z,discovered
+agency,Риолюкс,Уфа,Russia,https://riolux.ru/ufa/,,https://riolux.ru/ufa/,2026-09-15T19:14:11Z,discovered
+developer,Emaar Properties,Dubai,UAE,https://www.emaar.com/,unknown,https://www.emaar.com/,2026-09-15T19:14:11Z,discovered
+developer,DAMAC Properties,Dubai,UAE,https://www.damacproperties.com/,unknown,https://www.damacproperties.com/,2026-09-15T19:14:11Z,discovered
+developer,Nakheel / Dubai Holding,Dubai,UAE,https://www.nakheel.com/,unknown,https://www.nakheel.com/,2026-09-15T19:14:11Z,discovered
+developer,Sobha Realty,Dubai,UAE,https://www.sobharealty.com/,unknown,https://www.sobharealty.com/,2026-09-15T19:14:11Z,discovered
+developer,Azizi Developments,Dubai,UAE,https://www.azizidevelopments.com/,unknown,https://www.azizidevelopments.com/,2026-09-15T19:14:11Z,discovered
+developer,Binghatti,Dubai,UAE,https://www.binghatti.com/,unknown,https://www.binghatti.com/,2026-09-15T19:14:11Z,discovered
+developer,Ellington Properties,Dubai,UAE,https://ellingtonproperties.ae/,unknown,https://ellingtonproperties.ae/,2026-09-15T19:14:11Z,discovered
+developer,Danube Properties,Dubai,UAE,https://danubeproperties.com/,unknown,https://danubeproperties.com/,2026-09-15T19:14:11Z,discovered
+developer,Meraas / Dubai Holding,Dubai,UAE,https://meraas.com/,unknown,https://meraas.com/,2026-09-15T19:14:11Z,discovered
+developer,Omniyat,Dubai,UAE,https://www.omniyat.com/,unknown,https://www.omniyat.com/,2026-09-15T19:14:11Z,discovered
+developer,Select Group,Dubai,UAE,https://select-group.ae/,unknown,https://select-group.ae/,2026-09-15T19:14:11Z,discovered
+developer,MAG Lifestyle Development,Dubai,UAE,https://magld.com/,unknown,https://magld.com/,2026-09-15T19:14:11Z,discovered
+developer,Wasl Asset Management Group,Dubai,UAE,https://www.wasl.ae/,unknown,https://www.wasl.ae/,2026-09-15T19:14:11Z,discovered
+developer,Aldar Properties,Dubai,UAE,https://www.aldar.com/,unknown,https://www.aldar.com/,2026-09-15T19:14:11Z,discovered
+developer,Arada,Dubai,UAE,https://www.arada.com/,unknown,https://www.arada.com/,2026-09-15T19:14:11Z,discovered
+developer,Sobha Limited / Sobha Hartland,Dubai,UAE,https://www.sobharealty.com/,unknown,https://www.sobharealty.com/,2026-09-15T19:14:11Z,discovered
+developer,Dubai Properties,Dubai,UAE,https://www.dp.ae/,unknown,https://www.dp.ae/,2026-09-15T19:14:11Z,discovered
+developer,Union Properties,Dubai,UAE,https://unionproperties.ae/,unknown,https://unionproperties.ae/,2026-09-15T19:14:11Z,discovered
+developer,Tiger Properties,Dubai,UAE,https://www.tigerproperties.ae/,unknown,https://www.tigerproperties.ae/,2026-09-15T19:14:11Z,discovered
+developer,Reportage Properties,Dubai,UAE,https://reportageproperties.com/,unknown,https://reportageproperties.com/,2026-09-15T19:14:11Z,discovered
+developer,Iman Developers,Dubai,UAE,https://imandevelopers.com/,unknown,https://imandevelopers.com/,2026-09-15T19:14:11Z,discovered
+developer,Prescott Development,Dubai,UAE,https://prescott.ae/,unknown,https://prescott.ae/,2026-09-15T19:14:11Z,discovered
+developer,Nshama,Dubai,UAE,https://www.nshama.ae/,unknown,https://www.nshama.ae/,2026-09-15T19:14:11Z,discovered
+developer,Seven Tides,Dubai,UAE,https://www.seventides.com/,unknown,https://www.seventides.com/,2026-09-15T19:14:11Z,discovered
+developer,Vinhomes,Vietnam,Vietnam,https://vinhomes.vn/,unknown,https://vinhomes.vn/,2026-09-15T19:14:11Z,discovered
+developer,Novaland,Vietnam,Vietnam,https://www.novaland.com.vn/,unknown,https://www.novaland.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,Sun Group,Vietnam,Vietnam,https://sungroup.com.vn/,unknown,https://sungroup.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,BIM Group,Vietnam,Vietnam,https://bimgroup.com/,unknown,https://bimgroup.com/,2026-09-15T19:14:11Z,discovered
+developer,Nam Long,Vietnam,Vietnam,https://www.namlongvn.com/,unknown,https://www.namlongvn.com/,2026-09-15T19:14:11Z,discovered
+developer,Ecopark,Vietnam,Vietnam,https://ecopark.com.vn/,unknown,https://ecopark.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,Masterise Homes,Vietnam,Vietnam,https://masterisehomes.com/,unknown,https://masterisehomes.com/,2026-09-15T19:14:11Z,discovered
+developer,Nomura Real Estate Vietnam,Vietnam,Vietnam,https://nomura-re-vn.com/,unknown,https://nomura-re-vn.com/,2026-09-15T19:14:11Z,discovered
+developer,Phu Long,Vietnam,Vietnam,https://phulong.com/,unknown,https://phulong.com/,2026-09-15T19:14:11Z,discovered
+developer,Khang Dien,Vietnam,Vietnam,https://khangdien.com.vn/,unknown,https://khangdien.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,Dat Xanh Group,Vietnam,Vietnam,https://www.datxanh.vn/,unknown,https://www.datxanh.vn/,2026-09-15T19:14:11Z,discovered
+developer,CEO Group,Vietnam,Vietnam,https://ceogroup.com.vn/,unknown,https://ceogroup.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,FLC Group,Vietnam,Vietnam,https://flc.vn/,unknown,https://flc.vn/,2026-09-15T19:14:11Z,discovered
+developer,BRG Group,Vietnam,Vietnam,https://brggroup.vn/,unknown,https://brggroup.vn/,2026-09-15T19:14:11Z,discovered
+developer,CapitaLand Development Vietnam,Vietnam,Vietnam,https://www.capitaland.com/vn/en.html,unknown,https://www.capitaland.com/vn/en.html,2026-09-15T19:14:11Z,discovered
+developer,Gamuda Land Vietnam,Vietnam,Vietnam,https://gamudaland.com.vn/,unknown,https://gamudaland.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,Keppel Vietnam,Vietnam,Vietnam,https://www.keppel.com/,unknown,https://www.keppel.com/,2026-09-15T19:14:11Z,discovered
+developer,An Gia,Vietnam,Vietnam,https://angia.com.vn/,unknown,https://angia.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,Phat Dat,Vietnam,Vietnam,https://www.phatdat.com.vn/,unknown,https://www.phatdat.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,Van Phuc Group,Vietnam,Vietnam,https://vanphucgroup.com/,unknown,https://vanphucgroup.com/,2026-09-15T19:14:11Z,discovered
+developer,Hung Thinh Land,Vietnam,Vietnam,https://hungthinhland.com/,unknown,https://hungthinhland.com/,2026-09-15T19:14:11Z,discovered
+developer,Muong Thanh Group,Vietnam,Vietnam,https://muongthanh.com/,unknown,https://muongthanh.com/,2026-09-15T19:14:11Z,discovered
+developer,T&T Group,Vietnam,Vietnam,https://ttgroup.com.vn/,unknown,https://ttgroup.com.vn/,2026-09-15T19:14:11Z,discovered
+developer,Taseco Land,Vietnam,Vietnam,https://tasecoland.vn/,unknown,https://tasecoland.vn/,2026-09-15T19:14:11Z,discovered
+developer,Rhom Bho Property / THE TITLE,Phuket,Thailand,https://thetitleresidence.com/,,https://thetitleresidence.com/,2026-09-15T19:14:11Z,discovered
+developer,Botanica Luxury Villas,Phuket,Thailand,https://botanicaluxuryvilla.com/,,https://botanicaluxuryvilla.com/,2026-09-15T19:14:11Z,discovered
+developer,AssetWise,Phuket,Thailand,https://assetwise.co.th/,,https://assetwise.co.th/,2026-09-15T19:14:11Z,discovered
+developer,Origin Property,Phuket,Thailand,https://origin.co.th/,,https://origin.co.th/,2026-09-15T19:14:11Z,discovered
+developer,Sansiri,Phuket,Thailand,https://sansiri.com/location/phuket-en/,,https://sansiri.com/location/phuket-en/,2026-09-15T19:14:11Z,discovered
+developer,Banyan Group Residences,Phuket,Thailand,https://banyangroupresidences.com/,,https://banyangroupresidences.com/,2026-09-15T19:14:11Z,discovered
+developer,Utopia Corporation,Phuket,Thailand,https://utopia.co.th/,,https://utopia.co.th/,2026-09-15T19:14:11Z,discovered
+developer,Thai Fareast Property / Bluepoint,Phuket,Thailand,https://bluepointcondo.com/,,https://bluepointcondo.com/,2026-09-15T19:14:11Z,discovered
+developer,The Ozone Group Phuket,Phuket,Thailand,https://ozonephuket.com/,sales@theozonegroupphuket.com,https://ozonephuket.com/,2026-09-15T19:14:11Z,discovered
+developer,The Zero Phuket,Phuket,Thailand,https://thezerophuket.com/,,https://thezerophuket.com/,2026-09-15T19:14:11Z,discovered
+developer,Anchan Villas / Pearl Island Property,Phuket,Thailand,https://anchanvillas.com/,info@anchanvillas.com,https://anchanvillas.com/,2026-09-15T19:14:11Z,discovered
+developer,The ONE Group,Phuket,Thailand,https://theonephuket.com/,,https://theonephuket.com/,2026-09-15T19:14:11Z,discovered
+developer,SKHAI,Phuket,Thailand,https://skhai.com/,,https://skhai.com/,2026-09-15T19:14:11Z,discovered
+developer,Sunny Holding,Phuket,Thailand,https://sunnyholding.com/development/,,https://sunnyholding.com/development/,2026-09-15T19:14:11Z,discovered
+developer,Phuket9,Phuket,Thailand,https://phuket9.com/,sales@phuket9.com,https://phuket9.com/,2026-09-15T19:14:11Z,discovered
+developer,The Aristo Group,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,"Boat Pattana Co., Ltd.",Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Serene Innovations & Developments,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Thai Molman Real Estate,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,"Able Land Co., Ltd.",Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Ornsirin Public Company Limited,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,"Kata Heights Co., Ltd.",Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,"2 Thanwa Property Co., Ltd.",Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,"Green Atlas Innovations Co., Ltd.",Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Sala Hospitality Group,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,"Modern 79 Co., Ltd. / Mouana Phuket",Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,"T.H. Group Phuket Co., Ltd.",Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,VIP Thailand Group,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Laguna Property,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Mida Grande Resort,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Unique Development,Phuket,Thailand,,,,2026-09-15T19:14:11Z,discovered
+developer,Magnum Development,Bali,Indonesia,https://magnumdevelopments.com/,unknown,https://magnumdevelopments.com/,2026-09-15T19:14:11Z,discovered
+developer,Hatten Land,Bali,Indonesia,https://hattenland.com/,unknown,https://hattenland.com/,2026-09-15T19:14:11Z,discovered
+developer,Kura Kura Bali / BTID,Bali,Indonesia,https://kurakurabali.com/,unknown,https://kurakurabali.com/,2026-09-15T19:14:11Z,discovered
+developer,Nuanu,Bali,Indonesia,https://nuanu.com/,unknown,https://nuanu.com/,2026-09-15T19:14:11Z,discovered
+developer,Bali National Golf Club / ITDC,Bali,Indonesia,https://www.itdc.co.id/,unknown,https://www.itdc.co.id/,2026-09-15T19:14:11Z,discovered
+developer,Ciputra Development,Bali,Indonesia,https://ciputradevelopment.com/,unknown,https://ciputradevelopment.com/,2026-09-15T19:14:11Z,discovered
+developer,Sinar Mitbana Mas,Bali,Indonesia,https://www.sinarmitbana.co.id/,unknown,https://www.sinarmitbana.co.id/,2026-09-15T19:14:11Z,discovered
+developer,Synthesis Development,Bali,Indonesia,https://synthesis-development.id/,unknown,https://synthesis-development.id/,2026-09-15T19:14:11Z,discovered
+developer,MNC Land,Bali,Indonesia,https://mncland.com/,unknown,https://mncland.com/,2026-09-15T19:14:11Z,discovered
+developer,PT Bali Ragawisata,Bali,Indonesia,https://www.baliragawisata.com/,unknown,https://www.baliragawisata.com/,2026-09-15T19:14:11Z,discovered
+developer,The Mulia Bali,Bali,Indonesia,https://www.themulia.com/bali,unknown,https://www.themulia.com/bali,2026-09-15T19:14:11Z,discovered
+developer,Bvlgari Resort Bali,Bali,Indonesia,https://www.bulgarihotels.com/en_US/bali,unknown,https://www.bulgarihotels.com/en_US/bali,2026-09-15T19:14:11Z,discovered
+developer,Six Senses Uluwatu,Bali,Indonesia,https://www.sixsenses.com/en/resorts/uluwatu-bali,unknown,https://www.sixsenses.com/en/resorts/uluwatu-bali,2026-09-15T19:14:11Z,discovered
+developer,Raffles Bali,Bali,Indonesia,https://www.raffles.com/bali/,unknown,https://www.raffles.com/bali/,2026-09-15T19:14:11Z,discovered
+developer,Mandarin Oriental Bali,Bali,Indonesia,https://www.mandarinoriental.com/en/nusa-dua,unknown,https://www.mandarinoriental.com/en/nusa-dua,2026-09-15T19:14:11Z,discovered
+developer,The Apurva Kempinski Bali,Bali,Indonesia,https://www.kempinski.com/en/the-apurva-kempinski-bali,unknown,https://www.kempinski.com/en/the-apurva-kempinski-bali,2026-09-15T19:14:11Z,discovered
+developer,The Westin Resort Nusa Dua,Bali,Indonesia,https://www.marriott.com/en-us/hotels/dpswi-the-westin-resort-nusa-dua-bali/overview/,unknown,https://www.marriott.com/en-us/hotels/dpswi-the-westin-resort-nusa-dua-bali/overview/,2026-09-15T19:14:11Z,discovered
+developer,Bali Tourism Development Corporation,Bali,Indonesia,https://www.itdc.co.id/,unknown,https://www.itdc.co.id/,2026-09-15T19:14:11Z,discovered
+developer,Tanah Lot Bali,Bali,Indonesia,https://www.tanahlotbali.com/,unknown,https://www.tanahlotbali.com/,2026-09-15T19:14:11Z,discovered
+developer,Bali Property Partners / Expatriate Indonesia,Bali,Indonesia,https://www.expatindonesia.com/,unknown,https://www.expatindonesia.com/,2026-09-15T19:14:11Z,discovered
+developer,Botanica Luxury Villas,Phuket,Thailand,https://www.botanicaluxuryvilla.com/,info@botanicaluxuryvilla.com,https://www.botanicaluxuryvilla.com/agent_club/,2026-09-15T19:14:11Z,discovered
+developer,Sansiri,Phuket,Thailand,https://sansiri.com/,internationalbuyers@sansiri.com,https://www.sansiri.com/agent-recruitment/en/,2026-09-15T19:14:11Z,discovered
+developer,Aquella,Phuket,Thailand,https://aquella.com/,sales@aquella.com,https://aquella.com/,2026-09-15T19:14:11Z,discovered
+developer,Laguna Phuket / Laguna Residences,Phuket,Thailand,https://www.lagunaphuket.com/,SILK@lagunaphuket.com,https://www.lagunaphuket.com/contact-us/,2026-09-15T19:14:11Z,discovered
+developer,Fivewood Estate / Annara Residences,Phuket,Thailand,https://www.annaragroup.com/,unknown,https://www.annaragroup.com/,2026-09-15T19:14:11Z,discovered
+developer,Wallaya Villas,Phuket,Thailand,https://www.wallayavillas.com/,unknown,https://www.wallayavillas.com/privacy-policy/,2026-09-15T19:14:11Z,discovered
+developer,Supalai,Phuket,Thailand,https://www.supalai.com/,unknown,https://www.supalai.com/,2026-09-15T19:14:11Z,discovered
+developer,Rhom Bho Property PCL,Phuket,Thailand,https://www.thetitleresidence.com/,Head office / IR,https://investor.rhombho.co.th/en/information-inquiry/contact,2026-09-15T19:14:11Z,discovered
+developer,AssetWise PCL,Phuket,Thailand,https://assetwise.co.th/en/,General contact form,https://assetwise.co.th/en/contact/,2026-09-15T19:14:11Z,discovered
+developer,Botanica Luxury Phuket,Phuket,Thailand,https://botanicaluxury.com/en,Sales,https://botanicaluxury.com/en,2026-09-15T19:14:11Z,discovered
+developer,Sansiri PCL,Phuket,Thailand,https://www.sansiri.com/,Investor/business enquiry,https://investor.sansiri.com/th/information-inquiry/contact,2026-09-15T19:14:11Z,discovered
+developer,Origin Property PCL,Phuket,Thailand,https://origin.co.th/,Corporate contact,https://origin.co.th/,2026-09-15T19:14:11Z,discovered
+developer,"Andaman Asset Solution Co., Ltd.",Phuket,Thailand,https://andamanassetsolution.com/,Sales Director Mr. Sunthorn A. (Nhong),https://andamanassetsolution.com/contact/,2026-09-15T19:14:11Z,discovered
+developer,"VIP Property Development Co., Ltd.",Phuket,Thailand,https://www.vipthailand.com/,Marketing / Sales,https://www.vipthailand.com/contact/,2026-09-15T19:14:11Z,discovered
+developer,"Phuket9 Real Estate Development Co., Ltd.",Phuket,Thailand,https://phuket9.com/,Sales,https://phuket9.com/ ; https://ru.phuket9.com/contacts,2026-09-15T19:14:11Z,discovered
+developer,Sri panwa Residence,Phuket,Thailand,https://www.sripanwaresidence.com/,Residence sales,https://www.sripanwaresidence.com/contact,2026-09-15T19:14:11Z,discovered
+developer,Layan Green Park,Phuket,Thailand,https://layan.greenparkphuket.com/,unknown,https://layan.greenparkphuket.com/,2026-09-15T19:14:11Z,discovered
+developer,Layan Verde,Phuket,Thailand,https://layanverde.com/,unknown,https://layanverde.com/,2026-09-15T19:14:11Z,discovered
+developer,Trichada Villas,Phuket,Thailand,https://trichada.com/,unknown,https://trichada.com/,2026-09-15T19:14:11Z,discovered
+developer,Habitat Group,Phuket,Thailand,https://www.habitatgroup.co.th/,unknown,https://www.habitatgroup.co.th/,2026-09-15T19:14:11Z,discovered
+developer,Arthouse Group,Phuket,Thailand,https://arthousegroup.com/,unknown,https://arthousegroup.com/,2026-09-15T19:14:11Z,discovered
+developer,VIP Thailand Group,Phuket,Thailand,https://vipthailandgroup.com/,unknown,https://vipthailandgroup.com/,2026-09-15T19:14:11Z,discovered
+developer,Andaman Riviera,Phuket,Thailand,https://andamanriviera.com/,unknown,https://andamanriviera.com/,2026-09-15T19:14:11Z,discovered
+developer,The Residence Prime,Phuket,Thailand,https://theresidenceprime.com/,unknown,https://theresidenceprime.com/,2026-09-15T19:14:11Z,discovered
+developer,The Niche Estates,Phuket,Thailand,https://thenicheestates.com/,unknown,https://thenicheestates.com/,2026-09-15T19:14:11Z,discovered
+developer,Eden Development Phuket,Phuket,Thailand,https://edenphuket.com/,unknown,https://edenphuket.com/,2026-09-15T19:14:11Z,discovered
+developer,7th Heaven Phuket,Phuket,Thailand,https://7thheavenphuket.com/,unknown,https://7thheavenphuket.com/,2026-09-15T19:14:11Z,discovered
+developer,Royal Phuket Marina,Phuket,Thailand,https://www.royalphuketmarina.com/,unknown,https://www.royalphuketmarina.com/,2026-09-15T19:14:11Z,discovered
+developer,MontAzure,Phuket,Thailand,https://www.montazure.com/,unknown,https://www.montazure.com/,2026-09-15T19:14:11Z,discovered
+developer,Marriott Residences Phuket,Phuket,Thailand,https://www.marriottresidencesphuket.com/,unknown,https://www.marriottresidencesphuket.com/,2026-09-15T19:14:11Z,discovered
+developer,Rosewood Phuket Residences,Phuket,Thailand,https://www.rosewoodhotels.com/en/phuket,unknown,https://www.rosewoodhotels.com/en/phuket,2026-09-15T19:14:11Z,discovered
+developer,Cassia Phuket Residences,Phuket,Thailand,https://www.cassiaresidences.com/,unknown,https://www.cassiaresidences.com/,2026-09-15T19:14:11Z,discovered
+developer,The Palm Residences Phuket,Phuket,Thailand,https://thepalmresidences.com/,unknown,https://thepalmresidences.com/,2026-09-15T19:14:11Z,discovered
+developer,Chalong Miracle Lakeview,Phuket,Thailand,https://chalongmiracle.com/,unknown,https://chalongmiracle.com/,2026-09-15T19:14:11Z,discovered
+developer,The Title Heritage,Phuket,Thailand,https://thetitleresidence.com/,unknown,https://thetitleresidence.com/,2026-09-15T19:14:11Z,discovered
+developer,The Title Legendary,Phuket,Thailand,https://thetitleresidence.com/,unknown,https://thetitleresidence.com/,2026-09-15T19:14:11Z,discovered
+developer,The Title Serenity,Phuket,Thailand,https://thetitleresidence.com/,unknown,https://thetitleresidence.com/,2026-09-15T19:14:11Z,discovered
+developer,Origin Residences Bangtao,Phuket,Thailand,https://origin.co.th/,unknown,https://origin.co.th/en/origin-agent-club,2026-09-15T19:14:11Z,discovered
+developer,SO Origin Bangtao Beach,Phuket,Thailand,https://origin.co.th/,unknown,https://origin.co.th/en/origin-agent-club,2026-09-15T19:14:11Z,discovered
+developer,The Base Cherngtalay,Phuket,Thailand,https://sansiri.com/location/phuket-en/,internationalbuyers@sansiri.com,https://www.sansiri.com/agent-recruitment/en/,2026-09-15T19:14:11Z,discovered
+developer,Setthasiri Kohkaew Retreat,Phuket,Thailand,https://sansiri.com/location/phuket-en/,internationalbuyers@sansiri.com,https://www.sansiri.com/agent-recruitment/en/,2026-09-15T19:14:11Z,discovered
+developer,Botanica Foresta,Phuket,Thailand,https://www.botanicaluxuryvilla.com/,info@botanicaluxuryvilla.com,https://www.botanicaluxuryvilla.com/agent_club/,2026-09-15T19:14:11Z,discovered
+developer,Botanica Hythe,Phuket,Thailand,https://www.botanicaluxuryvilla.com/,info@botanicaluxuryvilla.com,https://www.botanicaluxuryvilla.com/agent_club/,2026-09-15T19:14:11Z,discovered
+developer,Laguna Lakeside,Phuket,Thailand,https://www.lagunaphuket.com/,SILK@lagunaphuket.com,https://www.lagunaphuket.com/contact-us/,2026-09-15T19:14:11Z,discovered
+developer,Laguna Golf Residences Hibiscus,Phuket,Thailand,https://www.lagunaphuket.com/,SILK@lagunaphuket.com,https://www.lagunaphuket.com/contact-us/,2026-09-15T19:14:11Z,discovered
+developer,The Ozone Residences,Phuket,Thailand,https://ozonephuket.com/,sales@theozonegroupphuket.com,https://ozonephuket.com/,2026-09-15T19:14:11Z,discovered
+developer,The Ozone Kingdom,Phuket,Thailand,https://ozonephuket.com/,sales@theozonegroupphuket.com,https://ozonephuket.com/,2026-09-15T19:14:11Z,discovered
+developer,Anchan Lagoon Villas,Phuket,Thailand,https://anchanvillas.com/,info@anchanvillas.com,https://anchanvillas.com/,2026-09-15T19:14:11Z,discovered
+developer,Utopia Thalang,Phuket,Thailand,https://utopia.co.th/,unknown,https://utopia.co.th/,2026-09-15T19:14:11Z,discovered
+developer,The Zero Bang Tao,Phuket,Thailand,https://thezerophuket.com/,unknown,https://thezerophuket.com/,2026-09-15T19:14:11Z,discovered
+developer,The Zero Nai Yang,Phuket,Thailand,https://thezerophuket.com/,unknown,https://thezerophuket.com/,2026-09-15T19:14:11Z,discovered
+developer,Anantara Layan Residences,Phuket,Thailand,https://www.anantara.com/en/layan-phuket,unknown,https://www.anantara.com/en/layan-phuket/contact,2026-09-15T19:14:11Z,discovered
+developer,Avadina Hills by Anantara,Phuket,Thailand,https://www.anantara.com/en/avadina-hills-phuket,unknown,https://www.anantara.com/en/avadina-hills-phuket/contact,2026-09-15T19:14:11Z,discovered
+developer,The Standard Residences Phuket,Phuket,Thailand,https://www.standardhotels.com/phuket,unknown,https://www.standardhotels.com/phuket,2026-09-15T19:14:11Z,discovered
+developer,The Naka Island Residences,Phuket,Thailand,https://www.marriott.com/en-us/hotels/hktni-the-naka-island-a-luxury-collection-resort-and-spa-phuket/,unknown,https://www.marriott.com/en-us/hotels/hktni-the-naka-island-a-luxury-collection-resort-and-spa-phuket/contact/,2026-09-15T19:14:11Z,discovered
+developer,The Phuket Yacht Club Residences,Phuket,Thailand,https://www.thephuketyachtclub.com/,unknown,https://www.thephuketyachtclub.com/,2026-09-15T19:14:11Z,discovered
