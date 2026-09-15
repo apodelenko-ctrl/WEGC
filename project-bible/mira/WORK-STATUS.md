@@ -149,3 +149,12 @@ Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verifi
 - Official company contact routes were retained for rows without a dedicated broker form. Commission, lead protection, portal and payment terms remain `unknown` unless explicitly published by the developer.
 - No external outreach sent. Next: manual contracting-entity and named sales/agency-relations verification for all `official_contact_route` rows.
 - Blocker: shell push credentials are unavailable; publication used the connected GitHub contents API. Local commit `ca62ad5` remains equivalent but is not relied on for remote state.
+
+
+## 2026-09-15T19:24:40Z — CIS first-party package 06 published
+
+- Published `data/agencies-cis-package-06.csv` in GitHub API commit `c4df896297c98f01e7d63dadacb88ac65d692646`.
+- Added 4 first-party records: Belarus (2, Grodno), Kazakhstan (2, Karaganda). Each row is backed by the organization's own website and has an official_source URL; public contacts are included only where visible on the source.
+- Removed one unconfirmed GEOS domain from the local canonical files after QA because the available evidence was directory profile only; it remains eligible for a separate candidate register after domain confirmation.
+- Local canonical CIS pool is 106 rows; remote published increment files CIS-05 and CIS-06 now preserve 21 new source-backed rows for sequential merge/deduplication.
+- No external outreach sent. Direct agency relations contacts and foreign-market focus remain unknown unless explicitly documented.
