@@ -87,3 +87,14 @@
 - индекс README обновлён.
 
 Следующая амбициозная очередь: расширить базу РФ до 100 квалифицированных агентств, Беларусь/СНГ до 30+, завершить полноценный QA по всем новым строкам, проверить вторую волну застройщиков Пхукета и подготовить измеримый pipeline активации агентств.
+
+
+## Launch-ready update — 2026-09-15T18:30Z
+
+- Russia pilot reached 100 records.
+- Belarus/CIS pilot reached 52 records.
+- Phuket TOP-20 outreach queue prepared with partnership-specific routing where publicly available.
+- Bali, Vietnam and Dubai actionable developer registries expanded to 20, 24 and 24 records.
+- Competitor battlecards, five-name shortlist, payment copy pack, MVP/onboarding materials and 30-day Telegram plan added.
+- QA and outreach queue are prepared; no external messages were sent.
+- Remaining gates: manual review of every direct contact before outreach, legal sign-off by market, and owner selection of one naming finalist.
