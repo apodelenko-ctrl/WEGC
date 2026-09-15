@@ -130,3 +130,12 @@ Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verifi
 - Direct/actionable official routes currently evidenced include Botanica Agent Club; Sansiri International Agent Registration and `internationalbuyers@sansiri.com`; Origin Agent Club / 1498; Ozone sales route with Anil listed for EN/CN/RU; Anchan sales office call/WhatsApp and `info@anchanvillas.com`; Aquella villa enquiries; Laguna SILK route; and Phuket9 B2B Agency Network plus sales contact.
 - All other rows preserve official URL/form routes with `unknown` for unpublished partnership details. Project-level or branded-residence rows are not treated as separate developers for legal outreach without entity confirmation.
 - No external outreach sent. Published commit: `a132f8912efba748680fe5e3f010b95a03d5404f`.
+
+
+## 2026-09-15T19:23:10Z — CIS first-party package 05 published
+
+- Published `data/agencies-cis-package-05.csv` through GitHub API in commit `1162f7e396e85ebe2f94d7161074ca978cfccd7d`.
+- Package contains 17 new first-party records: Kyrgyzstan (5), Georgia (7), Tajikistan (3), Azerbaijan (2). Each row includes an official website/source; public email/phone included only where visible on the cited first-party page.
+- Remote verified file had 52 rows before this package; package raises the source-backed CIS verified-official pool to 69 rows. Local normalized CIS pool has 102 rows including prior local additions; these pools must remain distinct until remote merge/deduplication.
+- No mass outreach sent. Direct agency partnership contacts, foreign-market activity, and active legal entities remain follow-up fields unless explicit on official source.
+- Current blocker: GitHub contents API publishes new files reliably, while replacing the large master CSV requires fetching fresh blob SHA and performing a sequential update; package file is the lossless published increment.
