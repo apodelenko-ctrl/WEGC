@@ -109,3 +109,8 @@ This launch-assets block is complete. Next: parent agent should integrate new li
 - Current file count: 88 data rows (87? see CSV header count; duplicate checking by country+company applied). Official website URLs are recorded per row; email/phone remain `Unknown` unless published in the source.
 - Validation note: several domains were slow/unreachable from this runtime; these rows are source-backed candidates pending second HTTP/contact pass and must not enter an outbound queue until manually rechecked.
 - Next: append another 20–25 records, then perform domain/contact verification and split verified vs pending.
+
+
+## 2026-09-15T18:55Z — mega pipeline published
+
+Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verified, 245 outreach queue rows) were published to GitHub main via the GitHub API. These are source-level statuses; live contact verification remains a separate gate.
