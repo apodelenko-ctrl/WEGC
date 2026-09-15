@@ -56,6 +56,9 @@
 - [10 — AI-операционная модель / Astra / Work](./10-ai-operating-model.md)
 - [11 — Astra: ночная смена / автономное продолжение](./11-astra-night-shift.md)
 
+- [MORNING-BRIEF — статус автономной смены](./MORNING-BRIEF.md)
+- [Статус выполнения ночной смены](./research/overnight-execution-status.md)
+
 ## 5. Уже имеющиеся активы в репозитории
 
 В текущем WEGC-репозитории уже есть база для быстрого старта Пхукета:
