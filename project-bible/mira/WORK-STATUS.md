@@ -35,3 +35,8 @@
 - В CIS 10 последних записей имеют статус candidate в evidence note: URL и юридический статус нужно подтвердить перед включением в outbound очередь.
 - Платёжные маршруты, комиссии и сроки нельзя фиксировать публично без проверки конкретного провайдера и сделки.
 - Массовый внешний outreach не выполняется; готовятся базы, тексты, сегментация и очереди.
+
+
+## 2026-09-15T18:35Z — x3 expansion started
+
+Targets raised threefold per owner instruction: Russia 300 agencies; Belarus/CIS 150; Phuket TOP-60; Bali/Vietnam/Dubai 60 actionable developers each; 30+ competitor battlecards; three launch variants and 90-day content plan. Every 20–25 new records must be committed separately. External outreach remains paused.
