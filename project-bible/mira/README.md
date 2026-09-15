@@ -121,3 +121,15 @@
 - [Нейминг — shortlist](./research/naming-shortlist.md)
 - [Протокол масштабирования](./research/scale-up-protocol.md)
 - [MORNING-BRIEF](./MORNING-BRIEF.md)
+
+## 11. Операционные материалы
+
+- [Data quality audit](./research/data-quality-audit.md)
+- [Очередь outreach без отправки](./sales/outreach-queue-template.csv)
+- [Сегментация outreach](./research/outreach-segmentation.md)
+- [Developer acquisition pack](./sales/developer-acquisition-pack.md)
+- [MVP specification](./product/mvp-spec.md)
+- [Landing v2 copy](./product/landing-v2-copy.md)
+- [Legal card: Bali/Indonesia](./research/legal-card-indonesia-bali.md)
+- [Legal card: Vietnam](./research/legal-card-vietnam.md)
+- [Legal card: Dubai/UAE](./research/legal-card-dubai-uae.md)
