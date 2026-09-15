@@ -114,3 +114,11 @@ This launch-assets block is complete. Next: parent agent should integrate new li
 ## 2026-09-15T18:55Z — mega pipeline published
 
 Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verified, 245 outreach queue rows) were published to GitHub main via the GitHub API. These are source-level statuses; live contact verification remains a separate gate.
+
+
+## 2026-09-15T19:21Z — Phuket TOP-20 contact-route QA batch 01
+
+- Published `data/phuket-top20-contact-routes-checked.csv` (20 rows) with dedicated route class, named contact, official sales/partner email/phone, agency-program evidence, public commission evidence, lead-protection evidence, payment evidence, contact status, source URL and next action fields.
+- First-party route evidence strengthened for Botanica Agent Club, Sansiri International Agent Registration, Ozone named multilingual sales contact (Anil, EN/CN/RU), Anchan Sales Office phone/WhatsApp, and Aquella villa enquiries.
+- Public Sansiri commission wording is retained as a source claim and requires written confirmation before use. Unknown values remain `unknown`; generic routes are not promoted to named agency-relations contacts. Aquella is flagged as Greater Phuket / Phang Nga boundary-market candidate.
+- No external outreach sent. Next: extend the same schema to all TOP-60 rows and target direct agency/broker routes.
