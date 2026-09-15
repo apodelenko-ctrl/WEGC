@@ -98,3 +98,12 @@
 - Competitor battlecards, five-name shortlist, payment copy pack, MVP/onboarding materials and 30-day Telegram plan added.
 - QA and outreach queue are prepared; no external messages were sent.
 - Remaining gates: manual review of every direct contact before outreach, legal sign-off by market, and owner selection of one naming finalist.
+
+
+## Launch assets x3 update — 2026-09-15T18:50Z
+
+- Payment copy expanded into three deployable variants: conservative/compliance-first, standard/operational, agent-first/commercial. Each includes hero, section and FAQ. See `research/payment-copy-pack-3-variants.md`.
+- Onboarding expanded into three operating scenarios: experienced pilot agency, local agency without international experience, and multi-city network, plus universal checklist. See `product/onboarding-scenarios-3.md`.
+- Telegram plan expanded from 30 to 90 days as three cycles based on the approved 30-day themes. See `research/telegram-content-calendar-90d.md`.
+- Naming finalists deep-screened against public evidence. Estara, Domera and Terrava show direct public real-estate/proptech usage; Brivana and Novera show company/trademark collision signals. None is legally cleared. See `research/naming-finalists-deep-screen.md`.
+- No external outreach was sent. Remaining gates are legal trademark clearance, manual contact verification and payment route review per transaction.
