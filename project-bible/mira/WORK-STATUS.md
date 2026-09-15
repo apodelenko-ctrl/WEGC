@@ -1,41 +1,37 @@
-# МИРА — WORK STATUS
+# MIRA WORK-STATUS
 
-Updated UTC: 2026-09-15T19:05:00Z
+Последнее обновление: 2026-09-15 00:00 UTC (CIS stream).
 
-## Current counts
+## Завершено в этой рабочей волне
 
-- Russia: 100 records in expanded pilot CSV; official-site sources recorded for every row; target 100 reached.
-- Belarus/CIS: 22 verified pilot records; target 50.
-- Phuket developers: 31 records, including verified and candidate; TOP-20 outreach list pending.
-- Bali/Vietnam/Dubai: supply maps exist; actionable developer contact expansion pending.
-- Competitors: 11 cards and growth playbook exist; battlecard consolidation pending.
-- Naming: 45-name shortlist exists; five-finalist clearance pending.
+- Подготовлены пять финалистов нейминга на основе существующего shortlist с плюсами, рисками и следующими проверками. Ни один вариант не объявлен очищенным.
+- Подготовлен payment copy pack: hero, секция лендинга, процесс и FAQ с ограничениями по обещаниям.
+- Подготовлен 30-дневный Telegram-план для B2B-аудитории агентств.
+- Обновлён индекс `README.md`.
+- CIS stream: добавлено 30 новых строк пакетами 20+10; база `agencies-cis-pilot.csv` достигла 52 уникальных записей (Беларусь 17, Казахстан 15, Армения 12, Узбекистан 8). Все строки имеют официальный URL/источник; неизвестные прямые партнёрские контакты оставлены `Unknown`.
 
-## Completed this block
+## Текущие количества
 
-- Added Russia agency batches in three GitHub commits, with deduplication by official domain.
-- Expanded coverage across Moscow, Saint Petersburg, Ural, Volga, Siberia, Far East, Southern and Central regions.
-- Updated research/agencies-russia-insights.md with methodology, segmentation and qualification rules.
-- No external outreach sent.
+- agencies-cis-pilot.csv: 52 уникальные записи; Беларусь 17, Казахстан 15, Армения 12, Узбекистан 8.
+- agencies-russia-pilot.csv: количество ведёт российский поток.
+- developers/competitors: количества ведут соответствующие потоки.
 
-## In progress
+## Сейчас в работе
 
-- Verify legal entities for federal networks and remove any regional duplicates representing the same company.
-- Locate partnership/international contacts from official pages for A/B records.
-- Expand Belarus/CIS to 50.
-- Verify direct sales / agency relations / broker partnership contacts for Phuket TOP-20.
-- Expand actionable developer records for Bali, Vietnam and Dubai.
-- Consolidate competitor battlecards.
-- Deep-check five naming finalists.
-- Produce 30-day Telegram content calendar.
+- CIS поток завершил минимум 50 записей; следующий шаг — ручная верификация candidate/C-карточек и поиск direct partnership contacts.
+- Доведение агентской базы РФ до 100 launch-ready записей.
+- Выбор и проверка TOP-20 Пхукета, actionable developer contacts для Bali/Vietnam/Dubai.
+- Battlecards конкурентов и очереди outreach без отправки сообщений.
+
+## Следующее
+
+- Проверить пять финалистов через Роспатент/EUIPO/WIPO, домены, соцсети и целевые юрисдикции; принять отдельное решение в журнале.
+- Соединить payment copy с MVP-кабинетом и developer outreach pack после QA.
+- Пройти редакторскую проверку всех внешних фактов и источников перед публикацией.
 
 ## Blockers
 
-- Several regional sites expose only general contact forms; direct partner contacts remain unknown.
-- Some federal brands have multiple regional domains; legal-entity deduplication requires registry or official legal-page checks.
-- External outreach remains paused.
-
-## Next
-
-- Run a legal-entity and live-domain QA pass on the 100 Russia records before using the outreach queue.
-- Continue with the next independent stream; update this file after each completed block.
+- Полный trademark/domain clearance требует отдельного поиска и юридической проверки.
+- В CIS 10 последних записей имеют статус candidate в evidence note: URL и юридический статус нужно подтвердить перед включением в outbound очередь.
+- Платёжные маршруты, комиссии и сроки нельзя фиксировать публично без проверки конкретного провайдера и сделки.
+- Массовый внешний outreach не выполняется; готовятся базы, тексты, сегментация и очереди.
