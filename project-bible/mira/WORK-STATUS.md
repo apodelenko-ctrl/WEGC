@@ -139,3 +139,13 @@ Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verifi
 - Remote verified file had 52 rows before this package; package raises the source-backed CIS verified-official pool to 69 rows. Local normalized CIS pool has 102 rows including prior local additions; these pools must remain distinct until remote merge/deduplication.
 - No mass outreach sent. Direct agency partnership contacts, foreign-market activity, and active legal entities remain follow-up fields unless explicit on official source.
 - Current blocker: GitHub contents API publishes new files reliably, while replacing the large master CSV requires fetching fresh blob SHA and performing a sequential update; package file is the lossless published increment.
+
+
+## 2026-09-15T00:00Z — Bali/Vietnam/Dubai developer contact QA batch 01
+
+- Published `data/developers-asia-contact-qa-batch-01.csv` in two GitHub API commits (`080429ed`, data; `a7964849`, report).
+- Added 32 unique first-party developer records: Bali/Indonesia 8, Vietnam 12, Dubai/UAE 12.
+- Direct route evidence: Novo agent route; Lyvin partner route with published sales email/phone; AUM and Prestige One broker registration; Luxe and Golden Woods channel-partner forms; Swank broker registration; Dar Al Aiham and Rabdan partner forms.
+- Official company contact routes were retained for rows without a dedicated broker form. Commission, lead protection, portal and payment terms remain `unknown` unless explicitly published by the developer.
+- No external outreach sent. Next: manual contracting-entity and named sales/agency-relations verification for all `official_contact_route` rows.
+- Blocker: shell push credentials are unavailable; publication used the connected GitHub contents API. Local commit `ca62ad5` remains equivalent but is not relied on for remote state.
