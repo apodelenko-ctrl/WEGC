@@ -1,8 +1,9 @@
 name: Deploy static site to GitHub Pages
+
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # 👈 добавь эту строку
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -15,14 +16,26 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Prepare clean static site
+        run: |
+          mkdir -p _site
+          rsync -a ./ _site/ \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'node_modules' \
+            --exclude '_site' \
+            --exclude 'openai.chatgpt-0.5.53-universal.vsix'
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
