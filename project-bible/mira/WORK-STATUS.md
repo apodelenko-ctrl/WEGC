@@ -71,3 +71,41 @@ This launch-assets block is complete. Next: parent agent should integrate new li
 - Working now: next regional batch after duplicate/domain validation.
 - Next: append another 20–25 source-backed rows and commit; mass outreach remains disabled.
 - Blocker: GitHub connector does not provide a mounted checkout, so duplicate checks are performed against fetched CSV content and require normalized-domain review.
+
+## Russia resort expansion — 2026-09-15 20:00 UTC
+
+- Added 199 new regional office prospects across Sochi, Krasnodar, Novorossiysk, Anapa, Gelendzhik, Kazan, Kaliningrad, Rostov-on-Don, Yekaterinburg and Novosibirsk, using official network sites as first-party sources.
+- `agencies-russia-pilot.csv` now contains 324 data rows (header excluded). These additions are source-seeded branch/office prospects graded C; they are not counted as fully verified until branch activity and direct contacts are manually checked.
+- Commit: `f49a3c3` (local; push unavailable in this runtime because GitHub HTTPS credentials are not mounted).
+- No outreach sent. Next: normalize against the latest GitHub main copy, HTTP-check priority regional offices, and promote only rows with confirmed official contact evidence.
+
+## 2026-09-15T19:05Z — CIS official-site batch
+
+- Added 11 unique first-party agency records to `data/agencies-cis-pilot.csv`: Belarus (3), Kazakhstan (5), Armenia (6), Uzbekistan (4), with duplicate names filtered against current file.
+- Each added row has an official agency domain as `website` and `official_source`; public email/phone included only where shown in the source. Directory-only discoveries remain excluded from the verified file.
+- Current CIS file size: 63 data rows (header excluded). This is below the 150 target; next batch should focus on additional unique official domains in Kazakhstan, Uzbekistan and Belarus.
+- Commit: `a9843c0`.
+- Blocker: shell HTTP checks are unavailable in this environment; source validation is based on official-site pages retrieved by web search and explicit evidence notes. No outreach sent.
+
+## 2026-09-15T21:10Z — Russia seed validation QA
+
+- Created `data/agencies-russia-seed-validation.csv` as a separate QA register; it does not promote rows into the master agency database.
+- Processed 201 seed rows in batches of 20–25 with separate commits (`d5c2d10`, `0d8c9ba`, `f05da45`, `0c8d3d8`, `19c3e5c` and intermediate batch commits).
+- Automated evidence result: 1 `verified`, 200 `needs_manual`. The test required an official URL response plus an agency or location token in returned content; redirects/timeouts and weak evidence remain manual.
+- Current Russia master file remains 324 source-seeded rows; none of this QA batch is counted as fully verified without human review of branch identity and direct contact evidence.
+- Blocker: automated HTTP checks alone cannot establish an active branch or partnership contact. Next: manual review of the highest-priority rows and targeted extraction of sales/partnership contacts from official pages.
+
+
+## 2026-09-15T21:30Z — launch QA block
+
+- Выполнен schema/source/date/status QA всех CSV в `data/` и `sales/`.
+- Созданы `research/launch-qa-report.md` и `research/outreach-priority-queue.md`.
+- Обнаружено: Russia master содержит source-seeded rows и 207 повторов по первому полю; CIS pilot требует нормализации по домену/стране; developer partnership claims требуют ручного подтверждения.
+- Очередь приоритизирована P0 Phuket TOP-20, P1 developers и A/B Russian agencies, P2 CIS; candidate/seed rows удерживаются.
+- Outreach не отправлялся. Следующее: дедупликация доменов и ручная проверка P0 контактов.
+
+## CIS stream update — 2026-09-15 UTC
+- Added package CIS-04: 25 first-party agency/portal records across Kazakhstan, Armenia, Uzbekistan and Belarus to `data/agencies-cis-pilot.csv`.
+- Current file count: 88 data rows (87? see CSV header count; duplicate checking by country+company applied). Official website URLs are recorded per row; email/phone remain `Unknown` unless published in the source.
+- Validation note: several domains were slow/unreachable from this runtime; these rows are source-backed candidates pending second HTTP/contact pass and must not enter an outbound queue until manually rechecked.
+- Next: append another 20–25 records, then perform domain/contact verification and split verified vs pending.
