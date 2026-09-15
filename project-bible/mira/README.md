@@ -133,3 +133,5 @@
 - [Legal card: Bali/Indonesia](./research/legal-card-indonesia-bali.md)
 - [Legal card: Vietnam](./research/legal-card-vietnam.md)
 - [Legal card: Dubai/UAE](./research/legal-card-dubai-uae.md)
+
+- [WORK-STATUS — launch readiness](./WORK-STATUS.md)
