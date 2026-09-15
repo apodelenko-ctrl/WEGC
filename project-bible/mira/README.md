@@ -135,3 +135,11 @@
 - [Legal card: Dubai/UAE](./research/legal-card-dubai-uae.md)
 
 - [WORK-STATUS — launch readiness](./WORK-STATUS.md)
+
+- [WORK-STATUS](./WORK-STATUS.md)
+- [TOP-60 Phuket outreach](./data/phuket-top60-outreach.csv)
+- [Competitor battlecards](./research/competitor-battlecards.md)
+- [Payment copy variants](./research/payment-copy-pack-3-variants.md)
+- [90-day Telegram calendar](./research/telegram-content-calendar-90d.md)
+- [Naming deep screen](./research/naming-finalists-deep-screen.md)
+- [Onboarding scenarios](./product/onboarding-scenarios-3.md)
