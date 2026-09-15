@@ -143,3 +143,9 @@
 - [90-day Telegram calendar](./research/telegram-content-calendar-90d.md)
 - [Naming deep screen](./research/naming-finalists-deep-screen.md)
 - [Onboarding scenarios](./product/onboarding-scenarios-3.md)
+
+
+### Fresh QA outputs
+
+- `data/phuket-top20-contact-routes-checked.csv` — TOP-20 contact-route QA with agency/sales evidence and unknown-field discipline.
+- `data/phuket-top60-contact-routes-checked.csv` — TOP-60 contact-route QA and outreach qualification queue.
