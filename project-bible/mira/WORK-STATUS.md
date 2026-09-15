@@ -1,28 +1,28 @@
 # МИРА — WORK STATUS
 
-Updated UTC: 2026-09-15T18:22:39Z
+Updated UTC: 2026-09-15T19:05:00Z
 
 ## Current counts
 
-- Russia: 25 verified pilot records; target 100.
+- Russia: 100 records in expanded pilot CSV; official-site sources recorded for every row; target 100 reached.
 - Belarus/CIS: 22 verified pilot records; target 50.
 - Phuket developers: 31 records, including verified and candidate; TOP-20 outreach list pending.
 - Bali/Vietnam/Dubai: supply maps exist; actionable developer contact expansion pending.
 - Competitors: 11 cards and growth playbook exist; battlecard consolidation pending.
 - Naming: 45-name shortlist exists; five-finalist clearance pending.
 
-## Completed launch assets
+## Completed this block
 
-- Master prompt and research bible index.
-- Payment benchmark and payment copy draft.
-- MVP specification and landing copy.
-- Developer acquisition pack.
-- Legal due-diligence cards for Indonesia, Vietnam and UAE.
-- Outreach queue template; no external messages sent.
+- Added Russia agency batches in three GitHub commits, with deduplication by official domain.
+- Expanded coverage across Moscow, Saint Petersburg, Ural, Volga, Siberia, Far East, Southern and Central regions.
+- Updated research/agencies-russia-insights.md with methodology, segmentation and qualification rules.
+- No external outreach sent.
 
 ## In progress
 
-- Expand verified agency databases in batches of 20–25 with a GitHub commit after each batch.
+- Verify legal entities for federal networks and remove any regional duplicates representing the same company.
+- Locate partnership/international contacts from official pages for A/B records.
+- Expand Belarus/CIS to 50.
 - Verify direct sales / agency relations / broker partnership contacts for Phuket TOP-20.
 - Expand actionable developer records for Bali, Vietnam and Dubai.
 - Consolidate competitor battlecards.
@@ -31,10 +31,11 @@ Updated UTC: 2026-09-15T18:22:39Z
 
 ## Blockers
 
-- Some public sites expose only generic contact forms; these are retained as unknown or lower-priority until a partnership-specific contact is verified.
-- External outreach remains intentionally paused.
-- No legal or banking guarantee may be published without jurisdiction-specific review.
+- Several regional sites expose only general contact forms; direct partner contacts remain unknown.
+- Some federal brands have multiple regional domains; legal-entity deduplication requires registry or official legal-page checks.
+- External outreach remains paused.
 
 ## Next
 
-Commit each completed block, update these counts, then refresh MORNING-BRIEF.md.
+- Run a legal-entity and live-domain QA pass on the 100 Russia records before using the outreach queue.
+- Continue with the next independent stream; update this file after each completed block.
