@@ -1,51 +1,39 @@
 # MIRA WORK-STATUS
 
-Updated: 2026-09-16 — launch mission checkpoint 01.
+Updated: 2026-09-16 — launch mission checkpoint 02.
 
 ## Canonical priorities
 
-**MIRA marketplace MVP + agency acquisition machine + Phuket developer machine + launch dashboard.** Active instruction: `12-astra-pro-launch-mission.md`. Checkpoints are not completion.
+**MIRA marketplace MVP + agency acquisition machine + Phuket developer machine + launch dashboard.** Mission: `12-astra-pro-launch-mission.md`. A checkpoint is not completion.
 
 ## Product
 
-New `/mira/marketplace.html`: functional public DEMO, 45 existing seed projects, filters, detail, local pseudonymous client drafts, duplicate prevention, status/commission path, separate payment-support draft, agency profile/access explanation, qualification brief, onboarding and downloadable Phuket starter kit.
+`/mira/marketplace.html`: functional public DEMO using 45 existing seed projects, filters, details, local pseudonymous client drafts, duplicate check, lead/deal/commission path, separate payment-support draft, profile/access explanation, qualification brief, onboarding and downloadable Phuket starter kit. It does not collect real client data, authenticate agencies or issue server receipts.
 
-Local Node domain tests: 8 passed. Offline DOM render/search/mobile checks passed; full navigation test blocked by browser environment. Live deployment not yet verified. No authentication or server receipt is claimed. Application brief is local, not submitted. No real client data collected.
+Eight local Node tests passed. Offline DOM render/search/mobile checks passed; full browser navigation blocked by execution environment. Deployment status must be checked separately.
 
-Audit log and limitations: `operations/checkpoint-01-marketplace-demo.md`.
+## Source pipeline added in checkpoint 02
 
-## Russia — preserved baseline, not re-counted as new
+`scripts/mira-launch-build.py`: full generated-Phuket-backbone coverage, conservative Launch-100 quality joins, P0 commercial evidence register and canonical launch dashboard. Nine Python regression tests passed locally. Full-source counts are not claimed until GitHub workflow execution succeeds. Generated results appear in the marked section below after the workflow saves them.
 
-- Launch-100: `sales/russia-launch-50-seed.csv` + `sales/russia-launch-50-batch-02.csv`.
-- 50 unique fresh contact/role/entity-reviewed accounts across batches 01–07.
-- `sales/russia-live-50-segmentation.csv`: reviewed-half segmentation.
-- 30 priority organizations; first owner-review wave 12 accounts, all not approved to send.
-- Personalized drafts already exist. General company contact is not a verified partnership contact.
-- Next: classify all 100 conservatively; strengthen decision routes; 15–20 genuinely owner-review-ready accounts.
+GitHub QA workflow is bounded to tests/generation and explicitly scoped generated commits. It sends no external outreach. Pages output now excludes project-bible and dedicated MIRA backend sources; repository visibility is unchanged.
 
-## Phuket — preserved baseline
+## Preserved research baseline
 
-- Approximately 618 internal project rows (not developers).
-- 40 groups in developer master; 45 normalized seed rows; alias map v1.
-- 20 developer groups in outreach queue; 8 groups in P0 commercial verification.
-- New public demo reuses those 45 rows; it adds zero commercially verified projects.
-- Next: normalize the full existing backbone, preserve brand/group/legal-seller distinctions, evidence-gate P0 readiness.
+Russia: 100 source-backed organizations; 50 existing live-reviewed; reviewed-half segmentation; priority 30; first owner-review wave 12, all not approved to send. General route is not partnership-owner verification. Source files are preserved.
 
-## Other preserved work
+Phuket: approximately 618 internal project rows; 40 developer/counterparty/branded groups; 45 seed mappings; 20 queued groups; 8 P0 public-evidence groups. Seed mapping is not verified current legal seller/inventory/commission. Public promotional claims are not signed terms.
 
-CIS pilot: 88 rows; 21 package rows require merge/dedupe before a net-new claim. Bali/Vietnam/UAE first-party QA: 32 records (8/12/12). Expansion remains behind Phuket readiness.
+CIS: 88 rows plus 21 awaiting canonical merge. Expansion QA: 32 records, 8 Indonesia / 12 Vietnam / 12 UAE. Expansion remains behind Phuket readiness.
 
-## Existing launch assets
+## Existing assets preserved
 
-Accepted landing `/mira/`, Agency Sales Playbook, agency CRM template, Pilot Pack, One Pager, first webinar, developer acquisition pack, onboarding and Telegram calendar remain source assets. Do not recreate completed research or naming.
+Accepted landing, Agency Sales Playbook, CRM template, Pilot Pack, One Pager, first webinar, developer acquisition pack, onboarding/payment-copy/90-day Telegram assets. Do not repeat completed research or naming.
 
-## Next independent blocks
+## Next independent work
 
-1. Integrate demo with landing; secure intake/backend; remove internal project bible from Pages output; verify deployment.
-2. Agency Launch-100 quality/segmentation and owner-review wave.
-3. Full Phuket normalization and P0 evidence gaps.
-4. Agency/developer stage registers, actual-product demo/onboarding, canonical launch dashboard.
+Inspect workflow outputs and fix reconciliation failures; implement secure isolated pilot backend; integrate demo entry into existing landing; improve Launch-100 contact/decision coverage; produce activation assets using actual product behavior; deepen project/legal/commercial evidence.
 
-## Hard controls
+## Controls
 
-No external outreach/forms/messages without separate owner approval. No invented contacts, prices, commissions, approvals, contracts, availability or results. Project brand is not legal seller. Payment support is separate and deal-specific; internal routes are not public copy. Signed agency is not activation. No local demo action is counted as a real registration.
+No external outreach/forms/messages without separate owner approval. No invented contacts, approval, prices, contracts, availability, commission or operating results. Project brand is not legal seller; payment support separate and deal-specific. Signed agency is not activation; demo action is not registration.

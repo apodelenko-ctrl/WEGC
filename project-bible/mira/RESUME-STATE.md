@@ -1,39 +1,32 @@
 # MIRA RESUME-STATE
 
-Updated: 2026-09-16 — launch mission checkpoint 01.
+Updated: 2026-09-16 — launch mission checkpoint 02.
 
 ## Read order
 
-`12-astra-pro-launch-mission.md` → `WORK-STATUS.md` → this file → relevant bible/source files. Mission remains in execution, not complete.
+Mission 12 → WORK-STATUS → this file → canonical dashboard/relevant source files. Continue the run; it is not complete.
 
-## Completed in this execution run
+## Durable work this run
 
-Marketplace DEMO code: `/mira/marketplace.html`, `marketplace.mjs`, `marketplace.css`, `core.mjs`, sanitized `data/catalog.json` (45 existing seed rows), downloadable `phuket-starter-kit.html`, deterministic demo builder and 8 passing Node domain tests. Offline DOM render/search/mobile checks passed. See `operations/checkpoint-01-marketplace-demo.md`.
+Checkpoint 01 (`a5f2d6d`): marketplace demo, 45-seed sanitized catalogue, domain rules/tests, starter kit. Full browser navigation blocked; offline render only. No pretend login or real confirmation.
 
-No fake login, real lead submission, developer confirmation or financial amounts. Demo drafts are in-memory, expire on reload, and use DEMO-only pseudonymous IDs. Qualification form exports a local non-contact brief. Server intake remains to implement/deploy.
+Checkpoint 02: executable full-source normalization and Launch-100 quality-layer builder; separate P0 stage register and dashboard generator; nine Python regression tests; scoped GitHub QA/save workflow; Pages exclusion of internal bible/scripts/tests/dedicated backend. Actual source counts belong in the generated section after successful execution.
 
 ## Continue exactly here
 
-1. Keep the accepted landing; add a demo entry rather than rebuild its content. Implement a separate secure receipt-producing application and tenant-isolated pilot backend.
-2. Fix Pages publication scope: current rsync includes project-bible. Keep internal operations out of static output; do not break existing WEGC asset paths.
-3. Build full-backbone Phuket normalization from existing generated catalog plus seed/alias map. Do not treat weak group inference as verified legal seller.
-4. Finish conservative Launch-100 classification, preserving the 50 live-reviewed layer. Do not claim new live verification from an inherited row.
-5. Add stage registers and one canonical launch dashboard based on data/evidence, not target numbers.
-6. Continue actual-product demo/onboarding and segmented acquisition assets, preserving existing completed assets.
+1. Inspect MIRA launch evidence/QA Actions run; fix missing-seed/schema/join errors rather than dropping rows. Verify saved generated registers and dashboard.
+2. Implement dedicated MIRA Worker/D1 schema, verified Access identity, tenant isolation, evidence-gated client registration/status workflow and deployment runbook. Existing form relay sends Telegram; do not reuse it.
+3. Integrate the demo with the accepted `/mira/` landing without rewriting its established copy; avoid treating mailto as server submission.
+4. Strengthen Launch-100 decision routes/owner-review assets; fresh verification must be explicit, not inherited source dates relabelled.
+5. Produce segmented CTA, publish-ready content, webinar/demo/onboarding/reactivation assets based on actual behavior, reusing completed source assets.
+6. Resolve Phuket project-family/brand/operator/legal-seller ambiguities and current P0 commercial evidence.
 
 ## Preserved baseline
 
-Russia 100 source-backed; 50 fresh live-reviewed; reviewed-half segmentation; priority 30; owner-review wave 12 not approved. Phuket approximately 618 project rows; 40 groups; 45 seed normalized; 20 queued groups; 8 P0 public-evidence groups. CIS 88 plus 21 unmerged package rows. Expansion QA 32 (8 Indonesia,12 Vietnam,12 UAE).
+Russia 100 source-backed,50 live-reviewed,priority30,owner wave12 not approved. Phuket ~618 source projects,40 groups,45 seed mappings,20 queued groups,8 P0 public-evidence groups. CIS88+21 unmerged. Expansion QA32 (8/12/12).
 
-## Blocking only some streams
+## Partial blockers only
 
-- No connected Cloudflare deployment capability confirmed yet; do not claim live backend deployment.
-- No owner approval for outreach/forms/messages.
-- No project-specific complete P0 commercial schedule/lead rules confirmed in this run.
-- Browser navigation is blocked by environment (`ERR_BLOCKED_BY_ADMINISTRATOR`); offline render tests are not end-to-end QA.
+Cloudflare deployment capability not connected/confirmed; owner sending approval absent; project-specific current signed/lead/inventory gates not normalized. Browser navigation blocked by environment. These do not block code, source processing, QA or sales assets.
 
-These do not block code, data normalization, sales assets or dashboards. Continue independent work.
-
-## Controls
-
-МИРА naming closed. Agency retains client/brand. 90/10 remains project-specific hypothesis, never a computed default commission. Payment support separate. No mass outreach, no external forms/messages, no invented numbers or partner status. Do not repeat old HTTP-timeout QA or classify timeout as inactive company.
+No naming restart, no timeouts-as-inactive, no inflated counts, no external sending. Buyer payment and agency commission remain separate. Do not count a signed contract or demo activity as real activation.

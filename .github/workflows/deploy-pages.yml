@@ -1,41 +1,44 @@
 name: Deploy static site to GitHub Pages
-
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+      - name: Build sanitized MIRA demo
+        run: python scripts/mira-build-demo.py
       - name: Prepare clean static site
         run: |
           mkdir -p _site
           rsync -a ./ _site/ \
             --exclude '.git' \
             --exclude '.github' \
+            --exclude '.cursor' \
             --exclude 'node_modules' \
             --exclude '_site' \
+            --exclude 'project-bible' \
+            --exclude 'tests' \
+            --exclude 'scripts' \
+            --exclude 'cloudflare-worker/mira' \
             --exclude 'openai.chatgpt-0.5.53-universal.vsix'
-
+          test ! -e _site/project-bible
+          test -f _site/mira/marketplace.html
+          test -f _site/mira/data/catalog.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-
   deploy:
     needs: build
     runs-on: ubuntu-latest

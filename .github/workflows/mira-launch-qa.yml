@@ -1,0 +1,66 @@
+name: MIRA launch evidence and QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'mira/**'
+      - 'scripts/mira-*.py'
+      - 'tests/*mira*'
+      - 'project-bible/mira/data/**'
+      - 'project-bible/mira/sales/**'
+      - 'ru/wegc-catalog-data.js'
+      - '.github/workflows/mira-launch-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mira-launch-registers
+  cancel-in-progress: false
+jobs:
+  validate-and-save:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Domain and normalization regression tests
+        run: |
+          node --test tests/mira-core.test.mjs
+          python -m unittest discover -s tests -p 'test_mira_launch.py' -v
+      - name: Build from actual repository sources
+        run: |
+          export GITHUB_SHA="$(git rev-parse HEAD)"
+          python scripts/mira-build-demo.py
+          python scripts/mira-launch-build.py
+          node --test tests/mira-core.test.mjs
+      - name: Save bounded generated checkpoint
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mira/data/catalog.json \
+            project-bible/mira/data/phuket-project-master.csv \
+            project-bible/mira/sales/russia-launch-100-quality.csv \
+            project-bible/mira/sales/russia-review-join-exceptions.csv \
+            project-bible/mira/sales/phuket-developer-stage-register.csv \
+            project-bible/mira/operations/launch-dashboard.json \
+            project-bible/mira/operations/launch-dashboard.html \
+            project-bible/mira/operations/LAUNCH-DASHBOARD.md \
+            project-bible/mira/WORK-STATUS.md project-bible/mira/RESUME-STATE.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(mira): save source-backed launch registers [skip ci]'
+            git push origin HEAD:main
+          fi
+      - name: Preserve QA output for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: mira-launch-evidence
+          path: |
+            project-bible/mira/operations/launch-dashboard.json
+            project-bible/mira/operations/LAUNCH-DASHBOARD.md
+            project-bible/mira/data/phuket-project-master.csv
+            project-bible/mira/sales/russia-launch-100-quality.csv
+          retention-days: 14
