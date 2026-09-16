@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Apply a hash-pinned public-source checkpoint; no downloads or arbitrary commands.
 
-A small compressed UTF-8 transport avoids exporting the whole WEGC repository.
+Hash-pinned literal UTF-8 edits avoid copying unchanged source. Historical
+compressed checkpoints remain readable for recovery.
 Readable generated source files, not this transport, are the product artefacts.
 The caller must review the source changes before assembling a bundle. CI tests
 all applied changes before its existing non-force checkpoint commit.
@@ -57,15 +58,32 @@ def prepare(root, payload):
             data = original
         else:
             codec = item.get('codec', 'zlib-v1')
-            if codec not in ['zlib-v1', 'zlib-dict-v1']:
+            if codec not in ['zlib-v1', 'zlib-dict-v1', 'utf8-edits-v1']:
                 raise ValueError('Unknown checkpoint codec')
-            if codec == 'zlib-dict-v1' and original is None:
-                raise ValueError('Dictionary source is missing')
-            decoder = zlib.decompressobj(**({'zdict': original[-32768:]} if codec == 'zlib-dict-v1' else {}))
-            packed = base64.b64decode(item['zlib_base64'], validate=True)
-            data = decoder.decompress(packed, MAX_FILE + 1)
-            if not decoder.eof or decoder.unused_data:
-                raise ValueError('Invalid or oversized compressed file')
+            if codec == 'utf8-edits-v1':
+                if original is None:
+                    raise ValueError('Literal-edit source is missing')
+                text = original.decode('utf-8')
+                edits = item.get('edits')
+                if not isinstance(edits, list) or not 1 <= len(edits) <= 30:
+                    raise ValueError('Invalid literal edit count')
+                for edit in edits:
+                    if not isinstance(edit, dict) or set(edit) != {'old', 'new'} or not all(isinstance(v, str) for v in edit.values()):
+                        raise ValueError('Invalid literal edit')
+                    if not edit['old'] or text.count(edit['old']) != 1:
+                        raise ValueError('Literal edit must match exactly once')
+                    text = text.replace(edit['old'], edit['new'], 1)
+                    if len(text.encode('utf-8')) > MAX_FILE:
+                        raise ValueError('Oversized literal edit')
+                data = text.encode('utf-8')
+            else:
+                if codec == 'zlib-dict-v1' and original is None:
+                    raise ValueError('Dictionary source is missing')
+                decoder = zlib.decompressobj(**({'zdict': original[-32768:]} if codec == 'zlib-dict-v1' else {}))
+                packed = base64.b64decode(item['zlib_base64'], validate=True)
+                data = decoder.decompress(packed, MAX_FILE + 1)
+                if not decoder.eof or decoder.unused_data:
+                    raise ValueError('Invalid or oversized compressed file')
         data.decode('utf-8')
         total += len(data)
         if len(data) > MAX_FILE or total > MAX_TOTAL or digest(data) != item['sha256']:
