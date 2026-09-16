@@ -60,3 +60,11 @@ P0 — Russia agency data-quality pipeline and Phuket developer/entity/contact v
 - This is source QA only; no row is `contact_verified`, and timeouts are not proof of an inactive organization.
 - Latest write commit: `c1cfe4a03c315ac6afad4cb0c30c5692c3a7a0ad`.
 - Next exact batch: `MIRA-RU-LIVE-QA-002`, rows 26–50. Do not reprocess rows 1–25.
+
+
+## 2026-09-16T05:35Z — current durable checkpoint
+
+- `data/work-russia-live-qa-002.csv` was published and re-read from `main`: 25 rows covering source rows 26–50.
+- Remote live-QA coverage is now 50 rows across shards 001–002; all 50 are held in `needs_manual` under current network conditions.
+- No row is `contact_verified`; timeouts are technical blockers, not proof of inactive organizations.
+- Next exact batch: `MIRA-RU-LIVE-QA-003`, source rows 51–75. Do not reprocess rows 1–50.
