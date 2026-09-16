@@ -1,0 +1,53 @@
+# MIRA RESUME-STATE
+
+Updated UTC: 2026-09-16
+
+## Current phase
+
+P0 — Russia agency data-quality pipeline and Phuket developer/entity/contact verification.
+
+## Remote source of truth
+
+- Repository: `apodelenko-ctrl/WEGC`
+- Remote `main` HEAD at handoff: `41a51306023dbd662afddb1fea356183a48e00f6`
+- Latest remote commit message: `sales(mira): add agency one-pager copy`
+
+## Confirmed remote counts
+
+| Stream | Rows | Interpretation |
+|---|---:|---|
+| Mega discovery | 417 | discovery records; not fully live/contact verified |
+| Mega source-level verified | 401 | official source-level evidence; live contact gate remains open |
+| Russia pilot | 324 | source-seeded regional/office prospects; duplicate and parent/branch review remains |
+| CIS pilot | 88 | first-party/source-backed pool; contact and duplicate QA remain |
+| Phuket developer master | 40 | developer/entity candidates; many routes and legal identities still need review |
+
+## What is not confirmed
+
+- The prior local live-QA pass over 417 mega rows was not published to remote `main`; it is not part of this state.
+- No `RESUME-STATE.md`, live-QA shards or domain-dedupe register were present on remote at this handoff.
+- No external outreach has been sent.
+- No long-running agents are confirmed active; workers are finite task runs.
+
+## Next exact batch
+
+`MIRA-RU-LIVE-QA-001`: recreate a first-party live-source QA shard for mega discovery rows 1–100 from the current remote file. Record HTTP evidence separately from contact verification. Then continue rows 101–200 without overlap.
+
+## Next actions
+
+1. Recreate and publish live-QA shard 001 for rows 1–100.
+2. Publish the shard through GitHub contents API and re-read it from `main`.
+3. Run rows 101–200 as a separate append-only shard.
+4. Create a domain/parent/branch dedupe register only after all QA shards exist remotely.
+5. Reconcile the Russia pilot against mega clusters.
+6. Manually review reachable A/B candidates.
+7. Verify the 40 Phuket developer rows against first-party websites and entity records.
+8. Keep commission, lead registration and partnership claims unknown unless explicitly evidenced.
+9. Keep outreach queues review-only; do not send messages or forms.
+10. Update this file after every material checkpoint.
+
+## Hard blockers
+
+- HTTP availability is not the same as active-company or contact verification.
+- Parent/branch/legal-entity resolution is still incomplete.
+- Shell GitHub credentials are unavailable; writes must use the connected GitHub API and be re-read from `main`.
