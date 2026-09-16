@@ -114,3 +114,10 @@
 - A 25-row Russia live-QA shard was published to GitHub and verified by re-reading `main`.
 - All 25 rows are held in `needs_manual` because this runtime received timeouts; no false inactive-company conclusions were made.
 - The next exact batch is rows 26–50 from the current mega discovery file. Outreach remains disabled.
+
+
+## Durable continuation — 2026-09-16T05:35Z
+
+- Russia live-QA coverage is now 50 remote rows in two append-only shards, both verified by re-reading `main`.
+- All rows are currently `needs_manual` because the runtime cannot establish a reliable HTTP response; no inactive-company conclusion was made.
+- Next exact batch: source rows 51–75. Outreach remains disabled.
