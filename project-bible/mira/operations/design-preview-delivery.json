@@ -1,0 +1,22 @@
+{
+  "checkpoint": "11",
+  "status": "design_preview_for_owner_review",
+  "landing_path": "/mira/design/",
+  "catalogue_path": "/mira/marketplace-design.html",
+  "main_agency_page_replaced": false,
+  "initial_source_commit": "9ae7393686736d863258213c83acf9fda62eb296",
+  "initial_qa_run": 35129525420,
+  "initial_qa_conclusion": "success",
+  "initial_pages_run": 35129525369,
+  "initial_pages_conclusion": "success",
+  "journey_fix_qa_run": 35130082871,
+  "journey_fix_qa_conclusion": "success",
+  "integrated_motion_blob": "5de94aef160a9a9173813e2418ff5963a34853eb",
+  "local_regression": {"node_tests":66,"python_tests":76,"offline_ui_groups":7,"viewport_widths":[320,360,390,600,768,1024,1440]},
+  "browser_test_scope": "offline DOM with local images and synthetic location/catalogue response; no deployed CSP or backend verification",
+  "backend_gates_changed": false,
+  "external_messages_sent": false,
+  "media_rights_final_approval": "pending",
+  "owner_visual_approval": "pending",
+  "note": "This documentation commit republishes the already-integrated ordinary source. Inspect its Pages result before claiming that follow-up publication is complete. Current primary funnel and demo engine remain unchanged."
+}
