@@ -1,0 +1,24 @@
+# Copy to a LOCAL, ignored wrangler.toml after owner-controlled configuration.
+# Never reuse the existing wegc-form-relay database or Telegram relay.
+name = "mira-pilot-api"
+main = "worker.mjs"
+compatibility_date = "2025-01-01"
+workers_dev = false
+# Top-level route; configure only after zone and Access policies are approved.
+# routes = [{ pattern = "wegc.fund/mira/api/*", zone_name = "wegc.fund" }]
+# Protect BOTH /mira/pilot.html and /mira/api/* before accepting data.
+
+[vars]
+APP_ORIGIN = "https://wegc.fund"
+ACCESS_TEAM_DOMAIN = ""
+ACCESS_AUDIENCE = ""
+APPLICATIONS_ENABLED = "false"
+APPLICATION_RATE_LIMIT = "5"
+PRIVACY_VERSION = ""
+PRIVACY_NOTICE_URL = ""
+
+[[d1_databases]]
+binding = "MIRA_DB"
+database_name = "mira-pilot"
+database_id = "REPLACE_WITH_NEW_MIRA_DATABASE_ID"
+migrations_dir = "migrations"

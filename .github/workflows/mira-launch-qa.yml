@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'mira/**'
+      - 'cloudflare-worker/mira/**'
       - 'scripts/mira-*.py'
       - 'tests/*mira*'
       - 'project-bible/mira/data/**'
@@ -27,21 +28,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Domain and normalization regression tests
+      - name: Domain, API and normalization regression tests
         run: |
-          node --test tests/mira-core.test.mjs
-          python -m unittest discover -s tests -p 'test_mira_launch.py' -v
+          node --test tests/mira-*.test.mjs
+          python -m unittest discover -s tests -p 'test_mira*.py' -v
       - name: Build from actual repository sources
         run: |
           export GITHUB_SHA="$(git rev-parse HEAD)"
+          python scripts/mira-wire-landing.py
           python scripts/mira-build-demo.py
           python scripts/mira-launch-build.py
-          node --test tests/mira-core.test.mjs
+          node --test tests/mira-*.test.mjs
       - name: Save bounded generated checkpoint
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add mira/data/catalog.json \
+          git add mira/index.html mira/data/catalog.json \
             project-bible/mira/data/phuket-project-master.csv \
             project-bible/mira/sales/russia-launch-100-quality.csv \
             project-bible/mira/sales/russia-review-join-exceptions.csv \

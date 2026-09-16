@@ -16,8 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build sanitized MIRA demo
-        run: python scripts/mira-build-demo.py
+      - name: Build sanitized MIRA public files
+        run: |
+          python scripts/mira-wire-landing.py
+          python scripts/mira-build-demo.py
       - name: Prepare clean static site
         run: |
           mkdir -p _site
@@ -34,6 +36,7 @@ jobs:
             --exclude 'openai.chatgpt-0.5.53-universal.vsix'
           test ! -e _site/project-bible
           test -f _site/mira/marketplace.html
+          test -f _site/mira/pilot.html
           test -f _site/mira/data/catalog.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
