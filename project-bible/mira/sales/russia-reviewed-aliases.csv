@@ -1,0 +1,4 @@
+cohort_company,cohort_city,review_company,review_city,official_domain,scope,source_url,checked_at,reviewer,reason
+АВЕСТА,Омск,АВЕСТА-РИЭЛТ,Омск,avestaomsk.ru,same_city_brand_alias,https://avestaomsk.ru/vizitka/320,2026-09-16,MIRA research,Official site uses АВЕСТА navigation and АВЕСТА-РИЭЛТ company identity; same Omsk agency.
+Дон-МТ,Ростов-на-Дону,Дон-МТ-Недвижимость,Ростов-на-Дону,donmt.ru,same_city_brand_alias,https://donmt.ru/kontakty,2026-09-16,MIRA research,Official contact page links Дон-МТ brand to ООО Дон-МТ-Недвижимость in Rostov-on-Don.
+Самолет Плюс,Москва,Самолет Плюс,Москва / федеральная сеть,samoletplus.ru,hq_city_scope,https://samoletplus.ru/business/,2026-09-16,MIRA research,Launch cohort explicitly targets central partnership owner; review describes same HQ/network scope. Does not merge franchise legal entities or verify a supply decision owner.

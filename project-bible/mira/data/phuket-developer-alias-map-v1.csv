@@ -1,34 +1,34 @@
 canonical_group,alias,mapping_basis,confidence,legal_entity_status,notes
-Rhom Bho Property / THE TITLE,Rhom Bho / The Title,build-phuket-index direct data,high,partially_resolved,"Canonical commercial group for THE TITLE project rows; legal seller may vary by project and agreement."
-Rhom Bho Property / THE TITLE,Rhom Bho,build-phuket-index direct data,high,partially_resolved,"Used on Casa de Monte direct row; keep within Rhom Bho family unless project-specific seller differs."
-Rhom Bho Property / THE TITLE,The Title / Rhom Bho,WEGC knowledge-base variant,high,partially_resolved,"Alias spelling variant in internal project data."
-Rhom Bho Property / THE TITLE,THE TITLE,project/brand prefix,high,brand_only,"Brand alias; do not infer exact contracting entity from brand alone."
-Botanica Luxury Villas / AAP,Botanica Luxury Phuket,build-phuket-index recognized group,high,partially_resolved,"Internal generator canonical label."
-Botanica Luxury Villas / AAP,Botanica Luxury Villas,developer master,high,partially_resolved,"Public-facing developer group alias."
-Botanica Luxury Villas / AAP,AAP Architecture Properties & Development,developer master legal-name field,high,resolved_group_signal,"Parent/legal-name signal used in developer master; project seller still to confirm per agreement."
-Banyan / Laguna residences,Banyan Group Residences,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,"Residence-sales group; individual project seller/operator can differ."
-Banyan / Laguna residences,Banyan Group,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,"Parent-group alias."
-Banyan / Laguna residences,Laguna Property,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,"Operational/project developer alias used for Laguna rows."
-Banyan / Laguna residences,Banyan Group / Laguna,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,"Mixed alias present in internal project data."
-Banyan / Laguna residences,Laguna Phuket / Laguna Residences,developer master,high,needs_project_entity_resolution,"Operational sales-channel group; retain separate route metadata even when parent group is Banyan."
-Origin Property PCL,Origin PCL,build-phuket-index recognized group,high,partially_resolved,"Generator canonical alias."
-Origin Property PCL,Origin Property,developer master,high,partially_resolved,"Public-facing group alias."
+Rhom Bho Property / THE TITLE,Rhom Bho / The Title,build-phuket-index direct data,high,partially_resolved,Canonical commercial group for THE TITLE project rows; legal seller may vary by project and agreement.
+Rhom Bho Property / THE TITLE,Rhom Bho,build-phuket-index direct data,high,partially_resolved,Used on Casa de Monte direct row; keep within Rhom Bho family unless project-specific seller differs.
+Rhom Bho Property / THE TITLE,The Title / Rhom Bho,WEGC knowledge-base variant,high,partially_resolved,Alias spelling variant in internal project data.
+Rhom Bho Property / THE TITLE,THE TITLE,project/brand prefix,high,brand_only,Brand alias; do not infer exact contracting entity from brand alone.
+Botanica Luxury Villas / AAP,Botanica Luxury Phuket,build-phuket-index recognized group,high,partially_resolved,Internal generator canonical label.
+Botanica Luxury Villas / AAP,Botanica Luxury Villas,developer master,high,partially_resolved,Public-facing developer group alias.
+Botanica Luxury Villas / AAP,AAP Architecture Properties & Development,developer master legal-name field,high,resolved_group_signal,Parent/legal-name signal used in developer master; project seller still to confirm per agreement.
+Banyan / Laguna residences,Banyan Group Residences,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,Residence-sales group; individual project seller/operator can differ.
+Banyan / Laguna residences,Banyan Group,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,Parent-group alias.
+Banyan / Laguna residences,Laguna Property,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,Operational/project developer alias used for Laguna rows.
+Banyan / Laguna residences,Banyan Group / Laguna,build-phuket-index EXTRA_EN,high,needs_project_entity_resolution,Mixed alias present in internal project data.
+Banyan / Laguna residences,Laguna Phuket / Laguna Residences,developer master,high,needs_project_entity_resolution,Operational sales-channel group; retain separate route metadata even when parent group is Banyan.
+Origin Property PCL,Origin PCL,build-phuket-index recognized group,high,partially_resolved,Generator canonical alias.
+Origin Property PCL,Origin Property,developer master,high,partially_resolved,Public-facing group alias.
 Origin Property PCL,SO Origin,project-brand prefix,high,brand_only,"Project-brand alias; map to Origin group, but confirm project seller."
-Sansiri PCL,Sansiri,build-phuket-index recognized group,high,partially_resolved,"Canonical group for Sansiri Phuket project rows."
-The Zero Phuket / Zero Developments,The Zero,build-phuket-index recognized group,high,partially_resolved,"Generator canonical alias."
-The Zero Phuket / Zero Developments,Zero Developments Co., Ltd.,developer master,high,resolved_group_signal,"Legal-name signal in developer master; confirm per project agreement."
-Mouana / Modern 79,Mouana,build-phuket-index recognized group,high,needs_entity_resolution,"Brand/group alias."
-Mouana / Modern 79,Modern 79 Co., Ltd. / Mouana Phuket,developer pilot/mega discovery,medium,needs_entity_resolution,"Entity+brand candidate from prior research; needs current official confirmation before contracting use."
-Wyndham-branded projects,Wyndham,build-phuket-index recognized group,medium,operator_or_brand_only,"Treat as brand/operator signal until actual developer/seller is mapped."
-VIP group,VIP Grand,build-phuket-index recognized group,medium,needs_entity_resolution,"Internal generator label; do not automatically equate with VIP Thailand Group without project-level evidence."
-VIP group,VIP Thailand Group,developer master,medium,needs_entity_resolution,"Public-facing candidate; relationship to VIP Grand / VIP Property Development requires resolution."
-The Ozone Group Phuket,The Ozone,build-phuket-index recognized group,high,partially_resolved,"Generator label."
-The Ozone Group Phuket,The Ozone Group Phuket,developer master,high,partially_resolved,"Public group alias."
-Mono,Mono,build-phuket-index recognized group,medium,needs_entity_resolution,"Commercial group signal only; legal seller must be resolved."
-Unique,Unique,build-phuket-index recognized group,medium,needs_entity_resolution,"Commercial group signal only; generic name requires careful entity resolution."
-Aileen,Aileen,build-phuket-index recognized group,medium,needs_entity_resolution,"Commercial group signal only."
-Anchan Villas / Pearl Island Property,Anchan,build-phuket-index recognized group,high,partially_resolved,"Brand alias."
-Anchan Villas / Pearl Island Property,Anchan Villas,developer master,high,partially_resolved,"Public-facing alias."
-Anchan Villas / Pearl Island Property,Pearl Island Property Co., Ltd.,developer master legal-name field,high,resolved_group_signal,"Legal-name signal; confirm exact seller on each project."
-AssetWise PCL,AssetWise,build-phuket-index recognized group + direct Modeva row,high,partially_resolved,"The Modeva direct row maps to AssetWise in current generator."
-Naturale,Naturale,build-phuket-index recognized group,medium,needs_entity_resolution,"Commercial group signal only; legal entity pending."
+Sansiri PCL,Sansiri,build-phuket-index recognized group,high,partially_resolved,Canonical group for Sansiri Phuket project rows.
+The Zero Phuket / Zero Developments,The Zero,build-phuket-index recognized group,high,partially_resolved,Generator canonical alias.
+The Zero Phuket / Zero Developments,"Zero Developments Co., Ltd.",developer master,high,resolved_group_signal,Legal-name signal in developer master; confirm per project agreement.
+Mouana / Modern 79,Mouana,build-phuket-index recognized group,high,needs_entity_resolution,Brand/group alias.
+Mouana / Modern 79,"Modern 79 Co., Ltd. / Mouana Phuket",developer pilot/mega discovery,medium,needs_entity_resolution,Entity+brand candidate from prior research; needs current official confirmation before contracting use.
+Wyndham-branded projects,Wyndham,build-phuket-index recognized group,medium,operator_or_brand_only,Treat as brand/operator signal until actual developer/seller is mapped.
+VIP group,VIP Grand,build-phuket-index recognized group,medium,needs_entity_resolution,Internal generator label; do not automatically equate with VIP Thailand Group without project-level evidence.
+VIP group,VIP Thailand Group,developer master,medium,needs_entity_resolution,Public-facing candidate; relationship to VIP Grand / VIP Property Development requires resolution.
+The Ozone Group Phuket,The Ozone,build-phuket-index recognized group,high,partially_resolved,Generator label.
+The Ozone Group Phuket,The Ozone Group Phuket,developer master,high,partially_resolved,Public group alias.
+Mono,Mono,build-phuket-index recognized group,medium,needs_entity_resolution,Commercial group signal only; legal seller must be resolved.
+Unique,Unique,build-phuket-index recognized group,medium,needs_entity_resolution,Commercial group signal only; generic name requires careful entity resolution.
+Aileen,Aileen,build-phuket-index recognized group,medium,needs_entity_resolution,Commercial group signal only.
+Anchan Villas / Pearl Island Property,Anchan,build-phuket-index recognized group,high,partially_resolved,Brand alias.
+Anchan Villas / Pearl Island Property,Anchan Villas,developer master,high,partially_resolved,Public-facing alias.
+Anchan Villas / Pearl Island Property,"Pearl Island Property Co., Ltd.",developer master legal-name field,high,resolved_group_signal,Legal-name signal; confirm exact seller on each project.
+AssetWise PCL,AssetWise,build-phuket-index recognized group + direct Modeva row,high,partially_resolved,The Modeva direct row maps to AssetWise in current generator.
+Naturale,Naturale,build-phuket-index recognized group,medium,needs_entity_resolution,Commercial group signal only; legal entity pending.

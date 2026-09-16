@@ -5,6 +5,8 @@ Original seed, live reviews and owner approval queue are never overwritten.
 """
 from __future__ import annotations
 import argparse, csv, hashlib, html, json, os, re, unicodedata
+from datetime import date
+from urllib.parse import urlsplit
 from collections import Counter, defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,7 +15,15 @@ UNKNOWN={'','unknown','по запросу','не найдено','not_verified'
 def norm(value):
     return re.sub(r'[^\w]+','',unicodedata.normalize('NFKC',value).casefold())
 def rows(root,path):
-    with (root/path).open(encoding='utf-8-sig',newline='') as fh:return list(csv.DictReader(fh))
+    with (root/path).open(encoding='utf-8-sig',newline='') as fh:
+        reader=csv.reader(fh); header=next(reader,None)
+        if not header or any(not h for h in header) or len(header)!=len(set(header)):
+            raise ValueError(f'Invalid CSV header: {path}')
+        output=[]
+        for line,values in enumerate(reader,2):
+            if len(values)!=len(header):raise ValueError(f'CSV width mismatch {path}:{line}: {len(values)} != {len(header)}')
+            output.append(dict(zip(header,values)))
+        return output
 def write_csv(root,path,data,fields=None):
     target=root/path;target.parent.mkdir(parents=True,exist_ok=True)
     if not fields and not data:raise ValueError(f'Cannot infer headers for {path}')
@@ -72,13 +82,52 @@ def normalize_phuket(catalog,seeds,aliases,developers):
     missing=sorted(set(seed_map)-matched)
     if missing:raise ValueError(f'Seed rows missing in generated backbone: {missing}. Reconcile, do not drop.')
     return output
-def resolve_review(company,city,index,by_name):
+def validated_review_aliases(cohort,reviews,aliases):
+    """Explicit, source-backed one-to-one joins; never a global fuzzy merge."""
+    cohort_index={(norm(r['company']),norm(r['city'])):r for r in cohort}
+    review_index={(norm(r['company']),norm(r['city'])):r for r in reviews}
+    result={};used=set()
+    for a in aliases:
+        target=(norm(a['cohort_company']),norm(a['cohort_city']))
+        source=(norm(a['review_company']),norm(a['review_city']))
+        if target not in cohort_index or source not in review_index:raise ValueError('Alias source or target is absent')
+        if target in result or source in used or target in review_index:raise ValueError('Ambiguous alias or exact-review collision')
+        domain=a['official_domain'].lower().removeprefix('www.')
+        host=(urlsplit(cohort_index[target]['website']).hostname or '').removeprefix('www.')
+        evidence=urlsplit(a['source_url']);eh=(evidence.hostname or '').removeprefix('www.')
+        if not domain or host!=domain or eh!=domain or evidence.scheme!='https':raise ValueError('Alias first-party domain mismatch')
+        if not a.get('reviewer') or not a.get('reason'):raise ValueError('Alias missing review provenance')
+        date.fromisoformat(a['checked_at'])
+        scope=a['scope']
+        if scope=='same_city_brand_alias':
+            if target[1]!=source[1]:raise ValueError('Brand alias changes city')
+        elif scope=='hq_city_scope':
+            if target[0]!=source[0]:raise ValueError('HQ scope changes company')
+        else:raise ValueError('Unsupported alias scope')
+        result[target]=dict(a,source_key=source);used.add(source)
+    return result
+
+def validate_p0(p0):
+    seen=set()
+    for r in p0:
+        if r['developer_group'] in seen:raise ValueError('Duplicate P0 developer')
+        seen.add(r['developer_group']);date.fromisoformat(r['checked_at'])
+        fields=['source_url']+(['partner_route'] if r['partner_route'].startswith('http') else [])
+        for field in fields:
+            if any(urlsplit(u.strip()).scheme!='https' or not urlsplit(u.strip()).hostname for u in r[field].split(';')):
+                raise ValueError('Invalid P0 source/route URL')
+        if not r['next_action']:raise ValueError('Missing P0 next action')
+
+def resolve_review(company,city,index,by_name,aliases=None):
     exact=index.get((norm(company),norm(city)))
     if exact:return exact,'company_city'
+    alias=(aliases or {}).get((norm(company),norm(city)))
+    if alias:return index[alias['source_key']],'reviewed_alias'
     candidates=by_name.get(norm(company),[])
     if len(candidates)==1 and norm(city)==norm(candidates[0].get('city','')):return candidates[0],'unique_name_same_city'
     return None,'unmatched'
-def segment_agencies(cohort,reviews,owner_wave):
+def segment_agencies(cohort,reviews,owner_wave,review_aliases=()):
+    explicit_aliases=validated_review_aliases(cohort,reviews,review_aliases)
     index,by_name={},defaultdict(list)
     for row in reviews:
         key=(norm(row['company']),norm(row['city']))
@@ -89,12 +138,14 @@ def segment_agencies(cohort,reviews,owner_wave):
     for row in cohort:
         key=(norm(row['company']),norm(row['city']))
         if key in seen:raise ValueError(f'Duplicate launch agency: {row["company"]}')
-        seen.add(key);review,join=resolve_review(row['company'],row['city'],index,by_name);w=wave.get(key,{})
+        seen.add(key);review,join=resolve_review(row['company'],row['city'],index,by_name,explicit_aliases)
+        review_key=(norm(review['company']),norm(review['city'])) if review else key
+        w=wave.get(review_key,wave.get(key,{}))
         inherited=review['primary_segment'] if review else '';evidence=row.get('why_relevant','').lower()
         basis='inherited_live_review' if review else 'source_cohort_signal_only'
         segment,overseas,pitch='hold_first_party_review','unknown','qualification_first'
         if inherited:
-            matched.add(key)
+            matched.add(review_key)
             if inherited.startswith('hold_'):segment=inherited
             elif inherited=='existing_phuket_direction':segment,overseas,pitch=inherited,'thailand_signal_evidenced','complement_existing_phuket_desk'
             elif inherited=='existing_foreign_property_desk':segment,overseas,pitch=inherited,'foreign_desk_signal_evidenced','extend_existing_foreign_desk'
@@ -111,7 +162,7 @@ def segment_agencies(cohort,reviews,owner_wave):
         output.append({'agency_id':'RU-A-'+hashlib.sha256('|'.join(key).encode()).hexdigest()[:12],
             'rank':row['rank'],'company':row['company'],'city':row['city'],'website':row['website'],
             'segment':segment,'segmentation_basis':basis,'inherited_segment':inherited,'overseas_status':overseas,'greenfield_confirmed':'false',
-            'pitch_mode':pitch,'live_reviewed':str(bool(review)).lower(),'review_join':join,
+            'pitch_mode':pitch,'live_reviewed':str(bool(review)).lower(),'review_join':join,'alias_source_url':explicit_aliases.get(key,{}).get('source_url',''),'alias_checked_at':explicit_aliases.get(key,{}).get('checked_at',''),
             'decision_route_signal':review.get('secondary_signal','') if review else '',
             'readiness':readiness,'owner_review_wave':str(bool(w)).lower(),'send_status':w.get('send_status','not_approved'),
             'source_url':row.get('source_url',''),'source_checked_at':row.get('checked_at',''),
@@ -126,10 +177,13 @@ def replace_generated_section(path,body):
     path.write_text(existing,encoding='utf-8')
 def build(root,source_commit):
     paths=['ru/wegc-catalog-data.js',*(str(BASE/p) for p in ['data/phuket-project-master-seed-45.csv','data/phuket-developer-alias-map-v1.csv','data/phuket-developer-master.csv','sales/russia-launch-50-seed.csv','sales/russia-launch-50-batch-02.csv','sales/russia-live-50-segmentation.csv','sales/russia-wave-01-owner-review.csv','sales/phuket-p0-commercial-verification.csv'])]
+    alias_path=BASE/'sales/russia-reviewed-aliases.csv'
+    paths.append(str(alias_path))
     provenance={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in paths}
     catalog=read_catalog((root/paths[0]).read_text(encoding='utf-8'));seed,aliases,developers=[rows(root,p) for p in paths[1:4]]
     project_master=normalize_phuket(catalog,seed,aliases,developers);cohort=rows(root,paths[4])+rows(root,paths[5]);live,wave,p0=[rows(root,p) for p in paths[6:9]]
-    agencies,unmatched=segment_agencies(cohort,live,wave)
+    validate_p0(p0)
+    agencies,unmatched=segment_agencies(cohort,live,wave,rows(root,alias_path))
     write_csv(root,BASE/'data/phuket-project-master.csv',project_master)
     write_csv(root,BASE/'sales/russia-launch-100-quality.csv',agencies)
     write_csv(root,BASE/'sales/russia-review-join-exceptions.csv',unmatched,list(live[0]))
@@ -147,6 +201,7 @@ def build(root,source_commit):
         'russia_source_backed_accounts':len(agencies),'russia_live_review_rows_inherited':len(live),
         'russia_launch_cohort_live_review_matches':sum(a['live_reviewed']=='true' for a in agencies),
         'russia_live_review_join_exceptions':len(unmatched),
+        'russia_explicit_alias_joins':sum(a['review_join']=='reviewed_alias' for a in agencies),
         'russia_named_route_signals_in_cohort':sum(a['decision_route_signal'].startswith('named_') for a in agencies),
         'russia_inherited_owner_review_ready':sum(a['readiness']=='ready_for_owner_review' for a in agencies),
         'russia_owner_review_wave_accounts':len(wave),'russia_send_approved_in_source_wave':sum(w['send_status']=='approved' for w in wave),

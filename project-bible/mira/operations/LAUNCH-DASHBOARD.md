@@ -1,6 +1,6 @@
 # MIRA — canonical launch dashboard
 
-Source commit: `59e227a8b18257bb465c96bedb8f06afb507d18b`. Rebuild with `python scripts/mira-launch-build.py`.
+Source commit: `6633020a4fa9e03657e87f48b9dd3ee4c3e671b9`. Rebuild with `python scripts/mira-launch-build.py`.
 
 **Not pilot-ready.** Coverage, commercial verification and real activation are separate gates.
 
@@ -20,15 +20,16 @@ Source commit: `59e227a8b18257bb465c96bedb8f06afb507d18b`. Rebuild with `python 
 | `phuket_p0_public_evidence_groups` | 8 |
 | `russia_source_backed_accounts` | 100 |
 | `russia_live_review_rows_inherited` | 50 |
-| `russia_launch_cohort_live_review_matches` | 47 |
-| `russia_live_review_join_exceptions` | 3 |
-| `russia_named_route_signals_in_cohort` | 20 |
-| `russia_inherited_owner_review_ready` | 12 |
+| `russia_launch_cohort_live_review_matches` | 50 |
+| `russia_live_review_join_exceptions` | 0 |
+| `russia_explicit_alias_joins` | 3 |
+| `russia_named_route_signals_in_cohort` | 21 |
+| `russia_inherited_owner_review_ready` | 13 |
 | `russia_owner_review_wave_accounts` | 12 |
 | `russia_send_approved_in_source_wave` | 0 |
 | `russia_classification_coverage` | 100 |
-| `russia_needing_live_review` | 53 |
-| `russia_segment_holds` | 58 |
+| `russia_needing_live_review` | 50 |
+| `russia_segment_holds` | 56 |
 
 ## Live operations
 

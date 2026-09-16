@@ -1,16 +1,17 @@
 {
   "schema_version": 1,
-  "source_commit": "59e227a8b18257bb465c96bedb8f06afb507d18b",
+  "source_commit": "6633020a4fa9e03657e87f48b9dd3ee4c3e671b9",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
-    "project-bible/mira/data/phuket-developer-alias-map-v1.csv": "654ef7a3911f39bf89f5c1bee204de368b43a1a3c93bacdb948006d8372c96ed",
+    "project-bible/mira/data/phuket-developer-alias-map-v1.csv": "0da229de67cbf84e31a2952e30053acdcb1385c771757370ca553b1afc0dfbfb",
     "project-bible/mira/data/phuket-developer-master.csv": "40076aa98c77eaa4745560df0fce80ed65df5308bbc3a02dce28f67d8307dbe7",
     "project-bible/mira/sales/russia-launch-50-seed.csv": "b9a5a993b506985a7191ffc0d7c4ed8a8d8d47a234eae0ce1996d0886f184c05",
     "project-bible/mira/sales/russia-launch-50-batch-02.csv": "1a5c54520743cb6e11be4081c90f82f49332b44c5846264dd9520a68d2b6f01f",
     "project-bible/mira/sales/russia-live-50-segmentation.csv": "98094cf77ed118daedf9a64dc84166036e5054a7ad40f84c51b522bd1a017db8",
     "project-bible/mira/sales/russia-wave-01-owner-review.csv": "e1fee8312c3b39c0d0bf06277b673e894ba4b88836daafbc48d80dc025730c30",
-    "project-bible/mira/sales/phuket-p0-commercial-verification.csv": "0c96d3cf8c020850f6d6b47cac027cc70819f02622e2dc0f8ec1e667bf14490a"
+    "project-bible/mira/sales/phuket-p0-commercial-verification.csv": "4063de3ddc8da3031cd8bba2d41699c208cc8e2c8f26d38e1d0a4ed16f4ee483",
+    "project-bible/mira/sales/russia-reviewed-aliases.csv": "cdd2266ad5ef3152793fda29cf495bfdce87a94b71b524e6dcaa0dbb19c163f8"
   },
   "scope": "Repository evidence only; not a live CRM and not a claim that unobserved activity is zero.",
   "readiness": {
@@ -32,15 +33,16 @@
     "phuket_p0_public_evidence_groups": 8,
     "russia_source_backed_accounts": 100,
     "russia_live_review_rows_inherited": 50,
-    "russia_launch_cohort_live_review_matches": 47,
-    "russia_live_review_join_exceptions": 3,
-    "russia_named_route_signals_in_cohort": 20,
-    "russia_inherited_owner_review_ready": 12,
+    "russia_launch_cohort_live_review_matches": 50,
+    "russia_live_review_join_exceptions": 0,
+    "russia_explicit_alias_joins": 3,
+    "russia_named_route_signals_in_cohort": 21,
+    "russia_inherited_owner_review_ready": 13,
     "russia_owner_review_wave_accounts": 12,
     "russia_send_approved_in_source_wave": 0,
     "russia_classification_coverage": 100,
-    "russia_needing_live_review": 53,
-    "russia_segment_holds": 58
+    "russia_needing_live_review": 50,
+    "russia_segment_holds": 56
   },
   "operations": {
     "agencies_contacted": {
@@ -92,15 +94,15 @@
     "existing_foreign_property_desk": 2,
     "existing_phuket_direction": 1,
     "hold_entity_resolution": 4,
-    "hold_first_party_review": 41,
+    "hold_first_party_review": 39,
     "hold_first_party_verification": 2,
     "hold_segment_fit": 11,
     "large_new_build": 3,
-    "network_franchise_platform": 5,
-    "network_franchise_platform_candidate": 4,
+    "network_franchise_platform": 6,
+    "network_franchise_platform_candidate": 3,
     "premium_investment": 3,
     "premium_investment_candidate": 4,
-    "regional_new_build": 13,
+    "regional_new_build": 15,
     "regional_new_build_candidate": 4,
     "resort_agency": 3
   },

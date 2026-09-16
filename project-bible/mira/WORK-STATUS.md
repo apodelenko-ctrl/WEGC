@@ -1,6 +1,12 @@
 # MIRA WORK-STATUS
 
-Updated: 2026-09-16 — launch mission checkpoint 04 (code/local QA; deployment closed).
+Updated: 2026-09-16 — launch mission checkpoint 05 (code/local QA; deployment closed).
+
+## Latest checkpoint — source quality and recovery
+
+CP04 is saved and verified by successful GitHub QA run 35080168741. New CP05 code fixes 3 explicit agency joins and 4 malformed source rows; local 40 Node / 31 Python tests passed. All 50 inherited reviews now match the 100-account cohort; no fresh 50-review claim, no send approval. The 12-account owner wave is unchanged. See `operations/checkpoint-05-source-quality.md` and the focused first-party review CSV.
+
+Next: persistent operator inputs/stage registers and canonical product dashboard; segmented publish-ready acquisition content and actual-product demo/onboarding; private supply-gate review without exposing confidential evidence in GitHub. Backend deployment remains separate and closed. Do not repeat CP04 recovery or reopen naming.
 
 ## Checkpoint 04 — resumed execution
 
@@ -47,11 +53,11 @@ No external outreach/forms/messages without separate owner approval. No invented
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `59e227a8b18257bb465c96bedb8f06afb507d18b`.
+Source commit: `6633020a4fa9e03657e87f48b9dd3ee4c3e671b9`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
-Russia: **100** quality-layer rows; **47** matched to inherited live reviews; **3** review join exceptions. **12** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
+Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
 
 Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
 
