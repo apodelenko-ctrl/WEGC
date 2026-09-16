@@ -16,6 +16,7 @@ import zlib
 
 ROOT = Path(__file__).resolve().parents[1]
 BUNDLE = 'project-bible/mira/operations/reviewed-checkpoint.json'
+APPLIED = 'project-bible/mira/operations/reviewed-checkpoint-applied.json'
 MAX_FILE = 2_000_000
 MAX_TOTAL = 12_000_000
 
@@ -42,7 +43,7 @@ def prepare(root, payload):
     result, seen, total = [], set(), 0
     for item in files:
         path = item['path']
-        if not allowed(path) or path in seen or path == BUNDLE or path == 'scripts/mira-apply-reviewed-checkpoint.py':
+        if not allowed(path) or path in seen or path in [BUNDLE, APPLIED] or path == 'scripts/mira-apply-reviewed-checkpoint.py':
             raise ValueError('Disallowed or duplicate path: ' + path)
         seen.add(path)
         target = root / path
@@ -74,14 +75,19 @@ def main():
     if source.stat().st_size > MAX_TOTAL:
         raise ValueError('Oversized bundle')
     payload = json.loads(source.read_text())
+    payload_hash = digest(source.read_bytes())
+    marker = ROOT / APPLIED
+    if marker.exists() and json.loads(marker.read_text()).get('payload_sha256') == payload_hash:
+        print('Reviewed checkpoint already committed; preserve subsequent human/generated edits.'); return
     prepared = prepare(ROOT, payload)
     if not args.check:
         for target, data, changed in prepared:
             if changed:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(data)
+        marker.write_text(json.dumps({'id': payload['id'], 'payload_sha256': payload_hash, 'source_ref': payload.get('source_ref'), 'files': [{'path': item['path'], 'sha256': item['sha256']} for item in payload['files']]}, indent=2) + '\n')
         # Only explicit source paths are staged; no client databases, credentials or logs.
-        subprocess.run(['git', 'add', '--', *[str(p.relative_to(ROOT)) for p, _, _ in prepared]], cwd=ROOT, check=True)
+        subprocess.run(['git', 'add', '--', APPLIED, *[str(p.relative_to(ROOT)) for p, _, _ in prepared]], cwd=ROOT, check=True)
     print(json.dumps({'checkpoint': payload['id'], 'verified_files': len(prepared),
                       'changed_files': sum(changed for _, _, changed in prepared),
                       'check_only': args.check, 'external_requests': 0}))
