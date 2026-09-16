@@ -1,8 +1,8 @@
 # MIRA — canonical launch dashboard
 
-Source commit: `c9ae6bded9d6805a637c59a585dfc579a0cab644`.
+Source commit: `c926e2f6254d07923f44d6d46d93a1f7eae2b204`.
 
-Repository evidence only; not a live CRM and not a claim that unobserved activity is zero.
+Repository evidence only; not a live CRM and not a claim that unobserved activity is zero. Focused route review is separate from the inherited 50 reviews; 100 source rows are not 100 currently verified agency identities.
 
 **No launch-readiness assertion.** Implemented code, deployed behavior and commercial evidence are separate.
 
@@ -56,6 +56,15 @@ Repository evidence only; not a live CRM and not a claim that unobserved activit
 | russia_classification_coverage | 100 |
 | russia_needing_live_review | 50 |
 | russia_segment_holds | 56 |
+| focused_route_reviewed_accounts | 21 |
+| focused_route_new_focused_reviews | 18 |
+| focused_route_reused_cp05_reviews | 3 |
+| focused_route_named_direct_routes | 10 |
+| focused_route_accounts_with_named_direct_route | 7 |
+| focused_route_ready_for_owner_review | 15 |
+| focused_route_held_accounts | 6 |
+| focused_route_entity_mismatch_holds | 1 |
+| focused_route_wave12_draft_candidates | 10 |
 
 ## Business operations
 
@@ -70,6 +79,8 @@ Business KPI values remain unknown without a defined operational dataset. Stage-
 - Owner approval required before any external outreach or forms.
 - Secure backend deployment and live receipt/access QA remain unverified.
 - Real operating events have not been imported; conversion rates cannot be calculated.
+- Focused route review preserves one positive domain/entity mismatch (Monolit: inherited domain identifies a woodworking business). Do not release that account without identity correction.
+- Ten named direct contacts cover seven accounts; shared offices and franchise-opening routes are not counted as direct decision routes. All draft contacts remain unapproved and untested.
 - Primary private supply documents have been reviewed separately; a complete current seller/inventory/registration gate is not imported or enabled.
 - Protected project-material delivery is still partial.
 - Owner-held operator events must remain outside this public repository.
