@@ -51,3 +51,12 @@ P0 — Russia agency data-quality pipeline and Phuket developer/entity/contact v
 - HTTP availability is not the same as active-company or contact verification.
 - Parent/branch/legal-entity resolution is still incomplete.
 - Shell GitHub credentials are unavailable; writes must use the connected GitHub API and be re-read from `main`.
+
+
+## 2026-09-16T05:30Z — current durable checkpoint
+
+- Remote `main` was re-read at the start of this run; previous local QA artifacts were not counted.
+- `data/work-russia-live-qa-001.csv` is now published and re-read successfully: 25 rows, 0 HTTP-live under this runtime, 25 `needs_manual` due to HTTP 000/timeouts.
+- This is source QA only; no row is `contact_verified`, and timeouts are not proof of an inactive organization.
+- Latest write commit: `c1cfe4a03c315ac6afad4cb0c30c5692c3a7a0ad`.
+- Next exact batch: `MIRA-RU-LIVE-QA-002`, rows 26–50. Do not reprocess rows 1–25.
