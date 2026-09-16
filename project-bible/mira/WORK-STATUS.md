@@ -8,6 +8,8 @@ Editorial composition, existing image library, optional motion with pause/reduce
 
 Local66 Node/76 Python tests and7 offline DOM case groups passed across320/360/390/600/768/1024/1440. These are not live-domain/CSP/backend tests. See `product/design-direction-11.md` and `operations/checkpoint-11-design.md`. Next: confirm this checkpoint CI/Pages, obtain visual approval, then move the approved design to primary routes only after review. No sending or intake enablement.
 
+CP11 source9ae73936 is saved; GitHub QA35129525420 and Pages35129525369 completed successfully. Follow-up keeps the qualification CTA inside the new catalogue preview, preserves the original qualifier, and improves below-fold screenshot painting. Local76 Python tests and7 offline interaction groups passed again. The live-domain browser/CSP was not verified in this environment. Main agency page is still unchanged; owner visual/media approval remains pending.
+
 ## Previous source status (preserved)
 
 
@@ -55,7 +57,7 @@ CP09 persistence and CP10 standalone release are verified. Continue with Phuket 
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `9ae7393686736d863258213c83acf9fda62eb296`.
+Source commit: `662f4a7397f6afad85aa146b215dd4d9e3d63741`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 

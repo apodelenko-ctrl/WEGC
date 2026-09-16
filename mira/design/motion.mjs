@@ -61,3 +61,21 @@ if ('IntersectionObserver' in window) {
   if (hero) visibility.observe(hero);
   if (form) visibility.observe(form);
 }
+
+// Keep the preview journey coherent without changing the accepted qualifier.
+const planDemo = document.querySelector('#plan-demo');
+function keepPreviewDestination() {
+  if (!planDemo) return;
+  try {
+    const base = new URL(document.baseURI);
+    const target = new URL(planDemo.getAttribute('href'), base);
+    if (target.origin === base.origin && target.pathname === '/mira/marketplace.html') {
+      target.pathname = '/mira/marketplace-design.html';
+      planDemo.setAttribute('href', target.href);
+    }
+  } catch { /* An invalid preview URL is left untouched, never opened. */ }
+}
+if (planDemo) {
+  keepPreviewDestination();
+  new MutationObserver(keepPreviewDestination).observe(planDemo, { attributes: true, attributeFilter: ['href'] });
+}

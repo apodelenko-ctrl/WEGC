@@ -1,23 +1,23 @@
 {
-  "id": "checkpoint-11-design-preview",
-  "payload_sha256": "dc306c14e17c8f518a20e9116f59ffb53564fe30739c4f64c417d15522d46c42",
-  "source_ref": "2ec9018138b44f239744b8e192210f02235b57b7",
+  "id": "checkpoint-11-preview-journey-final",
+  "payload_sha256": "066ce57c6a1d3404fe4588d6b9d3491c72fc6348c608b077d2c9f8ba263319a6",
+  "source_ref": "188ec4204ef3c7913f33e0d0ceabf0e5643df2a8",
   "files": [
     {
+      "path": "mira/design/motion.mjs",
+      "sha256": "2ba949ded666d826f7548fbca43fe5491821332caff9912f055d5e4879c5d751"
+    },
+    {
+      "path": "tests/mira-design-ui.py",
+      "sha256": "1f16e5613d2516cf5c0aed7bd4385febd4123059051fb055a749a46633c75077"
+    },
+    {
       "path": "project-bible/mira/WORK-STATUS.md",
-      "sha256": "2b16b52fe97f016194f261ac2b7ddf6ddc36fdcb07aa780ac1da2f1e58d6205b"
+      "sha256": "c8e616a495bdaffe1cc54b213291e78c0e02d6ea612f9d3fb25d7f8e56884012"
     },
     {
       "path": "project-bible/mira/RESUME-STATE.md",
-      "sha256": "4e6463f6395bf587ae6c581b4d924107bfe7fe6f2b03d5492fdbfda4e3f02007"
-    },
-    {
-      "path": "project-bible/mira/README.md",
-      "sha256": "8e0fd5af7c9e28db4a1e92444f080f34d9ca6f03fcd4dcb14cf75a3d320b0b94"
-    },
-    {
-      "path": "project-bible/mira/08-decisions-log.md",
-      "sha256": "8d2f197eae0e019fb2a41476954943231991e92428774061cb0df21f9d611260"
+      "sha256": "4cb9b018cc71e38734f80005514a4eee28de38501686f4bb9e539c0791ff2fa6"
     }
   ]
 }

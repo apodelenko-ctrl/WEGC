@@ -60,7 +60,10 @@ def run(out):
         assert page.evaluate('document.getAnimations().length')==0
         assert page.locator('img').evaluate_all('(es)=>es.every(i=>i.naturalWidth>0)')
         page.screenshot(path=str(out/'landing-desktop.png'))
-        # A full-page screenshot with all embedded media decoded, not just requested.
+        # Paint below-fold lazy media before a full-page capture.
+        for selector in ['.coast', '.project-pair']:
+            page.locator(selector).scroll_into_view_if_needed();page.wait_for_timeout(200)
+        page.evaluate('scrollTo(0,0)');page.wait_for_timeout(150)
         page.screenshot(path=str(out/'landing-full.png'),full_page=True)
         cases.append('reduced-motion renders without active animation; all four images decoded')
         for width in widths:
@@ -71,6 +74,7 @@ def run(out):
         assert page.locator('#model').input_value()=='overseas_desk'
         page.locator('#goal').select_option('improve_process');page.locator('#owner').select_option('decision_maker');page.locator('#build-plan').click()
         assert page.locator('#plan').is_visible()
+        assert '/mira/marketplace-design.html' in page.locator('#plan-demo').get_attribute('href')
         assert 'Ничего не отправлено' in page.locator('#form-message').inner_text()
         assert page.locator('#plan-title').evaluate('(e)=>document.activeElement===e')
         page.locator('#goal').select_option('explore');assert page.locator('#plan').is_hidden()
