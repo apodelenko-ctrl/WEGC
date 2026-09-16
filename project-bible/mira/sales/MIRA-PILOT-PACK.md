@@ -131,6 +131,8 @@ MVP не заменяет CRM агентства. Он нужен как transac
 Для запуска используются:
 
 - `/mira/` — текущий prototype landing;
+- `sales/AGENCY-SALES-PLAYBOOK.md` — полный сценарий менеджера: звонок → demo → договор → onboarding → первая активация;
+- `sales/agency-crm-template.csv` — единый шаблон CRM-воронки и обязательных полей;
 - `sales/phuket-developer-outreach-queue.csv` — первая developer queue;
 - будущий `sales/russia-launch-200.csv` — очищенная приоритетная agency queue;
 - `09-outreach-templates.md` — тексты ручного outreach;
