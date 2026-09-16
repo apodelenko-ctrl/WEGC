@@ -36,7 +36,7 @@ No externaloutreach/forms/messages without separateapproval. No namingrestart/in
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `670b72706681bfe8a860cc1014c4694a46dfb887`.
+Source commit: `295ae998f589fce8e60341b5f29e70a0e7b0372c`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
