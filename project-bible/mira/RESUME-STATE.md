@@ -1,5 +1,16 @@
 # MIRA RESUME-STATE
 
+## CP11 — resume design here
+
+Owner narrowed immediate work to a distinctive visual redesign. Preview implementation: `/mira/design/` plus `/mira/marketplace-design.html`. The original agency funnel and demo engine remain unchanged. Do not repeat data collection, contract retrieval or failed mail authorization as part of this design review.
+
+Read `product/design-direction-11.md` and `operations/checkpoint-11-design.md`; inspect new checkpoint CI/Pages. All transferred UTF-8 sources are hash-checked. Local66 Node/76 Python tests,7 offline case groups and7 viewport widths passed. Offline DOM rendering does not establish live CSP or backend behavior.
+
+Next: owner reviews desktop/mobile preview; refine visual details; approve final photography/rights and exhibition creative; only then adopt the preview at main routes. Keep operational deployment and commercial project gates closed until separately verified. No external sending authorized by this design request.
+
+## Previous resume state (preserved)
+
+
 Updated:2026-09-16 — CP10 agency funnel. Read mission12 → WORK-STATUS → this file → relevant source. Continue; this is a checkpoint, not mission completion.
 
 ## Current owner task — CP10
@@ -36,7 +47,7 @@ No externaloutreach/forms/messages without separateapproval. No namingrestart/in
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `65b3f0d1d6eea9fb398996123b613a3608a74fad`.
+Source commit: `9ae7393686736d863258213c83acf9fda62eb296`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 

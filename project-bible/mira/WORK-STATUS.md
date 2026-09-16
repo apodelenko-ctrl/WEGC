@@ -1,5 +1,16 @@
 # MIRA WORK-STATUS
 
+## CP11 — current design preview for owner review
+
+Latest owner priority is visual design for exhibition preparation. New additive `/mira/design/` landing and `/mira/marketplace-design.html` catalogue skin are implemented. Existing `/mira/agency/`, qualification logic, demo engine and backend gates are unchanged. Design is not yet owner-approved as the main public version.
+
+Editorial composition, existing image library, optional motion with pause/reduced-motion support, responsive catalogue and local briefing preserved. Five exact project-image associations; all45 demo records remain accessible. Hero/coast illustrations and archived project renders are not presented as current field evidence or inventory. Rights/final media approval remains open.
+
+Local66 Node/76 Python tests and7 offline DOM case groups passed across320/360/390/600/768/1024/1440. These are not live-domain/CSP/backend tests. See `product/design-direction-11.md` and `operations/checkpoint-11-design.md`. Next: confirm this checkpoint CI/Pages, obtain visual approval, then move the approved design to primary routes only after review. No sending or intake enablement.
+
+## Previous source status (preserved)
+
+
 Updated:2026-09-16 — checkpoint10: dedicated agency landing. Standalone static release verified; not marketplace pilot readiness.
 
 ## Priorities and controls
@@ -44,7 +55,7 @@ CP09 persistence and CP10 standalone release are verified. Continue with Phuket 
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `65b3f0d1d6eea9fb398996123b613a3608a74fad`.
+Source commit: `9ae7393686736d863258213c83acf9fda62eb296`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 

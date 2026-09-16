@@ -1,43 +1,23 @@
 {
-  "id": "checkpoint-10-agency-funnel",
-  "payload_sha256": "8943f4f7383414211c310bf3a9ce5b772f7e85b081d71b412ac4aa7a430b6187",
-  "source_ref": "7a248e998795aa15c90a43de06eb2595f7a5cce1",
+  "id": "checkpoint-11-design-preview",
+  "payload_sha256": "dc306c14e17c8f518a20e9116f59ffb53564fe30739c4f64c417d15522d46c42",
+  "source_ref": "2ec9018138b44f239744b8e192210f02235b57b7",
   "files": [
     {
-      "path": "mira/index.html",
-      "sha256": "a28911cbe74a078a5c7f289939bac3c24638419cf47adda6415c7ade00a939b0"
-    },
-    {
-      "path": "mira/marketplace.html",
-      "sha256": "ae7733999925f1a7d4d51f0f261ac4a8039e78ee682cc98f7605ce8d30bf23c6"
-    },
-    {
-      "path": "mira/webinar.html",
-      "sha256": "4362b3bb22d216d5bef6b935bba2b090224505e9145e751cb0061bb1c24fb2b6"
-    },
-    {
-      "path": "project-bible/mira/sales/AGENCY-ACTIVATION-KIT.md",
-      "sha256": "d71d4f2ed762942bea4b366c6fd1a3630f4f666fec935ac83932c501c8faf0bb"
-    },
-    {
-      "path": "scripts/mira-launch-operations.py",
-      "sha256": "41dcf90fb8630bdb4abb7e2665f9dbe5bed1f4ca37ea744b00432a0fca739f9b"
-    },
-    {
-      "path": "project-bible/mira/README.md",
-      "sha256": "66d08858e34a29d305e755d0e45178956df47d52740732f20f1440b2581e15e3"
-    },
-    {
-      "path": "project-bible/mira/08-decisions-log.md",
-      "sha256": "2206260d5beb8a8b327d0e277a41f7cd514fdcde69b015e6fd1e6cccaf15360c"
-    },
-    {
       "path": "project-bible/mira/WORK-STATUS.md",
-      "sha256": "12bedbafdeafa34c188a65ee86988c5d253c868f79fd4ac4a6955b7da78125a8"
+      "sha256": "2b16b52fe97f016194f261ac2b7ddf6ddc36fdcb07aa780ac1da2f1e58d6205b"
     },
     {
       "path": "project-bible/mira/RESUME-STATE.md",
-      "sha256": "5797ec606c762d00da5b7b028623a6a4449e41507fe141fae12ee9dcf1b21e55"
+      "sha256": "4e6463f6395bf587ae6c581b4d924107bfe7fe6f2b03d5492fdbfda4e3f02007"
+    },
+    {
+      "path": "project-bible/mira/README.md",
+      "sha256": "8e0fd5af7c9e28db4a1e92444f080f34d9ca6f03fcd4dcb14cf75a3d320b0b94"
+    },
+    {
+      "path": "project-bible/mira/08-decisions-log.md",
+      "sha256": "8d2f197eae0e019fb2a41476954943231991e92428774061cb0df21f9d611260"
     }
   ]
 }
