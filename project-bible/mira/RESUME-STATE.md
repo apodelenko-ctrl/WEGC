@@ -1,6 +1,12 @@
 # MIRA RESUME-STATE
 
-Updated: 2026-09-16 — launch mission checkpoint 03.
+Updated: 2026-09-16 — launch mission checkpoint 04 (code/local QA; deployment closed).
+
+## Checkpoint 04 — resumed execution
+
+Confirmed checkpoint03 QA/Pages success; recovered current sources from GitHub Actions 35076435547. Implemented additive application review/onboarding with evidence/CAS/audit, scoped agency profile, project detail with live evidence checks and filters, reliable receipt replay, and receipt-preserving UI failure handling. Local QA: **40 Node + 18 Python tests passed**; offline DOM/receipt/mobile checks passed. No live Worker deployment, external sends or real business activations are claimed. See `operations/checkpoint-04-operational-experience.md`.
+
+Continue next: explicit Russia alias reconciliation and decision-route quality; acquisition copy/demo/onboarding; Phuket P0 evidence; operator-owned data preservation and canonical dashboard. Checkpoints are not mission completion.
 
 ## Read order
 
@@ -32,7 +38,7 @@ Russia100source/50priorlive/priority30/wave12notapproved. Phuket618projects/40gr
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `39311622a68c7ebf7dfebafa846316362432e38b`.
+Source commit: `59e227a8b18257bb465c96bedb8f06afb507d18b`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 

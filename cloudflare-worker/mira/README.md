@@ -20,7 +20,7 @@ Payment-support requests are separate, not quotes or execution. Financial events
 
 1. Connect the correct Cloudflare account/zone and approve configuration. Do not guess account ID, team domain, audience or database ID.
 2. Create a **new MIRA D1 database**. Copy `wrangler.example.toml` to ignored `wrangler.toml`; populate actual binding and top-level route values. Never migrate `wegc-leads` or change its Telegram relay.
-3. Apply the SQL migration to the new database using authorized migration tooling. Review schema first.
+3. Apply the ordered SQL migrations (`0001`, then `0002`) to the new database using authorized migration tooling. Review schema first.
 4. Protect BOTH `/mira/pilot.html` and `/mira/api/*` with the same Access application and explicit allowlist. Configure exact HTTPS team domain and actual audience tag.
 5. Bootstrap the first operator via owner-controlled database administration using the verified Access subject, `agency_id=NULL`, `role='operator'`. No guessed subject or email-header identity.
 6. Approve actual privacy information: controller/contact, purpose, collected fields, processors/location, access, retention/deletion and international-data arrangements as applicable. Populate privacy version/URL only after review. Keep `APPLICATIONS_ENABLED=false` until then.
@@ -37,8 +37,13 @@ Prefix `/mira/api`. All except read-only health require verified Access; busines
 |---|---|---|
 | GET `/health` | Read-only | Configuration signal, not readiness |
 | GET `/session` | Verified Access | Own identity/membership |
-| GET/POST `/applications` | Verified Access | Own queue / durable intake receipt |
+| GET/POST `/applications` | Verified Access | Own queue / durable audited intake receipt |
+| GET `/applications/:id` | Applicant | Own status history even before agency access |
+| GET `/admin/applications/:id` | Operator | Review context and allowed next stages |
+| POST `/admin/applications/:id/status` | Operator | Versioned, audited qualification/onboarding |
+| GET `/profile` | Active member | Own agency/role and assigned markets, not activation |
 | GET `/projects` | Active member | Assigned metadata |
+| GET `/projects/:id` | Scoped member | Live evidence checks and timestamps; no raw vault references |
 | GET/POST `/leads` | Active member | Scoped list / evidence-gated intake |
 | GET `/leads/:id` | Scoped member | Lead, history, separate deal/payment records |
 | POST `/payment-requests` | Scoped member | Package-review request, no execution |
@@ -53,7 +58,7 @@ Prefix `/mira/api`. All except read-only health require verified Access; busines
 | POST `/admin/leads/:id/status` | Operator | Valid transition, evidence and version check |
 | POST `/admin/leads/:id/deal-events` | Operator | Ordered evidence-backed deal/commission event |
 
-Paginated lists expose `next_cursor`. Own application list is bounded to latest 100; operator intake is paginated. The UI currently shows the first operator intake page and identifies further pages. No asynchronous sender exists.
+Paginated lists expose `next_cursor`. Own application list is bounded to latest 100; operator intake is paginated. The operator UI supports queue pagination, application history and stage changes. Qualification requires reviewed evidence; onboarding additionally requires the active agency agreement, scoped onboarding evidence and a verified owner membership. Neither stage records activation. No asynchronous sender exists.
 
 ## Tests
 
@@ -79,3 +84,11 @@ Cloudflare Access JWT validation: https://developers.cloudflare.com/cloudflare-o
 Cloudflare D1 Worker API: https://developers.cloudflare.com/d1/worker-api/d1-database/
 
 Cloudflare D1 migrations: https://developers.cloudflare.com/d1/reference/migrations/
+
+## Checkpoint 04 — operational experience (2026-09-16)
+
+An additive migration preserves existing intake records without backdating approvals. New applications have an atomic immutable receipt event. Lead intake accepts an optional `Idempotency-Key`; the pilot UI always supplies one and reuses it on an unchanged in-page retry. Payment requests replay the same scoped payload, rather than create a second request. Changed payloads fail explicitly. Receipts are historical acknowledgements, not guarantees that supply evidence remains current. The UI preserves successful receipts when a later list refresh fails. A full page reload does not persist in-memory lead retry keys; check the existing client list before creating a new attempt.
+
+The project detail endpoint separates project metadata, current project-agreement/seller checks, expiring inventory, registration rules and commission schedule. It exposes verification/expiry dates, not document contents, vault IDs, prices or assumed commission. `materials_available=false` is intentional until controlled delivery of materials is implemented; rights evidence alone does not prove a working document-delivery route.
+
+Agency profile and manual application review are implemented; real deployment is still not performed. No external message/form submission, owner approval or operating activity is created by these screens. All reference test data remain explicitly synthetic.

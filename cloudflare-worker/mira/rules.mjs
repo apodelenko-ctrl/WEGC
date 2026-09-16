@@ -8,7 +8,7 @@ export const TRANSITIONS=Object.freeze({
  duplicate:['review','closed'],conflict:['review','rejected','closed'],rejected:['closed'],expired:['review','closed'],closed:[]
 });
 export const STAGES=Object.freeze(['consultation','booking','contract','buyer_payment','commission_accrued','commission_received','agency_paid']);
-export const EVIDENCE_KINDS=Object.freeze(['agency_agreement','project_agreement','inventory','registration_rules','commission_schedule','materials_rights','client_consent','owner_approval','developer_submission','developer_confirmation','lead_protection','booking','contract','buyer_payment','commission_accrued','commission_received','agency_paid','cancellation','payment_consent']);
+export const EVIDENCE_KINDS=Object.freeze(['agency_agreement','project_agreement','inventory','registration_rules','commission_schedule','materials_rights','client_consent','owner_approval','developer_submission','developer_confirmation','lead_protection','booking','contract','buyer_payment','commission_accrued','commission_received','agency_paid','cancellation','payment_consent','application_qualification','agency_onboarding']);
 export function requireKeys(data,allowed,required=[]) {
  if(!data || typeof data!=='object' || Array.isArray(data) || Object.keys(data).some(k=>!allowed.includes(k)) || required.some(k=>data[k]===undefined))throw new ApiError(400,'invalid_fields');
 }

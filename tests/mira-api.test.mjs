@@ -2,11 +2,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
-import {readFileSync} from 'node:fs';
+import {readFileSync,readdirSync} from 'node:fs';
 import worker,{createHandler} from '../cloudflare-worker/mira/worker.mjs';
 import {verifyAccess} from '../cloudflare-worker/mira/auth.mjs';
 import {decimalAmount} from '../cloudflare-worker/mira/rules.mjs';
-const schema=readFileSync(new URL('../cloudflare-worker/mira/migrations/0001_mira.sql',import.meta.url),'utf8');
+const migrations=new URL('../cloudflare-worker/mira/migrations/',import.meta.url);
+const schema=readdirSync(migrations).filter(f=>f.endsWith('.sql')).sort().map(f=>readFileSync(new URL(f,migrations),'utf8')).join('\n');
 const past=new Date(Date.now()-60000).toISOString(),future=new Date(Date.now()+86400000).toISOString();
 class D1 {
  constructor(){this.db=new DatabaseSync(':memory:');this.db.exec(schema);}
@@ -180,4 +181,92 @@ test('concurrent valid status changes create one event and one conflict',async()
  const results=await Promise.all([call('operator',path,{status:'review',version:0,reason:'TEST first'}),call('operator',path,{status:'needs_information',version:0,reason:'TEST second'})]);
  assert.deepEqual(results.map(r=>r.status).sort(),[200,409]);
  assert.equal(db.db.prepare("SELECT COUNT(*) AS n FROM mira_events WHERE entity_type='lead'").get().n,2);
+});
+
+test('additive migration preserves v1 receipts without manufacturing historical approvals',()=>{
+ const db=new DatabaseSync(':memory:');db.exec(readFileSync(new URL('0001_mira.sql',migrations),'utf8'));
+ db.prepare(`INSERT INTO mira_applications (id,subject,email,company,city,name,format,demand,markets_json,consent_version,created_at,idempotency_key,request_hash) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`).run('old-app','TEST','TEST@example.test','TEST','TEST','TEST','agency','learning','["phuket"]','TEST',past,'TEST-key','TEST-hash');
+ db.exec(readFileSync(new URL('0002_operations.sql',migrations),'utf8'));
+ const a=db.prepare('SELECT status,version,agency_id,created_at,updated_at FROM mira_applications').get();
+ assert.equal(a.status,'received');assert.equal(a.version,0);assert.equal(a.agency_id,null);assert.equal(a.created_at,past);assert.equal(a.updated_at,past);
+ assert.equal(db.prepare('SELECT COUNT(*) AS n FROM mira_events').get().n,0);db.close();
+});
+const applicationFixture={company:'TEST',city:'TEST',name:'TEST',format:'agency',demand:'learning',markets:['phuket'],consent_version:'test-consent-v1'};
+test('application receipt audit is atomic, immutable and replayed only once',async()=>{
+ const {call,db}=setup();const a=await call('applicant','/applications',applicationFixture,{'Idempotency-Key':'request-audit'});
+ const replay=await call('applicant','/applications',applicationFixture,{'Idempotency-Key':'request-audit'});
+ assert.equal(replay.body.id,a.body.id);const events=db.db.prepare("SELECT * FROM mira_events WHERE entity_type='application'").all();assert.equal(events.length,1);assert.equal(events[0].version,0);
+ assert.throws(()=>db.db.prepare('UPDATE mira_events SET reason=?').run('TEST CHANGED'),/immutable/);
+});
+test('applicant can read own history before membership but cannot inspect another applicant',async()=>{
+ const {call}=setup();const a=(await call('new-applicant','/applications',applicationFixture,{'Idempotency-Key':'request-scope'})).body;
+ assert.equal((await call('new-applicant','/applications/'+a.id)).status,200);
+ assert.equal((await call('owner-a','/applications/'+a.id)).status,404);
+ assert.equal((await call('new-applicant','/admin/applications/'+a.id)).status,403);
+ assert.equal((await call('owner-a','/admin/applications/'+a.id)).status,403);
+});
+test('qualification requires reviewed evidence and is not onboarding, activation or sending',async()=>{
+ const {call,addEvidence}=setup();const a=(await call('new-applicant','/applications',applicationFixture,{'Idempotency-Key':'request-qualification'})).body,p='/admin/applications/'+a.id+'/status';
+ assert.equal((await call('operator',p,{status:'onboarded',version:0,reason:'TEST skip'})).status,409);
+ assert.equal((await call('operator',p,{status:'review',version:0,reason:'TEST reviewed'})).status,200);
+ assert.equal((await call('operator',p,{status:'qualified',version:1,reason:'TEST no proof',evidence_ref:'EVID-absent'})).status,409);
+ addEvidence('EVID-qualification','application_qualification',{entity:a.id});
+ const qualified=await call('operator',p,{status:'qualified',version:1,reason:'TEST evidence',evidence_ref:'EVID-qualification'});
+ assert.equal(qualified.status,200);assert.equal(qualified.body.activation_recorded,false);assert.equal(qualified.body.outreach_sent,false);
+ const own=await call('new-applicant','/applications/'+a.id);assert.equal(own.body.application.status,'qualified');assert(!('reason' in own.body.events.at(-1)));
+});
+test('onboarding requires scoped proof, current agreement and verified agency-owner membership',async()=>{
+ const {call,addEvidence,db}=setup();const a=(await call('owner-a','/applications',applicationFixture,{'Idempotency-Key':'request-onboarding'})).body,p='/admin/applications/'+a.id+'/status';
+ await call('operator',p,{status:'review',version:0,reason:'TEST reviewed'});
+ addEvidence('EVID-q','application_qualification',{entity:a.id});await call('operator',p,{status:'qualified',version:1,reason:'TEST qualified',evidence_ref:'EVID-q'});
+ addEvidence('EVID-onboard','agency_onboarding',{agency:'agency-a',entity:a.id});
+ const body={status:'onboarded',version:2,reason:'TEST completed',evidence_ref:'EVID-onboard',agency_id:'agency-a'};
+ assert.equal((await call('operator',p,{...body,agency_id:'agency-b'})).status,409);
+ db.db.exec("UPDATE mira_memberships SET active=0 WHERE subject='owner-a'");assert.equal((await call('operator',p,body)).status,409);
+ db.db.exec("UPDATE mira_memberships SET active=1 WHERE subject='owner-a'");const r=await call('operator',p,body);assert.equal(r.status,200);assert.equal(r.body.agency_id,'agency-a');assert.equal(r.body.activation_recorded,false);
+});
+test('simultaneous application review changes preserve one version and one event',async()=>{
+ const {call,db}=setup();const a=(await call('applicant','/applications',applicationFixture,{'Idempotency-Key':'request-race'})).body,p='/admin/applications/'+a.id+'/status';
+ const r=await Promise.all([call('operator',p,{status:'review',version:0,reason:'TEST review'}),call('operator',p,{status:'rejected',version:0,reason:'TEST reject'})]);
+ assert.deepEqual(r.map(x=>x.status).sort(),[200,409]);assert.equal(db.db.prepare("SELECT COUNT(*) AS n FROM mira_events WHERE entity_type='application' AND entity_id=?").get(a.id).n,2);
+});
+test('project card reveals readiness timestamps, not vault paths or unconfirmed inventory',async()=>{
+ const {call,db}=setup();const r=await call('owner-a','/projects/project-1');assert.equal(r.status,200);assert.equal(r.body.registration_eligible,true);assert.equal(r.body.materials_available,false);
+ assert.equal(r.body.checks.find(c=>c.kind==='inventory').expires_at,future);
+ const serialized=JSON.stringify(r.body);assert(!serialized.includes('vault:'));assert(!serialized.includes('EVID-'));assert(!serialized.includes('amount_decimal'));
+ db.db.exec("UPDATE mira_evidence SET revoked_at='2020-01-01' WHERE id='EVID-inventory'");const closed=await call('owner-a','/projects/project-1');assert.equal(closed.body.registration_eligible,false);assert.equal(closed.body.checks.find(c=>c.kind==='inventory').state,'not_current');
+});
+test('project detail and profile respect tenant assignment and do not infer activation',async()=>{
+ const {call,db}=setup();db.db.exec("DELETE FROM mira_agency_projects WHERE agency_id='agency-b'");
+ assert.equal((await call('owner-b','/projects/project-1')).status,404);assert.equal((await call('operator','/projects/project-1')).status,200);
+ const profile=await call('broker-a','/profile');assert.equal(profile.body.agency.id,'agency-a');assert.equal(profile.body.role,'broker');assert.deepEqual(profile.body.available_markets,['phuket']);assert.equal(profile.body.activation_status,'not_inferred_from_access');
+ assert(!JSON.stringify(profile.body).includes('EVID-'));assert.equal((await call('owner-b','/profile')).body.available_markets.length,0);
+});
+test('lead receipt retry survives inventory expiry without registering a new client',async()=>{
+ const {call,db}=setup();const a=await call('owner-a','/leads',leadBody,{'Idempotency-Key':'lead-retry'});assert.equal(a.status,201);
+ db.db.exec("UPDATE mira_evidence SET revoked_at='2020-01-01' WHERE id='EVID-inventory'");
+ const b=await call('owner-a','/leads',leadBody,{'Idempotency-Key':'lead-retry'});assert.equal(b.status,200);assert.equal(b.body.replayed,true);assert.equal(b.body.id,a.body.id);
+ const c=await call('owner-a','/leads',{...leadBody,client_ref:'OTHER-TEST'},{'Idempotency-Key':'lead-retry'});assert.equal(c.status,409);
+ assert.equal(db.db.prepare('SELECT COUNT(*) AS n FROM mira_leads').get().n,1);
+});
+test('concurrent identical lead attempts return one durable receipt and no duplicate audit',async()=>{
+ const {call,db}=setup();const results=await Promise.all([call('owner-a','/leads',leadBody,{'Idempotency-Key':'lead-race'}),call('owner-a','/leads',leadBody,{'Idempotency-Key':'lead-race'})]);
+ assert.deepEqual(results.map(r=>r.status).sort(),[200,201]);assert.equal(results[0].body.id,results[1].body.id);
+ assert.equal(db.db.prepare("SELECT COUNT(*) AS n FROM mira_events WHERE entity_type='lead'").get().n,1);
+});
+test('payment replay returns the existing receipt, rejects changed fields and preserves audit',async()=>{
+ const {call,addEvidence,db}=setup();const lead=(await call('owner-a','/leads',leadBody)).body;
+ addEvidence('EVID-payment-repeat','payment_consent',{agency:'agency-a',project:'project-1',entity:lead.id});
+ const b={lead_id:lead.id,invoice_currency:'USD',consent_ref:'EVID-payment-repeat'};
+ const a=await call('owner-a','/payment-requests',b),r=await call('owner-a','/payment-requests',b);
+ assert.equal(a.status,201);assert.equal(r.status,200);assert.equal(r.body.id,a.body.id);assert.equal(r.body.payment_execution,null);
+ assert.equal((await call('owner-a','/payment-requests',{...b,invoice_currency:'EUR'})).status,409);
+ assert.equal(db.db.prepare("SELECT COUNT(*) AS n FROM mira_events WHERE entity_type='payment_request'").get().n,1);
+});
+test('owner approval reference remains attached to immutable developer-submission audit',async()=>{
+ const {call,addEvidence,db}=setup();const a=(await call('owner-a','/leads',leadBody)).body,path='/admin/leads/'+a.id+'/status';
+ await call('operator',path,{status:'review',version:0,reason:'TEST review'});const scope={agency:'agency-a',project:'project-1',entity:a.id};
+ addEvidence('EVID-owner-trace','owner_approval',scope);addEvidence('EVID-dev-trace','developer_submission',scope);
+ const r=await call('operator',path,{status:'developer_submitted',version:1,reason:'TEST recorded',evidence_ref:'EVID-dev-trace',owner_approval_ref:'EVID-owner-trace'});assert.equal(r.status,200);
+ assert.equal(db.db.prepare("SELECT owner_approval_ref FROM mira_events WHERE entity_type='lead' AND status='developer_submitted'").get().owner_approval_ref,'EVID-owner-trace');
 });

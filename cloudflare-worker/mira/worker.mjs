@@ -1,3 +1,4 @@
+import {projectDetail,agencyProfile,applicationDetail,reviewApplication} from './experience.mjs';
 import {ApiError,verifyAccess} from './auth.mjs';
 import {requireKeys,string,identifier,evidenceRef,iso,currentEvidence,leadTransition,decimalAmount,currency,STAGES,EVIDENCE_KINDS} from './rules.mjs';
 const API='/mira/api';
@@ -65,7 +66,10 @@ async function application(request,env,identity) {
  const bucket=Math.floor(Date.now()/3600000);
  const budget=await run(env,'INSERT INTO mira_rate_limits (subject,bucket,uses) VALUES (?,?,1) ON CONFLICT(subject,bucket) DO UPDATE SET uses=uses+1 WHERE uses<?',identity.subject,bucket,quota);
  assert(budget.meta.changes===1,429,'application_rate_limit');
- await run(env,`INSERT INTO mira_applications (id,subject,email,company,city,name,format,demand,markets_json,consent_version,created_at,idempotency_key,request_hash) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(subject,idempotency_key) DO NOTHING`,id,identity.subject,identity.email,data.company,data.city,data.name,data.format,data.demand,JSON.stringify(data.markets),data.consent_version,created,key,hash);
+ await env.MIRA_DB.batch([
+  stmt(env,`INSERT INTO mira_applications (id,subject,email,company,city,name,format,demand,markets_json,consent_version,created_at,idempotency_key,request_hash,updated_at,last_event_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(subject,idempotency_key) DO NOTHING`,id,identity.subject,identity.email,data.company,data.city,data.name,data.format,data.demand,JSON.stringify(data.markets),data.consent_version,created,key,hash,created,id),
+  stmt(env,`INSERT INTO mira_events (id,entity_type,entity_id,actor,status,version,reason,created_at) SELECT ?,'application',id,subject,status,0,'Durable intake receipt; not qualification or activation',created_at FROM mira_applications WHERE id=?`,id,id)
+ ]);
  const saved=await first(env,'SELECT id,status,created_at,request_hash FROM mira_applications WHERE subject=? AND idempotency_key=?',identity.subject,key);
  assert(saved&&saved.request_hash===hash,409,'idempotency_payload_mismatch');
  return json({id:saved.id,status:saved.status,received_at:saved.created_at,meaning:'Recorded by MIRA, not yet qualified, contracted or activated.'},saved.id===id?201:200);
@@ -73,15 +77,25 @@ async function application(request,env,identity) {
 async function createLead(request,env,m,identity) {
  assert(m.role!=='operator',403,'agency_context_required');
  const b=await bodyOf(request);requireKeys(b,['project_id','client_ref','consent_ref'],['project_id','client_ref','consent_ref']);
- const projectId=identifier(b.project_id),ref=identifier(b.client_ref);
+ const projectId=identifier(b.project_id),ref=identifier(b.client_ref),consent=evidenceRef(b.consent_ref);
  assert(!ref.toUpperCase().startsWith('DEMO-'),400,'demo_not_allowed_in_live_ledger');
+ const rawKey=request.headers.get('Idempotency-Key'),key=rawKey?identifier(rawKey):null;
+ const hash=key?await digest({project_id:projectId,client_ref:ref,consent_ref:consent}):null;
+ const replay=async()=>{
+  if(!key)return null;
+  const row=await first(env,'SELECT id,status,version,created_at,agency_id,request_hash FROM mira_leads WHERE created_by=? AND idempotency_key=?',identity.subject,key);
+  if(!row)return null;
+  assert(row.agency_id===m.agency_id&&row.request_hash===hash,409,'idempotency_payload_mismatch');
+  return json({id:row.id,status:row.status,version:row.version,received_at:row.created_at,replayed:true,meaning:'Existing MIRA receipt; read the lead for current developer/protection status.'});
+ };
+ const prior=await replay();if(prior)return prior;
  await projectGate(env,projectId,m.agency_id);
- await evidence(env,b.consent_ref,'client_consent',{agency_id:m.agency_id,project_id:projectId,entity_id:ref});
+ await evidence(env,consent,'client_consent',{agency_id:m.agency_id,project_id:projectId,entity_id:ref});
  const id=uuid(),event=uuid(),now=nowISO();
  try{await env.MIRA_DB.batch([
-   stmt(env,`INSERT INTO mira_leads (id,agency_id,project_id,client_ref,consent_ref,created_by,created_at,updated_at,last_event_id) VALUES (?,?,?,?,?,?,?,?,?)`,id,m.agency_id,projectId,ref,b.consent_ref,identity.subject,now,now,event),
-   stmt(env,`INSERT INTO mira_events (id,entity_type,entity_id,agency_id,actor,status,version,evidence_ref,reason,created_at) VALUES (?,'lead',?,?,?,'submitted',0,?,'Received by MIRA; not submitted to developer',?)`,event,id,m.agency_id,identity.subject,b.consent_ref,now)
- ]);}catch(error){if(String(error.message).includes('UNIQUE'))throw new ApiError(409,'duplicate_registration_in_agency');throw error;}
+   stmt(env,`INSERT INTO mira_leads (id,agency_id,project_id,client_ref,consent_ref,created_by,created_at,updated_at,last_event_id,idempotency_key,request_hash) VALUES (?,?,?,?,?,?,?,?,?,?,?)`,id,m.agency_id,projectId,ref,consent,identity.subject,now,now,event,key,hash),
+   stmt(env,`INSERT INTO mira_events (id,entity_type,entity_id,agency_id,actor,status,version,evidence_ref,reason,created_at) VALUES (?,'lead',?,?,?,'submitted',0,?,'Received by MIRA; not submitted to developer',?)`,event,id,m.agency_id,identity.subject,consent,now)
+ ]);}catch(error){if(String(error.message).includes('UNIQUE')){const saved=await replay();if(saved)return saved;throw new ApiError(409,'duplicate_registration_in_agency');}throw error;}
  return json({id,status:'submitted',version:0,received_at:now,protection_status:'not_confirmed'},201);
 }
 async function transition(request,env,m,identity,id) {
@@ -96,18 +110,28 @@ async function transition(request,env,m,identity,id) {
  const event=uuid(),now=nowISO();const until=b.status==='developer_confirmed'?(b.protection_until?iso(b.protection_until):null):null;
  const result=await env.MIRA_DB.batch([
    stmt(env,'UPDATE mira_leads SET status=?,version=version+1,protection_ref=?,protection_until=?,last_event_id=?,updated_at=? WHERE id=? AND version=?',b.status,b.protection_ref||null,until,event,now,id,b.version),
-   stmt(env,`INSERT INTO mira_events (id,entity_type,entity_id,agency_id,actor,status,version,evidence_ref,reason,created_at) SELECT ?,'lead',id,agency_id,?,status,version,?,?,? FROM mira_leads WHERE id=? AND last_event_id=?`,event,identity.subject,b.evidence_ref||null,b.reason,now,id,event)
+   stmt(env,`INSERT INTO mira_events (id,entity_type,entity_id,agency_id,actor,status,version,evidence_ref,reason,created_at,owner_approval_ref) SELECT ?,'lead',id,agency_id,?,status,version,?,?,?,? FROM mira_leads WHERE id=? AND last_event_id=?`,event,identity.subject,b.evidence_ref||null,b.reason,now,b.owner_approval_ref||null,id,event)
  ]);
  assert(result[0].meta.changes===1,409,'stale_version');return json({id,status:b.status,version:b.version+1,protection_until:until});
 }
 async function paymentRequest(request,env,m,identity) {
  assert(m.role!=='operator',403,'agency_context_required');
  const b=await bodyOf(request);requireKeys(b,['lead_id','invoice_currency','consent_ref'],['lead_id','invoice_currency','consent_ref']);
- const lead=await getLead(env,b.lead_id,m,identity);assert(!['closed','rejected','duplicate'].includes(lead.status),409,'lead_not_active');
- await evidence(env,b.consent_ref,'payment_consent',{agency_id:lead.agency_id,project_id:lead.project_id,entity_id:lead.id});
- const id=uuid(),now=nowISO(),curr=currency(b.invoice_currency);
- try{await run(env,`INSERT INTO mira_payment_requests (id,lead_id,agency_id,created_by,created_at,invoice_currency,consent_ref) VALUES (?,?,?,?,?,?,?)`,id,lead.id,lead.agency_id,identity.subject,now,curr,b.consent_ref);}
- catch(error){if(String(error.message).includes('UNIQUE'))throw new ApiError(409,'payment_request_already_exists');throw error;}
+ const lead=await getLead(env,b.lead_id,m,identity),curr=currency(b.invoice_currency),consent=evidenceRef(b.consent_ref);
+ const replay=async()=>{
+  const p=await first(env,'SELECT * FROM mira_payment_requests WHERE lead_id=?',lead.id);if(!p)return null;
+  assert(p.invoice_currency===curr&&p.consent_ref===consent,409,'payment_request_payload_mismatch');
+  return json({id:p.id,lead_id:lead.id,status:p.status,received_at:p.created_at,replayed:true,quote:null,payment_execution:null});
+ };
+ const prior=await replay();if(prior)return prior;
+ assert(!['closed','rejected','duplicate'].includes(lead.status),409,'lead_not_active');
+ await evidence(env,consent,'payment_consent',{agency_id:lead.agency_id,project_id:lead.project_id,entity_id:lead.id});
+ const id=uuid(),event=uuid(),now=nowISO();
+ try{await env.MIRA_DB.batch([
+  stmt(env,`INSERT INTO mira_payment_requests (id,lead_id,agency_id,created_by,created_at,invoice_currency,consent_ref) VALUES (?,?,?,?,?,?,?)`,id,lead.id,lead.agency_id,identity.subject,now,curr,consent),
+  stmt(env,`INSERT INTO mira_events (id,entity_type,entity_id,agency_id,actor,status,version,evidence_ref,reason,created_at) VALUES (?,'payment_request',?,?,?,'package_review',0,?,'Package review requested; no payment execution',?)`,event,id,lead.agency_id,identity.subject,consent,now)
+ ]);}
+ catch(error){if(String(error.message).includes('UNIQUE')){const saved=await replay();if(saved)return saved;throw new ApiError(409,'payment_request_already_exists');}throw error;}
  return json({id,lead_id:lead.id,status:'package_review',received_at:now,quote:null,payment_execution:null},201);
 }
 async function dealEvent(request,env,m,identity,id) {
@@ -174,12 +198,24 @@ async function handle(request,env,identityVerifier) {
  if(request.method==='POST')assert(request.headers.get('Origin')===env.APP_ORIGIN,403,'origin_rejected');
  const identity=await identityVerifier(request,env);
  if(path===API+'/applications'&&request.method==='POST')return application(request,env,identity);
- if(path===API+'/applications'&&request.method==='GET')return json({records:await all(env,'SELECT id,company,city,status,created_at FROM mira_applications WHERE subject=? ORDER BY created_at DESC LIMIT 100',identity.subject)});
+ if(path===API+'/applications'&&request.method==='GET')return json({records:await all(env,'SELECT id,company,city,status,version,agency_id,created_at,updated_at FROM mira_applications WHERE subject=? ORDER BY created_at DESC LIMIT 100',identity.subject)});
+ const appDetail=path.match(/^\/mira\/api\/applications\/([A-Za-z0-9_-]+)$/);
+ if(appDetail&&request.method==='GET')return json(await applicationDetail(env,appDetail[1],identity));
  if(path===API+'/session'&&request.method==='GET'){
    const m=await first(env,'SELECT agency_id,role,active FROM mira_memberships WHERE subject=?',identity.subject);
    return json({subject:identity.subject,email:identity.email,membership:m,applications_enabled:env.APPLICATIONS_ENABLED==='true',privacy_version:env.PRIVACY_VERSION||null,privacy_notice_url:env.PRIVACY_NOTICE_URL||null});
  }
  const m=await membership(env,identity);
+ if(path===API+'/profile'&&request.method==='GET')return json(await agencyProfile(env,m));
+ const project=path.match(/^\/mira\/api\/projects\/([A-Za-z0-9_-]+)$/);
+ if(project&&request.method==='GET')return json(await projectDetail(env,project[1],m));
+ const appReview=path.match(/^\/mira\/api\/admin\/applications\/([A-Za-z0-9_-]+)(?:\/(status))?$/);
+ if(appReview){
+  operator(m);
+  if(request.method==='GET'&&!appReview[2])return json(await applicationDetail(env,appReview[1],identity,true));
+  if(request.method==='POST'&&appReview[2])return json(await reviewApplication(env,appReview[1],m,identity,await bodyOf(request)));
+ }
+
  if(path===API+'/projects'&&request.method==='GET'){
    const query='SELECT p.id,p.name,p.market,p.developer_family,p.legal_seller,p.enabled,p.updated_at FROM mira_projects p';
    return json({records:m.role==='operator'?await all(env,query+' ORDER BY p.name'):await all(env,query+' JOIN mira_agency_projects a ON a.project_id=p.id WHERE a.agency_id=? ORDER BY p.name',m.agency_id),note:'Enabled flag alone is not a freshness guarantee. Every client submission revalidates evidence.'});
@@ -229,7 +265,7 @@ async function handle(request,env,identityVerifier) {
    await run(env,'INSERT INTO mira_agency_projects (agency_id,project_id) VALUES (?,?) ON CONFLICT DO NOTHING',identifier(b.agency_id),identifier(b.project_id));return json({granted:true});
  }
  if(path===API+'/admin/applications'&&request.method==='GET'){
-   operator(m);const {limit,cursor}=pageSettings(url);return json(pageResult(await all(env,'SELECT id,subject,email,company,city,name,format,demand,markets_json,status,created_at FROM mira_applications WHERE id>? ORDER BY id LIMIT ?',cursor,limit+1),limit));
+   operator(m);const {limit,cursor}=pageSettings(url);return json(pageResult(await all(env,'SELECT id,subject,email,company,city,name,format,demand,markets_json,status,version,agency_id,created_at,updated_at FROM mira_applications WHERE id>? ORDER BY id LIMIT ?',cursor,limit+1),limit));
  }
  if(path===API+'/admin/dashboard'&&request.method==='GET'){
    operator(m);return json({scope:'This database only; counts are not market-wide totals.',
