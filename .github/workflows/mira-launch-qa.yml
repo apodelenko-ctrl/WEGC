@@ -27,7 +27,9 @@ jobs:
         with:
           ref: main
       - name: Apply reviewed hash-pinned source checkpoint when present
-        run: python scripts/mira-apply-reviewed-checkpoint.py
+        run: |
+          python scripts/mira-repair-cp04.py
+          python scripts/mira-apply-reviewed-checkpoint.py
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
