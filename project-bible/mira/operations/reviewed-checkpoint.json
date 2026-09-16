@@ -1,126 +1,54 @@
 {
   "version": 1,
   "kind": "reviewed-public-source",
-  "id": "checkpoint-10-agency-funnel",
-  "source_ref": "7a248e998795aa15c90a43de06eb2595f7a5cce1",
+  "id": "checkpoint-11-design-preview",
+  "source_ref": "2ec9018138b44f239744b8e192210f02235b57b7",
   "files": [
     {
-      "path": "mira/index.html",
-      "before_sha256": "71445d8ae7e6e79f656b465fa3a6be311006c1ee5e18dd72a3428daa89c4d6b0",
-      "sha256": "a28911cbe74a078a5c7f289939bac3c24638419cf47adda6415c7ade00a939b0",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "<a class=\"btn\" href=\"#join\">Подключить агентство</a>",
-          "new": "<a class=\"btn\" href=\"./agency/\">Подключить агентство</a>"
-        },
-        {
-          "old": "<a class=\"btn\" href=\"./marketplace.html?view=application\">Подготовить бриф агентства</a>",
-          "new": "<a class=\"btn\" href=\"./agency/#start\">Подобрать сценарий подключения</a>"
-        }
-      ]
-    },
-    {
-      "path": "mira/marketplace.html",
-      "before_sha256": "e49567c59f7bebb16517f4d4d166a8702db59464c1547ade67ba419d771885b2",
-      "sha256": "ae7733999925f1a7d4d51f0f261ac4a8039e78ee682cc98f7605ce8d30bf23c6",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "<a href=\"./marketplace.html?view=application\">Подключить агентство</a></header>",
-          "new": "<a href=\"./agency/#start\">Подключить агентство</a></header>"
-        }
-      ]
-    },
-    {
-      "path": "mira/webinar.html",
-      "before_sha256": "338f0a75ee6060a8d5e941ceb2692d3f4ffe8471e5ec84f5d3efda77a9037f41",
-      "sha256": "4362b3bb22d216d5bef6b935bba2b090224505e9145e751cb0061bb1c24fb2b6",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "<a class=\"btn\" href=\"/mira/marketplace.html?view=application\">Подготовить локальный бриф</a>",
-          "new": "<a class=\"btn\" href=\"/mira/agency/#start\">Подобрать сценарий подключения</a>"
-        },
-        {
-          "old": "Бриф в публичном демо хранится локально. Его подготовка не означает отправку заявки или выдачу рабочего доступа.",
-          "new": "Бриф на странице подключения создаётся только в браузере. Его подготовка не означает отправку заявки или выдачу рабочего доступа."
-        }
-      ]
-    },
-    {
-      "path": "project-bible/mira/sales/AGENCY-ACTIVATION-KIT.md",
-      "before_sha256": "c053241eb9f8629502c2e552760329f3d6968a8e66a9c932fe1faa9c0a4c6efd",
-      "sha256": "d71d4f2ed762942bea4b366c6fd1a3630f4f666fec935ac83932c501c8faf0bb",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "→ `/mira/` → демо → квалификация",
-          "new": "→ `/mira/agency/` → демо / локальная квалификация"
-        }
-      ]
-    },
-    {
-      "path": "scripts/mira-launch-operations.py",
-      "before_sha256": "cb2e2fe6561d272f5a401e15bc9b5946bf1fe6a38b823fcdebe603ee86479a27",
-      "sha256": "41dcf90fb8630bdb4abb7e2665f9dbe5bed1f4ca37ea744b00432a0fca739f9b",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "('public_landing','implemented_code','mira/index.html','Accepted positioning and actual demo/closed-pilot entry.'),",
-          "new": "('public_landing','implemented_code','mira/agency/index.html','Dedicated agency funnel: four entry segments, local brief and real demo links. General /mira/ landing retained; live intake remains closed.'),"
-        }
-      ]
-    },
-    {
-      "path": "project-bible/mira/README.md",
-      "before_sha256": "4e2111cbf6694283c6df3ba7770e00f03523769bc8ebd19fcb42b88a377282fa",
-      "sha256": "66d08858e34a29d305e755d0e45178956df47d52740732f20f1440b2581e15e3",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "- `data/phuket-top60-contact-routes-checked.csv` — TOP-60 contact-route QA and outreach qualification queue.\n",
-          "new": "- `data/phuket-top60-contact-routes-checked.csv` — TOP-60 contact-route QA and outreach qualification queue.\n\n## Agency acquisition landing — checkpoint 10\n\n[Dedicated agency funnel](https://wegc.fund/mira/agency/) → [marketplace demo](https://wegc.fund/mira/marketplace.html) → local three-question brief → owner/operator-approved pilot. The general `/mira/` page remains intact. No public intake, automatic admission or live registration is implied.\n\nSource behavior, campaign entry URLs, measurement boundaries and release checks: [agency-funnel.md](./product/agency-funnel.md).\n"
-        }
-      ]
-    },
-    {
-      "path": "project-bible/mira/08-decisions-log.md",
-      "before_sha256": "1590c4fa1645793f8a854d14c6dcc371b2ffd1c6bce25649456dcf366086e507",
-      "sha256": "2206260d5beb8a8b327d0e277a41f7cd514fdcde69b015e6fd1e6cccaf15360c",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "- IP / trademark / domain clearance бренда МИРА.\n",
-          "new": "- IP / trademark / domain clearance бренда МИРА.\n\n## 2026-09-16 — checkpoint 10 / dedicated agency funnel\n\n**Принято по запросу владельца:** отдельная страница привлечения агентств `/mira/agency/`, без замены общего лендинга и marketplace demo. Сценарий: оффер → модель и сохранение клиента → сегмент → Пхукет → демо → локальная квалификация → согласованный доступ.\n\n**Реализовано:** четыре сегментных входа и три вопроса без персональных данных. Ответы не отправляются и не сохраняются на сервере. Скачать бриф можно по явному действию пользователя. Бриф не является заявкой, квалификацией оператора или активацией.\n\n**Сохранено:** запрет внешнего outreach без отдельного разрешения; закрытый приём рабочих заявок; проектные правила регистрации и комиссии; отсутствие универсального тарифа и вымышленных показателей. Новая страница не снимает deployment/supply gates.\n"
-        }
-      ]
-    },
-    {
       "path": "project-bible/mira/WORK-STATUS.md",
-      "before_sha256": "6a9c8a65ade1dbdbe68dd4658e8961c13eb34608725439d8f2e4ef929bb0df18",
-      "sha256": "12bedbafdeafa34c188a65ee86988c5d253c868f79fd4ac4a6955b7da78125a8",
+      "before_sha256": "76bdd170e0597a6bade3efcd945ae74c525ed4e70493f0a62063685b988a84d7",
+      "sha256": "2b16b52fe97f016194f261ac2b7ddf6ddc36fdcb07aa780ac1da2f1e58d6205b",
       "codec": "utf8-edits-v1",
       "edits": [
         {
-          "old": "\nUpdated:2026-09-16 — checkpoint09. Execution continues; checkpoint is not launch completion.\n\n",
-          "new": "\nUpdated:2026-09-16 — checkpoint10: dedicated agency landing. Release verification pending; not marketplace pilot readiness.\n\n"
-        },
-        {
-          "old": "\n## Latest delivery\n\n",
-          "new": "\n## Latest delivery — CP10 agency funnel\n\nSeparate `/mira/agency/` page implements the requested acquisition flow and four agency-model entry routes. Three fixed-choice questions produce only a local plan/optional text brief; no personal-data input, external submit, analytics or server storage. Actual demo/kit/webinar/pilot links are used; working intake remains closed.\n\nLocal66 Node/66 Python tests and10 offline browser cases passed; layout checked at320/360/390/768/1024/1440. Incoming landing/demo/webinar links and canonical public_landing entry are updated without changing backend gates. See `product/agency-funnel.md` and `operations/checkpoint-10-agency-funnel.md`. Check Pages and the new static-release workflow before asserting live publication.\n\n## Previous delivery — CP09\n\n"
+          "old": "# MIRA WORK-STATUS",
+          "new": "# MIRA WORK-STATUS\n\n## CP11 — current design preview for owner review\n\nLatest owner priority is visual design for exhibition preparation. New additive `/mira/design/` landing and `/mira/marketplace-design.html` catalogue skin are implemented. Existing `/mira/agency/`, qualification logic, demo engine and backend gates are unchanged. Design is not yet owner-approved as the main public version.\n\nEditorial composition, existing image library, optional motion with pause/reduced-motion support, responsive catalogue and local briefing preserved. Five exact project-image associations; all45 demo records remain accessible. Hero/coast illustrations and archived project renders are not presented as current field evidence or inventory. Rights/final media approval remains open.\n\nLocal66 Node/76 Python tests and7 offline DOM case groups passed across320/360/390/600/768/1024/1440. These are not live-domain/CSP/backend tests. See `product/design-direction-11.md` and `operations/checkpoint-11-design.md`. Next: confirm this checkpoint CI/Pages, obtain visual approval, then move the approved design to primary routes only after review. No sending or intake enablement.\n\n## Previous source status (preserved)\n"
         }
       ]
     },
     {
       "path": "project-bible/mira/RESUME-STATE.md",
-      "before_sha256": "369746ab1730cd3ca47f6d67d42f9a1ac86e69581a5765f474902de938fba8bc",
-      "sha256": "5797ec606c762d00da5b7b028623a6a4449e41507fe141fae12ee9dcf1b21e55",
+      "before_sha256": "6b77c4e75758001582aee5f612b9d08abbc47b7b18a09afd3b3a1aa1d2791f69",
+      "sha256": "4e6463f6395bf587ae6c581b4d924107bfe7fe6f2b03d5492fdbfda4e3f02007",
       "codec": "utf8-edits-v1",
       "edits": [
         {
-          "old": "\nUpdated:2026-09-16 — CP09. Read mission12 → WORK-STATUS → this file → relevant source. Continue; this is a checkpoint, not mission completion.\n\n",
-          "new": "\nUpdated:2026-09-16 — CP10 agency funnel. Read mission12 → WORK-STATUS → this file → relevant source. Continue; this is a checkpoint, not mission completion.\n\n## Current owner task — CP10\n\nDedicated `/mira/agency/` implemented with four segmented entries, three-question local brief and real demo links. No new public intake or external sender. Local66Node/66Python and10 offline UI cases passed. Verify Pages/public-static release and literal integration persistence, then return the actual URL to the owner. Do not repeat historical CP04 recovery or restart naming. Static publication is not Worker deployment.\n\n"
+          "old": "# MIRA RESUME-STATE",
+          "new": "# MIRA RESUME-STATE\n\n## CP11 — resume design here\n\nOwner narrowed immediate work to a distinctive visual redesign. Preview implementation: `/mira/design/` plus `/mira/marketplace-design.html`. The original agency funnel and demo engine remain unchanged. Do not repeat data collection, contract retrieval or failed mail authorization as part of this design review.\n\nRead `product/design-direction-11.md` and `operations/checkpoint-11-design.md`; inspect new checkpoint CI/Pages. All transferred UTF-8 sources are hash-checked. Local66 Node/76 Python tests,7 offline case groups and7 viewport widths passed. Offline DOM rendering does not establish live CSP or backend behavior.\n\nNext: owner reviews desktop/mobile preview; refine visual details; approve final photography/rights and exhibition creative; only then adopt the preview at main routes. Keep operational deployment and commercial project gates closed until separately verified. No external sending authorized by this design request.\n\n## Previous resume state (preserved)\n"
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/README.md",
+      "before_sha256": "66d08858e34a29d305e755d0e45178956df47d52740732f20f1440b2581e15e3",
+      "sha256": "8e0fd5af7c9e28db4a1e92444f080f34d9ca6f03fcd4dcb14cf75a3d320b0b94",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "# МИРА — проектная библия",
+          "new": "# МИРА — проектная библия\n\n## Дизайн-превью CP11 — на рассмотрении владельца\n\nНовый визуальный вариант: `/mira/design/` и `/mira/marketplace-design.html`. Основные адреса не заменены. [Направление, референсы и границы медиа](./product/design-direction-11.md); [результат checkpoint](./operations/checkpoint-11-design.md). Это не подтверждение готовности коммерческого пилота.\n"
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/08-decisions-log.md",
+      "before_sha256": "2206260d5beb8a8b327d0e277a41f7cd514fdcde69b015e6fd1e6cccaf15360c",
+      "sha256": "8d2f197eae0e019fb2a41476954943231991e92428774061cb0df21f9d611260",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "# 08 — Журнал решений",
+          "new": "# 08 — Журнал решений\n\n## CP11 — визуальное направление на рассмотрении\n\n**Статус: предложено, ожидает owner review.** По запросу владельца подготовлен самостоятельный редакционный дизайн с изображениями и необязательным motion. Тексты/воронка и коммерческие условия не переутверждаются. Превью подготовлено для отдельного адреса, независимо от основного агентского лендинга; перенос на основной адрес требует визуального согласования. Новых прав на фотографии, статусов продаж или разрешений на отправку этим решением не создаётся. Подробности: `product/design-direction-11.md`.\n"
         }
       ]
     }
