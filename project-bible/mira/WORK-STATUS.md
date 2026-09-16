@@ -1,66 +1,39 @@
 # MIRA WORK-STATUS
 
-Updated: 2026-09-16 — checkpoint 06, acquisition enablement. Checkpoints are not launch completion.
+Updated: 2026-09-16 — checkpoint 07, canonical dashboard and private stage journal. Execution continues; this is not a launch-ready claim.
 
-## Canonical priorities
+## Priorities and controls
 
-**Marketplace MVP + agency acquisition machine + Phuket developer machine + launch dashboard.** Source mission: `12-astra-pro-launch-mission.md`. No naming restart. No external outreach/forms/messages without separate owner approval.
+**Marketplace MVP + agency acquisition machine + Phuket developer machine + launch dashboard.** Mission12 governs. No naming restart, external outreach, forms or messages without separate owner approval. Client relationships and brand stay with the agency; contractual developer protection is separately verified. Buyer payment support and agency commission are different flows. Public GitHub is not a private evidence vault.
 
-## Latest delivered source
+## Latest source checkpoint
 
-CP04 is durably saved: protected Worker/D1/Access API, tenant/broker isolation, receipt-safe intake/retry, operator qualification/onboarding, agency profile and evidence-aware project details. GitHub QA run **35080168741** succeeded. Backend deployment is still NOT performed; collection remains closed.
+CP07 replaces the stale source-only launch view with one canonical 19-capability product/research dashboard, still at `operations/LAUNCH-DASHBOARD.md` plus JSON/HTML. Implemented code, deployed behavior and commercial permission remain separate. No operational counts or conversions are invented.
 
-CP05 is durably saved in **73188799327e346cb5cc66ed90f9e70942930767**. GitHub QA run **35081830709** succeeded: 40 Node tests and 31 Python tests. Three explicit reviewed agency aliases restore all 50 inherited reviews to the 100-account cohort. Four malformed CSV rows are corrected; strict width/header/domain/date validation prevents silent column displacement. This is not 50 newly performed reviews and does not approve outreach.
+A private operator journal can overlay evidence-attested agency/developer stages outside the repository. It validates entity IDs, time zones, ordered transitions, explicit historical observations, holds/resumes and approval references for external-action observations. Historical contracts do not backfill fictional calls or demos. The private snapshot is append-only. Generated developer register edits now stop the build rather than disappear during regeneration; CI saves its hash manifest.
 
-CP06 adds the actual acquisition working set, rather than another strategy outline:
-- `sales/content/telegram-launch-30.md`: 30 complete copy-ready posts, all not approved/not published.
-- `sales/AGENCY-ACTIVATION-KIT.md`: eight-segment CTA matrix, qualification gates, exact demo routes, onboarding and five reactivation scenarios.
-- `sales/WEBINAR-LAUNCH-SEQUENCE.md`: programme, release prerequisites and contextual follow-ups.
-- `/mira/webinar.html`: programme page and real demo/starter-kit links; no fabricated date, sign-up form or attendance claim.
-- `tests/test_mira_acquisition.py`: four content/route/control tests; verify CP06 CI before treating these new checks as passed remotely.
+Local CP07 regression: **40 Node + 50 Python tests passed**. Four offline DOM checks covered desktop/mobile programme and dashboard with no overflow or network requests. These are not deployed E2E tests. Inspect CP07 remote CI before claiming its new code passed there. See `operations/OPERATOR-JOURNAL.md` and `checkpoint-07-launch-operations.md`.
 
-## Product and launch gates
+## Durable earlier work — do not repeat
 
-Public demo uses 45 source seed projects and local pseudonymous drafts. It does not create actual client registration. Existing starter kit: `/mira/phuket-starter-kit.html`. Protected pilot code exists; configured deployment, approved privacy/controller information, operational evidence vault and live authorization/receipt tests remain outstanding. Successful Pages publication never proves a deployed API.
+CP04 protected API/UI is saved and QA run35080168741 succeeded: Access identity and active memberships, tenant/broker isolation, durable receipts/retry, evidence-gated lead and commission events, operator qualification/onboarding, agency profile and project details. Worker deployment remains closed and not performed.
 
-Manual agency pilot and marketplace pilot are **not declared ready**: a specific current supply path and owner-approved outreach wave are still required. The public qualification brief is local preparation, not a server receipt.
+CP05 saved73188799327e346cb5cc66ed90f9e70942930767; QA35081830709 succeeded (40 Node/31 Python). Three exact agency aliases and four malformed CSV rows corrected; strict shape/domain/date validation prevents silent corruption. All50 inherited reviews now join Launch100; not50 new reviews.
 
-## Source and operations scopes
+CP06 source25bd6d074cfc0f5c21d076e5c976f3af6a1cffe6; QA35083105777 and Pages35083105611 succeeded. Complete Telegram30 copy, eight-segment CTA/qualification kit, actual-product demo/onboarding, five reactivation scenarios, webinar sequence and `/mira/webinar.html` programme page. No event date, registration or external release is fabricated. Assets remain not approved/not sent.
 
-Research backbone: 618 project rows, 40 developer/group/brand rows, 45 seed mappings, 66 generator family candidates and 507 family-unresolved rows. No legal seller or enabled commercial registration is inferred by the generated layer.
+## Research baseline
 
-Russia: 100 source-backed accounts, 50 inherited live reviews now joined, 13 inherited ready-for-owner-review records; the existing wave remains 12 accounts, not approved to send. Priority30 remains an inherited prioritization, not 30 confirmed current partnership owners. CIS88 plus21 unmerged and expansion QA32 are preserved behind Phuket readiness.
+Russia100 source-backed accounts;50 inherited reviews joined;13 inherited owner-review-ready records; existing wave12 unapproved. Priority30 and21 named-route signals are not30 verified partnership owners. Current decision-route refresh is in progress.
 
-The canonical dashboard is `operations/LAUNCH-DASHBOARD.md` with JSON/HTML alongside. Research counts and protected operational database counts are different scopes. Contacted, signed, activated, registered, booked and paid remain unknown without imported operational evidence.
+Phuket618 project rows;40 group/brand/counterparty rows;45 seed mappings;66 generator family candidates;507 family-unresolved rows;20 queued groups;8 P0 public-evidence groups. Generated legal-seller/registration-enabled fields are not promoted from brand evidence. CIS88+21 unmerged; expansion32 remains behind Phuket readiness.
 
-## Private supply review
+## Product and commercial gates
 
-Owner-held primary supply documents were found and reviewed outside the public repository. A confidential owner-only review and project-gate matrix were prepared. This is not a claim that documents do not exist, nor proof of a complete current registration path. Raw scans, clauses, commercial schedules and private contacts are not copied here. Current scope/validity, inventory, registration/protection, distribution permissions and real operational tests still require confirmation.
+Public demo uses45 source seeds and local pseudonymous drafts. Starter kit and programme page exist. Protected API code exists but correct Cloudflare/D1/Access configuration, approved privacy/controller information, private evidence storage and live authorization/receipt QA remain outstanding. Pages success does not deploy the Worker.
 
-## Continue next — do not repeat completed recovery
+Owner-held primary supply documents were found and privately reviewed. An owner-only memo and per-project gate matrix are outside GitHub; raw scans, clauses, commercial schedules and private contacts are not published. Current scope/validity, buyer seller, inventory, registration/protection, distribution rights and the live operational path still need confirmation. A found agreement alone does not enable a project.
 
-1. Check CP06 QA/Pages and the actual programme links.
-2. Preserve operator-owned evidence/stages across rebuilds; update the canonical dashboard to distinguish CP04 implemented code from deployment and from real business events.
-3. Refresh first-party decision routes and align personalized drafts with an explicit owner-review wave; no sending.
-4. Deepen Phuket public project/family evidence and prepare the controlled first-project gate from private sources without publishing their contents.
+## Next independent work
 
-Historical implementation and test details: `operations/checkpoint-03-protected-pilot.md`, `checkpoint-04-operational-experience.md`, `checkpoint-05-source-quality.md`, `checkpoint-06-acquisition-enablement.md`. The old compressed transport has been recovered; use readable source writes for further work.
-
-## Controls
-
-Agency retains client relationships and its brand; contractual developer protection is checked separately. Buyer payment support and commission are separate. Agreement/access/demo action does not equal activation. No invented prices, inventory, contacts, approvals or outcomes. Public GitHub is not a private evidence vault.
-
-
-<!-- MIRA-LAUNCH-AUTO:START -->
-## Generated source checkpoint
-
-Source commit: `25bd6d074cfc0f5c21d076e5c976f3af6a1cffe6`.
-
-Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
-
-Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
-
-Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
-
-Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
-<!-- MIRA-LAUNCH-AUTO:END -->
+Verify CP07 CI and persisted manifest; continue fresh decision-route coverage and wave-aligned personalized drafts; deepen Phuket official project/family evidence and P0 owner-review pack; close remaining protected developer/material catalogue gaps without enabling unconfigured collection. Maintain one dashboard and evidence-driven gates. No fake activations or production fixtures.

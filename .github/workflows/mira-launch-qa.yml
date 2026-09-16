@@ -44,6 +44,7 @@ jobs:
           python scripts/mira-build-demo.py
           python scripts/mira-launch-build.py
           node --test tests/mira-*.test.mjs
+          python -m unittest discover -s tests -p 'test_mira*.py' -v
       - name: Save bounded generated checkpoint
         run: |
           git config user.name 'github-actions[bot]'
@@ -56,6 +57,7 @@ jobs:
             project-bible/mira/operations/launch-dashboard.json \
             project-bible/mira/operations/launch-dashboard.html \
             project-bible/mira/operations/LAUNCH-DASHBOARD.md \
+            project-bible/mira/operations/launch-build-manifest.json \
             project-bible/mira/WORK-STATUS.md project-bible/mira/RESUME-STATE.md
           if ! git diff --cached --quiet; then
             git commit -m 'chore(mira): save reviewed source and launch registers [skip ci]'
@@ -68,6 +70,7 @@ jobs:
           path: |
             project-bible/mira/operations/launch-dashboard.json
             project-bible/mira/operations/LAUNCH-DASHBOARD.md
+            project-bible/mira/operations/launch-build-manifest.json
             project-bible/mira/data/phuket-project-master.csv
             project-bible/mira/sales/russia-launch-100-quality.csv
           retention-days: 14
