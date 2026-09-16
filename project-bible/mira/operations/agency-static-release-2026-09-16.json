@@ -1,0 +1,56 @@
+{
+  "source_commit": "670b72706681bfe8a860cc1014c4694a46dfb887",
+  "started_at": "2026-09-16T13:08:54.518083+00:00",
+  "outreach_sent": false,
+  "worker_deployed": false,
+  "browser": {
+    "result": "passed",
+    "actual_csp": true,
+    "widths": [
+      320,
+      360,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "external_requests": [],
+    "write_requests": [],
+    "js_errors": [],
+    "scope": "local real-browser navigation; not Cloudflare pilot E2E"
+  },
+  "public_files": [
+    {
+      "url": "https://wegc.fund/mira/agency/",
+      "status": 200,
+      "sha256": "e58ec430059775ad1a63af4748ad2ece0a04895e7512660485017fac6b3fe0bc",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wegc.fund/mira/agency/agency.css",
+      "status": 200,
+      "sha256": "b0219110f42cc91aa849765356fc368cb1ba50463e96344c29f132c7002f72e4",
+      "mime": "text/css"
+    },
+    {
+      "url": "https://wegc.fund/mira/agency/agency.mjs",
+      "status": 200,
+      "sha256": "ef764a5e559d4623823cac7b7d02dcd7c6639d0cd99f56b17a6e2c86f2369055",
+      "mime": "text/javascript"
+    },
+    {
+      "url": "https://wegc.fund/mira/agency/qualification.mjs",
+      "status": 200,
+      "sha256": "697bc67c4518aa7a6ccde3afd14b8bc240b43955c5da353bca3c46fe71707890",
+      "mime": "text/javascript"
+    }
+  ],
+  "result": "passed",
+  "finished_at": "2026-09-16T13:08:59.861291+00:00",
+  "github_qa_run": 35099700497,
+  "github_pages_run": 35099700451,
+  "github_release_check_run": 35099950343,
+  "github_artifact_id": 10447822703,
+  "integration_snapshot": "56846b769c194d1ab64b7b07a43122675317a79c",
+  "note": "First successful standalone agency landing release. The follow-up publication uses the integrated snapshot and extends the same read-only hash check to the general landing, marketplace and webinar pages. This report is not Cloudflare pilot E2E evidence."
+}

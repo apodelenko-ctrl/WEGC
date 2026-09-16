@@ -15,7 +15,10 @@ PATHS = {
     '/mira/agency/': 'mira/agency/index.html',
     '/mira/agency/agency.css': 'mira/agency/agency.css',
     '/mira/agency/agency.mjs': 'mira/agency/agency.mjs',
-    '/mira/agency/qualification.mjs': 'mira/agency/qualification.mjs'
+    '/mira/agency/qualification.mjs': 'mira/agency/qualification.mjs',
+    '/mira/': 'mira/index.html',
+    '/mira/marketplace.html': 'mira/marketplace.html',
+    '/mira/webinar.html': 'mira/webinar.html'
 }
 
 def sha(data):
@@ -106,7 +109,7 @@ def public_check():
                 with urlopen(req, timeout=20) as response:
                     data = response.read(2_000_000)
                     assert response.status==200
-                    assert response.url.startswith('https://wegc.fund/mira/agency/'), 'unexpected redirect'
+                    assert response.url == url, 'unexpected redirect'
                     mime = response.headers.get_content_type()
                 assert sha(data)==expected, 'published bytes do not match checked-out source'
                 if local_path.endswith('.mjs'):

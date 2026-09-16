@@ -21,3 +21,13 @@ Offline screenshots are layout evidence, not a production/E2E assertion. A separ
 The page is acquisition preparation, not a working intake system. Access/D1/R2 deployment, approved privacy/controller data, a current project registration path and separate outreach approval remain open. No external outreach, client registration or payment execution was performed.
 
 Implementation and campaign routes: `../product/agency-funnel.md`. The final publication result is recorded below after verification; absence of it must not be interpreted as success.
+
+## Confirmed first publication and integration
+
+Source commit `670b72706681bfe8a860cc1014c4694a46dfb887`. QA run35099700497 passed and saved all9 literal integration edits in `56846b769c194d1ab64b7b07a43122675317a79c`; the downloaded source artifact was compared byte-for-byte with the locally checked page and integration files. Pages run35099700451 succeeded.
+
+Static-release run35099950343 passed at 2026-09-16T13:08:59Z. The public agency HTML, CSS and both JS modules returned200 and matched SHA256 of the checked source. Real Chromium navigation on localhost used the actual CSP and modules, completed the local brief/download/demo path, and checked320/360/390/768/1024/1440 layouts plus no-JS behavior. No non-GET or external browser request occurred. These tests do not establish a deployed Cloudflare backend.
+
+Evidence: `agency-static-release-2026-09-16.json`; full screenshots and checks in GitHub Actions artifact10447822703 (`mira-agency-release`).
+
+A follow-up ordinary commit publishes the already-tested integrated parent pages (general landing, marketplace and webinar). The release checker additionally compares their public bytes with the checkout; check its latest run for that later deployment. No further modification to the agency page itself is involved.

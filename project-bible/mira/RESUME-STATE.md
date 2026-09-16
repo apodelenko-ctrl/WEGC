@@ -4,7 +4,7 @@ Updated:2026-09-16 — CP10 agency funnel. Read mission12 → WORK-STATUS → th
 
 ## Current owner task — CP10
 
-Dedicated `/mira/agency/` implemented with four segmented entries, three-question local brief and real demo links. No new public intake or external sender. Local66Node/66Python and10 offline UI cases passed. Verify Pages/public-static release and literal integration persistence, then return the actual URL to the owner. Do not repeat historical CP04 recovery or restart naming. Static publication is not Worker deployment.
+Dedicated `/mira/agency/` implemented with four segmented entries, three-question local brief and real demo links. No new public intake or external sender. Local66Node/66Python and10 offline UI cases passed. Standalone page publication verified: QA35099700497 / Pages35099700451 / static-release check35099950343 passed; four public files matched source SHA256 and actual-CSP browser checks passed. The9 integration edits persisted in56846b769c194d1ab64b7b07a43122675317a79c. Follow-up publication carries integrated incoming links; the release checker now covers those3 parent pages too. Before final handoff inspect the latest Pages/release run, then give the owner https://wegc.fund/mira/agency/ and the unchanged marketplace demo URL. Do not repeat historical CP04 recovery or restart naming. Static publication is not Worker deployment.
 
 ## Already done
 
@@ -16,7 +16,7 @@ CP09 protected read-only library with scoped developer/project views, immutable 
 
 ## Continue exactly here
 
-1. Inspect CP09 QA/Pages and confirm the7 hash-pinned literal integration edits were committed as ordinary source. Newsourcefilesareplaintext; existingapplier supports boundedliteralold/newedits, not another manually copied compressed payload. Compare artifact hashes if needed.
+1. CP09 and CP10 source persistence are verified. No historical recovery is needed. For the latest public release, inspect the MIRA agency landing release check artifact; ordinary source and public bytes are checked without external submissions.
 2. Extend Phuket first-party project-to-family evidence beyond inherited seed/candidate mapping. Preserve disagreements, project brands, family/operator/legal seller distinctions. No current inventory or contract claims from branding.
 3. Prepare P0 developer owner-review wave with individual evidence gaps and a minimum current project gate. Read existingpack/queuebeforeextending. No sending, form submission or live registration test without separate approvals.
 4. Continue strong agencydecisionroutecoverage, preserving10currentdraftsand6holds; sharedofficesnotdirectcontacts.25–30goalremainsopen.
