@@ -68,3 +68,12 @@ P0 — Russia agency data-quality pipeline and Phuket developer/entity/contact v
 - Remote live-QA coverage is now 50 rows across shards 001–002; all 50 are held in `needs_manual` under current network conditions.
 - No row is `contact_verified`; timeouts are technical blockers, not proof of inactive organizations.
 - Next exact batch: `MIRA-RU-LIVE-QA-003`, source rows 51–75. Do not reprocess rows 1–50.
+
+
+## 2026-09-16T05:41Z — durable Russia live-QA shard 003
+
+- Published and re-read `data/work-russia-live-qa-003.csv`: 25 rows covering mega discovery rows 51–75.
+- All rows remain `needs_manual` under current runtime HTTP timeout conditions; no row was promoted to `contact_verified` and no outreach was sent.
+- Published shard commit: `545deafd93cc7d8f9879f50d8e6d45167fb1d728`; file SHA after re-read: `5523c32971be74916932b63ba6178defce029a4d`.
+- Durable live-QA coverage is now source rows 1–75 in three non-overlapping shards.
+- Next exact batch: mega discovery rows 76–100.
