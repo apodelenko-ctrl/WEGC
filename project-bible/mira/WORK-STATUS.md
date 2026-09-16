@@ -158,3 +158,11 @@ Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verifi
 - Removed one unconfirmed GEOS domain from the local canonical files after QA because the available evidence was directory profile only; it remains eligible for a separate candidate register after domain confirmation.
 - Local canonical CIS pool is 106 rows; remote published increment files CIS-05 and CIS-06 now preserve 21 new source-backed rows for sequential merge/deduplication.
 - No external outreach sent. Direct agency relations contacts and foreign-market focus remain unknown unless explicitly documented.
+
+
+## 2026-09-16T05:30Z — durable Russia live-QA shard 001
+
+- Recreated and published `data/work-russia-live-qa-001.csv` for mega discovery rows 1–25.
+- Remote verification: 25 rows present in `main`; all 25 remain `needs_manual` because the runtime received HTTP 000/timeouts. No organization was labelled dead or contact-verified.
+- Published shard commit: `c1cfe4a03c315ac6afad4cb0c30c5692c3a7a0ad`.
+- No outreach sent. Next exact batch: mega discovery rows 26–50, separate append-only file.
