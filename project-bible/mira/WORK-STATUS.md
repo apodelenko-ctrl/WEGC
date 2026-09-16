@@ -166,3 +166,12 @@ Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verifi
 - Remote verification: 25 rows present in `main`; all 25 remain `needs_manual` because the runtime received HTTP 000/timeouts. No organization was labelled dead or contact-verified.
 - Published shard commit: `c1cfe4a03c315ac6afad4cb0c30c5692c3a7a0ad`.
 - No outreach sent. Next exact batch: mega discovery rows 26–50, separate append-only file.
+
+
+## 2026-09-16T05:35Z — durable Russia live-QA shard 002
+
+- Published and re-read `data/work-russia-live-qa-002.csv` for mega discovery rows 26–50.
+- Remote verification: 25 rows present; all remain `needs_manual` under the current runtime's HTTP timeout conditions. No row was promoted to `contact_verified`.
+- Published shard commit: `b98fc353d4a863969ab3cac29acc9887036788bd`; content SHA after re-read: `84fb3e37f1d47ae0d1101bd686ed3afaa62bf319`.
+- Total remote live-QA coverage: rows 1–50, two non-overlapping shards.
+- No outreach sent. Next exact batch: mega discovery rows 51–75.
