@@ -31,3 +31,18 @@ Owner-held primary supply scans were found and visually reviewed. Confidential m
 Worker still not deployed: actual Cloudflare account/zone, new MIRA D1, Access team/AUD/verified operator, privacy/controller approval, protected evidence storage and live scope/receipt QA required. Do not reuse WEGC relay/database. Existing connection request should not be repeated while independent work remains.
 
 No external messages/forms/outreach without separate approval. No naming restart, invented rates/inventory, production test fixtures or fake activation. Russia100/50 inherited/priority30/wave12 unapproved;13 inherited owner-review-ready records. Phuket618/40groups/45seed/20queue/8P0public;507 family-unresolved. CIS88+21 unmerged and expansion32 held behind Phuket readiness. Agency client/brand retained; payment support and commission separated.
+
+
+<!-- MIRA-LAUNCH-AUTO:START -->
+## Generated source checkpoint
+
+Source commit: `c9ae6bded9d6805a637c59a585dfc579a0cab644`.
+
+Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
+
+Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
+
+Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
+
+Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
+<!-- MIRA-LAUNCH-AUTO:END -->

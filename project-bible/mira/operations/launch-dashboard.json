@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "source_commit": "25bd6d074cfc0f5c21d076e5c976f3af6a1cffe6",
+  "schema_version": 2,
+  "source_commit": "c9ae6bded9d6805a637c59a585dfc579a0cab644",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
@@ -15,7 +15,7 @@
   },
   "scope": "Repository evidence only; not a live CRM and not a claim that unobserved activity is zero.",
   "readiness": {
-    "mvp0": "demo_code_available_deployment_qa_separate",
+    "mvp0": "demo_source_available_static_deployment_separate",
     "marketing_pilot": false,
     "marketplace_pilot": false,
     "commercially_repeatable": false
@@ -116,12 +116,171 @@
   "blockers": [
     "Owner approval required before any external outreach or forms.",
     "Secure backend deployment and live receipt/access QA remain unverified.",
-    "No project-specific complete current legal/lead/inventory gate is imported.",
-    "Real operating events have not been imported; conversion rates cannot be calculated."
+    "Real operating events have not been imported; conversion rates cannot be calculated.",
+    "Primary private supply documents have been reviewed separately; a complete current seller/inventory/registration gate is not imported or enabled.",
+    "Protected project-material delivery is still partial.",
+    "Owner-held operator events must remain outside this public repository."
   ],
   "controls": {
     "outreach_automated": false,
     "financial_defaults": false,
     "real_client_data_in_repository": false
-  }
+  },
+  "product": [
+    {
+      "capability": "public_landing",
+      "implementation": "implemented_code",
+      "source_path": "mira/index.html",
+      "source_sha256": "71445d8ae7e6e79f656b465fa3a6be311006c1ee5e18dd72a3428daa89c4d6b0",
+      "deployment": "not_verified",
+      "note": "Accepted positioning and actual demo/closed-pilot entry."
+    },
+    {
+      "capability": "application",
+      "implementation": "implemented_code_collection_closed",
+      "source_path": "cloudflare-worker/mira/worker.mjs",
+      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "deployment": "not_verified",
+      "note": "Protected durable intake exists; public brief remains local."
+    },
+    {
+      "capability": "authentication",
+      "implementation": "implemented_code_not_deployed",
+      "source_path": "cloudflare-worker/mira/auth.mjs",
+      "source_sha256": "0d68a772dfa7acfe2bed69ba90bf4bbeb3f88f3a8cf2a71d064e30ef631890cd",
+      "deployment": "not_verified",
+      "note": "Verified Access identity and server-side membership; no guessed login."
+    },
+    {
+      "capability": "agency_profile",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/experience.mjs",
+      "source_sha256": "ca03219c46d45b7cf84325f00f7af037811cc4bb8847f71f90de7aa9cd06aa4e",
+      "deployment": "not_verified",
+      "note": "Scoped profile and assigned markets."
+    },
+    {
+      "capability": "markets_catalogue",
+      "implementation": "implemented_code",
+      "source_path": "mira/marketplace.mjs",
+      "source_sha256": "d6ab32dedf1e039602479ba5964c04afd1ed19dc4753b5134b91dfed46c3e8e0",
+      "deployment": "not_verified",
+      "note": "Demo market selection and protected assigned-market metadata."
+    },
+    {
+      "capability": "developer_catalogue",
+      "implementation": "partial",
+      "source_path": "mira/marketplace.mjs",
+      "source_sha256": "d6ab32dedf1e039602479ba5964c04afd1ed19dc4753b5134b91dfed46c3e8e0",
+      "deployment": "not_verified",
+      "note": "Group filters/metadata, not a complete standalone developer cabinet."
+    },
+    {
+      "capability": "project_catalogue",
+      "implementation": "implemented_code",
+      "source_path": "mira/marketplace.mjs",
+      "source_sha256": "d6ab32dedf1e039602479ba5964c04afd1ed19dc4753b5134b91dfed46c3e8e0",
+      "deployment": "not_verified",
+      "note": "Source seed demo and assigned protected project catalogue."
+    },
+    {
+      "capability": "filters",
+      "implementation": "source_limited",
+      "source_path": "mira/marketplace.mjs",
+      "source_sha256": "d6ab32dedf1e039602479ba5964c04afd1ed19dc4753b5134b91dfed46c3e8e0",
+      "deployment": "not_verified",
+      "note": "Only evidenced fields; no invented budget, delivery or payment-plan filters."
+    },
+    {
+      "capability": "project_detail",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/experience.mjs",
+      "source_sha256": "ca03219c46d45b7cf84325f00f7af037811cc4bb8847f71f90de7aa9cd06aa4e",
+      "deployment": "not_verified",
+      "note": "Current evidence checks and explicit readiness limits."
+    },
+    {
+      "capability": "source_metadata",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/experience.mjs",
+      "source_sha256": "ca03219c46d45b7cf84325f00f7af037811cc4bb8847f71f90de7aa9cd06aa4e",
+      "deployment": "not_verified",
+      "note": "Reviewed/expiry metadata; private vault paths not disclosed to agency."
+    },
+    {
+      "capability": "client_registration",
+      "implementation": "implemented_code_supply_gate_closed",
+      "source_path": "cloudflare-worker/mira/worker.mjs",
+      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "deployment": "not_verified",
+      "note": "Intake, developer acknowledgement and protection are distinct."
+    },
+    {
+      "capability": "lead_status",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/worker.mjs",
+      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "deployment": "not_verified",
+      "note": "Scoped history and evidence-gated transitions."
+    },
+    {
+      "capability": "lead_protection",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/rules.mjs",
+      "source_sha256": "200ec18e447926b3cd6659eacb9f26990914d35a8b8c2bdfe0c315b238596acb",
+      "deployment": "not_verified",
+      "note": "No unconditional protection; project-specific evidence required."
+    },
+    {
+      "capability": "deal_status",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/worker.mjs",
+      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "deployment": "not_verified",
+      "note": "Audited evidence-backed stage sequence."
+    },
+    {
+      "capability": "commission_status",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/worker.mjs",
+      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "deployment": "not_verified",
+      "note": "Exact-evidence decimal records; no default rate or financial estimate."
+    },
+    {
+      "capability": "payment_request",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/worker.mjs",
+      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "deployment": "not_verified",
+      "note": "Separate package-review request, not execution or quote."
+    },
+    {
+      "capability": "documents_materials",
+      "implementation": "partial",
+      "source_path": "mira/phuket-starter-kit.html",
+      "source_sha256": "48c18b191def706aa41c15aefd9372f7af9600e1c677c6a05487aa6a6cfac4aa",
+      "deployment": "not_verified",
+      "note": "Public starter kit exists; protected project-material delivery remains incomplete."
+    },
+    {
+      "capability": "onboarding",
+      "implementation": "implemented_code_and_runbook",
+      "source_path": "project-bible/mira/sales/AGENCY-ACTIVATION-KIT.md",
+      "source_sha256": "c053241eb9f8629502c2e552760329f3d6968a8e66a9c932fe1faa9c0a4c6efd",
+      "deployment": "not_verified",
+      "note": "Real-product demo/onboarding; contract and access are not activation."
+    },
+    {
+      "capability": "admin_workflow",
+      "implementation": "implemented_code_partly_manual",
+      "source_path": "cloudflare-worker/mira/worker.mjs",
+      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "deployment": "not_verified",
+      "note": "Operator application queue plus protected administration API."
+    }
+  ],
+  "operator_stage_observations": [],
+  "operator_state": "not_imported",
+  "build_command": "python scripts/mira-launch-build.py"
 }

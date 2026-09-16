@@ -37,3 +37,18 @@ Owner-held primary supply documents were found and privately reviewed. An owner-
 ## Next independent work
 
 Verify CP07 CI and persisted manifest; continue fresh decision-route coverage and wave-aligned personalized drafts; deepen Phuket official project/family evidence and P0 owner-review pack; close remaining protected developer/material catalogue gaps without enabling unconfigured collection. Maintain one dashboard and evidence-driven gates. No fake activations or production fixtures.
+
+
+<!-- MIRA-LAUNCH-AUTO:START -->
+## Generated source checkpoint
+
+Source commit: `c9ae6bded9d6805a637c59a585dfc579a0cab644`.
+
+Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
+
+Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
+
+Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
+
+Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
+<!-- MIRA-LAUNCH-AUTO:END -->
