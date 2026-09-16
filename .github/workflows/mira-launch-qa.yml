@@ -86,7 +86,7 @@ jobs:
               'snapshot_head_sha': git('rev-parse', 'HEAD'),
               'working_tree': git('status', '--porcelain'),
               'run_id': os.environ['GITHUB_RUN_ID'],
-              'scope': 'public repository MIRA source files only; not a database or private evidence backup',
+              'scope': 'public repository MIRA sources and selected public website images; not a database or private evidence backup',
               'outreach_authorized': False
           }, ensure_ascii=False, indent=2) + '\n')
           PY
@@ -103,5 +103,8 @@ jobs:
             tests/*mira*
             project-bible/mira/
             ru/wegc-catalog-data.js
+            images/hero/
+            images/*.jpg
+            images/*.webp
           retention-days: 14
           if-no-files-found: error
