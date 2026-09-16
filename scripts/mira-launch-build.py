@@ -14,6 +14,7 @@ def load(name,filename):
 
 _source=load('mira_launch_source','mira-launch-source.py')
 _ops=load('mira_launch_operations','mira-launch-operations.py')
+_review=load('mira_acquisition_review','mira-acquisition-review.py')
 
 def __getattr__(name):
     return getattr(_source,name)
@@ -21,7 +22,7 @@ def __getattr__(name):
 def build(root,source_commit):
     root=Path(root)
     _ops.protect_generated_register(root)
-    return _ops.augment_public(root,_source.build(root,source_commit))
+    return _ops.augment_public(root,_review.augment(root,_source.build(root,source_commit)))
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
