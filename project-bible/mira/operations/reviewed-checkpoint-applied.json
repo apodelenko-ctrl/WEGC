@@ -1,35 +1,43 @@
 {
-  "id": "checkpoint-09-protected-materials",
-  "payload_sha256": "05081c84f81392fca504ec73e5451f2c10bbefdd93b34486f91c6e54e8a0f055",
-  "source_ref": "74f72677bbff1ae5eb52da87dfc98acfc88d62cb",
+  "id": "checkpoint-10-agency-funnel",
+  "payload_sha256": "8943f4f7383414211c310bf3a9ce5b772f7e85b081d71b412ac4aa7a430b6187",
+  "source_ref": "7a248e998795aa15c90a43de06eb2595f7a5cce1",
   "files": [
     {
-      "path": "cloudflare-worker/mira/worker.mjs",
-      "sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8"
+      "path": "mira/index.html",
+      "sha256": "a28911cbe74a078a5c7f289939bac3c24638419cf47adda6415c7ade00a939b0"
     },
     {
-      "path": "cloudflare-worker/mira/rules.mjs",
-      "sha256": "e2acb8658d9f39f29483b94845d887f07bdf3d4361d913c8f25907dc564b0da0"
+      "path": "mira/marketplace.html",
+      "sha256": "ae7733999925f1a7d4d51f0f261ac4a8039e78ee682cc98f7605ce8d30bf23c6"
     },
     {
-      "path": "cloudflare-worker/mira/experience.mjs",
-      "sha256": "18577134604bd29470df97b0137bdaa9ee2fd2b1ced18bbd2f80b0ea0aea6dac"
+      "path": "mira/webinar.html",
+      "sha256": "4362b3bb22d216d5bef6b935bba2b090224505e9145e751cb0061bb1c24fb2b6"
     },
     {
-      "path": "cloudflare-worker/mira/wrangler.example.toml",
-      "sha256": "ceb3e66530965422f4cf34028ceefc67ea7d348e5c6ebe9ee28ee69c83380666"
-    },
-    {
-      "path": "cloudflare-worker/mira/README.md",
-      "sha256": "8d1d4fd6d1ea97cebc678a108d36f8cd402259b9e02ac9bb30b735383810c798"
-    },
-    {
-      "path": "mira/pilot.html",
-      "sha256": "a2b87eac7875219483ef446c05257916d1ec9dd052800b7e811b2f1f889c6232"
+      "path": "project-bible/mira/sales/AGENCY-ACTIVATION-KIT.md",
+      "sha256": "d71d4f2ed762942bea4b366c6fd1a3630f4f666fec935ac83932c501c8faf0bb"
     },
     {
       "path": "scripts/mira-launch-operations.py",
-      "sha256": "cb2e2fe6561d272f5a401e15bc9b5946bf1fe6a38b823fcdebe603ee86479a27"
+      "sha256": "41dcf90fb8630bdb4abb7e2665f9dbe5bed1f4ca37ea744b00432a0fca739f9b"
+    },
+    {
+      "path": "project-bible/mira/README.md",
+      "sha256": "66d08858e34a29d305e755d0e45178956df47d52740732f20f1440b2581e15e3"
+    },
+    {
+      "path": "project-bible/mira/08-decisions-log.md",
+      "sha256": "2206260d5beb8a8b327d0e277a41f7cd514fdcde69b015e6fd1e6cccaf15360c"
+    },
+    {
+      "path": "project-bible/mira/WORK-STATUS.md",
+      "sha256": "12bedbafdeafa34c188a65ee86988c5d253c868f79fd4ac4a6955b7da78125a8"
+    },
+    {
+      "path": "project-bible/mira/RESUME-STATE.md",
+      "sha256": "5797ec606c762d00da5b7b028623a6a4449e41507fe141fae12ee9dcf1b21e55"
     }
   ]
 }

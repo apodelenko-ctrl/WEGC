@@ -22,7 +22,7 @@ EXTERNAL = {'contacted','intro','terms_requested','lead_registration_tested','cl
 FIELDS = {'id','entity_type','entity_id','stage','occurred_at','operator_ref','evidence_ref','previous_event_id','mode','next_action','approval_ref'}
 REQUIRED = FIELDS - {'approval_ref'}
 PRODUCT = [
- ('public_landing','implemented_code','mira/index.html','Accepted positioning and actual demo/closed-pilot entry.'),
+ ('public_landing','implemented_code','mira/agency/index.html','Dedicated agency funnel: four entry segments, local brief and real demo links. General /mira/ landing retained; live intake remains closed.'),
  ('application','implemented_code_collection_closed','cloudflare-worker/mira/worker.mjs','Protected durable intake exists; public brief remains local.'),
  ('authentication','implemented_code_not_deployed','cloudflare-worker/mira/auth.mjs','Verified Access identity and server-side membership; no guessed login.'),
  ('agency_profile','implemented_code','cloudflare-worker/mira/experience.mjs','Scoped profile and assigned markets.'),

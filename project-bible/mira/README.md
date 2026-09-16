@@ -156,3 +156,9 @@
 
 - `data/phuket-top20-contact-routes-checked.csv` — TOP-20 contact-route QA with agency/sales evidence and unknown-field discipline.
 - `data/phuket-top60-contact-routes-checked.csv` — TOP-60 contact-route QA and outreach qualification queue.
+
+## Agency acquisition landing — checkpoint 10
+
+[Dedicated agency funnel](https://wegc.fund/mira/agency/) → [marketplace demo](https://wegc.fund/mira/marketplace.html) → local three-question brief → owner/operator-approved pilot. The general `/mira/` page remains intact. No public intake, automatic admission or live registration is implied.
+
+Source behavior, campaign entry URLs, measurement boundaries and release checks: [agency-funnel.md](./product/agency-funnel.md).

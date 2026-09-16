@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "source_commit": "8408d35e5e9ad573571c41f928fd28f87ed4b76a",
+  "source_commit": "670b72706681bfe8a860cc1014c4694a46dfb887",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
@@ -156,10 +156,10 @@
     {
       "capability": "public_landing",
       "implementation": "implemented_code",
-      "source_path": "mira/index.html",
-      "source_sha256": "71445d8ae7e6e79f656b465fa3a6be311006c1ee5e18dd72a3428daa89c4d6b0",
+      "source_path": "mira/agency/index.html",
+      "source_sha256": "e58ec430059775ad1a63af4748ad2ece0a04895e7512660485017fac6b3fe0bc",
       "deployment": "not_verified",
-      "note": "Accepted positioning and actual demo/closed-pilot entry."
+      "note": "Dedicated agency funnel: four entry segments, local brief and real demo links. General /mira/ landing retained; live intake remains closed."
     },
     {
       "capability": "application",
@@ -293,7 +293,7 @@
       "capability": "onboarding",
       "implementation": "implemented_code_and_runbook",
       "source_path": "project-bible/mira/sales/AGENCY-ACTIVATION-KIT.md",
-      "source_sha256": "c053241eb9f8629502c2e552760329f3d6968a8e66a9c932fe1faa9c0a4c6efd",
+      "source_sha256": "d71d4f2ed762942bea4b366c6fd1a3630f4f666fec935ac83932c501c8faf0bb",
       "deployment": "not_verified",
       "note": "Real-product demo/onboarding; contract and access are not activation."
     },

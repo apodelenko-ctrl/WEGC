@@ -1,6 +1,10 @@
 # MIRA RESUME-STATE
 
-Updated:2026-09-16 — CP09. Read mission12 → WORK-STATUS → this file → relevant source. Continue; this is a checkpoint, not mission completion.
+Updated:2026-09-16 — CP10 agency funnel. Read mission12 → WORK-STATUS → this file → relevant source. Continue; this is a checkpoint, not mission completion.
+
+## Current owner task — CP10
+
+Dedicated `/mira/agency/` implemented with four segmented entries, three-question local brief and real demo links. No new public intake or external sender. Local66Node/66Python and10 offline UI cases passed. Verify Pages/public-static release and literal integration persistence, then return the actual URL to the owner. Do not repeat historical CP04 recovery or restart naming. Static publication is not Worker deployment.
 
 ## Already done
 
@@ -32,7 +36,7 @@ No externaloutreach/forms/messages without separateapproval. No namingrestart/in
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `8408d35e5e9ad573571c41f928fd28f87ed4b76a`.
+Source commit: `670b72706681bfe8a860cc1014c4694a46dfb887`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 

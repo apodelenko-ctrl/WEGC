@@ -1,12 +1,18 @@
 # MIRA WORK-STATUS
 
-Updated:2026-09-16 — checkpoint09. Execution continues; checkpoint is not launch completion.
+Updated:2026-09-16 — checkpoint10: dedicated agency landing. Release verification pending; not marketplace pilot readiness.
 
 ## Priorities and controls
 
 **Marketplace MVP + agency acquisition machine + Phuket developer machine + launch dashboard.** Mission12 governs. No external outreach/forms/messages without separate owner approval; no naming restart. Agency client/brand retained, developer lead protection separately evidenced. Buyer payment support and commission separated. Public GitHub is not a private evidence vault.
 
-## Latest delivery
+## Latest delivery — CP10 agency funnel
+
+Separate `/mira/agency/` page implements the requested acquisition flow and four agency-model entry routes. Three fixed-choice questions produce only a local plan/optional text brief; no personal-data input, external submit, analytics or server storage. Actual demo/kit/webinar/pilot links are used; working intake remains closed.
+
+Local66 Node/66 Python tests and10 offline browser cases passed; layout checked at320/360/390/768/1024/1440. Incoming landing/demo/webinar links and canonical public_landing entry are updated without changing backend gates. See `product/agency-funnel.md` and `operations/checkpoint-10-agency-funnel.md`. Check Pages and the new static-release workflow before asserting live publication.
+
+## Previous delivery — CP09
 
 CP09 adds the read-only protected developer/material library, assigned family/project views and per-file rights/release-gated private R2 delivery. Immutable asset versions, hash/size/MIME checks, post-retrieval authorization recheck, scoped listings, revocation and access events are implemented. No uploads, arbitrary URL fetching, public storage URLs or client sharing. Delivery remains disabled; new private bucket, reviewed asset rights/content and live Access/Worker QA remain required.
 
@@ -38,7 +44,7 @@ Verify CP09 CI/source persistence; strengthen Phuket public project-family mappi
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `8408d35e5e9ad573571c41f928fd28f87ed4b76a`.
+Source commit: `670b72706681bfe8a860cc1014c4694a46dfb887`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
