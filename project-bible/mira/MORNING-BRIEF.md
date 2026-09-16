@@ -107,3 +107,10 @@
 - Telegram plan expanded from 30 to 90 days as three cycles based on the approved 30-day themes. See `research/telegram-content-calendar-90d.md`.
 - Naming finalists deep-screened against public evidence. Estara, Domera and Terrava show direct public real-estate/proptech usage; Brivana and Novera show company/trademark collision signals. None is legally cleared. See `research/naming-finalists-deep-screen.md`.
 - No external outreach was sent. Remaining gates are legal trademark clearance, manual contact verification and payment route review per transaction.
+
+
+## Durable continuation — 2026-09-16T05:30Z
+
+- A 25-row Russia live-QA shard was published to GitHub and verified by re-reading `main`.
+- All 25 rows are held in `needs_manual` because this runtime received timeouts; no false inactive-company conclusions were made.
+- The next exact batch is rows 26–50 from the current mega discovery file. Outreach remains disabled.
