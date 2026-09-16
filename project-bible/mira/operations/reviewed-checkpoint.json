@@ -1,54 +1,58 @@
 {
   "version": 1,
   "kind": "reviewed-public-source",
-  "id": "checkpoint-11-design-preview",
-  "source_ref": "2ec9018138b44f239744b8e192210f02235b57b7",
+  "id": "checkpoint-11-preview-journey-final",
+  "source_ref": "188ec4204ef3c7913f33e0d0ceabf0e5643df2a8",
   "files": [
     {
-      "path": "project-bible/mira/WORK-STATUS.md",
-      "before_sha256": "76bdd170e0597a6bade3efcd945ae74c525ed4e70493f0a62063685b988a84d7",
-      "sha256": "2b16b52fe97f016194f261ac2b7ddf6ddc36fdcb07aa780ac1da2f1e58d6205b",
+      "path": "mira/design/motion.mjs",
+      "before_sha256": "f8f44fd6d174f193fddd3c3b6f420dc6384ef4f3e2df2e09663400277532acfe",
+      "sha256": "2ba949ded666d826f7548fbca43fe5491821332caff9912f055d5e4879c5d751",
       "codec": "utf8-edits-v1",
       "edits": [
         {
-          "old": "# MIRA WORK-STATUS",
-          "new": "# MIRA WORK-STATUS\n\n## CP11 — current design preview for owner review\n\nLatest owner priority is visual design for exhibition preparation. New additive `/mira/design/` landing and `/mira/marketplace-design.html` catalogue skin are implemented. Existing `/mira/agency/`, qualification logic, demo engine and backend gates are unchanged. Design is not yet owner-approved as the main public version.\n\nEditorial composition, existing image library, optional motion with pause/reduced-motion support, responsive catalogue and local briefing preserved. Five exact project-image associations; all45 demo records remain accessible. Hero/coast illustrations and archived project renders are not presented as current field evidence or inventory. Rights/final media approval remains open.\n\nLocal66 Node/76 Python tests and7 offline DOM case groups passed across320/360/390/600/768/1024/1440. These are not live-domain/CSP/backend tests. See `product/design-direction-11.md` and `operations/checkpoint-11-design.md`. Next: confirm this checkpoint CI/Pages, obtain visual approval, then move the approved design to primary routes only after review. No sending or intake enablement.\n\n## Previous source status (preserved)\n"
+          "old": "  if (form) visibility.observe(form);\n}\n",
+          "new": "  if (form) visibility.observe(form);\n}\n\n// Keep the preview journey coherent without changing the accepted qualifier.\nconst planDemo = document.querySelector('#plan-demo');\nfunction keepPreviewDestination() {\n  if (!planDemo) return;\n  try {\n    const base = new URL(document.baseURI);\n    const target = new URL(planDemo.getAttribute('href'), base);\n    if (target.origin === base.origin && target.pathname === '/mira/marketplace.html') {\n      target.pathname = '/mira/marketplace-design.html';\n      planDemo.setAttribute('href', target.href);\n    }\n  } catch { /* An invalid preview URL is left untouched, never opened. */ }\n}\nif (planDemo) {\n  keepPreviewDestination();\n  new MutationObserver(keepPreviewDestination).observe(planDemo, { attributes: true, attributeFilter: ['href'] });\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "tests/mira-design-ui.py",
+      "before_sha256": "cfd42257fe26670240002b78078541c8c1ecdd2be5e5bd4d5569065517aef593",
+      "sha256": "1f16e5613d2516cf5c0aed7bd4385febd4123059051fb055a749a46633c75077",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "# A full-page screenshot with all embedded media decoded, not just requested.\n        page.screenshot",
+          "new": "# Paint below-fold lazy media before a full-page capture.\n        for selector in ['.coast', '.project-pair']:\n            page.locator(selector).scroll_into_view_if_needed();page.wait_for_timeout(200)\n        page.evaluate('scrollTo(0,0)');page.wait_for_timeout(150)\n        page.screenshot"
+        },
+        {
+          "old": "assert page.locator('#plan').is_visible()\n",
+          "new": "assert page.locator('#plan').is_visible()\n        assert '/mira/marketplace-design.html' in page.locator('#plan-demo').get_attribute('href')\n"
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/WORK-STATUS.md",
+      "before_sha256": "c05a35321fa49d58da137e511ccebd875639db2810b73d9d08f378a47d57ca95",
+      "sha256": "c8e616a495bdaffe1cc54b213291e78c0e02d6ea612f9d3fb25d7f8e56884012",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "## Previous source status (preserved)",
+          "new": "CP11 source9ae73936 is saved; GitHub QA35129525420 and Pages35129525369 completed successfully. Follow-up keeps the qualification CTA inside the new catalogue preview, preserves the original qualifier, and improves below-fold screenshot painting. Local76 Python tests and7 offline interaction groups passed again. The live-domain browser/CSP was not verified in this environment. Main agency page is still unchanged; owner visual/media approval remains pending.\n\n## Previous source status (preserved)"
         }
       ]
     },
     {
       "path": "project-bible/mira/RESUME-STATE.md",
-      "before_sha256": "6b77c4e75758001582aee5f612b9d08abbc47b7b18a09afd3b3a1aa1d2791f69",
-      "sha256": "4e6463f6395bf587ae6c581b4d924107bfe7fe6f2b03d5492fdbfda4e3f02007",
+      "before_sha256": "3625a7d2f3e063da00fe56e945e5032cfc6a84f64b95e95f1d3d98e2dab9d68e",
+      "sha256": "4cb9b018cc71e38734f80005514a4eee28de38501686f4bb9e539c0791ff2fa6",
       "codec": "utf8-edits-v1",
       "edits": [
         {
-          "old": "# MIRA RESUME-STATE",
-          "new": "# MIRA RESUME-STATE\n\n## CP11 — resume design here\n\nOwner narrowed immediate work to a distinctive visual redesign. Preview implementation: `/mira/design/` plus `/mira/marketplace-design.html`. The original agency funnel and demo engine remain unchanged. Do not repeat data collection, contract retrieval or failed mail authorization as part of this design review.\n\nRead `product/design-direction-11.md` and `operations/checkpoint-11-design.md`; inspect new checkpoint CI/Pages. All transferred UTF-8 sources are hash-checked. Local66 Node/76 Python tests,7 offline case groups and7 viewport widths passed. Offline DOM rendering does not establish live CSP or backend behavior.\n\nNext: owner reviews desktop/mobile preview; refine visual details; approve final photography/rights and exhibition creative; only then adopt the preview at main routes. Keep operational deployment and commercial project gates closed until separately verified. No external sending authorized by this design request.\n\n## Previous resume state (preserved)\n"
-        }
-      ]
-    },
-    {
-      "path": "project-bible/mira/README.md",
-      "before_sha256": "66d08858e34a29d305e755d0e45178956df47d52740732f20f1440b2581e15e3",
-      "sha256": "8e0fd5af7c9e28db4a1e92444f080f34d9ca6f03fcd4dcb14cf75a3d320b0b94",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "# МИРА — проектная библия",
-          "new": "# МИРА — проектная библия\n\n## Дизайн-превью CP11 — на рассмотрении владельца\n\nНовый визуальный вариант: `/mira/design/` и `/mira/marketplace-design.html`. Основные адреса не заменены. [Направление, референсы и границы медиа](./product/design-direction-11.md); [результат checkpoint](./operations/checkpoint-11-design.md). Это не подтверждение готовности коммерческого пилота.\n"
-        }
-      ]
-    },
-    {
-      "path": "project-bible/mira/08-decisions-log.md",
-      "before_sha256": "2206260d5beb8a8b327d0e277a41f7cd514fdcde69b015e6fd1e6cccaf15360c",
-      "sha256": "8d2f197eae0e019fb2a41476954943231991e92428774061cb0df21f9d611260",
-      "codec": "utf8-edits-v1",
-      "edits": [
-        {
-          "old": "# 08 — Журнал решений",
-          "new": "# 08 — Журнал решений\n\n## CP11 — визуальное направление на рассмотрении\n\n**Статус: предложено, ожидает owner review.** По запросу владельца подготовлен самостоятельный редакционный дизайн с изображениями и необязательным motion. Тексты/воронка и коммерческие условия не переутверждаются. Превью подготовлено для отдельного адреса, независимо от основного агентского лендинга; перенос на основной адрес требует визуального согласования. Новых прав на фотографии, статусов продаж или разрешений на отправку этим решением не создаётся. Подробности: `product/design-direction-11.md`.\n"
+          "old": "## Previous resume state (preserved)",
+          "new": "CP11 source9ae73936 is saved; GitHub QA35129525420 and Pages35129525369 completed successfully. Follow-up keeps the qualification CTA inside the new catalogue preview, preserves the original qualifier, and improves below-fold screenshot painting. Local76 Python tests and7 offline interaction groups passed again. The live-domain browser/CSP was not verified in this environment. Main agency page is still unchanged; owner visual/media approval remains pending.\n\n## Previous resume state (preserved)"
         }
       ]
     }
