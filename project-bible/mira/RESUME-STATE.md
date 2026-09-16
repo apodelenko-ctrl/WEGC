@@ -32,7 +32,7 @@ Russia100source/50priorlive/priority30/wave12notapproved. Phuket618projects/40gr
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `91decd75ce08bd4f21843dcd17659022d0e77a08`.
+Source commit: `83a4dd46c7102702b81ae284987404091ee17e25`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
@@ -40,5 +40,5 @@ Russia: **100** quality-layer rows; **47** matched to inherited live reviews; **
 
 Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
 
-Continue: resolve evidence gaps, complete acquisition assets, deploy/test protected pilot. Generated coverage is not business launch readiness.
+Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
 <!-- MIRA-LAUNCH-AUTO:END -->

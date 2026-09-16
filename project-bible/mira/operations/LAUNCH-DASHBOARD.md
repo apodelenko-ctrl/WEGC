@@ -1,6 +1,6 @@
 # MIRA — canonical launch dashboard
 
-Source commit: `91decd75ce08bd4f21843dcd17659022d0e77a08`. Rebuild with `python scripts/mira-launch-build.py`.
+Source commit: `83a4dd46c7102702b81ae284987404091ee17e25`. Rebuild with `python scripts/mira-launch-build.py`.
 
 **Not pilot-ready.** Coverage, commercial verification and real activation are separate gates.
 
