@@ -1,115 +1,39 @@
 # MIRA RESUME-STATE
 
-Updated UTC: 2026-09-16 06:56
+Updated: 2026-09-16 — launch mission checkpoint 01.
 
-## Current phase
+## Read order
 
-**P0 — convert research into launchable supply + agency activation assets.**
+`12-astra-pro-launch-mission.md` → `WORK-STATUS.md` → this file → relevant bible/source files. Mission remains in execution, not complete.
 
-Active streams:
+## Completed in this execution run
 
-1. Russia: source-backed agency cohort → live decision-route QA → segmentation → owner-review wave.
-2. Phuket: internal WEGC project backbone → developer-family normalization → commercial/agency terms.
-3. Launch funnel: landing → qualification → demo → contract → onboarding → registered client.
+Marketplace DEMO code: `/mira/marketplace.html`, `marketplace.mjs`, `marketplace.css`, `core.mjs`, sanitized `data/catalog.json` (45 existing seed rows), downloadable `phuket-starter-kit.html`, deterministic demo builder and 8 passing Node domain tests. Offline DOM render/search/mobile checks passed. See `operations/checkpoint-01-marketplace-demo.md`.
 
-## Canonical decisions
+No fake login, real lead submission, developer confirmation or financial amounts. Demo drafts are in-memory, expire on reload, and use DEMO-only pseudonymous IDs. Qualification form exports a local non-contact brief. Server intake remains to implement/deploy.
 
-- Public brand: **МИРА — Международная инфраструктура риэлторских агентств**.
-- Naming is closed; do not restart name generation without owner instruction.
-- Agency keeps client and brand; MIRA is the international infrastructure layer.
-- Working economics: up to 90% of developer-paid agency commission to agency / up to 10% to MIRA, dependent on project/agreement/role.
-- Payment support is separate and deal-specific.
-- No mass external outreach without owner approval.
+## Continue exactly here
 
-## Durable state
+1. Keep the accepted landing; add a demo entry rather than rebuild its content. Implement a separate secure receipt-producing application and tenant-isolated pilot backend.
+2. Fix Pages publication scope: current rsync includes project-bible. Keep internal operations out of static output; do not break existing WEGC asset paths.
+3. Build full-backbone Phuket normalization from existing generated catalog plus seed/alias map. Do not treat weak group inference as verified legal seller.
+4. Finish conservative Launch-100 classification, preserving the 50 live-reviewed layer. Do not claim new live verification from an inherited row.
+5. Add stage registers and one canonical launch dashboard based on data/evidence, not target numbers.
+6. Continue actual-product demo/onboarding and segmented acquisition assets, preserving existing completed assets.
 
-### Russia
+## Preserved baseline
 
-- Launch cohort: **100 unique source-backed agency organizations**.
-- Fresh live contact / role / entity review: **50 unique organizations** across batches 01–07.
-- Segmentation register for reviewed half: `sales/russia-live-50-segmentation.csv`.
-- Priority owner-review register: 30 organizations.
-- First segmented owner-review wave: 12 accounts, all `not_approved` for sending.
-- Personalized drafts exist for early high-fit accounts.
+Russia 100 source-backed; 50 fresh live-reviewed; reviewed-half segmentation; priority 30; owner-review wave 12 not approved. Phuket approximately 618 project rows; 40 groups; 45 seed normalized; 20 queued groups; 8 P0 public-evidence groups. CIS 88 plus 21 unmerged package rows. Expansion QA 32 (8 Indonesia,12 Vietnam,12 UAE).
 
-Material segmentation discoveries:
+## Blocking only some streams
 
-- `Диал` → `existing_foreign_property_desk` with named foreign-property director.
-- `Квартирант Плюс` → `existing_phuket_direction`; official current site advertises Phuket property and exposes named leadership.
-- `Панорама недвижимости` → `existing_foreign_property_desk` signal via current Turkey property direction.
-- `Самолет Плюс`, `МИЭЛЬ`, `АЯКС` and other network structures require HQ-level handling rather than branch outreach.
-- unresolved domain/entity rows remain on hold.
+- No connected Cloudflare deployment capability confirmed yet; do not claim live backend deployment.
+- No owner approval for outreach/forms/messages.
+- No project-specific complete P0 commercial schedule/lead rules confirmed in this run.
+- Browser navigation is blocked by environment (`ERR_BLOCKED_BY_ADMINISTRATOR`); offline render tests are not end-to-end QA.
 
-### Phuket
+These do not block code, data normalization, sales assets or dashboards. Continue independent work.
 
-- Internal WEGC catalog backbone: approximately **618 project rows**; these are not 618 developers.
-- Developer master v1: **40 developer / counterparty / branded-residence groups**.
-- Project master seed: **45 normalized project rows**.
-- Alias map v1 available.
-- Developer outreach queue: **20 unique developer groups**.
-- P0 commercial verification: **8 developer groups** in `sales/phuket-p0-commercial-verification.csv`.
+## Controls
 
-First-party commercial/B2B evidence is separately captured for Botanica Agent Club, Origin Agent Club, Sansiri international agent registration, Phuket9 B2B Agency Network, Ozone multilingual sales, Anchan sales/current projects, Laguna/Banyan route pending entity mapping, and Rhom Bho/THE TITLE internal relationship follow-up.
-
-Public promotional commission claims are never treated as universal current project terms without written/contract confirmation.
-
-### CIS
-
-- Canonical pilot layer: 88 rows.
-- Packages 05–06: 21 additional source-backed rows awaiting merge/dedupe before net-new canonical count is claimed.
-
-### Bali / Vietnam / Dubai
-
-- First-party developer contact QA batch: 32 records total — Indonesia 8, Vietnam 12, UAE 12.
-- Dedicated agent/broker/channel routes exist for part of the batch; contracting entity and commercial terms remain a separate gate.
-
-## Launch assets
-
-- `/mira/` rebuilt acquisition landing.
-- `sales/AGENCY-SALES-PLAYBOOK.md`.
-- `sales/agency-crm-template.csv`.
-- `sales/MIRA-PILOT-PACK.md`.
-- `sales/MIRA-ONE-PAGER.md`.
-- `research/mira-first-webinar.md`.
-- `sales/russia-wave-01-owner-review.csv`.
-- `sales/russia-live-50-segmentation.csv`.
-- `sales/phuket-p0-commercial-verification.csv`.
-- `sales/developer-acquisition-pack.md`.
-
-## Next exact work
-
-### Russia
-
-1. Complete segmentation / current foreign-property check for the remaining 50 Launch-100 accounts; unknown stays unknown.
-2. Promote only the strongest 15–20 to final `ready_for_owner_review` based on decision-route quality and pitch fit.
-3. Resolve remaining domain/entity conflicts.
-4. Keep Wave 01 unsent until owner approval.
-5. Expand toward Launch-200 only after contact quality / conversion assumptions are testable.
-
-### Phuket
-
-1. Continue `phuket-project-master` beyond seed 45 from internal WEGC sources before external discovery.
-2. Do not infer legal seller from project/brand/operator name.
-3. Expand P0 commercial verification beyond the current 8 groups.
-4. For each P0 developer capture: named channel owner, agreement entity, eligible projects, current commission schedule, client-registration rule, lead protection, commission trigger, payout timing, materials access and inventory-update mechanism.
-5. Separate promotional public claims from signed/current terms.
-
-### Operations
-
-- Keep `WORK-STATUS.md` as short canonical status.
-- Do not repeat the old 417-row HTTP-timeout QA pipeline.
-- Do not count HTTP timeouts as inactive companies.
-- Do not re-run naming.
-- Do not send external outreach/forms without owner approval.
-
-## Blockers requiring owner/manual action
-
-- Owner approval for any external outreach wave.
-- Project-specific developer commercial schedules not public.
-- Some legal entities / decision owners require direct confirmation.
-- IP / trademark / domain clearance remains separate.
-- Payment routes require transaction-specific compliance/provider confirmation.
-
-## Resume instruction
-
-**Read `WORK-STATUS.md` first. Resume from 50 live-reviewed Russia accounts, the 50-row segmentation register, 45 normalized Phuket project rows, 40-row Phuket developer master and 8-row P0 commercial verification. Prioritize decision-maker quality and full internal Phuket normalization over raw row growth.**
+МИРА naming closed. Agency retains client/brand. 90/10 remains project-specific hypothesis, never a computed default commission. Payment support separate. No mass outreach, no external forms/messages, no invented numbers or partner status. Do not repeat old HTTP-timeout QA or classify timeout as inactive company.

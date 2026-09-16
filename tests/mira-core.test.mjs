@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createDemoLead,createDemoPayment,filterProjects,canRegister,protectionLabel,safeURL} from '../mira/core.mjs';
+const project={id:'test-project',name:'TEST ONLY',district:'TEST',kind:'villa',developerFamily:'TEST'};
+test('search and structured filters are combined',()=>{assert.equal(filterProjects([project],{search:'test',kind:'villa'}).length,1);assert.equal(filterProjects([project],{kind:'condo'}).length,0);});
+test('demo accepts only pseudonymous references',()=>{assert.throws(()=>createDemoLead(project,'real@example.com',[]));assert.throws(()=>createDemoLead(project,'+123456789',[]));});
+test('demo lead is never a confirmation',()=>{const x=createDemoLead(project,'DEMO-1',[]);assert.equal(x.status,'draft_local');assert.equal(x.commission.amount,null);assert.equal(x.protection.until,null);assert.match(protectionLabel(x),/Не подтверждена/);assert.equal(createDemoPayment(x).quote,null);});
+test('duplicate draft rejected within same project only',()=>{const x=createDemoLead(project,'DEMO-1',[]);assert.throws(()=>createDemoLead(project,'demo-1',[x]));assert.doesNotThrow(()=>createDemoLead({...project,id:'other'},'DEMO-1',[x]));});
+test('production gate fails closed',()=>{assert.equal(canRegister(project),false);assert.equal(canRegister({registrationGate:{enabled:true}}),false);});
+test('all commercial evidence required and must be current',()=>{const now=Date.now(),g={enabled:true,legalSeller:'TEST',termsRef:'TEST',registrationRulesRef:'TEST',inventoryRef:'TEST',verifiedAt:new Date(now-1000).toISOString(),expiresAt:new Date(now+1000).toISOString()};assert.equal(canRegister({registrationGate:g},now),true);assert.equal(canRegister({registrationGate:{...g,inventoryRef:null}},now),false);assert.equal(canRegister({registrationGate:g},now+2000),false);});
+test('untrusted URL schemes rejected',()=>{assert.equal(safeURL('javascript:alert(1)'),null);assert.equal(safeURL('https://user:pass@example.com'),null);});
+test('public catalog has unique ids and no prices or invented verified dates',async()=>{const d=JSON.parse(await readFile(new URL('../mira/data/catalog.json',import.meta.url)));assert.equal(d.mode,'demo');assert.equal(d.provenance.verifiedAt,null);assert.equal(new Set(d.projects.map(x=>x.id)).size,d.projects.length);for(const p of d.projects){assert.ok(p.name);assert.equal(p.price,undefined);assert.equal(p.commission,undefined);assert.equal(canRegister(p),false);}});
