@@ -49,3 +49,18 @@ Historical implementation and test details: `operations/checkpoint-03-protected-
 ## Controls
 
 Agency retains client relationships and its brand; contractual developer protection is checked separately. Buyer payment support and commission are separate. Agreement/access/demo action does not equal activation. No invented prices, inventory, contacts, approvals or outcomes. Public GitHub is not a private evidence vault.
+
+
+<!-- MIRA-LAUNCH-AUTO:START -->
+## Generated source checkpoint
+
+Source commit: `25bd6d074cfc0f5c21d076e5c976f3af6a1cffe6`.
+
+Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
+
+Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
+
+Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
+
+Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
+<!-- MIRA-LAUNCH-AUTO:END -->
