@@ -66,3 +66,34 @@ jobs:
             project-bible/mira/data/phuket-project-master.csv
             project-bible/mira/sales/russia-launch-100-quality.csv
           retention-days: 14
+      - name: Record exact recovery provenance
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, subprocess
+          def git(*args):
+              return subprocess.check_output(['git', *args], text=True).strip()
+          pathlib.Path('mira-recovery-manifest.json').write_text(json.dumps({
+              'workflow_head_sha': os.environ['GITHUB_SHA'],
+              'snapshot_head_sha': git('rev-parse', 'HEAD'),
+              'working_tree': git('status', '--porcelain'),
+              'run_id': os.environ['GITHUB_RUN_ID'],
+              'scope': 'public repository MIRA source files only; not a database or private evidence backup',
+              'outreach_authorized': False
+          }, ensure_ascii=False, indent=2) + '\n')
+          PY
+      - name: Preserve bounded execution sources
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mira-execution-source
+          path: |
+            mira-recovery-manifest.json
+            mira/
+            cloudflare-worker/mira/
+            scripts/mira-*.py
+            tests/*mira*
+            project-bible/mira/
+            ru/wegc-catalog-data.js
+          retention-days: 14
+          if-no-files-found: error
