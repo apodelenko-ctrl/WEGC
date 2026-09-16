@@ -44,7 +44,7 @@ CP09 persistence and CP10 standalone release are verified. Continue with Phuket 
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `295ae998f589fce8e60341b5f29e70a0e7b0372c`.
+Source commit: `65b3f0d1d6eea9fb398996123b613a3608a74fad`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
