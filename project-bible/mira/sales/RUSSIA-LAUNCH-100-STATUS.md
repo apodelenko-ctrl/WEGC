@@ -22,17 +22,33 @@
 
 ## Live contact QA
 
-На 2026-09-16 опубликованы три live-QA batch-файла:
+На 2026-09-16 опубликованы пять live-QA batch-файлов:
 
 - `russia-contact-qa-batch-01.csv` — 6 организаций;
 - `russia-contact-qa-batch-02.csv` — 7 организаций;
-- `russia-contact-qa-batch-03.csv` — 7 организаций.
+- `russia-contact-qa-batch-03.csv` — 7 организаций;
+- `russia-contact-qa-batch-04.csv` — 6 организаций;
+- `russia-contact-qa-batch-05.csv` — 4 организации.
 
-Итого **20 приоритетных организаций прошли отдельный свежий contact/role QA**.
+Итого **30 приоритетных организаций прошли отдельный свежий contact/role QA**.
 
-Для owner review создан `russia-priority-20-review.csv` — консолидированная очередь из 20 компаний. Сильнейшие по текущему качеству маршрута включают direct/named management или commercial-role signals у Грановита, Визита, Орбиты 72, ЛЕДОН, Новосёла, Дома Недвижимости, ИНКОМ, ГОРОДОВ и АРЕВЕРА.
+Для owner review создан `russia-priority-20-review.csv` — первая консолидированная очередь из 20 компаний. Дополнительные 10 QA-accounts хранятся в batch-04/05 и должны войти в следующую consolidated priority queue после финального fit-scoring.
+
+Сильные текущие route signals включают named owner / CEO / commercial / new-build contacts у Грановита, Визита, Орбиты 72, ЛЕДОН, Новосёла, Дома Недвижимости, ИНКОМ, ГОРОДОВ, АРЕВЕРА, Новых Домов, АВЕСТА-РИЭЛТ, Нового Города и Квартсервиса.
 
 Важно: general phone/email или office contact не повышается автоматически до `partnership_contact_verified`. Статус отражает только то, что реально подтверждено источником: named role, general route, partner signal, office presence и т. д.
+
+## Domain/entity QA
+
+Создан `data/russia-domain-qa-corrections.csv`.
+
+На текущем проходе выявлены как минимум три domain/entity conflict, которые запрещено замалчивать:
+
+- Новосёл: launch seed `novosel.ru` vs live-QA `novosel99.ru`;
+- СТАН: `stan-ufa.ru` vs `stanufa.ru`;
+- Живем дома: `jivem-doma.ru` vs `jivemdoma.com`.
+
+До entity resolution эти строки не переводятся в outreach-ready.
 
 ## Следующий quality gate
 
@@ -49,11 +65,14 @@ Launch-100 считается готовым к ручному outreach толь
 
 ## Операционный приоритет
 
-Сначала довести текущие top 20 до действительно actionable состояния и расширить live-QA до **top 30**, не ждать одновременной глубокой проверки всех 100.
+Первый milestone **top-30 live contact QA достигнут**.
 
-После этого:
+Следующий шаг:
 
-- подготовить owner-approved manual outreach wave 01 на 10–20 компаний;
-- расширить качественный cohort до Launch-200;
-- не возвращаться к массовому raw discovery, пока direct-contact conversion rate не станет понятен;
-- массовый outbound не отправлять без owner approval.
+- сделать consolidated `Russia Priority-30`;
+- выделить первые 10–15 действительно `ready_for_owner_review`;
+- подготовить персонализированные manual outreach drafts без отправки;
+- параллельно продолжить Phuket project normalization;
+- затем расширять качественный cohort до Launch-200.
+
+Массовый outbound не отправлять без owner approval.
