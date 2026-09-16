@@ -27,7 +27,7 @@ def digest(data):
 
 def allowed(path):
     p = PurePosixPath(path)
-    return bool(path and not p.is_absolute() and '..' not in p.parts and
+    return bool(path and str(p) == path and not p.is_absolute() and '..' not in p.parts and
                 '\\' not in path and not any(part.startswith('.') for part in p.parts) and
                 (path.startswith(('mira/', 'cloudflare-worker/mira/', 'project-bible/mira/')) or
                  (path.startswith('scripts/mira-') and path.endswith('.py')) or
@@ -49,18 +49,27 @@ def prepare(root, payload):
         target = root / path
         if any(parent.is_symlink() for parent in [target, *target.parents] if parent != root.parent):
             raise ValueError('Symlink target is not allowed')
-        decoder = zlib.decompressobj()
-        packed = base64.b64decode(item['zlib_base64'], validate=True)
-        data = decoder.decompress(packed, MAX_FILE + 1)
-        if len(data) > MAX_FILE or not decoder.eof or decoder.unused_data:
-            raise ValueError('Invalid or oversized compressed file')
-        data.decode('utf-8')
-        total += len(data)
-        if total > MAX_TOTAL or digest(data) != item['sha256']:
-            raise ValueError('Payload size/hash mismatch')
-        before = digest(target.read_bytes()) if target.exists() else None
+        original = target.read_bytes() if target.exists() else None
+        before = digest(original) if original is not None else None
         if before not in [item.get('before_sha256'), item['sha256']]:
             raise ValueError('Concurrent edit: ' + path)
+        if before == item['sha256']:
+            data = original
+        else:
+            codec = item.get('codec', 'zlib-v1')
+            if codec not in ['zlib-v1', 'zlib-dict-v1']:
+                raise ValueError('Unknown checkpoint codec')
+            if codec == 'zlib-dict-v1' and original is None:
+                raise ValueError('Dictionary source is missing')
+            decoder = zlib.decompressobj(**({'zdict': original[-32768:]} if codec == 'zlib-dict-v1' else {}))
+            packed = base64.b64decode(item['zlib_base64'], validate=True)
+            data = decoder.decompress(packed, MAX_FILE + 1)
+            if not decoder.eof or decoder.unused_data:
+                raise ValueError('Invalid or oversized compressed file')
+        data.decode('utf-8')
+        total += len(data)
+        if len(data) > MAX_FILE or total > MAX_TOTAL or digest(data) != item['sha256']:
+            raise ValueError('Payload size/hash mismatch')
         result.append((target, data, before != item['sha256']))
     return result
 
