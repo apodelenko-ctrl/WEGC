@@ -37,3 +37,18 @@ Inspect workflow outputs and fix reconciliation failures; implement secure isola
 ## Controls
 
 No external outreach/forms/messages without separate owner approval. No invented contacts, approval, prices, contracts, availability, commission or operating results. Project brand is not legal seller; payment support separate and deal-specific. Signed agency is not activation; demo action is not registration.
+
+
+<!-- MIRA-LAUNCH-AUTO:START -->
+## Generated source checkpoint
+
+Source commit: `91decd75ce08bd4f21843dcd17659022d0e77a08`.
+
+Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
+
+Russia: **100** quality-layer rows; **47** matched to inherited live reviews; **3** review join exceptions. **12** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
+
+Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
+
+Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
+<!-- MIRA-LAUNCH-AUTO:END -->

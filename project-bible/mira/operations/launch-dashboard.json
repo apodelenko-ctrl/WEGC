@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "source_commit": "91decd75ce08bd4f21843dcd17659022d0e77a08",
+  "source_sha256": {
+    "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
+    "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
+    "project-bible/mira/data/phuket-developer-alias-map-v1.csv": "654ef7a3911f39bf89f5c1bee204de368b43a1a3c93bacdb948006d8372c96ed",
+    "project-bible/mira/data/phuket-developer-master.csv": "40076aa98c77eaa4745560df0fce80ed65df5308bbc3a02dce28f67d8307dbe7",
+    "project-bible/mira/sales/russia-launch-50-seed.csv": "b9a5a993b506985a7191ffc0d7c4ed8a8d8d47a234eae0ce1996d0886f184c05",
+    "project-bible/mira/sales/russia-launch-50-batch-02.csv": "1a5c54520743cb6e11be4081c90f82f49332b44c5846264dd9520a68d2b6f01f",
+    "project-bible/mira/sales/russia-live-50-segmentation.csv": "98094cf77ed118daedf9a64dc84166036e5054a7ad40f84c51b522bd1a017db8",
+    "project-bible/mira/sales/russia-wave-01-owner-review.csv": "e1fee8312c3b39c0d0bf06277b673e894ba4b88836daafbc48d80dc025730c30",
+    "project-bible/mira/sales/phuket-p0-commercial-verification.csv": "0c96d3cf8c020850f6d6b47cac027cc70819f02622e2dc0f8ec1e667bf14490a"
+  },
+  "scope": "Repository evidence only; not a live CRM and not a claim that unobserved activity is zero.",
+  "readiness": {
+    "mvp0": "demo_code_available_deployment_qa_separate",
+    "marketing_pilot": false,
+    "marketplace_pilot": false,
+    "commercially_repeatable": false
+  },
+  "counts": {
+    "phuket_source_rows": 618,
+    "phuket_normalized_coverage_rows": 618,
+    "phuket_seed_mappings_preserved": 45,
+    "phuket_generator_family_candidates": 66,
+    "phuket_operator_only_rows": 1,
+    "phuket_family_unresolved_rows": 507,
+    "phuket_project_legal_sellers_verified": 0,
+    "phuket_projects_enabled_for_registration": 0,
+    "phuket_group_master_rows": 40,
+    "phuket_p0_public_evidence_groups": 8,
+    "russia_source_backed_accounts": 100,
+    "russia_live_review_rows_inherited": 50,
+    "russia_launch_cohort_live_review_matches": 47,
+    "russia_live_review_join_exceptions": 3,
+    "russia_named_route_signals_in_cohort": 20,
+    "russia_inherited_owner_review_ready": 12,
+    "russia_owner_review_wave_accounts": 12,
+    "russia_send_approved_in_source_wave": 0,
+    "russia_classification_coverage": 100,
+    "russia_needing_live_review": 53,
+    "russia_segment_holds": 58
+  },
+  "operations": {
+    "agencies_contacted": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "conversations": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "demos": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "agreements_signed": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "onboarded": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "activated": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "clients_registered": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "active_deals": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "bookings": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "developer_commission_received": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    },
+    "agency_settlements": {
+      "value": null,
+      "status": "no_operational_evidence_imported"
+    }
+  },
+  "segments": {
+    "existing_foreign_property_desk": 2,
+    "existing_phuket_direction": 1,
+    "hold_entity_resolution": 4,
+    "hold_first_party_review": 41,
+    "hold_first_party_verification": 2,
+    "hold_segment_fit": 11,
+    "large_new_build": 3,
+    "network_franchise_platform": 5,
+    "network_franchise_platform_candidate": 4,
+    "premium_investment": 3,
+    "premium_investment_candidate": 4,
+    "regional_new_build": 13,
+    "regional_new_build_candidate": 4,
+    "resort_agency": 3
+  },
+  "mapping_statuses": {
+    "existing_seed_mapping": 45,
+    "generator_alias_candidate": 66,
+    "operator_brand_signal_only": 1,
+    "unmapped_raw_developer_candidate": 13,
+    "unresolved": 493
+  },
+  "blockers": [
+    "Owner approval required before any external outreach or forms.",
+    "Secure backend deployment and live receipt/access QA remain unverified.",
+    "No project-specific complete current legal/lead/inventory gate is imported.",
+    "Real operating events have not been imported; conversion rates cannot be calculated."
+  ],
+  "controls": {
+    "outreach_automated": false,
+    "financial_defaults": false,
+    "real_client_data_in_repository": false
+  }
+}
