@@ -175,3 +175,11 @@ Mega-pipeline artifacts (417 discovered, 417 classified, 401 source-level verifi
 - Published shard commit: `b98fc353d4a863969ab3cac29acc9887036788bd`; content SHA after re-read: `84fb3e37f1d47ae0d1101bd686ed3afaa62bf319`.
 - Total remote live-QA coverage: rows 1–50, two non-overlapping shards.
 - No outreach sent. Next exact batch: mega discovery rows 51–75.
+
+
+## 2026-09-16T05:47Z — Russia live-QA durable checkpoint 100 rows
+
+- Four non-overlapping append-only shards now cover mega discovery rows 1–100: 100 remote rows total.
+- Shard 004 (rows 76–100) was published and re-read successfully; 25 rows present, commit `f55217b2c21e8259ccb2be24fa13970e84b4f5d8`.
+- Current runtime returned timeout/HTTP-000 results for this batch; rows remain `needs_manual`, not inactive and not `contact_verified`.
+- Next exact batch: mega discovery rows 101–125.
