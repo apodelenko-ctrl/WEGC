@@ -1,79 +1,120 @@
 # MIRA RESUME-STATE
 
-Updated UTC: 2026-09-16
+Updated UTC: 2026-09-16 06:49
 
 ## Current phase
 
-P0 — Russia agency data-quality pipeline and Phuket developer/entity/contact verification.
+**P0 — convert research into launchable supply + agency activation assets.**
 
-## Remote source of truth
+Primary active streams:
 
-- Repository: `apodelenko-ctrl/WEGC`
-- Remote `main` HEAD at handoff: `41a51306023dbd662afddb1fea356183a48e00f6`
-- Latest remote commit message: `sales(mira): add agency one-pager copy`
+1. Russia: qualified agency cohort → live decision-route QA → segmented owner-review wave.
+2. Phuket: internal WEGC project backbone → developer-family normalization → commercial/agency terms.
+3. Launch funnel: landing → qualification → demo → contract → onboarding → registered client.
 
-## Confirmed remote counts
+## Canonical decisions
 
-| Stream | Rows | Interpretation |
-|---|---:|---|
-| Mega discovery | 417 | discovery records; not fully live/contact verified |
-| Mega source-level verified | 401 | official source-level evidence; live contact gate remains open |
-| Russia pilot | 324 | source-seeded regional/office prospects; duplicate and parent/branch review remains |
-| CIS pilot | 88 | first-party/source-backed pool; contact and duplicate QA remain |
-| Phuket developer master | 40 | developer/entity candidates; many routes and legal identities still need review |
+- Public brand: **МИРА — Международная инфраструктура риэлторских агентств**.
+- Naming workstream is closed; do not restart name generation without owner instruction.
+- Agency keeps its client and brand; MIRA is the international infrastructure layer.
+- Working economics remain **up to 90% of developer-paid agency commission to the agency / up to 10% to MIRA**, project- and agreement-dependent.
+- Payment support is separate and deal-specific.
+- No external mass outreach without owner approval.
 
-## What is not confirmed
+## Current durable data state
 
-- The prior local live-QA pass over 417 mega rows was not published to remote `main`; it is not part of this state.
-- No `RESUME-STATE.md`, live-QA shards or domain-dedupe register were present on remote at this handoff.
-- No external outreach has been sent.
-- No long-running agents are confirmed active; workers are finite task runs.
+### Russia
 
-## Next exact batch
+- Launch cohort: **100 unique source-backed agency organizations** in two 50-row files.
+- Fresh public contact / role QA: **39 unique strategic organizations** across batches 01–06.
+- Priority owner-review register: 30 organizations.
+- First segmented owner-review wave: **12 organizations**, all `not_approved` for sending.
+- Personalized drafts exist for the first high-fit accounts.
+- Important segmentation: agencies with an existing foreign-property desk must not receive the greenfield pitch.
 
-`MIRA-RU-LIVE-QA-001`: recreate a first-party live-source QA shard for mega discovery rows 1–100 from the current remote file. Record HTTP evidence separately from contact verification. Then continue rows 101–200 without overlap.
+New evidence-backed example:
 
-## Next actions
+- `Диал` has a named Director of Development / Foreign Real Estate and an existing overseas partner model. It is now classified as `existing_foreign_property_desk`; dedicated benchmark card is saved under `research/competitors/`.
 
-1. Recreate and publish live-QA shard 001 for rows 1–100.
-2. Publish the shard through GitHub contents API and re-read it from `main`.
-3. Run rows 101–200 as a separate append-only shard.
-4. Create a domain/parent/branch dedupe register only after all QA shards exist remotely.
-5. Reconcile the Russia pilot against mega clusters.
-6. Manually review reachable A/B candidates.
-7. Verify the 40 Phuket developer rows against first-party websites and entity records.
-8. Keep commission, lead registration and partnership claims unknown unless explicitly evidenced.
-9. Keep outreach queues review-only; do not send messages or forms.
-10. Update this file after every material checkpoint.
+### Phuket
 
-## Hard blockers
+- Internal WEGC catalog backbone: approximately **618 project rows**; these are not 618 developers.
+- Developer master v1: **40 developer / counterparty / branded-residence groups**.
+- Project master seed: **45 normalized project rows**.
+- Alias map v1: recurring project/developer aliases normalized.
+- Developer outreach queue: **20 unique developer groups**.
+- New P0 commercial verification file: `sales/phuket-p0-commercial-verification.csv`.
 
-- HTTP availability is not the same as active-company or contact verification.
-- Parent/branch/legal-entity resolution is still incomplete.
-- Shell GitHub credentials are unavailable; writes must use the connected GitHub API and be re-read from `main`.
+Fresh first-party commercial evidence now explicitly recorded for:
 
+- Botanica Agent Club;
+- Origin Agent Club;
+- Sansiri international agent registration;
+- Phuket9 B2B Agency Network;
+- Ozone multilingual direct sales route;
+- Anchan current direct sales/current projects;
+- Laguna/Banyan route pending entity resolution;
+- Rhom Bho / THE TITLE internal relationship pending normalized current commercial schedule.
 
-## 2026-09-16T05:30Z — current durable checkpoint
+Important public-source claims are stored only as claims requiring written/project confirmation. Examples: current Sansiri page says up to 6% after completed transaction; older/current Origin Agent Club materials contain promotional commission/payout claims. Do not universalize them across projects.
 
-- Remote `main` was re-read at the start of this run; previous local QA artifacts were not counted.
-- `data/work-russia-live-qa-001.csv` is now published and re-read successfully: 25 rows, 0 HTTP-live under this runtime, 25 `needs_manual` due to HTTP 000/timeouts.
-- This is source QA only; no row is `contact_verified`, and timeouts are not proof of an inactive organization.
-- Latest write commit: `c1cfe4a03c315ac6afad4cb0c30c5692c3a7a0ad`.
-- Next exact batch: `MIRA-RU-LIVE-QA-002`, rows 26–50. Do not reprocess rows 1–25.
+### CIS
 
+- Canonical pilot layer: 88 rows.
+- Packages 05–06: 21 additional source-backed rows awaiting merge/dedupe before net-new canonical count is claimed.
 
-## 2026-09-16T05:35Z — current durable checkpoint
+### Bali / Vietnam / Dubai
 
-- `data/work-russia-live-qa-002.csv` was published and re-read from `main`: 25 rows covering source rows 26–50.
-- Remote live-QA coverage is now 50 rows across shards 001–002; all 50 are held in `needs_manual` under current network conditions.
-- No row is `contact_verified`; timeouts are technical blockers, not proof of inactive organizations.
-- Next exact batch: `MIRA-RU-LIVE-QA-003`, source rows 51–75. Do not reprocess rows 1–50.
+- First-party developer contact QA batch: 32 records total (8 Indonesia, 12 Vietnam, 12 UAE).
+- Dedicated agent/broker/channel routes exist for part of the batch; contracting entity and commercial terms remain a separate gate.
 
+## Launch assets now present
 
-## 2026-09-16T05:41Z — durable Russia live-QA shard 003
+- `/mira/` rebuilt acquisition landing.
+- `sales/AGENCY-SALES-PLAYBOOK.md`.
+- `sales/agency-crm-template.csv`.
+- `sales/MIRA-PILOT-PACK.md`.
+- `sales/MIRA-ONE-PAGER.md`.
+- `research/mira-first-webinar.md`.
+- `sales/russia-wave-01-owner-review.csv`.
+- `sales/phuket-p0-commercial-verification.csv`.
+- `sales/developer-acquisition-pack.md`.
+- onboarding, payment-copy and 90-day Telegram assets.
 
-- Published and re-read `data/work-russia-live-qa-003.csv`: 25 rows covering mega discovery rows 51–75.
-- All rows remain `needs_manual` under current runtime HTTP timeout conditions; no row was promoted to `contact_verified` and no outreach was sent.
-- Published shard commit: `545deafd93cc7d8f9879f50d8e6d45167fb1d728`; file SHA after re-read: `5523c32971be74916932b63ba6178defce029a4d`.
-- Durable live-QA coverage is now source rows 1–75 in three non-overlapping shards.
-- Next exact batch: mega discovery rows 76–100.
+## Next exact work
+
+### Russia
+
+1. Add live decision-route QA for **11 more unique Launch-100 accounts** to reach 50 reviewed organizations.
+2. Build `russia-launch-100-segmentation.csv` with at least: `greenfield_overseas`, `existing_foreign_desk`, `network_platform`, `premium_investment`, `newbuild_regional`, `hold_entity_resolution`.
+3. For Wave 01, resolve remaining recipient-role uncertainty and mark only owner-approved rows `approved`; no sending before that.
+4. Expand curated Launch-100 toward Launch-200 only after the first direct-contact conversion assumptions are testable.
+
+### Phuket
+
+1. Continue `phuket-project-master` beyond seed 45 using internal WEGC catalog as backbone.
+2. Do not infer legal seller from brand/operator name.
+3. For P0 developers, collect: named channel owner, agreement entity, eligible projects, current commission schedule, client-registration rule, lead-protection rule, commission trigger, payout timing, marketing-material access, inventory-update mechanism.
+4. Separate promotional public commission wording from signed/current project terms.
+
+### Operations
+
+1. Keep `WORK-STATUS.md` as the short canonical current status.
+2. Update this file only after material checkpoints.
+3. Do not count technical HTTP timeouts as inactive companies.
+4. Do not re-run naming.
+5. Do not send external outreach/forms without owner approval.
+
+## Blockers requiring owner or manual action
+
+- Owner approval for any external outreach wave.
+- Project-specific developer contracts/commission schedules not public.
+- Some agency and developer legal entities / decision owners require direct manual confirmation.
+- IP / trademark / domain clearance for MIRA remains separate from product execution.
+- Payment routes require transaction-specific compliance and provider confirmation.
+
+## Resume instruction
+
+On the next autonomous Work run:
+
+**Read `WORK-STATUS.md` and this file first. Do not repeat the old 417-row HTTP-timeout QA pipeline. Continue from 39 live-reviewed Russia accounts, 45 normalized Phuket project rows, the 40-row Phuket developer master and the 8-row P0 commercial verification file. Prioritize decision-maker quality and full internal Phuket normalization over raw row growth.**
