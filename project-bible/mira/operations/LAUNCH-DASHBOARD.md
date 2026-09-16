@@ -1,6 +1,6 @@
 # MIRA — canonical launch dashboard
 
-Source commit: `c926e2f6254d07923f44d6d46d93a1f7eae2b204`.
+Source commit: `8408d35e5e9ad573571c41f928fd28f87ed4b76a`.
 
 Repository evidence only; not a live CRM and not a claim that unobserved activity is zero. Focused route review is separate from the inherited 50 reviews; 100 source rows are not 100 currently verified agency identities.
 
@@ -15,7 +15,7 @@ Repository evidence only; not a live CRM and not a claim that unobserved activit
 | authentication | implemented_code_not_deployed | not_verified |
 | agency_profile | implemented_code | not_verified |
 | markets_catalogue | implemented_code | not_verified |
-| developer_catalogue | partial | not_verified |
+| developer_catalogue | implemented_code | not_verified |
 | project_catalogue | implemented_code | not_verified |
 | filters | source_limited | not_verified |
 | project_detail | implemented_code | not_verified |
@@ -26,7 +26,7 @@ Repository evidence only; not a live CRM and not a claim that unobserved activit
 | deal_status | implemented_code | not_verified |
 | commission_status | implemented_code | not_verified |
 | payment_request | implemented_code | not_verified |
-| documents_materials | partial | not_verified |
+| documents_materials | implemented_code_storage_closed | not_verified |
 | onboarding | implemented_code_and_runbook | not_verified |
 | admin_workflow | implemented_code_partly_manual | not_verified |
 
@@ -82,7 +82,7 @@ Business KPI values remain unknown without a defined operational dataset. Stage-
 - Focused route review preserves one positive domain/entity mismatch (Monolit: inherited domain identifies a woodworking business). Do not release that account without identity correction.
 - Ten named direct contacts cover seven accounts; shared offices and franchise-opening routes are not counted as direct decision routes. All draft contacts remain unapproved and untested.
 - Primary private supply documents have been reviewed separately; a complete current seller/inventory/registration gate is not imported or enabled.
-- Protected project-material delivery is still partial.
+- Protected material delivery code requires a new private R2 bucket, reviewed per-asset rights/release evidence and explicit enablement.
 - Owner-held operator events must remain outside this public repository.
 
 Research register is generated. Operator events remain in a separate private journal. A changed generated register blocks rebuilding instead of losing manual updates. See `OPERATOR-JOURNAL.md`.

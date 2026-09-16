@@ -32,7 +32,9 @@ export async function projectDetail(env,id,m){
  }));
  return {project:{id:p.id,name:p.name,market:p.market,developer_family:p.developer_family,legal_seller:p.legal_seller,enabled:p.enabled===1,updated_at:p.updated_at},checks,
   registration_eligible:p.enabled===1&&checks.filter(c=>c.kind!=='materials_rights').every(c=>c.state==='current'),
-  materials_available:false,
+  materials_available:env.MATERIALS_ENABLED==='true'&&env.MIRA_MATERIALS?null:false,
+  materials_path:'/mira/api/projects/'+p.id+'/materials',
+  material_availability_status:env.MATERIALS_ENABLED==='true'&&env.MIRA_MATERIALS?'query_authorized_listing':'closed_or_unconfigured',
   note:'Readiness is checked now and again on submission. Intake is not developer acknowledgement or lead protection. No inventory prices or commission amounts are inferred.'};
 }
 export async function agencyProfile(env,m){

@@ -1,3 +1,4 @@
+import {routeSupply,materialReleaseFacts} from './materials.mjs';
 import {projectDetail,agencyProfile,applicationDetail,reviewApplication} from './experience.mjs';
 import {ApiError,verifyAccess} from './auth.mjs';
 import {requireKeys,string,identifier,evidenceRef,iso,currentEvidence,leadTransition,decimalAmount,currency,STAGES,EVIDENCE_KINDS} from './rules.mjs';
@@ -165,6 +166,7 @@ async function recordEvidence(request,env,m,identity) {
  let facts={};
  if(['commission_accrued','commission_received','agency_paid'].includes(b.kind)){requireKeys(b.facts,['amount_decimal','currency'],['amount_decimal','currency']);facts={amount_decimal:decimalAmount(b.facts.amount_decimal),currency:currency(b.facts.currency)};}
  else if(b.kind==='project_agreement'){requireKeys(b.facts,['legal_seller'],['legal_seller']);facts={legal_seller:string(b.facts.legal_seller)};}
+ else if(b.kind==='material_release')facts=materialReleaseFacts(b.facts);
  else assert(b.facts===undefined||JSON.stringify(b.facts)==='{}',400,'facts_not_applicable');
  try{await run(env,`INSERT INTO mira_evidence (id,kind,project_id,agency_id,entity_id,storage_ref,facts_json,verified,verified_by,verified_at,expires_at) VALUES (?,?,?,?,?,?,?,1,?,?,?)`,id,b.kind,project,agency,entity,storage,JSON.stringify(facts),identity.subject,verified,expires);}
  catch(error){if(String(error.message).includes('UNIQUE'))throw new ApiError(409,'evidence_reference_exists');if(String(error.message).includes('FOREIGN KEY'))throw new ApiError(409,'evidence_scope_missing');throw error;}
@@ -206,6 +208,7 @@ async function handle(request,env,identityVerifier) {
    return json({subject:identity.subject,email:identity.email,membership:m,applications_enabled:env.APPLICATIONS_ENABLED==='true',privacy_version:env.PRIVACY_VERSION||null,privacy_notice_url:env.PRIVACY_NOTICE_URL||null});
  }
  const m=await membership(env,identity);
+ const supply=await routeSupply(request,env,m,identity,{bodyOf,json});if(supply)return supply;
  if(path===API+'/profile'&&request.method==='GET')return json(await agencyProfile(env,m));
  const project=path.match(/^\/mira\/api\/projects\/([A-Za-z0-9_-]+)$/);
  if(project&&request.method==='GET')return json(await projectDetail(env,project[1],m));

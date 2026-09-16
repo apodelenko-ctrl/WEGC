@@ -27,7 +27,7 @@ PRODUCT = [
  ('authentication','implemented_code_not_deployed','cloudflare-worker/mira/auth.mjs','Verified Access identity and server-side membership; no guessed login.'),
  ('agency_profile','implemented_code','cloudflare-worker/mira/experience.mjs','Scoped profile and assigned markets.'),
  ('markets_catalogue','implemented_code','mira/marketplace.mjs','Demo market selection and protected assigned-market metadata.'),
- ('developer_catalogue','partial','mira/marketplace.mjs','Group filters/metadata, not a complete standalone developer cabinet.'),
+ ('developer_catalogue','implemented_code','cloudflare-worker/mira/materials.mjs','Assigned family catalogue and project drill-down; a family is not a legal seller.'),
  ('project_catalogue','implemented_code','mira/marketplace.mjs','Source seed demo and assigned protected project catalogue.'),
  ('filters','source_limited','mira/marketplace.mjs','Only evidenced fields; no invented budget, delivery or payment-plan filters.'),
  ('project_detail','implemented_code','cloudflare-worker/mira/experience.mjs','Current evidence checks and explicit readiness limits.'),
@@ -38,7 +38,7 @@ PRODUCT = [
  ('deal_status','implemented_code','cloudflare-worker/mira/worker.mjs','Audited evidence-backed stage sequence.'),
  ('commission_status','implemented_code','cloudflare-worker/mira/worker.mjs','Exact-evidence decimal records; no default rate or financial estimate.'),
  ('payment_request','implemented_code','cloudflare-worker/mira/worker.mjs','Separate package-review request, not execution or quote.'),
- ('documents_materials','partial','mira/phuket-starter-kit.html','Public starter kit exists; protected project-material delivery remains incomplete.'),
+ ('documents_materials','implemented_code_storage_closed','cloudflare-worker/mira/materials.mjs','Private rights/hash/release-gated asset delivery and library; storage/deployment not enabled.'),
  ('onboarding','implemented_code_and_runbook','project-bible/mira/sales/AGENCY-ACTIVATION-KIT.md','Real-product demo/onboarding; contract and access are not activation.'),
  ('admin_workflow','implemented_code_partly_manual','cloudflare-worker/mira/worker.mjs','Operator application queue plus protected administration API.')
 ]
@@ -154,7 +154,7 @@ def augment_public(root, dashboard):
     dashboard['build_command']='python scripts/mira-launch-build.py'
     dashboard['readiness']['mvp0']='demo_source_available_static_deployment_separate'
     dashboard['blockers']=[x for x in dashboard['blockers'] if 'No project-specific' not in x]
-    dashboard['blockers'] += ['Primary private supply documents have been reviewed separately; a complete current seller/inventory/registration gate is not imported or enabled.','Protected project-material delivery is still partial.','Owner-held operator events must remain outside this public repository.']
+    dashboard['blockers'] += ['Primary private supply documents have been reviewed separately; a complete current seller/inventory/registration gate is not imported or enabled.','Protected material delivery code requires a new private R2 bucket, reviewed per-asset rights/release evidence and explicit enablement.','Owner-held operator events must remain outside this public repository.']
     write_views(root/OPS,dashboard)
     (root/MANIFEST).write_text(json.dumps({'schema_version':1,'source_commit':dashboard['source_commit'],'generated_register_sha256':sha((root/REGISTER).read_bytes()),'operator_records_included':False},indent=2)+'\n')
     return dashboard

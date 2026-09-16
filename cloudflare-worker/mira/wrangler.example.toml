@@ -13,6 +13,7 @@ APP_ORIGIN = "https://wegc.fund"
 ACCESS_TEAM_DOMAIN = ""
 ACCESS_AUDIENCE = ""
 APPLICATIONS_ENABLED = "false"
+MATERIALS_ENABLED = "false"
 APPLICATION_RATE_LIMIT = "5"
 PRIVACY_VERSION = ""
 PRIVACY_NOTICE_URL = ""
@@ -22,3 +23,9 @@ binding = "MIRA_DB"
 database_name = "mira-pilot"
 database_id = "REPLACE_WITH_NEW_MIRA_DATABASE_ID"
 migrations_dir = "migrations"
+
+# Optional: NEW private marketing-assets bucket, not the private contract vault.
+# Keep all r2.dev/custom-domain public access disabled; serve only via this Worker.
+# [[r2_buckets]]
+# binding = "MIRA_MATERIALS"
+# bucket_name = "REPLACE_WITH_APPROVED_PRIVATE_BUCKET"

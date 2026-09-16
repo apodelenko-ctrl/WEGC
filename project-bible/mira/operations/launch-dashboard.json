@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "source_commit": "c926e2f6254d07923f44d6d46d93a1f7eae2b204",
+  "source_commit": "8408d35e5e9ad573571c41f928fd28f87ed4b76a",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
@@ -129,7 +129,7 @@
     "Focused route review preserves one positive domain/entity mismatch (Monolit: inherited domain identifies a woodworking business). Do not release that account without identity correction.",
     "Ten named direct contacts cover seven accounts; shared offices and franchise-opening routes are not counted as direct decision routes. All draft contacts remain unapproved and untested.",
     "Primary private supply documents have been reviewed separately; a complete current seller/inventory/registration gate is not imported or enabled.",
-    "Protected project-material delivery is still partial.",
+    "Protected material delivery code requires a new private R2 bucket, reviewed per-asset rights/release evidence and explicit enablement.",
     "Owner-held operator events must remain outside this public repository."
   ],
   "controls": {
@@ -165,7 +165,7 @@
       "capability": "application",
       "implementation": "implemented_code_collection_closed",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
       "deployment": "not_verified",
       "note": "Protected durable intake exists; public brief remains local."
     },
@@ -181,7 +181,7 @@
       "capability": "agency_profile",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/experience.mjs",
-      "source_sha256": "ca03219c46d45b7cf84325f00f7af037811cc4bb8847f71f90de7aa9cd06aa4e",
+      "source_sha256": "18577134604bd29470df97b0137bdaa9ee2fd2b1ced18bbd2f80b0ea0aea6dac",
       "deployment": "not_verified",
       "note": "Scoped profile and assigned markets."
     },
@@ -195,11 +195,11 @@
     },
     {
       "capability": "developer_catalogue",
-      "implementation": "partial",
-      "source_path": "mira/marketplace.mjs",
-      "source_sha256": "d6ab32dedf1e039602479ba5964c04afd1ed19dc4753b5134b91dfed46c3e8e0",
+      "implementation": "implemented_code",
+      "source_path": "cloudflare-worker/mira/materials.mjs",
+      "source_sha256": "648f88d09ff2c8adb90ff94d14e0bd2ecf677d8943fdfbdbc6520d24d8575ce1",
       "deployment": "not_verified",
-      "note": "Group filters/metadata, not a complete standalone developer cabinet."
+      "note": "Assigned family catalogue and project drill-down; a family is not a legal seller."
     },
     {
       "capability": "project_catalogue",
@@ -221,7 +221,7 @@
       "capability": "project_detail",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/experience.mjs",
-      "source_sha256": "ca03219c46d45b7cf84325f00f7af037811cc4bb8847f71f90de7aa9cd06aa4e",
+      "source_sha256": "18577134604bd29470df97b0137bdaa9ee2fd2b1ced18bbd2f80b0ea0aea6dac",
       "deployment": "not_verified",
       "note": "Current evidence checks and explicit readiness limits."
     },
@@ -229,7 +229,7 @@
       "capability": "source_metadata",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/experience.mjs",
-      "source_sha256": "ca03219c46d45b7cf84325f00f7af037811cc4bb8847f71f90de7aa9cd06aa4e",
+      "source_sha256": "18577134604bd29470df97b0137bdaa9ee2fd2b1ced18bbd2f80b0ea0aea6dac",
       "deployment": "not_verified",
       "note": "Reviewed/expiry metadata; private vault paths not disclosed to agency."
     },
@@ -237,7 +237,7 @@
       "capability": "client_registration",
       "implementation": "implemented_code_supply_gate_closed",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
       "deployment": "not_verified",
       "note": "Intake, developer acknowledgement and protection are distinct."
     },
@@ -245,7 +245,7 @@
       "capability": "lead_status",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
       "deployment": "not_verified",
       "note": "Scoped history and evidence-gated transitions."
     },
@@ -253,7 +253,7 @@
       "capability": "lead_protection",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/rules.mjs",
-      "source_sha256": "200ec18e447926b3cd6659eacb9f26990914d35a8b8c2bdfe0c315b238596acb",
+      "source_sha256": "e2acb8658d9f39f29483b94845d887f07bdf3d4361d913c8f25907dc564b0da0",
       "deployment": "not_verified",
       "note": "No unconditional protection; project-specific evidence required."
     },
@@ -261,7 +261,7 @@
       "capability": "deal_status",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
       "deployment": "not_verified",
       "note": "Audited evidence-backed stage sequence."
     },
@@ -269,7 +269,7 @@
       "capability": "commission_status",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
       "deployment": "not_verified",
       "note": "Exact-evidence decimal records; no default rate or financial estimate."
     },
@@ -277,17 +277,17 @@
       "capability": "payment_request",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
       "deployment": "not_verified",
       "note": "Separate package-review request, not execution or quote."
     },
     {
       "capability": "documents_materials",
-      "implementation": "partial",
-      "source_path": "mira/phuket-starter-kit.html",
-      "source_sha256": "48c18b191def706aa41c15aefd9372f7af9600e1c677c6a05487aa6a6cfac4aa",
+      "implementation": "implemented_code_storage_closed",
+      "source_path": "cloudflare-worker/mira/materials.mjs",
+      "source_sha256": "648f88d09ff2c8adb90ff94d14e0bd2ecf677d8943fdfbdbc6520d24d8575ce1",
       "deployment": "not_verified",
-      "note": "Public starter kit exists; protected project-material delivery remains incomplete."
+      "note": "Private rights/hash/release-gated asset delivery and library; storage/deployment not enabled."
     },
     {
       "capability": "onboarding",
@@ -301,7 +301,7 @@
       "capability": "admin_workflow",
       "implementation": "implemented_code_partly_manual",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9",
+      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
       "deployment": "not_verified",
       "note": "Operator application queue plus protected administration API."
     }

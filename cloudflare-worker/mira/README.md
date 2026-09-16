@@ -92,3 +92,7 @@ An additive migration preserves existing intake records without backdating appro
 The project detail endpoint separates project metadata, current project-agreement/seller checks, expiring inventory, registration rules and commission schedule. It exposes verification/expiry dates, not document contents, vault IDs, prices or assumed commission. `materials_available=false` is intentional until controlled delivery of materials is implemented; rights evidence alone does not prove a working document-delivery route.
 
 Agency profile and manual application review are implemented; real deployment is still not performed. No external message/form submission, owner approval or operating activity is created by these screens. All reference test data remain explicitly synthetic.
+
+## Checkpoint09 — assigned developers and approved material delivery
+
+See [MATERIALS-README.md](./MATERIALS-README.md) for the read-only library, additive migration0003, per-file rights/release evidence and private R2 binding. Protect `/mira/library.html` with the pilot/API Access application. Material delivery remains disabled until separately configured and tested; no assets or real client data were uploaded. Internal-use downloads do not authorize client redistribution.

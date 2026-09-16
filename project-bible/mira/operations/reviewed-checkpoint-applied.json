@@ -1,43 +1,35 @@
 {
-  "id": "checkpoint-05-source-quality",
-  "payload_sha256": "bc24b40bae33b24bca5fbb530b4f49cb1a3e43fba97f7fb84dc8e0caf2c8c223",
-  "source_ref": "e974517edf4cc64bb8553a4606f33e9eed8fad30",
+  "id": "checkpoint-09-protected-materials",
+  "payload_sha256": "05081c84f81392fca504ec73e5451f2c10bbefdd93b34486f91c6e54e8a0f055",
+  "source_ref": "74f72677bbff1ae5eb52da87dfc98acfc88d62cb",
   "files": [
     {
-      "path": "scripts/mira-launch-build.py",
-      "sha256": "8f29250d69aa9f4195915c7e1c42f6f27bab3f80e5f8952603e8d78a5b597118"
+      "path": "cloudflare-worker/mira/worker.mjs",
+      "sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8"
     },
     {
-      "path": "tests/test_mira_quality.py",
-      "sha256": "af02a49bdb1412b8d437cb35e8e07e16df251ba61e7c97cc2a4bc9de830523a3"
+      "path": "cloudflare-worker/mira/rules.mjs",
+      "sha256": "e2acb8658d9f39f29483b94845d887f07bdf3d4361d913c8f25907dc564b0da0"
     },
     {
-      "path": "project-bible/mira/data/phuket-developer-alias-map-v1.csv",
-      "sha256": "0da229de67cbf84e31a2952e30053acdcb1385c771757370ca553b1afc0dfbfb"
+      "path": "cloudflare-worker/mira/experience.mjs",
+      "sha256": "18577134604bd29470df97b0137bdaa9ee2fd2b1ced18bbd2f80b0ea0aea6dac"
     },
     {
-      "path": "project-bible/mira/sales/phuket-p0-commercial-verification.csv",
-      "sha256": "4063de3ddc8da3031cd8bba2d41699c208cc8e2c8f26d38e1d0a4ed16f4ee483"
+      "path": "cloudflare-worker/mira/wrangler.example.toml",
+      "sha256": "ceb3e66530965422f4cf34028ceefc67ea7d348e5c6ebe9ee28ee69c83380666"
     },
     {
-      "path": "project-bible/mira/sales/russia-reviewed-aliases.csv",
-      "sha256": "cdd2266ad5ef3152793fda29cf495bfdce87a94b71b524e6dcaa0dbb19c163f8"
+      "path": "cloudflare-worker/mira/README.md",
+      "sha256": "8d1d4fd6d1ea97cebc678a108d36f8cd402259b9e02ac9bb30b735383810c798"
     },
     {
-      "path": "project-bible/mira/operations/focused-source-review-2026-09-16.csv",
-      "sha256": "8eb8be25d2561f858da5bd7d068df39073b87cb4d848b49ecace2427e7122f89"
+      "path": "mira/pilot.html",
+      "sha256": "a2b87eac7875219483ef446c05257916d1ec9dd052800b7e811b2f1f889c6232"
     },
     {
-      "path": "project-bible/mira/operations/checkpoint-05-source-quality.md",
-      "sha256": "90450f3b646c8b2b5ae51c3e138ede7a164b83057560a38ad7b77fab9a831a7b"
-    },
-    {
-      "path": "project-bible/mira/WORK-STATUS.md",
-      "sha256": "44a5d21f4281fe8b63077c9b98f2827d141e6c369c26ab232a88f82c1e62d930"
-    },
-    {
-      "path": "project-bible/mira/RESUME-STATE.md",
-      "sha256": "68db483e0746e5a1c6db5ac2abc510a93d9b233aa941636d04f0039a55f663d2"
+      "path": "scripts/mira-launch-operations.py",
+      "sha256": "cb2e2fe6561d272f5a401e15bc9b5946bf1fe6a38b823fcdebe603ee86479a27"
     }
   ]
 }
