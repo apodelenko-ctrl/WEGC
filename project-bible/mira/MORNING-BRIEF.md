@@ -121,3 +121,10 @@
 - Russia live-QA coverage is now 50 remote rows in two append-only shards, both verified by re-reading `main`.
 - All rows are currently `needs_manual` because the runtime cannot establish a reliable HTTP response; no inactive-company conclusion was made.
 - Next exact batch: source rows 51–75. Outreach remains disabled.
+
+
+## Durable Russia QA checkpoint — 2026-09-16T05:47Z
+
+- Published and re-read four append-only live-QA shards covering source rows 1–100.
+- Current shell network conditions produce timeout/HTTP-000 results, so the 100 rows remain `needs_manual`; no false inactive-company claims were made.
+- Next exact batch: rows 101–125. Outreach remains disabled.
