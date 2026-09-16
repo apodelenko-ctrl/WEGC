@@ -1,0 +1,40 @@
+name: MIRA agency landing release check
+on:
+  workflow_run:
+    workflows: ['Deploy static site to GitHub Pages']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mira-agency-landing-release
+  cancel-in-progress: true
+jobs:
+  check:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned browser test runner
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Browser and public static-release verification (no external writes)
+        env:
+          MIRA_SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: python tests/mira-agency-release.py
+      - name: Preserve release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mira-agency-release
+          path: reports/mira-agency/
+          retention-days: 14
+          if-no-files-found: warn

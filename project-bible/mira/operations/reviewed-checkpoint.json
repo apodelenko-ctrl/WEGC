@@ -1,1 +1,128 @@
-{"version":1,"kind":"reviewed-public-source","id":"checkpoint-09-protected-materials","source_ref":"74f72677bbff1ae5eb52da87dfc98acfc88d62cb","files":[{"path":"cloudflare-worker/mira/worker.mjs","before_sha256":"67077fd9a646f441a34b251e95b0c6fc68f047d697cbd7b212c365a887dbf8d9","sha256":"ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8","codec":"utf8-edits-v1","edits":[{"old":"import {projectDetail,agencyProfile,applicationDetail,r","new":"import {routeSupply,materialReleaseFacts} from './materials.mjs';\nimport {projectDetail,agencyProfile,applicationDetail,r"},{"old":"ts={legal_seller:string(b.facts.legal_seller)};}\n else assert(b.facts===undefined||JSON.stringify(b.facts)==='","new":"ts={legal_seller:string(b.facts.legal_seller)};}\n else if(b.kind==='material_release')facts=materialReleaseFacts(b.facts);\n else assert(b.facts===undefined||JSON.stringify(b.facts)==='"},{"old":"URL||null});\n }\n const m=await membership(env,identity);\n if(path===API+'/profile'&&request.method==='GET')ret","new":"URL||null});\n }\n const m=await membership(env,identity);\n const supply=await routeSupply(request,env,m,identity,{bodyOf,json});if(supply)return supply;\n if(path===API+'/profile'&&request.method==='GET')ret"}]},{"path":"cloudflare-worker/mira/rules.mjs","before_sha256":"200ec18e447926b3cd6659eacb9f26990914d35a8b8c2bdfe0c315b238596acb","sha256":"e2acb8658d9f39f29483b94845d887f07bdf3d4361d913c8f25907dc564b0da0","codec":"utf8-edits-v1","edits":[{"old":"stration_rules','commission_schedule','materials_rights','client_consent','owner_approval','developer_submissi","new":"stration_rules','commission_schedule','materials_rights','material_release','client_consent','owner_approval','developer_submissi"}]},{"path":"cloudflare-worker/mira/experience.mjs","before_sha256":"ca03219c46d45b7cf84325f00f7af037811cc4bb8847f71f90de7aa9cd06aa4e","sha256":"18577134604bd29470df97b0137bdaa9ee2fd2b1ced18bbd2f80b0ea0aea6dac","codec":"utf8-edits-v1","edits":[{"old":").every(c=>c.state==='current'),\n  materials_available:false,\n  note:'Readiness is checked now and again on submiss","new":").every(c=>c.state==='current'),\n  materials_available:env.MATERIALS_ENABLED==='true'&&env.MIRA_MATERIALS?null:false,\n  materials_path:'/mira/api/projects/'+p.id+'/materials',\n  material_availability_status:env.MATERIALS_ENABLED==='true'&&env.MIRA_MATERIALS?'query_authorized_listing':'closed_or_unconfigured',\n  note:'Readiness is checked now and again on submiss"}]},{"path":"cloudflare-worker/mira/wrangler.example.toml","before_sha256":"5d243e910c0140f0e06642a7babb15052b796e7807768a0dfa4c90c24aaa8592","sha256":"ceb3e66530965422f4cf34028ceefc67ea7d348e5c6ebe9ee28ee69c83380666","codec":"utf8-edits-v1","edits":[{"old":"\"\"\nACCESS_AUDIENCE = \"\"\nAPPLICATIONS_ENABLED = \"false\"\nAPPLICATION_RATE_LIMIT = \"5\"\nPRIVACY_VERSION = \"\"\nPRIVA","new":"\"\"\nACCESS_AUDIENCE = \"\"\nAPPLICATIONS_ENABLED = \"false\"\nMATERIALS_ENABLED = \"false\"\nAPPLICATION_RATE_LIMIT = \"5\"\nPRIVACY_VERSION = \"\"\nPRIVA"},{"old":"TH_NEW_MIRA_DATABASE_ID\"\nmigrations_dir = \"migrations\"\n","new":"TH_NEW_MIRA_DATABASE_ID\"\nmigrations_dir = \"migrations\"\n\n# Optional: NEW private marketing-assets bucket, not the private contract vault.\n# Keep all r2.dev/custom-domain public access disabled; serve only via this Worker.\n# [[r2_buckets]]\n# binding = \"MIRA_MATERIALS\"\n# bucket_name = \"REPLACE_WITH_APPROVED_PRIVATE_BUCKET\"\n"}]},{"path":"cloudflare-worker/mira/README.md","before_sha256":"59975c84163216ee0f4cf42f9aa1823b7bb50c4d2fd9ffe384940507ff04361a","sha256":"8d1d4fd6d1ea97cebc678a108d36f8cd402259b9e02ac9bb30b735383810c798","codec":"utf8-edits-v1","edits":[{"old":". All reference test data remain explicitly synthetic.\n","new":". All reference test data remain explicitly synthetic.\n\n## Checkpoint09 — assigned developers and approved material delivery\n\nSee [MATERIALS-README.md](./MATERIALS-README.md) for the read-only library, additive migration0003, per-file rights/release evidence and private R2 binding. Protect `/mira/library.html` with the pilot/API Access application. Material delivery remains disabled until separately configured and tested; no assets or real client data were uploaded. Internal-use downloads do not authorize client redistribution.\n"}]},{"path":"mira/pilot.html","before_sha256":"dfcceee15dee0fb5112a6be13815849a710291e94bdbb0bc8c4d9db30f5d9086","sha256":"a2b87eac7875219483ef446c05257916d1ec9dd052800b7e811b2f1f889c6232","codec":"utf8-edits-v1","edits":[{"old":"type=\"button\" data-section=\"projects\">Проекты</button><button type=\"button\" data-section=\"leads\">Клиенты</butt","new":"type=\"button\" data-section=\"projects\">Проекты</button><a href=\"./library.html\">Застройщики и материалы</a><button type=\"button\" data-section=\"leads\">Клиенты</butt"}]},{"path":"scripts/mira-launch-operations.py","before_sha256":"5d5e5ccffb63ac0d1ba8971c2877ad82d09205f8c63d56434ec1d329c900da2f","sha256":"cb2e2fe6561d272f5a401e15bc9b5946bf1fe6a38b823fcdebe603ee86479a27","codec":"utf8-edits-v1","edits":[{"old":" assigned-market metadata.'),\n ('developer_catalogue','partial','mira/marketplace.mjs','Group filters/metadata, not a complete standalone developer cabinet.'),\n ('project_catalogue','implemented_code','mira/mar","new":" assigned-market metadata.'),\n ('developer_catalogue','implemented_code','cloudflare-worker/mira/materials.mjs','Assigned family catalogue and project drill-down; a family is not a legal seller.'),\n ('project_catalogue','implemented_code','mira/mar"},{"old":"t, not execution or quote.'),\n ('documents_materials','partial','mira/phuket-starter-kit.html','Public starter kit exists; protected project-material delivery remains incomplete.'),\n ('onboarding','implemented_code_and_runbook','pro","new":"t, not execution or quote.'),\n ('documents_materials','implemented_code_storage_closed','cloudflare-worker/mira/materials.mjs','Private rights/hash/release-gated asset delivery and library; storage/deployment not enabled.'),\n ('onboarding','implemented_code_and_runbook','pro"},{"old":"istration gate is not imported or enabled.','Protected project-material delivery is still partial.','Owner-held operator events must remain outside this","new":"istration gate is not imported or enabled.','Protected material delivery code requires a new private R2 bucket, reviewed per-asset rights/release evidence and explicit enablement.','Owner-held operator events must remain outside this"}]}]}
+{
+  "version": 1,
+  "kind": "reviewed-public-source",
+  "id": "checkpoint-10-agency-funnel",
+  "source_ref": "7a248e998795aa15c90a43de06eb2595f7a5cce1",
+  "files": [
+    {
+      "path": "mira/index.html",
+      "before_sha256": "71445d8ae7e6e79f656b465fa3a6be311006c1ee5e18dd72a3428daa89c4d6b0",
+      "sha256": "a28911cbe74a078a5c7f289939bac3c24638419cf47adda6415c7ade00a939b0",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "<a class=\"btn\" href=\"#join\">Подключить агентство</a>",
+          "new": "<a class=\"btn\" href=\"./agency/\">Подключить агентство</a>"
+        },
+        {
+          "old": "<a class=\"btn\" href=\"./marketplace.html?view=application\">Подготовить бриф агентства</a>",
+          "new": "<a class=\"btn\" href=\"./agency/#start\">Подобрать сценарий подключения</a>"
+        }
+      ]
+    },
+    {
+      "path": "mira/marketplace.html",
+      "before_sha256": "e49567c59f7bebb16517f4d4d166a8702db59464c1547ade67ba419d771885b2",
+      "sha256": "ae7733999925f1a7d4d51f0f261ac4a8039e78ee682cc98f7605ce8d30bf23c6",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "<a href=\"./marketplace.html?view=application\">Подключить агентство</a></header>",
+          "new": "<a href=\"./agency/#start\">Подключить агентство</a></header>"
+        }
+      ]
+    },
+    {
+      "path": "mira/webinar.html",
+      "before_sha256": "338f0a75ee6060a8d5e941ceb2692d3f4ffe8471e5ec84f5d3efda77a9037f41",
+      "sha256": "4362b3bb22d216d5bef6b935bba2b090224505e9145e751cb0061bb1c24fb2b6",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "<a class=\"btn\" href=\"/mira/marketplace.html?view=application\">Подготовить локальный бриф</a>",
+          "new": "<a class=\"btn\" href=\"/mira/agency/#start\">Подобрать сценарий подключения</a>"
+        },
+        {
+          "old": "Бриф в публичном демо хранится локально. Его подготовка не означает отправку заявки или выдачу рабочего доступа.",
+          "new": "Бриф на странице подключения создаётся только в браузере. Его подготовка не означает отправку заявки или выдачу рабочего доступа."
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/sales/AGENCY-ACTIVATION-KIT.md",
+      "before_sha256": "c053241eb9f8629502c2e552760329f3d6968a8e66a9c932fe1faa9c0a4c6efd",
+      "sha256": "d71d4f2ed762942bea4b366c6fd1a3630f4f666fec935ac83932c501c8faf0bb",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "→ `/mira/` → демо → квалификация",
+          "new": "→ `/mira/agency/` → демо / локальная квалификация"
+        }
+      ]
+    },
+    {
+      "path": "scripts/mira-launch-operations.py",
+      "before_sha256": "cb2e2fe6561d272f5a401e15bc9b5946bf1fe6a38b823fcdebe603ee86479a27",
+      "sha256": "41dcf90fb8630bdb4abb7e2665f9dbe5bed1f4ca37ea744b00432a0fca739f9b",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "('public_landing','implemented_code','mira/index.html','Accepted positioning and actual demo/closed-pilot entry.'),",
+          "new": "('public_landing','implemented_code','mira/agency/index.html','Dedicated agency funnel: four entry segments, local brief and real demo links. General /mira/ landing retained; live intake remains closed.'),"
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/README.md",
+      "before_sha256": "4e2111cbf6694283c6df3ba7770e00f03523769bc8ebd19fcb42b88a377282fa",
+      "sha256": "66d08858e34a29d305e755d0e45178956df47d52740732f20f1440b2581e15e3",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "- `data/phuket-top60-contact-routes-checked.csv` — TOP-60 contact-route QA and outreach qualification queue.\n",
+          "new": "- `data/phuket-top60-contact-routes-checked.csv` — TOP-60 contact-route QA and outreach qualification queue.\n\n## Agency acquisition landing — checkpoint 10\n\n[Dedicated agency funnel](https://wegc.fund/mira/agency/) → [marketplace demo](https://wegc.fund/mira/marketplace.html) → local three-question brief → owner/operator-approved pilot. The general `/mira/` page remains intact. No public intake, automatic admission or live registration is implied.\n\nSource behavior, campaign entry URLs, measurement boundaries and release checks: [agency-funnel.md](./product/agency-funnel.md).\n"
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/08-decisions-log.md",
+      "before_sha256": "1590c4fa1645793f8a854d14c6dcc371b2ffd1c6bce25649456dcf366086e507",
+      "sha256": "2206260d5beb8a8b327d0e277a41f7cd514fdcde69b015e6fd1e6cccaf15360c",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "- IP / trademark / domain clearance бренда МИРА.\n",
+          "new": "- IP / trademark / domain clearance бренда МИРА.\n\n## 2026-09-16 — checkpoint 10 / dedicated agency funnel\n\n**Принято по запросу владельца:** отдельная страница привлечения агентств `/mira/agency/`, без замены общего лендинга и marketplace demo. Сценарий: оффер → модель и сохранение клиента → сегмент → Пхукет → демо → локальная квалификация → согласованный доступ.\n\n**Реализовано:** четыре сегментных входа и три вопроса без персональных данных. Ответы не отправляются и не сохраняются на сервере. Скачать бриф можно по явному действию пользователя. Бриф не является заявкой, квалификацией оператора или активацией.\n\n**Сохранено:** запрет внешнего outreach без отдельного разрешения; закрытый приём рабочих заявок; проектные правила регистрации и комиссии; отсутствие универсального тарифа и вымышленных показателей. Новая страница не снимает deployment/supply gates.\n"
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/WORK-STATUS.md",
+      "before_sha256": "6a9c8a65ade1dbdbe68dd4658e8961c13eb34608725439d8f2e4ef929bb0df18",
+      "sha256": "12bedbafdeafa34c188a65ee86988c5d253c868f79fd4ac4a6955b7da78125a8",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "\nUpdated:2026-09-16 — checkpoint09. Execution continues; checkpoint is not launch completion.\n\n",
+          "new": "\nUpdated:2026-09-16 — checkpoint10: dedicated agency landing. Release verification pending; not marketplace pilot readiness.\n\n"
+        },
+        {
+          "old": "\n## Latest delivery\n\n",
+          "new": "\n## Latest delivery — CP10 agency funnel\n\nSeparate `/mira/agency/` page implements the requested acquisition flow and four agency-model entry routes. Three fixed-choice questions produce only a local plan/optional text brief; no personal-data input, external submit, analytics or server storage. Actual demo/kit/webinar/pilot links are used; working intake remains closed.\n\nLocal66 Node/66 Python tests and10 offline browser cases passed; layout checked at320/360/390/768/1024/1440. Incoming landing/demo/webinar links and canonical public_landing entry are updated without changing backend gates. See `product/agency-funnel.md` and `operations/checkpoint-10-agency-funnel.md`. Check Pages and the new static-release workflow before asserting live publication.\n\n## Previous delivery — CP09\n\n"
+        }
+      ]
+    },
+    {
+      "path": "project-bible/mira/RESUME-STATE.md",
+      "before_sha256": "369746ab1730cd3ca47f6d67d42f9a1ac86e69581a5765f474902de938fba8bc",
+      "sha256": "5797ec606c762d00da5b7b028623a6a4449e41507fe141fae12ee9dcf1b21e55",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "\nUpdated:2026-09-16 — CP09. Read mission12 → WORK-STATUS → this file → relevant source. Continue; this is a checkpoint, not mission completion.\n\n",
+          "new": "\nUpdated:2026-09-16 — CP10 agency funnel. Read mission12 → WORK-STATUS → this file → relevant source. Continue; this is a checkpoint, not mission completion.\n\n## Current owner task — CP10\n\nDedicated `/mira/agency/` implemented with four segmented entries, three-question local brief and real demo links. No new public intake or external sender. Local66Node/66Python and10 offline UI cases passed. Verify Pages/public-static release and literal integration persistence, then return the actual URL to the owner. Do not repeat historical CP04 recovery or restart naming. Static publication is not Worker deployment.\n\n"
+        }
+      ]
+    }
+  ]
+}
