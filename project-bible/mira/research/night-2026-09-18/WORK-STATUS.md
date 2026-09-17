@@ -1,5 +1,17 @@
 # MIRA — night research status
 
+## 03:00 Russia regional agency expansion, pass A — completed, 18 September 2026
+
+Saved **29 source-backed net-new agency candidates** after current public web research and exact-domain searches across the repository default branch, following review of the active Russia Launch-100 / `agencies-russia-pilot.csv` context. Saved outputs: `03-russia-a.json`, `03-russia-a.csv`, `03-russia-a.md`.
+
+Quality split: **26** current first-party rows without a material source/entity blocker in this pass; **2** current first-party rows held for additional quality review (`Аурум` entity metadata; `Виктори` content-quality review); **1** current-secondary-confirmed partial (`Good House`, Murmansk) whose referenced first-party site was not retrieved directly. All remain research-only and **0 are approved for outreach**.
+
+Three web discoveries were rejected before counting because repository search showed them in existing Russia datasets: `Вершина` (`vershina-dv.ru`), `Адресат` (`adresat.pro`) and `РиэлтКонсалт` (`rieltconsult.ru`). Exact-domain no-match across indexed repository text is not treated as proof of independent legal ownership; brand/rebrand/entity dedupe continues in pass B and branches of a network must not be counted as separate companies without evidence.
+
+Strong signals for qualification include AFLAT Vladivostok (first-party Thailand-property route alongside Vladivostok new builds), Аурум Tomsk (first-party abroad-investment signal but entity hold), and several new-build/investment-heavy regional agencies in Vladivostok, Kaliningrad, Izhevsk, Veliky Novgorod, Krasnoyarsk and Ryazan. No private personal contacts were added; public rows keep corporate routes.
+
+Next nominal slot: 04:00 Russia pass B — add at least 21 more source-backed net-new domains toward the 50-agency night target, verify corporate decision routes for the strongest rows and run brand/legal-entity/rebrand dedupe on pass A. No external messages or forms.
+
 ## 02:00 Vietnam / Montenegro validation — completed, 18 September 2026
 
 All 30 saved project records were rechecked against current public sources and current main context. Vietnam now has **14 complete-for-discovery / 1 partial**; Montenegro has **10 complete-for-discovery / 5 partial**. Saved outputs: `02-project-validation.json`, `02-project-validation.csv`, `02-project-validation.md`.
@@ -54,4 +66,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-03:00 Russia expansion pass A. Read PLAN.md, the existing Russia master/Launch-100/CRM sources and the night progress before execution. Count only net-new agencies after deduplication; keep root WORK-STATUS/RESUME owned by local Codex untouched.
+04:00 Russia expansion pass B. Continue from `03-russia-a.*`; do not replay earlier discovery. Add the remaining net-new coverage, verify strong corporate routes and run brand/entity/rebrand dedupe before counting the full 50-agency night target.
