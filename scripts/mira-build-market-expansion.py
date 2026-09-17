@@ -34,6 +34,9 @@ def integrate_text(text,market):
  if 'data-mira-markets="v1"' not in text:text=text.replace('</header>','</header>'+nav(market),1)
  if '/mira/catalog/markets/markets.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/mira/catalog/markets/markets.css"></head>',1)
  text=text.replace('src="/mira/catalog/catalog.mjs"','src="/mira/catalog/markets/controller.mjs"')
+ # A static back link still restores filters if detail-page JavaScript never loads.
+ for path in ['/mira/catalog/','/mira/catalog/bali/','/mira/catalog/dubai/']:
+  text=text.replace('data-catalog-back href="'+path+'"','data-catalog-back href="'+path+'?restore=1"')
  return text
 def approved_image(root,p,approvals):
  a=approvals.get(p['id'])
