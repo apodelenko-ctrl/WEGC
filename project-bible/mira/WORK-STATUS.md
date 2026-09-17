@@ -26,7 +26,7 @@ Confirm CP13 remote integrity; create direct/practical/corporate funnels and sta
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `d40eb812857e8d0983958f676661b07619a56eb0`.
+Source commit: `fc6cf4f50ed41ee62e0403720199f1d1ecb56b36`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
