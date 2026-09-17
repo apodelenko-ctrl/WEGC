@@ -93,7 +93,9 @@ def run(base, out):
             assert page.locator('#motion-toggle').get_attribute('aria-pressed') == 'true'
             assert page.locator('#hero-image').evaluate('(el) => el.getAnimations().every(a => a.playState === "paused")')
             page.emulate_media(reduced_motion='reduce')
-            page.wait_for_function('document.querySelector("#hero-image").getAnimations().length === 0')
+            # Wait for the media-query handler without eval under the real CSP.
+            page.locator('#motion-toggle').wait_for(state='hidden')
+            assert page.locator('#hero-image').evaluate('(el) => el.getAnimations().length === 0')
             mark('preserved_motion_pause_and_reduced')
             plain = browser.new_context(java_script_enabled=False, service_workers='block')
             plain.route('**/*', guard)
