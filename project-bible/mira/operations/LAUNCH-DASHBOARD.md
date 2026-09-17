@@ -1,6 +1,6 @@
 # MIRA — canonical launch dashboard
 
-Source commit: `287bb40c03f35180dcaa778bcf249cfb87e90fe0`.
+Source commit: `b4704916e6faf513f9d3eb2324e40d40456e2e86`.
 
 Repository evidence only; not a live CRM and not a claim that unobserved activity is zero. Focused route review is separate from the inherited 50 reviews; 100 source rows are not 100 currently verified agency identities.
 

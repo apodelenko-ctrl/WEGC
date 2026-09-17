@@ -30,7 +30,7 @@ Authorized primary-data hosting/controller/privacy/security/operator and a curre
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `287bb40c03f35180dcaa778bcf249cfb87e90fe0`.
+Source commit: `b4704916e6faf513f9d3eb2324e40d40456e2e86`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
