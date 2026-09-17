@@ -20,14 +20,14 @@ const issuer='https://mira-browser-test.cloudflareaccess.com';
 const jwk={...await crypto.subtle.exportKey('jwk',keys.publicKey),kid:'TEST-KEY',alg:'RS256',use:'sig'};
 globalThis.fetch=async(url,options)=>{if(url!==issuer+'/cdn-cgi/access/certs'||options.redirect!=='manual')throw Error('Unexpected fixture egress');return Response.json({keys:[jwk]});};
 const b64=v=>Buffer.from(JSON.stringify(v)).toString('base64url');
-async function token(subject){const n=Math.floor(Date.now()/1000),p=b64({alg:'RS256',kid:'TEST-KEY'})+'.'+b64({iss:issuer,aud:['TEST-AUD'],sub:subject,email:subject.toLowerCase()+'@example.test',type:'app',iat:n,exp:n+600});return p+'.'+Buffer.from(await crypto.subtle.sign('RSASSA-PKCS1-v1_5',keys.privateKey,new TextEncoder().encode(p))).toString('base64url');}
+async function token(subject,expired=false){const n=Math.floor(Date.now()/1000),p=b64({alg:'RS256',kid:'TEST-KEY'})+'.'+b64({iss:issuer,aud:['TEST-AUD'],sub:subject,email:subject.toLowerCase()+'@example.test',type:'app',iat:n,exp:expired?n-60:n+600});return p+'.'+Buffer.from(await crypto.subtle.sign('RSASSA-PKCS1-v1_5',keys.privateKey,new TextEncoder().encode(p))).toString('base64url');}
 const server=http.createServer(async(req,res)=>{try{
  const origin='http://127.0.0.1:'+server.address().port,url=new URL(req.url,origin);
  const subject=req.headers['x-mira-fixture-user'];if(!['TEST-OPERATOR','TEST-APPLICANT','TEST-OTHER'].includes(subject)){res.writeHead(401);res.end('Synthetic fixture identity required');return;}
  if(url.pathname.startsWith('/mira/api/')){
   let body='';for await(const chunk of req)body+=chunk;
   const env={MIRA_DB:database,APP_ORIGIN:origin,ACCESS_TEAM_DOMAIN:issuer,ACCESS_AUDIENCE:'TEST-AUD',APPLICATIONS_ENABLED:'true',PRIVACY_VERSION:'TEST-ONLY',PRIVACY_NOTICE_URL:origin+'/test-privacy',MATERIALS_ENABLED:'false'};
-  const r=await worker.fetch(new Request(url,{method:req.method,headers:{...req.headers,'Cf-Access-Jwt-Assertion':await token(subject)},...(body?{body}:{})}),env);
+  const r=await worker.fetch(new Request(url,{method:req.method,headers:{...req.headers,'Cf-Access-Jwt-Assertion':await token(subject,req.headers['x-mira-fixture-expired']==='true')},...(body?{body}:{})}),env);
   res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));return;
  }
  const assets={'/mira/pilot.html':['mira/pilot.html','text/html'],'/mira/pilot.mjs':['mira/pilot.mjs','text/javascript'],'/mira/marketplace.css':['mira/marketplace.css','text/css']};

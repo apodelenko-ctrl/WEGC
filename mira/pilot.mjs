@@ -96,6 +96,7 @@ async function applicationCard(id,isOperator){
   };root.append(proofButton);
  }
  const review=root.querySelector('#application-review');
+ review.elements.agency_id.oninput=()=>{root.querySelector('[data-proof=agency_onboarding]')?.remove();review.elements.evidence_ref.value='';};
  const updateReviewFields=()=>{const stage=review.elements.status.value;for(const name of ['evidence_ref','agency_id']){const input=review.elements[name],needed=name==='agency_id'?stage==='onboarded':['qualified','onboarded'].includes(stage);input.disabled=!needed;input.required=needed;input.closest('label').hidden=!needed;}};
  review.elements.status.onchange=updateReviewFields;updateReviewFields();
  document.querySelector('#application-review').onsubmit=e=>{e.preventDefault();withForm(e.target,async output=>{
@@ -154,7 +155,19 @@ async function agencyCard(id,app=null,cursor=''){
   target.innerHTML=`<form id="bind-owner" class="panel"><h3>Представитель из заявки</h3><p>${esc(app.name)} · ${esc(app.email)}</p><p>Агентство: <strong>${esc(a.name)}</strong></p><label><input type="checkbox" required>Полномочия представителя проверены; назначить его руководителем этого агентства.</label><button type="submit">Назначить представителя</button><p role="status"></p></form>`;
   target.querySelector('form').onsubmit=e=>{e.preventDefault();withForm(e.target,async output=>{await api('/admin/memberships',{subject:app.subject,agency_id:id,role:'agency_owner',active:true});output.className='success';output.textContent='Представитель назначен. Итоговый этап подключения запиши в заявке.';});};
  }
- try{const history=await api('/admin/audit?entity_type=agency&entity_id='+encodeURIComponent(id)+'&limit=100');document.querySelector('#agency-audit').innerHTML=history.records.map(e=>`<div class="row"><strong>${esc(e.status)}</strong><p>${esc(e.created_at)} · версия ${e.version}</p></div>`).join('')||'<p>Изменений нет.</p>';}catch(e){document.querySelector('#agency-audit').textContent=e.message;}
+ await auditHistory(document.querySelector('#agency-audit'),'agency',id);
+ for(const form of members.querySelectorAll('.member-access')){const history=document.createElement('div');form.after(history);await auditHistory(history,'membership',form.dataset.subject);}
+}
+
+async function auditHistory(target,type,id,after=null){
+ const control=document.createElement('button');control.className='secondary';control.textContent=after===null?'Загрузить журнал':'Ещё события';
+ const load=async()=>{control.disabled=true;try{
+  const history=await api('/admin/audit?entity_type='+type+'&entity_id='+encodeURIComponent(id)+'&limit=50'+(after===null?'':'&after_version='+after));
+  control.remove();if(!history.records.length&&after===null)target.append(document.createTextNode('Изменений нет.'));
+  for(const event of history.records){const row=document.createElement('div');row.className='row';row.innerHTML=`<strong>${esc(event.status)}</strong><p>${esc(event.created_at)} · версия ${event.version}</p>`;target.append(row);}
+  if(history.next_after_version!==null)await auditHistory(target,type,id,history.next_after_version);
+ }catch(e){control.textContent=e.message+' — повторить';control.disabled=false;}};
+ control.onclick=load;target.append(control);if(after===null&&type==='agency')await load();
 }
 
 async function operator(cursor=''){

@@ -315,3 +315,12 @@ test('agency directory reflects suspension, access revocation and expired agreem
  assert.equal(d.agency.status,'suspended');assert.equal(d.agreement_current,false);
  assert.equal(db.db.prepare("SELECT COUNT(*) AS n FROM mira_events WHERE entity_type IN ('agency','membership')").get().n,2);
 });
+
+test('member pagination accepts the full stored identity subject without broadening agency identifiers',async()=>{
+ const {call}=setup(),subject='external|'+ 'x'.repeat(120);
+ assert.equal((await call('operator','/admin/memberships',{subject,agency_id:'agency-a',role:'broker',active:true})).status,200);
+ const page=await call('operator','/admin/agencies/agency-a?limit=1&cursor='+encodeURIComponent(subject));
+ assert.equal(page.status,200);assert.equal(page.body.members.records[0].subject,'owner-a');
+ assert.equal((await call('operator','/admin/agencies?cursor='+encodeURIComponent(subject))).status,400);
+ assert.equal((await call('operator','/admin/agencies/agency-a?cursor='+ 'x'.repeat(201))).status,400);
+});

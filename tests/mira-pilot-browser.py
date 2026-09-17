@@ -50,6 +50,10 @@ async def main():
    await operator.locator('#agency-create button[type=submit]').click()
    await operator.locator('#agency-state').wait_for()
    agencyid=await operator.locator('#pilot-content>code').inner_text()
+   await operator.locator('#agency-state [name=status]').select_option('active')
+   await operator.locator('#agency-state [name=agreement_ref]').fill('EVID-DOES-NOT-EXIST')
+   await operator.locator('#agency-state button[type=submit]').click()
+   await operator.locator('#agency-state [role=status]').filter(has_text='Подтверждение отсутствует').wait_for()
    await proof('agency_agreement','EVID-TEST-AGREEMENT')
    await operator.locator('#agency-state [name=status]').select_option('active')
    await operator.locator('#agency-state button[type=submit]').click()
@@ -81,6 +85,26 @@ async def main():
    await operator.get_by_text('Руководитель · Доступ выключен',exact=True).wait_for()
    await applicant.reload();await applicant.locator('[data-section=profile]').click()
    await applicant.get_by_text('Оператор ещё не назначил доступ агентству.',exact=True).wait_for()
+   denied=await applicant.evaluate("async()=>{const r=await fetch('/mira/api/profile');return r.status}")
+   assert denied==403
+   await operator.locator('.member-access input[type=checkbox]').check()
+   await operator.locator('.member-access button').click()
+   await operator.get_by_text('Руководитель · Доступ включён',exact=True).wait_for()
+   assert await applicant.evaluate("async()=>{const r=await fetch('/mira/api/profile');return r.status}")==200
+   history=await operator.evaluate("async subject=>(await fetch('/mira/api/admin/audit?entity_type=membership&entity_id='+subject)).json()",'TEST-APPLICANT')
+   assert [r['status'] for r in history['records']]==['agency_owner_active','agency_owner_inactive','agency_owner_active']
+   await contexts[1].set_extra_http_headers({'x-mira-fixture-user':'TEST-APPLICANT','x-mira-fixture-expired':'true'})
+   assert await applicant.evaluate("async()=>{const r=await fetch('/mira/api/session');return r.status}")==401
+   await contexts[1].set_extra_http_headers({'x-mira-fixture-user':'TEST-APPLICANT'})
+   restored=await applicant.evaluate("async id=>(await fetch('/mira/api/applications/'+id)).json()",appid)
+   assert restored['application']['id']==appid
+   # Exercise real audit pagination rather than replacing API responses in the browser.
+   await operator.evaluate("""async id=>{for(let i=0;i<51;i++){const r=await fetch('/mira/api/admin/agencies',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id,name:'SYNTHETIC AGENCY',city:'TEST CITY',status:'active',agreement_ref:'EVID-TEST-AGREEMENT'})});if(!r.ok)throw Error(await r.text());}}""",agencyid)
+   await operator.locator('#back-agencies').click();await operator.locator('[data-agency="'+agencyid+'"]').click()
+   await operator.locator('#agency-audit button').filter(has_text='Ещё события').wait_for()
+   assert await operator.locator('#agency-audit .row').count()==50
+   await operator.locator('#agency-audit button').click()
+   await operator.locator('#agency-audit .row').nth(52).wait_for()
    for width in [390,768,1440]:
     await operator.set_viewport_size({'width':width,'height':900})
     assert await operator.evaluate('document.documentElement.scrollWidth<=innerWidth'),width
@@ -88,7 +112,7 @@ async def main():
    await operator.screenshot(path=str(OUTPUT/'operator-agency-mobile.png'),full_page=True)
    assert not errors,errors
    await browser.close()
-  result={'local_signed_worker_browser':'passed','receipt_and_reload':'passed','operator_qualification':'passed','agreement_activation_owner_binding':'passed','onboarding':'passed','other_identity_isolation':'passed','revocation':'passed','widths':[390,768,1440],'page_errors':errors,'live_access_d1_acceptance':False}
+  result={'local_signed_worker_browser':'passed','receipt_and_reload':'passed','operator_qualification':'passed','agreement_activation_owner_binding':'passed','onboarding':'passed','other_identity_isolation':'passed','activation_without_evidence':'denied','revocation':'passed','restoration_with_audit':'passed','expired_session_receipt_preserved':'passed','audit_pagination':'passed','widths':[390,768,1440],'page_errors':errors,'live_access_d1_acceptance':False}
   (OUTPUT/'report.json').write_text(json.dumps(result,indent=2))
   print(json.dumps(result))
  finally:

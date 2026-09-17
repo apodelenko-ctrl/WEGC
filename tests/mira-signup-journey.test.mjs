@@ -127,6 +127,7 @@ async function fixture(t) {
   }
   return {env, call, token, application, submit, proof, qualified, activate, certificateCalls,
     get db() { return database.db; },
+    restoreSnapshot() { const restored = join(directory,'restored-separate.sqlite'); database.db.exec("VACUUM INTO '"+restored.replaceAll("'","''")+"'"); database.db.close(); database = new LocalD1(restored); env.MIRA_DB=database; },
     restart() { database.db.close(); database = new LocalD1(filename); env.MIRA_DB = database; }};
 }
 
@@ -312,4 +313,19 @@ test('operator audit query is paginated, scoped and not accessible to an agency'
   }
   assert.deepEqual((await f.call('synthetic-operator', '/admin/audit?entity_type=agency&entity_id=synthetic-absent')).body.records, []);
   assert.equal((await f.call('synthetic-operator', '/admin/audit?entity_type=evidence&entity_id=x')).status, 400);
+});
+
+
+test('a snapshot restores into a separate local database with receipt, permissions and immutable audit', async t => {
+ const f=await fixture(t),{id}=await f.activate();
+ await f.call('synthetic-operator','/admin/memberships',{subject:'synthetic-applicant',agency_id:'synthetic-agency',role:'agency_owner',active:false});
+ const before=f.db.prepare('SELECT COUNT(*) AS n FROM mira_events').get().n;
+ f.restoreSnapshot();
+ assert.equal(f.db.prepare('PRAGMA integrity_check').get().integrity_check,'ok');
+ assert.deepEqual(f.db.prepare('PRAGMA foreign_key_check').all(),[]);
+ assert.equal((await f.call('synthetic-applicant','/applications/'+id)).body.application.id,id);
+ assert.equal((await f.call('synthetic-applicant','/profile')).status,403);
+ assert.equal((await f.call('synthetic-other','/applications/'+id)).status,404);
+ assert.equal(f.db.prepare('SELECT COUNT(*) AS n FROM mira_events').get().n,before);
+ assert.throws(()=>f.db.prepare('DELETE FROM mira_events').run());
 });

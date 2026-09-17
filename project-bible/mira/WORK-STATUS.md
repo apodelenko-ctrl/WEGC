@@ -1,5 +1,17 @@
 # MIRA WORK-STATUS
 
+## 2026-09-17 — agency administration completed locally; intake stays closed
+
+Existing real owner Access login/operator provisioning and Worker deployment are confirmed, superseding the historical undeployed/Access-not-initialized entries below. Worker source before this release is `5ab0824`, deployed version `15da744a-8345-43f1-a2e4-e88ecbb4d00b`. No Cloudflare resources, first operator or authentication are recreated.
+
+The preserved admin checkpoint `640c64e` is completed with operator-only agency list/card, verified application review, actual-document references, owner binding from the server-side applicant identity, suspension, membership revocation/restoration and paginated administrative audit. Full subject cursors are supported without changing agency identifier validation. Changing onboarding agency clears stale evidence scope.
+
+Local acceptance of this admin branch: 109 Node / 126 Python tests. Production Worker with signed synthetic identities and SQLite passed the browser journey, including denial without agreement, receipt/reload, qualification/onboarding, other-user isolation, API revocation, restoration/audit, expired-session receipt persistence, >50 audit events and widths 390/768/1440. A snapshot was restored into a SEPARATE local test database; integrity/foreign keys/receipt/access/audit verified. No production dump or fictitious production agreement was created. These are not live Access/D1 ordinary-applicant acceptance or capacity claims.
+
+Public expansion is separately preserved in `278df43` + `f07e8d3`, PR #9. Public 118 Node / 144 Python tests and browser groups 12/15/4/11 passed, all 648 local detail URLs returned 200; Phuket source/landings remain intact. Deployment status must be checked independently of this local record.
+
+Remaining intake decision: approved MIRA privacy notice/version for actual Access/D1 processing, storage/retention/deletion and contact arrangements are not established. APPLICATIONS_ENABLED/MATERIALS_ENABLED remain false. Ordinary test-address allowlist/OTP and real receipt/decision remain unverified. Buyer registration closed. Russian-network no-VPN access unmeasured. Full technical release handoff will record actual published versions.
+
 ## 2026-09-17 — Wrangler access restored; dedicated database prepared
 
 Owner completed Wrangler OAuth. Live `whoami` and Cloudflare API confirmed access to the account containing active zone `wegc.fund`. Created a NEW dedicated `mira-pilot` D1 database, verified its creation time/empty schema and applied all three existing migrations (0001/0002/0003). Remote verification confirms 13 MIRA tables, zero applications and zero memberships. No synthetic users or real personal data were inserted. Region reported by D1: APAC (Singapore serving colo); no data-location approval is inferred.
