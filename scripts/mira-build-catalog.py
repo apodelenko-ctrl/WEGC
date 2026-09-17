@@ -86,5 +86,13 @@ def build(root=ROOT):
         (directory/'index.html').write_text(detail(p),'utf-8')
     report={'source_records':len(rows),'public_cards':len(rows),'exact_image_associations':sum(bool(p['image']) for p in rows),'source_sha256':data['source']['sha256'],'commercially_enabled':0,'mode':'public_research'}
     (out/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-    print(json.dumps(report));return data
+    print(json.dumps(report))
+    # Optional isolated public-market expansion; no funnel or auth changes.
+    expansion_file = root / 'scripts/mira-build-market-expansion.py'
+    if expansion_file.is_file():
+        expansion_spec = importlib.util.spec_from_file_location('mira_market_expansion_build', expansion_file)
+        expansion_module = importlib.util.module_from_spec(expansion_spec)
+        expansion_spec.loader.exec_module(expansion_module)
+        expansion_module.build(root)
+    return data
 if __name__=='__main__':build()

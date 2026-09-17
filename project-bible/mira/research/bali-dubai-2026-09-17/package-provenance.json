@@ -1,0 +1,14 @@
+{
+  "archiveSHA256": "6bb4a6d151af5ada1a8ec4bdc497f371683816cb0bd1868bf340e4156f0249c7",
+  "verifiedFiles": 75,
+  "allHashesValid": true,
+  "baseCommit": "cd76cb5",
+  "adminCheckpoint": "640c64e",
+  "archiveSource": {
+    "archive": "mira-integrated-source-20260917.zip",
+    "archiveSHA256": "f41fa66e1b5d2943767893a52f15a228cfcb52bd884093ad20649071e5b93284",
+    "catalogueSnapshot": "6227865e4cfc82d273cdcc0f0690ad33fabb42f6",
+    "lastComparedHead": "cd76cb5e0798607ed8167a89be47ac0b55af8966",
+    "scope": "catalogue only; no deployment or auth changes"
+  }
+}

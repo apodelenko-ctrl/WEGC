@@ -1,5 +1,15 @@
 # MIRA WORK-STATUS
 
+## 2026-09-17 — current local integration checkpoint (supersedes stale launch blockers)
+
+PR #8 is already merged. Owner email login and operator access on `https://pilot.wegc.fund/mira/pilot.html` were demonstrated in the real browser. Existing Worker `mira-pilot-api`, deployed source `5ab0824ea7061e0a8a5b731075d471421bbeb752`, version `15da744a-8345-43f1-a2e4-e88ecbb4d00b`; existing dedicated D1 has all three migrations. Do not recreate these resources or first operator. Historical entries below about missing Access/undeployed Worker are superseded. Intake/material delivery remain disabled; no real applicant receipt or business activation accepted yet. Buyer registration remains closed.
+
+Unfinished admin work safely committed as `640c64e` on `codex/mira-admin-checkpoint-20260917`, separate from this public worktree. Public expansion branch `codex/mira-bali-dubai-public-20260917` starts at `cd76cb5`: 618 original Phuket rows preserved byte-for-byte (SHA256 `f3366c36c683e27e9f79d8db96a7f2985272395eba1906f751ebe019ac6b1bf4`) plus 15 Bali and 15 Dubai research projects. Package applied once. Phuket funnels, Worker, Access, D1 and rights unchanged.
+
+Local public acceptance: 118 Node / 144 Python tests; expansion browser 11 groups including all 30 details and mixed shortlist; existing campaign 15 / editorial 4 groups. Real domain before release: Phuket 200, Bali/Dubai 404. This checkpoint is NOT a publication. Media: 28 local candidates inspected, zero publication-approved new project images, 30 labelled typographic covers. See `research/bali-dubai-2026-09-17/MEDIA-GAPS.md` for cloud content handoff. ERA primary source redirects to a different project; replacement broker source explicitly labelled, no substitute image used.
+
+Next: finalize independent admin acceptance, preserve separate releases, verify actual domain after Pages publication. Intake privacy/data-location decision, ordinary applicant OTP and Russia-without-VPN remain separate live acceptance gates. No public personal identity values or credentials belong in these records.
+
 ## 2026-09-17 — Wrangler access restored; dedicated database prepared
 
 Owner completed Wrangler OAuth. Live `whoami` and Cloudflare API confirmed access to the account containing active zone `wegc.fund`. Created a NEW dedicated `mira-pilot` D1 database, verified its creation time/empty schema and applied all three existing migrations (0001/0002/0003). Remote verification confirms 13 MIRA tables, zero applications and zero memberships. No synthetic users or real personal data were inserted. Region reported by D1: APAC (Singapore serving colo); no data-location approval is inferred.
