@@ -1,5 +1,10 @@
 # MIRA RESUME-STATE
 
+## 2026-09-17 — local first-partner presentation checkpoint
+
+Current owner priority: improve and publish the public MIRA catalogue for the first agency presentation; keep real registration disabled. All 618 cards/details now have labelled visuals (11 project-image associations plus editorial covers), refined copy and working shortlist/navigation. Local 83 Node / 110 Python tests passed; in-app browser checked 26 pages, 618 unique records, three detail pages, desktop/mobile and the preserved onboarding → 45-record catalogue route. See `operations/2026-09-17-first-partner-presentation.md` for exact scope and the standalone Chrome sandbox limitation. Live publication/acceptance remains the next step for this checkpoint. Earlier CP16 full-run failure below remains historical evidence, not erased.
+
+
 2026-09-17 — CP16 reports inspected; current owner task is a short first-partner introduction plus working-registration launch. Do not repeat CP12legal/CP13catalogue/CP14design work.
 
 ## Exact current result

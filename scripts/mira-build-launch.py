@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# coding: utf-8
 """Additive, source-backed MIRA launch pages. No customer data or external requests."""
 from pathlib import Path
 import csv,html,hashlib,json,re,importlib.util

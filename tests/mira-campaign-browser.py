@@ -95,7 +95,8 @@ def run(base,out):
             page.keyboard.press('Escape');assert page.locator('#shortlist').is_hidden()
             goto('/mira/catalog/projects/title-vivi/');page.wait_for_selector('[data-add]:not([disabled])')
             assert page.locator('[data-add]').get_attribute('aria-pressed')=='true'
-            assert page.get_by_role('button',name='Регистрация клиента закрыта').is_disabled()
+            assert 'данные покупателей не принимаются' in page.locator('#registration-gate').inner_text()
+            assert page.locator('input, form').count()==0
             for width in WIDTHS:
                 page.set_viewport_size({'width':width,'height':1000});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),('detail',width)
             mark('catalogue_filter_shortlist_detail',session_restore=True,registration_closed=True)
@@ -107,7 +108,7 @@ def run(base,out):
             page.screenshot(path=str(out/'catalogue-desktop.png'))
             mark('untrusted_query_empty_reset_and_responsive',widths=WIDTHS)
             # Corrupt storage never becomes HTML or a fabricated selected project.
-            page.evaluate("sessionStorage.setItem('mira-research-selection-v1','{broken')")
+            page.evaluate("localStorage.setItem('mira-research-selection-v1','{broken')")
             page.reload(wait_until='networkidle');page.wait_for_function("document.querySelector('#search').disabled===false")
             assert page.locator('#shortlist-open').is_hidden();mark('corrupt_local_selection_fallback')
             for name,body in [('503','temporary'),('malformed_json','{invalid')]:

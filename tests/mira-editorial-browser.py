@@ -76,6 +76,9 @@ def run(base, out):
             destination = page.locator('#plan-demo').get_attribute('href')
             assert '/mira/marketplace-design.html' in destination, destination
             page.locator('#plan-demo').click()
+            page.wait_for_url('**view=onboarding*')
+            assert page.get_by_role('heading',name='Материалы и обучение',exact=True).is_visible()
+            page.locator('[data-view="catalog"]').click()
             page.wait_for_selector('[data-catalogue-mode="all"]')
             page.locator('[data-catalogue-mode="all"]').click()
             assert page.locator('#cards .card:visible').count() == 45
