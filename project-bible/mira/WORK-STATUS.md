@@ -1,5 +1,11 @@
 # MIRA WORK-STATUS
 
+## 2026-09-17 — integrated release accepted; agency login still blocked
+
+Public presentation is deployed, PR #8 is merged (`f25c32f75364de2feb9b7f1471955130432de218`), and full release verification **35223247185 succeeded** after the two editorial test fixes. Exact tested source: `e3a8d424062f471f102f103fbcc38cf71a1a3260`; generated snapshot: `6227865e4cfc82d273cdcc0f0690ad33fabb42f6`. Verified artifact `10498880419`, SHA256 `14b854c911562046a71720e3085ba6d5fc7f70cc8ed807ca81aec1921dcea35d`. Combined tests: **98 Node / 120 Python**, plus local and live public/campaign/editorial browser groups **12 / 15 / 4** and all 618 live project URLs. No assertions or CSP protections were removed.
+
+Full Russian handoff: `operations/2026-09-17-local-integration-handoff.md`. Owner's next priority is actual agency login and administrative approval under `cloudflare-worker/mira/SERVER-START.md`, not more redesign. Real login has NOT passed acceptance: `/mira/api/health` returned 404; Wrangler authorization expired and OAuth was not completed. Owner was asked to refresh local login. No new Cloudflare resources, real intake or buyer registration enabled. Continue from this blocker after authentication; passing CI is explicitly not successful signup. Older entries below are historical checkpoints.
+
 ## 2026-09-17 — PR 8 integration and next priority
 
 Owner explicitly requested reviewed integration of PR #8 while preserving the public presentation work, followed by actual agency login and operator approval using `cloudflare-worker/mira/SERVER-START.md`. Buyer registration remains separately closed. The presentation commit `e49c966607b8e33795f2eb1a6ed1194827bbac9a` and generated snapshot `86578fd839ca97c27ecc79c585fc9521fa1f8468` are preserved. PR head reviewed: `8567c8aa5a0015531016ae5b32a7bbce9048b4d6`; only WORK/RESUME conflicted, both histories retained below. No source transport was reapplied.
