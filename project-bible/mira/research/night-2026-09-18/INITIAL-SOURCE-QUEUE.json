@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "discovery_date": "2026-09-17",
+  "purpose": "Starting sources for scheduled research; not completed records, net-new counts or approved listings.",
+  "sources": [
+    {
+      "lane": "vietnam",
+      "subject": "Vinhomes Green Paradise",
+      "source_url": "https://www.vingroup.net/en/news/detail/4833/vinhomes-green-paradise-launches-global-smart-city-certification-project",
+      "publisher": "Vingroup",
+      "source_role": "developer_group_publication",
+      "access_status": "search_result_content_received",
+      "supported_observation": "Group publication dated 3 March 2026 identifies Vinhomes Green Paradise - Can Gio and describes a smart-city certification initiative.",
+      "do_not_infer": ["completed certification", "availability", "foreign-buyer eligibility", "MIRA representation"],
+      "next_check": "Open and verify the project page, exact offered formats, any agency observations and whether existing expansion registry already contains this project."
+    },
+    {
+      "lane": "vietnam",
+      "subject": "Vinhomes primary project catalogue",
+      "source_url": "https://vinhomes.vn/vi",
+      "publisher": "Vinhomes",
+      "source_role": "developer_catalogue",
+      "access_status": "search_result_content_received",
+      "related_url": "https://market.vinhomes.vn/en/vinhomes-green-paradise",
+      "related_url_status": "search content returned, subsequent direct web open failed with Internal Error",
+      "supported_observation": "Search content shows Green Paradise and Green City project entries; do not copy marketing returns or future infrastructure as established fact.",
+      "next_check": "Follow real project links and verify each separately; diversify developers beyond Vinhomes."
+    },
+    {
+      "lane": "montenegro",
+      "subject": "Lustica Bay",
+      "source_url": "https://lusticabay.com/",
+      "publisher": "Lustica Bay",
+      "source_role": "primary_project_site",
+      "access_status": "web_open_succeeded",
+      "supported_observation": "Real estate sections distinguish Centrale, The Peaks and Marina Village.",
+      "related_url": "https://about.lusticabay.com/about",
+      "related_url_status": "search_result_content_received",
+      "next_check": "Choose exact project/phase level consistently; three neighbourhoods are not three independent developers. Verify specific residential offers, current primary facts and media permissions."
+    },
+    {
+      "lane": "russia",
+      "subject": "Agency 1983, Voronezh",
+      "source_url": "https://www.kvartiri36.ru/contacts/",
+      "source_role": "company_contact_page",
+      "access_status": "search_result_content_received; direct open returned Internal Error",
+      "supported_observation": "Search content identifies agency 1983, OOO NV and Voronezh contact locations.",
+      "deduplicated": false,
+      "net_new": null,
+      "contacts_verified": false,
+      "next_check": "Verify live page/domain/legal identity and compare against all current Russia lists before inclusion; no direct personal contacts copied."
+    },
+    {
+      "lane": "belarus",
+      "subject": "Licensing and entity-status verification route",
+      "source_url": "https://t.me/s/minjust_by",
+      "publisher": "Ministry of Justice of Belarus public channel",
+      "source_role": "authority_publication_route",
+      "access_status": "search_result_content_received",
+      "supported_observation": "The authority channel contains current licensing notices; company registration status and permission to provide real-estate services must not be conflated.",
+      "next_check": "Locate and verify the official licensing/register source and the exact dated notice for each relevant candidate; do not bulk import channel participants or infer a licence from an aggregator."
+    }
+  ],
+  "completed_project_records": 0,
+  "completed_new_agency_records": 0,
+  "media_files_downloaded": 0,
+  "media_publication_approved": 0,
+  "external_messages_sent": 0
+}
