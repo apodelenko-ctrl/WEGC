@@ -1,13 +1,15 @@
 # MIRA RESUME-STATE
 
-2026-09-17 — cloud-onboarding from snapshot03d28ff3, newer than owner e4a5bf34 handoff.
+2026-09-17 — cloud continuation from main03d28ff3; owner e4a5bf34 handoff is older. PR8 already merged; no repeat.
 
-Read operations/2026-09-17-cloud-continuation.md and cloudflare-worker/mira/DEDICATED-HOST.md. PR8 merged; do not repeat. History is preserved at03d28ff36db21568ff68f64f2c2a3c3af66f04b3.
+CheckpointA commit34be7fa8 / CI35230966943:105Node/127Python passed; artifact10500394663 verified. Same-origin privacy notice/CSS packaged without changing legal text/status. See operations/cloud-readiness-notice-result.json.
 
-Branch adds missing same-origin privacy HTML/CSS plus bounded tests. Local105Node/targeted4Python passed. Full local Python lacks existing images omitted from artifact; full-checkout CI required. Cloudflare not accessed/deployed. Draft notice publication is not approval.
+CheckpointB adds read-only scripts/mira-access-check.py and11synthetic unit cases plus cloudflare-worker/mira/ACCESS-NEXT.md. Local tests pass; wait for fresh full-checkout CI. No Russian-network or real-login outcome claimed. Nothing deployed in this branch.
 
-ZeroTrustFree exists per owner. Do not repeat plan signup/inactive connector cards. Owner's ignored local configuration/Wrangler auth are not in this runtime. Reuse existing dedicated D1/migrations; do not create again.
+Existing dedicated D1/all3migrations prepared per owner/local handoff; no second database. ZeroTrustFree exists, prior API403 is not absence. The cloud runtime does not inherit Mac Wrangler authentication. Do not repeat inactive connector/plan setup.
 
-Next: read-only connectivity/Access checks and operator readiness. Dedicated pilot hostname only after verifying unused. No apex proxy. Real intake/buyer registration/materials remain disabled pending separate acceptance. Target Russian network must be tested without VPN; foreign CI cannot substitute.
+ACCESS-NEXT has correct pilot.wegc.fund destinations for pilot.html,library.html,api/*, exact AUD/issuer instructions and OTP allowlist; public apex untouched. Local agent must verify hostname unused and actual app settings. Privacy draft publication is not approval. Keep intake/materials/buyer registration closed.
 
-Public designs/catalogue/documents/banner remain unchanged. Reconcile newer local edits before merge; no reset/clean/force over local work.
+Next: validate branch CI, integrate without clobbering local work, actual scoped Access configuration and dedicated deployment, target-network check without VPN, actual login/receipt/operator/isolation/revocation. Current UI has status transitions but no complete account-provisioning wizard; address this without synthetic evidence. If CF unreachable, migrate auth/API as well as any unavailable public assets rather than bypassing authentication.
+
+Full prior history remains at03d28ff36db21568ff68f64f2c2a3c3af66f04b3. Public designs/catalogue/legal drafts/banner untouched. No force/reset/clean or secret/public-data spill.

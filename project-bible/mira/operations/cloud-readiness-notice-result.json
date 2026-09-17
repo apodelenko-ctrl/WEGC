@@ -1,0 +1,14 @@
+{
+  "checkpoint": "same-origin-notice",
+  "source_commit": "34be7fa8bec4858e8cc64c0c70060cc4f187ef98",
+  "run_id": "35230966943",
+  "artifact_id": "10500394663",
+  "artifact_sha256": "ef2f92764dd97a982fc6c618ee4134d1af2ffe4feadfa2ac55685537bbebcc92",
+  "passed": true,
+  "node_tests": 105,
+  "python_tests": 127,
+  "cloudflare_deployed": false,
+  "real_login_verified": false,
+  "russian_network_tested": false,
+  "scope": "full-checkout source tests; not subsequent network-tool tests"
+}
