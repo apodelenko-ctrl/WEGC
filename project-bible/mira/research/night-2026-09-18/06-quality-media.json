@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "slot": "06-quality-media",
+  "checked_at": "2026-09-18T06:03:00+07:00",
+  "scope": "cross-lane quality/deduplication plus Bali/Dubai media-gap review",
+  "production_write_authorized": false,
+  "outreach_authorized": false,
+  "count_changes": {
+    "vietnam_projects": 0,
+    "montenegro_projects": 0,
+    "russia_candidate_rows": 0,
+    "belarus_candidate_rows": 0,
+    "publication_approved_new_media": 0
+  },
+  "agency_quality": {
+    "shortlist_domains_rechecked_against_current_main": 12,
+    "exact_domain_matches_found": 0,
+    "legal_entity_uniqueness_proven": false,
+    "note": "GitHub code search against the repository default branch returned no exact-domain matches for the 12 owner-review domains below. This corroborates repository-level net-new status only; it is not proof of independent legal entities, absence of rebrands, or outreach approval.",
+    "domains": [
+      {"country":"Russia","brand":"AFLAT","domain":"aflat.online","main_exact_domain_match":false},
+      {"country":"Russia","brand":"Welcome","domain":"welcome26.ru","main_exact_domain_match":false},
+      {"country":"Russia","brand":"Формула","domain":"formula-agency.ru","main_exact_domain_match":false},
+      {"country":"Russia","brand":"Агентство на Ярославской / HOUSE GROUP","domain":"housegroup21.ru","main_exact_domain_match":false},
+      {"country":"Russia","brand":"БСН Недвижимость","domain":"bsnnedvizhimost.ru","main_exact_domain_match":false},
+      {"country":"Russia","brand":"РИЭЛ-МАКС","domain":"riel-max.ru","main_exact_domain_match":false},
+      {"country":"Belarus","brand":"Абсолют Недвижимость","domain":"aan.by","main_exact_domain_match":false},
+      {"country":"Belarus","brand":"Центр недвижимости 24 на 7","domain":"central-borisov.by","main_exact_domain_match":false},
+      {"country":"Belarus","brand":"Сектор недвижимости Основа","domain":"osnova.by","main_exact_domain_match":false},
+      {"country":"Belarus","brand":"Гарант успеха","domain":"garantus.by","main_exact_domain_match":false},
+      {"country":"Belarus","brand":"Агентство Уют и К","domain":"n-v.by","main_exact_domain_match":false},
+      {"country":"Belarus","brand":"ПАКОДАН ЭСТЕЙТ","domain":"pakodangrodno.by","main_exact_domain_match":false}
+    ],
+    "holds_rechecked": [
+      {
+        "brand": "Аурум",
+        "country": "Russia",
+        "status": "retain_entity_metadata_hold",
+        "source": "https://aurum70.ru/",
+        "finding": "Current first-party page is accessible and advertises Russian/foreign investment selection, but the footer/entity block displays ИП Куроленко Виктор with INN 77777777. This is not accepted as independently verified legal-entity metadata; no promotion to owner-review approval."
+      },
+      {
+        "brand": "Good House",
+        "country": "Russia",
+        "status": "retain_partial_secondary_confirmed",
+        "source": "https://goodhouse51.ru/",
+        "finding": "Current secondary listings still identify the Murmansk agency, its official-domain route and overseas-property service, but the first-party site was not recovered in this pass. Keep partial."
+      }
+    ],
+    "belarus_regulatory_holds_rechecked": {
+      "status": "unchanged",
+      "source_2026_09_02": "https://www.prrb.by/articles/priostanovleny-licenzii-rielterskih-organizacij",
+      "source_2026_08_24": "https://www.prrb.by/articles/priostanovleny-licenzii-treh-rielterskih-organizacij",
+      "excluded_companies": [
+        "Агентство недвижимости Эксперт",
+        "Агентство недвижимости Твой Дом",
+        "ЭРА-Недвижимости",
+        "БелЦТН",
+        "ВСП недвижимость-Инвест"
+      ],
+      "note": "Current Chamber pages remain live and describe Ministry of Justice licence suspensions. These five stay excluded from the 30-row candidate count."
+    }
+  },
+  "media_quality": {
+    "baseline": {
+      "projects": 30,
+      "downloaded_candidates_before_slot": 28,
+      "visually_inspected_candidates_before_slot": 28,
+      "publication_approved_before_slot": 0,
+      "typographic_covers": 30,
+      "source": "project-bible/mira/research/bali-dubai-2026-09-17/media-review.json"
+    },
+    "projects_rechecked": 5,
+    "new_exact_project_direct_asset_urls_recorded": 4,
+    "new_direct_assets_downloaded_in_slot": 0,
+    "new_asset_visual_reviews_in_slot": 1,
+    "new_publication_approvals": 0,
+    "items": [
+      {
+        "project": "The ERA by OXO",
+        "market": "Bali",
+        "gap_before": "Prior exact project URL redirected to another OXO project / 404 and no project image had been obtained.",
+        "current_exact_primary_page": "https://realestate.oxoliving.com/the-era-by-oxo/",
+        "direct_asset_candidate": "https://realestate.oxoliving.com/wp-content/uploads/2025/08/THE-ERA-by-OXO_THE-ERA-WHITE-scaled-e1756192291445.webp",
+        "source_match_status": "closed_at_primary_page_level",
+        "downloaded": false,
+        "visual_reviewed": false,
+        "rights_basis": "unresolved; the current project page exposes a Terms & Conditions route but the terms page was not retrievable in this run",
+        "publication_approved": false,
+        "gap_after": "Exact current OXO project page and exact-project asset URL found; asset bytes/visual match and publication rights remain unresolved."
+      },
+      {
+        "project": "Secana Beachtown",
+        "market": "Bali",
+        "gap_before": "Existing reviewed candidate was only 520x340 and publication permission was unresolved.",
+        "current_exact_primary_page": "https://mirahdevelopments.com/development/secana-beachtown/",
+        "direct_asset_candidate": "https://mirahdevelopments.com/app/uploads/2023/11/Gallery1-1-jpg.webp",
+        "source_match_status": "exact_first_party_gallery",
+        "downloaded": false,
+        "visual_reviewed": true,
+        "visual_review_method": "Browser/web image retrieval from the exact Secana gallery; no image bytes copied to GitHub.",
+        "rights_basis": "https://mirahdevelopments.com/terms-conditions/ — site terms state text/images are copyrighted, personal non-commercial use only, and prior written consent is required for other/commercial use.",
+        "publication_approved": false,
+        "gap_after": "Exact visually checked gallery candidate found, but commercial/public reuse is explicitly blocked absent prior written consent; original byte dimensions/hash were not established in this run."
+      },
+      {
+        "project": "Mudon Al Ranim",
+        "market": "Dubai",
+        "gap_before": "Existing reviewed candidate was 213x252.",
+        "current_exact_primary_page": "https://www.dp.ae/our-portfolio/all-projects/132/al-ranim/",
+        "direct_asset_candidates": [
+          "https://www.dp.ae/pictures/b2ee725d-b875-4c28-95a6-577838c44dfdcamgal1.jpg?metadata=true%26quality%3D70%26width%3D650",
+          "https://www.dp.ae/pictures/ecc9f29c-91c0-4e17-a9cf-718aefcc1de3camgal2.jpg?metadata=true%26quality%3D70%26width%3D650"
+        ],
+        "source_match_status": "exact_first_party_gallery",
+        "downloaded": false,
+        "visual_reviewed": false,
+        "rights_basis": "https://www.dp.ae/terms-conditions/ — terms allow extracts only for own use and prohibit commercial use without a licence and reproduction on another website without prior written permission.",
+        "publication_approved": false,
+        "gap_after": "Two exact project gallery routes found with a 650-width transform request, but actual file dimensions/hash were not inspected and commercial/public reuse remains blocked without licence/permission."
+      },
+      {
+        "project": "One River Point",
+        "market": "Dubai",
+        "gap_before": "Legacy oneriverpoint.ae source closed the connection; existing candidate had been visually reviewed but current project-source re-match was incomplete.",
+        "current_exact_primary_page": "https://ellingtonproperties.ae/en/property-for-sale/one-river-point-business-bay",
+        "supporting_primary_source": "https://ellingtonproperties.ae/en/media-center/news/dutco-and-ellington-properties-unveil-a-new-residential-development-one-river-point-under-the-dutco-ellington-brand",
+        "direct_asset_candidate": null,
+        "source_match_status": "closed_at_current_developer_page_level",
+        "downloaded": false,
+        "visual_reviewed": false,
+        "rights_basis": "https://ellingtonproperties.ae/en/terms-conditions — copyright belongs to Ellington and reuse is strictly prohibited unless otherwise stated.",
+        "publication_approved": false,
+        "gap_after": "Project identity/source re-match closed via current Ellington sources; a replacement exact direct image asset was not captured and reuse remains prohibited."
+      },
+      {
+        "project": "DAMAC Riverside",
+        "market": "Dubai",
+        "gap_before": "Exact DAMAC source returned HTTP 403 and no project image was obtained; explicit risk of substituting Riverside Views.",
+        "current_exact_primary_page": "https://www.damacproperties.com/fr-lu/blog/damac-riverside-community-location-map/",
+        "separate_project_evidence": "https://www.prnewswire.com/news-releases/damac-properties-unveils-its-first-launch-of-2025-riverside-views-302363231.html",
+        "source_match_status": "project_identity_confirmed_but_direct_fetch_still_403",
+        "downloaded": false,
+        "visual_reviewed": false,
+        "rights_basis": "unresolved for an original DAMAC Riverside asset",
+        "publication_approved": false,
+        "wrong_project_assets_quarantined": [
+          "https://mma.prnewswire.com/media/2608720/Riverside_Views_1.jpg",
+          "https://mma.prnewswire.com/media/2608718/Riverside_Views_2.jpg",
+          "https://mma.prnewswire.com/media/2608719/Riverside_Views_3.jpg",
+          "https://mma.prnewswire.com/media/2608717/Riverside_Views_4.jpg"
+        ],
+        "gap_after": "DAMAC's current indexed source still identifies original Riverside; direct fetch remains 403. DAMAC-supplied PR evidence confirms Riverside Views is a separate 2025 development within the Riverside community, so its four PR images are explicitly rejected for the original Riverside row. No exact original-Riverside asset was approved."
+      }
+    ]
+  },
+  "quality_conclusion": "No night target count is increased or reduced in this slot. The 12 strongest agency domains remain net-new at exact-domain repository-search level, but legal-entity/rebrand closure is not claimed. Bali/Dubai media quality improved for five known gaps; zero new images are publication-approved, and no third-party image bytes were committed.",
+  "next": "07:00: validate and consolidate the country/agency JSON/CSV outputs, carry these media statuses into a consolidated MEDIA-GAPS.md and VALIDATION.json, and write LOCAL-AGENT-HANDOFF.md without deployment."
+}
