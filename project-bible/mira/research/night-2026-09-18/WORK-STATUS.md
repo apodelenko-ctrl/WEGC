@@ -1,5 +1,19 @@
 # MIRA — night research status
 
+## 02:00 Vietnam / Montenegro validation — completed, 18 September 2026
+
+All 30 saved project records were rechecked against current public sources and current main context. Vietnam now has **14 complete-for-discovery / 1 partial**; Montenegro has **10 complete-for-discovery / 5 partial**. Saved outputs: `02-project-validation.json`, `02-project-validation.csv`, `02-project-validation.md`.
+
+Vietnam closures: Novaland primary documents explicitly identify Aqua City Phoenix Island, Keppel Real Estate provides an exact Empire City project page, and Kusto Group corporate material explicitly identifies Urban Green as a Kusto Home residential complex. Waterpoint remains partial because no concrete Russian-language/Russian-speaking agency/property-channel observation for the exact project was established; Russian editorial coverage was not misclassified as agency evidence.
+
+Montenegro closures: Mountain Retreat by Dukley gained a current independent agent observation; Bellemond Residence has exact project and current independent catalogue evidence; Montis has a current resort site plus 2025–2026 independent coverage. Heights, Merit Starlit, Porto Budva, Poljana Olive Homes and Kotor Bayview remain partial for specific first-party/current independent-observation gaps. Stale citizenship-by-investment and immigration/return claims remain quarantined.
+
+Media sourcing advanced without copying assets: **30 exact project source pages/documents** are recorded as review candidates, but **0 direct image files were downloaded, 0 new visuals were reviewed and 0 publication approvals were created**. Public accessibility is not treated as a rights basis. Every row remains `commercial_status=research_only`, `commerciallyEnabled=false`.
+
+Repository dedupe context: main already contains Vietnam developer-level supply/actionable records, so those developer overlaps are provenance rather than new-developer discoveries. Current public main remains Phuket plus Bali/Dubai; exact-name checks for the previously partial Vietnam/Montenegro rows produced no main project-card duplicates, and main search returned no Montenegro research/catalogue layer. Full schema/link validation remains owned by the 07:00 consolidation slot.
+
+Next nominal slot: 03:00 Russia expansion pass A. Do not replay Vietnam/Montenegro discovery.
+
 ## 01:00 Montenegro discovery/classification — completed, 18 September 2026
 
 The Montenegro discovery slot saved 15 source-backed real project records under this research folder. Seven are `complete_for_discovery`; eight remain explicitly `partial_for_validation` for the 02:00 pass rather than being promoted on weak evidence. The sample spans 11 developer/project families and multiple locations: Tivat/Porto Montenegro, Luštica, Portonovi/Kumbor, Budva/Bečići/Zavala, Muo/Kotor Bay and Kolašin. Repeated master developments are explicitly grouped and are not counted as independent developers.
@@ -40,4 +54,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-02:00 combined project validation. Read PLAN.md and current progress before execution. Validate the two country collections, save actual outputs under this folder on this branch only, and keep root WORK-STATUS/RESUME owned by local Codex untouched.
+03:00 Russia expansion pass A. Read PLAN.md, the existing Russia master/Launch-100/CRM sources and the night progress before execution. Count only net-new agencies after deduplication; keep root WORK-STATUS/RESUME owned by local Codex untouched.
