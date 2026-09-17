@@ -1,0 +1,2 @@
+/* Darker red preserves normal-text contrast on white without changing old designs. */
+body.direct{--accent:#d62436}

@@ -1,7 +1,7 @@
 name: MIRA full public release verification
 on:
   workflow_run:
-    workflows: ['Deploy static site to GitHub Pages']
+    workflows: [Deploy static site to GitHub Pages]
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
   verify:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,47 +22,62 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install verification dependencies
+      - name: Install deterministic builders and test tools
         run: |
-          python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3' 'playwright>=1.55,<2'
+          python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3' 'playwright>=1.55,<2' 'pymupdf>=1.26,<2' 'opencv-python-headless>=4.12,<5'
           python -m playwright install --with-deps chromium
-      - name: Rebuild exact expected static files and regression checks
+      - name: Rebuild the exact source under test
         run: |
           python scripts/mira-wire-landing.py
           python scripts/mira-build-demo.py
           python scripts/mira-build-documents.py --downloads
+          python scripts/mira-build-catalog.py
           python scripts/mira-build-launch.py
           python scripts/mira-build-expo.py
+          python scripts/mira-build-campaign.py
+          python scripts/mira-build-exhibition.py --downloads
+      - name: Regression and synthetic API/catalogue load
+        run: |
           node --test tests/mira-*.test.mjs > /tmp/mira-node.tap
           python -m unittest discover -s tests -p 'test_mira*.py' -v > /tmp/mira-python.txt 2>&1
-      - name: Browser through local HTTP and actual CSP
+      - name: Real local HTTP and CSP acceptance
         run: |
-          python -m http.server 8765 --bind 127.0.0.1 > /tmp/mira-http.log 2>&1 &
-          sleep 2
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/mira-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          sleep 1
           python tests/mira-public-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-browser
-      - name: Verify published bytes and bounded GET load
-        run: python scripts/mira-verify-public.py --base https://wegc.fund --load --out /tmp/mira-live-release.json
-      - name: Browser on the public domain, no real submissions
-        run: python tests/mira-public-browser.py --base https://wegc.fund --out /tmp/mira-live-browser
-      - name: Preserve exact public deliverables and evidence
+          python tests/mira-campaign-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-campaign
+          python scripts/mira-release-audit.py --base http://127.0.0.1:8765 --local-stress --out /tmp/mira-local-audit.json
+      - name: Actual domain bytes, downloads, links and bounded smoke
+        run: |
+          python scripts/mira-verify-public.py --base https://wegc.fund --load --out /tmp/mira-live-release.json
+          python scripts/mira-release-audit.py --base https://wegc.fund --out /tmp/mira-live-audit.json
+      - name: Actual domain browser acceptance without personal data
+        run: |
+          python tests/mira-public-browser.py --base https://wegc.fund --out /tmp/mira-live-browser
+          python tests/mira-campaign-browser.py --base https://wegc.fund --out /tmp/mira-live-campaign
+      - name: Preserve public evidence including failures
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mira-cp13-public-release
+          name: mira-cp15-public-release
           retention-days: 14
           path: |
             /tmp/mira-node.tap
             /tmp/mira-python.txt
             /tmp/mira-local-browser/
-            /tmp/mira-live-browser/
+            /tmp/mira-local-campaign/
+            /tmp/mira-local-audit.json
             /tmp/mira-live-release.json
-            mira/start/
-            mira/growth/
-            mira/business/
-            mira/variants/
-            mira/access/
-            mira/phuket/
+            /tmp/mira-live-audit.json
+            /tmp/mira-live-browser/
+            /tmp/mira-live-campaign/
+            mira/go/
+            mira/practical/
+            mira/corporate/
+            mira/campaign/
             mira/launch/
+            mira/exhibition/
+            mira/catalog/
             mira/documents/
-            mira/expo/
-            mira/data/phuket.json

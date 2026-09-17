@@ -17,7 +17,21 @@ layout.VARIANTS = VARIANTS
 build_page = layout.build_page
 
 def build(root=ROOT):
-    return layout.build(root)
+    result = layout.build(root)
+    hub = Path(root) / 'mira/launch/index.html'
+    content = hub.read_text(encoding='utf-8')
+    content = content.replace('href="#how"', 'href="/mira/go/#how"')
+    content = content.replace('href="#start"', 'href="/mira/go/#start"')
+    hub.write_text(content, encoding='utf-8')
+    for route in [*VARIANTS, 'launch']:
+        target = Path(root) / 'mira' / route / 'index.html'
+        text = target.read_text(encoding='utf-8')
+        marker = '<link rel="stylesheet" href="/mira/campaign/campaign.css">'
+        if text.count(marker) != 1:
+            raise ValueError('Unexpected campaign stylesheet boundary')
+        text = text.replace(marker, marker + '<link rel="stylesheet" href="/mira/campaign/accessibility.css">')
+        target.write_text(text, encoding='utf-8')
+    return result
 
 if __name__ == '__main__':
     build()
