@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "source_commit": "5ab0824ea7061e0a8a5b731075d471421bbeb752",
+  "source_commit": "2d85898267b60c19a88b3a42b12388546070dfc0",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",

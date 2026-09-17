@@ -88,7 +88,7 @@ Baseline:Phuket618/40groups/45seed/66candidates/507unresolved/20queue/8P0;Russia
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `5ab0824ea7061e0a8a5b731075d471421bbeb752`.
+Source commit: `2d85898267b60c19a88b3a42b12388546070dfc0`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
