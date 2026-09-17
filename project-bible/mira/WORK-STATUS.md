@@ -1,44 +1,23 @@
 # MIRA WORK-STATUS
 
-Updated 2026-09-17 — CP12 document package; execution continues.
+Updated2026-09-17 — CP13 full catalogue; execution continues.
 
-## Current owner priority
+## Current task
 
-Publish substantial RF-law-based agency documentation; all existing Phuket source records;2–3 distinct commercial Russian-market funnels; lightweight motion; exhibition banner/QR for owner-stated25 September; browser and bounded load tests. Preserve previous designs. Final report must distinguish public release, legal approval and working backend.
+RF-law-based documents; full Phuket catalogue;2–3 distinct Russian commercial funnels; lightweight motion; selling exhibition banner and QR for owner-stated25September; browser/stress QA. Preserve earlier designs. Do not assign owner approval to our own work.
 
-## CP12 delivered source
+## CP13
 
-Nine Russian documents under `mira/documents/source/`;19-section framework plus5appendices. Builder creates readable HTML,9PDFs and master DOCX. Local66Node/82Python tests passed; allPDF/DOCX pages visually checked. See `operations/checkpoint-12-documents.md`. No operator approval or legal clearance claimed; acceptance disabled. Live publication to be checked after commit.
+`/mira/catalog/`: all618 original source rows have searchable cards, stable individual HTML pages and an alphabetical no-JS list. Pagination24, district/type/group filters, local project-ID shortlist and TXT export. Critical monetary and availability fields remain absent without current evidence; five exact archived-image associations only. Original45-record demo and earlier designs unchanged. Local74Node/87Python plus offline DOM scenario/7width tests passed. CI/Pages/public release must now be checked; offline is not deployed E2E.
 
-Critical finding: RF-citizen primary collection/localization and cross-border processing need actual verified architecture. Existing unprovisioned Cloudflare Access/D1 must not simply be enabled for Russian intake. Privacy/operator/processor details, retention and notifications remain unresolved. Legal sources and proposed/not-agreed terms are in `legal/RF-LEGAL-BASIS-2026-09-17.md`. Private upstream contracts remain outside GitHub.
+## CP12
 
-## Preserved product
+Nine Russian legal documents,19-section framework plus5appendices, public HTML/9PDF/masterDOCX builder. CP12QA35190892632 and Pages35190892566 succeeded. Drafts only, not offer or accepted agreement. Russian primary collection/localization, actual controller/processors/retention/notifications remain unresolved; offshore Access/D1 cannot simply be enabled for Russian intake. See `legal/RF-LEGAL-BASIS-2026-09-17.md`.
 
-CP11 `/mira/design/` and `/mira/marketplace-design.html` editorial preview preserved. CP10 `/mira/agency/` local qualifier and actual demo links preserved. CP04–09 protected Worker/D1/API, receipt-safe UI, tenant isolation, operator stages and private R2 library are implemented code, NOT deployed live services. Intake/material delivery remain closed. Historical recovery is finished; do not repeat it.
+## Preserved
 
-## Preserved evidence baseline
+CP11editorial design and illustrated marketplace;CP10agency funnel;CP04–09protected API/receipt/tenant isolation/library code are saved. Backend is NOT deployed; collection/material release closed. Phuket618records/40group rows/45seed/66familycandidates/507unresolved/20queue/8P0. Zero public-layer verified sellers or registration-enabled projects. Russia100source/50inheritedreviews;focused21/15reviewready/6holds/10namedroutes7companies;10drafts unapproved. Existing30Telegram texts and onboarding/webinar/reactivation saved.
 
-Phuket618source records,40group/brand/counterparty rows,45seed mappings,66family candidates,507family-unresolved,20developer queue,8P0public groups. Generated layer has0verified project sellers/registration-enabled projects. All source rows are not all verified/saleable properties.
+## Continue
 
-Russia100source accounts/50inherited reviews; focused21accounts,15owner-review-ready/6holds,10named routes across7companies,10personalized drafts unapproved. 30Telegram texts, demo/onboarding/reactivation/webinar assets already exist. CIS88+21unmerged and expansion32 remain secondary.
-
-Canonical dashboard: `operations/LAUNCH-DASHBOARD.md`. Real clients/deals/commissions remain unknown without operational evidence. Private operator journal and generated-register integrity protection remain in force.
-
-## Next
-
-Check CP12 CI/Pages; publish full Phuket catalogue without unverified prices/inventory; build direct/balanced/corporate funnel variants and stable QR destination; perform browser, stress and release checks. Owner visual approval cannot be assigned by code. Do not send external messages/forms, retry declined email authorization, invent contracts/prices/results or expose private documents.
-
-
-<!-- MIRA-LAUNCH-AUTO:START -->
-## Generated source checkpoint
-
-Source commit: `28b4e1162cf8471057c7b74c2dae0b2f8776186a`.
-
-Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
-
-Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
-
-Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
-
-Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
-<!-- MIRA-LAUNCH-AUTO:END -->
+Confirm CP13 remote integrity; create direct/practical/corporate funnels and stableQR banner; run actual browser tests through authorized CI and bounded load tests; reconcile one canonical dashboard. Real customer registration requires hosting/data/evidence decisions. No external sending, no retry of declined email authorization, no financial guesses or public private-contract contents.

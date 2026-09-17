@@ -23,6 +23,7 @@ jobs:
           python scripts/mira-wire-landing.py
           python scripts/mira-build-demo.py
           python scripts/mira-build-documents.py --downloads
+          python scripts/mira-build-catalog.py
       - name: Prepare clean static site
         run: |
           mkdir -p _site
@@ -41,6 +42,7 @@ jobs:
           test -f _site/mira/marketplace.html
           test -f _site/mira/pilot.html
           test -f _site/mira/data/catalog.json
+          test -f _site/mira/catalog/data.json
           test -f _site/mira/documents/agency-agreement.html
           test -f _site/mira/documents/downloads/agency-agreement.pdf
       - name: Upload artifact
