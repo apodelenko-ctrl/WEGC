@@ -26,6 +26,8 @@ jobs:
           python scripts/mira-build-catalog.py
           python scripts/mira-build-launch.py
           python scripts/mira-build-expo.py
+          python scripts/mira-build-campaign.py
+          python scripts/mira-build-exhibition.py --downloads
       - name: Prepare clean static site
         run: |
           mkdir -p _site
@@ -52,6 +54,10 @@ jobs:
           test -f _site/mira/start/index.html
           test -f _site/mira/phuket/index.html
           test -f _site/mira/expo/banner.pdf
+          test -f _site/mira/go/index.html
+          test -f _site/mira/practical/index.html
+          test -f _site/mira/corporate/index.html
+          test -f _site/mira/exhibition/banner-rollup.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
