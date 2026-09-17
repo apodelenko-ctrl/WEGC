@@ -15,17 +15,26 @@
   "completed_counts": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 0, "belarus_net_new_agencies": 0, "publication_approved_new_media": 0},
   "quality_counts": {
     "vietnam_complete_for_discovery_slot": 11,
-    "vietnam_partial_for_validation": 4,
+    "vietnam_partial_for_validation_initial": 4,
+    "vietnam_complete_after_validation": 14,
+    "vietnam_partial_after_validation": 1,
     "vietnam_duplicates_within_slot": 0,
     "montenegro_complete_for_discovery_slot": 7,
-    "montenegro_partial_for_validation": 8,
-    "montenegro_duplicates_within_slot": 0
+    "montenegro_partial_for_validation_initial": 8,
+    "montenegro_complete_after_validation": 10,
+    "montenegro_partial_after_validation": 5,
+    "montenegro_duplicates_within_slot": 0,
+    "media_source_pages_or_documents_recorded_02": 30,
+    "direct_image_asset_urls_captured_02": 0,
+    "media_files_downloaded_02": 0,
+    "media_visual_reviews_02": 0,
+    "publication_approved_new_media": 0
   },
-  "counts_note": "Vietnam and Montenegro counts mean source-backed discovery records saved, not final import-ready or commercially enabled projects. Partial rows remain explicitly held for the 02:00 validation pass. Project-family repeats are explicit and are not counted as independent developers.",
+  "counts_note": "Vietnam and Montenegro totals are source-backed discovery records, not import-ready inventory, commercially enabled projects or published catalogue rows. After the 02:00 validation pass Vietnam has 14 complete-for-discovery / 1 partial and Montenegro 10 / 5. Project-family and existing developer-level overlaps are explicit and are not counted as new developers.",
   "slots": [
     {"local_hour": "00:00", "id": "00-vietnam", "status": "completed", "started_at": "2026-09-17T23:58:29+07:00", "result_paths": ["00-vietnam-projects.json", "00-vietnam-projects.csv", "00-vietnam.md"], "notes": "15 saved; 11 complete for discovery stage, 4 partial; zero downloaded or publication-approved media."},
     {"local_hour": "01:00", "id": "01-montenegro", "status": "completed", "started_at": "2026-09-18T01:01:08+07:00", "result_paths": ["01-montenegro-projects-part1.json", "01-montenegro-projects-part2.json", "01-montenegro-projects-part3.json", "01-montenegro-projects.csv", "01-montenegro.md"], "notes": "15 saved; 7 complete for discovery stage, 8 partial; 11 developer/project families; zero downloaded, reviewed or publication-approved media. Montis Russian/CIS citizenship-by-investment copy quarantined as stale."},
-    {"local_hour": "02:00", "id": "02-project-validation", "status": "pending", "result_paths": []},
+    {"local_hour": "02:00", "id": "02-project-validation", "status": "completed", "started_at": "2026-09-18T02:00:45+07:00", "result_paths": ["02-project-validation.json", "02-project-validation.csv", "02-project-validation.md"], "notes": "30 reviewed; Vietnam 14 complete/1 partial; Montenegro 10 complete/5 partial; 30 exact media source pages/documents recorded; zero direct image assets captured, downloaded, visually reviewed or publication-approved."},
     {"local_hour": "03:00", "id": "03-russia-a", "status": "pending", "result_paths": []},
     {"local_hour": "04:00", "id": "04-russia-b", "status": "pending", "result_paths": []},
     {"local_hour": "05:00", "id": "05-belarus", "status": "pending", "result_paths": []},
@@ -33,11 +42,12 @@
     {"local_hour": "07:00", "id": "07-integration-handoff", "status": "pending", "result_paths": []},
     {"local_hour": "08:00", "id": "08-morning-brief", "status": "pending", "result_paths": []}
   ],
-  "next_action": "Execute the 02:00 combined project validation slot. Close or replace the 4 Vietnam and 8 Montenegro partial rows where evidence supports it, perform broader repository-level deduplication, and add exact media source-page/image candidates without treating public accessibility as publication permission.",
+  "next_action": "Execute the 03:00 Russia expansion pass A. Read all existing relevant Russia master/Launch-100/CRM/CIS datasets first and count only genuinely net-new agencies; do not replay Vietnam/Montenegro discovery.",
   "baseline_notes": [
     "Local Codex owns backend/admin/publication and current Bali/Dubai integration; do not edit those components.",
     "Current main includes project-bible/mira/research/bali-dubai-2026-09-17/MEDIA-GAPS.md: 28 candidates reviewed locally, 0 approved new media; source URLs and defects are available without expired attachments.",
     "Vietnam discovery outputs were persisted to the research branch and read back through GitHub. A container-side raw-GitHub parser attempt failed because that sandbox had no network/DNS, so no machine-validation success is claimed from that attempt.",
-    "Montenegro slot uses current first-party/developer pages plus Russian or independent brokerage observations where found. Media source pages are recorded but no third-party bytes or rights approvals were created."
+    "Montenegro slot uses current first-party/developer pages plus Russian or independent brokerage observations where found. Media source pages are recorded but no third-party bytes or rights approvals were created.",
+    "The 02:00 validation pass improved primary/current source quality and recorded exact media source pages, but it did not download image bytes, perform visual review or establish publication rights."
   ]
 }
