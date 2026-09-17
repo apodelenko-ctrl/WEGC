@@ -1,0 +1,2065 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-09-17",
+  "selectionMethod": "Targeted representative sample of broker catalogues; not a random census, sales ranking, market share or proof of most frequently marketed projects across the whole market. Agency and supplier observations are kept separate. Different languages and third-party portals are labelled. Publisher microsites are deduplicated.",
+  "markets": {
+    "dubai": 15,
+    "bali": 15
+  },
+  "projects": [
+    {
+      "id": "dubai-sobha-one",
+      "slug": "sobha-one",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Sobha One",
+      "developerBrand": "Sobha Realty",
+      "developerGroup": "Sobha Realty",
+      "operatorBrand": null,
+      "district": "Ras Al Khor",
+      "propertyTypes": [
+        "apartment",
+        "duplex"
+      ],
+      "summary": "Жилой комплекс рядом с Ras Al Khor: апартаменты и дуплексы, озеленённые дворы и гольф-инфраструктура.",
+      "amenities": [
+        "Гольф",
+        "Бассейны",
+        "Озеленённые дворы"
+      ],
+      "projectSource": {
+        "url": "https://sobharealty.com/properties-in-dubai/sobha-one",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Whitewill",
+          "url": "https://whitewill.ae/ru/buy/sobha-one",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "Kalinka",
+          "url": "https://www.kalinka-realty.ru/zarubezh/zhilye-kompleksy/sobha-one/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 2,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://sobharealty.com/properties-in-dubai/sobha-one",
+        "candidateUrl": "https://sobharealty.com/sites/default/files/styles/webp/public/2026-01/Sobha%20One%20Apt.jpg.webp?itok=e-WSXdfL",
+        "localPath": "/images/mira-markets/dubai/sobha-one.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "sobha one",
+          "Sobha One"
+        ]
+      },
+      "sourceLinks": [
+        "https://sobharealty.com/properties-in-dubai/sobha-one",
+        "https://whitewill.ae/ru/buy/sobha-one",
+        "https://www.kalinka-realty.ru/zarubezh/zhilye-kompleksy/sobha-one/"
+      ]
+    },
+    {
+      "id": "dubai-creek-waters",
+      "slug": "creek-waters",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Creek Waters",
+      "developerBrand": "Emaar Properties",
+      "developerGroup": "Emaar Properties",
+      "operatorBrand": null,
+      "district": "Dubai Creek Harbour / Creek Island",
+      "propertyTypes": [
+        "apartment",
+        "townhouse",
+        "penthouse"
+      ],
+      "summary": "Резиденции на Creek Island в Dubai Creek Harbour с выбором апартаментов, таунхаусов и пентхаусов.",
+      "amenities": [
+        "Бассейн",
+        "Детские пространства",
+        "Фитнес",
+        "Зона барбекю"
+      ],
+      "projectSource": {
+        "url": "https://www.emaar.com/en/properties/creek-waters",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Whitewill",
+          "url": "https://creekwaters.ru/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Не объединять с отдельным проектом Creek Waters 2.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.emaar.com/en/properties/creek-waters",
+        "candidateUrl": "https://uae-cms.emaar.com/uploads/335866_hero_slide_0_e7c75e3e39.jpg",
+        "localPath": "/images/mira-markets/dubai/creek-waters.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "creek waters",
+          "Creek Waters"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.emaar.com/en/properties/creek-waters",
+        "https://creekwaters.ru/"
+      ]
+    },
+    {
+      "id": "dubai-damac-riverside",
+      "slug": "damac-riverside",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "DAMAC Riverside",
+      "developerBrand": "DAMAC",
+      "developerGroup": "DAMAC",
+      "operatorBrand": null,
+      "district": "Dubai Investments Park 2 / Yalayis",
+      "propertyTypes": [
+        "townhouse"
+      ],
+      "summary": "Семейный квартал таунхаусов с водными пространствами, зелёными зонами и инфраструктурой для отдыха.",
+      "amenities": [
+        "Водные пространства",
+        "Озеленение",
+        "Семейный отдых"
+      ],
+      "projectSource": {
+        "url": "https://www.damacproperties.com/fr-lu/blog/damac-riverside-community-location-map/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "AX Capital",
+          "url": "https://www.rightmove.co.uk/properties/159259217",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_listing_on_portal",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Не смешивать таунхаусы Riverside с апартаментами Riverside Views. Публикация AX Capital размещена на международном портале, не является русскоязычной страницей.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.damacproperties.com/fr-lu/blog/damac-riverside-community-location-map/",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/dubai/damac-riverside.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "damac riverside",
+          "DAMAC Riverside"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.damacproperties.com/fr-lu/blog/damac-riverside-community-location-map/",
+        "https://www.rightmove.co.uk/properties/159259217"
+      ]
+    },
+    {
+      "id": "dubai-one-river-point",
+      "slug": "one-river-point",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "One River Point",
+      "developerBrand": "Dutco Ellington",
+      "developerGroup": "Dutco / Ellington joint venture",
+      "operatorBrand": null,
+      "district": "Business Bay",
+      "propertyTypes": [
+        "studio",
+        "apartment",
+        "duplex",
+        "penthouse"
+      ],
+      "summary": "Резиденции у Dubai Canal в Business Bay; в линейке проекта представлены апартаменты, дуплексы и пентхаусы.",
+      "amenities": [
+        "Бассейн",
+        "Фитнес",
+        "Пространства для отдыха"
+      ],
+      "projectSource": {
+        "url": "https://www.oneriverpoint.ae/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Metropolitan",
+          "url": "https://metropolitan.realestate/business-bay/one-river-point/",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Совместный бренд Dutco Ellington, не самостоятельное доказательство юридического продавца. Дополнительный источник: https://ellingtonproperties.ae/en/media-center/news/dutco-and-ellington-properties-unveil-a-new-residential-development-one-river-point-under-the-dutco-ellington-brand",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.oneriverpoint.ae/",
+        "candidateUrl": "https://www.oneriverpoint.ae/img/project/homepage/ext1.jpg",
+        "localPath": "/images/mira-markets/dubai/one-river-point.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "one river point",
+          "One River Point"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.oneriverpoint.ae/",
+        "https://metropolitan.realestate/business-bay/one-river-point/"
+      ]
+    },
+    {
+      "id": "dubai-design-quarter-at-d3",
+      "slug": "design-quarter-at-d3",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Design Quarter at d3",
+      "developerBrand": "Meraas",
+      "developerGroup": "Dubai Holding",
+      "operatorBrand": null,
+      "district": "Dubai Design District",
+      "propertyTypes": [
+        "apartment"
+      ],
+      "summary": "Жилой проект в Dubai Design District: городское окружение, творческий квартал и инфраструктура повседневной жизни.",
+      "amenities": [
+        "Фитнес",
+        "Бассейны",
+        "Зелёные пространства"
+      ],
+      "projectSource": {
+        "url": "https://www.dubaiholding.com/en/media-hub/press-releases/meraas-awards-more-than-aed-2-billion-construction-contract-for-design-quarter-at-d3",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Whitewill",
+          "url": "https://design-quarter-dubai.ru/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Meraas, Nakheel и Dubai Properties считаются отдельными брендами витрины, но не независимыми корпоративными группами.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.dubaiholding.com/en/media-hub/press-releases/meraas-awards-more-than-aed-2-billion-construction-contract-for-design-quarter-at-d3",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/dubai/design-quarter-at-d3.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "design quarter at d3",
+          "Design Quarter at d3"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.dubaiholding.com/en/media-hub/press-releases/meraas-awards-more-than-aed-2-billion-construction-contract-for-design-quarter-at-d3",
+        "https://design-quarter-dubai.ru/"
+      ]
+    },
+    {
+      "id": "dubai-como-residences",
+      "slug": "como-residences",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Como Residences",
+      "developerBrand": "Nakheel",
+      "developerGroup": "Dubai Holding",
+      "operatorBrand": null,
+      "district": "Palm Jumeirah",
+      "propertyTypes": [
+        "apartment",
+        "penthouse"
+      ],
+      "summary": "Высотные резиденции на Palm Jumeirah с просторными форматами квартир и курортной инфраструктурой.",
+      "amenities": [
+        "Пляжная зона",
+        "Бассейны",
+        "Фитнес",
+        "Детские пространства"
+      ],
+      "projectSource": {
+        "url": "https://www.nakheel.com/en/new-launches/como-residences",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Whitewill",
+          "url": "https://whitewill.ae/ru/developments",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.nakheel.com/en/new-launches/como-residences",
+        "candidateUrl": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/projects/como-residences.jpg?sfvrsn=6940299b_1",
+        "localPath": "/images/mira-markets/dubai/como-residences.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "como residences",
+          "Como Residences"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.nakheel.com/en/new-launches/como-residences",
+        "https://whitewill.ae/ru/developments"
+      ]
+    },
+    {
+      "id": "dubai-binghatti-skyrise",
+      "slug": "binghatti-skyrise",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Binghatti Skyrise",
+      "developerBrand": "Binghatti",
+      "developerGroup": "Binghatti",
+      "operatorBrand": null,
+      "district": "Business Bay",
+      "propertyTypes": [
+        "studio",
+        "apartment"
+      ],
+      "summary": "Городские студии и апартаменты в Business Bay с бассейнами и спортивными пространствами.",
+      "amenities": [
+        "Бассейны",
+        "Спортивные зоны",
+        "Прогулочные пространства"
+      ],
+      "projectSource": {
+        "url": "https://www.binghatti.com/en-uk/projects/binghatti-Skyrise",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Lelia",
+          "url": "https://leliarealestate.com/zhk/binghatti-skyrise",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "Belcato",
+          "url": "https://belcato.com/ru/off-plan/project/binghatti-skyrise",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "Metropolitan",
+          "url": "https://metropolitan.realestate/ru/business-bay/binghatti-skyrise/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 3,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.binghatti.com/en-uk/projects/binghatti-Skyrise",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/dubai/binghatti-skyrise.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "binghatti skyrise",
+          "Binghatti Skyrise"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.binghatti.com/en-uk/projects/binghatti-Skyrise",
+        "https://leliarealestate.com/zhk/binghatti-skyrise",
+        "https://belcato.com/ru/off-plan/project/binghatti-skyrise",
+        "https://metropolitan.realestate/ru/business-bay/binghatti-skyrise/"
+      ]
+    },
+    {
+      "id": "dubai-bayz-102",
+      "slug": "bayz-102",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "BAYZ 102",
+      "developerBrand": "Danube Properties",
+      "developerGroup": "Danube Properties",
+      "operatorBrand": null,
+      "district": "Business Bay",
+      "propertyTypes": [
+        "studio",
+        "apartment",
+        "penthouse"
+      ],
+      "summary": "Высотный проект в Business Bay с меблированными форматами жилья и инфраструктурой для повседневной жизни.",
+      "amenities": [
+        "Меблированные форматы",
+        "Бассейны",
+        "Фитнес",
+        "Лаунжи"
+      ],
+      "projectSource": {
+        "url": "https://danubeproperties.com/portfolio/bayz102/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Lelia",
+          "url": "https://leliarealestate.com/zhk/bayz-102",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "First Bridge",
+          "url": "https://firstbridge.co/complex/bayz-102-en/",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 2,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://danubeproperties.com/portfolio/bayz102/",
+        "candidateUrl": "https://danubeproperties.com/wp-content/uploads/2024/09/2-4.jpg",
+        "localPath": "/images/mira-markets/dubai/bayz-102.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "bayz 102",
+          "BAYZ 102"
+        ]
+      },
+      "sourceLinks": [
+        "https://danubeproperties.com/portfolio/bayz102/",
+        "https://leliarealestate.com/zhk/bayz-102",
+        "https://firstbridge.co/complex/bayz-102-en/"
+      ]
+    },
+    {
+      "id": "dubai-azizi-venice",
+      "slug": "azizi-venice",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Azizi Venice",
+      "developerBrand": "Azizi Developments",
+      "developerGroup": "Azizi Developments",
+      "operatorBrand": null,
+      "district": "Dubai South",
+      "propertyTypes": [
+        "apartment"
+      ],
+      "summary": "Жилой комплекс в Dubai South, сочетающий апартаменты и инфраструктуру нового городского квартала.",
+      "amenities": [
+        "Водные пространства",
+        "Прогулочные зоны",
+        "Инфраструктура квартала"
+      ],
+      "projectSource": {
+        "url": "https://www.kone.com/global/en/newsroom/releases/2025/kone-to-equip-the-azizi-venice-residential-complex-in-dubai-south-2025-03-10.html",
+        "role": "project_supplier",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Whitewill",
+          "url": "https://azizi-venice.ru/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "JRE",
+          "url": "https://jre.ae/projects/azizi-venice",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 2,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Независимое первичное подтверждение проекта — релиз поставщика KONE; он не подтверждает наличие квартир и право МИРА на продажу.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.kone.com/global/en/newsroom/releases/2025/kone-to-equip-the-azizi-venice-residential-complex-in-dubai-south-2025-03-10.html",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/dubai/azizi-venice.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "azizi venice",
+          "Azizi Venice"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.kone.com/global/en/newsroom/releases/2025/kone-to-equip-the-azizi-venice-residential-complex-in-dubai-south-2025-03-10.html",
+        "https://azizi-venice.ru/",
+        "https://jre.ae/projects/azizi-venice"
+      ]
+    },
+    {
+      "id": "dubai-six-senses-residences-dubai-marina",
+      "slug": "six-senses-residences-dubai-marina",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Six Senses Residences Dubai Marina",
+      "developerBrand": "Select Group",
+      "developerGroup": "Select Group",
+      "operatorBrand": "Six Senses",
+      "district": "Dubai Marina",
+      "propertyTypes": [
+        "apartment",
+        "duplex",
+        "penthouse"
+      ],
+      "summary": "Брендированные резиденции в Dubai Marina с акцентом на wellbeing и сервисную инфраструктуру.",
+      "amenities": [
+        "Wellness",
+        "Фитнес",
+        "Бассейн",
+        "Лаунжи"
+      ],
+      "projectSource": {
+        "url": "https://www.select-group.ae/developments/six-senses-residences-dubai-marina",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Whitewill",
+          "url": "https://whitewill.ae/ru/developments",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.select-group.ae/developments/six-senses-residences-dubai-marina",
+        "candidateUrl": "https://cdn.prod.website-files.com/63bd7443c5c4c66606ad6362/66261544f89fdd8c3123f7fe_crop%20%282%29.jpg",
+        "localPath": "/images/mira-markets/dubai/six-senses-residences-dubai-marina.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "six senses residences dubai marina",
+          "Six Senses Residences Dubai Marina"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.select-group.ae/developments/six-senses-residences-dubai-marina",
+        "https://whitewill.ae/ru/developments"
+      ]
+    },
+    {
+      "id": "dubai-orla",
+      "slug": "orla",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "ORLA, Dorchester Collection",
+      "developerBrand": "OMNIYAT",
+      "developerGroup": "OMNIYAT",
+      "operatorBrand": "Dorchester Collection",
+      "district": "Palm Jumeirah / West Crescent",
+      "propertyTypes": [
+        "apartment",
+        "penthouse"
+      ],
+      "summary": "Резиденции на западном полумесяце Palm Jumeirah с архитектурой Foster + Partners и сервисным брендом Dorchester Collection.",
+      "amenities": [
+        "Пляжный клуб",
+        "Бассейны",
+        "Фитнес",
+        "Сервис резиденций"
+      ],
+      "projectSource": {
+        "url": "https://orla.omniyat.com/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Whitewill",
+          "url": "https://www.bayut.com/property/details-13785800.html",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_listing_on_portal",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Публикация Whitewill на Bayut — международный канал брокера, а не отдельное русскоязычное агентство.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://orla.omniyat.com/",
+        "candidateUrl": "https://orla.omniyat.com/img/carousel-one/2.webp",
+        "localPath": "/images/mira-markets/dubai/orla.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "orla",
+          "ORLA, Dorchester Collection"
+        ]
+      },
+      "sourceLinks": [
+        "https://orla.omniyat.com/",
+        "https://www.bayut.com/property/details-13785800.html"
+      ]
+    },
+    {
+      "id": "dubai-mudon-al-ranim",
+      "slug": "mudon-al-ranim",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Mudon Al Ranim",
+      "developerBrand": "Dubai Properties",
+      "developerGroup": "Dubai Holding",
+      "operatorBrand": null,
+      "district": "Mudon",
+      "propertyTypes": [
+        "townhouse"
+      ],
+      "summary": "Семейные таунхаусы в сообществе Mudon, организованном вокруг парков и прогулочных пространств.",
+      "amenities": [
+        "Парки",
+        "Бассейны",
+        "Детские площадки",
+        "Прогулочные маршруты"
+      ],
+      "projectSource": {
+        "url": "https://www.dp.ae/our-portfolio/all-projects/132/al-ranim/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Metropolitan",
+          "url": "https://metropolitan.realestate/mudon/mudon-townhouses/",
+          "publicationLanguage": "en",
+          "matchBasis": "Каталог содержит Al Ranim 7; карточка МИРА описывает семейство проекта без объединения наличия разных очередей",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Фаза 7 в публикации брокера не доказывает одинаковые условия всех очередей.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.dp.ae/our-portfolio/all-projects/132/al-ranim/",
+        "candidateUrl": "https://www.dp.ae/pictures/b2ee725d-b875-4c28-95a6-577838c44dfdcamgal1.jpg?metadata=true%26quality%3D70%26width%3D650",
+        "localPath": "/images/mira-markets/dubai/mudon-al-ranim.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "mudon al ranim",
+          "Mudon Al Ranim"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.dp.ae/our-portfolio/all-projects/132/al-ranim/",
+        "https://metropolitan.realestate/mudon/mudon-townhouses/"
+      ]
+    },
+    {
+      "id": "dubai-samana-barari-views",
+      "slug": "samana-barari-views",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "SAMANA Barari Views",
+      "developerBrand": "SAMANA Developers",
+      "developerGroup": "SAMANA Developers",
+      "operatorBrand": null,
+      "district": "Majan / район Al Barari",
+      "propertyTypes": [
+        "studio",
+        "apartment"
+      ],
+      "summary": "Студии и апартаменты в районе Majan; часть планировок проекта предусматривает частные бассейны.",
+      "amenities": [
+        "Бассейны в отдельных планировках",
+        "Фитнес",
+        "Лаунжи"
+      ],
+      "projectSource": {
+        "url": "https://www.samanadevelopers.com/projects/samana-barari-views",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "FazWaz Group",
+          "url": "https://www.fazwaz.ru/проекты/объединённые-арабские-эмираты/дубай/al-barari/al-barari-villas/samana-barari-views",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Majan / Al Barari в маркетинговой локализации не приравнивается к проверенному кадастровому адресу.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.samanadevelopers.com/projects/samana-barari-views",
+        "candidateUrl": "https://www.samanadevelopers.com/storage/projects/gallery/sm/2024/09/06/lg_66dac090672f5.jpg",
+        "localPath": "/images/mira-markets/dubai/samana-barari-views.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "samana barari views",
+          "SAMANA Barari Views"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.samanadevelopers.com/projects/samana-barari-views",
+        "https://www.fazwaz.ru/проекты/объединённые-арабские-эмираты/дубай/al-barari/al-barari-villas/samana-barari-views"
+      ]
+    },
+    {
+      "id": "dubai-tiger-sky-tower",
+      "slug": "tiger-sky-tower",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Tiger Sky Tower",
+      "developerBrand": "Tiger Properties",
+      "developerGroup": "Tiger Properties",
+      "operatorBrand": null,
+      "district": "Business Bay",
+      "propertyTypes": [
+        "apartment",
+        "penthouse"
+      ],
+      "summary": "Высотный жилой проект в Business Bay с апартаментами, пентхаусами и пространствами для отдыха.",
+      "amenities": [
+        "Бассейн",
+        "Фитнес",
+        "Общественные пространства"
+      ],
+      "projectSource": {
+        "url": "https://tigerproperties.ae/tigersky-tower-business-bay/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Metropolitan",
+          "url": "https://metropolitan.realestate/business-bay/tiger-sky-tower/",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Рекордные характеристики, гарантии доходности и сроки в публичную карточку не перенесены.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://tigerproperties.ae/tigersky-tower-business-bay/",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/dubai/tiger-sky-tower.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "tiger sky tower",
+          "Tiger Sky Tower"
+        ]
+      },
+      "sourceLinks": [
+        "https://tigerproperties.ae/tigersky-tower-business-bay/",
+        "https://metropolitan.realestate/business-bay/tiger-sky-tower/"
+      ]
+    },
+    {
+      "id": "dubai-cove-edition-i",
+      "slug": "cove-edition-i",
+      "market": "dubai",
+      "countryCode": "AE",
+      "name": "Cove Edition I",
+      "developerBrand": "Imtiaz Developments",
+      "developerGroup": "Imtiaz Developments",
+      "operatorBrand": null,
+      "district": "Dubailand Residence Complex",
+      "propertyTypes": [
+        "studio",
+        "apartment"
+      ],
+      "summary": "Меблированные студии и апартаменты в Dubailand Residence Complex с бассейном на крыше и клубной инфраструктурой.",
+      "amenities": [
+        "Меблированные форматы",
+        "Бассейн на крыше",
+        "Фитнес",
+        "Клубная комната"
+      ],
+      "projectSource": {
+        "url": "https://imtiaz.ae/property/cove-edition-i-by-imtiaz-1",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Bona Domus",
+          "url": "https://bonadomus.ae/en/complexes/cove-edition-i",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Условия сайта Imtiaz требуют письменного разрешения на коммерческое повторное использование материалов. Изображение не допущено к публикации этим исследованием.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://imtiaz.ae/property/cove-edition-i-by-imtiaz-1",
+        "candidateUrl": "https://imtiaz.ae/uploads/property/exterior_gallery/17/IMTIAZ%20-%20Cove%20Edition_Exterior%201.jpg",
+        "localPath": "/images/mira-markets/dubai/cove-edition-i.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "express_permission_required_by_publisher_terms",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "cove edition i",
+          "Cove Edition I"
+        ]
+      },
+      "sourceLinks": [
+        "https://imtiaz.ae/property/cove-edition-i-by-imtiaz-1",
+        "https://bonadomus.ae/en/complexes/cove-edition-i"
+      ]
+    },
+    {
+      "id": "bali-magnum-resort-berawa",
+      "slug": "magnum-resort-berawa",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "Magnum Resort Berawa",
+      "developerBrand": "Magnum Estate",
+      "developerGroup": "Magnum Estate",
+      "operatorBrand": null,
+      "district": "Berawa / Canggu",
+      "propertyTypes": [
+        "apartment"
+      ],
+      "summary": "Апартаментный комплекс в Berawa с курортной инфраструктурой и пространствами для работы и отдыха.",
+      "amenities": [
+        "Бассейн на крыше",
+        "Коворкинг",
+        "Фитнес",
+        "Спа"
+      ],
+      "projectSource": {
+        "url": "https://magnumestate.com/projects/berawa",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "FazWaz Group",
+          "url": "https://www.fazwaz.id/projects/indonesia/bali/badung/canggu/magnum-resort-berawa",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Микросайт magnum-residence-berawa.com не считается отдельным агентством: издатель не установлен.",
+      "aliases": [
+        "Magnum Residence Berawa"
+      ],
+      "media": {
+        "sourcePage": "https://magnumestate.com/projects/berawa",
+        "candidateUrl": "https://magnum-assets.b-cdn.net/assets/img/berawa/1.webp",
+        "localPath": "/images/mira-markets/bali/magnum-resort-berawa.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "magnum resort berawa",
+          "Magnum Resort Berawa"
+        ]
+      },
+      "sourceLinks": [
+        "https://magnumestate.com/projects/berawa",
+        "https://www.fazwaz.id/projects/indonesia/bali/badung/canggu/magnum-resort-berawa"
+      ]
+    },
+    {
+      "id": "bali-magnum-resort-sanur",
+      "slug": "magnum-resort-sanur",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "Magnum Resort Sanur",
+      "developerBrand": "Magnum Estate",
+      "developerGroup": "Magnum Estate",
+      "operatorBrand": null,
+      "district": "Sanur",
+      "propertyTypes": [
+        "apartment",
+        "penthouse"
+      ],
+      "summary": "Резиденции в Sanur с курортными общественными зонами, бассейнами и wellness-инфраструктурой.",
+      "amenities": [
+        "Пляжный лаунж",
+        "Бассейны",
+        "Спа",
+        "Коворкинг"
+      ],
+      "projectSource": {
+        "url": "https://magnumestate.com/projects/sanur",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Balinsky",
+          "url": "https://realting.com/ru/indonesia/new-buildings/35402",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_listing_on_portal",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "",
+      "aliases": [
+        "Magnum Residence Sanur"
+      ],
+      "media": {
+        "sourcePage": "https://magnumestate.com/projects/sanur",
+        "candidateUrl": "https://magnum-assets.b-cdn.net/img/apartments/1.jpg",
+        "localPath": "/images/mira-markets/bali/magnum-resort-sanur.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "magnum resort sanur",
+          "Magnum Resort Sanur"
+        ]
+      },
+      "sourceLinks": [
+        "https://magnumestate.com/projects/sanur",
+        "https://realting.com/ru/indonesia/new-buildings/35402"
+      ]
+    },
+    {
+      "id": "bali-elysium-eco-city",
+      "slug": "elysium-eco-city",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "ELYSIUM Eco City",
+      "developerBrand": "BREIG",
+      "developerGroup": "BREIG",
+      "operatorBrand": null,
+      "district": "Pererenan",
+      "propertyTypes": [
+        "apartment",
+        "villa"
+      ],
+      "summary": "Проект в Pererenan, объединяющий апартаменты, виллы и зелёные пространства.",
+      "amenities": [
+        "Озеленение",
+        "Бассейны",
+        "Инфраструктура комплекса"
+      ],
+      "projectSource": {
+        "url": "https://breig-property.com/ru/project/elysium-eco-city/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Balinsky",
+          "url": "https://realting.com/ru/indonesia/pererenan/new-buildings/apartments",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_listing_on_portal",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://breig-property.com/ru/project/elysium-eco-city/",
+        "candidateUrl": "https://breig-property.com/wp-content/uploads/2026/05/elysium_new_exterier.webp",
+        "localPath": "/images/mira-markets/bali/elysium-eco-city.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "elysium eco city",
+          "ELYSIUM Eco City"
+        ]
+      },
+      "sourceLinks": [
+        "https://breig-property.com/ru/project/elysium-eco-city/",
+        "https://realting.com/ru/indonesia/pererenan/new-buildings/apartments"
+      ]
+    },
+    {
+      "id": "bali-edem-ii",
+      "slug": "edem-ii",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "EDEM II Santorini Residences",
+      "developerBrand": "BREIG",
+      "developerGroup": "BREIG",
+      "operatorBrand": null,
+      "district": "Nusa Dua",
+      "propertyTypes": [
+        "villa"
+      ],
+      "summary": "Виллы в Nusa Dua с террасами и частными бассейнами; отдельная очередь проекта EDEM.",
+      "amenities": [
+        "Частные бассейны",
+        "Террасы"
+      ],
+      "projectSource": {
+        "url": "https://breig-property.com/ru/project/edem-ii-santorini-residences/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [],
+      "agencyPublisherCount": 0,
+      "agencyCoverageStatus": "developer_confirmed_diversity_addition",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Диверсифицирующее включение по первичному источнику. Edem Villas в каталоге Nestra не засчитан как EDEM II: совпадение очереди не подтверждено.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://breig-property.com/ru/project/edem-ii-santorini-residences/",
+        "candidateUrl": "https://breig-property.com/wp-content/uploads/2026/05/exterior-edem-ii-2_converted.webp",
+        "localPath": "/images/mira-markets/bali/edem-ii.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "edem ii",
+          "EDEM II Santorini Residences"
+        ]
+      },
+      "sourceLinks": [
+        "https://breig-property.com/ru/project/edem-ii-santorini-residences/"
+      ]
+    },
+    {
+      "id": "bali-secana-beachtown",
+      "slug": "secana-beachtown",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "Secana Beachtown",
+      "developerBrand": "Mirah Investment & Development",
+      "developerGroup": "Mirah Investment & Development",
+      "operatorBrand": null,
+      "district": "Berawa / Canggu",
+      "propertyTypes": [
+        "villa",
+        "apartment"
+      ],
+      "summary": "Комплекс вилл и loft-апартаментов в Berawa с ресторанами, фитнесом и пространствами для работы.",
+      "amenities": [
+        "Бассейны",
+        "Рестораны",
+        "Фитнес",
+        "Коворкинг"
+      ],
+      "projectSource": {
+        "url": "https://mirahdevelopments.com/development/secana-beachtown/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Intermark",
+          "url": "https://intermark.ru/nedvizhimost-za-rubezhom/indonesia/bali/villas",
+          "publicationLanguage": "ru",
+          "matchBasis": "Secana Beachtown, референс 729624",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Наличие действующего комплекса не доказывает текущий остаток объектов для продажи.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://mirahdevelopments.com/development/secana-beachtown/",
+        "candidateUrl": "https://mirahdevelopments.com/app/uploads/2025/02/Secana-jpg.webp",
+        "localPath": "/images/mira-markets/bali/secana-beachtown.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "secana beachtown",
+          "Secana Beachtown"
+        ]
+      },
+      "sourceLinks": [
+        "https://mirahdevelopments.com/development/secana-beachtown/",
+        "https://intermark.ru/nedvizhimost-za-rubezhom/indonesia/bali/villas"
+      ]
+    },
+    {
+      "id": "bali-somoshotels-uluwatu",
+      "slug": "somoshotels-uluwatu",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "SOMOSHOTELS Uluwatu",
+      "developerBrand": "Mirah Investment & Development",
+      "developerGroup": "Mirah Investment & Development",
+      "operatorBrand": null,
+      "district": "Uluwatu / Pecatu",
+      "propertyTypes": [
+        "hotel_suite"
+      ],
+      "summary": "Гостиничный проект в Uluwatu: номера и инфраструктура для отдыха, событий и wellness.",
+      "amenities": [
+        "Day club",
+        "Бассейн",
+        "Ресторан",
+        "Wellness",
+        "Событийные пространства"
+      ],
+      "projectSource": {
+        "url": "https://mirahdevelopments.com/development/somoshotels/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Intermark",
+          "url": "https://bali.intermark.global/new",
+          "publicationLanguage": "ru",
+          "matchBasis": "Mirah Somos в каталоге новых проектов",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Гостиничные номера не классифицируются как обычные квартиры. Юридическая форма прав требует отдельной проверки.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://mirahdevelopments.com/development/somoshotels/",
+        "candidateUrl": "https://mirahdevelopments.com/app/uploads/2025/02/Facade-Somos-jpg.webp",
+        "localPath": "/images/mira-markets/bali/somoshotels-uluwatu.webp",
+        "acquisitionStatus": "url_identified_bytes_not_downloaded",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "somoshotels uluwatu",
+          "SOMOSHOTELS Uluwatu"
+        ]
+      },
+      "sourceLinks": [
+        "https://mirahdevelopments.com/development/somoshotels/",
+        "https://bali.intermark.global/new"
+      ]
+    },
+    {
+      "id": "bali-ecoverse-residences",
+      "slug": "ecoverse-residences",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "Ecoverse Residences",
+      "developerBrand": "NPG Indonesia",
+      "developerGroup": "Nuanu / NPG",
+      "operatorBrand": null,
+      "district": "Nyanyi / район Nuanu",
+      "propertyTypes": [
+        "apartment",
+        "townhouse"
+      ],
+      "summary": "Апартаменты и таунхаусы в районе Nyanyi рядом с Nuanu, с инфраструктурой для жизни и отдыха.",
+      "amenities": [
+        "Бассейн",
+        "Фитнес",
+        "Спа",
+        "Коворкинг"
+      ],
+      "projectSource": {
+        "url": "https://partners.nuanu.realestate/ecoverse-en",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "EstateWin",
+          "url": "https://estatewin-bali.com/ecoverse",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Девелопер NPG Indonesia, не Alex Villas. Близость к Nuanu не является доказательством нахождения внутри его юридических границ.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://partners.nuanu.realestate/ecoverse-en",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/ecoverse-residences.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "ecoverse residences",
+          "Ecoverse Residences"
+        ]
+      },
+      "sourceLinks": [
+        "https://partners.nuanu.realestate/ecoverse-en",
+        "https://estatewin-bali.com/ecoverse"
+      ]
+    },
+    {
+      "id": "bali-origins-nuanu",
+      "slug": "origins-nuanu",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "ORIGINS Nuanu",
+      "developerBrand": "Bali Baza Development",
+      "developerGroup": "Bali Baza Development",
+      "operatorBrand": null,
+      "district": "Nuanu / Nyanyi",
+      "propertyTypes": [
+        "villa"
+      ],
+      "summary": "Коллекция вилл ORIGINS в Nuanu: природное окружение и доступ к инфраструктуре территории.",
+      "amenities": [
+        "Частные пространства",
+        "Озеленение",
+        "Инфраструктура Nuanu"
+      ],
+      "projectSource": {
+        "url": "https://bali.baza.bz/origins-nuanu",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "World Estate",
+          "url": "https://worldestate.homes/indonesia/bali/origins/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Дополнительный первичный источник девелопера: https://partners.nuanu.realestate/origins-en . Бренд проекта не заменяет проверку стороны сделки.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://bali.baza.bz/origins-nuanu",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/origins-nuanu.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "origins nuanu",
+          "ORIGINS Nuanu"
+        ]
+      },
+      "sourceLinks": [
+        "https://bali.baza.bz/origins-nuanu",
+        "https://worldestate.homes/indonesia/bali/origins/"
+      ]
+    },
+    {
+      "id": "bali-the-era-by-oxo",
+      "slug": "the-era-by-oxo",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "The ERA by OXO",
+      "developerBrand": "OXO",
+      "developerGroup": "OXO",
+      "operatorBrand": null,
+      "district": "Uluwatu / Bingin Hills",
+      "propertyTypes": [
+        "villa"
+      ],
+      "summary": "Виллы в районе Bingin Hills с террасами, частными бассейнами и открытыми жилыми пространствами.",
+      "amenities": [
+        "Частный бассейн",
+        "Террасы",
+        "Открытые жилые пространства"
+      ],
+      "projectSource": {
+        "url": "https://rehouse.ae/ru/project/era",
+        "role": "broker_catalogue",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "REHouse",
+          "url": "https://rehouse.ae/ru/project/era",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "OXO указан как бренд предложения. На сайте также описаны управление и продажи; юридический девелопер и продавец отдельно не верифицированы. Локальная проверка 2026-09-17: исходный URL перенаправляет на The Bank. Публичная ссылка заменена точной публикацией REHouse с явной маркировкой брокерского источника; изображение The Bank не используется.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://realestate.oxoliving.com/the-era-by-oxo/the-villa/",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/the-era-by-oxo.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "the era by oxo",
+          "The ERA by OXO"
+        ]
+      },
+      "sourceLinks": [
+        "https://realestate.oxoliving.com/the-era-by-oxo/the-villa/",
+        "https://rehouse.ae/ru/project/era"
+      ],
+      "originalProjectSource": {
+        "url": "https://realestate.oxoliving.com/the-era-by-oxo/the-villa/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      }
+    },
+    {
+      "id": "bali-swoi-loft-umalas",
+      "slug": "swoi-loft-umalas",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "SWOI LOFT Umalas",
+      "developerBrand": "SWOI Development Group",
+      "developerGroup": "SWOI Development Group",
+      "operatorBrand": null,
+      "district": "Umalas",
+      "propertyTypes": [
+        "townhouse",
+        "villa"
+      ],
+      "summary": "Лофт-таунхаусы и виллы в Umalas с пешеходными пространствами и инфраструктурой комплекса.",
+      "amenities": [
+        "Пешеходные зоны",
+        "Сад",
+        "Барбекю",
+        "Спортивные зоны"
+      ],
+      "projectSource": {
+        "url": "https://swoi-development.com/loft",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "EstateWin",
+          "url": "https://estatewin-bali.com/swoiloftumalas",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "Domik.io",
+          "url": "https://domik.io/en/project/swoi-loft-umalas-15262",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "property_portal",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Не смешивать с отдельным проектом SWOI Berawa. Domik.io учитывается как портал, а не подтверждённое отдельное агентство.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://swoi-development.com/loft",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/swoi-loft-umalas.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "swoi loft umalas",
+          "SWOI LOFT Umalas"
+        ]
+      },
+      "sourceLinks": [
+        "https://swoi-development.com/loft",
+        "https://estatewin-bali.com/swoiloftumalas",
+        "https://domik.io/en/project/swoi-loft-umalas-15262"
+      ]
+    },
+    {
+      "id": "bali-anta-canggu",
+      "slug": "anta-canggu",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "ANTA Hotel Bali Canggu",
+      "developerBrand": "ANTA Group",
+      "developerGroup": "ANTA Group",
+      "operatorBrand": "Radisson Individuals",
+      "district": "Batu Bolong / Canggu",
+      "propertyTypes": [
+        "serviced_apartment"
+      ],
+      "summary": "Сервисные резиденции в Canggu с гостиничным брендом Radisson Individuals и инфраструктурой отдыха.",
+      "amenities": [
+        "Сервисная инфраструктура",
+        "Бассейн",
+        "Общественные пространства"
+      ],
+      "projectSource": {
+        "url": "https://www.prnewswire.com/apac/news-releases/radisson-hotel-group-accelerates-growth-in-indonesia-with-anta-hotel-bali-canggu-a-member-of-radisson-individuals-302636834.html",
+        "role": "operator_press_release",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "DDA Real Estate",
+          "url": "https://www.rumah123.com/properti/badung-canggu/apartemen-level-5-di-pusat-batu-bolong-lokasi-lifestyle-utama-di-canggu-aps7617392/",
+          "publicationLanguage": "id",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_listing_on_portal",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "FazWaz Group",
+          "url": "https://www.fazwaz.id/projects/indonesia/bali/badung/canggu/anta-residence-canggu",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 2,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Первичный источник — релиз Radisson. Несогласующиеся сроки сдачи из брокерских объявлений не перенесены.",
+      "aliases": [
+        "ANTA Residence Canggu",
+        "Radisson Individuals Anta Canggu"
+      ],
+      "media": {
+        "sourcePage": "https://www.prnewswire.com/apac/news-releases/radisson-hotel-group-accelerates-growth-in-indonesia-with-anta-hotel-bali-canggu-a-member-of-radisson-individuals-302636834.html",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/anta-canggu.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "anta canggu",
+          "ANTA Hotel Bali Canggu"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.prnewswire.com/apac/news-releases/radisson-hotel-group-accelerates-growth-in-indonesia-with-anta-hotel-bali-canggu-a-member-of-radisson-individuals-302636834.html",
+        "https://www.rumah123.com/properti/badung-canggu/apartemen-level-5-di-pusat-batu-bolong-lokasi-lifestyle-utama-di-canggu-aps7617392/",
+        "https://www.fazwaz.id/projects/indonesia/bali/badung/canggu/anta-residence-canggu"
+      ]
+    },
+    {
+      "id": "bali-nexa-canggu-studio",
+      "slug": "nexa-canggu-studio",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "NEXA Canggu Studio",
+      "developerBrand": "NEXA",
+      "developerGroup": "NEXA",
+      "operatorBrand": null,
+      "district": "Canggu",
+      "propertyTypes": [
+        "apartment"
+      ],
+      "summary": "Апартаменты NEXA в Canggu с бассейном на крыше и лаунжем.",
+      "amenities": [
+        "Бассейн на крыше",
+        "Лаунж",
+        "Консьерж"
+      ],
+      "projectSource": {
+        "url": "https://nexauniverse.com/projects/nexa-studio",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Nestra Estate",
+          "url": "https://ru.nestraestate.com/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Nexa Apartments: название сопоставлено по Canggu, 40 апартаментам, формату 42 м² и бассейну на крыше; это разрешённый алиас, не буквальное совпадение",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "В каталоге брокера встречается противоречивая привязка к Bukit; она не перенесена. Спорт/рестораны по партнёрской программе не названы собственной инфраструктурой.",
+      "aliases": [
+        "Nexa Apartments"
+      ],
+      "media": {
+        "sourcePage": "https://nexauniverse.com/projects/nexa-studio",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/nexa-canggu-studio.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "nexa canggu studio",
+          "NEXA Canggu Studio"
+        ]
+      },
+      "sourceLinks": [
+        "https://nexauniverse.com/projects/nexa-studio",
+        "https://ru.nestraestate.com/"
+      ]
+    },
+    {
+      "id": "bali-indari-by-balix",
+      "slug": "indari-by-balix",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "INDARI by BALIX",
+      "developerBrand": "BALIX",
+      "developerGroup": "BALIX",
+      "operatorBrand": null,
+      "district": "Ubud",
+      "propertyTypes": [
+        "villa",
+        "apartment"
+      ],
+      "summary": "Виллы и апартаменты в природном окружении Ubud с wellness-инфраструктурой.",
+      "amenities": [
+        "Спа",
+        "Ресторан",
+        "Йога",
+        "Природное окружение"
+      ],
+      "projectSource": {
+        "url": "https://www.balixdg.com/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "Nestra Estate",
+          "url": "https://ru.nestraestate.com/",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        },
+        {
+          "publisher": "TOPS.ME",
+          "url": "https://indaribybalix.com/ru",
+          "publicationLanguage": "ru",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 2,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Микросайт indaribybalix.com относится к брокерскому предложению TOPS.ME, а не автоматически к самому девелоперу.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://www.balixdg.com/",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/indari-by-balix.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "indari by balix",
+          "INDARI by BALIX"
+        ]
+      },
+      "sourceLinks": [
+        "https://www.balixdg.com/",
+        "https://ru.nestraestate.com/",
+        "https://indaribybalix.com/ru"
+      ]
+    },
+    {
+      "id": "bali-xo-pandawa",
+      "slug": "xo-pandawa",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "XO Pandawa",
+      "developerBrand": "LOYO & BONDAR",
+      "developerGroup": "LOYO & BONDAR",
+      "operatorBrand": null,
+      "district": "Pandawa / Bukit",
+      "propertyTypes": [
+        "apartment",
+        "villa"
+      ],
+      "summary": "Комплекс апартаментов и вилл в районе Pandawa с общими пространствами для отдыха.",
+      "amenities": [
+        "Бассейн на крыше",
+        "Кинотеатр",
+        "Лаунж-бар"
+      ],
+      "projectSource": {
+        "url": "https://loyo-development.com/xopandawaen",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [
+        {
+          "publisher": "ULU Homes",
+          "url": "https://ulu-homes.id/projects/xo-project-pandawa/",
+          "publicationLanguage": "en",
+          "matchBasis": "Точное название проекта в публикации",
+          "channel": "broker_catalogue",
+          "reviewedAt": "2026-09-17"
+        }
+      ],
+      "agencyPublisherCount": 1,
+      "agencyCoverageStatus": "exact_or_resolved_project_observed",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Данные о цене, доходности, сроках и конкретных правах владения не переносились.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://loyo-development.com/xopandawaen",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/xo-pandawa.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "xo pandawa",
+          "XO Pandawa"
+        ]
+      },
+      "sourceLinks": [
+        "https://loyo-development.com/xopandawaen",
+        "https://ulu-homes.id/projects/xo-project-pandawa/"
+      ]
+    },
+    {
+      "id": "bali-sunny-aparts-ii",
+      "slug": "sunny-aparts-ii",
+      "market": "bali",
+      "countryCode": "ID",
+      "name": "Sunny Aparts II",
+      "developerBrand": "Sunny Development Group",
+      "developerGroup": "Sunny Holding",
+      "operatorBrand": null,
+      "district": "Berawa / Canggu",
+      "propertyTypes": [
+        "apartment"
+      ],
+      "summary": "Апартаментный комплекс в Berawa с фитнесом, спа и террасой на крыше.",
+      "amenities": [
+        "Фитнес",
+        "Спа",
+        "Терраса на крыше"
+      ],
+      "projectSource": {
+        "url": "https://sunnyholding.com/projects/sunny-aparts-2/",
+        "role": "developer",
+        "reviewedAt": "2026-09-17",
+        "verificationScope": "public_project_description_not_inventory_contract_or_legal_due_diligence"
+      },
+      "agencyObservations": [],
+      "agencyPublisherCount": 0,
+      "agencyCoverageStatus": "developer_confirmed_diversity_addition",
+      "legalSeller": null,
+      "commerciallyEnabled": false,
+      "availabilityStatus": "on_request",
+      "commercialTermsStatus": "not_confirmed",
+      "reviewedAt": "2026-09-17",
+      "selectionBasis": "editorial_diversity_with_broker_catalogue_observations_not_sales_ranking",
+      "commercialStatusLabel": "Подбор по запросу",
+      "marketMode": "project_discovery_not_mira_inventory",
+      "sourceNote": "Диверсифицирующее включение по первичным страницам. Дополнительный первичный каталог: https://sunnydg.com/ru/catalog/ . Точный независимый издатель sunny-aparts-2.com не установлен; упоминание бренда Legion не засчитано как наблюдение этого проекта.",
+      "aliases": [],
+      "media": {
+        "sourcePage": "https://sunnyholding.com/projects/sunny-aparts-2/",
+        "candidateUrl": null,
+        "localPath": "/images/mira-markets/bali/sunny-aparts-ii.webp",
+        "acquisitionStatus": "project_gallery_identified_exact_image_pending",
+        "rightsStatus": "not_documented",
+        "visualReviewStatus": "pending",
+        "approvedForPublication": false,
+        "pageMatchTerms": [
+          "sunny aparts ii",
+          "Sunny Aparts II"
+        ]
+      },
+      "sourceLinks": [
+        "https://sunnyholding.com/projects/sunny-aparts-2/"
+      ]
+    }
+  ]
+}
