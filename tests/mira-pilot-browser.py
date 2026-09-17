@@ -21,13 +21,50 @@ async def main():
     page.on('pageerror',lambda e:errors.append(str(e)))
     page.on('console',lambda m:errors.append(m.text) if m.type=='error' and ('Content Security Policy' in m.text or 'violates' in m.text) else None)
    await applicant.goto(origin+'/mira/pilot.html')
+   await applicant.locator('#application-next').click()
+   assert await applicant.locator('[data-step="0"]').is_visible()
+   await applicant.locator('#company-tip summary').click()
+   assert await applicant.locator('#company-tip').get_attribute('open') is not None
    await applicant.locator('[name=company]').fill('SYNTHETIC AGENCY')
    await applicant.locator('[name=city]').fill('TEST CITY')
    await applicant.locator('[name=name]').fill('TEST REPRESENTATIVE')
+   await applicant.screenshot(path=str(OUTPUT/'application-step1-desktop.png'),full_page=True,animations='disabled')
+   await applicant.locator('#application-next').click()
+   await applicant.locator('[name=market]').select_option('bali')
+   await applicant.locator('#application-back').click()
+   assert await applicant.locator('[name=company]').input_value()=='SYNTHETIC AGENCY'
+   await applicant.locator('#application-next').click()
+   assert await applicant.locator('[name=market]').input_value()=='bali'
+   await applicant.locator('#application-next').click()
+   assert 'SYNTHETIC AGENCY' in await applicant.locator('#application-summary').inner_text()
+   assert not await applicant.locator('#application input[type=checkbox]').is_checked()
+   await applicant.locator('#application button[type=submit]').click()
+   assert await applicant.locator('[data-application]').count()==0
+   for width in [320,390,768,1440]:
+    await applicant.set_viewport_size({'width':width,'height':900})
+    assert await applicant.evaluate('document.documentElement.scrollWidth<=innerWidth'),width
+   await applicant.set_viewport_size({'width':390,'height':844})
+   await applicant.screenshot(path=str(OUTPUT/'application-step3-mobile.png'),full_page=True,animations='disabled')
+   await applicant.emulate_media(reduced_motion='reduce')
+   assert await applicant.locator('[data-step="2"]').evaluate("e=>getComputedStyle(e).animationName")=='none'
+   await applicant.set_viewport_size({'width':1440,'height':1000})
    await applicant.locator('#application input[type=checkbox]').check()
+   # Lose the first response after the Worker committed it. The same browser
+   # attempt must recover the existing receipt, not create a duplicate.
+   async def lose_response(route):
+    if route.request.method=='POST':
+     await route.fetch()
+     await route.abort('failed')
+     await applicant.unroute('**/mira/api/applications',lose_response)
+    else:await route.continue_()
+   await applicant.route('**/mira/api/applications',lose_response)
+   await applicant.locator('#application button[type=submit]').click()
+   await applicant.locator('#application [role=status]').filter(has_text='Ответ сервера не получен').wait_for()
    await applicant.locator('#application button[type=submit]').click()
    await applicant.locator('#application [role=status]').filter(has_text='Получено МИРА').wait_for()
    appid=await applicant.locator('[data-application]').first.get_attribute('data-application')
+   assert await applicant.locator('[data-application]').count()==1
+   await applicant.screenshot(path=str(OUTPUT/'application-receipt-desktop.png'),full_page=True,animations='disabled')
    assert not await applicant.locator('[data-section=operator]').is_visible()
    await operator.goto(origin+'/mira/pilot.html')
    await operator.locator('[data-section=operator]').click()
@@ -63,7 +100,7 @@ async def main():
    await operator.locator('#bind-owner input[type=checkbox]').check()
    await operator.locator('#bind-owner button[type=submit]').click()
    await operator.locator('#bind-owner [role=status]').filter(has_text='Представитель назначен').wait_for()
-   await operator.screenshot(path=str(OUTPUT/'operator-agency-desktop.png'),full_page=True)
+   await operator.screenshot(path=str(OUTPUT/'operator-agency-desktop.png'),full_page=True,animations='disabled')
    await operator.locator('#back-application').click()
    await operator.locator('#application-review [name=status]').select_option('onboarded')
    await operator.locator('#application-review [name=agency_id]').fill(agencyid)
@@ -74,7 +111,7 @@ async def main():
    await applicant.reload()
    await applicant.locator('[data-section=profile]').click()
    await applicant.get_by_text('SYNTHETIC AGENCY',exact=True).wait_for()
-   await applicant.screenshot(path=str(OUTPUT/'agency-profile-desktop.png'),full_page=True)
+   await applicant.screenshot(path=str(OUTPUT/'agency-profile-desktop.png'),full_page=True,animations='disabled')
    await other.goto(origin+'/mira/pilot.html')
    denied=await other.evaluate("async id=>{const r=await fetch('/mira/api/applications/'+id);return r.status}",appid)
    assert denied==404
@@ -111,10 +148,10 @@ async def main():
     await operator.set_viewport_size({'width':width,'height':900})
     assert await operator.evaluate('document.documentElement.scrollWidth<=innerWidth'),width
    await operator.set_viewport_size({'width':390,'height':844})
-   await operator.screenshot(path=str(OUTPUT/'operator-agency-mobile.png'),full_page=True)
+   await operator.screenshot(path=str(OUTPUT/'operator-agency-mobile.png'),full_page=True,animations='disabled')
    assert not errors,errors
    await browser.close()
-  result={'local_signed_worker_browser':'passed','receipt_and_reload':'passed','operator_qualification':'passed','agreement_activation_owner_binding':'passed','onboarding':'passed','other_identity_isolation':'passed','activation_without_evidence':'denied','revocation':'passed','restoration_with_audit':'passed','expired_session_receipt_preserved':'passed','audit_pagination':'passed','widths':[390,768,1440],'page_errors':errors,'live_access_d1_acceptance':False}
+  result={'three_step_validation_back_review':'passed','lost_response_same_receipt':'passed','reduced_motion':'passed','applicant_widths':[320,390,768,1440],'local_signed_worker_browser':'passed','receipt_and_reload':'passed','operator_qualification':'passed','agreement_activation_owner_binding':'passed','onboarding':'passed','other_identity_isolation':'passed','activation_without_evidence':'denied','revocation':'passed','restoration_with_audit':'passed','expired_session_receipt_preserved':'passed','audit_pagination':'passed','widths':[390,768,1440],'page_errors':errors,'live_access_d1_acceptance':False}
   (OUTPUT/'report.json').write_text(json.dumps(result,indent=2))
   print(json.dumps(result))
  finally:

@@ -127,3 +127,13 @@ Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. F
 
 Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
 <!-- MIRA-LAUNCH-AUTO:END -->
+
+## 2026-09-18 — continuation: three-step agency intake
+
+Public release is verified through PR 11/run 35251270668. Continue from branch `codex/mira-agency-intake-20260918`, worktree `WEGC-admin-release`; never overwrite the preserved original admin checkpoint.
+
+Owner authorized controlled agency intake and approved the prepared notice/retention/contact. Same-origin notice: `/mira/agency-privacy.html`, version `mira-agency-2026-09-18-v1`. Prepared private Wrangler config sets applications true, retains materials false and the existing Worker, D1, Access issuer/AUD, route and compatibility date. No migrations.
+
+Before claiming completion: deploy the exact tested commit, confirm live assets/version, add only the owner-agreed second test email to the existing Access allowlist, complete its OTP login, receive a real test receipt, re-login, view as operator and record a factually supported decision. No signed contract exists for this test; missing-proof activation must stay denied. Positive synthetic onboarding is isolated only. Native Chrome currently exposes no actionable controls; owner has been given the precise allowlist edit. Codes/cookies/private identities must not be put in GitHub.
+
+The mini-CRM has application queue, contact, stage, agency administration and audit. Compose-email opens the owner's mail application; document link opens templates. Automated outreach, sent-mail tracking and private document delivery are not implemented or claimed.
