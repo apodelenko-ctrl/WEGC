@@ -6,12 +6,30 @@ explicitly labelled. A closed registration gate is tested, not called registrati
 from pathlib import Path
 from urllib.parse import urlsplit
 import argparse, json, os
-from playwright.sync_api import sync_playwright
 
 ALLOWED={'wegc.fund','localhost','127.0.0.1'}
 WIDTHS=[320,360,390,600,768,1024,1440]
 
+def make_json_fixture(status, body):
+    """Capture fixture values separately from Playwright's optional Request arg.
+
+    Only used for labelled negative catalogue responses. Supports both callback
+    forms without ever substituting a Request object for the HTTP status.
+    """
+    if type(status) is not int or not 100 <= status <= 599:
+        raise ValueError('Fixture HTTP status must be an integer')
+    if not isinstance(body, str):
+        raise ValueError('Fixture body must be text')
+
+    def handler(route, _request=None):
+        route.fulfill(status=status, content_type='application/json', body=body)
+
+    return handler
+
+
 def run(base,out):
+    from playwright.sync_api import sync_playwright
+
     assert urlsplit(base).hostname in ALLOWED
     out.mkdir(parents=True,exist_ok=True)
     report={'base':base,'scope':'real HTTP/CSP; local-only briefs; labelled negative fixtures',
@@ -94,7 +112,7 @@ def run(base,out):
             assert page.locator('#shortlist-open').is_hidden();mark('corrupt_local_selection_fallback')
             for name,body in [('503','temporary'),('malformed_json','{invalid')]:
                 status=503 if name=='503' else 200
-                context.route('**/mira/catalog/data.json',lambda r,s=status,b=body:r.fulfill(status=s,content_type='application/json',body=b))
+                context.route('**/mira/catalog/data.json', make_json_fixture(status, body))
                 goto('/mira/catalog/');page.locator('#load-error').wait_for(state='visible')
                 assert page.locator('#search').is_disabled() and page.locator('#cards .project-card').count()==24
                 context.unroute('**/mira/catalog/data.json');mark('fixture_'+name,static_fallback=True)

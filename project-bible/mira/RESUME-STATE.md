@@ -1,15 +1,31 @@
 # MIRA RESUME-STATE
 
-2026-09-17 — CP15. Do not repeat CP12legal/CP13catalogue/CP14design work.
+2026-09-17 — CP16 resumes CP15 actual acceptance. Do not repeat CP12legal/CP13catalogue/CP14design work.
 
-CP14QA35197901350/Pages35197901315 succeeded; snapshotc2f0dce5. Newroutes go/practical/corporate,comparisonlaunch,exactQRexhibition→go. Originaleditorial/agency/45demo and concurrentstart/growth/business/phuket/expo preserved.
+## Exact recovery point
 
-CP15adds tests/mira-campaign-browser.py and scripts/mira-release-audit.py. Actual-CSP/HTTP suite is integrated into existing fullpublicreleaseworkflow, not a fictional local browser result. Artifact now `mira-cp15-public-release`. New tests are pending execution: inspect both local/live browser reports and audits, fix any failure, then publish measured report/dashboard. Do not attribute oldrun35196047440 metrics to newroutes.
+CP15publicrelease35199313364 FAILED in `tests/mira-campaign-browser.py` negative fixtures: a Request object displaced the intended HTTP status in a lambda. Later live stages were skipped. Fixed with `make_json_fixture` and four unit regressions; local83Node/106Python passed. Browser navigation in the execution container is blocked by administrator policy; the existing GitHub Actions browser runner is the authorized route. Do not label the blocked local attempt a passing test.
 
-Known fixed issues:comparisonhub#how/#start not present onhub→link/go anchors; slightly lowrednormaltextcontrast→tinyadditiveaccessibility.css. Future tests cover618URLHEADrequests atconcurrency4,all9PDFs/DOCX,QRs,noJS,corruptJSON/storage,filters/selection/recovery and200loopbackGET. Existing syntheticAPI100retries/1000reads and5000catalogueoperations are not productioncapacity.
+Current pre-fix snapshot5a625ec1ef9977cacdf80bfe50accd5ccf526a49 recovered from artifact10486879347/run35199078722, with exact ZIP SHA256 verification. Next inspect the CP16-triggered full public release; read all browser/audit reports, fix observed failures and write the measured result before handoff.
 
-Finish by verifying actualpublicfiles, keepingfullsourcehashprovenance, saving WORK/RESUME/canonicaldashboard and providing shortlinks. Ownerdesign/print/legalapproval and authorizeddatahosting remain open. No actualregistration enabled, no external sending, no privateoriginalcontracts inpublicrepo.
+## Live routes to check and hand over
 
+Preserved editorial: https://wegc.fund/mira/design/
+New direct: https://wegc.fund/mira/go/
+Alternative tone: /mira/practical/ and /mira/corporate/; comparison /mira/launch/.
+Full618research catalogue: /mira/catalog/; preserved alternate /mira/phuket/.
+Legal drafts: /mira/documents/; creative/QR: /mira/exhibition/.
+Keep start/growth/business/variants/access/expo and old45-demo unchanged. Never claim owner visual, legal or print approval from implementation alone.
+
+## Acceptance requirements
+
+Campaign suite: actual HTTP/CSP, seven widths, all618records reachable, required qualification choices/local brief, filters/shortlist/detail, negative503/badJSON/corruptstorage, recovery, closed registration gate,9PDFs/DOCX,vector downloads,motion,noJS. Release audit: exact text/data bytes,618HEADlinks atconcurrency4,parsed PDFs,QRdecodes,optional200loopbackGET. Existing syntheticAPI and catalogue operation tests are not real signup or production capacity.
+
+After success, update WORK/RESUME and one canonical dashboard with evidence references and source scope. Then give a short linked owner handoff. No new host needs to replace the existing working domain merely because Netlify is connected; unrelated Netlify projects must not be modified.
+
+## Production boundaries
+
+Authorized primary-data hosting/controller/privacy/security/operator and a current commercial project gate remain open. No real signup or buyer registration enabled. No external sends, no retry of denied email path, no private original contracts in public repository. Buyer funds and commission separate. Existing baseline and sales assets retained.
 
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
