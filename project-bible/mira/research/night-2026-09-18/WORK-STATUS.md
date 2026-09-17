@@ -1,5 +1,17 @@
 # MIRA — night research status
 
+## 04:00 Russia regional agency expansion, pass B — completed, 18 September 2026
+
+Saved **21 additional source-backed agency candidates** with current first-party sites after repository exact-domain deduplication. Combined with pass A, the overnight Russia research layer now contains **50 candidate rows** (29 + 21). This is a research/deduplication count, not proof of 50 legally independent entities, not an outreach-approved list and not evidence that every company has an international desk. Saved outputs: `04-russia-b.json`, `04-russia-b.csv`, `04-russia-b.md`.
+
+All 21 pass-B rows are current first-party candidates and remain research-only with `outreach_status=not_authorized`. Two additional web discoveries, `rss-rielt.ru` (РСС, Воронеж) and `citadel-a.ru` (Цитадель-А, Саратов), were rejected rather than padded into the count because repository evidence showed they already existed. Obvious branches of already known network brands were also not counted as new independent agencies. Exact-domain no-match remains only repository dedupe, not legal-entity uniqueness.
+
+Six rows are now shortlisted for **owner review only**: AFLAT (Владивосток), Welcome (Ставрополь), Формула (Тюмень), Агентство на Ярославской / HOUSE GROUP (Чебоксары), БСН Недвижимость (Брянск) and РИЭЛ-МАКС (Брянск). AFLAT has the strongest direct international signal because its first-party site includes a dedicated Thailand-property route. These signals do not establish MIRA partnership interest or permission to contact.
+
+Pass-A holds were preserved rather than promoted: Аурум remains on entity-metadata hold despite a first-party abroad-investment signal; Good House remains partial because first-party recovery was not completed. No external email, call, message or form was sent.
+
+Next nominal slot: 05:00 Belarus. Read the existing Belarus/CIS layer first; count only genuinely net-new source-backed companies, distinguish company vs branch/directory/solo broker and retain corporate general channels only.
+
 ## 03:00 Russia regional agency expansion, pass A — completed, 18 September 2026
 
 Saved **29 source-backed net-new agency candidates** after current public web research and exact-domain searches across the repository default branch, following review of the active Russia Launch-100 / `agencies-russia-pilot.csv` context. Saved outputs: `03-russia-a.json`, `03-russia-a.csv`, `03-russia-a.md`.
@@ -66,4 +78,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-04:00 Russia expansion pass B. Continue from `03-russia-a.*`; do not replay earlier discovery. Add the remaining net-new coverage, verify strong corporate routes and run brand/entity/rebrand dedupe before counting the full 50-agency night target.
+05:00 Belarus agency expansion. Inspect existing Belarus/CIS data before counting any net-new company; save only source-backed corporate channels and keep company/branch/directory/solo-broker distinctions explicit.
