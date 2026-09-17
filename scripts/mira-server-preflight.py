@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read-only audit of an explicit MIRA Wrangler TOML. No network, deployment or secret values.
 
-This intentionally supports the existing single-environment MIRA API config only.
+Supports a single-environment API route or an explicitly selected dedicated pilot hostname.
 A passing config audit is NOT an authorization, Cloudflare connectivity test,
 legal opinion, successful signup or proof that the named DB is actually isolated.
 Requires Python 3.11+ (tomllib).
@@ -46,8 +46,9 @@ def configured(value: object) -> bool:
 
 
 def inspect(config: dict, expected_account: str, expected_database: str,
-            expected_origin: str, mode: str = 'closed-staging') -> dict:
+            expected_origin: str, mode: str = 'closed-staging', topology: str = 'api-route') -> dict:
     report = {'scope': 'offline_single_environment_configuration_only', 'mode': mode,
+              'topology': topology,
               'passed': False, 'live_signup_verified': False, 'production_ready': False,
               'remote_access_verified': False, 'checks': []}
     def check(name: str, passed: object, remedy: str) -> None:
@@ -56,7 +57,9 @@ def inspect(config: dict, expected_account: str, expected_database: str,
     if not isinstance(config, dict):
         check('toml_document', False, 'Use a TOML mapping.'); return report
     vars_ = config.get('vars') if isinstance(config.get('vars'), dict) else {}
-    check('supported_scope', not (set(config) - SAFE_TOP),
+    site = topology == 'dedicated-site'
+    check('supported_topology', topology in ('api-route', 'dedicated-site'), 'Choose api-route or dedicated-site explicitly.')
+    check('supported_scope', not (set(config) - (SAFE_TOP | ({'assets'} if site else set()))),
           'Review unsupported keys/bindings or named environments separately; this checker must not guess inheritance.')
     check('no_plaintext_secrets', not (set(vars_) - SAFE_VARS),
           'Do not put tokens, passwords, bot keys or unrelated variables in the MIRA TOML. Use approved secret storage.')
@@ -65,7 +68,8 @@ def inspect(config: dict, expected_account: str, expected_database: str,
           'Copy the account ID from the authorized local account inspection and supply it explicitly.')
     check('dedicated_worker_name', bool(MIRA_NAME.fullmatch(str(config.get('name', '')))),
           'Use a new mira-* Worker, not an existing Charter, CCapital or Herd Worker.')
-    check('known_entrypoint', config.get('main') == 'worker.mjs', 'Use the reviewed worker.mjs in cloudflare-worker/mira/.')
+    check('known_entrypoint', config.get('main') == ('site-worker.mjs' if site else 'worker.mjs'),
+          'Use the reviewed entrypoint matching the explicitly selected topology.')
     try:
         date = dt.date.fromisoformat(str(config.get('compatibility_date', '')))
         valid_date = dt.date(2024, 1, 1) <= date <= dt.datetime.now(dt.timezone.utc).date()
@@ -82,10 +86,21 @@ def inspect(config: dict, expected_account: str, expected_database: str,
     if isinstance(routes, list) and len(routes) == 1 and isinstance(routes[0], dict) and https_origin(expected_origin):
         route = routes[0]; host = urlsplit(expected_origin).hostname
         zone = route.get('zone_name')
-        route_ok = (set(route) == {'pattern', 'zone_name'} and route.get('pattern') == host + '/mira/api/*'
-                    and isinstance(zone, str) and bool(re.fullmatch(r'[a-z0-9.-]+', zone))
-                    and (zone == host or host.endswith('.' + zone)))
-    check('api_only_route', route_ok, 'Scope the route to the approved host /mira/api/*; never replace the whole website or /cdn-cgi/.')
+        if site:
+            route_ok = (set(route) == {'pattern', 'custom_domain'} and route.get('pattern') == host
+                        and route.get('custom_domain') is True and host.startswith('pilot.')
+                        and bool(re.fullmatch(r'pilot\.[a-z0-9-]+(?:\.[a-z0-9-]+)+', host)))
+        else:
+            route_ok = (set(route) == {'pattern', 'zone_name'} and route.get('pattern') == host + '/mira/api/*'
+                        and isinstance(zone, str) and bool(re.fullmatch(r'[a-z0-9.-]+', zone))
+                        and (zone == host or host.endswith('.' + zone)))
+    check('dedicated_site_route' if site else 'api_only_route', route_ok,
+          'Use one explicitly approved unused pilot.* custom domain for dedicated-site, or the exact /mira/api/* route for api-route. Never replace the public apex.')
+    if site:
+        check('bounded_worker_first_assets', config.get('assets') == {
+            'directory': './pilot-assets', 'binding': 'MIRA_ASSETS', 'run_worker_first': True,
+            'html_handling': 'none', 'not_found_handling': 'none'},
+            'Package only the reviewed pilot assets and always run the Worker before serving assets; do not expose the repository or use SPA/HTML fallbacks.')
     check('access_issuer', bool(re.fullmatch(r'https://[a-z0-9-]+\.cloudflareaccess\.com', str(vars_.get('ACCESS_TEAM_DOMAIN', '')))),
           'Use the actual Access team HTTPS origin from the approved Access application.')
     check('access_audience', configured(vars_.get('ACCESS_AUDIENCE')),
@@ -144,6 +159,7 @@ def main() -> int:
     parser.add_argument('--expected-database-id', required=True)
     parser.add_argument('--expected-origin', required=True)
     parser.add_argument('--mode', choices=['closed-staging', 'intake-config'], default='closed-staging')
+    parser.add_argument('--topology', choices=['api-route', 'dedicated-site'], default='api-route')
     args = parser.parse_args()
     try:
         # No exception text is returned: malformed TOML can contain secret values.
@@ -155,7 +171,7 @@ def main() -> int:
     except (OSError, UnicodeError, ValueError):
         print(json.dumps({'passed': False, 'error': 'config_missing_invalid_or_oversized',
                           'production_ready': False})); return 2
-    report = inspect(config, args.expected_account_id, args.expected_database_id, args.expected_origin, args.mode)
+    report = inspect(config, args.expected_account_id, args.expected_database_id, args.expected_origin, args.mode, args.topology)
     report['config_sha256'] = hashlib.sha256(raw).hexdigest()
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0 if report['passed'] else 1

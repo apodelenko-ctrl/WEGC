@@ -31,6 +31,39 @@ def check(value, mode='closed-staging'):
     return module.inspect(value, ACCOUNT, DATABASE, ORIGIN, mode)
 
 class PreflightTests(unittest.TestCase):
+    def site_config(self):
+        c = config()
+        c['main'] = 'site-worker.mjs'
+        c['vars']['APP_ORIGIN'] = 'https://pilot.example.test'
+        c['routes'] = [{'pattern': 'pilot.example.test', 'custom_domain': True}]
+        c['assets'] = {'directory': './pilot-assets', 'binding': 'MIRA_ASSETS', 'run_worker_first': True,
+                       'html_handling': 'none', 'not_found_handling': 'none'}
+        return c
+
+    def site_check(self, c, origin='https://pilot.example.test'):
+        return module.inspect(c, ACCOUNT, DATABASE, origin, topology='dedicated-site')
+
+    def test_dedicated_site_requires_explicit_topology(self):
+        c = self.site_config()
+        self.assertTrue(self.site_check(c)['passed'])
+        self.assertFalse(check(c)['passed'])
+        self.assertFalse(self.site_check(config())['passed'])
+
+    def test_dedicated_site_rejects_apex_or_unrelated_hostname(self):
+        for host in ['example.test', 'www.example.test', '*.example.test', 'pilot.example.test/*']:
+            c = self.site_config()
+            c['routes'][0]['pattern'] = host
+            c['vars']['APP_ORIGIN'] = 'https://' + host
+            self.assertFalse(self.site_check(c, 'https://' + host)['passed'])
+
+    def test_assets_cannot_skip_auth_or_expose_repository(self):
+        for key, value in [('run_worker_first', False), ('run_worker_first', ['/mira/api/*']),
+                           ('directory', '../..'), ('not_found_handling', 'single-page-application'),
+                           ('html_handling', 'auto-trailing-slash')]:
+            c = self.site_config()
+            c['assets'][key] = value
+            self.assertFalse(self.site_check(c)['passed'])
+
     def test_valid_closed_config_is_not_production_ready(self):
         r = check(config()); self.assertTrue(r['passed']); self.assertFalse(r['production_ready'])
         self.assertFalse(r['remote_access_verified']); self.assertFalse(r['live_signup_verified'])
