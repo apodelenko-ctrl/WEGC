@@ -1,5 +1,17 @@
 # MIRA — night research status
 
+## 06:00 cross-lane quality + Bali/Dubai media gaps — completed, 18 September 2026
+
+Saved `06-quality-media.json`, `06-quality-media.csv` and `06-quality-media.md`. No night target count was inflated or reduced: the layer remains **15 Vietnam projects, 15 Montenegro projects, 50 Russia agency candidates and 30 Belarus agency candidates**, all research-only and with no outreach authorization.
+
+Agency quality: re-ran current-main exact-domain searches for the 12 strongest owner-review domains (six Russia, six Belarus). All 12 remain no-match at exact-domain repository-search level. This corroborates repository-level net-new status only; it does not prove independent legal entities or exclude rebrands/common ownership. Аурум remains on entity-metadata hold after a first-party recheck exposed non-credible identifier text (`ИНН 77777777`); Good House remains secondary-confirmed partial because the first-party site itself was not recovered. The five Belarus companies in current Chamber licence-suspension notices remain excluded from the 30 count.
+
+Bali/Dubai work was limited to known gaps, not recollection. Five projects were rechecked. The ERA by OXO now has a current exact OXO project page plus one exact-project asset URL, but the asset was not recovered for visual/byte inspection and rights remain unresolved. Secana Beachtown has an exact first-party gallery candidate that was visually checked in-browser; Mirah's terms explicitly restrict site images to personal non-commercial use absent prior written consent, so it is not publication-approved. Mudon Al Ranim now has two exact first-party gallery routes in place of the old 213×252 candidate, but actual bytes/dimensions were not inspected and Dubai Properties terms prohibit commercial reuse without licence/prior written permission. One River Point is re-matched to a current Ellington project page; Ellington terms prohibit reuse unless otherwise stated. DAMAC Riverside remains without an exact original-project image; a DAMAC-supplied release confirms Riverside Views is a separate development within the community, so its four PR images are explicitly quarantined from the Riverside row.
+
+Media accounting for this slot: **5 projects rechecked, 4 exact-project direct asset URLs newly recorded, 0 new asset downloads into the night package, 1 new browser/web visual review, 0 publication approvals**. No third-party image bytes were committed. No site, Worker, D1, Access, DNS, funnel or local Codex branch was changed.
+
+Next nominal slot: 07:00 structural validation/consolidation and local-agent handoff. Produce consolidated datasets/statuses plus `VALIDATION.json`, `MEDIA-GAPS.md` and `LOCAL-AGENT-HANDOFF.md`; do not deploy or merge.
+
 ## 05:00 Belarus agency expansion — completed, 18 September 2026
 
 Saved **30 net-new Belarus agency candidates** after checking the current Belarus/CIS seed plus mega/outreach datasets. Saved outputs: `05-belarus-agencies.json`, `05-belarus-agencies.csv`, `05-belarus.md`. All rows remain `commercial_status=research_only`, `commerciallyEnabled=false`, `outreach_status=not_authorized`; no email, call, message, form or partnership request was sent.
@@ -92,4 +104,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-06:00 cross-lane quality/dedupe and Bali/Dubai MEDIA-GAPS. Preserve local Codex ownership of integration/deployment and keep publication rights separate from asset discovery.
+07:00 structural validation/consolidation and local-agent handoff. Preserve local Codex ownership of integration/deployment and keep publication rights separate from asset discovery.
