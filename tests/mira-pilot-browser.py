@@ -1,11 +1,11 @@
 """Browser acceptance against local production Worker code, signed synthetic JWTs
 and SQLite. No production data/email; NOT a Cloudflare Access/D1 live test."""
-import asyncio,json,os,subprocess,sys
+import asyncio,json,os,subprocess,sys,tempfile
 from datetime import datetime,timezone,timedelta
 from pathlib import Path
 from playwright.async_api import async_playwright
 ROOT=Path(__file__).resolve().parents[1]
-OUTPUT=Path(os.environ.get('MIRA_QA_OUTPUT','/private/tmp/mira-pilot-browser'))
+OUTPUT=Path(os.environ.get('MIRA_QA_OUTPUT',str(Path(tempfile.gettempdir())/'mira-pilot-browser')))
 async def main():
  OUTPUT.mkdir(parents=True,exist_ok=True)
  process=subprocess.Popen(['node','tests/mira-pilot-browser-server.mjs'],cwd=ROOT,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)

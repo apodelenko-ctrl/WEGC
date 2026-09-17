@@ -47,6 +47,10 @@ def run(base,out):
    page.locator('#cards h2 a').click();ctx.route('**/mira/catalog/**/data.json',lambda route:route.abort());ctx.route('**/mira/catalog/data.json',lambda route:route.abort())
    page.reload(wait_until='networkidle');expect(page.locator('[data-catalog-back]')).to_have_attribute('href','/mira/catalog/bali/?q=INDARI')
    ctx.unroute('**/mira/catalog/**/data.json');ctx.unroute('**/mira/catalog/data.json');page.locator('[data-catalog-back]').click();expect(page.locator('#search')).to_have_value('INDARI');ok('detail_back_independent_of_feed_loading')
+   # A user can click the static back link before the detail module is available.
+   ctx.route('**/mira/catalog/markets/controller.mjs',lambda route:route.abort());page.locator('#cards h2 a').click()
+   expect(page.locator('[data-catalog-back]')).to_have_attribute('href','/mira/catalog/bali/?restore=1')
+   ctx.unroute('**/mira/catalog/markets/controller.mjs');page.locator('[data-catalog-back]').click();expect(page.locator('#search')).to_have_value('INDARI');ok('detail_back_without_detail_javascript')
    goto('/mira/catalog/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('#result-count')).to_contain_text('618');page.locator('#cards [data-add]').first.click();page.locator('#shortlist-open').click();expect(page.locator('#shortlist-items')).to_contain_text('Бали');expect(page.locator('#shortlist-items')).to_contain_text('Дубай')
    with page.expect_download() as event:page.locator('#shortlist-download').click()
    body=Path(event.value.path()).read_text('utf-8-sig');assert 'Пхукет' in body and 'Бали' in body and 'Дубай' in body and 'Не отправлена' in body

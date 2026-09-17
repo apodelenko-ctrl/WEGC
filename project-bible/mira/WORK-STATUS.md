@@ -1,5 +1,15 @@
 # MIRA WORK-STATUS
 
+## 2026-09-18 — final QA follow-up: static back navigation and portable browser reports
+
+PR #10 merged as `ce5153714cab8e83dd0a4243b123c627482bd006`; Pages run 35250067420 succeeded, snapshot `1129ee8014c5a022d418bcad7684982a6d0742cf`. A fresh real owner browser session confirmed the deployed operator dashboard and agency administration screen without creating production records.
+
+The first return-link fix handled slow feeds but live testing exposed a click before the detail JavaScript itself initialized. Static detail back links now carry an explicit restore marker; the catalogue safely recovers only same-country stored filters. All 648 existing/new detail URLs are retained. A regression aborts the detail module entirely and still checks the restored search. Local expansion browser: 13 groups passed, including all 30 objects and 42 internal links. Combined 122 Node / 144 Python tests pass.
+
+The new Linux CI pilot browser step also exposed the Mac-only default `/private/tmp` output path. It now uses the platform temporary directory; the complete local signed-identity/CSP browser scenario passed again. Full release 35250357478 had a failing local browser stage; its exact logs remain to be inspected when artifacts finish. Do not call that run successful or waive its checks. The follow-up release must repeat all CI/live suites.
+
+Images, intake/privacy gates, Worker version and D1/Access/DNS remain unchanged. Cloud content gaps remain in `research/bali-dubai-2026-09-17/MEDIA-GAPS.md`. No buyer or agency intake was opened.
+
 ## 2026-09-17 — completed administration and separate deployed Worker checkpoint
 
 The preserved admin branch now contains completion commit `74aae63` after WIP checkpoint `640c64e`. Its production Worker and six pilot assets were independently deployed as version `ba3d25b6-efdc-45ce-804e-4c7dc052fce9` (previous version `15da744a-8345-43f1-a2e4-e88ecbb4d00b` retained for rollback). Agency list/detail, verified application review, agreement reference, representative binding, operator decision, membership revoke/restore and paginated agency/member audit are implemented. The current integration brings only these completed source changes into main; no WIP screenshots are included.

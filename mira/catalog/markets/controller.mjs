@@ -60,6 +60,8 @@ document.addEventListener('click',e=>{const add=e.target.closest('[data-add]'),r
 window.addEventListener('popstate',()=>{if(loaded){readState();restoreControls();render(false);}});
 window.addEventListener('storage',e=>{if((e.key===KEY||e.key===null)&&loaded){selection=safeSelection(readSaved(),all);syncSelection();}});
 window.addEventListener('pageshow',e=>{if(e.persisted&&loaded){selection=safeSelection(readSaved(),all);syncSelection();}});
+// Static detail links use an explicit marker so even a pre-script click restores state.
+if(isCatalogueIndex(location.pathname)&&new URLSearchParams(location.search).get('restore')==='1'){let saved;try{saved=sessionStorage.getItem(RETURN);}catch{}history.replaceState(null,'',safeReturnPath(saved,market,location.origin)||country.path);}
 // Back navigation must be ready before the asynchronous catalogue feeds finish.
 for(const a of document.querySelectorAll('[data-catalog-back]')){let saved;try{saved=sessionStorage.getItem(RETURN);}catch{}const good=safeReturnPath(saved,market,location.origin);a.setAttribute('href',good||country.path);}
 load();
