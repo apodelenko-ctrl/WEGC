@@ -137,3 +137,15 @@ Owner authorized controlled agency intake and approved the prepared notice/reten
 Before claiming completion: deploy the exact tested commit, confirm live assets/version, add only the owner-agreed second test email to the existing Access allowlist, complete its OTP login, receive a real test receipt, re-login, view as operator and record a factually supported decision. No signed contract exists for this test; missing-proof activation must stay denied. Positive synthetic onboarding is isolated only. Native Chrome currently exposes no actionable controls; owner has been given the precise allowlist edit. Codes/cookies/private identities must not be put in GitHub.
 
 The mini-CRM has application queue, contact, stage, agency administration and audit. Compose-email opens the owner's mail application; document link opens templates. Automated outreach, sent-mail tracking and private document delivery are not implemented or claimed.
+
+### Live checkpoint after PR 12
+
+Worker `38fd1679-40cf-44d6-a572-b760431555f9` (source `4873702`) is actually deployed. Intake is now ON for Access-authorized identities with versioned notice; do not repeat the old instruction that intake is disabled. Owner form and operator queue verified live. No buyer registration or fabricated agency activation.
+
+Pending owner action: add only the previously agreed test email to the existing Access-policy (keep owner address; no Everyone), then complete OTP in browser. Continue ordinary-applicant receipt/re-login/operator decision; the positive synthetic browser suite is not evidence of that real workflow. Native Chrome controls were unavailable and the in-app Cloudflare dashboard requires login. Existing in-app pilot session is authenticated as owner. Do not request/send codes in chat.
+
+CI 35255017692 is the current post-PR-12 full verification; check its final result before reporting PASS. Pages 35254761053 and source QA 35254761013 already succeeded. Full handoff and screenshots are in this task's outputs/MIRA-CLOUD-HANDOFF-CURRENT-RU.md, outputs/market-live-pr11/ and outputs/agency-three-step-final/. Public files contain no private database dump.
+
+### Verification complete
+
+Full post-PR-12 run 35255017692 finished SUCCESS, including local and live browser suites. Its full artifact hash is in WORK-STATUS.md. Do not restart these checks without a new change/failure. Remaining next action is the owner-side Access allowlist update and ordinary-applicant OTP workflow described above. Buyer registration stays closed. No production agreement/agency activation has been fabricated.

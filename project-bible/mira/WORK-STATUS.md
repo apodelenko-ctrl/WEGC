@@ -132,3 +132,18 @@ Continue: resolve evidence gaps, complete acquisition assets, implement/deploy p
 - Operator application card includes a compose-email link and document-template link. Neither sends mail nor represents a signed agreement; sent-message history is not implemented.
 - Narrow asset allowlist grows from six to eight reviewed UI files (dedicated pilot CSS and same-origin agency notice); protected HTML and JWT verification remain unchanged. Existing public marketplace styles/funnels unchanged.
 - Deployment and real second-email acceptance are the next steps. No real agency activated, no buyer registration enabled, no fabricated business evidence.
+
+## 2026-09-18 — controlled intake published
+
+- PR 12 merged as `bf704142eed89a5e976c8db15f548d1779470f32`; source cabinet commit `48737029628cb27164548ffb266eb3f35e5aea86`.
+- Dedicated Worker version `38fd1679-40cf-44d6-a572-b760431555f9` is live with `APPLICATIONS_ENABLED=true`, approved notice `mira-agency-2026-09-18-v1`, and materials/buyer gates unchanged. Previous version: `ba3d25b6-efdc-45ce-804e-4c7dc052fce9`. Existing D1, JWT configuration and pilot custom domain retained; no migration or apex DNS change.
+- Live owner session opened the three-step form and the operator queue. Queue/agency counts were empty; no fabricated production activation. Four public pilot assets (JS, base CSS, pilot CSS, notice) matched their packaged bytes; anonymous protected page/API probes redirect to Access.
+- Owner was given the precise existing-policy change for the agreed second test address. Its OTP login and real receipt/re-login/operator decision remain pending. The agent has not expanded Access itself.
+- Pages run 35254761053 and source QA 35254761013 succeeded. Generated Pages snapshot: `b8648c1cb2070aeb0c73610413bf00ee083ad1c2`. Full post-release verification 35255017692 is running; previous run 35251270668 is a separate successful milestone.
+- Personal-data retention is a manual operator duty; no automated purge exists. The approved notice is for invited agency enquiries. Broader legal/location readiness and Russia-without-VPN availability have not been established.
+
+### Final post-PR-12 verification
+
+Run [35255017692](https://github.com/apodelenko-ctrl/WEGC/actions/runs/35255017692) completed SUCCESS for every step, including actual-domain browser acceptance. Pages 35254761053, built-in Pages 35254867047, source QA 35254761013 and agency landing 35255017625 also completed SUCCESS. No competing manual public deployment was started.
+
+Artifact `mira-cp16-public-release`: SHA-256 `2f253f54c7261491755301dacb7d0932bc0c8f911c30ce399d063912d0abd93e`. Code/source and deployment evidence remain distinct from the still-pending real second-email applicant workflow. The live owner session is working, intake is enabled for allowed identities, and the owner-side Access/OTP action is the remaining live-acceptance dependency.
