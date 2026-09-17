@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "source_commit": "e49c966607b8e33795f2eb1a6ed1194827bbac9a",
+  "source_commit": "f25c32f75364de2feb9b7f1471955130432de218",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
@@ -165,7 +165,7 @@
       "capability": "application",
       "implementation": "implemented_code_collection_closed",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "source_sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
       "deployment": "not_verified",
       "note": "Protected durable intake exists; public brief remains local."
     },
@@ -237,7 +237,7 @@
       "capability": "client_registration",
       "implementation": "implemented_code_supply_gate_closed",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "source_sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
       "deployment": "not_verified",
       "note": "Intake, developer acknowledgement and protection are distinct."
     },
@@ -245,7 +245,7 @@
       "capability": "lead_status",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "source_sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
       "deployment": "not_verified",
       "note": "Scoped history and evidence-gated transitions."
     },
@@ -261,7 +261,7 @@
       "capability": "deal_status",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "source_sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
       "deployment": "not_verified",
       "note": "Audited evidence-backed stage sequence."
     },
@@ -269,7 +269,7 @@
       "capability": "commission_status",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "source_sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
       "deployment": "not_verified",
       "note": "Exact-evidence decimal records; no default rate or financial estimate."
     },
@@ -277,7 +277,7 @@
       "capability": "payment_request",
       "implementation": "implemented_code",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "source_sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
       "deployment": "not_verified",
       "note": "Separate package-review request, not execution or quote."
     },
@@ -301,7 +301,7 @@
       "capability": "admin_workflow",
       "implementation": "implemented_code_partly_manual",
       "source_path": "cloudflare-worker/mira/worker.mjs",
-      "source_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "source_sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
       "deployment": "not_verified",
       "note": "Operator application queue plus protected administration API."
     }
