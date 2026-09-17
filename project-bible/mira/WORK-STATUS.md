@@ -27,3 +27,18 @@ Canonical dashboard: `operations/LAUNCH-DASHBOARD.md`. Real clients/deals/commis
 ## Next
 
 Check CP12 CI/Pages; publish full Phuket catalogue without unverified prices/inventory; build direct/balanced/corporate funnel variants and stable QR destination; perform browser, stress and release checks. Owner visual approval cannot be assigned by code. Do not send external messages/forms, retry declined email authorization, invent contracts/prices/results or expose private documents.
+
+
+<!-- MIRA-LAUNCH-AUTO:START -->
+## Generated source checkpoint
+
+Source commit: `28b4e1162cf8471057c7b74c2dae0b2f8776186a`.
+
+Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
+
+Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
+
+Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
+
+Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
+<!-- MIRA-LAUNCH-AUTO:END -->
