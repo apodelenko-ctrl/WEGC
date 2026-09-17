@@ -22,11 +22,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install deterministic builders and test tools
+      - name: Install document builders and test tools
         run: |
           python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3' 'playwright>=1.55,<2' 'pymupdf>=1.26,<2' 'opencv-python-headless>=4.12,<5'
           python -m playwright install --with-deps chromium
       - name: Rebuild the exact source under test
+        id: rebuild
         run: |
           python scripts/mira-wire-landing.py
           python scripts/mira-build-demo.py
@@ -37,42 +38,77 @@ jobs:
           python scripts/mira-build-campaign.py
           python scripts/mira-build-exhibition.py --downloads
       - name: Regression and synthetic API/catalogue load
+        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
         run: |
-          node --test tests/mira-*.test.mjs > /tmp/mira-node.tap
-          python -m unittest discover -s tests -p 'test_mira*.py' -v > /tmp/mira-python.txt 2>&1
+          result=0
+          node --test tests/mira-*.test.mjs > /tmp/mira-node.tap || result=1
+          python -m unittest discover -s tests -p 'test_mira*.py' -v > /tmp/mira-python.txt 2>&1 || result=1
+          exit "$result"
       - name: Real local HTTP and CSP acceptance
+        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
         run: |
           python -m http.server 8765 --bind 127.0.0.1 > /tmp/mira-server.log 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           sleep 1
-          python tests/mira-public-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-browser
-          python tests/mira-campaign-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-campaign
-          python scripts/mira-release-audit.py --base http://127.0.0.1:8765 --local-stress --out /tmp/mira-local-audit.json
+          result=0
+          python tests/mira-public-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-browser > /tmp/mira-local-browser.log 2>&1 || result=1
+          python tests/mira-campaign-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-campaign > /tmp/mira-local-campaign.log 2>&1 || result=1
+          python tests/mira-editorial-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-editorial > /tmp/mira-local-editorial.log 2>&1 || result=1
+          python scripts/mira-release-audit.py --base http://127.0.0.1:8765 --local-stress --out /tmp/mira-local-audit.json > /tmp/mira-local-audit.log 2>&1 || result=1
+          exit "$result"
       - name: Actual domain bytes, downloads, links and bounded smoke
+        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
         run: |
-          python scripts/mira-verify-public.py --base https://wegc.fund --load --out /tmp/mira-live-release.json
-          python scripts/mira-release-audit.py --base https://wegc.fund --out /tmp/mira-live-audit.json
+          result=0
+          python scripts/mira-verify-public.py --base https://wegc.fund --load --out /tmp/mira-live-release.json > /tmp/mira-live-release.log 2>&1 || result=1
+          python scripts/mira-release-audit.py --base https://wegc.fund --out /tmp/mira-live-audit.json > /tmp/mira-live-audit.log 2>&1 || result=1
+          exit "$result"
       - name: Actual domain browser acceptance without personal data
+        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
         run: |
-          python tests/mira-public-browser.py --base https://wegc.fund --out /tmp/mira-live-browser
-          python tests/mira-campaign-browser.py --base https://wegc.fund --out /tmp/mira-live-campaign
+          result=0
+          python tests/mira-public-browser.py --base https://wegc.fund --out /tmp/mira-live-browser > /tmp/mira-live-browser.log 2>&1 || result=1
+          python tests/mira-campaign-browser.py --base https://wegc.fund --out /tmp/mira-live-campaign > /tmp/mira-live-campaign.log 2>&1 || result=1
+          python tests/mira-editorial-browser.py --base https://wegc.fund --out /tmp/mira-live-editorial > /tmp/mira-live-editorial.log 2>&1 || result=1
+          exit "$result"
+      - name: Record source and test environment
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, os, subprocess
+          from importlib.metadata import version
+          Path('/tmp/mira-release-provenance.json').write_text(json.dumps({
+              'tested_source_commit': subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
+              'run_id': os.environ['GITHUB_RUN_ID'],
+              'run_attempt': os.environ['GITHUB_RUN_ATTEMPT'],
+              'versions': {name:version(name) for name in ['playwright','reportlab','python-docx','pymupdf']},
+              'actual_domain': 'https://wegc.fund',
+              'no_real_registration': True,
+              'external_messages_sent': 0
+          }, indent=2) + '\n')
+          PY
       - name: Preserve public evidence including failures
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mira-cp15-public-release
+          name: mira-cp16-public-release
           retention-days: 14
           path: |
             /tmp/mira-node.tap
             /tmp/mira-python.txt
+            /tmp/mira-*.log
+            /tmp/mira-release-provenance.json
             /tmp/mira-local-browser/
             /tmp/mira-local-campaign/
+            /tmp/mira-local-editorial/
             /tmp/mira-local-audit.json
             /tmp/mira-live-release.json
             /tmp/mira-live-audit.json
             /tmp/mira-live-browser/
             /tmp/mira-live-campaign/
+            /tmp/mira-live-editorial/
             mira/go/
             mira/practical/
             mira/corporate/
@@ -81,3 +117,4 @@ jobs:
             mira/exhibition/
             mira/catalog/
             mira/documents/
+            mira/design/

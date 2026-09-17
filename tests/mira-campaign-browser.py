@@ -140,14 +140,19 @@ def run(base,out):
             p2=plain.new_page();r=p2.goto(base+'/mira/catalog/list.html',wait_until='networkidle');assert r and r.ok
             assert p2.locator('.all-projects a').count()==618
             r=p2.goto(base+'/mira/go/',wait_until='networkidle');assert r and r.ok
-            assert p2.locator('h1').is_visible() and p2.locator('fieldset').is_disabled()
+            assert p2.locator('h1').is_visible(), 'No-JS heading must remain visible'
+            assert p2.locator('fieldset').get_attribute('disabled') is not None, 'No-JS fieldset attribute'
+            assert p2.locator('fieldset select').count() == 3
+            assert all(p2.locator('fieldset select').nth(i).is_disabled() for i in range(3)), 'No-JS choices must be disabled'
+            assert p2.locator('#prepare').is_disabled(), 'No-JS submit must be disabled'
             plain.close();mark('no_javascript_routes',all_records=618)
             assert not report['page_errors'],report['page_errors']
             assert not report['csp_errors'],report['csp_errors']
             assert not report['unexpected_requests'],report['unexpected_requests']
             context.close();browser.close();report['passed']=True
     except Exception as exc:
-        report['failure']=str(exc);raise
+        import traceback
+        report['failure']=str(exc);report['traceback']=traceback.format_exc();raise
     finally:
         (out/'browser-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
         print(json.dumps({'base':base,'passed':report['passed'],'checks':len(report['checks']),'live_registration_tested':False}))
