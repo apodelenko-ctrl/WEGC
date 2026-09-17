@@ -3,7 +3,7 @@ import api from './worker.mjs';
 import {ApiError, verifyAccess} from './auth.mjs';
 
 const pages = new Set(['/mira/pilot.html', '/mira/library.html']);
-const files = new Set(['/mira/pilot.mjs', '/mira/library.mjs', '/mira/marketplace.css', '/mira/library.css']);
+const files = new Set(['/mira/pilot.mjs', '/mira/library.mjs', '/mira/marketplace.css', '/mira/library.css', '/mira/pilot.css', '/mira/agency-privacy.html']);
 const publicPages = new Set(['/mira/marketplace.html', '/mira/phuket-starter-kit.html']);
 const headers = {
   'Cache-Control': 'no-store, private',

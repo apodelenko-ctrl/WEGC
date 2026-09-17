@@ -31,7 +31,7 @@ const server=http.createServer(async(req,res)=>{try{
   const r=await worker.fetch(new Request(url,{method:req.method,headers:{...req.headers,'Cf-Access-Jwt-Assertion':await token(subject,req.headers['x-mira-fixture-expired']==='true')},...(body?{body}:{})}),env);
   res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));return;
  }
- const assets={'/mira/pilot.html':['mira/pilot.html','text/html'],'/mira/pilot.mjs':['mira/pilot.mjs','text/javascript'],'/mira/marketplace.css':['mira/marketplace.css','text/css']};
+ const assets={'/mira/pilot.html':['mira/pilot.html','text/html'],'/mira/pilot.mjs':['mira/pilot.mjs','text/javascript'],'/mira/marketplace.css':['mira/marketplace.css','text/css'],'/mira/pilot.css':['mira/pilot.css','text/css'],'/mira/agency-privacy.html':['mira/agency-privacy.html','text/html']};
  if(url.pathname==='/test-privacy'){res.end('SYNTHETIC TEST NOTICE. Not a legal approval.');return;}
  const asset=assets[url.pathname];if(!asset){res.writeHead(404);res.end();return;}const r=await site.fetch(new Request(url,{headers:{'Cf-Access-Jwt-Assertion':await token(subject)}}),{APP_ORIGIN:origin,ACCESS_TEAM_DOMAIN:issuer,ACCESS_AUDIENCE:'TEST-AUD',MIRA_ASSETS:{fetch:async()=>new Response(readFileSync(new URL(asset[0],root)),{headers:{'Content-Type':asset[1]}})}});res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));
 }catch(e){console.error(e);res.writeHead(500);res.end('Fixture error');}});

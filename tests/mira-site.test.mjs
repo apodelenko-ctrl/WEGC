@@ -48,6 +48,17 @@ test('public links redirect only to fixed public destinations, query strings are
   assert.equal((await site.fetch(request('/'), base)).headers.get('Location'), '/mira/pilot.html');
 });
 
+test('the intake notice is readable before login, without exposing other HTML', async () => {
+  const env = {...base, MIRA_ASSETS: {fetch() {return new Response('intake notice', {headers: {'Content-Type': 'text/html'}});}}};
+  for (const path of ['/mira/agency-privacy.html', '/mira/pilot.css']) {
+    const response = await site.fetch(request(path), env);
+    assert.equal(response.status, 200);
+    assert.match(response.headers.get('Content-Security-Policy'), /script-src 'self'/);
+  }
+  assert.equal((await site.fetch(request('/mira/documents/privacy.html'), env)).status, 404);
+  assert.equal((await site.fetch(request('/mira/pilot.html'), env)).status, 401);
+});
+
 test('API requests remain JSON and cannot fall back to static HTML', async () => {
   const env = {...base, MIRA_DB: {}, MIRA_ASSETS: {fetch() {throw Error('must not serve');}}};
   const response = await site.fetch(request('/mira/api/session'), env);

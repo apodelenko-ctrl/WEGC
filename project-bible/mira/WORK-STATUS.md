@@ -122,3 +122,13 @@ Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. F
 
 Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
 <!-- MIRA-LAUNCH-AUTO:END -->
+
+## 2026-09-18 — controlled agency intake and guided cabinet
+
+- Public PR 11 release acceptance completed: run 35251270668 SUCCESS, tested source `021a3dd51d7f9fe1732dc6c635d90ac442cca93a`; deployed Pages snapshot `91a2eae20ab65244d086135aada9fbdae3f6faf7`. All local/live public suites passed; isolated pilot acceptance passed. Live bounded GET smoke 80/80, concurrency 4; not a maximum-capacity claim.
+- Owner explicitly requested opening agency intake and confirmed the concrete intake notice, its 24-month enquiry retention period and working privacy contact. Version `mira-agency-2026-09-18-v1` is scoped to invited agency representatives. This is not a legal-compliance finding or authorization for mass buyer collection.
+- Cabinet form now has three steps, back navigation retaining input in memory, review, explicit initially-unchecked consent, native help disclosures, reduced-motion support, and a persisted server receipt. No personal-data browser storage added.
+- Local acceptance: 123 Node, 144 Python tests; signed-Worker browser flow passed, including a lost POST response followed by recovery of the same receipt, no duplicate, operator workflow, missing-proof rejection, isolation, revoke/restore/audit and expiry recovery. Applicant widths 320/390/768/1440.
+- Operator application card includes a compose-email link and document-template link. Neither sends mail nor represents a signed agreement; sent-message history is not implemented.
+- Narrow asset allowlist grows from six to eight reviewed UI files (dedicated pilot CSS and same-origin agency notice); protected HTML and JWT verification remain unchanged. Existing public marketplace styles/funnels unchanged.
+- Deployment and real second-email acceptance are the next steps. No real agency activated, no buyer registration enabled, no fabricated business evidence.

@@ -14,7 +14,7 @@ class PilotAssetsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             output = Path(folder)
             allowed = module.build(output)
-            self.assertEqual(len(allowed), 6)
+            self.assertEqual(len(allowed), 8)
             self.assertEqual(sorted(p.relative_to(output).as_posix() for p in output.rglob('*') if p.is_file()), allowed)
             for name in ('pilot.html', 'library.html'):
                 self.assertIn('href="/cdn-cgi/access/logout"', (output/'mira'/name).read_text())
