@@ -17,3 +17,7 @@ Local Codex: public catalogue photos, cards, copy, click-through/browser review,
 Actual Cloudflare account/zone/newDB/Access configuration and email delivery; verified first administrator; real deployed signup and cross-agency isolation; data-handling/privacy review; backup/restore; private documents/material permissions and one current developer registration path. Public legal documents remain drafts. Company and intended onboarding choices are already confirmed; do not ask them again. No receipt/protection/commission or live registration is invented.
 
 Next: inspect isolated branch CI, verify ordinary Worker bytes, open a reviewable PR for local Codex, integrate without overwriting its working tree, then perform real deployment acceptance. Do not recollect the618catalogue or restart design.
+
+## Isolated branch CI result
+
+Passed source regression: 98 Node / 116 Python tests. Run 35219962533. See `operations/parallel-server-result.json`. No live login, main update or Cloudflare deployment.

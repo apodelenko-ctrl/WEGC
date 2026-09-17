@@ -9,3 +9,7 @@ Continue exactly here: inspect the dedicated `MIRA isolated server acceptance` r
 The source bundle `parallel-server-source.json` changes only cloudflare-worker/mira/worker.mjs using9 exact hashed literal edits and the existing applier. Other added files are ordinary source. Audit covers application-mediated administrative mutations from this release only. It does not reconstruct historical operations or track direct SQL administration.
 
 Outstanding: real email/Access flow, authorized dedicated deployment and operator bootstrap, data-handling review, actual browser/server acceptance and recovery; project-specific supply admission separately. First company/admin/process decisions are confirmed in the first-partner handoff; do not repeat old questions. No external sends, no private original documents or credentials in GitHub. No new public-gallery changes in this lane.
+
+## Isolated branch CI result
+
+Passed source regression: 98 Node / 116 Python tests. Run 35219962533. See `operations/parallel-server-result.json`. No live login, main update or Cloudflare deployment.
