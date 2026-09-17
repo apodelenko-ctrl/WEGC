@@ -12,7 +12,7 @@
   "production_write_authorized": false,
   "outreach_authorized": false,
   "targets": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 50, "belarus_net_new_agencies": 30},
-  "completed_counts": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 0, "belarus_net_new_agencies": 0, "publication_approved_new_media": 0},
+  "completed_counts": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 29, "belarus_net_new_agencies": 0, "publication_approved_new_media": 0},
   "quality_counts": {
     "vietnam_complete_for_discovery_slot": 11,
     "vietnam_partial_for_validation_initial": 4,
@@ -28,26 +28,32 @@
     "direct_image_asset_urls_captured_02": 0,
     "media_files_downloaded_02": 0,
     "media_visual_reviews_02": 0,
+    "russia_pass_a_net_new_candidates": 29,
+    "russia_pass_a_first_party_no_material_hold": 26,
+    "russia_pass_a_first_party_quality_holds": 2,
+    "russia_pass_a_secondary_partial": 1,
+    "russia_pass_a_existing_duplicates_rejected": 3,
     "publication_approved_new_media": 0
   },
-  "counts_note": "Vietnam and Montenegro totals are source-backed discovery records, not import-ready inventory, commercially enabled projects or published catalogue rows. After the 02:00 validation pass Vietnam has 14 complete-for-discovery / 1 partial and Montenegro 10 / 5. Project-family and existing developer-level overlaps are explicit and are not counted as new developers.",
+  "counts_note": "Vietnam and Montenegro totals are source-backed discovery records, not import-ready inventory, commercially enabled projects or published catalogue rows. After the 02:00 validation pass Vietnam has 14 complete-for-discovery / 1 partial and Montenegro 10 / 5. Russia pass A saved 29 exact-domain-net-new agency candidates: 26 current first-party without a material source/entity hold, 2 current first-party quality holds, and 1 secondary-confirmed partial. Exact-domain no-match is not a legal-entity uniqueness guarantee; brand/rebrand/entity dedupe continues in pass B.",
   "slots": [
     {"local_hour": "00:00", "id": "00-vietnam", "status": "completed", "started_at": "2026-09-17T23:58:29+07:00", "result_paths": ["00-vietnam-projects.json", "00-vietnam-projects.csv", "00-vietnam.md"], "notes": "15 saved; 11 complete for discovery stage, 4 partial; zero downloaded or publication-approved media."},
     {"local_hour": "01:00", "id": "01-montenegro", "status": "completed", "started_at": "2026-09-18T01:01:08+07:00", "result_paths": ["01-montenegro-projects-part1.json", "01-montenegro-projects-part2.json", "01-montenegro-projects-part3.json", "01-montenegro-projects.csv", "01-montenegro.md"], "notes": "15 saved; 7 complete for discovery stage, 8 partial; 11 developer/project families; zero downloaded, reviewed or publication-approved media. Montis Russian/CIS citizenship-by-investment copy quarantined as stale."},
     {"local_hour": "02:00", "id": "02-project-validation", "status": "completed", "started_at": "2026-09-18T02:00:45+07:00", "result_paths": ["02-project-validation.json", "02-project-validation.csv", "02-project-validation.md"], "notes": "30 reviewed; Vietnam 14 complete/1 partial; Montenegro 10 complete/5 partial; 30 exact media source pages/documents recorded; zero direct image assets captured, downloaded, visually reviewed or publication-approved."},
-    {"local_hour": "03:00", "id": "03-russia-a", "status": "pending", "result_paths": []},
+    {"local_hour": "03:00", "id": "03-russia-a", "status": "completed", "started_at": "2026-09-18T02:58:00+07:00", "result_paths": ["03-russia-a.json", "03-russia-a.csv", "03-russia-a.md"], "notes": "29 source-backed exact-domain-net-new agency candidates saved; quality split 26 first-party without material hold / 2 first-party holds / 1 secondary-confirmed partial; 3 existing duplicates rejected; no outreach."},
     {"local_hour": "04:00", "id": "04-russia-b", "status": "pending", "result_paths": []},
     {"local_hour": "05:00", "id": "05-belarus", "status": "pending", "result_paths": []},
     {"local_hour": "06:00", "id": "06-quality-media", "status": "pending", "result_paths": []},
     {"local_hour": "07:00", "id": "07-integration-handoff", "status": "pending", "result_paths": []},
     {"local_hour": "08:00", "id": "08-morning-brief", "status": "pending", "result_paths": []}
   ],
-  "next_action": "Execute the 03:00 Russia expansion pass A. Read all existing relevant Russia master/Launch-100/CRM/CIS datasets first and count only genuinely net-new agencies; do not replay Vietnam/Montenegro discovery.",
+  "next_action": "Execute Russia expansion pass B: add at least 21 more source-backed net-new domains toward the 50-agency night target, run brand/legal-entity/rebrand dedupe on pass A, and verify corporate decision routes for the strongest candidates. Do not send outreach.",
   "baseline_notes": [
     "Local Codex owns backend/admin/publication and current Bali/Dubai integration; do not edit those components.",
     "Current main includes project-bible/mira/research/bali-dubai-2026-09-17/MEDIA-GAPS.md: 28 candidates reviewed locally, 0 approved new media; source URLs and defects are available without expired attachments.",
     "Vietnam discovery outputs were persisted to the research branch and read back through GitHub. A container-side raw-GitHub parser attempt failed because that sandbox had no network/DNS, so no machine-validation success is claimed from that attempt.",
     "Montenegro slot uses current first-party/developer pages plus Russian or independent brokerage observations where found. Media source pages are recorded but no third-party bytes or rights approvals were created.",
-    "The 02:00 validation pass improved primary/current source quality and recorded exact media source pages, but it did not download image bytes, perform visual review or establish publication rights."
+    "The 02:00 validation pass improved primary/current source quality and recorded exact media source pages, but it did not download image bytes, perform visual review or establish publication rights.",
+    "Russia pass A uses current public web research plus repository-wide exact-domain searches against indexed main content. Exact-domain no-match does not establish independent legal ownership; pass B owns rebrand/entity dedupe."
   ]
 }
