@@ -12,12 +12,19 @@
   "production_write_authorized": false,
   "outreach_authorized": false,
   "targets": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 50, "belarus_net_new_agencies": 30},
-  "completed_counts": {"vietnam_projects": 15, "montenegro_projects": 0, "russia_net_new_agencies": 0, "belarus_net_new_agencies": 0, "publication_approved_new_media": 0},
-  "quality_counts": {"vietnam_complete_for_discovery_slot": 11, "vietnam_partial_for_validation": 4, "vietnam_duplicates_within_slot": 0},
-  "counts_note": "Vietnam count means source-backed discovery records saved, not final import-ready or commercially enabled projects. Four records remain explicitly partial for the 02:00 validation pass. Targets for other lanes are not achieved counts.",
+  "completed_counts": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 0, "belarus_net_new_agencies": 0, "publication_approved_new_media": 0},
+  "quality_counts": {
+    "vietnam_complete_for_discovery_slot": 11,
+    "vietnam_partial_for_validation": 4,
+    "vietnam_duplicates_within_slot": 0,
+    "montenegro_complete_for_discovery_slot": 7,
+    "montenegro_partial_for_validation": 8,
+    "montenegro_duplicates_within_slot": 0
+  },
+  "counts_note": "Vietnam and Montenegro counts mean source-backed discovery records saved, not final import-ready or commercially enabled projects. Partial rows remain explicitly held for the 02:00 validation pass. Project-family repeats are explicit and are not counted as independent developers.",
   "slots": [
     {"local_hour": "00:00", "id": "00-vietnam", "status": "completed", "started_at": "2026-09-17T23:58:29+07:00", "result_paths": ["00-vietnam-projects.json", "00-vietnam-projects.csv", "00-vietnam.md"], "notes": "15 saved; 11 complete for discovery stage, 4 partial; zero downloaded or publication-approved media."},
-    {"local_hour": "01:00", "id": "01-montenegro", "status": "pending", "result_paths": []},
+    {"local_hour": "01:00", "id": "01-montenegro", "status": "completed", "started_at": "2026-09-18T01:01:08+07:00", "result_paths": ["01-montenegro-projects-part1.json", "01-montenegro-projects-part2.json", "01-montenegro-projects-part3.json", "01-montenegro-projects.csv", "01-montenegro.md"], "notes": "15 saved; 7 complete for discovery stage, 8 partial; 11 developer/project families; zero downloaded, reviewed or publication-approved media. Montis Russian/CIS citizenship-by-investment copy quarantined as stale."},
     {"local_hour": "02:00", "id": "02-project-validation", "status": "pending", "result_paths": []},
     {"local_hour": "03:00", "id": "03-russia-a", "status": "pending", "result_paths": []},
     {"local_hour": "04:00", "id": "04-russia-b", "status": "pending", "result_paths": []},
@@ -26,10 +33,11 @@
     {"local_hour": "07:00", "id": "07-integration-handoff", "status": "pending", "result_paths": []},
     {"local_hour": "08:00", "id": "08-morning-brief", "status": "pending", "result_paths": []}
   ],
-  "next_action": "Execute the 01:00 Montenegro discovery/classification slot without replaying Vietnam. The 02:00 validation slot will revisit Vietnam partials and perform broader project-level deduplication/media-source checks.",
+  "next_action": "Execute the 02:00 combined project validation slot. Close or replace the 4 Vietnam and 8 Montenegro partial rows where evidence supports it, perform broader repository-level deduplication, and add exact media source-page/image candidates without treating public accessibility as publication permission.",
   "baseline_notes": [
     "Local Codex owns backend/admin/publication and current Bali/Dubai integration; do not edit those components.",
     "Current main includes project-bible/mira/research/bali-dubai-2026-09-17/MEDIA-GAPS.md: 28 candidates reviewed locally, 0 approved new media; source URLs and defects are available without expired attachments.",
-    "Vietnam discovery outputs were persisted to the research branch and read back through GitHub. A container-side raw-GitHub parser attempt failed because that sandbox had no network/DNS, so no machine-validation success is claimed from that attempt."
+    "Vietnam discovery outputs were persisted to the research branch and read back through GitHub. A container-side raw-GitHub parser attempt failed because that sandbox had no network/DNS, so no machine-validation success is claimed from that attempt.",
+    "Montenegro slot uses current first-party/developer pages plus Russian or independent brokerage observations where found. Media source pages are recorded but no third-party bytes or rights approvals were created."
   ]
 }
