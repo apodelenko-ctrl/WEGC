@@ -53,6 +53,7 @@ jobs:
           sleep 1
           result=0
           python tests/mira-public-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-browser > /tmp/mira-local-browser.log 2>&1 || result=1
+          python tests/mira-market-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-markets > /tmp/mira-local-markets.log 2>&1 || result=1
           python tests/mira-campaign-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-campaign > /tmp/mira-local-campaign.log 2>&1 || result=1
           python tests/mira-editorial-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-editorial > /tmp/mira-local-editorial.log 2>&1 || result=1
           python scripts/mira-release-audit.py --base http://127.0.0.1:8765 --local-stress --out /tmp/mira-local-audit.json > /tmp/mira-local-audit.log 2>&1 || result=1
@@ -69,6 +70,7 @@ jobs:
         run: |
           result=0
           python tests/mira-public-browser.py --base https://wegc.fund --out /tmp/mira-live-browser > /tmp/mira-live-browser.log 2>&1 || result=1
+          python tests/mira-market-browser.py --base https://wegc.fund --out /tmp/mira-live-markets > /tmp/mira-live-markets.log 2>&1 || result=1
           python tests/mira-campaign-browser.py --base https://wegc.fund --out /tmp/mira-live-campaign > /tmp/mira-live-campaign.log 2>&1 || result=1
           python tests/mira-editorial-browser.py --base https://wegc.fund --out /tmp/mira-live-editorial > /tmp/mira-live-editorial.log 2>&1 || result=1
           exit "$result"
@@ -100,12 +102,14 @@ jobs:
             /tmp/mira-python.txt
             /tmp/mira-*.log
             /tmp/mira-release-provenance.json
+            /tmp/mira-local-markets/
             /tmp/mira-local-browser/
             /tmp/mira-local-campaign/
             /tmp/mira-local-editorial/
             /tmp/mira-local-audit.json
             /tmp/mira-live-release.json
             /tmp/mira-live-audit.json
+            /tmp/mira-live-markets/
             /tmp/mira-live-browser/
             /tmp/mira-live-campaign/
             /tmp/mira-live-editorial/
