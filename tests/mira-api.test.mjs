@@ -146,7 +146,19 @@ const jwk={...(await crypto.subtle.exportKey('jwk',keypair.publicKey)),kid:'test
 const b64=value=>Buffer.from(value).toString('base64url');
 const authEnv={ACCESS_TEAM_DOMAIN:'https://mira-test.cloudflareaccess.com',ACCESS_AUDIENCE:'test-audience'};
 async function signed(overrides={},header={}){const now=Math.floor(Date.now()/1000),h=b64(JSON.stringify({alg:'RS256',kid:'test-key',...header})),p=b64(JSON.stringify({iss:authEnv.ACCESS_TEAM_DOMAIN,aud:[authEnv.ACCESS_AUDIENCE],sub:'test-sub',email:'test@example.test',type:'app',iat:now-1,exp:now+60,...overrides}));const sig=await crypto.subtle.sign('RSASSA-PKCS1-v1_5',keypair.privateKey,new TextEncoder().encode(h+'.'+p));return h+'.'+p+'.'+b64(sig);}
-const certFetch=async url=>{assert.equal(url,authEnv.ACCESS_TEAM_DOMAIN+'/cdn-cgi/access/certs');return new Response(JSON.stringify({keys:[jwk]}));};
+const certFetch=async (url,options)=>{assert.equal(url,authEnv.ACCESS_TEAM_DOMAIN+'/cdn-cgi/access/certs');assert.equal(options.redirect,'manual');return new Response(JSON.stringify({keys:[jwk]}));};
+test('Access certificate redirects fail closed without following or caching their keys',async()=>{
+ const env={...authEnv,ACCESS_TEAM_DOMAIN:'https://mira-redirect-test.cloudflareaccess.com'};
+ const token=await signed({iss:env.ACCESS_TEAM_DOMAIN});
+ const request=new Request('https://mira.test',{headers:{'Cf-Access-Jwt-Assertion':token}});
+ let calls=0;
+ const fetcher=async(url,options)=>{
+  calls++;assert.equal(url,env.ACCESS_TEAM_DOMAIN+'/cdn-cgi/access/certs');assert.equal(options.redirect,'manual');
+  return new Response(JSON.stringify({keys:[jwk]}),{status:302,headers:{Location:'https://other.test/keys'}});
+ };
+ for(let i=0;i<2;i++)await assert.rejects(()=>verifyAccess(request,env,fetcher),{status:503,code:'identity_provider_unavailable'});
+ assert.equal(calls,2);
+});
 test('Access JWT accepts only signed pinned issuer/audience/user claim',async()=>{
  const token=await signed();const identity=await verifyAccess(new Request('https://mira.test',{headers:{'Cf-Access-Jwt-Assertion':token}}),authEnv,certFetch);assert.equal(identity.subject,'test-sub');
  for(const change of [{iss:'https://evil.test'},{aud:['other']},{exp:1},{iat:9999999999},{sub:''},{type:'service'},{email:'invalid'}]){
