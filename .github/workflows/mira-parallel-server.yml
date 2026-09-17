@@ -1,0 +1,83 @@
+name: MIRA isolated server acceptance
+on:
+  push:
+    branches: [mira/parallel-server-20260917]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mira-parallel-server
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/mira/parallel-server-20260917' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Materialize only the reviewed server diff
+        run: |
+          python - <<'PY'
+          import importlib.util, json
+          from pathlib import Path
+          root = Path.cwd()
+          spec = importlib.util.spec_from_file_location('applier', root/'scripts/mira-apply-reviewed-checkpoint.py')
+          m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+          p = json.loads((root/'project-bible/mira/operations/parallel-server-source.json').read_text())
+          assert len(p['files']) == 1
+          assert p['files'][0]['path'] == 'cloudflare-worker/mira/worker.mjs'
+          assert p['files'][0]['codec'] == 'utf8-edits-v1'
+          for target, data, changed in m.prepare(root, p):
+              if changed: target.write_bytes(data)
+          PY
+      - name: Install existing source-test builder dependencies
+        run: python -m pip install 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3' 'reportlab>=4,<5' 'python-docx>=1,<2'
+      - name: Server and regression acceptance without external services
+        run: |
+          node --test tests/mira-*.test.mjs > /tmp/mira-parallel-node.tap
+          python -m unittest discover -s tests -p 'test_mira*.py' -v > /tmp/mira-parallel-python.txt 2>&1
+      - name: Save verified ordinary source only on this isolated branch
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,platform,re,subprocess
+          from pathlib import Path
+          node = Path('/tmp/mira-parallel-node.tap').read_text()
+          py = Path('/tmp/mira-parallel-python.txt').read_text()
+          result = {'source_commit':os.environ['SOURCE_SHA'],'run_id':os.environ['RUN_ID'],
+            'passed':True,'node_tests':int(re.search(r'^# tests (\d+)',node,re.M).group(1)),
+            'python_tests':int(re.search(r'Ran (\d+) tests',py).group(1)),
+            'worker_sha256':hashlib.sha256(Path('cloudflare-worker/mira/worker.mjs').read_bytes()).hexdigest(),
+            'node':subprocess.check_output(['node','--version'],text=True).strip(),'python':platform.python_version(),
+            'live_signup_verified':False,'cloudflare_deployed':False,'main_updated':False}
+          Path('project-bible/mira/operations/parallel-server-result.json').write_text(json.dumps(result,indent=2)+'\n')
+          for name in ['WORK-STATUS.md','RESUME-STATE.md']:
+              path=Path('project-bible/mira')/name
+              path.write_text(path.read_text()+'\n## Isolated branch CI result\n\nPassed source regression: '+str(result['node_tests'])+' Node / '+str(result['python_tests'])+' Python tests. Run '+result['run_id']+'. See `operations/parallel-server-result.json`. No live login, main update or Cloudflare deployment.\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cloudflare-worker/mira/worker.mjs project-bible/mira/operations/parallel-server-result.json project-bible/mira/WORK-STATUS.md project-bible/mira/RESUME-STATE.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(mira): save verified parallel server source and evidence [skip ci]'
+            git push origin HEAD:refs/heads/mira/parallel-server-20260917
+          fi
+      - name: Preserve exact server acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mira-parallel-server-acceptance
+          retention-days: 14
+          path: |
+            /tmp/mira-parallel-node.tap
+            /tmp/mira-parallel-python.txt
+            cloudflare-worker/mira/worker.mjs
+            cloudflare-worker/mira/admin-audit.mjs
+            project-bible/mira/operations/parallel-server-result.json

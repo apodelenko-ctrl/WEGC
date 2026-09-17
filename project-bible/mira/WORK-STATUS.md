@@ -1,9 +1,28 @@
 # MIRA WORK-STATUS
 
+## 2026-09-17 — PR 8 integration and next priority
+
+Owner explicitly requested reviewed integration of PR #8 while preserving the public presentation work, followed by actual agency login and operator approval using `cloudflare-worker/mira/SERVER-START.md`. Buyer registration remains separately closed. The presentation commit `e49c966607b8e33795f2eb1a6ed1194827bbac9a` and generated snapshot `86578fd839ca97c27ecc79c585fc9521fa1f8468` are preserved. PR head reviewed: `8567c8aa5a0015531016ae5b32a7bbce9048b4d6`; only WORK/RESUME conflicted, both histories retained below. No source transport was reapplied.
+
+Combined local regression: **98 Node / 120 Python tests passed** (Node local runtime, Python 3.12.14; temporary SQLite/synthetic signed identities, not real signup). Public deploy run `35220869533` passed. Full acceptance `35221091559` passed local browser suites, actual-domain byte/link audit and public/campaign browser suites (618 records, 26 pages, seven widths); its live legacy-editorial check failed because an immediate `is_visible()` assertion ran before asynchronous rendering. Changed that assertion to wait for the same heading, without removing coverage. A fresh combined release must verify the fix.
+
+Actual `/mira/api/health` returned HTTP 404 on this check. Local Wrangler credentials were expired; authorization refresh is in progress. No MIRA Worker/D1/Access deployment or successful real email login is claimed. Next: finish fresh live acceptance, inspect authorized Cloudflare resources and configure the dedicated service; verify real email delivery/login, durable receipt, administrative approval, isolation and revocation independently of CI. The historical checkpoints below describe their own times, not the latest priority.
+
 ## 2026-09-17 — local first-partner presentation checkpoint
 
 Current owner priority: improve and publish the public MIRA catalogue for the first agency presentation; keep real registration disabled. All 618 cards/details now have labelled visuals (11 project-image associations plus editorial covers), refined copy and working shortlist/navigation. Local 83 Node / 110 Python tests passed; in-app browser checked 26 pages, 618 unique records, three detail pages, desktop/mobile and the preserved onboarding → 45-record catalogue route. See `operations/2026-09-17-first-partner-presentation.md` for exact scope and the standalone Chrome sandbox limitation. Live publication/acceptance remains the next step for this checkpoint. Earlier CP16 full-run failure below remains historical evidence, not erased.
 
+## Parallel server checkpoint — 2026-09-17; isolated branch, not production
+
+`mira/parallel-server-20260917` adds transactional administrative audit, operator-only paginated history, a signed-identity onboarding/receipt suite and read-only configuration preflight. No public `mira/` files were changed. Local Codex retains the public visuals and site-review lane.
+
+Dedicated CI run `35219962533` completed successfully: **98 Node / 116 Python tests**. The ordinary Worker source was saved on the branch and its SHA256 matches `85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25`. See `operations/parallel-server-result.json`, `operations/parallel-server-2026-09-17.md` and `cloudflare-worker/mira/SERVER-START.md`.
+
+This fixes missing application audit records for agency/project/membership/assignment mutations, including rollback if audit storage fails. It does not log direct SQL administration or reconstruct earlier history. Tests use the actual Worker and migrations, synthetic RSA-signed users and local SQLite; only the Access certificate response is mocked. They do not prove email delivery, remote D1, deployed browser behavior or production capacity.
+
+The branch has not been merged into main and no Cloudflare deployment or real intake has been enabled. Integrate through a reviewed PR without overwriting local work. Reconcile status updates from both lanes. Prior main status is retained below unchanged for continuity; its remaining visual-readiness statement must be reassessed after the owner's subsequent screenshot review.
+
+## Preserved main status at 13360ee8e9b74f22b6e474f128bbd3ac5b5cd513
 
 2026-09-17 — CP16 public acceptance inspected; first-partner introduction scope established. Real registration remains closed.
 

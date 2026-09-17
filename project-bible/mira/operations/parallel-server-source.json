@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "kind": "reviewed-public-source",
+  "id": "parallel-server-2026-09-17",
+  "source_ref": "13360ee8e9b74f22b6e474f128bbd3ac5b5cd513",
+  "files": [
+    {
+      "path": "cloudflare-worker/mira/worker.mjs",
+      "before_sha256": "ef5a72872d816c3ade550b8c3af6ecf96d21bce24e0985039ed1d8a6596fc1c8",
+      "sha256": "85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25",
+      "codec": "utf8-edits-v1",
+      "edits": [
+        {
+          "old": "import {routeSupply,materialReleaseFacts} from './materials.mjs';\n",
+          "new": "import {auditedMutation,administrativeHistory} from './admin-audit.mjs';\nimport {routeSupply,materialReleaseFacts} from './materials.mjs';\n"
+        },
+        {
+          "old": "async function adminAgency(request,env,m) {\n",
+          "new": "async function adminAgency(request,env,m,identity) {\n"
+        },
+        {
+          "old": " await run(env,`INSERT INTO mira_agencies (id,name,city,status,agreement_ref,created_at) VALUES (?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,city=excluded.city,status=excluded.status,agreement_ref=excluded.agreement_ref`,id,string(b.name),string(b.city),b.status,b.agreement_ref||null,nowISO());\n",
+          "new": " await auditedMutation(env,identity,stmt(env,`INSERT INTO mira_agencies (id,name,city,status,agreement_ref,created_at) VALUES (?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,city=excluded.city,status=excluded.status,agreement_ref=excluded.agreement_ref`,id,string(b.name),string(b.city),b.status,b.agreement_ref||null,nowISO()),{entityType:'agency',entityId:id,agencyId:id,status:b.status,evidenceRef:b.agreement_ref||null});\n"
+        },
+        {
+          "old": "async function adminProject(request,env,m) {\n",
+          "new": "async function adminProject(request,env,m,identity) {\n"
+        },
+        {
+          "old": " await run(env,`INSERT INTO mira_projects (id,name,market,developer_family,legal_seller,enabled,agreement_ref,inventory_ref,registration_rules_ref,commission_schedule_ref,materials_rights_ref,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,market=excluded.market,developer_family=excluded.developer_family,legal_seller=excluded.legal_seller,enabled=excluded.enabled,agreement_ref=excluded.agreement_ref,inventory_ref=excluded.inventory_ref,registration_rules_ref=excluded.registration_rules_ref,commission_schedule_ref=excluded.commission_schedule_ref,materials_rights_ref=excluded.materials_rights_ref,updated_at=excluded.updated_at`,id,string(b.name),b.market,b.developer_family?string(b.developer_family):null,b.legal_seller?string(b.legal_seller):null,b.enabled?1:0,b.agreement_ref||null,b.inventory_ref||null,b.registration_rules_ref||null,b.commission_schedule_ref||null,b.materials_rights_ref||null,nowISO());\n",
+          "new": " await auditedMutation(env,identity,stmt(env,`INSERT INTO mira_projects (id,name,market,developer_family,legal_seller,enabled,agreement_ref,inventory_ref,registration_rules_ref,commission_schedule_ref,materials_rights_ref,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,market=excluded.market,developer_family=excluded.developer_family,legal_seller=excluded.legal_seller,enabled=excluded.enabled,agreement_ref=excluded.agreement_ref,inventory_ref=excluded.inventory_ref,registration_rules_ref=excluded.registration_rules_ref,commission_schedule_ref=excluded.commission_schedule_ref,materials_rights_ref=excluded.materials_rights_ref,updated_at=excluded.updated_at`,id,string(b.name),b.market,b.developer_family?string(b.developer_family):null,b.legal_seller?string(b.legal_seller):null,b.enabled?1:0,b.agreement_ref||null,b.inventory_ref||null,b.registration_rules_ref||null,b.commission_schedule_ref||null,b.materials_rights_ref||null,nowISO()),{entityType:'project',entityId:id,status:b.enabled?'enabled':'disabled',evidenceRef:b.agreement_ref||null});\n"
+        },
+        {
+          "old": " if(path===API+'/admin/agencies'&&request.method==='POST')return adminAgency(request,env,m);\n if(path===API+'/admin/projects'&&request.method==='POST')return adminProject(request,env,m);\n",
+          "new": " if(path===API+'/admin/agencies'&&request.method==='POST')return adminAgency(request,env,m,identity);\n if(path===API+'/admin/projects'&&request.method==='POST')return adminProject(request,env,m,identity);\n"
+        },
+        {
+          "old": "   const saved=await run(env,`INSERT INTO mira_memberships (subject,agency_id,role,active) VALUES (?,?,?,?) ON CONFLICT(subject) DO UPDATE SET agency_id=excluded.agency_id,role=excluded.role,active=excluded.active WHERE mira_memberships.role!='operator'`,string(b.subject,1,200),identifier(b.agency_id),b.role,b.active?1:0);\n",
+          "new": "   const saved=await auditedMutation(env,identity,stmt(env,`INSERT INTO mira_memberships (subject,agency_id,role,active) VALUES (?,?,?,?) ON CONFLICT(subject) DO UPDATE SET agency_id=excluded.agency_id,role=excluded.role,active=excluded.active WHERE mira_memberships.role!='operator'`,string(b.subject,1,200),identifier(b.agency_id),b.role,b.active?1:0),{entityType:'membership',entityId:b.subject.trim(),agencyId:b.agency_id.trim(),status:b.role+(b.active?'_active':'_inactive')});\n"
+        },
+        {
+          "old": "   await run(env,'INSERT INTO mira_agency_projects (agency_id,project_id) VALUES (?,?) ON CONFLICT DO NOTHING',identifier(b.agency_id),identifier(b.project_id));return json({granted:true});\n",
+          "new": "   const agencyId=identifier(b.agency_id),projectId=identifier(b.project_id);\n   await auditedMutation(env,identity,stmt(env,'INSERT INTO mira_agency_projects (agency_id,project_id) VALUES (?,?) ON CONFLICT DO NOTHING',agencyId,projectId),{entityType:'agency_project',entityId:agencyId+'/'+projectId,agencyId,status:'assigned'});return json({granted:true});\n"
+        },
+        {
+          "old": " if(path===API+'/admin/dashboard'&&request.method==='GET'){\n",
+          "new": " if(path===API+'/admin/audit'&&request.method==='GET'){operator(m);return json(await administrativeHistory(env,url));}\n if(path===API+'/admin/dashboard'&&request.method==='GET'){\n"
+        }
+      ]
+    }
+  ]
+}

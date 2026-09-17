@@ -1,3 +1,4 @@
+import {auditedMutation,administrativeHistory} from './admin-audit.mjs';
 import {routeSupply,materialReleaseFacts} from './materials.mjs';
 import {projectDetail,agencyProfile,applicationDetail,reviewApplication} from './experience.mjs';
 import {ApiError,verifyAccess} from './auth.mjs';
@@ -172,15 +173,15 @@ async function recordEvidence(request,env,m,identity) {
  catch(error){if(String(error.message).includes('UNIQUE'))throw new ApiError(409,'evidence_reference_exists');if(String(error.message).includes('FOREIGN KEY'))throw new ApiError(409,'evidence_scope_missing');throw error;}
  return json({id,kind:b.kind,verified_at:verified,expires_at:expires},201);
 }
-async function adminAgency(request,env,m) {
+async function adminAgency(request,env,m,identity) {
  operator(m);const b=await bodyOf(request);requireKeys(b,['id','name','city','status','agreement_ref'],['id','name','city','status']);
  assert(['pending','active','suspended'].includes(b.status),400,'invalid_agency_status');
  const id=identifier(b.id);
  if(b.status==='active')await evidence(env,b.agreement_ref,'agency_agreement',{agency_id:id});
- await run(env,`INSERT INTO mira_agencies (id,name,city,status,agreement_ref,created_at) VALUES (?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,city=excluded.city,status=excluded.status,agreement_ref=excluded.agreement_ref`,id,string(b.name),string(b.city),b.status,b.agreement_ref||null,nowISO());
+ await auditedMutation(env,identity,stmt(env,`INSERT INTO mira_agencies (id,name,city,status,agreement_ref,created_at) VALUES (?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,city=excluded.city,status=excluded.status,agreement_ref=excluded.agreement_ref`,id,string(b.name),string(b.city),b.status,b.agreement_ref||null,nowISO()),{entityType:'agency',entityId:id,agencyId:id,status:b.status,evidenceRef:b.agreement_ref||null});
  return json({id,status:b.status});
 }
-async function adminProject(request,env,m) {
+async function adminProject(request,env,m,identity) {
  operator(m);const b=await bodyOf(request);requireKeys(b,['id','name','market','developer_family','legal_seller','enabled','agreement_ref','inventory_ref','registration_rules_ref','commission_schedule_ref','materials_rights_ref'],['id','name','market','enabled']);
  const id=identifier(b.id);assert(typeof b.enabled==='boolean'&&b.market==='phuket',400,'invalid_project');
  if(b.enabled){
@@ -189,7 +190,7 @@ async function adminProject(request,env,m) {
      const e=await evidence(env,b[field],kind,{project_id:id});if(kind==='inventory')assert(e.expires_at,409,'inventory_expiry_required');if(kind==='project_agreement')assert(JSON.parse(e.facts_json).legal_seller===b.legal_seller,409,'seller_not_evidenced');
    }
  }
- await run(env,`INSERT INTO mira_projects (id,name,market,developer_family,legal_seller,enabled,agreement_ref,inventory_ref,registration_rules_ref,commission_schedule_ref,materials_rights_ref,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,market=excluded.market,developer_family=excluded.developer_family,legal_seller=excluded.legal_seller,enabled=excluded.enabled,agreement_ref=excluded.agreement_ref,inventory_ref=excluded.inventory_ref,registration_rules_ref=excluded.registration_rules_ref,commission_schedule_ref=excluded.commission_schedule_ref,materials_rights_ref=excluded.materials_rights_ref,updated_at=excluded.updated_at`,id,string(b.name),b.market,b.developer_family?string(b.developer_family):null,b.legal_seller?string(b.legal_seller):null,b.enabled?1:0,b.agreement_ref||null,b.inventory_ref||null,b.registration_rules_ref||null,b.commission_schedule_ref||null,b.materials_rights_ref||null,nowISO());
+ await auditedMutation(env,identity,stmt(env,`INSERT INTO mira_projects (id,name,market,developer_family,legal_seller,enabled,agreement_ref,inventory_ref,registration_rules_ref,commission_schedule_ref,materials_rights_ref,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,market=excluded.market,developer_family=excluded.developer_family,legal_seller=excluded.legal_seller,enabled=excluded.enabled,agreement_ref=excluded.agreement_ref,inventory_ref=excluded.inventory_ref,registration_rules_ref=excluded.registration_rules_ref,commission_schedule_ref=excluded.commission_schedule_ref,materials_rights_ref=excluded.materials_rights_ref,updated_at=excluded.updated_at`,id,string(b.name),b.market,b.developer_family?string(b.developer_family):null,b.legal_seller?string(b.legal_seller):null,b.enabled?1:0,b.agreement_ref||null,b.inventory_ref||null,b.registration_rules_ref||null,b.commission_schedule_ref||null,b.materials_rights_ref||null,nowISO()),{entityType:'project',entityId:id,status:b.enabled?'enabled':'disabled',evidenceRef:b.agreement_ref||null});
  return json({id,enabled:b.enabled});
 }
 async function handle(request,env,identityVerifier) {
@@ -254,22 +255,24 @@ async function handle(request,env,identityVerifier) {
    await env.MIRA_DB.batch([stmt(env,'UPDATE mira_evidence SET revoked_at=? WHERE id=? AND revoked_at IS NULL',now,e.id),stmt(env,`INSERT INTO mira_events (id,entity_type,entity_id,agency_id,actor,status,version,evidence_ref,reason,created_at) VALUES (?,'evidence',?,?,?,'revoked',1,?,?,?) ON CONFLICT(entity_type,entity_id,version) DO NOTHING`,id,e.id,e.agency_id,identity.subject,e.id,reason,now)]);
    return json({id:e.id,revoked:true});
  }
- if(path===API+'/admin/agencies'&&request.method==='POST')return adminAgency(request,env,m);
- if(path===API+'/admin/projects'&&request.method==='POST')return adminProject(request,env,m);
+ if(path===API+'/admin/agencies'&&request.method==='POST')return adminAgency(request,env,m,identity);
+ if(path===API+'/admin/projects'&&request.method==='POST')return adminProject(request,env,m,identity);
  if(path===API+'/admin/memberships'&&request.method==='POST'){
    operator(m);const b=await bodyOf(request);requireKeys(b,['subject','agency_id','role','active'],['subject','agency_id','role','active']);
    assert(['agency_owner','broker'].includes(b.role)&&typeof b.active==='boolean',400,'invalid_membership');
-   const saved=await run(env,`INSERT INTO mira_memberships (subject,agency_id,role,active) VALUES (?,?,?,?) ON CONFLICT(subject) DO UPDATE SET agency_id=excluded.agency_id,role=excluded.role,active=excluded.active WHERE mira_memberships.role!='operator'`,string(b.subject,1,200),identifier(b.agency_id),b.role,b.active?1:0);
+   const saved=await auditedMutation(env,identity,stmt(env,`INSERT INTO mira_memberships (subject,agency_id,role,active) VALUES (?,?,?,?) ON CONFLICT(subject) DO UPDATE SET agency_id=excluded.agency_id,role=excluded.role,active=excluded.active WHERE mira_memberships.role!='operator'`,string(b.subject,1,200),identifier(b.agency_id),b.role,b.active?1:0),{entityType:'membership',entityId:b.subject.trim(),agencyId:b.agency_id.trim(),status:b.role+(b.active?'_active':'_inactive')});
    assert(saved.meta.changes===1,409,'operator_membership_is_bootstrap_only');
    return json({subject:b.subject,agency_id:b.agency_id,role:b.role,active:b.active});
  }
  if(path===API+'/admin/agency-projects'&&request.method==='POST'){
    operator(m);const b=await bodyOf(request);requireKeys(b,['agency_id','project_id'],['agency_id','project_id']);
-   await run(env,'INSERT INTO mira_agency_projects (agency_id,project_id) VALUES (?,?) ON CONFLICT DO NOTHING',identifier(b.agency_id),identifier(b.project_id));return json({granted:true});
+   const agencyId=identifier(b.agency_id),projectId=identifier(b.project_id);
+   await auditedMutation(env,identity,stmt(env,'INSERT INTO mira_agency_projects (agency_id,project_id) VALUES (?,?) ON CONFLICT DO NOTHING',agencyId,projectId),{entityType:'agency_project',entityId:agencyId+'/'+projectId,agencyId,status:'assigned'});return json({granted:true});
  }
  if(path===API+'/admin/applications'&&request.method==='GET'){
    operator(m);const {limit,cursor}=pageSettings(url);return json(pageResult(await all(env,'SELECT id,subject,email,company,city,name,format,demand,markets_json,status,version,agency_id,created_at,updated_at FROM mira_applications WHERE id>? ORDER BY id LIMIT ?',cursor,limit+1),limit));
  }
+ if(path===API+'/admin/audit'&&request.method==='GET'){operator(m);return json(await administrativeHistory(env,url));}
  if(path===API+'/admin/dashboard'&&request.method==='GET'){
    operator(m);return json({scope:'This database only; counts are not market-wide totals.',
      agencies:await all(env,'SELECT status,COUNT(*) AS count FROM mira_agencies GROUP BY status'),

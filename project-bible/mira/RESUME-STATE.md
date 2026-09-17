@@ -1,9 +1,28 @@
 # MIRA RESUME-STATE
 
+## 2026-09-17 — PR 8 integration and next priority
+
+Owner explicitly requested reviewed integration of PR #8 while preserving the public presentation work, followed by actual agency login and operator approval using `cloudflare-worker/mira/SERVER-START.md`. Buyer registration remains separately closed. The presentation commit `e49c966607b8e33795f2eb1a6ed1194827bbac9a` and generated snapshot `86578fd839ca97c27ecc79c585fc9521fa1f8468` are preserved. PR head reviewed: `8567c8aa5a0015531016ae5b32a7bbce9048b4d6`; only WORK/RESUME conflicted, both histories retained below. No source transport was reapplied.
+
+Combined local regression: **98 Node / 120 Python tests passed** (Node local runtime, Python 3.12.14; temporary SQLite/synthetic signed identities, not real signup). Public deploy run `35220869533` passed. Full acceptance `35221091559` passed local browser suites, actual-domain byte/link audit and public/campaign browser suites (618 records, 26 pages, seven widths); its live legacy-editorial check failed because an immediate `is_visible()` assertion ran before asynchronous rendering. Changed that assertion to wait for the same heading, without removing coverage. A fresh combined release must verify the fix.
+
+Actual `/mira/api/health` returned HTTP 404 on this check. Local Wrangler credentials were expired; authorization refresh is in progress. No MIRA Worker/D1/Access deployment or successful real email login is claimed. Next: finish fresh live acceptance, inspect authorized Cloudflare resources and configure the dedicated service; verify real email delivery/login, durable receipt, administrative approval, isolation and revocation independently of CI. The historical checkpoints below describe their own times, not the latest priority.
+
 ## 2026-09-17 — local first-partner presentation checkpoint
 
 Current owner priority: improve and publish the public MIRA catalogue for the first agency presentation; keep real registration disabled. All 618 cards/details now have labelled visuals (11 project-image associations plus editorial covers), refined copy and working shortlist/navigation. Local 83 Node / 110 Python tests passed; in-app browser checked 26 pages, 618 unique records, three detail pages, desktop/mobile and the preserved onboarding → 45-record catalogue route. See `operations/2026-09-17-first-partner-presentation.md` for exact scope and the standalone Chrome sandbox limitation. Live publication/acceptance remains the next step for this checkpoint. Earlier CP16 full-run failure below remains historical evidence, not erased.
 
+## Parallel server handoff — 2026-09-17
+
+Read `cloudflare-worker/mira/SERVER-START.md` and `operations/parallel-server-2026-09-17.md`. Isolated branch `mira/parallel-server-20260917` is ready for review after CI `35219962533`: 98 Node / 116 Python tests passed. `operations/parallel-server-result.json` records exact environment and source hashes. Ordinary `worker.mjs` was committed and matches SHA256 `85fe3edcee9326c6b24546e79cd02705457cbdf2da1025caf2c251d0ded6ed25`; its transport need not be reapplied after a normal merge.
+
+Added: atomic admin mutation/audit, operator-only paginated history, 15 production-Worker/synthetic signed-identity journey tests and 10 preflight tests. Cloudflare resources, emails, public catalogue files and main remain untouched by this lane. This is code acceptance, not live signup, remote D1, browser or production capacity.
+
+Local Codex is improving public images, presentation and click paths after the owner's screenshots. Do not supersede that work or treat the earlier technical introduction handoff as visual approval. Review and integrate the parallel branch without reset/clean/force-push; reconcile new WORK/RESUME additions with local progress. Then use real authorized local deployment tooling for email login, operator provisioning, receipt and isolation acceptance. Existing privacy/project gates remain separate. No company/admin questions need repeating.
+
+The main resume state at `13360ee8e9b74f22b6e474f128bbd3ac5b5cd513` is preserved below. It describes the earlier public-release evidence, not the new isolated server test result.
+
+## Preserved main resume state
 
 2026-09-17 — CP16 reports inspected; current owner task is a short first-partner introduction plus working-registration launch. Do not repeat CP12legal/CP13catalogue/CP14design work.
 
