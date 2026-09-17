@@ -21,3 +21,18 @@ CP11editorial design and illustrated marketplace;CP10agency funnel;CP04–09prot
 ## Continue
 
 Confirm CP13 remote integrity; create direct/practical/corporate funnels and stableQR banner; run actual browser tests through authorized CI and bounded load tests; reconcile one canonical dashboard. Real customer registration requires hosting/data/evidence decisions. No external sending, no retry of declined email authorization, no financial guesses or public private-contract contents.
+
+
+<!-- MIRA-LAUNCH-AUTO:START -->
+## Generated source checkpoint
+
+Source commit: `d40eb812857e8d0983958f676661b07619a56eb0`.
+
+Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
+
+Russia: **100** quality-layer rows; **50** matched to inherited live reviews; **0** review join exceptions. **13** inherited ready-for-owner-review; wave approval remains as in source. No new live verification or sending performed.
+
+Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. Full project register: `data/phuket-project-master.csv`. Agency quality layer: `sales/russia-launch-100-quality.csv`. Developer stage register: `sales/phuket-developer-stage-register.csv`.
+
+Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
+<!-- MIRA-LAUNCH-AUTO:END -->
