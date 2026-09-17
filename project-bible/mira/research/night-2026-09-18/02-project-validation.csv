@@ -1,0 +1,31 @@
+id,market,project_name,validation_status,media_source_page,image_url,downloaded,visual_reviewed,rights_basis,publication_approved
+vn-vinhomes-green-paradise,vietnam,Vinhomes Green Paradise,complete_for_discovery,https://market.vinhomes.vn/blog/khoi-cong-khu-do-thi-du-lich-lan-bien-can-gio-bieu-tuong-sinh-thai-bien-moi-cua-tp-hcm,,false,false,unknown_requires_permission,false
+vn-the-global-city,vietnam,The Global City,complete_for_discovery,https://masterisehomes.com/the-global-city/en,,false,false,unknown_requires_permission,false
+vn-aqua-city-phoenix-island,vietnam,Aqua City — Phoenix Island,complete_for_discovery_after_validation,https://www.novaland.com.vn/Data/Sites/1/media/quan-h%E1%BB%87-%C4%91%E1%BA%A7u-t%C6%B0/Th%C3%B4ng-tin-t%E1%BA%ADp-%C4%91o%C3%A0n/2021/20210728_ec-1h-2021-%283%29.pdf,,false,false,unknown_requires_permission,false
+vn-waterpoint,vietnam,Waterpoint,partial_for_validation,https://www.namlongvn.com/en/news/4175-nam-long-signs-with-17-strategic-agencies-for-waterpoint-township-ushering-in-a-new-era-for-western-real-estate-market/,,false,false,unknown_requires_permission,false
+vn-eaton-park,vietnam,Eaton Park,complete_for_discovery,https://gamudaland.com.vn/en/news/news-and-story-15,,false,false,unknown_requires_permission,false
+vn-lumi-hanoi,vietnam,Lumi Hanoi,complete_for_discovery,https://www.capitaland.com/en/about-capitaland/newsroom/news-releases/vietnam/2026/capitaland-development-hands-over-first-homes-at-lumi-hanoi-.html,,false,false,unknown_requires_permission,false
+vn-the-gio-riverside,vietnam,The Gió Riverside,complete_for_discovery,https://www.angia.com.vn/en/project/ongoing-projects/the-gio-riverside-1.html,,false,false,unknown_requires_permission,false
+vn-merryland-quy-nhon,vietnam,MerryLand Quy Nhon,complete_for_discovery,https://www.hungthinhland.com/en/projects/detail/MerryLand-Quy-Nhon.html,,false,false,unknown_requires_permission,false
+vn-the-filmore-da-nang,vietnam,The Filmore Da Nang,complete_for_discovery,https://filmore.com.vn/en/the-filmore-da-nang-officially-grand-opened-on-8th-june-2024/,,false,false,unknown_requires_permission,false
+vn-sun-symphony-residence,vietnam,Sun Symphony Residence,complete_for_discovery,https://sungroup.com.vn/tin-tuc/sun-symphony-residence-dinh-nghia-moi-ve-bat-dong-san-haute-couture-7335,,false,false,unknown_requires_permission,false
+vn-empire-city,vietnam,Empire City,complete_for_discovery_after_validation,https://www.keppel.com/realestate/About-Us/Our-Projects/Empire-City,,false,false,unknown_requires_permission,false
+vn-the-metropole-thu-thiem,vietnam,The Metropole Thu Thiem,complete_for_discovery,https://sonkimland.vn/residential/the-metropole-thu-thiem,,false,false,unknown_requires_permission,false
+vn-the-river-thu-thiem,vietnam,The River Thu Thiem,complete_for_discovery,https://refico.com.vn/specialities/the-river/,,false,false,unknown_requires_permission,false
+vn-one-verandah,vietnam,One Verandah,complete_for_discovery,https://oneverandah.com.vn/en,,false,false,unknown_requires_permission,false
+vn-urban-green,vietnam,Urban Green,complete_for_discovery_after_validation,https://www.kustogroup.com/news/kusto-home-s-vietnam-property-awards-2022/,,false,false,unknown_requires_permission,false
+me-boka-place,montenegro,Boka Place,complete_for_discovery,https://portomontenegro.com/me/real-estate/boka-place/,,false,false,unknown_requires_permission,false
+me-vero-versa,montenegro,Vero & Versa,complete_for_discovery,https://portomontenegro.com/me/real-estate/vero-versa/,,false,false,unknown_requires_permission,false
+me-the-peaks,montenegro,The Peaks,complete_for_discovery,https://www.lusticabaythepeaks.com/,,false,false,unknown_requires_permission,false
+me-heights-lustica,montenegro,Heights,partial_for_validation,https://realting.com/fr/montenegro/new-buildings/38119,,false,false,third_party_unknown_requires_permission,false
+me-portonovi-residences,montenegro,Portonovi Residences,complete_for_discovery,https://portonovi.com/en/residences,,false,false,unknown_requires_permission,false
+me-oneonly-private-homes,montenegro,One&Only Private Homes Portonovi,complete_for_discovery,https://portonovi.com/en/oneonly-resort,,false,false,unknown_requires_permission,false
+me-dukley-gardens,montenegro,Dukley Gardens,complete_for_discovery,https://www.dukleygardens.com/,,false,false,unknown_requires_permission,false
+me-mountain-retreat-dukley,montenegro,Mountain Retreat by Dukley,complete_for_discovery_after_validation,https://dukley.com/estate/mountain-retreat-by-dukley/,,false,false,unknown_requires_permission,false
+me-melia-private-residences-budva,montenegro,Meliá Private Residences Budva,complete_for_discovery,https://www.meliabudva.com/about-us,,false,false,unknown_requires_permission,false
+me-merit-starlit,montenegro,Merit Starlit Hotel & Residence,partial_for_validation,https://meritstarlit.com/en/rezidanslar,,false,false,unknown_requires_permission,false
+me-bellemond-residence,montenegro,Bellemond Residence,complete_for_discovery_after_validation,https://bellemondresidence.me/,,false,false,unknown_requires_permission,false
+me-porto-budva,montenegro,Porto Budva,partial_for_validation,https://www.portobudvaestate.me/en/about-us/,,false,false,unknown_requires_permission,false
+me-poljana-olive-homes,montenegro,Poljana Olive Homes Pool Residence,partial_for_validation,https://poljana-olive-homes.com/,,false,false,unknown_requires_permission,false
+me-kotor-bayview,montenegro,Kotor Bayview Residence,partial_for_validation,https://www.kotorbayview.com/,,false,false,unknown_requires_permission,false
+me-montis-mountain-resort,montenegro,Montis Mountain Resort by Splendid,complete_for_discovery_after_validation,https://montishotel.me/resort/,,false,false,unknown_requires_permission,false
