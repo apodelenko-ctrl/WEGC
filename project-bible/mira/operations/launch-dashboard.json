@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "source_commit": "03b6587a3853ad667858fa075126cc435985fcc3",
+  "source_commit": "5ab0824ea7061e0a8a5b731075d471421bbeb752",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
@@ -173,7 +173,7 @@
       "capability": "authentication",
       "implementation": "implemented_code_not_deployed",
       "source_path": "cloudflare-worker/mira/auth.mjs",
-      "source_sha256": "0d68a772dfa7acfe2bed69ba90bf4bbeb3f88f3a8cf2a71d064e30ef631890cd",
+      "source_sha256": "e6ec67c339e53a097f7c5149cd4d91e8bc6df846bbf870cf0d8d56b9e838bc25",
       "deployment": "not_verified",
       "note": "Verified Access identity and server-side membership; no guessed login."
     },
