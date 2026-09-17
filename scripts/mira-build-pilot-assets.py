@@ -5,10 +5,13 @@ Never use the repository root as an assets directory: it includes operational
 documents and server code. This bundle contains no business records or secrets.
 """
 from pathlib import Path
+import re
+from urllib.parse import urljoin
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'cloudflare-worker/mira/pilot-assets'
-FILES = ('pilot.html', 'library.html', 'pilot.mjs', 'library.mjs', 'marketplace.css', 'library.css')
+FILES = ('pilot.html', 'library.html', 'pilot.mjs', 'library.mjs', 'marketplace.css', 'library.css',
+         'documents/privacy.html', 'documents/documents.css')
 
 
 def build(output=OUTPUT):
@@ -22,10 +25,24 @@ def build(output=OUTPUT):
                 raise ValueError('Unexpected content in asset directory; review it before packaging')
     (output / 'mira').mkdir(parents=True, exist_ok=True)
     for name in FILES:
-        content = (ROOT / 'mira' / name).read_text(encoding='utf8')
-        if name.endswith('.html'):
+        source = ROOT / 'mira' / name
+        if source.is_symlink() or not source.resolve().is_relative_to((ROOT / 'mira').resolve()):
+            raise ValueError('Asset source must be a regular file within MIRA')
+        content = source.read_text(encoding='utf8')
+        if name == 'documents/privacy.html':
+            # Keep legal text/status unchanged. Only navigation/download links
+            # leave the isolated host; no general proxy or whole-repo upload.
+            def public_link(match):
+                href = match.group(1)
+                if href.startswith('#') or href == '/mira/documents/documents.css':
+                    return match.group(0)
+                return 'href="' + urljoin('https://wegc.fund/mira/documents/privacy.html', href) + '"'
+            content = re.sub(r'href="([^"]*)"', public_link, content)
+        if name in ('pilot.html', 'library.html'):
             content = content.replace('</header>', '<a href="/cdn-cgi/access/logout">Выйти</a></header>')
-        (output / 'mira' / name).write_text(content, encoding='utf8')
+        target = output / 'mira' / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(content, encoding='utf8')
     return sorted(allowed)
 
 

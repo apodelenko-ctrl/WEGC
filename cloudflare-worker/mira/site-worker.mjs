@@ -3,7 +3,9 @@ import api from './worker.mjs';
 import {ApiError, verifyAccess} from './auth.mjs';
 
 const pages = new Set(['/mira/pilot.html', '/mira/library.html']);
-const files = new Set(['/mira/pilot.mjs', '/mira/library.mjs', '/mira/marketplace.css', '/mira/library.css']);
+const files = new Set(['/mira/pilot.mjs', '/mira/library.mjs', '/mira/marketplace.css', '/mira/library.css', '/mira/documents/documents.css']);
+// Available before sign-in; same-origin notice does not imply legal approval.
+const notices = new Set(['/mira/documents/privacy.html']);
 const publicPages = new Set(['/mira/marketplace.html', '/mira/phuket-starter-kit.html']);
 const headers = {
   'Cache-Control': 'no-store, private',
@@ -25,7 +27,7 @@ export default {
     if (url.pathname === '/mira/' || publicPages.has(url.pathname)) {
       return redirect('https://wegc.fund' + url.pathname);
     }
-    if (!pages.has(url.pathname) && !files.has(url.pathname)) return failure(404, 'not_found');
+    if (!pages.has(url.pathname) && !files.has(url.pathname) && !notices.has(url.pathname)) return failure(404, 'not_found');
     try {
       // Do not trust the existence of a dashboard policy or an unsigned identity header.
       if (pages.has(url.pathname)) await verifyAccess(request, env);
