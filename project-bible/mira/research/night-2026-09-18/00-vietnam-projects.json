@@ -1,0 +1,620 @@
+{
+  "schema_version": 1,
+  "slot": "00-vietnam",
+  "checked_at": "2026-09-18",
+  "market": "vietnam",
+  "method_note": "Targeted research collection, not a sales ranking. Primary/authoritative project facts are separated from Russian-language or Russian-speaking-channel observations. Current inventory, prices, returns, commissions, foreign-buyer eligibility and MIRA representation are not inferred.",
+  "summary": {
+    "records_saved": 15,
+    "complete_for_discovery_slot": 11,
+    "partial_for_followup": 4,
+    "duplicates_within_slot": 0,
+    "media_files_downloaded": 0,
+    "publication_approved_media": 0,
+    "commercially_enabled": 0
+  },
+  "projects": [
+    {
+      "id": "vn-vinhomes-green-paradise",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Vinhomes Green Paradise",
+      "developer_brand": "Vinhomes",
+      "corporate_family": "Vingroup",
+      "legal_seller": null,
+      "location": "Can Gio, Ho Chi Minh City",
+      "property_formats": ["residential", "commercial_components", "resort_components"],
+      "short_description": "Large coastal urban development at Can Gio; the first-party Vinhomes/Vingroup material describes a mixed residential, commercial and resort programme.",
+      "primary_sources": [
+        {
+          "url": "https://market.vinhomes.vn/blog/khoi-cong-khu-do-thi-du-lich-lan-bien-can-gio-bieu-tuong-sinh-thai-bien-moi-cua-tp-hcm",
+          "publisher": "Vinhomes Market",
+          "role": "developer_project_publication",
+          "supported_fact": "Identifies Vinhomes Green Paradise at Can Gio as a 2,870-hectare coastal urban-tourism development with several functional areas."
+        },
+        {
+          "url": "https://www.vingroup.net/en/news/detail/4833/vinhomes-green-paradise-launches-global-smart-city-certification-project",
+          "publisher": "Vingroup",
+          "role": "developer_group_publication",
+          "supported_fact": "Identifies the project by exact name and Can Gio location."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "VINPROP / Oleg Morozov",
+          "url": "https://www.youtube.com/watch?v=m0eBFHVnwMQ",
+          "publisher_role": "russian_language_real_estate_analytics_channel",
+          "page_language": "ru",
+          "match_precision": "exact_project",
+          "supported_observation": "Russian-language publication is explicitly about Vinhomes Green Paradise; promotional investment claims are not reused as project facts."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_ru_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|vinhomes-green-paradise|can-gio"
+    },
+    {
+      "id": "vn-the-global-city",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "The Global City",
+      "developer_brand": "Masterise Homes",
+      "corporate_family": "Masterise Group",
+      "legal_seller": null,
+      "location": "Binh Trung / Thu Duc area, Ho Chi Minh City",
+      "property_formats": ["apartments", "townhouses", "villas", "commercial_shophouses"],
+      "short_description": "Master-planned urban development promoted by Masterise Homes with residential and commercial components.",
+      "primary_sources": [
+        {
+          "url": "https://masterisehomes.com/the-global-city/en",
+          "publisher": "Masterise Homes",
+          "role": "developer_project_site",
+          "supported_fact": "Exact project site identifies The Global City, Masterise Homes and its Ho Chi Minh City location."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/ru/developments/ho-chi-minh/off-plan/",
+          "publisher_role": "russian_language_property_portal",
+          "page_language": "ru",
+          "match_precision": "exact_project_catalogue_entry",
+          "supported_observation": "Russian-language off-plan catalogue contains an exact The Global City entry."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_ru_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|the-global-city|ho-chi-minh-city"
+    },
+    {
+      "id": "vn-aqua-city-phoenix-island",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Aqua City — Phoenix Island",
+      "developer_brand": "Novaland",
+      "corporate_family": "NovaGroup",
+      "legal_seller": null,
+      "location": "Bien Hoa, Dong Nai",
+      "property_formats": ["townhouses", "villas", "shophouses"],
+      "short_description": "Phoenix Island is marketed as part of the wider Aqua City urban development; the current first-party evidence collected in this slot establishes the Aqua City family, not every phase-specific commercial fact.",
+      "primary_sources": [
+        {
+          "url": "https://www.novaland.com.vn/aqua-city-cua-novaland-duoc-cap-von-de-trien-khai-hoan-thien",
+          "publisher": "Novaland",
+          "role": "developer_family_publication",
+          "supported_fact": "Identifies Aqua City as a Novaland urban project in Dong Nai and discusses completion of low-rise products."
+        },
+        {
+          "url": "https://www.novaland.com.vn/aqua-city-tiep-tuc-don-tin-vui-truoc-them-tet-nguyen-dan-them-hang-tram-nha-pho-biet-thu-du-dieu-kien-ky-hop-dong-mua-ban",
+          "publisher": "Novaland",
+          "role": "developer_family_publication",
+          "supported_fact": "Dated 23 January 2025; concerns legal sales eligibility for specified Aqua Riverside City low-rise homes within Aqua City, not a blanket statement for Phoenix Island."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/ru/property/aqua-city-phoenix-island-266/",
+          "publisher_role": "russian_language_property_portal",
+          "page_language": "ru",
+          "match_precision": "exact_phase_on_portal_family_primary_source",
+          "supported_observation": "Russian-language portal has an exact Aqua City Phoenix Island page and attributes the development to Novaland."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "partial_phase_primary_verification",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["phase_specific_primary_page", "legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|aqua-city-phoenix-island|dong-nai"
+    },
+    {
+      "id": "vn-waterpoint",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Waterpoint",
+      "developer_brand": "Nam Long",
+      "corporate_family": "Nam Long Group",
+      "legal_seller": null,
+      "location": "Ben Luc / western Ho Chi Minh City corridor",
+      "property_formats": ["villas", "low_rise_residential", "high_rise_residential"],
+      "short_description": "Large Nam Long township west of Ho Chi Minh City; first-party sources describe a 355-hectare integrated urban area.",
+      "primary_sources": [
+        {
+          "url": "https://www.namlongvn.com/en/news/4175-nam-long-signs-with-17-strategic-agencies-for-waterpoint-township-ushering-in-a-new-era-for-western-real-estate-market/",
+          "publisher": "Nam Long",
+          "role": "developer_publication",
+          "supported_fact": "Identifies Waterpoint as a 355-hectare township developed by Nam Long."
+        },
+        {
+          "url": "https://www.namlongvn.com/en/news/3974-nam-long-signed-and-announced-a-series-of-amenities-services-to-be-implemented-in-waterpoint-township/",
+          "publisher": "Nam Long",
+          "role": "developer_publication",
+          "supported_fact": "Confirms the Waterpoint township and location along Provincial Road 830."
+        }
+      ],
+      "agency_observations": [],
+      "checked_at": "2026-09-18",
+      "fact_status": "partial_primary_verified_ru_channel_gap",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["russian_language_agency_observation", "legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|waterpoint|ben-luc"
+    },
+    {
+      "id": "vn-eaton-park",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Eaton Park",
+      "developer_brand": "Gamuda Land",
+      "corporate_family": "Gamuda Berhad",
+      "legal_seller": null,
+      "location": "Mai Chi Tho / An Phu area, Ho Chi Minh City",
+      "property_formats": ["condominiums"],
+      "short_description": "Residential condominium development by Gamuda Land in Ho Chi Minh City.",
+      "primary_sources": [
+        {
+          "url": "https://gamudaland.com.vn/en/news/news-and-story-15",
+          "publisher": "Gamuda Land Vietnam",
+          "role": "developer_publication",
+          "supported_fact": "Identifies Eaton Park as a Gamuda Land development."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Savills Vietnam via Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/property/o29039/",
+          "publisher_role": "agency_listing_on_russian_speaking_portal",
+          "page_language": "en",
+          "match_precision": "exact_project",
+          "supported_observation": "Exact Eaton Park listing is attributed to Savills Vietnam on a portal with a Russian-language catalogue."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|eaton-park|ho-chi-minh-city"
+    },
+    {
+      "id": "vn-lumi-hanoi",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Lumi Hanoi",
+      "developer_brand": "CapitaLand Development",
+      "corporate_family": "CapitaLand Investment",
+      "legal_seller": null,
+      "location": "West Hanoi / Nam Tu Liem area, Hanoi",
+      "property_formats": ["apartments", "duplexes", "penthouses"],
+      "short_description": "Large high-end residential project in west Hanoi by CapitaLand Development.",
+      "primary_sources": [
+        {
+          "url": "https://www.capitaland.com/en/about-capitaland/newsroom/news-releases/vietnam/20221/capitaland-development-introduces-lumi-hanoi--a-4-000-unit-high-.html",
+          "publisher": "CapitaLand Development",
+          "role": "developer_publication",
+          "supported_fact": "Introduces Lumi Hanoi as an approximately 4,000-unit residential project in west Hanoi with nine towers and several apartment formats."
+        },
+        {
+          "url": "https://www.capitaland.com/en/about-capitaland/newsroom/news-releases/vietnam/2026/capitaland-development-hands-over-first-homes-at-lumi-hanoi-.html",
+          "publisher": "CapitaLand Development",
+          "role": "developer_publication",
+          "supported_fact": "Dated 8 September 2026; reports handover at Lumi Signature, the first completed phase, without implying current inventory for the entire project."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/property/lumi-hanoi-15857/",
+          "publisher_role": "property_portal_with_russian_language_catalogue",
+          "page_language": "en",
+          "match_precision": "exact_project",
+          "supported_observation": "Exact Lumi Hanoi project page is present on the portal; the canonical page observed in this run was English."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|lumi-hanoi|hanoi"
+    },
+    {
+      "id": "vn-the-gio-riverside",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "The Gió Riverside",
+      "developer_brand": "An Gia",
+      "corporate_family": "An Gia Real Estate Investment and Development Corporation",
+      "legal_seller": null,
+      "location": "Dong Hoa / former Di An, Binh Duong; current first-party page labels Ho Chi Minh City",
+      "property_formats": ["apartments"],
+      "short_description": "An Gia residential complex on the eastern urban corridor; administrative place naming changed in current first-party material.",
+      "primary_sources": [
+        {
+          "url": "https://www.angia.com.vn/en/project/ongoing-projects/the-gio-riverside-1.html",
+          "publisher": "An Gia",
+          "role": "developer_project_page",
+          "supported_fact": "Exact first-party project page identifies The Gió Riverside as an ongoing An Gia development."
+        },
+        {
+          "url": "https://angia.com.vn/en/",
+          "publisher": "An Gia",
+          "role": "developer_homepage",
+          "supported_fact": "Current developer catalogue lists the project and its current administrative address."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/property/the-gio-riverside-323/",
+          "publisher_role": "property_portal_with_russian_language_catalogue",
+          "page_language": "en",
+          "match_precision": "exact_project",
+          "supported_observation": "Exact project page appears on the portal; canonical page observed in this run was English."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["administrative_location_normalization", "legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|the-gio-riverside|dong-hoa"
+    },
+    {
+      "id": "vn-merryland-quy-nhon",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "MerryLand Quy Nhon",
+      "developer_brand": "Hung Thinh Land",
+      "corporate_family": "Hung Thinh Corporation",
+      "legal_seller": null,
+      "location": "Hai Giang Peninsula / Quy Nhon area; current first-party page labels Gia Lai province",
+      "property_formats": ["bizhouse", "condotel", "villas"],
+      "short_description": "Large coastal mixed-use development on the Hai Giang peninsula by Hung Thinh Land.",
+      "primary_sources": [
+        {
+          "url": "https://www.hungthinhland.com/en/projects/detail/MerryLand-Quy-Nhon.html",
+          "publisher": "Hung Thinh Land",
+          "role": "developer_project_page",
+          "supported_fact": "Exact project page identifies MerryLand Quy Nhon, its Hai Giang peninsula location and bizhouse/condotel/villa formats."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/ru/property/binh-dinh/",
+          "publisher_role": "russian_language_property_portal",
+          "page_language": "ru",
+          "match_precision": "exact_project_catalogue_entry",
+          "supported_observation": "Russian-language regional catalogue contains MerryLand Quy Nhon."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_ru_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["administrative_location_normalization", "legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|merryland-quy-nhon|hai-giang"
+    },
+    {
+      "id": "vn-the-filmore-da-nang",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "The Filmore Da Nang",
+      "developer_brand": "Filmore Development",
+      "corporate_family": "Filmore Development",
+      "legal_seller": null,
+      "location": "Hai Chau, Da Nang",
+      "property_formats": ["condominiums", "penthouses"],
+      "short_description": "Riverside condominium project in central Da Nang by Filmore Development.",
+      "primary_sources": [
+        {
+          "url": "https://filmore.com.vn/en/the-filmore-da-nang-officially-grand-opened-on-8th-june-2024/",
+          "publisher": "Filmore Development",
+          "role": "developer_publication",
+          "supported_fact": "Reports the project grand opening on 8 June 2024 and describes 206 condominiums including 1–3 bedroom units and penthouses."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/ru/property/the-filmore-da-nang-9308/",
+          "publisher_role": "russian_language_property_portal",
+          "page_language": "ru",
+          "match_precision": "exact_project",
+          "supported_observation": "Exact Russian-language project page for The Filmore Da Nang is present."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_ru_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|the-filmore-da-nang|hai-chau"
+    },
+    {
+      "id": "vn-sun-symphony-residence",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Sun Symphony Residence",
+      "developer_brand": "Sun Property",
+      "corporate_family": "Sun Group",
+      "legal_seller": null,
+      "location": "Han River, Da Nang",
+      "property_formats": ["apartments", "penthouses", "duplexes", "garden_houses"],
+      "short_description": "Residential complex on the Han River developed within the Sun Group / Sun Property ecosystem.",
+      "primary_sources": [
+        {
+          "url": "https://sungroup.com.vn/tin-tuc/sun-symphony-residence-dinh-nghia-moi-ve-bat-dong-san-haute-couture-7335",
+          "publisher": "Sun Group",
+          "role": "developer_group_publication",
+          "supported_fact": "Exact project publication describes Sun Symphony Residence and its Da Nang riverfront setting."
+        },
+        {
+          "url": "https://sungroup.com.vn/tin-tuc/sun-group-ra-mat-thap-can-ho-cuoi-cung-thuoc-to-hop-sun-symphony-residence-mat-song-han-da-nang-10819",
+          "publisher": "Sun Group",
+          "role": "developer_group_publication",
+          "supported_fact": "Dated 4 May 2026; identifies the final apartment tower in the Sun Symphony Residence complex."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "DDA Real Estate via Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/ru/property/da-nang/",
+          "publisher_role": "agency_listings_on_russian_language_portal",
+          "page_language": "ru",
+          "match_precision": "exact_project_listing_entries",
+          "supported_observation": "Russian-language Da Nang catalogue contains Sun Symphony Residence listings attributed to DDA Real Estate."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_ru_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|sun-symphony-residence|da-nang"
+    },
+    {
+      "id": "vn-empire-city",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Empire City",
+      "developer_brand": "Empire City LLC consortium",
+      "corporate_family": "Tien Phuoc / Keppel / Gaw Capital Partners / Tran Thai consortium",
+      "legal_seller": null,
+      "location": "Thu Thiem, Ho Chi Minh City",
+      "property_formats": ["apartments", "shophouses"],
+      "short_description": "Large mixed-use development in Thu Thiem; current facts in this slot are supported by CBRE Vietnam rather than a verified consortium-owned project page.",
+      "primary_sources": [
+        {
+          "url": "https://residential.cbrevietnam.com/en-US/empire-city-EN",
+          "publisher": "CBRE Vietnam",
+          "role": "authoritative_project_brokerage_source",
+          "supported_fact": "Identifies Empire City as a 14.5-hectare Thu Thiem development by a consortium of Tien Phuoc, Keppel Land, Gaw Capital Partners and Tran Thai."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/ru/property/empire-city-249/",
+          "publisher_role": "russian_language_property_portal",
+          "page_language": "ru",
+          "match_precision": "exact_project",
+          "supported_observation": "Exact Russian-language Empire City project page includes agency listings; the portal is not treated as developer authority."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "partial_authoritative_secondary_no_first_party_project_source",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["verified_first_party_project_source", "legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|empire-city|thu-thiem"
+    },
+    {
+      "id": "vn-the-metropole-thu-thiem",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "The Metropole Thu Thiem",
+      "developer_brand": "SonKim Land",
+      "corporate_family": "SonKim Land",
+      "legal_seller": null,
+      "location": "Thu Thiem, Ho Chi Minh City",
+      "property_formats": ["residences", "apartments"],
+      "short_description": "Multi-phase residential development in Thu Thiem by SonKim Land.",
+      "primary_sources": [
+        {
+          "url": "https://sonkimland.vn/residential/the-metropole-thu-thiem",
+          "publisher": "SonKim Land",
+          "role": "developer_project_page",
+          "supported_fact": "Exact developer page identifies The Metropole Thu Thiem, its Thu Thiem location and named phases."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "SaigonApart",
+          "url": "https://saigonapart.com/districts",
+          "publisher_role": "russian_language_realtor_catalogue",
+          "page_language": "ru",
+          "match_precision": "exact_project_family_catalogue_entry",
+          "supported_observation": "Russian-language realtor district catalogue includes The Metropole in Thu Thiem."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_ru_agency_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|the-metropole-thu-thiem|thu-thiem"
+    },
+    {
+      "id": "vn-the-river-thu-thiem",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "The River Thu Thiem",
+      "developer_brand": "Refico",
+      "corporate_family": "Refico",
+      "legal_seller": null,
+      "location": "Thu Thiem, Ho Chi Minh City",
+      "property_formats": ["apartments"],
+      "short_description": "Residential riverfront development in Thu Thiem by Refico.",
+      "primary_sources": [
+        {
+          "url": "https://refico.com.vn/specialities/the-river/",
+          "publisher": "Refico",
+          "role": "developer_project_page",
+          "supported_fact": "Exact Refico project page places The River in Thu Thiem and describes the first phase as 525 units across three towers."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "SaigonApart",
+          "url": "https://saigonapart.com/districts",
+          "publisher_role": "russian_language_realtor_catalogue",
+          "page_language": "ru",
+          "match_precision": "exact_project_catalogue_entry",
+          "supported_observation": "Russian-language realtor district catalogue includes The River in Thu Thiem."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_ru_agency_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|the-river-thu-thiem|thu-thiem"
+    },
+    {
+      "id": "vn-one-verandah",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "One Verandah",
+      "developer_brand": "Mapletree",
+      "corporate_family": "Mapletree Investments",
+      "legal_seller": null,
+      "location": "Thanh My Loi / Thu Duc, Ho Chi Minh City",
+      "property_formats": ["apartments", "shophouses"],
+      "short_description": "Residential development in the Thanh My Loi area associated with Mapletree.",
+      "primary_sources": [
+        {
+          "url": "https://oneverandah.com.vn/en",
+          "publisher": "One Verandah",
+          "role": "primary_project_site",
+          "supported_fact": "Exact project site identifies One Verandah and Mapletree branding/contact route."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Hoozing via Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/property/o23103/",
+          "publisher_role": "agency_listing_on_russian_speaking_portal",
+          "page_language": "en",
+          "match_precision": "exact_project",
+          "supported_observation": "Exact One Verandah listing on the portal is attributed to Hoozing and identifies Mapletree."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "candidate_primary_and_channel_observation",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|one-verandah|thu-duc"
+    },
+    {
+      "id": "vn-urban-green",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "project_name": "Urban Green",
+      "developer_brand": "Kusto Home",
+      "corporate_family": "Kusto Group",
+      "legal_seller": null,
+      "location": "Hiep Binh Phuoc / Thu Duc, Ho Chi Minh City",
+      "property_formats": ["apartments"],
+      "short_description": "Residential apartment development in Thu Duc marketed under the Kusto Home brand; developer-brand verification should be closed against Kusto's corporate source in the validation slot.",
+      "primary_sources": [
+        {
+          "url": "https://urban-green.vn/",
+          "publisher": "Urban Green",
+          "role": "project_sales_site",
+          "supported_fact": "Exact project sales site describes Urban Green as an apartment project and attributes it to Kusto Home."
+        }
+      ],
+      "agency_observations": [
+        {
+          "publisher": "Vietnam-Real.Estate",
+          "url": "https://vietnam-real.estate/ru/property/urban-green-227/",
+          "publisher_role": "russian_language_property_portal",
+          "page_language": "ru",
+          "match_precision": "exact_project",
+          "supported_observation": "Exact Russian-language Urban Green project page identifies Kusto Home."
+        }
+      ],
+      "checked_at": "2026-09-18",
+      "fact_status": "partial_project_site_not_yet_corporate_verified",
+      "commercial_status": "research_only",
+      "commerciallyEnabled": false,
+      "media_candidates": [],
+      "missing_fields": ["developer_corporate_project_source", "legal_seller", "foreign_buyer_eligibility", "current_inventory", "media_source_and_rights"],
+      "duplicate_key": "vietnam|urban-green|thu-duc"
+    }
+  ],
+  "held_alternates_for_validation": [
+    {
+      "project_name": "Celesta Rise",
+      "developer_brand": "Keppel / Phu Long",
+      "primary_url": "https://www.celesta.com.vn/en/celesta-rise/about/project-overview",
+      "note": "Strong primary source; Russian catalogue observation exists at Vietnam-Real.Estate District 7 page. Held as substitute if one of the 15 fails validation."
+    },
+    {
+      "project_name": "The Marq",
+      "developer_brand": "Hongkong Land / Hoa Lam",
+      "primary_url": "https://themarq.com.vn/en/",
+      "note": "Strong primary source found; Russian-language agency observation not yet established in this slot."
+    },
+    {
+      "project_name": "Meyhomes Capital Phu Quoc",
+      "developer_brand": "MeyGroup / Meyland",
+      "primary_url": "https://meygroup.vn/en/meyhomes-capital-phu-quoc-2",
+      "note": "Primary project source found; Russian-language agency observation not yet established in this slot."
+    }
+  ]
+}
