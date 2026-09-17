@@ -1,5 +1,13 @@
 # MIRA RESUME-STATE
 
+## 2026-09-17 — Wrangler access restored; dedicated database prepared
+
+Owner completed Wrangler OAuth. Live `whoami` and Cloudflare API confirmed access to the account containing active zone `wegc.fund`. Created a NEW dedicated `mira-pilot` D1 database, verified its creation time/empty schema and applied all three existing migrations (0001/0002/0003). Remote verification confirms 13 MIRA tables, zero applications and zero memberships. No synthetic users or real personal data were inserted. Region reported by D1: APAC (Singapore serving colo); no data-location approval is inferred.
+
+The local ignored `cloudflare-worker/mira/wrangler.toml` contains verified account/database IDs and the narrow planned `/mira/api/*` route. Applications and material delivery remain false. `wrangler deploy --dry-run` built the Worker successfully; no Worker or route was published. Offline preflight fails only on the absent actual Access issuer/audience, as expected; do not substitute guessed values.
+
+New concrete blocker: Cloudflare Access API returned 403 / `access.api.error.not_enabled`; the organization endpoint also rejected this OAuth scope. Owner was asked to initialize Zero Trust / Cloudflare One with the Free plan in the dashboard and provide its team domain. This account setup involves plan selection/terms; it has not been completed by the agent. After it is ready, configure/verify the Access application and policy, then deploy and run real login/receipt/operator acceptance. Do not treat Wrangler login, D1 schema or dry-run as successful agency signup. The prior expired-token blocker below is historical and now resolved. Existing unrelated resources were not mutated.
+
 ## 2026-09-17 — integrated release accepted; agency login still blocked
 
 Public presentation is deployed, PR #8 is merged (`f25c32f75364de2feb9b7f1471955130432de218`), and full release verification **35223247185 succeeded** after the two editorial test fixes. Exact tested source: `e3a8d424062f471f102f103fbcc38cf71a1a3260`; generated snapshot: `6227865e4cfc82d273cdcc0f0690ad33fabb42f6`. Verified artifact `10498880419`, SHA256 `14b854c911562046a71720e3085ba6d5fc7f70cc8ed807ca81aec1921dcea35d`. Combined tests: **98 Node / 120 Python**, plus local and live public/campaign/editorial browser groups **12 / 15 / 4** and all 618 live project URLs. No assertions or CSP protections were removed.

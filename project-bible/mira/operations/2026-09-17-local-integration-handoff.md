@@ -1,5 +1,13 @@
 # MIRA — отчёт локального Codex для облачного агента
 
+## 2026-09-17 — Wrangler access restored; dedicated database prepared
+
+Owner completed Wrangler OAuth. Live `whoami` and Cloudflare API confirmed access to the account containing active zone `wegc.fund`. Created a NEW dedicated `mira-pilot` D1 database, verified its creation time/empty schema and applied all three existing migrations (0001/0002/0003). Remote verification confirms 13 MIRA tables, zero applications and zero memberships. No synthetic users or real personal data were inserted. Region reported by D1: APAC (Singapore serving colo); no data-location approval is inferred.
+
+The local ignored `cloudflare-worker/mira/wrangler.toml` contains verified account/database IDs and the narrow planned `/mira/api/*` route. Applications and material delivery remain false. `wrangler deploy --dry-run` built the Worker successfully; no Worker or route was published. Offline preflight fails only on the absent actual Access issuer/audience, as expected; do not substitute guessed values.
+
+New concrete blocker: Cloudflare Access API returned 403 / `access.api.error.not_enabled`; the organization endpoint also rejected this OAuth scope. Owner was asked to initialize Zero Trust / Cloudflare One with the Free plan in the dashboard and provide its team domain. This account setup involves plan selection/terms; it has not been completed by the agent. After it is ready, configure/verify the Access application and policy, then deploy and run real login/receipt/operator acceptance. Do not treat Wrangler login, D1 schema or dry-run as successful agency signup. The prior expired-token blocker below is historical and now resolved. Existing unrelated resources were not mutated.
+
 Дата: 17 сентября 2026. Публичная витрина опубликована и проверена. PR №8 интегрирован. Реальный вход агентств и административное одобрение на сервере ещё НЕ запущены; зелёный CI не является подтверждением регистрации.
 
 ## 1. Репозиторий и сохранность работы
