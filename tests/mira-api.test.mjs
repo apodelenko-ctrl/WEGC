@@ -282,3 +282,36 @@ test('owner approval reference remains attached to immutable developer-submissio
  const r=await call('operator',path,{status:'developer_submitted',version:1,reason:'TEST recorded',evidence_ref:'EVID-dev-trace',owner_approval_ref:'EVID-owner-trace'});assert.equal(r.status,200);
  assert.equal(db.db.prepare("SELECT owner_approval_ref FROM mira_events WHERE entity_type='lead' AND status='developer_submitted'").get().owner_approval_ref,'EVID-owner-trace');
 });
+
+test('operator agency directory is scoped, bounded and unavailable to applicants/agency members',async()=>{
+ const {call}=setup();
+ for(const who of ['applicant','owner-a','broker-a']){
+  assert.equal((await call(who,'/admin/agencies')).status,403);
+  assert.equal((await call(who,'/admin/agencies/agency-a')).status,403);
+ }
+ const first=(await call('operator','/admin/agencies?limit=1')).body;
+ assert.equal(first.records.length,1);assert.equal(first.next_cursor,'agency-a');
+ const second=(await call('operator','/admin/agencies?limit=1&cursor='+first.next_cursor)).body;
+ assert.equal(second.records[0].id,'agency-b');assert.equal(second.next_cursor,null);
+ const detail=(await call('operator','/admin/agencies/agency-a?limit=1')).body;
+ assert.equal(detail.agreement_current,true);assert.equal(detail.members.records.length,1);
+ const next=(await call('operator','/admin/agencies/agency-a?limit=1&cursor='+detail.members.next_cursor)).body;
+ assert.equal(next.members.records[0].subject,'owner-a');
+ assert.ok(!JSON.stringify(detail).includes('vault:'));assert.ok(!JSON.stringify(detail).includes('owner-b'));
+ assert.equal((await call('operator','/admin/agencies/missing')).status,404);
+ assert.equal((await call('operator','/admin/agencies?limit=101')).status,400);
+});
+
+test('agency directory reflects suspension, access revocation and expired agreement',async()=>{
+ const {call,db}=setup();
+ assert.equal((await call('operator','/admin/memberships',{subject:'owner-a',agency_id:'agency-a',role:'agency_owner',active:false})).status,200);
+ let d=(await call('operator','/admin/agencies/agency-a')).body;
+ assert.equal(d.members.records.find(x=>x.subject==='owner-a').active,0);
+ assert.equal((await call('owner-a','/profile')).status,403);
+ assert.equal((await call('operator','/admin/agencies',{id:'agency-a',name:'TEST A',city:'TEST',status:'suspended',agreement_ref:'EVID-agency-a'})).status,200);
+ assert.equal((await call('broker-a','/projects')).status,403);
+ assert.equal((await call('operator','/admin/evidence/EVID-agency-a/revoke',{reason:'TEST revoked agreement'})).status,200);
+ d=(await call('operator','/admin/agencies/agency-a')).body;
+ assert.equal(d.agency.status,'suspended');assert.equal(d.agreement_current,false);
+ assert.equal(db.db.prepare("SELECT COUNT(*) AS n FROM mira_events WHERE entity_type IN ('agency','membership')").get().n,2);
+});

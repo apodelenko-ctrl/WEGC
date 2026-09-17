@@ -81,8 +81,23 @@ function operatorStatus(id,lead){
 async function applicationCard(id,isOperator){
  const d=await api((isOperator?'/admin':'')+'/applications/'+encodeURIComponent(id)),a=d.application;
  root.innerHTML=title(a.company,a.city)+`<div class="panel"><p>${esc(names[a.status]||a.status)} · версия ${a.version}</p><p>Получено: ${esc(a.created_at)}</p><code>${esc(a.id)}</code><p>Квалификация и onboarding не означают активацию или регистрацию клиента у застройщика.</p></div><h2>История</h2>${d.events.map(e=>`<div class="row"><strong>${esc(names[e.status]||e.status)}</strong><p>${esc(e.created_at)}</p>${isOperator?`<p>${esc(e.reason)}</p>`:''}</div>`).join('')||'<p>Для ранее полученной заявки история ещё не записывалась.</p>'}`;
+ const back=document.createElement('button');back.className='secondary';back.dataset.appBack='';back.textContent=isOperator?'К очереди заявок':'Мои заявки';back.onclick=()=> (isOperator?operator():application()).catch(e=>message(e.message));root.prepend(back);
+ if(isOperator){const manage=document.createElement('button');manage.dataset.appAccess='';manage.textContent='Подключение и доступ';manage.onclick=()=>agencies('',a).catch(e=>message(e.message));root.append(manage);}
  if(!isOperator||!d.allowed_transitions.length)return;
  root.innerHTML+=`<h2>Обработка заявки</h2><form id="application-review" class="panel"><label>Следующий этап<select name="status">${d.allowed_transitions.map(s=>`<option value="${esc(s)}">${esc(names[s]||s)}</option>`).join('')}</select></label><label>Основание без персональных данных<input name="reason" required minlength="3" maxlength="240"></label><label>Подтверждение квалификации / onboarding<input name="evidence_ref" pattern="EVID-[A-Za-z0-9_-]+" maxlength="100"></label><label>ID агентства — только при завершении onboarding<input name="agency_id" pattern="[A-Za-z0-9_-]+" maxlength="100"></label><p class="muted">Не выдаёт права, не подписывает договор и не отправляет сообщения. Завершение onboarding требует действующего договора и привязанного владельца.</p><button type="submit">Записать этап</button><p role="status"></p></form>`;
+ root.querySelector('[data-app-back]').onclick=()=>operator().catch(e=>message(e.message));
+ root.querySelector('[data-app-access]').onclick=()=>agencies('',a).catch(e=>message(e.message));
+ if(d.allowed_transitions.includes('qualified'))root.append(evidenceForm('application_qualification',{entity_id:a.id}));
+ if(d.allowed_transitions.includes('onboarded')){
+  const proofButton=document.createElement('button');proofButton.textContent='Добавить подтверждение подключения';proofButton.onclick=()=>{
+   const agency=root.querySelector('#application-review [name=agency_id]').value.trim();
+   if(!agency){root.querySelector('#application-review [role=status]').textContent='Сначала укажи ID подключённого агентства.';return;}
+   if(!root.querySelector('[data-proof=agency_onboarding]'))root.append(evidenceForm('agency_onboarding',{entity_id:a.id,agency_id:agency}));
+  };root.append(proofButton);
+ }
+ const review=root.querySelector('#application-review');
+ const updateReviewFields=()=>{const stage=review.elements.status.value;for(const name of ['evidence_ref','agency_id']){const input=review.elements[name],needed=name==='agency_id'?stage==='onboarded':['qualified','onboarded'].includes(stage);input.disabled=!needed;input.required=needed;input.closest('label').hidden=!needed;}};
+ review.elements.status.onchange=updateReviewFields;updateReviewFields();
  document.querySelector('#application-review').onsubmit=e=>{e.preventDefault();withForm(e.target,async output=>{
   const fields=Object.fromEntries([...new FormData(e.target)].filter(([,v])=>v));
   const r=await api('/admin/applications/'+encodeURIComponent(id)+'/status',{...fields,version:a.version});a.version=r.version;
@@ -90,14 +105,67 @@ async function applicationCard(id,isOperator){
   try{await applicationCard(id,true);}catch{output.textContent+=' Карточка не обновилась; запись уже сохранена.';}
  });};
 }
+// Agency administration uses the authenticated applicant subject returned by the
+// server. There is no free-form identity field or automatic contract evidence.
+async function agencies(cursor='',app=null){
+ const d=await api('/admin/agencies'+(cursor?'?cursor='+encodeURIComponent(cursor):''));
+ root.innerHTML=title('Доступ агентствам','Создай карточку, проверь договор и назначь представителя из его заявки.')+
+ `<div class="actions"><button id="back-operator" class="secondary">К очереди заявок</button></div>`+
+ (app?`<p>Заявка: <strong>${esc(app.company)}</strong> · ${esc(app.email)}. Выбери агентство ниже или создай новую карточку.</p>`:'')+
+ `<form id="agency-create" class="panel"><h2>Новое агентство</h2><div class="form-grid"><label>Название<input name="name" required maxlength="120" value="${esc(app?.company||'')}"></label><label>Город<input name="city" required maxlength="120" value="${esc(app?.city||'')}"></label></div><p class="muted">Карточка создаётся со статусом «На проверке». Доступ ещё не выдаётся.</p><button type="submit">Создать карточку</button><p role="status"></p></form><h2>Агентства</h2>`+
+ d.records.map(a=>`<div class="row"><strong>${esc(a.name)}</strong><p>${esc(a.city)} · ${esc({pending:'На проверке',active:'Активно',suspended:'Приостановлено'}[a.status])}</p><button data-agency="${esc(a.id)}">Управлять доступом</button></div>`).join('');
+ document.querySelector('#back-operator').onclick=()=>operator().catch(e=>message(e.message));
+ root.querySelectorAll('[data-agency]').forEach(b=>b.onclick=()=>agencyCard(b.dataset.agency,app).catch(e=>message(e.message)));
+ let attempt=null;
+ document.querySelector('#agency-create').onsubmit=e=>{e.preventDefault();withForm(e.target,async output=>{
+  const f=Object.fromEntries(new FormData(e.target)),serialized=JSON.stringify(f);
+  if(attempt?.serialized!==serialized)attempt={id:crypto.randomUUID(),serialized};
+  const r=await api('/admin/agencies',{id:attempt.id,...f,status:'pending'});
+  output.textContent='Карточка создана.';await agencyCard(r.id,app);
+ });};
+ if(d.next_cursor){const b=document.createElement('button');b.textContent='Следующие агентства';b.onclick=()=>agencies(d.next_cursor,app).catch(e=>message(e.message));root.append(b);}
+}
+function evidenceForm(kind,scope){
+ const form=document.createElement('form');form.className='panel';form.dataset.proof=kind;
+ form.innerHTML=`<h3>${esc({agency_agreement:'Подтверждение договора',application_qualification:'Подтверждение квалификации',agency_onboarding:'Подтверждение подключения'}[kind])}</h3><label>Номер подтверждения<input name="id" required pattern="EVID-[A-Za-z0-9_-]+" maxlength="100" placeholder="EVID-…"></label><label>Ссылка на проверенный документ в закрытом архиве<input name="storage_ref" required maxlength="240" placeholder="vault:номер-документа"></label><div class="form-grid"><label>Дата проверки<input name="verified_at" type="datetime-local" required></label><label>Действует до, если указан срок<input name="expires_at" type="datetime-local"></label></div><label><input name="reviewed" type="checkbox" required>Я проверил документ и его соответствие этой заявке / агентству.</label><p class="muted">Записывается ссылка на документ. Сам документ сюда не загружается.</p><button type="submit">Сохранить подтверждение</button><p role="status"></p>`;
+ form.onsubmit=e=>{e.preventDefault();withForm(form,async output=>{
+  const f=Object.fromEntries(new FormData(form));
+  const r=await api('/admin/evidence',{id:f.id,kind,...scope,storage_ref:f.storage_ref,verified:true,verified_at:new Date(f.verified_at).toISOString(),...(f.expires_at?{expires_at:new Date(f.expires_at).toISOString()}:{})});
+  output.className='success';output.textContent=`Подтверждение ${r.id} сохранено.`;
+  const input=root.querySelector(kind==='agency_agreement'?'#agency-state [name=agreement_ref]':'#application-review [name=evidence_ref]');if(input)input.value=r.id;
+ });};return form;
+}
+async function agencyCard(id,app=null,cursor=''){
+ const d=await api('/admin/agencies/'+encodeURIComponent(id)+(cursor?'?cursor='+encodeURIComponent(cursor):'')),a=d.agency;
+ root.innerHTML=title(a.name,a.city)+`<div class="actions"><button id="back-agencies" class="secondary">Все агентства</button>${app?'<button id="back-application" class="secondary">Вернуться к заявке</button>':''}</div><p>Договор: ${d.agreement_current?'подтверждение актуально':'требуется проверка'}</p><code>${esc(a.id)}</code><form id="agency-state" class="panel"><h2>Статус агентства</h2><label>Статус<select name="status">${[['pending','На проверке'],['active','Активно'],['suspended','Приостановлено']].map(([v,l])=>`<option value="${v}" ${a.status===v?'selected':''}>${l}</option>`).join('')}</select></label><label>Подтверждение договора<input name="agreement_ref" pattern="EVID-[A-Za-z0-9_-]+" value="${esc(a.agreement_ref||'')}"></label><p class="muted">Активация требует актуального подтверждения договора. Приостановка закрывает доступ агентства к рабочим данным.</p><button type="submit">Сохранить статус</button><p role="status"></p></form><div id="agreement-proof"></div><h2>Представители</h2><div id="agency-members"></div><div id="owner-binding"></div><h2>Журнал изменений</h2><div id="agency-audit"></div>`;
+ document.querySelector('#back-agencies').onclick=()=>agencies('',app).catch(e=>message(e.message));
+ if(app)document.querySelector('#back-application').onclick=()=>applicationCard(app.id,true).catch(e=>message(e.message));
+ document.querySelector('#agreement-proof').append(evidenceForm('agency_agreement',{agency_id:id}));
+ document.querySelector('#agency-state').onsubmit=e=>{e.preventDefault();withForm(e.target,async output=>{
+  const f=Object.fromEntries(new FormData(e.target));await api('/admin/agencies',{id,name:a.name,city:a.city,status:f.status,...(f.agreement_ref?{agreement_ref:f.agreement_ref}:{})});
+  output.className='success';output.textContent='Статус сохранён.';await agencyCard(id,app);
+ });};
+ const members=document.querySelector('#agency-members');
+ members.innerHTML=d.members.records.map(m=>`<form class="panel member-access" data-subject="${esc(m.subject)}"><p>${esc(m.role==='agency_owner'?'Руководитель':'Брокер')} · ${m.active?'Доступ включён':'Доступ выключен'}</p><code>${esc(m.subject)}</code><label><input type="checkbox" required>Подтверждаю ${m.active?'отзыв':'восстановление'} доступа этого представителя.</label><button type="submit">${m.active?'Отозвать доступ':'Восстановить доступ'}</button><p role="status"></p></form>`).join('')||'<p>Представители ещё не назначены.</p>';
+ members.querySelectorAll('form').forEach(f=>f.onsubmit=e=>{e.preventDefault();withForm(f,async output=>{const m=d.members.records.find(x=>x.subject===f.dataset.subject);await api('/admin/memberships',{subject:m.subject,agency_id:id,role:m.role,active:!m.active});output.textContent='Доступ обновлён.';await agencyCard(id,app);});});
+ if(d.members.next_cursor){const b=document.createElement('button');b.textContent='Следующие представители';b.onclick=()=>agencyCard(id,app,d.members.next_cursor).catch(e=>message(e.message));members.append(b);}
+ if(app){
+  const target=document.querySelector('#owner-binding');
+  target.innerHTML=`<form id="bind-owner" class="panel"><h3>Представитель из заявки</h3><p>${esc(app.name)} · ${esc(app.email)}</p><p>Агентство: <strong>${esc(a.name)}</strong></p><label><input type="checkbox" required>Полномочия представителя проверены; назначить его руководителем этого агентства.</label><button type="submit">Назначить представителя</button><p role="status"></p></form>`;
+  target.querySelector('form').onsubmit=e=>{e.preventDefault();withForm(e.target,async output=>{await api('/admin/memberships',{subject:app.subject,agency_id:id,role:'agency_owner',active:true});output.className='success';output.textContent='Представитель назначен. Итоговый этап подключения запиши в заявке.';});};
+ }
+ try{const history=await api('/admin/audit?entity_type=agency&entity_id='+encodeURIComponent(id)+'&limit=100');document.querySelector('#agency-audit').innerHTML=history.records.map(e=>`<div class="row"><strong>${esc(e.status)}</strong><p>${esc(e.created_at)} · версия ${e.version}</p></div>`).join('')||'<p>Изменений нет.</p>';}catch(e){document.querySelector('#agency-audit').textContent=e.message;}
+}
+
 async function operator(cursor=''){
  if(session.membership?.role!=='operator')throw new Error('Раздел доступен только оператору.');
  const dashboard=await api('/admin/dashboard'),apps=await api('/admin/applications'+(cursor?'?cursor='+encodeURIComponent(cursor):''));
  root.innerHTML=title('Операционный контроль','Только наблюдаемые записи подключённой базы. Исследовательские контакты и демо не считаются подключёнными агентствами.')+
- `<div class="facts">${[['Заявки',dashboard.applications],['Агентства',dashboard.agencies],['Клиенты',dashboard.leads],['События сделок',dashboard.deal_events],['Платёжные запросы',dashboard.payment_requests]].map(([label,rows])=>`<div><h2>${label}</h2>${rows.map(r=>`<p>${esc(names[r.status||r.stage]||r.status||r.stage)}: <strong>${r.count}</strong></p>`).join('')||'<p>В этой базе записей нет.</p>'}</div>`).join('')}</div><h2>Очередь заявок</h2>${apps.records.map(a=>`<div class="row"><strong>${esc(a.company)} · ${esc(a.city)}</strong><p>${esc(a.name)} · ${esc(a.email)}</p><p>${esc(names[a.status]||a.status)}</p><button type="button" data-review="${esc(a.id)}">Открыть и обработать</button></div>`).join('')||'<p>Полученных заявок нет.</p>'}`;
+ `<div class="actions"><button id="manage-agencies">Доступ агентствам</button></div><div class="facts">${[['Заявки',dashboard.applications],['Агентства',dashboard.agencies],['Клиенты',dashboard.leads],['События сделок',dashboard.deal_events],['Платёжные запросы',dashboard.payment_requests]].map(([label,rows])=>`<div><h2>${label}</h2>${rows.map(r=>`<p>${esc(names[r.status||r.stage]||r.status||r.stage)}: <strong>${r.count}</strong></p>`).join('')||'<p>В этой базе записей нет.</p>'}</div>`).join('')}</div><h2>Очередь заявок</h2>${apps.records.map(a=>`<div class="row"><strong>${esc(a.company)} · ${esc(a.city)}</strong><p>${esc(a.name)} · ${esc(a.email)}</p><p>${esc(names[a.status]||a.status)}</p><button type="button" data-review="${esc(a.id)}">Открыть и обработать</button></div>`).join('')||'<p>Полученных заявок нет.</p>'}`;
+ document.querySelector('#manage-agencies').onclick=()=>agencies().catch(e=>message(e.message));
  root.querySelectorAll('[data-review]').forEach(b=>b.onclick=()=>applicationCard(b.dataset.review,true).catch(e=>message(e.message)));
  if(apps.next_cursor){const b=document.createElement('button');b.textContent='Следующая страница заявок';b.onclick=()=>operator(apps.next_cursor).catch(e=>message(e.message));root.append(b);}
 }
 async function render(){if(!session)return;root.textContent='Загрузка…';try{await ({application,profile,projects,leads,operator}[section]||application)();}catch(e){message(e.message);}}
 document.querySelectorAll('[data-section]').forEach(b=>b.onclick=()=>{section=b.dataset.section;document.querySelectorAll('[data-section]').forEach(x=>x.setAttribute('aria-current',x===b?'page':'false'));render();});
-try{session=await api('/session');await render();}catch(e){message(e.message);}
+try{session=await api('/session');document.querySelector('[data-section=operator]').hidden=session.membership?.role!=='operator';document.querySelector('[data-section=application]').setAttribute('aria-current','page');await render();}catch(e){message(e.message);}

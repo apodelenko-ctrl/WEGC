@@ -256,6 +256,19 @@ async function handle(request,env,identityVerifier) {
    return json({id:e.id,revoked:true});
  }
  if(path===API+'/admin/agencies'&&request.method==='POST')return adminAgency(request,env,m,identity);
+ if(path===API+'/admin/agencies'&&request.method==='GET'){
+   operator(m);const {limit,cursor}=pageSettings(url);
+   return json(pageResult(await all(env,'SELECT id,name,city,status,agreement_ref,created_at FROM mira_agencies WHERE id>? ORDER BY id LIMIT ?',cursor,limit+1),limit));
+ }
+ const adminAgencyDetail=path.match(/^\/mira\/api\/admin\/agencies\/([A-Za-z0-9_-]+)$/);
+ if(adminAgencyDetail&&request.method==='GET'){
+   operator(m);const id=adminAgencyDetail[1],{limit,cursor}=pageSettings(url);
+   const agency=await first(env,'SELECT id,name,city,status,agreement_ref,created_at FROM mira_agencies WHERE id=?',id);
+   assert(agency,404,'agency_not_found');
+   const members=await all(env,'SELECT subject AS id,subject,role,active FROM mira_memberships WHERE agency_id=? AND subject>? ORDER BY subject LIMIT ?',id,cursor,limit+1);
+   const proof=agency.agreement_ref?await first(env,'SELECT * FROM mira_evidence WHERE id=?',agency.agreement_ref):null;
+   return json({agency,members:pageResult(members,limit),agreement_current:currentEvidence(proof,'agency_agreement',{agency_id:id})});
+ }
  if(path===API+'/admin/projects'&&request.method==='POST')return adminProject(request,env,m,identity);
  if(path===API+'/admin/memberships'&&request.method==='POST'){
    operator(m);const b=await bodyOf(request);requireKeys(b,['subject','agency_id','role','active'],['subject','agency_id','role','active']);
