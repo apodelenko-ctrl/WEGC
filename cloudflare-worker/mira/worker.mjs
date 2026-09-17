@@ -52,7 +52,7 @@ async function getLead(env,id,m,identity) {
  const lead=await first(env,'SELECT * FROM mira_leads WHERE id=?',identifier(id));
  assert(lead&&(m.role==='operator'||(lead.agency_id===m.agency_id&&(m.role!=='broker'||lead.created_by===identity.subject))),404,'lead_not_found');return lead;
 }
-function pageSettings(url){const limit=Number(url.searchParams.get('limit')||50);assert(Number.isSafeInteger(limit)&&limit>0&&limit<=100,400,'invalid_limit');const cursor=url.searchParams.get('cursor')||'';if(cursor)identifier(cursor);return {limit,cursor};}
+function pageSettings(url,subjectCursor=false){const limit=Number(url.searchParams.get('limit')||50);assert(Number.isSafeInteger(limit)&&limit>0&&limit<=100,400,'invalid_limit');const cursor=url.searchParams.get('cursor')||'';if(cursor){if(subjectCursor)string(cursor,1,200);else identifier(cursor);}return {limit,cursor};}
 function pageResult(items,limit){const more=items.length>limit;const records=items.slice(0,limit);return {records,next_cursor:more?records.at(-1).id:null};}
 async function application(request,env,identity) {
  assert(env.APPLICATIONS_ENABLED==='true'&&env.PRIVACY_VERSION&&env.PRIVACY_NOTICE_URL?.startsWith(env.APP_ORIGIN+'/'),503,'applications_not_enabled');
@@ -256,6 +256,19 @@ async function handle(request,env,identityVerifier) {
    return json({id:e.id,revoked:true});
  }
  if(path===API+'/admin/agencies'&&request.method==='POST')return adminAgency(request,env,m,identity);
+ if(path===API+'/admin/agencies'&&request.method==='GET'){
+   operator(m);const {limit,cursor}=pageSettings(url);
+   return json(pageResult(await all(env,'SELECT id,name,city,status,agreement_ref,created_at FROM mira_agencies WHERE id>? ORDER BY id LIMIT ?',cursor,limit+1),limit));
+ }
+ const adminAgencyDetail=path.match(/^\/mira\/api\/admin\/agencies\/([A-Za-z0-9_-]+)$/);
+ if(adminAgencyDetail&&request.method==='GET'){
+   operator(m);const id=adminAgencyDetail[1],{limit,cursor}=pageSettings(url,true);
+   const agency=await first(env,'SELECT id,name,city,status,agreement_ref,created_at FROM mira_agencies WHERE id=?',id);
+   assert(agency,404,'agency_not_found');
+   const members=await all(env,'SELECT subject AS id,subject,role,active FROM mira_memberships WHERE agency_id=? AND subject>? ORDER BY subject LIMIT ?',id,cursor,limit+1);
+   const proof=agency.agreement_ref?await first(env,'SELECT * FROM mira_evidence WHERE id=?',agency.agreement_ref):null;
+   return json({agency,members:pageResult(members,limit),agreement_current:currentEvidence(proof,'agency_agreement',{agency_id:id})});
+ }
  if(path===API+'/admin/projects'&&request.method==='POST')return adminProject(request,env,m,identity);
  if(path===API+'/admin/memberships'&&request.method==='POST'){
    operator(m);const b=await bodyOf(request);requireKeys(b,['subject','agency_id','role','active'],['subject','agency_id','role','active']);

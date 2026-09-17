@@ -46,7 +46,7 @@ async function load(){
   const raw=readSaved();selection=safeSelection(raw,all);pendingSelection=extra?[]:raw.filter(id=>typeof id==='string'&&/^(bali|dubai)-[a-z0-9-]+$/.test(id)).slice(0,MAX_SELECTION-selection.length);
   options('district',rows.map(p=>p.district));options('family',rows.map(p=>p.family));options('kind',rows.flatMap(p=>p.propertyTypes||[p.kind]),market==='phuket'?KIND:PROPERTY_TYPES);
   readState();restoreControls();loaded=true;for(const id of controls)if($(id))$(id).disabled=false;if($('load-error'))$('load-error').hidden=true;render(false);syncSelection();bindImages();
-  for(const a of document.querySelectorAll('[data-catalog-back]')){let saved;try{saved=sessionStorage.getItem(RETURN);}catch{}const good=safeReturnPath(saved,market,location.origin);a.setAttribute('href',good||country.path);}
+
  }catch(e){loaded=false;if($('load-error')){$('load-error').hidden=false;$('load-error').textContent='Не удалось обновить каталог. Карточки ниже доступны; повторите загрузку позже.';}for(const id of controls)if($(id))$(id).disabled=true;bindImages();}
 }
 let searchTimer;
@@ -60,4 +60,6 @@ document.addEventListener('click',e=>{const add=e.target.closest('[data-add]'),r
 window.addEventListener('popstate',()=>{if(loaded){readState();restoreControls();render(false);}});
 window.addEventListener('storage',e=>{if((e.key===KEY||e.key===null)&&loaded){selection=safeSelection(readSaved(),all);syncSelection();}});
 window.addEventListener('pageshow',e=>{if(e.persisted&&loaded){selection=safeSelection(readSaved(),all);syncSelection();}});
+// Back navigation must be ready before the asynchronous catalogue feeds finish.
+for(const a of document.querySelectorAll('[data-catalog-back]')){let saved;try{saved=sessionStorage.getItem(RETURN);}catch{}const good=safeReturnPath(saved,market,location.origin);a.setAttribute('href',good||country.path);}
 load();
