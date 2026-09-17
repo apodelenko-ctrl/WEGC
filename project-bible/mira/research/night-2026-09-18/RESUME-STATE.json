@@ -12,7 +12,7 @@
   "production_write_authorized": false,
   "outreach_authorized": false,
   "targets": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 50, "belarus_net_new_agencies": 30},
-  "completed_counts": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 50, "belarus_net_new_agencies": 0, "publication_approved_new_media": 0},
+  "completed_counts": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 50, "belarus_net_new_agencies": 30, "publication_approved_new_media": 0},
   "quality_counts": {
     "vietnam_complete_for_discovery_slot": 11,
     "vietnam_partial_for_validation_initial": 4,
@@ -38,21 +38,28 @@
     "russia_pass_b_existing_repo_candidates_rejected": 2,
     "russia_night_candidate_total": 50,
     "russia_owner_review_candidates_after_pass_b": 6,
+    "belarus_net_new_candidates": 30,
+    "belarus_current_chamber_only": 8,
+    "belarus_first_party_plus_chamber": 6,
+    "belarus_chamber_plus_current_marketplace": 6,
+    "belarus_current_first_party": 4,
+    "belarus_other_caveated_source_routes": 6,
+    "belarus_regulatory_holds_not_counted": 5,
     "publication_approved_new_media": 0
   },
-  "counts_note": "Vietnam and Montenegro totals are source-backed discovery records, not import-ready inventory, commercially enabled projects or published catalogue rows. After the 02:00 validation pass Vietnam has 14 complete-for-discovery / 1 partial and Montenegro 10 / 5. Russia now has 50 candidate-layer rows from pass A (29) plus pass B (21). Pass B rows have current first-party sites and exact-domain no-match in the repository default branch, but the 50 count is not proof of 50 legally independent entities or outreach approval; brand/rebrand/common-owner quality checks remain relevant. Six Russian rows are shortlisted only for owner review, with outreach still not authorized.",
+  "counts_note": "Vietnam and Montenegro totals are source-backed discovery records, not import-ready inventory, commercially enabled projects or published catalogue rows. After the 02:00 validation pass Vietnam has 14 complete-for-discovery / 1 partial and Montenegro 10 / 5. Russia has 50 candidate-layer rows from pass A (29) plus pass B (21), not proof of 50 legally independent entities or outreach approval. Belarus now has 30 net-new research candidates after checks against current CIS, mega and outreach seed layers; source grades remain explicit, current Chamber-employer evidence is not treated as complete independent licensing verification, and five entities with current official licence-suspension notices were excluded from the count. No outreach is authorized.",
   "slots": [
     {"local_hour": "00:00", "id": "00-vietnam", "status": "completed", "started_at": "2026-09-17T23:58:29+07:00", "result_paths": ["00-vietnam-projects.json", "00-vietnam-projects.csv", "00-vietnam.md"], "notes": "15 saved; 11 complete for discovery stage, 4 partial; zero downloaded or publication-approved media."},
     {"local_hour": "01:00", "id": "01-montenegro", "status": "completed", "started_at": "2026-09-18T01:01:08+07:00", "result_paths": ["01-montenegro-projects-part1.json", "01-montenegro-projects-part2.json", "01-montenegro-projects-part3.json", "01-montenegro-projects.csv", "01-montenegro.md"], "notes": "15 saved; 7 complete for discovery stage, 8 partial; 11 developer/project families; zero downloaded, reviewed or publication-approved media. Montis Russian/CIS citizenship-by-investment copy quarantined as stale."},
     {"local_hour": "02:00", "id": "02-project-validation", "status": "completed", "started_at": "2026-09-18T02:00:45+07:00", "result_paths": ["02-project-validation.json", "02-project-validation.csv", "02-project-validation.md"], "notes": "30 reviewed; Vietnam 14 complete/1 partial; Montenegro 10 complete/5 partial; 30 exact media source pages/documents recorded; zero direct image assets captured, downloaded, visually reviewed or publication-approved."},
     {"local_hour": "03:00", "id": "03-russia-a", "status": "completed", "started_at": "2026-09-18T02:58:00+07:00", "result_paths": ["03-russia-a.json", "03-russia-a.csv", "03-russia-a.md"], "notes": "29 source-backed exact-domain-net-new agency candidates saved; quality split 26 first-party without material hold / 2 first-party holds / 1 secondary-confirmed partial; 3 existing duplicates rejected; no outreach."},
     {"local_hour": "04:00", "id": "04-russia-b", "status": "completed", "started_at": "2026-09-18T04:13:38+07:00", "result_paths": ["04-russia-b.json", "04-russia-b.csv", "04-russia-b.md"], "notes": "21 additional current first-party exact-domain-net-new candidates saved, bringing the night Russia candidate layer to 50. Two additional web discoveries were rejected as existing repository candidates. Six rows shortlisted for owner review only; Aurum entity hold and Good House partial preserved; no outreach."},
-    {"local_hour": "05:00", "id": "05-belarus", "status": "pending", "result_paths": []},
+    {"local_hour": "05:00", "id": "05-belarus", "status": "completed", "started_at": "2026-09-18T05:01:31+07:00", "result_paths": ["05-belarus-agencies.json", "05-belarus-agencies.csv", "05-belarus.md"], "notes": "30 net-new Belarus research candidates saved after CIS/mega/outreach seed dedupe. Source grades retained: 8 Chamber-only, 6 first-party+Chamber, 6 Chamber+current marketplace, 4 current first-party, 6 other caveated routes. Five entities with current official licence-suspension notices excluded; no outreach."},
     {"local_hour": "06:00", "id": "06-quality-media", "status": "pending", "result_paths": []},
     {"local_hour": "07:00", "id": "07-integration-handoff", "status": "pending", "result_paths": []},
     {"local_hour": "08:00", "id": "08-morning-brief", "status": "pending", "result_paths": []}
   ],
-  "next_action": "Execute the 05:00 Belarus slot. Read existing Belarus/CIS registries before counting any company as net-new, target up to 30 source-backed unique agencies without padding, distinguish companies from branches/directories/solo brokers, keep only corporate general channels, and send no outreach.",
+  "next_action": "Execute the 06:00 cross-lane quality/media slot: recheck agency/project dedupe and source caveats, then inspect the existing Bali/Dubai MEDIA-GAPS.md and improve only real source/media gaps without recollecting those 30 projects or treating public accessibility as publication permission.",
   "baseline_notes": [
     "Local Codex owns backend/admin/publication and current Bali/Dubai integration; do not edit those components.",
     "Current main includes project-bible/mira/research/bali-dubai-2026-09-17/MEDIA-GAPS.md: 28 candidates reviewed locally, 0 approved new media; source URLs and defects are available without expired attachments.",
@@ -60,6 +67,7 @@
     "Montenegro slot uses current first-party/developer pages plus Russian or independent brokerage observations where found. Media source pages are recorded but no third-party bytes or rights approvals were created.",
     "The 02:00 validation pass improved primary/current source quality and recorded exact media source pages, but it did not download image bytes, perform visual review or establish publication rights.",
     "Russia pass A uses current public web research plus repository-wide exact-domain searches against indexed main content. Exact-domain no-match does not establish independent legal ownership.",
-    "Russia pass B added 21 current first-party exact-domain-no-match candidates for a 50-row night candidate layer. Six rows are owner-review candidates only; no contact authorization was created. Known existing candidates rss-rielt.ru and citadel-a.ru were rejected instead of padding the count."
+    "Russia pass B added 21 current first-party exact-domain-no-match candidates for a 50-row night candidate layer. Six rows are owner-review candidates only; no contact authorization was created. Known existing candidates rss-rielt.ru and citadel-a.ru were rejected instead of padding the count.",
+    "Belarus slot saved 30 net-new research candidates after checking current CIS and mega/outreach layers. Chamber directory evidence is retained as professional-market evidence rather than complete licensing proof; five companies named in current official licence-suspension notices were excluded. Personal realtor contacts were not copied and no outreach was sent."
   ]
 }
