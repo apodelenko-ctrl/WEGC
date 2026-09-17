@@ -1,0 +1,68 @@
+name: MIRA full public release verification
+on:
+  workflow_run:
+    workflows: ['Deploy static site to GitHub Pages']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mira-public-release
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install verification dependencies
+        run: |
+          python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3' 'playwright>=1.55,<2'
+          python -m playwright install --with-deps chromium
+      - name: Rebuild exact expected static files and regression checks
+        run: |
+          python scripts/mira-wire-landing.py
+          python scripts/mira-build-demo.py
+          python scripts/mira-build-documents.py --downloads
+          python scripts/mira-build-launch.py
+          python scripts/mira-build-expo.py
+          node --test tests/mira-*.test.mjs > /tmp/mira-node.tap
+          python -m unittest discover -s tests -p 'test_mira*.py' -v > /tmp/mira-python.txt 2>&1
+      - name: Browser through local HTTP and actual CSP
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/mira-http.log 2>&1 &
+          sleep 2
+          python tests/mira-public-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-browser
+      - name: Verify published bytes and bounded GET load
+        run: python scripts/mira-verify-public.py --base https://wegc.fund --load --out /tmp/mira-live-release.json
+      - name: Browser on the public domain, no real submissions
+        run: python tests/mira-public-browser.py --base https://wegc.fund --out /tmp/mira-live-browser
+      - name: Preserve exact public deliverables and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mira-cp13-public-release
+          retention-days: 14
+          path: |
+            /tmp/mira-node.tap
+            /tmp/mira-python.txt
+            /tmp/mira-local-browser/
+            /tmp/mira-live-browser/
+            /tmp/mira-live-release.json
+            mira/start/
+            mira/growth/
+            mira/business/
+            mira/variants/
+            mira/access/
+            mira/phuket/
+            mira/launch/
+            mira/documents/
+            mira/expo/
+            mira/data/phuket.json

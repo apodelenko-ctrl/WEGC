@@ -16,14 +16,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install document build dependencies
-        run: python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2'
+      - name: Install static document and vector dependencies
+        run: python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3'
       - name: Build sanitized MIRA public files
         run: |
           python scripts/mira-wire-landing.py
           python scripts/mira-build-demo.py
           python scripts/mira-build-documents.py --downloads
           python scripts/mira-build-catalog.py
+          python scripts/mira-build-launch.py
+          python scripts/mira-build-expo.py
       - name: Prepare clean static site
         run: |
           mkdir -p _site
@@ -31,8 +33,10 @@ jobs:
             --exclude '.git' \
             --exclude '.github' \
             --exclude '.cursor' \
+            --exclude '.netlify' \
             --exclude 'node_modules' \
             --exclude '_site' \
+            --exclude '_mira_site' \
             --exclude 'project-bible' \
             --exclude 'tests' \
             --exclude 'scripts' \
@@ -45,6 +49,9 @@ jobs:
           test -f _site/mira/catalog/data.json
           test -f _site/mira/documents/agency-agreement.html
           test -f _site/mira/documents/downloads/agency-agreement.pdf
+          test -f _site/mira/start/index.html
+          test -f _site/mira/phuket/index.html
+          test -f _site/mira/expo/banner.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

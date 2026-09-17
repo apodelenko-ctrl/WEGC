@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import {validate,filter,paginate,brief,PAGE_SIZE} from '../mira/phuket/catalogue.mjs';
+import {execFileSync} from 'node:child_process';
+execFileSync('python',['scripts/mira-build-launch.py'],{cwd:new URL('../',import.meta.url)});
+const data=JSON.parse(readFileSync(new URL('../mira/data/phuket.json',import.meta.url),'utf8'));
+test('full source catalogue validates: no current inventory claims',()=>{assert.equal(validate(data).records.length,618);assert.equal(data.count,618);assert.ok(data.records.every(r=>r.verifiedAt===null&&r.registrationEnabled===false));});
+test('every record is accessible exactly once by pagination',()=>{let ids=[];for(let i=1;i<=Math.ceil(data.count/PAGE_SIZE);i++)ids.push(...paginate(data.records,i).records.map(r=>r.id));assert.equal(new Set(ids).size,618);assert.deepEqual(ids,data.records.map(r=>r.id));});
+test('bad and boundary page requests cannot escape the catalogue',()=>{for(const v of [-2,Infinity,NaN,'bad',null])assert.equal(paginate(data.records,v).page,1);assert.equal(paginate(data.records,1e8).page,26);assert.equal(paginate([],1).pages,1);});
+test('Cyrillic/case/multiword searches and combined filters',()=>{assert.ok(filter(data.records,{q:'БАНГ ТАО'}).length);assert.ok(filter(data.records,{q:'tHe tiTLe'}).length);assert.equal(filter(data.records,{q:'<img src=x onerror=alert(1)>'}).length,0);assert.ok(filter(data.records,{district:'Банг Тао',kind:'villa'}).every(r=>r.district==='Банг Тао'&&r.kind==='villa'));});
+test('selection excludes fabricated IDs and downloads no receipt',()=>{const selected=new Set([data.records[0].id,'FAKE']);assert.equal(filter(data.records,{saved:true},selected).length,1);const text=brief(data.records,selected);assert.match(text,/не регистрация/);assert.match(text,/https:\/\/wegc.fund\/mira\/phuket\/project\//);assert.doesNotMatch(text,/успешно отправлена/);});
+test('duplicate identities fail closed',()=>{for(const key of ['id','slug']){const bad=structuredClone(data);bad.records[1][key]=bad.records[0][key];assert.throws(()=>validate(bad));}});
+test('remote images and commercial promotion fail closed',()=>{for(const change of [{image:'https://evil.example/x.jpg'},{registrationEnabled:true},{verifiedAt:'2026-09-17'},{price:100},{commission:'90%'}]){const bad=structuredClone(data);Object.assign(bad.records[0],change);assert.throws(()=>validate(bad));}});
+test('bounded stress: 5000 varied filter/pagination operations',()=>{for(let i=0;i<5000;i++){const selected=filter(data.records,{q:i%2?'Title':'',kind:i%3?'':'villa'});const page=paginate(selected,i%30);assert.ok(page.records.length<=PAGE_SIZE);assert.ok(page.page<=page.pages);}});
