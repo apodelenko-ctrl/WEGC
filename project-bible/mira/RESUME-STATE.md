@@ -1,31 +1,46 @@
 # MIRA RESUME-STATE
 
-2026-09-17 — CP16 resumes CP15 actual acceptance. Do not repeat CP12legal/CP13catalogue/CP14design work.
+2026-09-17 — CP16 reports inspected; current owner task is a short first-partner introduction plus working-registration launch. Do not repeat CP12legal/CP13catalogue/CP14design work.
 
-## Exact recovery point
+## Exact current result
 
-CP15publicrelease35199313364 FAILED in `tests/mira-campaign-browser.py` negative fixtures: a Request object displaced the intended HTTP status in a lambda. Later live stages were skipped. Fixed with `make_json_fixture` and four unit regressions; local83Node/106Python passed. Browser navigation in the execution container is blocked by administrator policy; the existing GitHub Actions browser runner is the authorized route. Do not label the blocked local attempt a passing test.
+Read `operations/2026-09-17-first-partner-handoff.md`. Run35201900100 is overall FAILURE, but individual actual-domain campaign and catalogue reports passed. Artifact10488591012 downloaded; ZIP SHA256 `0f624714421f278633efe0488be48006c34994ede7a9b2cbfc3242c7158e1462` verified. Tested source b5d5b6acbff0976669c4a2da60079bd12a88b8d8; generated snapshot0eaee4a1d2f9065abff701f525947b17bb925ea6.
 
-Current pre-fix snapshot5a625ec1ef9977cacdf80bfe50accd5ccf526a49 recovered from artifact10486879347/run35199078722, with exact ZIP SHA256 verification. Next inspect the CP16-triggered full public release; read all browser/audit reports, fix observed failures and write the measured result before handoff.
+`tmp/mira-live-campaign/browser-report.json`: passed=true,15groups,seven widths,618unique catalogue records,forms/localbrief,filters/shortlist/detail,negative fixtures,recovery,documents,motion,noJS; no recorded page/CSP/unexpected-request errors. `tmp/mira-live-audit.json`: passed=true,all618projectURLs,checked2026-09-17T08:53:18.844617+00:00. Other live-public suite passed12groups. Real registration explicitly untested/disabled; Russian-network access and maximum capacity not proven.
 
-## Live routes to check and hand over
+Remaining failure: `tmp/mira-live-editorial/browser-report.json` waits for `[data-catalogue-mode="all"]` after the legacy qualification route. Assets/responsive group passed. Inspect whether the qualifier lands on onboarding first, test that stage, then explicitly open the catalogue. Preserve intended navigation and test assertions; do not label the whole workflow successful until verified.
 
-Preserved editorial: https://wegc.fund/mira/design/
-New direct: https://wegc.fund/mira/go/
-Alternative tone: /mira/practical/ and /mira/corporate/; comparison /mira/launch/.
-Full618research catalogue: /mira/catalog/; preserved alternate /mira/phuket/.
+## Confirmed owner decisions
+
+Company: WEST EAST TRADE GROUP PTE. LTD. First administrator: owner using privately supplied email. Intended flow: self-registration/email confirmation then operator-reviewed business access. These are approved requirements, not deployed authentication.
+
+Owner requests Cloudflare in existing account and migration later. Record preference without representing it as resolution of personal-data obligations. Keep real-data intake disabled until a valid deployment and collection design is reviewed. Cloudflare plugin directory currently returned no available entry, and the card was inactive. Do not invent or repeatedly suggest a connector. Existing local Wrangler authorization is on the owner's computer, not established in this runtime. No new Worker/D1 created. Unrelated services/DB/KV/secrets must remain unchanged.
+
+## Shareable routes
+
+First partner introduction: https://wegc.fund/mira/go/
+Research marketplace: https://wegc.fund/mira/catalog/
+These two public paths have passing individual live-browser reports. Present them as introduction/catalogue evaluation; not self-service signup or immediate buyer registration.
+
+Preserved editorial: https://wegc.fund/mira/design/ (full acceptance still open).
+Alternative tones: /mira/practical/ and /mira/corporate/; comparison /mira/launch/.
+Full618alternate skin: /mira/phuket/.
 Legal drafts: /mira/documents/; creative/QR: /mira/exhibition/.
-Keep start/growth/business/variants/access/expo and old45-demo unchanged. Never claim owner visual, legal or print approval from implementation alone.
+Keep start/growth/business/variants/access/expo and old45-demo intact. No owner visual/legal/print approval inferred.
 
-## Acceptance requirements
+## Next execution
 
-Campaign suite: actual HTTP/CSP, seven widths, all618records reachable, required qualification choices/local brief, filters/shortlist/detail, negative503/badJSON/corruptstorage, recovery, closed registration gate,9PDFs/DOCX,vector downloads,motion,noJS. Release audit: exact text/data bytes,618HEADlinks atconcurrency4,parsed PDFs,QRdecodes,optional200loopbackGET. Existing syntheticAPI and catalogue operation tests are not real signup or production capacity.
+1. Fix and re-run editorial acceptance without removing assertions.
+2. Obtain actual authorized deployment route; no token/password requests in chat. Cloudflare-only preference must not silently remove privacy gates.
+3. Verify signup/auth architecture against the accepted user flow: earlier Access-protected API code is not evidence that email-confirmation/password-recovery signup exists. Implement missing parts and test against real deployment separately.
+4. Confirm approved privacy/data handling, administrator identity and project-specific operational rules. Registration of agencies is distinct from registering buyers with a developer.
+5. Update canonical dashboard from exact evidence through its established builder; do not bypass hash conflict protection. WORK/RESUME already reflect the first-partner report. No need to recollect catalogue or restart design.
 
-After success, update WORK/RESUME and one canonical dashboard with evidence references and source scope. Then give a short linked owner handoff. No new host needs to replace the existing working domain merely because Netlify is connected; unrelated Netlify projects must not be modified.
+## Recovery and boundaries
 
-## Production boundaries
+CP15run35199313364 failed due to the fixture callback's Request argument replacing the intended status. Fixed inCP16with4unitregressions;local83Node/106Python passed. Earlier runtime browser policy was not bypassed; GitHubActions is the authorized HTTP/CSP test runner.
 
-Authorized primary-data hosting/controller/privacy/security/operator and a current commercial project gate remain open. No real signup or buyer registration enabled. No external sends, no retry of denied email path, no private original contracts in public repository. Buyer funds and commission separate. Existing baseline and sales assets retained.
+Prior publicGETsmoke, syntheticAPI100retries/1000reads,5000catalogueoperations andloopback200GET are not productioncapacity or successful real signup. No external messages, no retry of denied email sending, no private originals or prospect identity inpublicGitHub. Buyerfunds andcommission separate. Existing baseline and sales assets retained. Netlify connection does not require moving the working public domain or modifying unrelated sites.
 
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
