@@ -1,5 +1,19 @@
 # MIRA — night research status
 
+## 05:00 Belarus agency expansion — completed, 18 September 2026
+
+Saved **30 net-new Belarus agency candidates** after checking the current Belarus/CIS seed plus mega/outreach datasets. Saved outputs: `05-belarus-agencies.json`, `05-belarus-agencies.csv`, `05-belarus.md`. All rows remain `commercial_status=research_only`, `commerciallyEnabled=false`, `outreach_status=not_authorized`; no email, call, message, form or partnership request was sent.
+
+The source grades are deliberately not flattened: 8 rows currently rely on current Belarus Chamber of Realtors professional-market evidence with corporate routes still missing; 6 combine first-party corporate sources with Chamber evidence; 6 combine Chamber evidence with current marketplace/company observations; 4 have current first-party corporate sources outside the first two reviewed Chamber pages; 6 more have explicit caveats such as route timeout/interstitial, directory-confirmed route, entity/rebrand hold, medium site-to-entity match or legal-entity closure still needed. Chamber employer evidence is not treated as complete independent proof of every licensing/corporate condition. Personal realtor contacts were not copied.
+
+Existing repository brands/routes such as Твоя столица, Этажи, Квадратный метр, Моя 7Я, Авангард, Мариэлт, Фаттория, Мегаполис, РиэлтКафе, Магазин недвижимости and Центр жилья were rejected from the new count rather than padded in. Network branches are not counted as separate independent agencies merely because they have another city page.
+
+Five current official regulatory holds were also excluded from the 30 count: `Агентство недвижимости Эксперт`, `Агентство недвижимости Твой Дом`, `ЭРА-Недвижимости`, `БелЦТН`, and `ВСП недвижимость-Инвест`; current Chamber notices report Ministry of Justice licence suspensions. See `05-belarus.md` and the JSON for exact source URLs and caveats.
+
+Strong later owner-review candidates by source quality/geographic diversity — **not contact authorization** — include Абсолют Недвижимость (Minsk), Центр недвижимости 24 на 7 (Borisov/Minsk region), Сектор недвижимости Основа (Gomel), Гарант успеха (Brest), Агентство Уют и К (Vitebsk) and ПАКОДАН ЭСТЕЙТ (Grodno). PAKODAN's own international-brand positioning is retained only as a source signal; it does not prove a foreign desk, agent program or MIRA relationship.
+
+Next nominal slot: 06:00 cross-lane quality/deduplication and Bali/Dubai media gaps. Do not recollect the 30 Bali/Dubai projects; improve only actual source/media gaps and do not treat public accessibility as publication permission.
+
 ## 04:00 Russia regional agency expansion, pass B — completed, 18 September 2026
 
 Saved **21 additional source-backed agency candidates** with current first-party sites after repository exact-domain deduplication. Combined with pass A, the overnight Russia research layer now contains **50 candidate rows** (29 + 21). This is a research/deduplication count, not proof of 50 legally independent entities, not an outreach-approved list and not evidence that every company has an international desk. Saved outputs: `04-russia-b.json`, `04-russia-b.csv`, `04-russia-b.md`.
@@ -78,4 +92,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-05:00 Belarus agency expansion. Inspect existing Belarus/CIS data before counting any net-new company; save only source-backed corporate channels and keep company/branch/directory/solo-broker distinctions explicit.
+06:00 cross-lane quality/dedupe and Bali/Dubai MEDIA-GAPS. Preserve local Codex ownership of integration/deployment and keep publication rights separate from asset discovery.
