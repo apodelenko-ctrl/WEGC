@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "night": "2026-09-17/2026-09-18",
+  "timezone": "Asia/Bangkok",
+  "schedule_status": "created_and_enabled",
+  "first_scheduled_start": "2026-09-18T00:00:00+07:00",
+  "last_scheduled_start": "2026-09-18T08:00:00+07:00",
+  "scheduled_occurrences": 9,
+  "repo": "apodelenko-ctrl/WEGC",
+  "branch": "mira/research-night-20260918",
+  "write_root": "project-bible/mira/research/night-2026-09-18/",
+  "production_write_authorized": false,
+  "outreach_authorized": false,
+  "targets": {"vietnam_projects": 15, "montenegro_projects": 15, "russia_net_new_agencies": 50, "belarus_net_new_agencies": 30},
+  "completed_counts": {"vietnam_projects": 0, "montenegro_projects": 0, "russia_net_new_agencies": 0, "belarus_net_new_agencies": 0, "publication_approved_new_media": 0},
+  "counts_note": "Targets are not achieved counts. Initial source discovery is not a completed/deduplicated record.",
+  "slots": [
+    {"local_hour": "00:00", "id": "00-vietnam", "status": "pending", "result_paths": []},
+    {"local_hour": "01:00", "id": "01-montenegro", "status": "pending", "result_paths": []},
+    {"local_hour": "02:00", "id": "02-project-validation", "status": "pending", "result_paths": []},
+    {"local_hour": "03:00", "id": "03-russia-a", "status": "pending", "result_paths": []},
+    {"local_hour": "04:00", "id": "04-russia-b", "status": "pending", "result_paths": []},
+    {"local_hour": "05:00", "id": "05-belarus", "status": "pending", "result_paths": []},
+    {"local_hour": "06:00", "id": "06-quality-media", "status": "pending", "result_paths": []},
+    {"local_hour": "07:00", "id": "07-integration-handoff", "status": "pending", "result_paths": []},
+    {"local_hour": "08:00", "id": "08-morning-brief", "status": "pending", "result_paths": []}
+  ],
+  "next_action": "Read PLAN.md, INITIAL-SOURCE-QUEUE.json and current main registries; execute the scheduled slot without repeating completed work. Save per-slot output and update this state with a freshly fetched SHA.",
+  "baseline_notes": [
+    "Local Codex owns backend/admin/publication and current Bali/Dubai integration; do not edit those components.",
+    "Current main includes project-bible/mira/research/bali-dubai-2026-09-17/MEDIA-GAPS.md: 28 candidates reviewed locally, 0 approved new media; source URLs and defects are available without expired attachments.",
+    "Scheduled execution is confirmed; future connector availability and successful persistence are not yet verified. If unavailable, preserve actual research in the invocation output and report the failure, not a fictional commit."
+  ]
+}
