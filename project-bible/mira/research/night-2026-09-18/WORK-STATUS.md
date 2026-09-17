@@ -1,5 +1,17 @@
 # MIRA — night research status
 
+## 01:00 Montenegro discovery/classification — completed, 18 September 2026
+
+The Montenegro discovery slot saved 15 source-backed real project records under this research folder. Seven are `complete_for_discovery`; eight remain explicitly `partial_for_validation` for the 02:00 pass rather than being promoted on weak evidence. The sample spans 11 developer/project families and multiple locations: Tivat/Porto Montenegro, Luštica, Portonovi/Kumbor, Budva/Bečići/Zavala, Muo/Kotor Bay and Kolašin. Repeated master developments are explicitly grouped and are not counted as independent developers.
+
+Saved outputs: `01-montenegro-projects-part1.json`, `01-montenegro-projects-part2.json`, `01-montenegro-projects-part3.json`, `01-montenegro-projects.csv`, `01-montenegro.md`. The JSON is split only to keep scheduled branch writes bounded; the 07:00 consolidation slot is expected to create the final single `montenegro-projects.json` after validation.
+
+All 15 rows remain `commercial_status=research_only` and `commerciallyEnabled=false`. Zero third-party image files were downloaded, zero new images were visually reviewed, and zero media publication approvals were created. Current media rows record source pages only. No prices, availability, returns, commissions, completion promises, foreign-ownership eligibility, residence/citizenship rights or MIRA partnerships were promoted into the research layer.
+
+Important quality hold: the Russian/CIS Montis Mountain Resort page still advertises Montenegro's expired citizenship-by-investment program. That statement is quarantined as stale evidence and must not be reused in MIRA copy. Other validation holds include missing independent agency observations, legal-seller identification, and current-status checks for several projects. See `01-montenegro.md` for the exact list.
+
+Next nominal slot: 02:00 combined Vietnam/Montenegro validation. Close or replace partial rows, run broader repository-level deduplication, and collect exact media source-page/image candidates without treating public accessibility as copyright permission.
+
 ## 00:00 Vietnam discovery/classification — completed, 18 September 2026
 
 The Vietnam discovery slot saved 15 source-backed real project records under this research folder. The collection is a targeted catalogue sample, not a sales ranking. Eleven records have a first-party/developer project source plus a concrete Russian-language or Russian-speaking-channel observation suitable for the discovery stage. Four are explicitly partial for the 02:00 validation slot: Aqua City — Phoenix Island (phase-specific primary source gap), Waterpoint (Russian-language agency observation gap), Empire City (authoritative CBRE source but no verified consortium-owned project page yet), and Urban Green (project sales site found, Kusto corporate project source still to close).
@@ -28,4 +40,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-01:00 Montenegro discovery/classification. Read PLAN.md and current progress before execution. Save actual outputs under this folder on this branch only; read back and validate after each material checkpoint. Keep root WORK-STATUS/RESUME owned by local Codex untouched.
+02:00 combined project validation. Read PLAN.md and current progress before execution. Validate the two country collections, save actual outputs under this folder on this branch only, and keep root WORK-STATUS/RESUME owned by local Codex untouched.
