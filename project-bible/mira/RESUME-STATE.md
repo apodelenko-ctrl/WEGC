@@ -1,5 +1,19 @@
 # MIRA RESUME-STATE
 
+## 2026-09-17 — completed administration and separate deployed Worker checkpoint
+
+The preserved admin branch now contains completion commit `74aae63` after WIP checkpoint `640c64e`. Its production Worker and six pilot assets were independently deployed as version `ba3d25b6-efdc-45ce-804e-4c7dc052fce9` (previous version `15da744a-8345-43f1-a2e4-e88ecbb4d00b` retained for rollback). Agency list/detail, verified application review, agreement reference, representative binding, operator decision, membership revoke/restore and paginated agency/member audit are implemented. The current integration brings only these completed source changes into main; no WIP screenshots are included.
+
+Local combined regression: 122 Node / 144 Python tests passed. The isolated signed-identity browser scenario uses the actual site Worker CSP and all three migrations: receipt/reload, qualification, synthetic agreement/owner/onboarding, cross-identity denial, failed activation without evidence, revoke/restore, expired-session receipt recovery and 53-event audit pagination passed at 390/768/1440 widths, with no JS/CSP errors. This is not a real applicant or production agency activation. The browser scenario is now included in the existing release-verification workflow.
+
+Live anonymous verification: protected pilot/library/session/admin endpoints redirect to Access; public pilot JS/CSS return 200, no-store, production CSP, and match deployed source bytes. Existing Access owner login/operator demonstration remains valid historical evidence; no new ordinary-applicant OTP/receipt/decision acceptance is claimed. Applications/material delivery stay disabled, privacy variables empty, buyer registration closed; Access allowlist and D1 schema unchanged.
+
+An actual dedicated-D1 export was restored into a separate private local SQLite database. All 13 MIRA tables, integrity and foreign keys checked successfully; production was not restored or modified. Remote-D1 restore and maximum production capacity remain untested. Private dump/identity values are not included in this repository.
+
+Public expansion PR #9 merged as `2d85898267b60c19a88b3a42b12388546070dfc0`, generated snapshot `e1a276a7d4f482a125eb92e7ef557e46df2f96ff`. Pages run 35248400519 and full local/live release acceptance 35248674309 succeeded. A separately observed fast detail-return race is being fixed with an explicit feed-failure regression; passing CI does not erase that observation. Media remains 11 inherited project-image associations plus 637 labelled covers across 648 records; none of the 30 expansion images is publication-approved. Cloud content follow-up: `research/bali-dubai-2026-09-17/MEDIA-GAPS.md`.
+
+Remaining owner gates: approved privacy/processing-location/retention/deletion notice and narrowly approved ordinary-applicant Access/OTP test; actual business evidence before any activation; direct Russian-network probe. Continue from existing resources, never re-provision them. Previous entries below are preserved historical records.
+
 ## 2026-09-17 — current local integration checkpoint (supersedes stale launch blockers)
 
 PR #8 is already merged. Owner email login and operator access on `https://pilot.wegc.fund/mira/pilot.html` were demonstrated in the real browser. Existing Worker `mira-pilot-api`, deployed source `5ab0824ea7061e0a8a5b731075d471421bbeb752`, version `15da744a-8345-43f1-a2e4-e88ecbb4d00b`; existing dedicated D1 has all three migrations. Do not recreate these resources or first operator. Historical entries below about missing Access/undeployed Worker are superseded. Intake/material delivery remain disabled; no real applicant receipt or business activation accepted yet. Buyer registration remains closed.

@@ -52,6 +52,7 @@ jobs:
           trap 'kill "$SERVER_PID"' EXIT
           sleep 1
           result=0
+          python tests/mira-pilot-browser.py > /tmp/mira-pilot-browser.log 2>&1 || result=1
           python tests/mira-public-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-browser > /tmp/mira-local-browser.log 2>&1 || result=1
           python tests/mira-market-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-markets > /tmp/mira-local-markets.log 2>&1 || result=1
           python tests/mira-campaign-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-campaign > /tmp/mira-local-campaign.log 2>&1 || result=1
@@ -102,6 +103,7 @@ jobs:
             /tmp/mira-python.txt
             /tmp/mira-*.log
             /tmp/mira-release-provenance.json
+            /tmp/mira-pilot-browser/
             /tmp/mira-local-markets/
             /tmp/mira-local-browser/
             /tmp/mira-local-campaign/
