@@ -1,0 +1,9 @@
+{
+  "target": "https://wegc.fund/mira/start/",
+  "status": "concept_for_owner_approval",
+  "print_size": "850x2000 mm proposed; confirm with printer",
+  "error_correction": "Q",
+  "quiet_zone_modules": 4,
+  "external_images": false,
+  "owner_approved": false
+}

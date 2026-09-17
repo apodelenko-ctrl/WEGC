@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "reviewed_on": "2026-09-17",
+  "owner_approved": false,
+  "acceptance_enabled": false,
+  "documents": [
+    {
+      "id": "agency-agreement",
+      "title": "Договор МИРА и Агентства",
+      "source": "source/agency-agreement.md",
+      "source_sha256": "59bdc05784027178aa2b0ca6b7f6bc3fc72ac994f9719dc2eb006ce735322b8b",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "agency-agreement.html",
+      "pdf": "downloads/agency-agreement.pdf"
+    },
+    {
+      "id": "project-rules",
+      "title": "Проект и регистрация клиента",
+      "source": "source/project-rules.md",
+      "source_sha256": "533d9defda798155b460d00a77e8863eac685413a83acb383d6be609a593a749",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "project-rules.html",
+      "pdf": "downloads/project-rules.pdf"
+    },
+    {
+      "id": "data-processing",
+      "title": "Поручение обработки данных",
+      "source": "source/data-processing.md",
+      "source_sha256": "e09df2a4ddf0eab2d0627a6a2eeab897f70f64eb7823e255bf046388c78aafe1",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "data-processing.html",
+      "pdf": "downloads/data-processing.pdf"
+    },
+    {
+      "id": "privacy",
+      "title": "Политика персональных данных",
+      "source": "source/privacy.md",
+      "source_sha256": "b79f76ce7e3717554cd83a3d7f3d5b590b3b322bf56e18ed7e6aebff65e07eab",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "privacy.html",
+      "pdf": "downloads/privacy.pdf"
+    },
+    {
+      "id": "data-consent",
+      "title": "Согласие на обработку данных",
+      "source": "source/data-consent.md",
+      "source_sha256": "d67892355121840108100d1a8153c59b32ab6028f87fb17c2cf5b16fc058964e",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "data-consent.html",
+      "pdf": "downloads/data-consent.pdf"
+    },
+    {
+      "id": "marketing-consent",
+      "title": "Согласие на рекламу",
+      "source": "source/marketing-consent.md",
+      "source_sha256": "d738e4aa4311cfb7fda416449fa785346c9d579ffd054c99ad527be115a6bcae",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "marketing-consent.html",
+      "pdf": "downloads/marketing-consent.pdf"
+    },
+    {
+      "id": "materials-policy",
+      "title": "Материалы и бренды",
+      "source": "source/materials-policy.md",
+      "source_sha256": "70ebc7e6e00b8d191445085a669de992b2f8e2c2f9e4e6996720531face9701a",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "materials-policy.html",
+      "pdf": "downloads/materials-policy.pdf"
+    },
+    {
+      "id": "payment-support",
+      "title": "Платёжное сопровождение",
+      "source": "source/payment-support.md",
+      "source_sha256": "634bf917fe30e4886f8b8193686af73cb06656e824d724e2afdf3ccc11d9ec87",
+      "status": "negotiation_draft",
+      "version": "1.0",
+      "effective": false,
+      "html": "payment-support.html",
+      "pdf": "downloads/payment-support.pdf"
+    },
+    {
+      "id": "site-terms",
+      "title": "Публичный каталог и демо",
+      "source": "source/site-terms.md",
+      "source_sha256": "2663f6d489ad3d92f21a726c2478b9d97003f17d11305deb2adb9b7eedd3a8e3",
+      "status": "public_scope_notice",
+      "version": "1.0",
+      "effective": false,
+      "html": "site-terms.html",
+      "pdf": "downloads/site-terms.pdf"
+    }
+  ]
+}

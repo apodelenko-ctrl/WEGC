@@ -1,0 +1,17 @@
+{
+  "version": "cp13",
+  "source_records": 618,
+  "legal_documents": 9,
+  "live_registration_enabled": false,
+  "owner_design_approved": false,
+  "funnel_routes": [
+    "/mira/start/",
+    "/mira/growth/",
+    "/mira/business/"
+  ],
+  "preserved_routes": [
+    "/mira/design/",
+    "/mira/agency/",
+    "/mira/marketplace-design.html"
+  ]
+}
