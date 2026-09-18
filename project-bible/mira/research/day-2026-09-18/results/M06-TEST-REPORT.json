@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-18T09:48:18+07:00",
+  "artifact": "M06-prepare-crm-lab.py",
+  "sha256": "64079f1dcc6b1ba0ed22d938f254ecc9da8dc742d0313cf6efdd209453d6997b",
+  "unitTests": {
+    "executed": 12,
+    "passed": 12,
+    "exitCode": 0,
+    "scope": "stdlib configuration generator tests only; synthetic image digests"
+  },
+  "runtime": {
+    "docker_cli_available": false,
+    "compose_available": false,
+    "engine_available": false,
+    "status": "BLOCKED_RUNTIME",
+    "application_started": false
+  },
+  "runtimeExitCode": 2,
+  "dockerComposeValidation": "NOT_RUN",
+  "officialImagePull": "NOT_RUN",
+  "applicationInstallation": "NOT_RUN",
+  "applicationBrowserAcceptance": "NOT_RUN",
+  "smtpAcceptance": "NOT_RUN",
+  "m04LiveAcceptanceScenarios": {
+    "prepared": 14,
+    "executed": 0
+  },
+  "externalEmailsSent": 0,
+  "containsCredentials": false
+}
