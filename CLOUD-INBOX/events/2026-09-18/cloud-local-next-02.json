@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "eventId": "cloud-local-next-02",
+  "date": "2026-09-18",
+  "timezone": "Asia/Bangkok",
+  "author": "CLOUD",
+  "ownerRequest": "Write the next local-agent instructions and integration handoff into the existing GitHub exchange folder, then give a short prompt pointing there.",
+  "taskId": "MIRA-LOCAL-20260918-02",
+  "entryPoint": "CLOUD-INBOX/START-HERE.md",
+  "sourceCommitWithQueue": "967ba33451acbe78da5b368cd1aadde46773291d",
+  "preservedMainReference": "1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b",
+  "priorCloudSourceRead": "234539023cb33b8cdbb307227fa79052645b5586",
+  "actualChanges": [
+    "Reused existing CLOUD-INBOX rather than creating a competing exchange folder",
+    "Created START-HERE, current LOCAL task, GitHub-only data handoff index and receipt instructions",
+    "Copied the existing 30-record explicit project type mapping into a readable inbox JSON",
+    "Updated QUEUE with the new immediate task while preserving previous coordination and mail/CRM entries",
+    "Recorded owner-reported real technical application/receipt/refresh success without private identity values"
+  ],
+  "remainingLocalLiveChecks": ["operator decision", "applicant views decision", "logout and new login"],
+  "notClaimed": ["CLOUD independently repeated applicant test", "LOCAL read or accepted the new task", "data imports performed", "new project photos licensed", "new product tests", "new deployment"],
+  "receiptPath": "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json",
+  "localReceiptConfirmed": false,
+  "mainChangedByThisHandoff": false,
+  "productionChanges": false,
+  "externalMessagesSent": 0,
+  "newAutomationCreated": false,
+  "personalDataPublished": false
+}
