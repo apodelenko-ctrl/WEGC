@@ -1,0 +1,25 @@
+{
+  "taskIds": [
+    "MIRA-CLOSEOUT-20260918-01",
+    "MIRA-AGENCIES-20260919-01"
+  ],
+  "author": "CLOUD",
+  "recordedAt": "2026-09-18T17:46:00Z",
+  "sourceSha": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
+  "resultSha": "resolve_from_commit_containing_this_event",
+  "branch": "mira/research-night-20260918",
+  "productionChanged": false,
+  "localAck": false,
+  "automationsCreated": [
+    "6aad78bf2b988191b6ca5c921d60fd12"
+  ],
+  "master": "CLOUD-INBOX/MASTER-STATUS.md",
+  "findings": [
+    "stale_queue_reconciled",
+    "native_crm_and_intake_passed",
+    "omni_flow_e0f7_local_acceptance_pending",
+    "three_diverged_branches_require_disposition",
+    "332_provisional_agency_groups_not_legal_entity_total"
+  ],
+  "nextAction": "LOCAL return mandatory closure receipt; CLOUD bounded overnight research"
+}

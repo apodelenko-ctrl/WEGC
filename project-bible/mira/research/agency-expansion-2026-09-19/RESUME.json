@@ -1,0 +1,23 @@
+{
+  "taskId": "MIRA-AGENCIES-20260919-01",
+  "status": "scheduled",
+  "timezone": "Asia/Bangkok",
+  "automationId": "6aad78bf2b988191b6ca5c921d60fd12",
+  "stopBy": "2026-09-19T08:00:00+07:00",
+  "nextStep": "canonicalize_existing_sources_then_recheck_city_population_and_collect",
+  "nextCityId": "RU-CITY-001",
+  "completedCityIds": [],
+  "sourceCommitRead": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
+  "baselineProvisionalGroups": 332,
+  "baselineRussiaGroups": 197,
+  "baselineBelarusGroups": 60,
+  "baselineOtherGroups": 75,
+  "newAgenciesCollectedThisTask": 0,
+  "fullyEnrichedCount": null,
+  "crmImportsThisTask": 0,
+  "externalSends": 0,
+  "requiredFinalReport": "NIGHT-REPORT.md",
+  "mandatoryFinalReportOnLastRun": true,
+  "latestResultCommit": null,
+  "remaining": "All cities require reconciliation, current source research and field-level enrichment"
+}

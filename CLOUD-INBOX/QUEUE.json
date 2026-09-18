@@ -6,17 +6,17 @@
   "sourceBranch": "mira/research-night-20260918",
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
-  "nextTaskForLocal": "MIRA-LOCAL-20260918-02",
+  "nextTaskForLocal": "MIRA-CLOSEOUT-20260918-01",
   "routingNote": "Preserve the currently running checkpoint. Read the current entry point before the next independent block; skip any newer locally completed steps. Existing mail/CRM and coordination tasks are retained, not restarted.",
   "mainIntegrationConfirmed": false,
-  "localStartupRuleInstalled": false,
-  "localReceiptConfirmed": false,
+  "localStartupRuleInstalled": true,
+  "localReceiptConfirmed": true,
   "outreachAuthorized": false,
   "productionWriteAuthorizedForCloud": false,
   "routineLocalChoiceAndPreparationAuthorized": true,
   "ownerApprovalNeededForRoutineSoftwareChoice": false,
   "purchasesAuthorized": false,
-  "newAutomationCreated": false,
+  "newAutomationCreated": true,
   "handoffIssue": 14,
   "latestOwnerReportedState": {
     "source": "Owner message in the current conversation, 18 September 2026; not an independent CLOUD live test",
@@ -24,9 +24,9 @@
     "technicalApplicationSubmitted": "reported_passed",
     "durableReceipt": "reported_passed",
     "applicationSurvivesRefresh": "reported_passed",
-    "operatorDecision": "pending",
-    "applicantSeesDecision": "pending",
-    "applicantLogoutAndNewLogin": "pending",
+    "operatorDecision": "local_receipt_passed",
+    "applicantSeesDecision": "local_receipt_passed",
+    "applicantLogoutAndNewLogin": "local_receipt_passed",
     "buyerRegistration": "disabled",
     "russiaWithoutVpn": "unverified",
     "personalIdentityPublished": false
@@ -36,13 +36,14 @@
     "decisions": "CLOUD-INBOX/Решения.md",
     "dailyControlBoard": "CLOUD-INBOX/КОНТРОЛЬ-БОРД.md",
     "historicalDecisions": "project-bible/mira/08-decisions-log.md",
-    "writePolicy": "Read current SHA, preserve other agents, append dated evidence with IDs; never replace history with plans"
+    "writePolicy": "Read current SHA, preserve other agents, append dated evidence with IDs; never replace history with plans",
+    "masterStatus": "CLOUD-INBOX/MASTER-STATUS.md"
   },
   "tasks": [
     {
       "id": "MIRA-LOCAL-20260918-02",
       "priority": "P0-live-decision-then-data-integration",
-      "status": "ready_for_local_review",
+      "status": "partial_with_holds",
       "owner": "LOCAL",
       "title": "Finish the existing applicant decision/relogin and integrate CLOUD data through the shared folder",
       "sourceCommit": "5e496952acee67154af963f6d95df329e870b543",
@@ -66,12 +67,17 @@
         "The next result and media gaps are written back through the receipts protocol"
       ],
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json",
-      "receipt": null
+      "receipt": {
+        "path": "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json",
+        "updatedAt": "2026-09-18T17:27:20Z",
+        "readAtSourceCommit": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
+        "doesNotAcceptNewerClientFlow": true
+      }
     },
     {
       "id": "MIRA-COORD-20260918-01",
       "priority": "P0-coordination",
-      "status": "ready_for_local_review",
+      "status": "startup_rule_installed_accounting_reconciliation_pending",
       "owner": "LOCAL",
       "title": "Integrate shared findings, decisions and daily board into existing startup/checkpoint instructions",
       "sourcePath": "CLOUD-INBOX/README.md",
@@ -86,12 +92,13 @@
         "No public-site section, new watcher or new scheduler created"
       ],
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-COORD-20260918-01.json",
-      "receipt": null
+      "receipt": null,
+      "evidenceReceiptPath": "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json"
     },
     {
       "id": "MIRA-MKT-20260918-01",
       "priority": "P1-owner-request",
-      "status": "ready_for_local_implementation",
+      "status": "native_crm_and_drafts_ready_mail_pending",
       "owner": "LOCAL",
       "title": "Use Brevo Free marketing path and prepare EspoCRM lab without repeated software-choice approval",
       "sourceCommit": "ba46adab04af7d9e259d122384efd811d23392e7",
@@ -113,21 +120,19 @@
       "dailyTotalEmailCapProposal": 200,
       "dailyCapActuallyConfigured": false,
       "providerAccountConnected": false,
-      "newSoftwareInstalled": false,
+      "newSoftwareInstalled": true,
       "firstPersonalDeveloperTarget": "Lustica Bay",
       "firstTargetEmailVerified": false,
       "agencyFunnelMarket": "Phuket",
       "planningTarget": "2026-09-19/2026-09-20, subject to actual acceptance; no completion guarantee",
       "initialApprovedPilotSizeProposal": "10-20 eligible recipients; not an approved list",
-      "allM04LiveAcceptanceTestsStatus": "NOT_RUN",
+      "allM04LiveAcceptanceTestsStatus": "PARTIAL_SEE_RECEIPT",
       "generatorUnitTests": {
         "executed": 12,
         "passed": 12,
         "scope": "configuration preparation only"
       },
       "remainingHolds": [
-        "Local receipt and current private mail/CRM/host inventory",
-        "Cloud runtime lacks Docker; LOCAL must resolve verified official image digests and run the isolated lab on its authorized machine",
         "Actual provider account, corporate attestation, login/OTP and verified sender/domain; not another request to choose software",
         "Recipient permission and jurisdiction-specific assessment; research candidates are not subscribers",
         "Native reply-stop, daily cap200 and complaint/global suppression acceptance",
@@ -144,13 +149,18 @@
         "Import from damaged historical detailed Belarus CSV"
       ],
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
-      "receipt": null
+      "receipt": {
+        "path": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
+        "updatedAt": "2026-09-18T17:27:20Z",
+        "readAtSourceCommit": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
+        "doesNotAcceptNewerClientFlow": true
+      }
     },
     {
       "id": "MIRA-OMNI-20260918-01",
       "priority": "P1-owner-request-after-current-independent-block",
       "owner": "LOCAL",
-      "status": "ready_for_local_integration",
+      "status": "partially_integrated_not_live_accepted",
       "title": "Connect implemented shared MIRA communication core",
       "sourcePaths": [
         "CLOUD-INBOX/tasks/MIRA-OMNI-20260918-01.md",
@@ -159,11 +169,16 @@
       ],
       "cloudCompleted": "53/53 local tests; product-scoped KB plus client brief/research shortlist/CRM outbox/handoff flow; real account/model/site acceptance pending",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-OMNI-20260918-01.json",
-      "receipt": null,
+      "receipt": {
+        "path": "CLOUD-INBOX/receipts/MIRA-OMNI-20260918-01.json",
+        "updatedAt": "2026-09-18T17:27:20Z",
+        "readAtSourceCommit": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
+        "doesNotAcceptNewerClientFlow": true
+      },
       "preservesExistingLocalAndMktTasks": true,
       "knowledgeProfileUpdate": {
         "id": "KB-PROFILES-20260918",
-        "status": "cloud_implemented_local_integration_pending",
+        "status": "local_integrated_live_pending",
         "audit": "CLOUD-INBOX/packages/MIRA-OMNI-20260918-01/KNOWLEDGE-AUDIT-RU.md",
         "testsPassed": 41,
         "contextBlocks": 23,
@@ -183,10 +198,28 @@
         "catalogSmokeRecords": 618,
         "productionChanged": false
       }
+    },
+    {
+      "id": "MIRA-CLOSEOUT-20260918-01",
+      "owner": "LOCAL",
+      "priority": "P0-after-current-checkpoint",
+      "status": "handed_off_ack_pending",
+      "sourcePath": "CLOUD-INBOX/MASTER-STATUS.md",
+      "receiptPath": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
+      "preservesExistingTaskIds": true
+    },
+    {
+      "id": "MIRA-AGENCIES-20260919-01",
+      "owner": "CLOUD",
+      "localRole": "private_count_reconciliation_and_selective_import",
+      "status": "scheduled",
+      "sourcePath": "CLOUD-INBOX/tasks/MIRA-AGENCIES-20260919-01.md",
+      "resumePath": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
+      "automationId": "6aad78bf2b988191b6ca5c921d60fd12"
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
-  "note": "Latest owner-reported applicant submission supersedes older pending-login notes only. It is not a local receipt for the inbox, commercial activation or permission for mass intake/sends. Prior tasks and decision history are preserved. Local remains sole integrator/deployer.",
+  "note": "Current status: MASTER-STATUS.md reconciles receipts. Historical owner report retained with superseding LOCAL evidence. Public PR15 deployed; entire research integration not confirmed. LOCAL sole integrator.",
   "implementationSupplement": {
     "id": "MIRA-INTEGRATE-20260918-01",
     "path": "CLOUD-INBOX/LOCAL-INTEGRATION-2026-09-18.md",
@@ -196,7 +229,7 @@
       "MIRA-COORD-20260918-01",
       "MIRA-MKT-20260918-01"
     ],
-    "status": "ready_for_local_implementation",
+    "status": "partial_see_master_status",
     "relationship": "Concrete deliverables and acceptance criteria; not a competing queue or second CRM installation",
     "preservesNextTaskAndOwnerReportedProgress": true,
     "workstreams": [
@@ -209,6 +242,14 @@
     ],
     "evidenceReturn": "Use current main-task receipt plus existing CRM task receipt; do not require duplicate receipts",
     "accountingEvent": "CLOUD-INBOX/events/2026-09-18/cloud-1350-integration-handoff.json",
-    "localReceiptConfirmed": false
+    "localReceiptConfirmed": true
+  },
+  "latestEvidenceReconciliation": {
+    "sourceCommitRead": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
+    "at": "2026-09-18T17:46:00Z",
+    "source": "receipts updated2026-09-18T17:27:20Z",
+    "publicIntegrationConfirmed": true,
+    "wholeResearchBranchIntegrated": false,
+    "allTasksComplete": false
   }
 }

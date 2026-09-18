@@ -1,0 +1,5295 @@
+{
+  "method": "country + normalized hostname; fallback normalized name; provisional identity groups, not verified legal entities; shared domains may collapse independent franchisees, aliases may overcount",
+  "groups": [
+    {
+      "key": "Узбекистан|realting.uz",
+      "country": "Узбекистан",
+      "domain": "realting.uz",
+      "names": [
+        "SV Real Estate",
+        "Domio",
+        "RNB ESTATE",
+        "SquareLab innovative property solutions",
+        "Единый Центр Новостроек",
+        "Human2Human",
+        "Yunusabad Residence",
+        "Luxe Construction Group",
+        "Realting.uz"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-candidates.csv",
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Кыргызстан|bishkek.etagi.com",
+      "country": "Кыргызстан",
+      "domain": "bishkek.etagi.com",
+      "names": [
+        "Этажи (Бишкек)"
+      ],
+      "cities": [
+        "Бишкек"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Кыргызстан|ned.kg",
+      "country": "Кыргызстан",
+      "domain": "ned.kg",
+      "names": [
+        "Кыргыз Недвижимость"
+      ],
+      "cities": [
+        "Бишкек"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Кыргызстан|an.kg",
+      "country": "Кыргызстан",
+      "domain": "an.kg",
+      "names": [
+        "Агентство недвижимости Площадь"
+      ],
+      "cities": [
+        "Бишкек"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Кыргызстан|diplomat.kg",
+      "country": "Кыргызстан",
+      "domain": "diplomat.kg",
+      "names": [
+        "Дипломат"
+      ],
+      "cities": [
+        "Бишкек"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Кыргызстан|anavg.kg",
+      "country": "Кыргызстан",
+      "domain": "anavg.kg",
+      "names": [
+        "Авангард Недвижимость"
+      ],
+      "cities": [
+        "Бишкек"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Грузия|makler.ge",
+      "country": "Грузия",
+      "domain": "makler.ge",
+      "names": [
+        "Makler.ge"
+      ],
+      "cities": [
+        "Тбилиси"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Грузия|tbilisihome.ge",
+      "country": "Грузия",
+      "domain": "tbilisihome.ge",
+      "names": [
+        "Tbilisi Home"
+      ],
+      "cities": [
+        "Тбилиси"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Грузия|mbg.ge",
+      "country": "Грузия",
+      "domain": "mbg.ge",
+      "names": [
+        "MBG Group"
+      ],
+      "cities": [
+        "Тбилиси"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Грузия|bdgroup.ge",
+      "country": "Грузия",
+      "domain": "bdgroup.ge",
+      "names": [
+        "BD Realty"
+      ],
+      "cities": [
+        "Тбилиси/Батуми"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Грузия|pbproperty.ge",
+      "country": "Грузия",
+      "domain": "pbproperty.ge",
+      "names": [
+        "PB Property"
+      ],
+      "cities": [
+        "Тбилиси/Батуми"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Грузия|ri.ge",
+      "country": "Грузия",
+      "domain": "ri.ge",
+      "names": [
+        "RI.GE"
+      ],
+      "cities": [
+        "Грузия"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Грузия|tbilisi-property.com",
+      "country": "Грузия",
+      "domain": "tbilisi-property.com",
+      "names": [
+        "Tbilisi Property"
+      ],
+      "cities": [
+        "Тбилиси/Батуми"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Таджикистан|aura.tj",
+      "country": "Таджикистан",
+      "domain": "aura.tj",
+      "names": [
+        "Aura Estate"
+      ],
+      "cities": [
+        "Душанбе"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Таджикистан|paradisewall.tj",
+      "country": "Таджикистан",
+      "domain": "paradisewall.tj",
+      "names": [
+        "ParadiseWall"
+      ],
+      "cities": [
+        "Душанбе"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Таджикистан|agentstva.tj",
+      "country": "Таджикистан",
+      "domain": "agentstva.tj",
+      "names": [
+        "Agentstva.TJ"
+      ],
+      "cities": [
+        "Душанбе"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Азербайджан|azeriamlak.az",
+      "country": "Азербайджан",
+      "domain": "azeriamlak.az",
+      "names": [
+        "AzeriAmlak"
+      ],
+      "cities": [
+        "Баку"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Азербайджан|rns.az",
+      "country": "Азербайджан",
+      "domain": "rns.az",
+      "names": [
+        "RNS.AZ Estate Agency"
+      ],
+      "cities": [
+        "Баку"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-05.csv"
+      ]
+    },
+    {
+      "key": "Belarus|shoprealty.by",
+      "country": "Belarus",
+      "domain": "shoprealty.by",
+      "names": [
+        "Магазин недвижимости"
+      ],
+      "cities": [
+        "Гродно"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-06.csv"
+      ]
+    },
+    {
+      "key": "Belarus|myrealtor.by",
+      "country": "Belarus",
+      "domain": "myrealtor.by",
+      "names": [
+        "Центр жилья"
+      ],
+      "cities": [
+        "Гродно"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-06.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|nedvizhka.kz",
+      "country": "Казахстан",
+      "domain": "nedvizhka.kz",
+      "names": [
+        "Проспект"
+      ],
+      "cities": [
+        "Караганда"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-06.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|gorod-ok.kz",
+      "country": "Казахстан",
+      "domain": "gorod-ok.kz",
+      "names": [
+        "Городок"
+      ],
+      "cities": [
+        "Караганда"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-package-06.csv"
+      ]
+    },
+    {
+      "key": "Belarus|t-s.by",
+      "country": "Belarus",
+      "domain": "t-s.by",
+      "names": [
+        "Твоя столица"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|minsk.etagi.com",
+      "country": "Belarus",
+      "domain": "minsk.etagi.com",
+      "names": [
+        "Этажи (Минск)"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|m2.by",
+      "country": "Belarus",
+      "domain": "m2.by",
+      "names": [
+        "Квадратный метр"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|centr7a.by",
+      "country": "Belarus",
+      "domain": "centr7a.by",
+      "names": [
+        "Центр международной недвижимости Моя 7Я"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|anpartner.by",
+      "country": "Belarus",
+      "domain": "anpartner.by",
+      "names": [
+        "Партнер для всех"
+      ],
+      "cities": [
+        "Минск/Минская область"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|an7.by",
+      "country": "Belarus",
+      "domain": "an7.by",
+      "names": [
+        "7 этажей",
+        "Агентство 7 этажей"
+      ],
+      "cities": [
+        "Минск/Минская область",
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|yghome.by",
+      "country": "Belarus",
+      "domain": "yghome.by",
+      "names": [
+        "YG HOME"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|avangard-n.by",
+      "country": "Belarus",
+      "domain": "avangard-n.by",
+      "names": [
+        "Авангард Недвижимость"
+      ],
+      "cities": [
+        "Минск/пригород"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|garantiruem.by",
+      "country": "Belarus",
+      "domain": "garantiruem.by",
+      "names": [
+        "Гарант Недвижимость"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|tmaentak.by",
+      "country": "Belarus",
+      "domain": "tmaentak.by",
+      "names": [
+        "Твой Маёнтак"
+      ],
+      "cities": [
+        "Минск/Минская область"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|molnar.by",
+      "country": "Belarus",
+      "domain": "molnar.by",
+      "names": [
+        "Мольнар"
+      ],
+      "cities": [
+        "Минск/Беларусь"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|marielt.by",
+      "country": "Belarus",
+      "domain": "marielt.by",
+      "names": [
+        "Агентство недвижимости Мариэлт"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|fattoria.by",
+      "country": "Belarus",
+      "domain": "fattoria.by",
+      "names": [
+        "АН Фаттория"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|asrealt.by",
+      "country": "Belarus",
+      "domain": "asrealt.by",
+      "names": [
+        "AS Недвижимость"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|alkor-realty.by",
+      "country": "Belarus",
+      "domain": "alkor-realty.by",
+      "names": [
+        "Алькор Эстейт"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|wtgroup.international",
+      "country": "Казахстан",
+      "domain": "wtgroup.international",
+      "names": [
+        "WT Group"
+      ],
+      "cities": [
+        "Алматы/Астана"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|gec.kz",
+      "country": "Казахстан",
+      "domain": "gec.kz",
+      "names": [
+        "Grand Estate Company"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|rialight.kz",
+      "country": "Казахстан",
+      "domain": "rialight.kz",
+      "names": [
+        "Ria Light"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|hayatestate.com",
+      "country": "Казахстан",
+      "domain": "hayatestate.com",
+      "names": [
+        "Hayat Estate Kazakhstan"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|almaty.etagi.com",
+      "country": "Казахстан",
+      "domain": "almaty.etagi.com",
+      "names": [
+        "Этажи (Алматы)"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|real-estate.am",
+      "country": "Армения",
+      "domain": "real-estate.am",
+      "names": [
+        "Kentron",
+        "Kentron Real Estate"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|besthouse.am",
+      "country": "Армения",
+      "domain": "besthouse.am",
+      "names": [
+        "Best House"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|alfarealty.by",
+      "country": "Belarus",
+      "domain": "alfarealty.by",
+      "names": [
+        "Альфа-Недвижимость"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|novaya.by",
+      "country": "Belarus",
+      "domain": "novaya.by",
+      "names": [
+        "Новая жизнь"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|an-realt.by",
+      "country": "Belarus",
+      "domain": "an-realt.by",
+      "names": [
+        "Альянс недвижимости"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|rieltcity.by",
+      "country": "Belarus",
+      "domain": "rieltcity.by",
+      "names": [
+        "Риэлт-Сити"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|alfarielt.by",
+      "country": "Belarus",
+      "domain": "alfarielt.by",
+      "names": [
+        "Альфа-Риэлт"
+      ],
+      "cities": [
+        "Брест"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|homeinvest.kz",
+      "country": "Казахстан",
+      "domain": "homeinvest.kz",
+      "names": [
+        "Home Invest"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|adalestate.kz",
+      "country": "Казахстан",
+      "domain": "adalestate.kz",
+      "names": [
+        "Adal Estate"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|eurasia01.kz",
+      "country": "Казахстан",
+      "domain": "eurasia01.kz",
+      "names": [
+        "Агентство недвижимости Евразия",
+        "Евразия"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|almadom.kz",
+      "country": "Казахстан",
+      "domain": "almadom.kz",
+      "names": [
+        "АлмаДом"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|hata.kz",
+      "country": "Казахстан",
+      "domain": "hata.kz",
+      "names": [
+        "Hata.kz"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|century21.kz",
+      "country": "Казахстан",
+      "domain": "century21.kz",
+      "names": [
+        "CENTURY 21 Kazakhstan"
+      ],
+      "cities": [
+        "Алматы/Астана"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|bi.group",
+      "country": "Казахстан",
+      "domain": "bi.group",
+      "names": [
+        "BI Group Real Estate"
+      ],
+      "cities": [
+        "Астана/Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|wse.am",
+      "country": "Армения",
+      "domain": "wse.am",
+      "names": [
+        "WSE.AM"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|sievn.am",
+      "country": "Армения",
+      "domain": "sievn.am",
+      "names": [
+        "SIEVN"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|yerevanrealty.am",
+      "country": "Армения",
+      "domain": "yerevanrealty.am",
+      "names": [
+        "Yerevan Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|estate.am",
+      "country": "Армения",
+      "domain": "estate.am",
+      "names": [
+        "Estate.am"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|primerealty.am",
+      "country": "Армения",
+      "domain": "primerealty.am",
+      "names": [
+        "Prime Realty Armenia"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|tuntun.am",
+      "country": "Армения",
+      "domain": "tuntun.am",
+      "names": [
+        "Tuntun Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|agreement.uz",
+      "country": "Узбекистан",
+      "domain": "agreement.uz",
+      "names": [
+        "Agreement"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|klyuchi.uz",
+      "country": "Узбекистан",
+      "domain": "klyuchi.uz",
+      "names": [
+        "Ключи Ташкента"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|tencorp.uz",
+      "country": "Узбекистан",
+      "domain": "tencorp.uz",
+      "names": [
+        "TENCORP"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|uybor.uz",
+      "country": "Узбекистан",
+      "domain": "uybor.uz",
+      "names": [
+        "Uybor",
+        "Uybor.uz"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|imorat.uz",
+      "country": "Узбекистан",
+      "domain": "imorat.uz",
+      "names": [
+        "Imorat"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|guzal.uz",
+      "country": "Узбекистан",
+      "domain": "guzal.uz",
+      "names": [
+        "Guzal Real Estate"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|centralrealty.uz",
+      "country": "Узбекистан",
+      "domain": "centralrealty.uz",
+      "names": [
+        "Central Realty"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|ararat-realty.am",
+      "country": "Армения",
+      "domain": "ararat-realty.am",
+      "names": [
+        "Ararat Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|tatevrealty.am",
+      "country": "Армения",
+      "domain": "tatevrealty.am",
+      "names": [
+        "Tatev Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|royalestate.kz",
+      "country": "Казахстан",
+      "domain": "royalestate.kz",
+      "names": [
+        "Royal Estate Kazakhstan"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|stilnydom.by",
+      "country": "Belarus",
+      "domain": "stilnydom.by",
+      "names": [
+        "Стильный дом"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|vivat-realt.by",
+      "country": "Belarus",
+      "domain": "vivat-realt.by",
+      "names": [
+        "Виват-риэлт"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/agencies-cis-verified.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|kluchi01.kz",
+      "country": "Казахстан",
+      "domain": "kluchi01.kz",
+      "names": [
+        "Ключи01.kz"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|decostagroup.kz",
+      "country": "Казахстан",
+      "domain": "decostagroup.kz",
+      "names": [
+        "De Costa Group"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|elate.am",
+      "country": "Армения",
+      "domain": "elate.am",
+      "names": [
+        "Elate"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|alex-r.am",
+      "country": "Армения",
+      "domain": "alex-r.am",
+      "names": [
+        "Alex-R"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|cascaderealty.am",
+      "country": "Армения",
+      "domain": "cascaderealty.am",
+      "names": [
+        "Cascade Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|myrealty.am",
+      "country": "Армения",
+      "domain": "myrealty.am",
+      "names": [
+        "MyRealty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|shahar.uz",
+      "country": "Узбекистан",
+      "domain": "shahar.uz",
+      "names": [
+        "Tashkent Realtor Group / ShahaR.Uz"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|krisha.kz",
+      "country": "Казахстан",
+      "domain": "krisha.kz",
+      "names": [
+        "Крыша"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|homsters.kz",
+      "country": "Казахстан",
+      "domain": "homsters.kz",
+      "names": [
+        "Homsters.kz"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|sothebysrealty.kz",
+      "country": "Казахстан",
+      "domain": "sothebysrealty.kz",
+      "names": [
+        "Kazakhstan Sotheby’s International Realty"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|firstrealty.kz",
+      "country": "Казахстан",
+      "domain": "firstrealty.kz",
+      "names": [
+        "First Realty Group"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|atameken-realty.kz",
+      "country": "Казахстан",
+      "domain": "atameken-realty.kz",
+      "names": [
+        "Atameken Real Estate"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|nikaestate.kz",
+      "country": "Казахстан",
+      "domain": "nikaestate.kz",
+      "names": [
+        "NIKA Estate"
+      ],
+      "cities": [
+        "Алматы"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|aviator-realty.kz",
+      "country": "Казахстан",
+      "domain": "aviator-realty.kz",
+      "names": [
+        "Aviator Real Estate"
+      ],
+      "cities": [
+        "Астана"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|qazaqstanrealty.kz",
+      "country": "Казахстан",
+      "domain": "qazaqstanrealty.kz",
+      "names": [
+        "Qazaqstan Realty"
+      ],
+      "cities": [
+        "Астана"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|a-realty.kz",
+      "country": "Казахстан",
+      "domain": "a-realty.kz",
+      "names": [
+        "A-Realty"
+      ],
+      "cities": [
+        "Шымкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Казахстан|zhilfond.kz",
+      "country": "Казахстан",
+      "domain": "zhilfond.kz",
+      "names": [
+        "Zhilfond"
+      ],
+      "cities": [
+        "Караганда"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|eliterealty.am",
+      "country": "Армения",
+      "domain": "eliterealty.am",
+      "names": [
+        "Elite Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|capitalrealty.am",
+      "country": "Армения",
+      "domain": "capitalrealty.am",
+      "names": [
+        "Capital Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|avangard-realty.am",
+      "country": "Армения",
+      "domain": "avangard-realty.am",
+      "names": [
+        "Avangard Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|smartrealty.am",
+      "country": "Армения",
+      "domain": "smartrealty.am",
+      "names": [
+        "Smart Realty"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Армения|imot.am",
+      "country": "Армения",
+      "domain": "imot.am",
+      "names": [
+        "Imot.am"
+      ],
+      "cities": [
+        "Ереван"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|domtut.uz",
+      "country": "Узбекистан",
+      "domain": "domtut.uz",
+      "names": [
+        "Domtut.uz"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|uyjoy.uz",
+      "country": "Узбекистан",
+      "domain": "uyjoy.uz",
+      "names": [
+        "Uyjoy.uz"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Узбекистан|newhouse.uz",
+      "country": "Узбекистан",
+      "domain": "newhouse.uz",
+      "names": [
+        "New House Real Estate"
+      ],
+      "cities": [
+        "Ташкент"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|megapolis.by",
+      "country": "Belarus",
+      "domain": "megapolis.by",
+      "names": [
+        "Мегаполис"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|rieltcafe.by",
+      "country": "Belarus",
+      "domain": "rieltcafe.by",
+      "names": [
+        "РиэлтКафе"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|brest.etagi.com",
+      "country": "Belarus",
+      "domain": "brest.etagi.com",
+      "names": [
+        "Агентство недвижимости Этажи"
+      ],
+      "cities": [
+        "Брест"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|atlantm.by",
+      "country": "Belarus",
+      "domain": "atlantm.by",
+      "names": [
+        "Атлант-М Недвижимость"
+      ],
+      "cities": [
+        "Минск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|vashrieltor.by",
+      "country": "Belarus",
+      "domain": "vashrieltor.by",
+      "names": [
+        "Ваш риэлтор"
+      ],
+      "cities": [
+        "Гомель"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Belarus|realtyshop.by",
+      "country": "Belarus",
+      "domain": "realtyshop.by",
+      "names": [
+        "Магазин недвижимости"
+      ],
+      "cities": [
+        "Витебск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-cis-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|miel.ru",
+      "country": "Russia",
+      "domain": "miel.ru",
+      "names": [
+        "МИЭЛЬ"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|incom.ru",
+      "country": "Russia",
+      "domain": "incom.ru",
+      "names": [
+        "ИНКОМ-Недвижимость"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|best-realty.ru",
+      "country": "Russia",
+      "domain": "best-realty.ru",
+      "names": [
+        "БЕСТ-Недвижимость"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|metrium.ru",
+      "country": "Russia",
+      "domain": "metrium.ru",
+      "names": [
+        "Метриум"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|bonton.ru",
+      "country": "Russia",
+      "domain": "bonton.ru",
+      "names": [
+        "Бон Тон",
+        "БОН ТОН"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|ndv.ru",
+      "country": "Russia",
+      "domain": "ndv.ru",
+      "names": [
+        "НДВ"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|azbuka.ru",
+      "country": "Russia",
+      "domain": "azbuka.ru",
+      "names": [
+        "Азбука Жилья"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|intermark.ru",
+      "country": "Russia",
+      "domain": "intermark.ru",
+      "names": [
+        "Intermark Real Estate"
+      ],
+      "cities": [
+        "Москва"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|kalinka-realty.ru",
+      "country": "Russia",
+      "domain": "kalinka-realty.ru",
+      "names": [
+        "Kalinka Realty"
+      ],
+      "cities": [
+        "Москва"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|whitewill.ru",
+      "country": "Russia",
+      "domain": "whitewill.ru",
+      "names": [
+        "Whitewill"
+      ],
+      "cities": [
+        "Москва"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|pointestate.ru",
+      "country": "Russia",
+      "domain": "pointestate.ru",
+      "names": [
+        "Point Estate"
+      ],
+      "cities": [
+        "Москва"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|tranio.ru",
+      "country": "Russia",
+      "domain": "tranio.ru",
+      "names": [
+        "Tranio"
+      ],
+      "cities": [
+        "Москва"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|spb.etagi.com",
+      "country": "Russia",
+      "domain": "spb.etagi.com",
+      "names": [
+        "Этажи"
+      ],
+      "cities": [
+        "Санкт-Петербург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|advecs.com",
+      "country": "Russia",
+      "domain": "advecs.com",
+      "names": [
+        "Адвекс"
+      ],
+      "cities": [
+        "Санкт-Петербург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|pn.ru",
+      "country": "Russia",
+      "domain": "pn.ru",
+      "names": [
+        "Петербургская Недвижимость"
+      ],
+      "cities": [
+        "Санкт-Петербург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|bekar.ru",
+      "country": "Russia",
+      "domain": "bekar.ru",
+      "names": [
+        "Бекар"
+      ],
+      "cities": [
+        "Санкт-Петербург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|an-3.ru",
+      "country": "Russia",
+      "domain": "an-3.ru",
+      "names": [
+        "Александр Недвижимость"
+      ],
+      "cities": [
+        "Санкт-Петербург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|novosel.ru",
+      "country": "Russia",
+      "domain": "novosel.ru",
+      "names": [
+        "Новосёл"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|jilfond.ru",
+      "country": "Russia",
+      "domain": "jilfond.ru",
+      "names": [
+        "ЖИЛФОНД"
+      ],
+      "cities": [
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|perspektiva24.com",
+      "country": "Russia",
+      "domain": "perspektiva24.com",
+      "names": [
+        "Перспектива24"
+      ],
+      "cities": [
+        "Казань"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|flatestate.ru",
+      "country": "Russia",
+      "domain": "flatestate.ru",
+      "names": [
+        "ФЛЭТ"
+      ],
+      "cities": [
+        "Казань"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|аякс-рф.рф",
+      "country": "Russia",
+      "domain": "аякс-рф.рф",
+      "names": [
+        "АЯКС"
+      ],
+      "cities": [
+        "Краснодар"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|landlord.ru",
+      "country": "Russia",
+      "domain": "landlord.ru",
+      "names": [
+        "Лендлорд"
+      ],
+      "cities": [
+        "Ростов-на-Дону"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|samoletplus.ru",
+      "country": "Russia",
+      "domain": "samoletplus.ru",
+      "names": [
+        "Самолет Плюс"
+      ],
+      "cities": [
+        "Москва",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|rks-realty.ru",
+      "country": "Russia",
+      "domain": "rks-realty.ru",
+      "names": [
+        "РКС-Недвижимость"
+      ],
+      "cities": [
+        "Сочи"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|nahodka.ru",
+      "country": "Russia",
+      "domain": "nahodka.ru",
+      "names": [
+        "АН «Находка»"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|neworientir.ru",
+      "country": "Russia",
+      "domain": "neworientir.ru",
+      "names": [
+        "Новый Ориентир"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|bn1.ru",
+      "country": "Russia",
+      "domain": "bn1.ru",
+      "names": [
+        "Бюро недвижимости №1"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|domnedv.ru",
+      "country": "Russia",
+      "domain": "domnedv.ru",
+      "names": [
+        "Дом Недвижимости"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|bk-n.ru",
+      "country": "Russia",
+      "domain": "bk-n.ru",
+      "names": [
+        "БК_Недвижимость"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|centralnoe.ru",
+      "country": "Russia",
+      "domain": "centralnoe.ru",
+      "names": [
+        "Центральное агентство недвижимости"
+      ],
+      "cities": [
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|granovit.ru",
+      "country": "Russia",
+      "domain": "granovit.ru",
+      "names": [
+        "Грановит"
+      ],
+      "cities": [
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|goroda.pro",
+      "country": "Russia",
+      "domain": "goroda.pro",
+      "names": [
+        "Города"
+      ],
+      "cities": [
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|bigcity-nsk.ru",
+      "country": "Russia",
+      "domain": "bigcity-nsk.ru",
+      "names": [
+        "Агентство недвижимости «Большой город»"
+      ],
+      "cities": [
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|vladis.ru",
+      "country": "Russia",
+      "domain": "vladis.ru",
+      "names": [
+        "Владис"
+      ],
+      "cities": [
+        "Нижний Новгород",
+        "Краснодар"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|monolit-nn.ru",
+      "country": "Russia",
+      "domain": "monolit-nn.ru",
+      "names": [
+        "Монолит"
+      ],
+      "cities": [
+        "Нижний Новгород"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|goldkeynn.ru",
+      "country": "Russia",
+      "domain": "goldkeynn.ru",
+      "names": [
+        "Золотой ключик"
+      ],
+      "cities": [
+        "Нижний Новгород"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|vzt.ru",
+      "country": "Russia",
+      "domain": "vzt.ru",
+      "names": [
+        "Визит"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|megapolis-samara.ru",
+      "country": "Russia",
+      "domain": "megapolis-samara.ru",
+      "names": [
+        "Мегаполис"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|rio-lux.ru",
+      "country": "Russia",
+      "domain": "rio-lux.ru",
+      "names": [
+        "Рио-Люкс"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvartirny-vopros.ru",
+      "country": "Russia",
+      "domain": "kvartirny-vopros.ru",
+      "names": [
+        "Квартирный вопрос"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|chfc.ru",
+      "country": "Russia",
+      "domain": "chfc.ru",
+      "names": [
+        "Черноморская финансовая компания"
+      ],
+      "cities": [
+        "Краснодар"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|grc-sochi.ru",
+      "country": "Russia",
+      "domain": "grc-sochi.ru",
+      "names": [
+        "Городской риэлторский центр"
+      ],
+      "cities": [
+        "Сочи"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|rost-sochi.ru",
+      "country": "Russia",
+      "domain": "rost-sochi.ru",
+      "names": [
+        "Рост Недвижимость"
+      ],
+      "cities": [
+        "Сочи"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|donmt.ru",
+      "country": "Russia",
+      "domain": "donmt.ru",
+      "names": [
+        "Дон-МТ",
+        "ДОН-МТ"
+      ],
+      "cities": [
+        "Ростов-на-Дону"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|newrostov.ru",
+      "country": "Russia",
+      "domain": "newrostov.ru",
+      "names": [
+        "Новый Ростов"
+      ],
+      "cities": [
+        "Ростов-на-Дону"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|atlas-rnd.ru",
+      "country": "Russia",
+      "domain": "atlas-rnd.ru",
+      "names": [
+        "Атлас мира недвижимости"
+      ],
+      "cities": [
+        "Ростов-на-Дону"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|ayax.ru",
+      "country": "Russia",
+      "domain": "ayax.ru",
+      "names": [
+        "Аякс",
+        "АЯКС"
+      ],
+      "cities": [
+        "Краснодар"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|krasava-realty.ru",
+      "country": "Russia",
+      "domain": "krasava-realty.ru",
+      "names": [
+        "Красава"
+      ],
+      "cities": [
+        "Краснодар"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|askom.io",
+      "country": "Russia",
+      "domain": "askom.io",
+      "names": [
+        "Аском"
+      ],
+      "cities": [
+        "Владивосток"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvartirant.plus",
+      "country": "Russia",
+      "domain": "kvartirant.plus",
+      "names": [
+        "Квартирант Плюс"
+      ],
+      "cities": [
+        "Владивосток"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|vershina-dv.ru",
+      "country": "Russia",
+      "domain": "vershina-dv.ru",
+      "names": [
+        "Вершина"
+      ],
+      "cities": [
+        "Владивосток"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|arevera.ru",
+      "country": "Russia",
+      "domain": "arevera.ru",
+      "names": [
+        "АРЕВЕРА-Недвижимость"
+      ],
+      "cities": [
+        "Красноярск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|granta24.ru",
+      "country": "Russia",
+      "domain": "granta24.ru",
+      "names": [
+        "ГРАНТА-недвижимость"
+      ],
+      "cities": [
+        "Красноярск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|krsk.jilfond.ru",
+      "country": "Russia",
+      "domain": "krsk.jilfond.ru",
+      "names": [
+        "Жилфонд"
+      ],
+      "cities": [
+        "Красноярск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|an-rakurs.ru",
+      "country": "Russia",
+      "domain": "an-rakurs.ru",
+      "names": [
+        "Центр недвижимости Ракурс"
+      ],
+      "cities": [
+        "Пермь"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|noviedoma24.ru",
+      "country": "Russia",
+      "domain": "noviedoma24.ru",
+      "names": [
+        "Новые Дома"
+      ],
+      "cities": [
+        "Пермь"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|an-good.ru",
+      "country": "Russia",
+      "domain": "an-good.ru",
+      "names": [
+        "АН GOOD"
+      ],
+      "cities": [
+        "Пермь"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|ledon.ru",
+      "country": "Russia",
+      "domain": "ledon.ru",
+      "names": [
+        "ЛЕДОН"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|avestaomsk.ru",
+      "country": "Russia",
+      "domain": "avestaomsk.ru",
+      "names": [
+        "АВЕСТА"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvartservice.ru",
+      "country": "Russia",
+      "domain": "kvartservice.ru",
+      "names": [
+        "Квартсервис"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|doverie-omsk.ru",
+      "country": "Russia",
+      "domain": "doverie-omsk.ru",
+      "names": [
+        "Доверие"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|stan-ufa.ru",
+      "country": "Russia",
+      "domain": "stan-ufa.ru",
+      "names": [
+        "СТАН"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|adresat.pro",
+      "country": "Russia",
+      "domain": "adresat.pro",
+      "names": [
+        "Адресат"
+      ],
+      "cities": [
+        "Волгоград"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|jivem-doma.ru",
+      "country": "Russia",
+      "domain": "jivem-doma.ru",
+      "names": [
+        "Живем дома"
+      ],
+      "cities": [
+        "Волгоград"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|rcn38.ru",
+      "country": "Russia",
+      "domain": "rcn38.ru",
+      "names": [
+        "Региональный центр недвижимости"
+      ],
+      "cities": [
+        "Иркутск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|ndv72.ru",
+      "country": "Russia",
+      "domain": "ndv72.ru",
+      "names": [
+        "Панорама недвижимости"
+      ],
+      "cities": [
+        "Тюмень"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|nov-adres.ru",
+      "country": "Russia",
+      "domain": "nov-adres.ru",
+      "names": [
+        "Новый адрес"
+      ],
+      "cities": [
+        "Воронеж"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|snsota.ru",
+      "country": "Russia",
+      "domain": "snsota.ru",
+      "names": [
+        "СОТА",
+        "Сота"
+      ],
+      "cities": [
+        "Воронеж"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|krainov-vrn.ru",
+      "country": "Russia",
+      "domain": "krainov-vrn.ru",
+      "names": [
+        "Крайнов"
+      ],
+      "cities": [
+        "Воронеж"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|rss-rielt.ru",
+      "country": "Russia",
+      "domain": "rss-rielt.ru",
+      "names": [
+        "РСС"
+      ],
+      "cities": [
+        "Воронеж"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|orbita72.com",
+      "country": "Russia",
+      "domain": "orbita72.com",
+      "names": [
+        "Орбита 72"
+      ],
+      "cities": [
+        "Тюмень"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|newflat72.ru",
+      "country": "Russia",
+      "domain": "newflat72.ru",
+      "names": [
+        "Центр недвижимости"
+      ],
+      "cities": [
+        "Тюмень"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|newgorod.ru",
+      "country": "Russia",
+      "domain": "newgorod.ru",
+      "names": [
+        "Новый Город"
+      ],
+      "cities": [
+        "Тюмень"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|vbnvrn.ru",
+      "country": "Russia",
+      "domain": "vbnvrn.ru",
+      "names": [
+        "ВБН"
+      ],
+      "cities": [
+        "Воронеж"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|pomestye.com",
+      "country": "Russia",
+      "domain": "pomestye.com",
+      "names": [
+        "Поместье"
+      ],
+      "cities": [
+        "Иркутск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|an4k.ru",
+      "country": "Russia",
+      "domain": "an4k.ru",
+      "names": [
+        "4 КОМНАТЫ"
+      ],
+      "cities": [
+        "Воронеж"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|citadel-a.ru",
+      "country": "Russia",
+      "domain": "citadel-a.ru",
+      "names": [
+        "Цитадель-А"
+      ],
+      "cities": [
+        "Саратов"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|vektor.life",
+      "country": "Russia",
+      "domain": "vektor.life",
+      "names": [
+        "Вектор-Недвижимость"
+      ],
+      "cities": [
+        "Ярославль"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|vysotsky.estate",
+      "country": "Russia",
+      "domain": "vysotsky.estate",
+      "names": [
+        "Высоцкий Эстейт"
+      ],
+      "cities": [
+        "Хабаровск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|novostrojki-orenburga.ru",
+      "country": "Russia",
+      "domain": "novostrojki-orenburga.ru",
+      "names": [
+        "Квадрат"
+      ],
+      "cities": [
+        "Оренбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|1gbn.ru",
+      "country": "Russia",
+      "domain": "1gbn.ru",
+      "names": [
+        "1-я Гильдия недвижимости"
+      ],
+      "cities": [
+        "Оренбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|rusned.ru",
+      "country": "Russia",
+      "domain": "rusned.ru",
+      "names": [
+        "Руснедвижимость"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|hlgrad43.ru",
+      "country": "Russia",
+      "domain": "hlgrad43.ru",
+      "names": [
+        "Хлынов Град"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|regburokirov.ru",
+      "country": "Russia",
+      "domain": "regburokirov.ru",
+      "names": [
+        "Регистрационное бюро"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|business-pravo.ru",
+      "country": "Russia",
+      "domain": "business-pravo.ru",
+      "names": [
+        "Бизнес и право"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|lyudipro.ru",
+      "country": "Russia",
+      "domain": "lyudipro.ru",
+      "names": [
+        "Люди PRO Киров"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|globus43.ru",
+      "country": "Russia",
+      "domain": "globus43.ru",
+      "names": [
+        "Глобус Недвижимость"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|bonus43.ru",
+      "country": "Russia",
+      "domain": "bonus43.ru",
+      "names": [
+        "АН Бонус"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|centerplus43.ru",
+      "country": "Russia",
+      "domain": "centerplus43.ru",
+      "names": [
+        "Центр Плюс"
+      ],
+      "cities": [
+        "Киров"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|prospekt-nedvizhimost.ru",
+      "country": "Russia",
+      "domain": "prospekt-nedvizhimost.ru",
+      "names": [
+        "Проспект-Недвижимость"
+      ],
+      "cities": [
+        "Барнаул"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|ogni-samara.ru",
+      "country": "Russia",
+      "domain": "ogni-samara.ru",
+      "names": [
+        "Огни Самары"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|afina-center.ru",
+      "country": "Russia",
+      "domain": "afina-center.ru",
+      "names": [
+        "АФИНА-ЦЕНТР"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|domnaladoni.ru",
+      "country": "Russia",
+      "domain": "domnaladoni.ru",
+      "names": [
+        "ДОМ НА ЛАДОНИ"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|amrita63.ru",
+      "country": "Russia",
+      "domain": "amrita63.ru",
+      "names": [
+        "Амрита"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|an5zvezd.ru",
+      "country": "Russia",
+      "domain": "an5zvezd.ru",
+      "names": [
+        "Пять Звезд"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-batch-02.csv"
+      ]
+    },
+    {
+      "key": "Russia|anpartnery.ru",
+      "country": "Russia",
+      "domain": "anpartnery.ru",
+      "names": [
+        "ПАРТНЁРЫ"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|xn--63-6kch5asvnds6d4c.xn--p1ai",
+      "country": "Russia",
+      "domain": "xn--63-6kch5asvnds6d4c.xn--p1ai",
+      "names": [
+        "Ваш риэлтор"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|newhouseufa.ru",
+      "country": "Russia",
+      "domain": "newhouseufa.ru",
+      "names": [
+        "Новый дом"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|an-stolica.ru",
+      "country": "Russia",
+      "domain": "an-stolica.ru",
+      "names": [
+        "АН Столица"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|arkada-realty.ru",
+      "country": "Russia",
+      "domain": "arkada-realty.ru",
+      "names": [
+        "Аркада"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|megapolisufa.ru",
+      "country": "Russia",
+      "domain": "megapolisufa.ru",
+      "names": [
+        "Мегаполис"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|alternativa-ufa.ru",
+      "country": "Russia",
+      "domain": "alternativa-ufa.ru",
+      "names": [
+        "Альтернатива"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|ufa.etagi.com",
+      "country": "Russia",
+      "domain": "ufa.etagi.com",
+      "names": [
+        "Этажи"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|schastliviyadres.ru",
+      "country": "Russia",
+      "domain": "schastliviyadres.ru",
+      "names": [
+        "Счастливый адрес"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|newdom96.ru",
+      "country": "Russia",
+      "domain": "newdom96.ru",
+      "names": [
+        "Новый дом"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|atlasrealty.ru",
+      "country": "Russia",
+      "domain": "atlasrealty.ru",
+      "names": [
+        "Атлас недвижимости"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|dobrodel.ru",
+      "country": "Russia",
+      "domain": "dobrodel.ru",
+      "names": [
+        "Добродел"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|korifei.ru",
+      "country": "Russia",
+      "domain": "korifei.ru",
+      "names": [
+        "Корифей"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvadratny-metr.ru",
+      "country": "Russia",
+      "domain": "kvadratny-metr.ru",
+      "names": [
+        "Квадратный метр"
+      ],
+      "cities": [
+        "Казань"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|an-klyuch.ru",
+      "country": "Russia",
+      "domain": "an-klyuch.ru",
+      "names": [
+        "Ключ"
+      ],
+      "cities": [
+        "Казань"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|premier-realty.ru",
+      "country": "Russia",
+      "domain": "premier-realty.ru",
+      "names": [
+        "Премьер"
+      ],
+      "cities": [
+        "Казань",
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|domino-kazan.ru",
+      "country": "Russia",
+      "domain": "domino-kazan.ru",
+      "names": [
+        "Домино"
+      ],
+      "cities": [
+        "Казань"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|svoi-dom74.ru",
+      "country": "Russia",
+      "domain": "svoi-dom74.ru",
+      "names": [
+        "Свой дом"
+      ],
+      "cities": [
+        "Челябинск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|kluchi74.ru",
+      "country": "Russia",
+      "domain": "kluchi74.ru",
+      "names": [
+        "Ключевые люди"
+      ],
+      "cities": [
+        "Челябинск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|alfareal.ru",
+      "country": "Russia",
+      "domain": "alfareal.ru",
+      "names": [
+        "Альфа"
+      ],
+      "cities": [
+        "Пермь"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|etagi.com",
+      "country": "Russia",
+      "domain": "etagi.com",
+      "names": [
+        "Этажи"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|avito.ru",
+      "country": "Russia",
+      "domain": "avito.ru",
+      "names": [
+        "Авито Недвижимость"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|advecs.ru",
+      "country": "Russia",
+      "domain": "advecs.ru",
+      "names": [
+        "Адвекс"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|spbrealty.ru",
+      "country": "Russia",
+      "domain": "spbrealty.ru",
+      "names": [
+        "Петербургская Недвижимость"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|yugstroyinvest.ru",
+      "country": "Russia",
+      "domain": "yugstroyinvest.ru",
+      "names": [
+        "ЮСИ"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvsspb.ru",
+      "country": "Russia",
+      "domain": "kvsspb.ru",
+      "names": [
+        "КВС"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|ask-realestate.ru",
+      "country": "Russia",
+      "domain": "ask-realestate.ru",
+      "names": [
+        "АСК"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|m16.ru",
+      "country": "Russia",
+      "domain": "m16.ru",
+      "names": [
+        "М16"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|cn.ru",
+      "country": "Russia",
+      "domain": "cn.ru",
+      "names": [
+        "Центр Недвижимости"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|kayan.ru",
+      "country": "Russia",
+      "domain": "kayan.ru",
+      "names": [
+        "Каян"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv"
+      ]
+    },
+    {
+      "key": "Russia|riolux.ru",
+      "country": "Russia",
+      "domain": "riolux.ru",
+      "names": [
+        "Рио-Люкс",
+        "Риолюкс"
+      ],
+      "cities": [
+        "Сочи",
+        "Краснодар",
+        "Новороссийск",
+        "Анапа",
+        "Геленджик",
+        "Казань",
+        "Калининград",
+        "Ростов-на-Дону",
+        "Екатеринбург",
+        "Новосибирск",
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/agencies-russia-pilot.csv",
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv"
+      ]
+    },
+    {
+      "key": "Russia|deltainvest-ufa.ru",
+      "country": "Russia",
+      "domain": "deltainvest-ufa.ru",
+      "names": [
+        "Дельта Инвест"
+      ],
+      "cities": [
+        "Уфа"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv"
+      ]
+    },
+    {
+      "key": "Russia|rieltconsult.ru",
+      "country": "Russia",
+      "domain": "rieltconsult.ru",
+      "names": [
+        "РиэлтКонсалт"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|dial93.ru",
+      "country": "Russia",
+      "domain": "dial93.ru",
+      "names": [
+        "Диал"
+      ],
+      "cities": [
+        "Екатеринбург"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|realtitul.ru",
+      "country": "Russia",
+      "domain": "realtitul.ru",
+      "names": [
+        "Титул"
+      ],
+      "cities": [
+        "Ростов-на-Дону"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|nlre.ru",
+      "country": "Russia",
+      "domain": "nlre.ru",
+      "names": [
+        "Новая жизнь"
+      ],
+      "cities": [
+        "Самара"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|giperdom.net",
+      "country": "Russia",
+      "domain": "giperdom.net",
+      "names": [
+        "ГиперДОМ"
+      ],
+      "cities": [
+        "Казань"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|centroom.ru",
+      "country": "Russia",
+      "domain": "centroom.ru",
+      "names": [
+        "CentRoom"
+      ],
+      "cities": [
+        "Казань"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|bsfc.com",
+      "country": "Russia",
+      "domain": "bsfc.com",
+      "names": [
+        "ЧФК недвижимость"
+      ],
+      "cities": [
+        "Краснодар"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|nayug24.ru",
+      "country": "Russia",
+      "domain": "nayug24.ru",
+      "names": [
+        "На ЮГ"
+      ],
+      "cities": [
+        "Краснодар"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|continent-realty.com",
+      "country": "Russia",
+      "domain": "continent-realty.com",
+      "names": [
+        "Континент"
+      ],
+      "cities": [
+        "Ростов-на-Дону"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|almeriy.ru",
+      "country": "Russia",
+      "domain": "almeriy.ru",
+      "names": [
+        "Альмерия"
+      ],
+      "cities": [
+        "Ростов-на-Дону"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|anteinn.ru",
+      "country": "Russia",
+      "domain": "anteinn.ru",
+      "names": [
+        "Антей"
+      ],
+      "cities": [
+        "Нижний Новгород"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|donreal.ru",
+      "country": "Russia",
+      "domain": "donreal.ru",
+      "names": [
+        "Донских Недвижимость"
+      ],
+      "cities": [
+        "Нижний Новгород"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|restann.ru",
+      "country": "Russia",
+      "domain": "restann.ru",
+      "names": [
+        "РестА-НН"
+      ],
+      "cities": [
+        "Нижний Новгород"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv"
+      ]
+    },
+    {
+      "key": "Russia|an-hl.ru",
+      "country": "Russia",
+      "domain": "an-hl.ru",
+      "names": [
+        "Хайлайт"
+      ],
+      "cities": [
+        "Нижний Новгород"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv"
+      ]
+    },
+    {
+      "key": "Russia|vivatnn.ru",
+      "country": "Russia",
+      "domain": "vivatnn.ru",
+      "names": [
+        "Виват-Риэлти"
+      ],
+      "cities": [
+        "Нижний Новгород"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv"
+      ]
+    },
+    {
+      "key": "Russia|tvoydom59.ru",
+      "country": "Russia",
+      "domain": "tvoydom59.ru",
+      "names": [
+        "Твой дом"
+      ],
+      "cities": [
+        "Пермь"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|omskrs.ru",
+      "country": "Russia",
+      "domain": "omskrs.ru",
+      "names": [
+        "Риэлт Сервис Омск"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv",
+        "project-bible/mira/sales/russia-launch-50-seed.csv"
+      ]
+    },
+    {
+      "key": "Russia|bogdanov-rielt.ru",
+      "country": "Russia",
+      "domain": "bogdanov-rielt.ru",
+      "names": [
+        "BOGDANOV-RIELT"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv"
+      ]
+    },
+    {
+      "key": "Russia|ecn72.ru",
+      "country": "Russia",
+      "domain": "ecn72.ru",
+      "names": [
+        "Единый Центр Недвижимости"
+      ],
+      "cities": [
+        "Тюмень"
+      ],
+      "sources": [
+        "project-bible/mira/data/mega-classified.csv",
+        "project-bible/mira/data/russia-agencies-seed-01.csv"
+      ]
+    },
+    {
+      "key": "Russia|vdome-estate.ru",
+      "country": "Russia",
+      "domain": "vdome-estate.ru",
+      "names": [
+        "ВДОМЕ"
+      ],
+      "cities": [
+        "Калининград"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|severvn.ru",
+      "country": "Russia",
+      "domain": "severvn.ru",
+      "names": [
+        "СЕВЕР"
+      ],
+      "cities": [
+        "Великий Новгород"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|kurskmonolit.ru",
+      "country": "Russia",
+      "domain": "kurskmonolit.ru",
+      "names": [
+        "Монолит"
+      ],
+      "cities": [
+        "Курск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|grant-dom.ru",
+      "country": "Russia",
+      "domain": "grant-dom.ru",
+      "names": [
+        "Грант"
+      ],
+      "cities": [
+        "Белгород"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|aflat.online",
+      "country": "Russia",
+      "domain": "aflat.online",
+      "names": [
+        "AFLAT"
+      ],
+      "cities": [
+        "Владивосток"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|aurum70.ru",
+      "country": "Russia",
+      "domain": "aurum70.ru",
+      "names": [
+        "Аурум"
+      ],
+      "cities": [
+        "Томск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|izh-grand.ru",
+      "country": "Russia",
+      "domain": "izh-grand.ru",
+      "names": [
+        "Гранд"
+      ],
+      "cities": [
+        "Ижевск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvartal53.ru",
+      "country": "Russia",
+      "domain": "kvartal53.ru",
+      "names": [
+        "КВАРТАЛ"
+      ],
+      "cities": [
+        "Великий Новгород"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|kirsh58.ru",
+      "country": "Russia",
+      "domain": "kirsh58.ru",
+      "names": [
+        "КИРШ"
+      ],
+      "cities": [
+        "Пенза"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|proestate.global",
+      "country": "Russia",
+      "domain": "proestate.global",
+      "names": [
+        "PRO ESTATE"
+      ],
+      "cities": [
+        "Владивосток"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|garant53.ru",
+      "country": "Russia",
+      "domain": "garant53.ru",
+      "names": [
+        "ГАРАНТ"
+      ],
+      "cities": [
+        "Великий Новгород"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|grand-rzn.ru",
+      "country": "Russia",
+      "domain": "grand-rzn.ru",
+      "names": [
+        "Гранд-Н"
+      ],
+      "cities": [
+        "Рязань"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|premier-vl.ru",
+      "country": "Russia",
+      "domain": "premier-vl.ru",
+      "names": [
+        "PREMIER"
+      ],
+      "cities": [
+        "Владивосток"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|proestate60.ru",
+      "country": "Russia",
+      "domain": "proestate60.ru",
+      "names": [
+        "Pro Estate"
+      ],
+      "cities": [
+        "Псков"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|victory62.org",
+      "country": "Russia",
+      "domain": "victory62.org",
+      "names": [
+        "Виктори"
+      ],
+      "cities": [
+        "Рязань"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|sever-estate.ru",
+      "country": "Russia",
+      "domain": "sever-estate.ru",
+      "names": [
+        "SEVER ESTATE"
+      ],
+      "cities": [
+        "Красноярск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|miard.ru",
+      "country": "Russia",
+      "domain": "miard.ru",
+      "names": [
+        "Миард"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|progressdom.ru",
+      "country": "Russia",
+      "domain": "progressdom.ru",
+      "names": [
+        "Прогресс"
+      ],
+      "cities": [
+        "Йошкар-Ола"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|an-olimp.com",
+      "country": "Russia",
+      "domain": "an-olimp.com",
+      "names": [
+        "Олимп"
+      ],
+      "cities": [
+        "Вологда"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|expert-an.com",
+      "country": "Russia",
+      "domain": "expert-an.com",
+      "names": [
+        "Эксперт"
+      ],
+      "cities": [
+        "Новокузнецк"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|lgorod.com",
+      "country": "Russia",
+      "domain": "lgorod.com",
+      "names": [
+        "Любимый город"
+      ],
+      "cities": [
+        "Новокузнецк"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|morskoy-slon.ru",
+      "country": "Russia",
+      "domain": "morskoy-slon.ru",
+      "names": [
+        "Морской слон"
+      ],
+      "cities": [
+        "Архангельск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|arkada-style.ru",
+      "country": "Russia",
+      "domain": "arkada-style.ru",
+      "names": [
+        "Аркада-Стиль"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|realtor-omsk.com",
+      "country": "Russia",
+      "domain": "realtor-omsk.com",
+      "names": [
+        "Милана-Риэлт"
+      ],
+      "cities": [
+        "Омск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|tvoimetry.com",
+      "country": "Russia",
+      "domain": "tvoimetry.com",
+      "names": [
+        "Твои метры"
+      ],
+      "cities": [
+        "Волгоград"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|961-961.ru",
+      "country": "Russia",
+      "domain": "961-961.ru",
+      "names": [
+        "Центральное агентство недвижимости"
+      ],
+      "cities": [
+        "Рязань"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvadratdom.com",
+      "country": "Russia",
+      "domain": "kvadratdom.com",
+      "names": [
+        "Квадрат"
+      ],
+      "cities": [
+        "Красноярск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|fregat.online",
+      "country": "Russia",
+      "domain": "fregat.online",
+      "names": [
+        "Фрегат"
+      ],
+      "cities": [
+        "Красноярск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|goodhouse51.ru",
+      "country": "Russia",
+      "domain": "goodhouse51.ru",
+      "names": [
+        "Good House"
+      ],
+      "cities": [
+        "Мурманск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|city-g.ru",
+      "country": "Russia",
+      "domain": "city-g.ru",
+      "names": [
+        "Сити-Групп"
+      ],
+      "cities": [
+        "Орск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|domtver.org",
+      "country": "Russia",
+      "domain": "domtver.org",
+      "names": [
+        "ДомТверь"
+      ],
+      "cities": [
+        "Тверь"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|welcome26.ru",
+      "country": "Russia",
+      "domain": "welcome26.ru",
+      "names": [
+        "Welcome"
+      ],
+      "cities": [
+        "Ставрополь"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|an64.ru",
+      "country": "Russia",
+      "domain": "an64.ru",
+      "names": [
+        "Империя"
+      ],
+      "cities": [
+        "Саратов"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|housegroup21.ru",
+      "country": "Russia",
+      "domain": "housegroup21.ru",
+      "names": [
+        "Агентство на Ярославской / HOUSE GROUP"
+      ],
+      "cities": [
+        "Чебоксары"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|antitan.ru",
+      "country": "Russia",
+      "domain": "antitan.ru",
+      "names": [
+        "ТИТАН Недвижимость"
+      ],
+      "cities": [
+        "Тверь"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|avega56.ru",
+      "country": "Russia",
+      "domain": "avega56.ru",
+      "names": [
+        "АВЕГА"
+      ],
+      "cities": [
+        "Оренбург"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|vibx.ru",
+      "country": "Russia",
+      "domain": "vibx.ru",
+      "names": [
+        "ViBx"
+      ],
+      "cities": [
+        "Липецк"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|riel-max.ru",
+      "country": "Russia",
+      "domain": "riel-max.ru",
+      "names": [
+        "РИЭЛ-МАКС"
+      ],
+      "cities": [
+        "Брянск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|kvartal68.ru",
+      "country": "Russia",
+      "domain": "kvartal68.ru",
+      "names": [
+        "Квартал"
+      ],
+      "cities": [
+        "Тамбов"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|bsnnedvizhimost.ru",
+      "country": "Russia",
+      "domain": "bsnnedvizhimost.ru",
+      "names": [
+        "БСН Недвижимость"
+      ],
+      "cities": [
+        "Брянск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|formula-agency.ru",
+      "country": "Russia",
+      "domain": "formula-agency.ru",
+      "names": [
+        "Формула"
+      ],
+      "cities": [
+        "Тюмень"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|adastra-kmv.ru",
+      "country": "Russia",
+      "domain": "adastra-kmv.ru",
+      "names": [
+        "ADASTRA"
+      ],
+      "cities": [
+        "КМВ / Ессентуки"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|horstrealty.ru",
+      "country": "Russia",
+      "domain": "horstrealty.ru",
+      "names": [
+        "ХОРСТ НЕДВИЖИМОСТЬ"
+      ],
+      "cities": [
+        "Ставрополь"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|pro-house.su",
+      "country": "Russia",
+      "domain": "pro-house.su",
+      "names": [
+        "PRO-HOUSE"
+      ],
+      "cities": [
+        "Южно-Сахалинск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|novoselov.net",
+      "country": "Russia",
+      "domain": "novoselov.net",
+      "names": [
+        "Новосёлов"
+      ],
+      "cities": [
+        "Саранск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|ervincom.ru",
+      "country": "Russia",
+      "domain": "ervincom.ru",
+      "names": [
+        "ЭРВИН"
+      ],
+      "cities": [
+        "Калининград"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|partners65.ru",
+      "country": "Russia",
+      "domain": "partners65.ru",
+      "names": [
+        "Партнеры"
+      ],
+      "cities": [
+        "Южно-Сахалинск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|600088.ru",
+      "country": "Russia",
+      "domain": "600088.ru",
+      "names": [
+        "АГЕНТСТВО № 1 ПСКОВ"
+      ],
+      "cities": [
+        "Псков"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|unsakh.ru",
+      "country": "Russia",
+      "domain": "unsakh.ru",
+      "names": [
+        "Управление недвижимостью"
+      ],
+      "cities": [
+        "Южно-Сахалинск"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Russia|новыйдомтула.рф",
+      "country": "Russia",
+      "domain": "новыйдомтула.рф",
+      "names": [
+        "Новый Дом"
+      ],
+      "cities": [
+        "Тула"
+      ],
+      "sources": [
+        "night/russia-agencies.csv"
+      ]
+    },
+    {
+      "key": "Belarus|часпик",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Час-Пик"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|лигаправанедвижимость",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Лига права – Недвижимость"
+      ],
+      "cities": [
+        "Gomel region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|central-borisov.by",
+      "country": "Belarus",
+      "domain": "central-borisov.by",
+      "names": [
+        "Центр недвижимости 24 на 7"
+      ],
+      "cities": [
+        "Borisov / Minsk region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|агентствомирнедвижимости",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Агентство Мир Недвижимости"
+      ],
+      "cities": [],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|bugrealt.by",
+      "country": "Belarus",
+      "domain": "bugrealt.by",
+      "names": [
+        "Бугриэлт"
+      ],
+      "cities": [
+        "Brest / Brest region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|королевскоежилье",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Королевское Жилье"
+      ],
+      "cities": [],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|osnova.by",
+      "country": "Belarus",
+      "domain": "osnova.by",
+      "names": [
+        "Сектор недвижимости Основа"
+      ],
+      "cities": [
+        "Gomel"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|aan.by",
+      "country": "Belarus",
+      "domain": "aan.by",
+      "names": [
+        "Абсолют Недвижимость"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|риэлтдомгрупп",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Риэлт дом групп"
+      ],
+      "cities": [
+        "Bobruisk / Mogilev region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|rieltor-bobr.by",
+      "country": "Belarus",
+      "domain": "rieltor-bobr.by",
+      "names": [
+        "АССИСТАНС ХЭЛС РИЭЛТ"
+      ],
+      "cities": [
+        "Bobruisk / Mogilev region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|артельнедвижимость",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Артель Недвижимость"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|экореал",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Экореал"
+      ],
+      "cities": [
+        "Minsk / Minsk region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|собственнаякрышаэстейт",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Собственная Крыша Эстейт"
+      ],
+      "cities": [
+        "Minsk / Minsk region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|агентствонедвижимостиметриум",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Агентство недвижимости Метриум"
+      ],
+      "cities": [],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|группакомпанийэксклюзив",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Группа компаний Эксклюзив"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|rcs-agency.by",
+      "country": "Belarus",
+      "domain": "rcs-agency.by",
+      "names": [
+        "Риэлтерский центр Столицы"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|мираваль",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Мираваль"
+      ],
+      "cities": [],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|дианэст",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "ДИАНЭСТ"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|kv-st.by",
+      "country": "Belarus",
+      "domain": "kv-st.by",
+      "names": [
+        "Квартиры Столицы"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|prospekt-rielt.by",
+      "country": "Belarus",
+      "domain": "prospekt-rielt.by",
+      "names": [
+        "Проспект Риэлт"
+      ],
+      "cities": [
+        "Novopolotsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|агентствонедвижимостиметражи",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Агентство недвижимости МЕТРАЖИ"
+      ],
+      "cities": [
+        "Mogilev"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|variant-zvd.pro",
+      "country": "Belarus",
+      "domain": "variant-zvd.pro",
+      "names": [
+        "Агентство недвижимости ВАРИАНТ"
+      ],
+      "cities": [],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|garantus.by",
+      "country": "Belarus",
+      "domain": "garantus.by",
+      "names": [
+        "Гарант успеха"
+      ],
+      "cities": [
+        "Brest"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|айкьюпропертигрупп",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Ай Кью Проперти Групп"
+      ],
+      "cities": [
+        "Minsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|пирмас",
+      "country": "Belarus",
+      "domain": "",
+      "names": [
+        "Пирмас"
+      ],
+      "cities": [],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|n-v.by",
+      "country": "Belarus",
+      "domain": "n-v.by",
+      "names": [
+        "Агентство Уют и К"
+      ],
+      "cities": [
+        "Vitebsk"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|g-k.by",
+      "country": "Belarus",
+      "domain": "g-k.by",
+      "names": [
+        "Агентство Золотой ключ"
+      ],
+      "cities": [],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|alef.by",
+      "country": "Belarus",
+      "domain": "alef.by",
+      "names": [
+        "Алеф Лайф"
+      ],
+      "cities": [
+        "Minsk / Zhodino"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|pakodangrodno.by",
+      "country": "Belarus",
+      "domain": "pakodangrodno.by",
+      "names": [
+        "ПАКОДАН ЭСТЕЙТ"
+      ],
+      "cities": [
+        "Grodno"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    },
+    {
+      "key": "Belarus|realtelite.by",
+      "country": "Belarus",
+      "domain": "realtelite.by",
+      "names": [
+        "RealtElite"
+      ],
+      "cities": [
+        "Grodno / Grodno region"
+      ],
+      "sources": [
+        "night/05-belarus-agencies.json"
+      ]
+    }
+  ],
+  "counts": {
+    "Узбекистан": 12,
+    "Кыргызстан": 5,
+    "Грузия": 7,
+    "Таджикистан": 3,
+    "Азербайджан": 2,
+    "Belarus": 60,
+    "Казахстан": 27,
+    "Армения": 19,
+    "Russia": 197
+  },
+  "inventory": [
+    {
+      "file": "project-bible/mira/data/agencies-cis-candidates.csv",
+      "rows": 8
+    },
+    {
+      "file": "project-bible/mira/data/agencies-cis-package-05.csv",
+      "rows": 17
+    },
+    {
+      "file": "project-bible/mira/data/agencies-cis-package-06.csv",
+      "rows": 4
+    },
+    {
+      "file": "project-bible/mira/data/agencies-cis-pilot.csv",
+      "rows": 88
+    },
+    {
+      "file": "project-bible/mira/data/agencies-cis-verified.csv",
+      "rows": 52
+    },
+    {
+      "file": "project-bible/mira/data/agencies-russia-pilot.csv",
+      "rows": 324
+    },
+    {
+      "file": "project-bible/mira/data/mega-classified.csv",
+      "rows": 262
+    },
+    {
+      "file": "project-bible/mira/data/russia-agencies-seed-01.csv",
+      "rows": 25
+    },
+    {
+      "file": "project-bible/mira/sales/russia-launch-50-batch-02.csv",
+      "rows": 50
+    },
+    {
+      "file": "project-bible/mira/sales/russia-launch-50-seed.csv",
+      "rows": 50
+    }
+  ],
+  "sourceCommit": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
+  "totalProvisionalGroups": 332,
+  "verifiedUniqueLegalEntityCount": null,
+  "nativeCRMImported": 12,
+  "nativeCRMSource": "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json",
+  "note": "Machine hostname grouping only; do not use as clean audience. Domains are not legal identity; source-seeded offices not confirmed. Source paths starting night/ resolve under research/night-2026-09-18/."
+}
