@@ -1230,5 +1230,123 @@
     "research_note": "Cherng Talay project only; no automatic mapping of Naturale Kamala.",
     "fresh_contact_verified": true,
     "project_candidate_count": 1
+  },
+  {
+    "developer_id": "PHK-042",
+    "name": "Unique Group Thailand",
+    "entity_type": "developer_group",
+    "legal_name_candidate": "unknown",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://uniquegroupthailand.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "info@uniquegroupthailand.com",
+        "source_url": "https://uniquegroupthailand.com/",
+        "checked_at": "2026-09-18",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 (0) 94 589 2333",
+        "source_url": "https://uniquegroupthailand.com/",
+        "checked_at": "2026-09-18",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "email",
+        "value": "info@uniquegroupthailand.com",
+        "source_url": "https://uniquegroupthailand.com/contact/",
+        "checked_at": "2026-09-18T20:03:00Z",
+        "verification_status": "verified_public_source",
+        "purpose": "general",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 (0) 94 589 2333",
+        "source_url": "https://uniquegroupthailand.com/contact/",
+        "checked_at": "2026-09-18T20:03:00Z",
+        "verification_status": "verified_public_source",
+        "purpose": "general",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "whatsapp",
+        "value": "https://wa.me/+66952701974",
+        "source_url": "https://uniquegroupthailand.com/contact/",
+        "checked_at": "2026-09-18T20:03:00Z",
+        "verification_status": "verified_public_source",
+        "purpose": "sales_office",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-18"
+    },
+    "field_evidence": [
+      {
+        "field": "developer_group",
+        "value": "Unique Group Thailand",
+        "source_url": "https://uniquegroupthailand.com/",
+        "checked_at": "2026-09-18T20:03:00Z",
+        "verification_status": "verified_public_source"
+      },
+      {
+        "field": "founder",
+        "value": "Matteo Capellino",
+        "source_url": "https://uniquegroupthailand.com/",
+        "checked_at": "2026-09-18T20:03:00Z",
+        "verification_status": "verified_public_source",
+        "note": "Founder is not asserted to be the agency-relations recipient."
+      }
+    ],
+    "missing_fields": {
+      "legal_name": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://uniquegroupthailand.com/contact/"
+      },
+      "named_sales_person": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://uniquegroupthailand.com/contact/"
+      },
+      "direct_public_work_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://uniquegroupthailand.com/contact/"
+      },
+      "telegram_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://uniquegroupthailand.com/contact/"
+      },
+      "line_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://uniquegroupthailand.com/contact/"
+      },
+      "agency_relations_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://uniquegroupthailand.com/contact/"
+      }
+    },
+    "research_note": "The official site links both Aileen Villas Phase 1 and Unique Eco Viva to this group. The WhatsApp target is the exact published link; no message was sent. Other Aileen-labelled catalogue rows are not assigned by name alone.",
+    "fresh_contact_verified": true,
+    "project_candidate_count": 2
   }
 ]

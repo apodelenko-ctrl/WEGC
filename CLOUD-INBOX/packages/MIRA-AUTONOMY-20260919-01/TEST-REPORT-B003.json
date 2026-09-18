@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-09-18T20:03:00Z",
+  "command": "python -m unittest discover -s CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01 -p 'test_*.py' -v",
+  "passed": 25,
+  "failed": 0,
+  "scope": "local standard-library unit tests; no live CRM/cloud/provider acceptance",
+  "new_assertions": [
+    "only exact primary-source Aileen/Unique catalogue records map to PHK-042",
+    "other Aileen-labelled records remain unresolved",
+    "public WhatsApp route is not upgraded to agency-relations authority"
+  ]
+}

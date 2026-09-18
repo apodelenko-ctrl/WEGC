@@ -67,6 +67,18 @@ class RegistryTest(unittest.TestCase):
     def test_nonresidential_record_preserved_but_held(self):
         p=next(p for p in self.result['project_links'] if p['project_id']=='andamanda-phuket')
         self.assertEqual(p['mapping_status'],'excluded_non_residential');self.assertIsNone(p['developer_id'])
+    def test_unique_group_exact_projects_only(self):
+        links={p['project_id']:p for p in self.result['project_links']}
+        for pid in ('ailin-villas','yunik-eko-viva'):
+            self.assertEqual(links[pid]['developer_id'],'PHK-042')
+            self.assertEqual(links[pid]['mapping_status'],'verified_primary_source')
+        for pid in ('ailin-villas-6-faza','ailin-villas-vtoraya-faza','ailin-villas-ravaii','ailin-rezidens-bangtao','ailin-rezidens-lagun'):
+            self.assertIsNone(links[pid]['developer_id'])
+    def test_unique_group_contact_is_public_but_not_partner_route(self):
+        d=next(d for d in self.result['developers'] if d['developer_id']=='PHK-042')
+        self.assertTrue(d['fresh_contact_verified'])
+        self.assertFalse(any(c.get('purpose')=='agency_relations' for c in d['contacts']))
+        self.assertTrue(any(c.get('kind')=='whatsapp' and c.get('value')=='https://wa.me/+66952701974' for c in d['contacts']))
     def test_new_developer_field_evidence_required(self):
         obs=copy.deepcopy(self.obs)
         row=next(r for r in obs['records'] if r.get('field_evidence'));del row['field_evidence'][0]['source_url']

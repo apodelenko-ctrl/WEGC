@@ -1,6 +1,6 @@
 # МИРА — общий реестр задач, хвостов и истории
 
-**Единая текущая сводка для CLOUD и LOCAL.** Срез:18.09.2026 17:46 UTC /19.09.2026 00:46 Asia/Bangkok. Операционный день18.09; даты исходных событий не переименовывать. Task: MIRA-CLOSEOUT-20260918-01. Владелец исполнения интеграции:LOCAL; research: CLOUD. Статус: **OPEN — требуется отчёт LOCAL**.
+**Единая текущая сводка для CLOUD и LOCAL.** Срез:18.09.2026 20:07 UTC /19.09.2026 03:07 Asia/Bangkok. Операционный день18.09; даты исходных событий не переименовывать. Task: MIRA-CLOSEOUT-20260918-01. Владелец исполнения интеграции:LOCAL; research: CLOUD. Статус: **IN PROGRESS — полный LOCAL closeout/manifest получен; private transfer, crosswalk и cloud restore остаются**.
 
 ## Что проверено и что означает этот файл
 
@@ -150,3 +150,9 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 - LOCAL closeout по-прежнему 18:39:09UTC: T11/T12 получены, T14 prepared_not_migrated. Новый vault receipt19:02:44UTC: 13 корпоративных PDF сохранены приватно, это НЕ backup CRM или cloud runtime. Private crosswalk78/87 ↔ research348/master41 и фактическая передача кода+encrypted backup+отдельного ключа не подтверждены. Cloud restore/live acceptance pending; native counts не складываются с research.
 
 Детали: [agency COUNTS](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/agency-expansion-2026-09-19/COUNTS.json), [developer metrics](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/developer-expansion-2026-09-19/metrics.json), [event](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json). Next: Саратов ещё3 подходящих, затем Тюмень; Aileen6/Unique1/Naturale Kamala1 и Banyan ambiguity5; private crosswalk и AUT-04 restore prerequisites. Исходная ограниченная серия до08:00 ICT не продлена.
+
+## Обе базы B003 — 2026-09-18T20:07:56Z
+
+- Agency canonical **348 → 350** (RU208/BY59/other83). Саратов **10/10 minimum met**: +Гамма-Риэлт, +Ваш Риэлтор, Ратмир hold→fit по собственному сайту. Каналы15 reviewed: phone13, general email11, direct phone7, direct email2, WA1, TG direct2/channel2, VK1, fully-enriched0. Population city-proper всё ещё blocked; следующий cursor Тюмень.
+- Developer master **41 → 42** (+Unique Group Thailand); fresh contact groups7, exact primary project links **3 → 5**. Aileen Villas Phase1 и Unique Eco Viva связаны по первичным страницам. Пять остальных Aileen-labelled записей не объединены; exact legal seller неизвестен. Все618 IDs сохранены.
+- 25/25 tests PASS; CRM imports0, external sends0, deploy0. LOCAL native78/87 остаются отдельным приватным snapshot: crosswalk к research350/42 отсутствует. Private archive всё ещё не подтверждён в cloud; AUT-04 restore/live acceptance pending.

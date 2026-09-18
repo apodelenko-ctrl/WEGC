@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-09-18T20:03:00Z",
+  "status": "blocked",
+  "population": null,
+  "unit": "city_proper",
+  "attempts": [
+    {
+      "url": "https://64.rosstat.gov.ru/population",
+      "outcome": "not_accessible"
+    },
+    {
+      "url": "https://rosstat.gov.ru/compendium/document/13282",
+      "outcome": "not_accessible"
+    },
+    {
+      "url": "https://saratovmer.ru/",
+      "outcome": "official_city_site_accessible_but_no_current_city_proper_population_found"
+    }
+  ],
+  "note": "Fresh primary city-proper figure still not obtained. City, urban district and agglomeration are not substituted for one another."
+}

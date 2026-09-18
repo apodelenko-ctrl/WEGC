@@ -1,5 +1,5 @@
 city_id,city,segment,target_min_agencies,canonical_candidates,verified_suitable,remaining_to_minimum,official_population_status,research_status
-"RU-CITY-001","Саратов","core_300k_to_1m","10","13","7","3","blocked_official_source","in_progress"
+"RU-CITY-001","Саратов","core_300k_to_1m","10","15","10","0","blocked_official_source","minimum_met_fields_incomplete"
 "RU-CITY-002","Тюмень","core_300k_to_1m","10","6","0","10","pending","queued"
 "RU-CITY-003","Тольятти","core_300k_to_1m","10","0","0","10","pending","queued"
 "RU-CITY-004","Махачкала","core_300k_to_1m","10","0","0","10","pending","queued"

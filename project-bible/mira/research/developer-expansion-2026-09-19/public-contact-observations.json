@@ -263,6 +263,68 @@
         "telegram_url": "not_found"
       },
       "note": "Updated published phone differs from inherited master number; retain both with distinct freshness. Commercial terms not copied."
+    },
+    {
+      "developer_id": "PHK-042",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "info@uniquegroupthailand.com",
+          "source_url": "https://uniquegroupthailand.com/contact/",
+          "checked_at": "2026-09-18T20:03:00Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "phone",
+          "value": "+66 (0) 94 589 2333",
+          "source_url": "https://uniquegroupthailand.com/contact/",
+          "checked_at": "2026-09-18T20:03:00Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "whatsapp",
+          "value": "https://wa.me/+66952701974",
+          "source_url": "https://uniquegroupthailand.com/contact/",
+          "checked_at": "2026-09-18T20:03:00Z",
+          "verification_status": "verified_public_source",
+          "purpose": "sales_office",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        }
+      ],
+      "field_evidence": [
+        {
+          "field": "developer_group",
+          "value": "Unique Group Thailand",
+          "source_url": "https://uniquegroupthailand.com/",
+          "checked_at": "2026-09-18T20:03:00Z",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "founder",
+          "value": "Matteo Capellino",
+          "source_url": "https://uniquegroupthailand.com/",
+          "checked_at": "2026-09-18T20:03:00Z",
+          "verification_status": "verified_public_source",
+          "note": "Founder is not asserted to be the agency-relations recipient."
+        }
+      ],
+      "missing_fields": {
+        "legal_name": "not_found",
+        "named_sales_person": "not_found",
+        "direct_public_work_email": "not_found",
+        "telegram_url": "not_found",
+        "line_url": "not_found",
+        "agency_relations_email": "not_found"
+      },
+      "note": "The official site links both Aileen Villas Phase 1 and Unique Eco Viva to this group. The WhatsApp target is the exact published link; no message was sent. Other Aileen-labelled catalogue rows are not assigned by name alone."
     }
   ],
   "project_observations": [
@@ -292,6 +354,24 @@
       "source_url": "https://www.naturalephuket.com/",
       "checked_at": "2026-09-18T19:11:22Z",
       "basis": "Official Naturale Cherng Talay page names AAG Development. Russian catalogue title transliteration matched; Naturale Kamala deliberately remains unresolved."
+    },
+    {
+      "project_id": "ailin-villas",
+      "developer_id": "PHK-042",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://uniquegroupthailand.com/project/aileenvillas/",
+      "checked_at": "2026-09-18T20:03:00Z",
+      "basis": "Official Unique Group Thailand project page names Aileen Villas Phase 1 at Naithon. Exact catalogue title transliteration matched; other Aileen phases and residences are deliberately not blanket-mapped."
+    },
+    {
+      "project_id": "yunik-eko-viva",
+      "developer_id": "PHK-042",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://uniquegroupthailand.com/project/uniqueecoviva/",
+      "checked_at": "2026-09-18T20:03:00Z",
+      "basis": "Official Unique Group Thailand project page names Unique Eco Viva; exact catalogue title transliteration matched. Legal seller and contract coverage remain unverified."
     },
     {
       "project_id": "andamanda-phuket",

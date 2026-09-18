@@ -13,3 +13,7 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 - LOCAL closeout по-прежнему 18:39:09UTC: T11/T12 получены, T14 prepared_not_migrated. Новый vault receipt19:02:44UTC: 13 корпоративных PDF сохранены приватно, это НЕ backup CRM или cloud runtime. Private crosswalk78/87 ↔ research348/master41 и фактическая передача кода+encrypted backup+отдельного ключа не подтверждены. Cloud restore/live acceptance pending; native counts не складываются с research.
 
 Детали: [agency COUNTS](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/agency-expansion-2026-09-19/COUNTS.json), [developer metrics](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/developer-expansion-2026-09-19/metrics.json), [event](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json). Next: Саратов ещё3 подходящих, затем Тюмень; Aileen6/Unique1/Naturale Kamala1 и Banyan ambiguity5; private crosswalk и AUT-04 restore prerequisites. Исходная ограниченная серия до08:00 ICT не продлена.
+
+## Обе базы B003 — 2026-09-18T20:03:00Z
+
+Agency350; Саратов10/10 minimum met. Developer master42, fresh contacts7, primary project-group links5. Unique Group exact primary sources resolve Aileen Phase1 and Unique Eco Viva only; five other Aileen-labelled records remain unresolved. 618 IDs preserved, 25 tests pass, CRM imports/sends0. Private crosswalk and actual cloud restore remain pending.

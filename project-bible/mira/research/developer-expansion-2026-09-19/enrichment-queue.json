@@ -370,9 +370,9 @@
   {
     "task_key": "project-developer:ailin-villas",
     "project_id": "ailin-villas",
-    "developer_id": null,
+    "developer_id": "PHK-042",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -882,9 +882,9 @@
   {
     "task_key": "project-developer:yunik-eko-viva",
     "project_id": "yunik-eko-viva",
-    "developer_id": null,
+    "developer_id": "PHK-042",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -5226,6 +5226,13 @@
   {
     "task_key": "developer-contact:PHK-041",
     "developer_id": "PHK-041",
+    "status": "partial",
+    "reason": "contract_and_crm_state_not_imported",
+    "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
+  },
+  {
+    "task_key": "developer-contact:PHK-042",
+    "developer_id": "PHK-042",
     "status": "partial",
     "reason": "contract_and_crm_state_not_imported",
     "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"

@@ -965,9 +965,11 @@
     "name": "Айлин Виллас",
     "market": "phuket",
     "family": "Aileen",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-042",
+    "candidate_developer_ids": [
+      "PHK-042"
+    ],
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 56,
@@ -976,7 +978,18 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "ailin-villas",
+      "developer_id": "PHK-042",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://uniquegroupthailand.com/project/aileenvillas/",
+      "checked_at": "2026-09-18T20:03:00Z",
+      "basis": "Official Unique Group Thailand project page names Aileen Villas Phase 1 at Naithon. Exact catalogue title transliteration matched; other Aileen phases and residences are deliberately not blanket-mapped."
+    }
   },
   {
     "project_id": "ailin-villas-6-faza",
@@ -2242,9 +2255,11 @@
     "name": "Юник Эко Вива",
     "market": "phuket",
     "family": "Unique",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-042",
+    "candidate_developer_ids": [
+      "PHK-042"
+    ],
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 618,
@@ -2253,7 +2268,18 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "yunik-eko-viva",
+      "developer_id": "PHK-042",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://uniquegroupthailand.com/project/uniqueecoviva/",
+      "checked_at": "2026-09-18T20:03:00Z",
+      "basis": "Official Unique Group Thailand project page names Unique Eco Viva; exact catalogue title transliteration matched. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "6-avenyu",

@@ -24,3 +24,9 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 - LOCAL closeout по-прежнему 18:39:09UTC: T11/T12 получены, T14 prepared_not_migrated. Новый vault receipt19:02:44UTC: 13 корпоративных PDF сохранены приватно, это НЕ backup CRM или cloud runtime. Private crosswalk78/87 ↔ research348/master41 и фактическая передача кода+encrypted backup+отдельного ключа не подтверждены. Cloud restore/live acceptance pending; native counts не складываются с research.
 
 Детали: [agency COUNTS](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/agency-expansion-2026-09-19/COUNTS.json), [developer metrics](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/developer-expansion-2026-09-19/metrics.json), [event](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json). Next: Саратов ещё3 подходящих, затем Тюмень; Aileen6/Unique1/Naturale Kamala1 и Banyan ambiguity5; private crosswalk и AUT-04 restore prerequisites. Исходная ограниченная серия до08:00 ICT не продлена.
+
+## Обе базы B003 — 2026-09-18T20:03:00Z
+
+Агентства350 (RU208/BY59/other83), Саратов10/10 minimum met; +2 candidates,1 existing enriched, удалений0. Канальная полнота: phone13/general email11/direct phone7/direct email2/WA1/TG-direct2/TG-channel2/VK1/fully-enriched0. Official city-proper population blocked. CRM imports/sends0. Next cursor Тюмень.
+
+Застройщики42; fresh contact groups7; exact primary links5/618. Unique Group Thailand подтверждает Aileen Villas Phase1 и Unique Eco Viva; остальные Aileen labels не объединены. Tests25/25. Private CRM78/87 не складываются с research350/42; crosswalk и cloud restore pending.

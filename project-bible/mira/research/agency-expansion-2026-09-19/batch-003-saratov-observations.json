@@ -1,0 +1,138 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "batch_id": "B003",
+  "checked_at": "2026-09-18T20:03:00Z",
+  "source_commit": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
+  "city_id": "RU-CITY-001",
+  "records": [
+    {
+      "agency_id": "RU-RGR-446",
+      "record_action": "enrich_existing",
+      "domain": "ratmir-saratov.ru",
+      "source_url": "https://ratmir-saratov.ru/",
+      "fields": {
+        "brand": "Ратмир",
+        "city": "Саратов",
+        "legal_name": "ООО фирма «Ратмир»",
+        "canonical_domain": "ratmir-saratov.ru",
+        "contact_page": "https://ratmir-saratov.ru/",
+        "company_phone": "+7 (8452) 34-94-09",
+        "general_email": "info@ratmir-saratov.ru"
+      },
+      "segment": "local_newbuild",
+      "fit": true,
+      "reason": "First-party site identifies the Saratov operator, publishes INN/OGRN, residential services and selection in both new builds and resale. No federal-network signal in the reviewed first-party page; overseas status remains unknown.",
+      "additional_contacts": [
+        {
+          "field": "public_staff_phone",
+          "value": "+7 927 101-77-77",
+          "source_url": "https://ratmir-saratov.ru/",
+          "channel_kind": "public_person_work_contact",
+          "contact_first_name": "Алёна",
+          "contact_last_name": "Перевертайло",
+          "contact_role": "published staff contact; partner role not established",
+          "direct_dialogue_verified": false
+        }
+      ],
+      "gaps": {
+        "parent_brand": "not_found",
+        "direct_public_work_email": "not_found",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "blocked"
+      },
+      "notes": "A prohibited social-network label is present but its target was not promoted. Published staff phone is a work endpoint, not evidence of a prior dialogue or partner-relations authority."
+    },
+    {
+      "agency_id": "RU-RGR-5030",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://reestr.rgr.ru/agentstvo-sidorovich-eduard-evgenevich-an-gamma-rielt-5030/",
+      "fields": {
+        "brand": "Гамма-Риэлт",
+        "city": "Саратов",
+        "legal_name": "ИП Сидорович Эдуард Евгеньевич",
+        "contact_page": "https://reestr.rgr.ru/agentstvo-sidorovich-eduard-evgenevich-an-gamma-rielt-5030/",
+        "company_phone": "+7 905 384-62-20",
+        "general_email": "gammarielt@yandex.ru"
+      },
+      "person": {
+        "source_url": "https://reestr.rgr.ru/agentstvo-sidorovich-eduard-evgenevich-an-gamma-rielt-5030/",
+        "contact_first_name": "Эдуард",
+        "contact_last_name": "Сидорович",
+        "contact_role": "Директор",
+        "direct_business_phone": "+7 905 384-62-20"
+      },
+      "segment": "local_newbuild",
+      "fit": true,
+      "reason": "Current RGR profile identifies the Saratov proprietor/director and explicitly describes residential brokerage with a strong new-build focus. The same number is both company and director route. No own website or federal-network signal is published there; overseas status remains unknown.",
+      "gaps": {
+        "parent_brand": "not_found",
+        "canonical_domain": "not_found",
+        "direct_public_work_email": "not_found",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      }
+    },
+    {
+      "agency_id": "RU-WEB-VASH-RIELTOR-SARATOV",
+      "record_action": "add_candidate",
+      "domain": "vr-saratov.ru",
+      "source_url": "https://metrsaratova.ru/rieltory/vash-rieltor",
+      "fields": {
+        "brand": "Ваш Риэлтор",
+        "city": "Саратов",
+        "canonical_domain": "vr-saratov.ru",
+        "contact_page": "https://metrsaratova.ru/rieltory/vash-rieltor",
+        "company_phone": "+7 (8452) 77-88-36",
+        "general_email": "vashrieltor-c@yandex.ru"
+      },
+      "segment": "local_newbuild",
+      "fit": true,
+      "reason": "Current Saratov industry profile publishes a local office, residential purchase/sale, new-build and mortgage services plus company contacts. The listed own domain returned HTTP 403, so legal operator and primary-site fields remain unverified. No federal-network signal in reviewed sources; overseas status unknown.",
+      "gaps": {
+        "legal_name": "not_found",
+        "parent_brand": "not_found",
+        "direct_business_phone": "not_checked",
+        "contact_first_name": "not_checked",
+        "contact_last_name": "not_checked",
+        "contact_role": "not_checked",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "blocked_url": "https://vr-saratov.ru/",
+      "notes": "Own domain returned HTTP 403. Staff first names and personal endpoints visible on the directory were not promoted without a verified role suitable for partnership outreach."
+    }
+  ],
+  "population_check": {
+    "status": "blocked",
+    "population": null,
+    "unit": "city_proper",
+    "attempts": [
+      {
+        "url": "https://64.rosstat.gov.ru/population",
+        "outcome": "not_accessible"
+      },
+      {
+        "url": "https://rosstat.gov.ru/compendium/document/13282",
+        "outcome": "not_accessible"
+      },
+      {
+        "url": "https://saratovmer.ru/",
+        "outcome": "official_city_site_accessible_but_no_current_city_proper_population_found"
+      }
+    ],
+    "note": "Fresh primary city-proper figure still not obtained. City, urban district and agglomeration are not substituted for one another."
+  },
+  "new_crm_imports": 0,
+  "external_sends": 0
+}
