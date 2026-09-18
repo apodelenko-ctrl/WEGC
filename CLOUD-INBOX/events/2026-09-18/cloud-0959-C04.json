@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "eventId": "EV-20260918-CLOUD-0959-C04",
+  "recordedAt": "2026-09-18T10:14:00+07:00",
+  "actor": "CLOUD",
+  "taskId": "C04",
+  "status": "completed_research_recommendation_not_integrated",
+  "artifact": "project-bible/mira/research/day-2026-09-18/results/C04-montenegro-poljana-kotor-bayview.md",
+  "artifactCommit": "de5dfadff00eac7b5a755a35d1e471b4f9022da5",
+  "findings": [
+    {
+      "project": "Poljana Olive Homes Pool Residence",
+      "primary": "https://montenegrimmo.com/poljana-olive-homes-pool-residence/",
+      "independentAgencyObservation": "https://astrarealestate.me/property/poljana-olive-homes-luxury-townhouses-for-sale/",
+      "recommendation": "complete_for_discovery_after_validation",
+      "legalSeller": "unknown",
+      "publicationApprovedMedia": false
+    },
+    {
+      "project": "Kotor Bayview Residence",
+      "primary": "https://www.kotorbayview.com/",
+      "independentAgencyObservation": "https://1realty.me/en/properties/apartments-in-the-new-complex-kotor-bayview/",
+      "recommendation": "complete_for_discovery_after_validation",
+      "legalSeller": "unknown",
+      "publicationApprovedMedia": false
+    }
+  ],
+  "researchCountBefore": {"completeForDiscovery":25,"partialForValidation":5},
+  "researchCountAfterRecommendation": {"completeForDiscovery":27,"partialForValidation":3},
+  "remainingPartials": ["Waterpoint", "Merit Starlit Hotel & Residence", "Porto Budva"],
+  "holds": [
+    "No legal-seller/contracting-entity clearance",
+    "No current inventory/price/commission/residency/tax validation",
+    "No publication-rights basis for project imagery",
+    "LOCAL has not yet integrated this research delta"
+  ],
+  "externalActions": 0
+}
