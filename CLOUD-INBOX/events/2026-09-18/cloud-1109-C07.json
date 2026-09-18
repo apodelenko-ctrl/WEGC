@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "cloud-1109-C07",
+  "recordedAt": "2026-09-18T11:09:00+07:00",
+  "actor": "CLOUD",
+  "taskId": "C07",
+  "status": "completed",
+  "artifact": "project-bible/mira/research/day-2026-09-18/results/C07-permission-matrix-phuket-field-photo-brief.md",
+  "artifactCommit": "67557401e2491f3e61dc92f14921cae0bbaf3d80",
+  "facts": [
+    "Consolidated a 30-project Bali/Dubai permission-request matrix from C01/C05/C06 without sending any request",
+    "Prepared one reusable media-permission draft with exact asset, channel, downstream-agent, edit, territory, attribution and revocation fields",
+    "Prepared a Phuket own-content field-photography brief with project/phase/access, privacy, safety, visual-QA and rights-chain gates",
+    "Rechecked current CAAT UAS registration/flight guidance; camera-drone use remains a separate execution gate and is not included by default",
+    "No field shoot, drone flight, media purchase, external form or message occurred"
+  ],
+  "externalActionsPerformed": [],
+  "remainingHolds": [
+    "Actual written permissions/asset packs from rightsholders",
+    "First Phuket project/phase and site/media access scope for own-content work",
+    "Private evidence of photographer/site/person releases if needed",
+    "Current CAAT/NBTC/flight/site authorisation before any drone operation"
+  ]
+}
