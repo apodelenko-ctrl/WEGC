@@ -1,5 +1,17 @@
 # MIRA — night research status
 
+## 07:00 consolidation / validation / local-agent handoff — completed, 18 September 2026
+
+Saved the consolidated integration-review package: `vietnam-projects.json`, `montenegro-projects.json`, `russia-agencies.csv`, `belarus-agencies.csv`, `source-observations.json`, `MEDIA-GAPS.md`, `VALIDATION.json`, `LOCAL-AGENT-HANDOFF.md` and `07-integration-handoff.md`. GitHub read-back of `VALIDATION.json` and `LOCAL-AGENT-HANDOFF.md` succeeded. This branch remains research-only; no deploy, merge, public-site write, Worker/Access/D1/DNS change or outreach occurred.
+
+Machine validation on the consolidated package: Vietnam **15 rows / 15 unique IDs / 14 complete / 1 partial**; Montenegro **15 / 15 / 10 complete / 5 partial**; Russia **50 rows / 50 unique IDs / 50 unique non-empty domains / 6 owner-review flags**; Belarus **30 rows / 30 unique IDs / 6 owner-review flags**. All project rows remain research-only and commercially disabled; all agency rows remain `outreach_status=not_authorized`; publication-approved new media remains **0**. These checks prove file parsing/counts/uniqueness/gates only, not exhaustive HTTP validity, legal-entity uniqueness, seller appointment, media rights or production/browser acceptance.
+
+Representative fresh public retrievals in this slot rechecked Waterpoint, Merit Starlit, Kotor Bayview, Porto Budva, AFLAT, Формула, Абсолют Недвижимость and Агентство Уют и К. Waterpoint remains the sole Vietnam partial. Montenegro keeps five partial rows: Heights, Merit Starlit, Porto Budva, Poljana Olive Homes and Kotor Bayview. No stale return/residency/citizenship/discount claims were promoted into the package.
+
+Current `main` was read before handoff. It reports 648 public research records and PR #10 merged, but its latest status still records a later full-release run with a failing local browser stage requiring reconciliation. Therefore this research branch is explicitly **ready for local integration review, not merge/deploy**. Local Codex remains the sole production integrator/deployer and must compare the agency rows against any newer unpublished local CRM state before ingesting them.
+
+Next nominal slot: 08:00. Read the saved 07 outputs and write `MORNING-BRIEF.md` from actual results only; do not begin new collection.
+
 ## 06:00 cross-lane quality + Bali/Dubai media gaps — completed, 18 September 2026
 
 Saved `06-quality-media.json`, `06-quality-media.csv` and `06-quality-media.md`. No night target count was inflated or reduced: the layer remains **15 Vietnam projects, 15 Montenegro projects, 50 Russia agency candidates and 30 Belarus agency candidates**, all research-only and with no outreach authorization.
@@ -104,4 +116,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-07:00 structural validation/consolidation and local-agent handoff. Preserve local Codex ownership of integration/deployment and keep publication rights separate from asset discovery.
+08:00 read the saved consolidation package and create `MORNING-BRIEF.md`; do not start new research collection.
