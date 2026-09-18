@@ -1,0 +1,56 @@
+name: MIRA research transfer export
+on:
+  push:
+    branches: [mira/research-night-20260918]
+    paths: [.github/workflows/mira-research-transfer.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            project-bible/mira/research/night-2026-09-18
+          path: night
+      - uses: actions/checkout@v4
+        with:
+          ref: 1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b
+          persist-credentials: false
+          sparse-checkout: |
+            project-bible/mira
+            mira/catalog/markets
+            scripts/mira-build-market-expansion.py
+          path: baseline
+      - name: Export only research and source reference files
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, shutil
+          out = Path('handoff'); out.mkdir()
+          paths = [
+            ('night/project-bible/mira/research/night-2026-09-18', 'night-research'),
+            ('baseline/project-bible/mira', 'main-bible-reference'),
+            ('baseline/mira/catalog/markets', 'main-market-reference'),
+          ]
+          for source, dest in paths:
+              p = Path(source)
+              if not p.is_dir(): raise SystemExit('Missing expected source: '+source)
+              shutil.copytree(p, out/dest)
+          shutil.copyfile('baseline/scripts/mira-build-market-expansion.py', out/'main-market-builder-reference.py')
+          files=[]
+          for p in sorted(out.rglob('*')):
+              if p.is_symlink(): raise SystemExit('Unexpected symlink')
+              if p.is_file(): files.append({'path':p.relative_to(out).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+          (out/'EXPORT-MANIFEST.json').write_text(json.dumps({'scope':'Research export only; no build, deploy or business approval','main_ref':'1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b','files':files},ensure_ascii=False,indent=2))
+          print('Exported files:',len(files))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mira-research-transfer-20260918
+          path: handoff/
+          if-no-files-found: error
+          retention-days: 14
