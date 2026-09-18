@@ -49,7 +49,7 @@
     "completed":["C14","C15"],
     "resultCommits":{"C14":"7994591de968e200a8dcbff6cfae3f5b3a66e690","C15":"ca4553da432010817494c3263b81b86a7713ad7b"},
     "events":["CLOUD-INBOX/events/2026-09-18/cloud-1357-C14-C15.json"],
-    "sharedAccountingUpdated":"event saved; common indexes to be appended sequentially in this run",
+    "sharedAccountingUpdated":true,
     "mainCommitRead":"1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b",
     "dashboardSourceContradictionConfirmed":true,
     "dashboardGeneratorSources":["scripts/mira-launch-operations.py","scripts/mira-launch-source.py"],
