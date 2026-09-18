@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-18T06:57:36+07:00",
+  "scope": "07 consolidation fresh public-link checks plus repository provenance; not exhaustive HTTP validation of every source URL.",
+  "fresh_web_checks": [
+    {"subject":"Waterpoint","url":"https://www.namlongvn.com/en/news/4175-nam-long-signs-with-17-strategic-agencies-for-waterpoint-township-ushering-in-a-new-era-for-western-real-estate-market/","publisher_role":"developer_publication","result":"retrieved_current_source","supported_fact":"Nam Long identifies Waterpoint and names 17 strategic distribution agencies in the March 18, 2025 publication.","carry_forward":"Project identity and developer source remain strong; Russian-language/Russian-speaking agency observation gap remains open."},
+    {"subject":"Merit Starlit Hotel & Residence","url":"https://meritstarlit.com/en","publisher_role":"project_operator_site","result":"retrieved_current_site","supported_fact":"Current site remains live and markets residences.","carry_forward":"Keep partial: current site also exposes stale 2023 opening language and residence/investment claims; do not reuse such claims without separate verification."},
+    {"subject":"Kotor Bayview Residence","url":"https://www.kotorbayview.com/","publisher_role":"project_site","result":"retrieved_current_site","supported_fact":"Site identifies Kotor Bayview Residence, Muo/Kotor context and ARS INTERTRADE as property developer.","carry_forward":"Keep partial until independent Russian-language agency observation is established."},
+    {"subject":"Porto Budva","url":"https://portobudvaestate.me/about-us/","publisher_role":"developer/investor site","result":"retrieved_current_site","supported_fact":"Budva Investment Montenegro site remains live and describes Porto Budva Complex.","carry_forward":"Keep partial; do not reuse return/discount/payment claims from the site as MIRA facts."},
+    {"subject":"AFLAT","url":"https://aflat.online/","publisher_role":"agency_first_party","result":"retrieved_current_site","supported_fact":"Current Vladivostok agency site exposes a dedicated Thailand real-estate service alongside local new-build services.","carry_forward":"Owner-review signal only; no outreach authorization."},
+    {"subject":"Формула","url":"https://formula-agency.ru/","publisher_role":"agency_first_party","result":"retrieved_current_site","supported_fact":"Current Tyumen new-build portal/agency site and corporate identifiers are visible.","carry_forward":"Owner-review signal only; no outreach authorization."},
+    {"subject":"Абсолют Недвижимость","url":"https://aan.by/contacts/","publisher_role":"agency_first_party","result":"retrieved_current_contact_page","supported_fact":"Current Minsk corporate contact page identifies ООО «Абсолют Недвижимость» and general contact routes.","carry_forward":"Owner-review signal only; no outreach authorization."},
+    {"subject":"Агентство Уют и К","url":"https://n-v.by/","publisher_role":"agency_first_party","result":"retrieved_current_site","supported_fact":"Current Vitebsk agency site shows 2026 activity and corporate service profile.","carry_forward":"Owner-review signal only; no outreach authorization."}
+  ],
+  "repository_sources": {
+    "vietnam_detail": "00-vietnam-projects.json",
+    "montenegro_detail": ["01-montenegro-projects-part1.json","01-montenegro-projects-part2.json","01-montenegro-projects-part3.json"],
+    "project_validation": "02-project-validation.json",
+    "russia_detail": ["03-russia-a.json","04-russia-b.json"],
+    "belarus_detail": "05-belarus-agencies.json",
+    "quality_media": "06-quality-media.json",
+    "main_media_baseline": "project-bible/mira/research/bali-dubai-2026-09-17/MEDIA-GAPS.md"
+  },
+  "caveat": "Search retrieval confirms availability/content for the listed checks only. It is not a blanket 200-status test for every URL in the overnight corpus."
+}
