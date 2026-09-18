@@ -1,26 +1,45 @@
 {
   "schema_version": 1,
   "task_id": "MIRA-OMNI-20260918-01",
-  "status": "accepted",
+  "status": "partially_integrated_not_live_accepted",
+  "updated_at": "2026-09-18T17:27:20Z",
   "source_commit_read": "ed2db2e9e22956547a2c24dd93fd92bb9f31319f",
-  "accepted_at": "2026-09-18T10:27:00Z",
-  "local_branch": "codex/mira-cloud-inbox-20260918",
-  "local_commit": "8b6936a (preserved local-only checkpoint)",
-  "actual_changes": [
-    "Read current QUEUE, task, README, product-profile audit and discovery",
-    "Selective private source checkout in progress; existing CRM runtime reused"
-  ],
-  "tests": {
-    "cloud_report": "41 tests reported by CLOUD; local rerun pending",
-    "local": "NOT_RUN",
-    "live": "NOT_RUN"
+  "private_local_commit": "6af4703",
+  "source_manifest_verified_before_edits": true,
+  "knowledge": {
+    "profiles": [
+      "phuket_buyer",
+      "mira_agency",
+      "mira_developer"
+    ],
+    "source_blocks": 23,
+    "unapproved_project_references": 47,
+    "raw_knowledge_in_public_release": false
   },
-  "remaining_holds": [
-    "Finish CRM runtime/native acceptance before dependent communication integration",
-    "Actual approved pilot channel, private source-scoped bindings, and existing provider configuration must be inspected before any external send",
-    "No permission to modify unrelated WEGC production projects"
-  ],
-  "production_changed": false,
+  "tests": {
+    "upstream": 41,
+    "local_native_task_contract": 2,
+    "total_passed": 43,
+    "native_crm": "PASS: one synthetic input -> real Note and assigned Task -> pause -> reopen/replay/redispatch no duplicate",
+    "transport": "injected loopback administrator test transport; production scoped HTTPS/API key not accepted"
+  },
+  "native_defect": {
+    "actual_response": "HTTP 400 assignedUser required",
+    "fix": "Require server-configured ESPO_TASK_ASSIGNEE_ID; pass assignedUserId on Task create.",
+    "original_outcome": "rejected, no Task created; verified before controlled test retry"
+  },
+  "live_channel_cycle": "NOT_RUN",
   "external_messages_sent": 0,
-  "next_action": "Run pinned package tests privately and review CRM/profiles integration without changing current webhooks or auth."
+  "model_calls": 0,
+  "production_routes_changed": false,
+  "remaining": [
+    "scoped CRM API user and HTTPS service bridge",
+    "existing model configuration connection; no replacement model selected",
+    "one real approved agency endpoint and provider account",
+    "native email/site reply bridge and provider receipt handling",
+    "Telegram Business rights/revocation and global Brevo suppression",
+    "operator notification and native intent/status mapping beyond Notes/Tasks",
+    "private backup/retention and load acceptance"
+  ],
+  "next_action": "Use same CRM and shared profile-separated core; do not create a second bot brain or dispatch to unverified endpoints."
 }
