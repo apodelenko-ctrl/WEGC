@@ -1,0 +1,1395 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-09-18",
+  "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+  "projects": [
+    {
+      "id": "vn-vinhomes-green-paradise",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Vinhomes Green Paradise",
+      "developerBrand": "Vinhomes",
+      "developerGroup": "Vingroup",
+      "legalSeller": null,
+      "district": "Can Gio, Ho Chi Minh City",
+      "propertyTypes": [
+        "residential",
+        "commercial_components",
+        "resort_components"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://market.vinhomes.vn/blog/khoi-cong-khu-do-thi-du-lich-lan-bien-can-gio-bieu-tuong-sinh-thai-bien-moi-cua-tp-hcm",
+      "agencySources": [
+        "VINPROP / Oleg Morozov: https://www.youtube.com/watch?v=m0eBFHVnwMQ"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-vinhomes-green-paradise",
+      "validationRef": "02-project-validation.json#vn-vinhomes-green-paradise",
+      "slug": "vinhomes-green-paradise",
+      "countryCode": "VN",
+      "summary": "Прибрежный городской проект в Канзё: жилая застройка, коммерческие и курортные зоны.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Многофункциональный жилой проект",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://market.vinhomes.vn/blog/khoi-cong-khu-do-thi-du-lich-lan-bien-can-gio-bieu-tuong-sinh-thai-bien-moi-cua-tp-hcm",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-the-global-city",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "The Global City",
+      "developerBrand": "Masterise Homes",
+      "developerGroup": "Masterise Group",
+      "legalSeller": null,
+      "district": "Binh Trung / Thu Duc area, Ho Chi Minh City",
+      "propertyTypes": [
+        "apartments",
+        "townhouses",
+        "villas",
+        "commercial_shophouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://masterisehomes.com/the-global-city/en",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/ru/developments/ho-chi-minh/off-plan/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-the-global-city",
+      "validationRef": "02-project-validation.json#vn-the-global-city",
+      "slug": "the-global-city",
+      "countryCode": "VN",
+      "summary": "Городской проект Masterise Homes в Хошимине с жилыми кварталами и коммерческими пространствами.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Апартаменты, таунхаусы, виллы и коммерческие помещения",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://masterisehomes.com/the-global-city/en",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-aqua-city-phoenix-island",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Aqua City — Phoenix Island",
+      "developerBrand": "Novaland",
+      "developerGroup": "NovaGroup",
+      "legalSeller": null,
+      "district": "Bien Hoa, Dong Nai",
+      "propertyTypes": [
+        "townhouses",
+        "villas",
+        "shophouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.novaland.com.vn/Data/Sites/1/media/quan-h%E1%BB%87-%C4%91%E1%BA%A7u-t%C6%B0/Th%C3%B4ng-tin-t%E1%BA%ADp-%C4%91o%C3%A0n/2021/20210728_ec-1h-2021-%283%29.pdf",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/ru/property/aqua-city-phoenix-island-266/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-aqua-city-phoenix-island",
+      "validationRef": "02-project-validation.json#vn-aqua-city-phoenix-island",
+      "slug": "aqua-city-phoenix-island",
+      "countryCode": "VN",
+      "summary": "Phoenix Island — часть городского проекта Aqua City в Донгнае с виллами, таунхаусами и шопхаусами.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Таунхаусы, виллы и шопхаусы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.novaland.com.vn/Data/Sites/1/media/quan-h%E1%BB%87-%C4%91%E1%BA%A7u-t%C6%B0/Th%C3%B4ng-tin-t%E1%BA%ADp-%C4%91o%C3%A0n/2021/20210728_ec-1h-2021-%283%29.pdf",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-waterpoint",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Waterpoint",
+      "developerBrand": "Nam Long",
+      "developerGroup": "Nam Long Group",
+      "legalSeller": null,
+      "district": "Ben Luc, Tay Ninh",
+      "propertyTypes": [
+        "villas",
+        "low_rise_residential",
+        "high_rise_residential"
+      ],
+      "validationStatus": "partial_for_validation",
+      "primarySource": "https://www.namlongvn.com/en/township-residential/waterpoint-township/",
+      "agencySources": [],
+      "agencyPublisherCount": 0,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-waterpoint",
+      "validationRef": "02-project-validation.json#vn-waterpoint",
+      "slug": "waterpoint",
+      "countryCode": "VN",
+      "summary": "Городской проект Nam Long в Бенлыке, к западу от Хошимина, с малоэтажными и многоэтажными жилыми кварталами.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Малоэтажная и многоэтажная жилая застройка",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "locationNote": "В прежних материалах встречается Long An; актуальные страницы проекта используют Tay Ninh.",
+      "projectSource": {
+        "url": "https://www.namlongvn.com/en/township-residential/waterpoint-township/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-eaton-park",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Eaton Park",
+      "developerBrand": "Gamuda Land",
+      "developerGroup": "Gamuda Berhad",
+      "legalSeller": null,
+      "district": "Mai Chi Tho / An Phu area, Ho Chi Minh City",
+      "propertyTypes": [
+        "condominiums"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://gamudaland.com.vn/en/news/news-and-story-15",
+      "agencySources": [
+        "Savills Vietnam via Vietnam-Real.Estate: https://vietnam-real.estate/property/o29039/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-eaton-park",
+      "validationRef": "02-project-validation.json#vn-eaton-park",
+      "slug": "eaton-park",
+      "countryCode": "VN",
+      "summary": "Жилой комплекс Gamuda Land в Хошимине с квартирами в кондоминиумах.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Кондоминиумы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://gamudaland.com.vn/en/news/news-and-story-15",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-lumi-hanoi",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Lumi Hanoi",
+      "developerBrand": "CapitaLand Development",
+      "developerGroup": "CapitaLand Group",
+      "legalSeller": null,
+      "district": "West Hanoi / Nam Tu Liem area, Hanoi",
+      "propertyTypes": [
+        "apartments",
+        "duplexes",
+        "penthouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.capitaland.com/en/about-capitaland/newsroom/news-releases/vietnam/2026/capitaland-development-hands-over-first-homes-at-lumi-hanoi-.html",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/property/lumi-hanoi-15857/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-lumi-hanoi",
+      "validationRef": "02-project-validation.json#vn-lumi-hanoi",
+      "slug": "lumi-hanoi",
+      "countryCode": "VN",
+      "summary": "Жилой проект CapitaLand Development в западной части Ханоя с апартаментами, дуплексами и пентхаусами.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты, дуплексы и пентхаусы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.capitaland.com/en/about-capitaland/newsroom/news-releases/vietnam/2026/capitaland-development-hands-over-first-homes-at-lumi-hanoi-.html",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-the-gio-riverside",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "The Gió Riverside",
+      "developerBrand": "An Gia",
+      "developerGroup": "An Gia Real Estate Investment and Development Corporation",
+      "legalSeller": null,
+      "district": "Dong Hoa / former Di An, Binh Duong; current first-party page labels Ho Chi Minh City",
+      "propertyTypes": [
+        "apartments"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.angia.com.vn/en/project/ongoing-projects/the-gio-riverside-1.html",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/property/the-gio-riverside-323/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-the-gio-riverside",
+      "validationRef": "02-project-validation.json#vn-the-gio-riverside",
+      "slug": "the-gio-riverside",
+      "countryCode": "VN",
+      "summary": "Жилой комплекс An Gia в районе Донгхоа, на востоке агломерации Хошимина.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.angia.com.vn/en/project/ongoing-projects/the-gio-riverside-1.html",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-merryland-quy-nhon",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "MerryLand Quy Nhon",
+      "developerBrand": "Hung Thinh Land",
+      "developerGroup": "Hung Thinh Corporation",
+      "legalSeller": null,
+      "district": "Hai Giang Peninsula / Quy Nhon area; current first-party page labels Gia Lai province",
+      "propertyTypes": [
+        "bizhouse",
+        "condotel",
+        "villas"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.hungthinhland.com/en/projects/detail/MerryLand-Quy-Nhon.html",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/ru/property/binh-dinh/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-merryland-quy-nhon",
+      "validationRef": "02-project-validation.json#vn-merryland-quy-nhon",
+      "slug": "merryland-quy-nhon",
+      "countryCode": "VN",
+      "summary": "Прибрежный проект Hung Thinh Land на полуострове Хайзянг с жилыми, гостиничными и коммерческими форматами.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Виллы, кондотель и коммерческие форматы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.hungthinhland.com/en/projects/detail/MerryLand-Quy-Nhon.html",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-the-filmore-da-nang",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "The Filmore Da Nang",
+      "developerBrand": "Filmore Development",
+      "developerGroup": "Filmore Development",
+      "legalSeller": null,
+      "district": "Hai Chau, Da Nang",
+      "propertyTypes": [
+        "condominiums",
+        "penthouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://filmore.com.vn/en/the-filmore-da-nang-officially-grand-opened-on-8th-june-2024/",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/ru/property/the-filmore-da-nang-9308/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-the-filmore-da-nang",
+      "validationRef": "02-project-validation.json#vn-the-filmore-da-nang",
+      "slug": "the-filmore-da-nang",
+      "countryCode": "VN",
+      "summary": "Кондоминиум Filmore Development у реки в центральной части Дананга.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Кондоминиумы и пентхаусы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://filmore.com.vn/en/the-filmore-da-nang-officially-grand-opened-on-8th-june-2024/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-sun-symphony-residence",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Sun Symphony Residence",
+      "developerBrand": "Sun Property",
+      "developerGroup": "Sun Group",
+      "legalSeller": null,
+      "district": "Han River, Da Nang",
+      "propertyTypes": [
+        "apartments",
+        "penthouses",
+        "duplexes",
+        "garden_houses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://sungroup.com.vn/tin-tuc/sun-symphony-residence-dinh-nghia-moi-ve-bat-dong-san-haute-couture-7335",
+      "agencySources": [
+        "DDA Real Estate via Vietnam-Real.Estate: https://vietnam-real.estate/ru/property/da-nang/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-sun-symphony-residence",
+      "validationRef": "02-project-validation.json#vn-sun-symphony-residence",
+      "slug": "sun-symphony-residence",
+      "countryCode": "VN",
+      "summary": "Жилой комплекс Sun Property на реке Хан в Дананге.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Апартаменты, дуплексы, пентхаусы и дома с садом",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://sungroup.com.vn/tin-tuc/sun-symphony-residence-dinh-nghia-moi-ve-bat-dong-san-haute-couture-7335",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-empire-city",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Empire City",
+      "developerBrand": "Empire City LLC consortium",
+      "developerGroup": "Tien Phuoc / Keppel / Gaw Capital Partners / Tran Thai consortium",
+      "legalSeller": null,
+      "district": "Thu Thiem, Ho Chi Minh City",
+      "propertyTypes": [
+        "apartments",
+        "shophouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.keppel.com/realestate/About-Us/Our-Projects/Empire-City",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/ru/property/empire-city-249/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-empire-city",
+      "validationRef": "02-project-validation.json#vn-empire-city",
+      "slug": "empire-city",
+      "countryCode": "VN",
+      "summary": "Многофункциональный проект в районе Тхутхьем в Хошимине с апартаментами и шопхаусами.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Апартаменты и шопхаусы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.keppel.com/realestate/About-Us/Our-Projects/Empire-City",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-the-metropole-thu-thiem",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "The Metropole Thu Thiem",
+      "developerBrand": "SonKim Land",
+      "developerGroup": "SonKim Land",
+      "legalSeller": null,
+      "district": "Thu Thiem, Ho Chi Minh City",
+      "propertyTypes": [
+        "residences",
+        "apartments"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://sonkimland.vn/residential/the-metropole-thu-thiem",
+      "agencySources": [
+        "SaigonApart: https://saigonapart.com/districts"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-the-metropole-thu-thiem",
+      "validationRef": "02-project-validation.json#vn-the-metropole-thu-thiem",
+      "slug": "the-metropole-thu-thiem",
+      "countryCode": "VN",
+      "summary": "Жилой проект SonKim Land в районе Тхутхьем, объединяющий несколько очередей застройки.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты и резиденции",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://sonkimland.vn/residential/the-metropole-thu-thiem",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-the-river-thu-thiem",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "The River Thu Thiem",
+      "developerBrand": "Refico",
+      "developerGroup": "Refico",
+      "legalSeller": null,
+      "district": "Thu Thiem, Ho Chi Minh City",
+      "propertyTypes": [
+        "apartments"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://refico.com.vn/specialities/the-river/",
+      "agencySources": [
+        "SaigonApart: https://saigonapart.com/districts"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-the-river-thu-thiem",
+      "validationRef": "02-project-validation.json#vn-the-river-thu-thiem",
+      "slug": "the-river-thu-thiem",
+      "countryCode": "VN",
+      "summary": "Жилой комплекс Refico у реки в районе Тхутхьем в Хошимине.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://refico.com.vn/specialities/the-river/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-one-verandah",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "One Verandah",
+      "developerBrand": "Mapletree",
+      "developerGroup": "Mapletree Investments",
+      "legalSeller": null,
+      "district": "Thanh My Loi / Thu Duc, Ho Chi Minh City",
+      "propertyTypes": [
+        "apartments",
+        "shophouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://oneverandah.com.vn/en",
+      "agencySources": [
+        "Hoozing via Vietnam-Real.Estate: https://vietnam-real.estate/property/o23103/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-one-verandah",
+      "validationRef": "02-project-validation.json#vn-one-verandah",
+      "slug": "one-verandah",
+      "countryCode": "VN",
+      "summary": "Жилой проект Mapletree в районе Тханьмилой в Хошимине.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Апартаменты и шопхаусы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://oneverandah.com.vn/en",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "vn-urban-green",
+      "market": "vietnam",
+      "country": "Vietnam",
+      "name": "Urban Green",
+      "developerBrand": "Kusto Home",
+      "developerGroup": "Kusto Group",
+      "legalSeller": null,
+      "district": "Hiep Binh Phuoc / Thu Duc, Ho Chi Minh City",
+      "propertyTypes": [
+        "apartments"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.kustogroup.com/news/kusto-home-s-vietnam-property-awards-2022/",
+      "agencySources": [
+        "Vietnam-Real.Estate: https://vietnam-real.estate/ru/property/urban-green-227/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "00-vietnam-projects.json#vn-urban-green",
+      "validationRef": "02-project-validation.json#vn-urban-green",
+      "slug": "urban-green",
+      "countryCode": "VN",
+      "summary": "Жилой комплекс Kusto Home в районе Тхудык в Хошимине.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.kustogroup.com/news/kusto-home-s-vietnam-property-awards-2022/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-boka-place",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Boka Place",
+      "developerBrand": "Porto Montenegro",
+      "developerGroup": null,
+      "legalSeller": null,
+      "district": "Tivat / Porto Montenegro",
+      "propertyTypes": [
+        "apartments",
+        "duplexes",
+        "penthouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://portomontenegro.com/me/real-estate/boka-place/",
+      "agencySources": [
+        "https://prian.ru/price/montenegro-11792-4077532.html"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-boka-place",
+      "validationRef": "02-project-validation.json#me-boka-place",
+      "slug": "boka-place",
+      "countryCode": "ME",
+      "summary": "Жилой квартал Porto Montenegro в Тивате с резиденциями вокруг центральной площади.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты, дуплексы и пентхаусы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://portomontenegro.com/me/real-estate/boka-place/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-vero-versa",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Vero & Versa",
+      "developerBrand": "Porto Montenegro",
+      "developerGroup": null,
+      "legalSeller": null,
+      "district": "Tivat / Porto Montenegro",
+      "propertyTypes": [
+        "studios",
+        "apartments"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://portomontenegro.com/me/real-estate/vero-versa/",
+      "agencySources": [
+        "https://montenegrorealestate.nl/luxury-apartments-vero-and-versa-porto-montenegro"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-vero-versa",
+      "validationRef": "02-project-validation.json#me-vero-versa",
+      "slug": "vero-versa",
+      "countryCode": "ME",
+      "summary": "Коллекция резиденций Porto Montenegro: студии и апартаменты разных планировок.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Студии и апартаменты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://portomontenegro.com/me/real-estate/vero-versa/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-the-peaks",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "The Peaks",
+      "developerBrand": "Luštica Bay",
+      "developerGroup": "Orascom Development / Government of Montenegro JV",
+      "legalSeller": null,
+      "district": "Luštica peninsula / Tivat municipality",
+      "propertyTypes": [
+        "apartments",
+        "townhouses",
+        "villas"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.lusticabaythepeaks.com/",
+      "agencySources": [
+        "https://mdrealty.me/ru/projects/lustica-bay-montenegro",
+        "https://mdrealty.me/en/projects/the-peaks-lustica-bay"
+      ],
+      "agencyPublisherCount": 2,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-the-peaks",
+      "validationRef": "02-project-validation.json#me-the-peaks",
+      "slug": "the-peaks",
+      "countryCode": "ME",
+      "summary": "Жилая коллекция Luštica Bay в районе гольф-поля: апартаменты, таунхаусы и виллы.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Апартаменты, таунхаусы и виллы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.lusticabaythepeaks.com/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-heights-lustica",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Heights",
+      "developerBrand": "Luštica Bay",
+      "developerGroup": "Orascom Development / Government of Montenegro JV",
+      "legalSeller": null,
+      "district": "Luštica Bay / между Centrale и гольф-полем",
+      "propertyTypes": [
+        "studios",
+        "apartments",
+        "penthouses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://centralepiazza.lusticabay.com/realestate-en/",
+      "agencySources": [
+        "https://anapajkovic.com/properties/heights-lustica-bay",
+        "https://www.turaquadra.rs/en/property/lustica-bay-heights/"
+      ],
+      "agencyPublisherCount": 2,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-heights-lustica",
+      "validationRef": "02-project-validation.json#me-heights-lustica",
+      "slug": "heights-lustica",
+      "countryCode": "ME",
+      "summary": "Коллекция резиденций Luštica Bay на склоне между Centrale и гольф-полем.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Студии, апартаменты и пентхаусы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://centralepiazza.lusticabay.com/realestate-en/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-portonovi-residences",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Portonovi Residences",
+      "developerBrand": "Portonovi",
+      "developerGroup": "Azmont Investments",
+      "legalSeller": null,
+      "district": "Kumbor / Herceg Novi / Boka Bay",
+      "propertyTypes": [
+        "apartments",
+        "penthouses",
+        "townhouses",
+        "villas"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://portonovi.com/en/residences",
+      "agencySources": [
+        "https://mdrealty.me/ru/properties/portonovi"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-portonovi-residences",
+      "validationRef": "02-project-validation.json#me-portonovi-residences",
+      "slug": "portonovi-residences",
+      "countryCode": "ME",
+      "summary": "Жилые форматы курорта Portonovi: апартаменты, пентхаусы, таунхаусы и виллы.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Апартаменты, пентхаусы, таунхаусы и виллы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://portonovi.com/en/residences",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-oneonly-private-homes",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "One&Only Private Homes Portonovi",
+      "developerBrand": "Portonovi / One&Only",
+      "developerGroup": "Azmont Investments",
+      "legalSeller": null,
+      "district": "Portonovi / Kumbor / Herceg Novi",
+      "propertyTypes": [
+        "branded waterfront villas"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://portonovi.com/en/oneonly-resort",
+      "agencySources": [
+        "https://mdrealty.me/ru/properties/portonovi"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-oneonly-private-homes",
+      "validationRef": "02-project-validation.json#me-oneonly-private-homes",
+      "slug": "oneonly-private-homes",
+      "countryCode": "ME",
+      "summary": "Коллекция частных брендированных вилл One&Only на территории Portonovi.",
+      "amenities": [],
+      "kind": "villa",
+      "typeLabel": "Брендированные виллы",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://portonovi.com/en/oneonly-resort",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-dukley-gardens",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Dukley Gardens",
+      "developerBrand": "Dukley",
+      "developerGroup": "Dukley",
+      "legalSeller": null,
+      "district": "Zavala peninsula / Budva",
+      "propertyTypes": [
+        "apartments",
+        "residences"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.dukleygardens.com/",
+      "agencySources": [
+        "https://prian.ru/price/montenegro-9801-3804508.html"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-dukley-gardens",
+      "validationRef": "02-project-validation.json#me-dukley-gardens",
+      "slug": "dukley-gardens",
+      "countryCode": "ME",
+      "summary": "Жилой комплекс у моря на полуострове Завала в Будве.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты и резиденции",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.dukleygardens.com/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-mountain-retreat-dukley",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Mountain Retreat by Dukley",
+      "developerBrand": "Dukley",
+      "developerGroup": "Dukley",
+      "legalSeller": null,
+      "district": "Bjelasica / Kolašin area",
+      "propertyTypes": [
+        "chalets",
+        "lofts"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://dukley.com/estate/mountain-retreat-by-dukley/",
+      "agencySources": [
+        "https://anapajkovic.com/properties/mountain-retreat-by-dukley"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-mountain-retreat-dukley",
+      "validationRef": "02-project-validation.json#me-mountain-retreat-dukley",
+      "slug": "mountain-retreat-dukley",
+      "countryCode": "ME",
+      "summary": "Горная коллекция Dukley с шале и лофтами в Колашине.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Шале и лофты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://dukley.com/estate/mountain-retreat-by-dukley/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-melia-private-residences-budva",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Meliá Private Residences Budva",
+      "developerBrand": "SUNRAF",
+      "developerGroup": "SUNRAF / Meliá branded operation",
+      "legalSeller": null,
+      "district": "Bečići / Budva Riviera",
+      "propertyTypes": [
+        "studios",
+        "apartments",
+        "branded residences"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.meliabudva.com/about-us",
+      "agencySources": [
+        "https://realestateinmontenegro.com/project/melia-private-residences-becici-montenegro/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-melia-private-residences-budva",
+      "validationRef": "02-project-validation.json#me-melia-private-residences-budva",
+      "slug": "melia-private-residences-budva",
+      "countryCode": "ME",
+      "summary": "Проект в Бечичи, объединяющий гостиничную часть и частные брендированные резиденции.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Студии, апартаменты и брендированные резиденции",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.meliabudva.com/about-us",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-merit-starlit",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Merit Starlit Hotel & Residence",
+      "developerBrand": "Merit International",
+      "developerGroup": "Merit International",
+      "legalSeller": null,
+      "district": "Budva",
+      "propertyTypes": [
+        "hotel rooms",
+        "one-bedroom residences",
+        "two-bedroom residences"
+      ],
+      "validationStatus": "partial_for_validation",
+      "primarySource": "https://meritstarlit.com/en/rezidanslar",
+      "agencySources": [],
+      "agencyPublisherCount": 0,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-merit-starlit",
+      "validationRef": "02-project-validation.json#me-merit-starlit",
+      "slug": "merit-starlit",
+      "countryCode": "ME",
+      "summary": "Гостиничный комплекс и резиденции Merit Starlit в Будве.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Гостиничные номера и резиденции",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://meritstarlit.com/en/rezidanslar",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-bellemond-residence",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Bellemond Residence",
+      "developerBrand": "Bellemond Residence",
+      "developerGroup": null,
+      "legalSeller": null,
+      "district": "Bečići / Budva Riviera",
+      "propertyTypes": [
+        "apartments"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://bellemondresidence.me/",
+      "agencySources": [
+        "https://realting.com/ru/montenegro/property/1755471"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-bellemond-residence",
+      "validationRef": "02-project-validation.json#me-bellemond-residence",
+      "slug": "bellemond-residence",
+      "countryCode": "ME",
+      "summary": "Жилой проект в Бечичи с апартаментами.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://bellemondresidence.me/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-porto-budva",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Porto Budva",
+      "developerBrand": "Budva Investment Montenegro",
+      "developerGroup": "Budva Investment Montenegro",
+      "legalSeller": null,
+      "district": "Central Budva",
+      "propertyTypes": [
+        "apartments",
+        "commercial units"
+      ],
+      "validationStatus": "partial_for_validation",
+      "primarySource": "https://www.portobudvaestate.me/en/about-us/",
+      "agencySources": [],
+      "agencyPublisherCount": 0,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-porto-budva",
+      "validationRef": "02-project-validation.json#me-porto-budva",
+      "slug": "porto-budva",
+      "countryCode": "ME",
+      "summary": "Многофункциональный комплекс в центре Будвы с апартаментами и коммерческими помещениями.",
+      "amenities": [],
+      "kind": "mixed",
+      "typeLabel": "Апартаменты и коммерческие помещения",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.portobudvaestate.me/en/about-us/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-poljana-olive-homes",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Poljana Olive Homes Pool Residence",
+      "developerBrand": "Montenegrimmo",
+      "developerGroup": "Montenegrimmo D.O.O.",
+      "legalSeller": null,
+      "district": "Poljana / Budva Riviera near Sveti Stefan",
+      "propertyTypes": [
+        "townhouses",
+        "private-pool houses"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://montenegrimmo.com/poljana-olive-homes-pool-residence/",
+      "agencySources": [
+        "https://astrarealestate.me/property/poljana-olive-homes-luxury-townhouses-for-sale/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-poljana-olive-homes",
+      "validationRef": "02-project-validation.json#me-poljana-olive-homes",
+      "slug": "poljana-olive-homes",
+      "countryCode": "ME",
+      "summary": "Проект Montenegrimmo на Будванской ривьере с таунхаусами и домами с бассейнами.",
+      "amenities": [],
+      "kind": "villa",
+      "typeLabel": "Таунхаусы и дома с бассейном",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://montenegrimmo.com/poljana-olive-homes-pool-residence/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-kotor-bayview",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Kotor Bayview Residence",
+      "developerBrand": "ARS Intertrade",
+      "developerGroup": null,
+      "legalSeller": null,
+      "district": "Muo / Kotor Bay",
+      "propertyTypes": [
+        "one-bedroom apartments",
+        "two-bedroom apartments",
+        "three-bedroom suites"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://www.kotorbayview.com/",
+      "agencySources": [
+        "https://1realty.me/en/properties/apartments-in-the-new-complex-kotor-bayview/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-kotor-bayview",
+      "validationRef": "02-project-validation.json#me-kotor-bayview",
+      "slug": "kotor-bayview",
+      "countryCode": "ME",
+      "summary": "Комплекс апартаментов и резиденций в Муо у Которского залива; на сайте проекта указан девелопер ARS Intertrade.",
+      "amenities": [],
+      "kind": "condo",
+      "typeLabel": "Апартаменты и сьюты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://www.kotorbayview.com/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    },
+    {
+      "id": "me-montis-mountain-resort",
+      "market": "montenegro",
+      "country": "Montenegro",
+      "name": "Montis Mountain Resort by Splendid",
+      "developerBrand": "Golden Group",
+      "developerGroup": "Golden Group / Splendid operating partnership",
+      "legalSeller": null,
+      "district": "Kolašin",
+      "propertyTypes": [
+        "condo-hotel suites",
+        "hotel investment units"
+      ],
+      "validationStatus": "complete_for_discovery_after_validation",
+      "primarySource": "https://montishotel.me/resort/",
+      "agencySources": [
+        "https://hotelmontis.ru/"
+      ],
+      "agencyPublisherCount": 1,
+      "imageCandidate": null,
+      "mediaStatus": "source_page_only_rights_unresolved",
+      "publicationApproved": false,
+      "commercialStatus": "research_only",
+      "commerciallyEnabled": false,
+      "sourceRecordRef": "01-montenegro-projects*.json#me-montis-mountain-resort",
+      "validationRef": "02-project-validation.json#me-montis-mountain-resort",
+      "slug": "montis-mountain-resort",
+      "countryCode": "ME",
+      "summary": "Проект горного кондотеля в Колашине с гостиничными сьютами и юнитами.",
+      "amenities": [],
+      "kind": "hotel",
+      "typeLabel": "Кондотель: гостиничные сьюты и юниты",
+      "availabilityStatus": "on_request",
+      "reviewedAt": "2026-09-18",
+      "projectSource": {
+        "url": "https://montishotel.me/resort/",
+        "role": "project_primary"
+      },
+      "sourceCommit": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+      "correctionRefs": [
+        "C02",
+        "C03",
+        "C04",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md"
+      ]
+    }
+  ]
+}

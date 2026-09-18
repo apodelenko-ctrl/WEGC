@@ -119,9 +119,9 @@ def run(base,out):
                 context.unroute('**/mira/catalog/data.json');mark('fixture_'+name,static_fallback=True)
             goto('/mira/catalog/');page.wait_for_function("document.querySelector('#search').disabled===false")
             mark('catalogue_recovery_after_fixture')
-            # The server-side intake is deliberately closed, not a successful signup.
-            goto('/mira/access/');assert page.locator('input').count()==0 and 'пока закрыта' in page.locator('main').inner_text()
-            mark('live_registration_gate_is_closed',real_signup_success=False)
+            # Public page links to the existing invited intake; this read-only test does not submit it.
+            goto('/mira/access/');assert page.locator('input').count()==0 and 'приглаш' in page.locator('main').inner_text().lower();assert page.locator('a[href="https://pilot.wegc.fund/mira/pilot.html"]').count()==1
+            mark('invited_agency_entry_no_public_signup',real_signup_success=False)
             goto('/mira/documents/');assert page.locator('.doc-card').count()==9
             names=['agency-agreement','project-rules','data-processing','privacy','data-consent','marketing-consent','materials-policy','payment-support','site-terms']
             for name in names:

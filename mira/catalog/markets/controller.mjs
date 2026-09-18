@@ -1,12 +1,12 @@
 import {validateCatalogue} from '../catalog-core.mjs';
 /** Country-aware public catalogue. Read-only public JSON, local shortlist only. */
-import {MARKETS,PROPERTY_TYPES,PAGE_SIZE,MAX_SELECTION,normalize,marketFromPath,isCatalogueIndex,safeReturnPath,validateExpansion,combineProjects,marketProjects,filterProjects,paginate,safeSelection,toggleSelection} from './market-core.mjs';
+import {MARKETS,PROPERTY_TYPES,PAGE_SIZE,MAX_SELECTION,normalize,marketFromPath,isCatalogueIndex,safeReturnPath,validateExpansion,validateDiscovery,combineProjects,marketProjects,filterProjects,paginate,safeSelection,toggleSelection} from './market-core.mjs';
 const $=id=>document.getElementById(id),KEY='mira-research-selection-v1',RETURN='mira-catalog-return';
 const market=marketFromPath(location.pathname),country=MARKETS[market];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let all=[],rows=[],selection=[],pendingSelection=[],state={q:'',district:'',kind:'',family:'',page:1},loaded=false;
 const controls=['search','district','kind','family','filters-reset'];
-const KIND={villa:'Вилла',condo:'Кондоминиум'};
+const KIND={villa:'Виллы / дома',condo:'Кондоминиумы / апартаменты',mixed:'Смешанный проект',hotel:'Гостиничный формат'};
 function readSaved(){for(const storage of [()=>sessionStorage,()=>localStorage])try{const raw=storage().getItem(KEY);if(raw){const value=JSON.parse(raw);return Array.isArray(value)?value:[];}}catch{}return [];}
 function saveSelection(){const combined=[...selection,...pendingSelection].slice(0,MAX_SELECTION);try{localStorage.setItem(KEY,JSON.stringify(combined));try{sessionStorage.removeItem(KEY);}catch{}return;}catch{}try{sessionStorage.setItem(KEY,JSON.stringify(combined));}catch{toast('Сохранение браузера недоступно. Скачайте подборку перед закрытием страницы.');}}
 function toast(msg){const e=$('toast');if(e){e.textContent=msg;e.hidden=false;e.classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>{e.hidden=true;e.classList.remove('visible');},3000);}}
@@ -38,13 +38,14 @@ function closeDialog(){const d=$('shortlist');if(!d)return;if(typeof d.close==='
 async function getJSON(url){const r=await fetch(url,{credentials:'omit',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('Catalogue HTTP '+r.status);const text=await r.text();if(text.length>5000000)throw Error('Catalogue too large');return JSON.parse(text);}
 async function load(){
  try{
-  const [baseResult,extraResult]=await Promise.allSettled([getJSON('/mira/catalog/data.json'),getJSON('/mira/catalog/markets/data.json')]);
+  const [baseResult,extraResult,discoveryResult]=await Promise.allSettled([getJSON('/mira/catalog/data.json'),getJSON('/mira/catalog/markets/data.json'),getJSON('/mira/catalog/markets/discovery.json')]);
   if(baseResult.status!=='fulfilled')throw Error('Phuket feed unavailable');const base=validateCatalogue(baseResult.value);if(base.schemaVersion!==1||base.mode!=='public_research'||!Array.isArray(base.projects)||base.projects.length!==618)throw Error('Invalid Phuket source');
   let extra=null;try{if(extraResult.status==='fulfilled')extra=validateExpansion(extraResult.value);}catch{}
-  if(!extra&&market!=='phuket')throw Error('New market feed unavailable');
-  all=extra?combineProjects(base.projects,extra):base.projects.map(p=>({...p,market:'phuket'}));rows=marketProjects(all,market);
-  const raw=readSaved();selection=safeSelection(raw,all);pendingSelection=extra?[]:raw.filter(id=>typeof id==='string'&&/^(bali|dubai)-[a-z0-9-]+$/.test(id)).slice(0,MAX_SELECTION-selection.length);
-  options('district',rows.map(p=>p.district));options('family',rows.map(p=>p.family));options('kind',rows.flatMap(p=>p.propertyTypes||[p.kind]),market==='phuket'?KIND:PROPERTY_TYPES);
+  let discovery=null;try{if(discoveryResult.status==='fulfilled')discovery=validateDiscovery(discoveryResult.value);}catch{}
+  if((!extra&&['bali','dubai'].includes(market))||(!discovery&&['vietnam','montenegro'].includes(market)))throw Error('New market feed unavailable');
+  all=extra?combineProjects(base.projects,extra,discovery):[...base.projects.map(p=>({...p,market:'phuket'})),...(discovery?.projects||[])];rows=marketProjects(all,market);
+  const raw=readSaved();selection=safeSelection(raw,all);pendingSelection=raw.filter(id=>typeof id==='string'&&!all.some(p=>p.id===id)&&((!extra&&/^(bali|dubai)-[a-z0-9-]+$/.test(id))||(!discovery&&/^(vn|me)-[a-z0-9-]+$/.test(id)))).slice(0,MAX_SELECTION-selection.length);
+  options('district',rows.map(p=>p.district));options('family',rows.map(p=>p.family));options('kind',rows.flatMap(p=>['vietnam','montenegro'].includes(p.market)?[p.kind]:(p.propertyTypes||[p.kind])),['phuket','vietnam','montenegro'].includes(market)?KIND:PROPERTY_TYPES);
   readState();restoreControls();loaded=true;for(const id of controls)if($(id))$(id).disabled=false;if($('load-error'))$('load-error').hidden=true;render(false);syncSelection();bindImages();
 
  }catch(e){loaded=false;if($('load-error')){$('load-error').hidden=false;$('load-error').textContent='Не удалось обновить каталог. Карточки ниже доступны; повторите загрузку позже.';}for(const id of controls)if($(id))$(id).disabled=true;bindImages();}

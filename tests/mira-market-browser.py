@@ -30,8 +30,8 @@ def run(base,out):
     for img in page.locator('img').all():
      img.scroll_into_view_if_needed();expect(img).to_have_js_property('complete',True);assert img.evaluate('(i)=>i.naturalWidth>0'),img.get_attribute('src')
     links.update(page.locator('a[href^="/"]').evaluate_all('(els)=>els.map(a=>a.getAttribute("href").split("#")[0])'))
-   for market in ['bali','dubai']:
-    goto('/mira/catalog/'+market+'/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('.market-switch a')).to_have_count(3);expect(page.locator('#cards .project-card')).to_have_count(15)
+   for market in ['bali','dubai','vietnam','montenegro']:
+    goto('/mira/catalog/'+market+'/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('.market-switch a')).to_have_count(5);expect(page.locator('#cards .project-card')).to_have_count(15)
     for width in [320,360,390,600,768,1024,1440]:
      page.set_viewport_size({'width':width,'height':1000});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(market,width)
     inspect_page();page.screenshot(path=str(out/(market+'-desktop.png')),full_page=True)
@@ -53,24 +53,27 @@ def run(base,out):
    ctx.unroute('**/mira/catalog/markets/controller.mjs');page.locator('[data-catalog-back]').click();expect(page.locator('#search')).to_have_value('INDARI');ok('detail_back_without_detail_javascript')
    goto('/mira/catalog/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('#result-count')).to_contain_text('618');page.locator('#cards [data-add]').first.click();page.locator('#shortlist-open').click();expect(page.locator('#shortlist-items')).to_contain_text('Бали');expect(page.locator('#shortlist-items')).to_contain_text('Дубай')
    with page.expect_download() as event:page.locator('#shortlist-download').click()
-   body=Path(event.value.path()).read_text('utf-8-sig');assert 'Пхукет' in body and 'Бали' in body and 'Дубай' in body and 'Не отправлена' in body
-   page.locator('#shortlist-items [data-remove]').first.click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(2);page.reload(wait_until='networkidle');page.locator('#shortlist-open').click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(2);page.locator('#shortlist-clear').click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(0);ok('mixed_country_shortlist_and_download')
+   body=Path(event.value.path()).read_text('utf-8-sig');assert all(name in body for name in ['Пхукет','Бали','Дубай','Вьетнам','Черногория','Не отправлена'])
+   page.locator('#shortlist-items [data-remove]').first.click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(4);page.reload(wait_until='networkidle');page.locator('#shortlist-open').click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(4);page.locator('#shortlist-clear').click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(0);ok('mixed_country_shortlist_and_download')
    goto('/mira/catalog/dubai/?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E');expect(page.locator('#search')).to_be_enabled();expect(page.locator('#cards .project-card')).to_have_count(0);page.locator('#filters-reset').click();expect(page.locator('#cards .project-card')).to_have_count(15);ok('untrusted_query_reset')
    feed=ctx.request.get(base+'/mira/catalog/markets/data.json').json();assert len(feed['projects'])==30
-   for p in feed['projects']:
+   discovery=ctx.request.get(base+'/mira/catalog/markets/discovery.json').json();assert len(discovery['projects'])==30
+   for p in feed['projects']+discovery['projects']:
     goto('/mira/catalog/projects/'+p['id']+'/');expect(page.locator('h1')).to_have_text(p['name']);expect(page.locator('[data-add]').first).to_be_enabled();inspect_page()
     for width in [390,1440]:
      page.set_viewport_size({'width':width,'height':900});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(p['id'],width)
-    if p['id'] in ['bali-magnum-resort-berawa','dubai-sobha-one']:
+    if p['id'] in ['bali-magnum-resort-berawa','dubai-sobha-one','vn-lumi-hanoi','me-kotor-bayview']:
      page.screenshot(path=str(out/(p['market']+'-project-desktop.png')),full_page=True)
      page.set_viewport_size({'width':390,'height':844});page.screenshot(path=str(out/(p['market']+'-project-mobile.png')),full_page=True)
     page.locator('[data-add]').first.click();expect(page.locator('[data-add]').first).to_have_attribute('aria-pressed','true');page.reload(wait_until='networkidle');expect(page.locator('[data-add]').first).to_have_attribute('aria-pressed','true');page.locator('[data-add]').first.click();expect(page.locator('[data-add]').first).to_have_attribute('aria-pressed','false');page.locator('[data-catalog-back]').click();expect(page.locator('#result-count')).to_contain_text('15')
     if p['image']:
      r=ctx.request.get(base+p['image']);assert r.ok and r.headers.get('content-type','').startswith('image/'),p['id']
-   ok('all_30_detail_urls_and_available_media',browserDetails=30,detailWidths=[390,1440])
+   ok('all_30_baseline_and_30_discovery_detail_urls_and_available_media',baselineDetails=30,discoveryDetails=30,detailWidths=[390,1440])
    for href in sorted(links):
     r=ctx.request.get(base+href);assert r.ok,(href,r.status)
    ok('internal_links_resolve',links=len(links))
+   goto('/mira/catalog/montenegro/');expect(page.locator('#kind')).to_be_enabled();page.locator('#kind').select_option('hotel');expect(page.locator('#cards .project-card')).to_have_count(1);expect(page.locator('#cards')).to_contain_text('Montis');ok('discovery_explicit_hotel_taxonomy')
+   goto('/mira/catalog/');expect(page.locator('#next')).to_be_enabled();page.locator('#next').click();expect(page.locator('#page-status')).to_have_text('2 / 26');page.locator('#prev').click();expect(page.locator('#page-status')).to_have_text('1 / 26');ok('phuket_pagination_preserved')
    # New feed failures must preserve the independent 618-record Phuket feed and saved expansion IDs.
    goto('/mira/catalog/bali/');expect(page.locator('#search')).to_be_enabled();page.locator('#cards [data-add]').first.click();saved=page.evaluate("localStorage.getItem('mira-research-selection-v1')")
    for status,body in [(503,'unavailable'),(200,'{}')]:
