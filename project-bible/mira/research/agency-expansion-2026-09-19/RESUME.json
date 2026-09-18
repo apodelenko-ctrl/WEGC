@@ -22,7 +22,7 @@
   "externalSends": 0,
   "requiredFinalReport": "NIGHT-REPORT.md",
   "mandatoryFinalReportOnLastRun": true,
-  "latestResultCommit": "1a9aaa28eb2dc3c684babedeb16398076b6b9825",
+  "latestResultCommit": "1f58ccc4dae1c6a33b2f7e6d112d154c2eeacae3",
   "remaining": "Togliatti minimum met at 10/10 research-fit public business identities. Five records have a public phone and five a general email; direct person channels remain sparse. Official city-proper population is blocked.",
   "canonicalCandidateGroups": 366,
   "canonicalRussiaGroups": 224,
@@ -32,7 +32,7 @@
   "latestCheckpointEvent": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b005.json",
   "newAgencyCountMeaning": "35 cumulative new candidate records including holds and separate overseas/network segments; not 35 verified legal entities",
   "freshFirstWaveSuitableCandidates": 10,
-  "latestResultCommitNote": "B005 working tree is based on sourceCommitRead; result SHA is recorded in the following receipt commit.",
+  "latestResultCommitNote": "Published B005 data/code checkpoint; a following receipt-only commit stores this pointer.",
   "latestBatch": "batch-005-togliatti-observations.json",
   "lastCheckpointAt": "2026-09-18T22:01:33Z"
 }

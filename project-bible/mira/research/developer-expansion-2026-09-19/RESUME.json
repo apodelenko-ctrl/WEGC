@@ -49,6 +49,6 @@
     "excluded_non_residential": 1
   },
   "remaining": "Four Banyan/Laguna catalogue rows now map to PHK-006 from exact first-party Banyan Group Residences pages. Laguna Lakeside remains ambiguous between PHK-006 and PHK-007 because an exact current primary project identity was not established. Naturale Kamala is not assumed AAG. Other507 missing-family and60 other-market records are unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
-  "latest_result_commit": "1a9aaa28eb2dc3c684babedeb16398076b6b9825",
-  "latest_result_commit_note": "B005 working tree is based on source_commit; result SHA is recorded in the following receipt commit."
+  "latest_result_commit": "1f58ccc4dae1c6a33b2f7e6d112d154c2eeacae3",
+  "latest_result_commit_note": "Published B005 data/code checkpoint; a following receipt-only commit stores this pointer."
 }

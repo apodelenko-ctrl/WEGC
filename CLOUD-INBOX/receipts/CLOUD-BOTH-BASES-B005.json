@@ -1,0 +1,36 @@
+{
+  "checkpoint_id": "cloud-both-bases-b005",
+  "published_data_commit": "1f58ccc4dae1c6a33b2f7e6d112d154c2eeacae3",
+  "branch": "mira/research-night-20260918",
+  "source_commit": "2dfdc86b3597f2756b2acb9901d9e1aca805cc09",
+  "sources": {
+    "agencies": [
+      "https://rusjem.ru/",
+      "https://reestr.rgr.ru/agentstvo-global-nedvizhimost-19144/",
+      "https://reestr.rgr.ru/agentstvo-edinstvo-plus-19147/",
+      "https://reestr.rgr.ru/agentstvo-solnce-18861/",
+      "https://reestr.rgr.ru/agentstvo-biem-nedvizhimost-19120/",
+      "https://xn--01-dlcheinb0bds0bn4l.xn--p1ai/",
+      "https://agencies.domclick.ru/agency/371446",
+      "https://agencies.domclick.ru/agency/6050",
+      "https://agencies.domclick.ru/agency/356584",
+      "https://agencies.domclick.ru/agency/6265"
+    ],
+    "developers": [
+      "https://www.banyangroupresidences.com/angsana-residences",
+      "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+      "https://www.banyangroupresidences.com/cassia-residences",
+      "https://www.banyangroupresidences.com/news/banyan-group-residences-unveils-exclusive-laguna-beach-residences-bayside-laguna-phuket"
+    ],
+    "population": "Official current city-proper figure not verified; no urban-district or agglomeration substitute."
+  },
+  "agency": {"before": 356, "after": 366, "new": 10, "existing_updated": 0, "deleted": 0, "reviewed": 10, "first_wave_suitable": 10, "next_city": "RU-CITY-004"},
+  "developer": {"before": 43, "after": 43, "fresh_contacts_before": 8, "fresh_contacts_after": 9, "project_ids_preserved": 618, "primary_group_links": 9, "verified_public_group_links": 14, "unresolved_family": 1, "ambiguous": 1, "no_family": 507},
+  "tests": {"registry": 27, "agency_unique_ids": true, "agency_ids_preserved": true},
+  "crm_imports": 0,
+  "external_sends": 0,
+  "production_deploy": false,
+  "cloud_restore": false,
+  "local_transition": {"full_closeout_and_manifest_received": true, "local_evidence_accepted": true, "private_archive_in_cloud": false, "external_id_crosswalk_complete": false, "actual_cloud_restore_accepted": false},
+  "scope_note": "Public research only. LOCAL native Accounts78/87 are not added to public research totals. No outreach, CRM import or deployment."
+}
