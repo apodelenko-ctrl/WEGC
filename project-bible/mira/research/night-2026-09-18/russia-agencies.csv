@@ -1,0 +1,51 @@
+id,country,city,brand,official_domain,source_status,owner_review,outreach_status,commercial_status,commerciallyEnabled,detail_source_file,checked_at
+RU-NIGHT-A-001,Russia,Калининград,ВДОМЕ,vdome-estate.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-002,Russia,Великий Новгород,СЕВЕР,severvn.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-003,Russia,Курск,Монолит,kurskmonolit.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-004,Russia,Белгород,Грант,grant-dom.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-005,Russia,Владивосток,AFLAT,aflat.online,first_party_current,yes,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-006,Russia,Томск,Аурум,aurum70.ru,partial_entity_metadata_hold,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-007,Russia,Ижевск,Гранд,izh-grand.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-008,Russia,Великий Новгород,КВАРТАЛ,kvartal53.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-009,Russia,Пенза,КИРШ,kirsh58.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-010,Russia,Владивосток,PRO ESTATE,proestate.global,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-011,Russia,Великий Новгород,ГАРАНТ,garant53.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-012,Russia,Рязань,Гранд-Н,grand-rzn.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-013,Russia,Владивосток,PREMIER,premier-vl.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-014,Russia,Псков,Pro Estate,proestate60.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-015,Russia,Рязань,Виктори,victory62.org,first_party_current_content_review_hold,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-016,Russia,Красноярск,SEVER ESTATE,sever-estate.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-017,Russia,Омск,Миард,miard.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-018,Russia,Йошкар-Ола,Прогресс,progressdom.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-019,Russia,Вологда,Олимп,an-olimp.com,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-020,Russia,Новокузнецк,Эксперт,expert-an.com,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-021,Russia,Новокузнецк,Любимый город,lgorod.com,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-022,Russia,Архангельск,Морской слон,morskoy-slon.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-023,Russia,Омск,Аркада-Стиль,arkada-style.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-024,Russia,Омск,Милана-Риэлт,realtor-omsk.com,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-025,Russia,Волгоград,Твои метры,tvoimetry.com,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-026,Russia,Рязань,Центральное агентство недвижимости,961-961.ru,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-027,Russia,Красноярск,Квадрат,kvadratdom.com,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-028,Russia,Красноярск,Фрегат,fregat.online,first_party_current,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-A-029,Russia,Мурманск,Good House,goodhouse51.ru,partial_secondary_confirmed_first_party_unreachable,no,not_authorized,research_only,false,03-russia-a.csv,2026-09-18
+RU-NIGHT-B-001,Russia,Орск,Сити-Групп,city-g.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-002,Russia,Тверь,ДомТверь,domtver.org,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-003,Russia,Ставрополь,Welcome,welcome26.ru,first_party_current,yes,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-004,Russia,Саратов,Империя,an64.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-005,Russia,Чебоксары,Агентство на Ярославской / HOUSE GROUP,housegroup21.ru,first_party_current,yes,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-006,Russia,Тверь,ТИТАН Недвижимость,antitan.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-007,Russia,Оренбург,АВЕГА,avega56.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-008,Russia,Липецк,ViBx,vibx.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-009,Russia,Брянск,РИЭЛ-МАКС,riel-max.ru,first_party_current,yes,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-010,Russia,Тамбов,Квартал,kvartal68.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-011,Russia,Брянск,БСН Недвижимость,bsnnedvizhimost.ru,first_party_current,yes,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-012,Russia,Тюмень,Формула,formula-agency.ru,first_party_current,yes,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-013,Russia,КМВ / Ессентуки,ADASTRA,adastra-kmv.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-014,Russia,Ставрополь,ХОРСТ НЕДВИЖИМОСТЬ,horstrealty.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-015,Russia,Южно-Сахалинск,PRO-HOUSE,pro-house.su,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-016,Russia,Саранск,Новосёлов,novoselov.net,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-017,Russia,Калининград,ЭРВИН,ervincom.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-018,Russia,Южно-Сахалинск,Партнеры,partners65.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-019,Russia,Псков,АГЕНТСТВО № 1 ПСКОВ,600088.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-020,Russia,Южно-Сахалинск,Управление недвижимостью,unsakh.ru,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
+RU-NIGHT-B-021,Russia,Тула,Новый Дом,новыйдомтула.рф,first_party_current,no,not_authorized,research_only,false,04-russia-b.csv,2026-09-18
