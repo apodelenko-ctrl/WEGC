@@ -1,5 +1,17 @@
 # MIRA cloud lane — 18 September 2026
 
+## 15:57:27 Bangkok run — C16 completed; bounded C01–C16 lane closed
+
+Completed **C16**: `results/C16-end-of-day-status.md`; created final `DAY-BRIEF.md`; shared event `CLOUD-INBOX/events/2026-09-18/cloud-1557-C16-final.json`. The C01–C16 research/content queue is now exhausted and no new Cxx is invented.
+
+Fresh reconciliation materially changed the handoff state. Issue #14 now explicitly records that LOCAL accepted `MIRA-LOCAL-20260918-02` plus `MIRA-INTEGRATE-20260918-01` from snapshot `b28dbb67d1204d5400cbc8ba69045cb4507f2381`. This supersedes earlier “LOCAL receipt unconfirmed” wording only at issue-level acceptance: structured `CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json` and `MIRA-MKT-20260918-01.json` were still absent. LOCAL says applicant submit/receipt/refresh are already passed; operator decision → applicant-visible result → fresh login remains pending with Mac/browser access as the stated blocker.
+
+Fresh main is `22186058eb478239277ceddce52295688f5512c5`, merged through PR #15 “MIRA: five research destinations and invited agency entry”. The main source integrates 15 Vietnam + 15 Montenegro research records while preserving `commercialStatus=research_only`, `commerciallyEnabled=false`, `publicationApproved=false` and null legal-seller fields where unknown. Buyer registration remains off. For this main commit, launch QA run `35327093151` and Pages deployment run `35327093244` both completed successfully. C16 does not convert CI/Pages success into proof of the remaining applicant tail, Russia-without-VPN reachability, current inventory or commercial activation.
+
+Final measured research state: VN+ME 27 complete-for-discovery / 3 partial; RU50 + BY30 research candidates; Bali15/15 and Dubai15/15 permission routes; new publication-approved expansion media=0. VIVI remains the first exact Phuket supply dossier with commercial enablement false pending continuity/renewal, current inventory/pricing/payment plan, lead protection, downstream partner and media rights. Espo/Brevo runtime/import/mail acceptance, C14 dashboard generator reconciliation, BY organisation-level licence proof, media permissions and Russia-network test remain LOCAL/operational holds.
+
+Decision `D-20260918-13`: bounded CLOUD lane closes after C16; existing LOCAL tasks continue by evidence/receipt, but this day series is not extended. No external messages/forms/purchases or CLOUD production writes occurred.
+
 ## 13:57:30 Bangkok run — C14/C15 completed
 
 Run `cloud-1357-C14-C15` completed **C14**: `results/C14-dashboard-evidence-source-reconciliation.md` (commit `7994591de968e200a8dcbff6cfae3f5b3a66e690`). Current `main` remains `1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b`. The canonical dashboard's stale `collection_closed` / `implemented_code_not_deployed` / blanket `deployment=not_verified` labels were traced to the source generators (`scripts/mira-launch-operations.py`, `scripts/mira-launch-source.py`), not merely to generated Markdown/JSON. C14 proposes a source model that keeps `implementation`, `deployment`, `live_acceptance` and `commercial_gate` separate and preserves evidence provenance. No main/generated dashboard/product code was changed; buyer/send/commercial gates remain closed.
