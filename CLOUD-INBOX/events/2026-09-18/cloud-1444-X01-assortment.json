@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "eventId": "cloud-1444-X01-assortment",
+  "author": "CLOUD",
+  "startedAt": "2026-09-18T14:44:09+07:00",
+  "checkpointAt": "2026-09-18T14:52:02+07:00",
+  "timezone": "Asia/Bangkok",
+  "trigger": "Direct owner request: consider Albania and northern Italy, recommend complementary markets for MIRA assortment",
+  "recordType": "append_only_shared_findings_decisions_and_daily_checkpoint",
+  "result": {
+    "path": "project-bible/mira/research/day-2026-09-18/results/X01-assortment-albania-northern-italy.md",
+    "commit": "7f858db4a4b7752d9cda5402525012416eb406be",
+    "status": "preliminary_market_screen_completed",
+    "scope": "Six market-level screens with dated evidence and exact supplier seeds for Albania/Milan/Garda; no new project import dataset or commercial admission"
+  },
+  "findings": [
+    {
+      "id": "F-20260918-X01-AL",
+      "type": "dated_public_facts_and_product_hypothesis",
+      "checkedOn": "2026-09-18",
+      "finding": "Albania April 2026 accommodation visitors increased 19.7% y/y, non-residents 22.6%. BALFIN corporate sources provide Green Coast and Vlora Marina supplier seeds within the same group, not two independent developers.",
+      "sources": ["https://www.instat.gov.al/en/themes/industry-trade-and-services/tourism-statistics/publications/2026/accommodation-establishments-april-2026/", "https://balfin.al/news/green-coast-and-vlora-marina-in-the-spotlight-of-international-investors/"],
+      "limitations": "National accommodation demand is not unit occupancy, yield or property-price growth. April is a dated observation, not claimed latest month. Exact title, concession/lease, permits, inventory, seller, commission and media rights remain unverified. Country is not described as an EU member."
+    },
+    {
+      "id": "F-20260918-X01-IT",
+      "type": "public_supplier_routes_and_unresolved_legal_screen",
+      "checkedOn": "2026-09-18",
+      "finding": "Northern Italy should be split into Garda own-use/second-home, Milan urban and a selective Como premium category. AbitareIn has four named Milan catalogue projects; Garda Haus describes an agency/international-client route rather than developer status.",
+      "sources": ["https://abitarein.com/it/progetti", "https://www.gardahaus.com/it/cerca/appartamenti-in-vendita-sul-lago-di-garda/", "https://www.esteri.it/it/temi/diplomazia_giuridica/condizreciprocita/"],
+      "limitations": "Category positioning is CLOUD recommendation. AbitareIn includes Ready to Live refurbishment, so not all entries are new construction. Catalogue presence is not inventory/mandate. MAECI general reciprocity guidance does not establish a current case-specific Russian/Belarus buyer or bank approval. No automatic residence right inferred."
+    },
+    {
+      "id": "F-20260918-X01-TR",
+      "type": "dated_primary_statistic",
+      "checkedOn": "2026-09-18",
+      "finding": "TUIK records 21,534 housing sales to foreigners in 2025, including 3,649 to Russian citizens; foreign sales declined 9.4% y/y. This supports testing Russian-language buyer relevance without claiming a booming foreign market.",
+      "sources": ["https://veriportali.tuik.gov.tr/en/press/58350"],
+      "limitations": "Full-year 2025, not current-month demand or MIRA conversions. Article is a primary indexed extract; direct page requires JavaScript. Property title, technical condition, actual transaction rights and channel eligibility remain separate."
+    },
+    {
+      "id": "F-20260918-X01-GE",
+      "type": "attributed_original_analyst_research",
+      "checkedOn": "2026-09-18",
+      "finding": "Galt & Taggart's 2025 review/2026 outlook identifies unsold-stock/absorption pressure and yield compression in Batumi. Recommendation is Tbilisi urban and selective Batumi, not a bulk aparthotel assortment.",
+      "sources": ["https://galtandtaggart.com/en/reports/details/69c3a91d46cac30e9b28a518"],
+      "limitations": "Original analyst assessment, not official national statistics or a verified project yield. No advertised guaranteed return imported. Buyer demand for MIRA not yet tested."
+    },
+    {
+      "id": "F-20260918-X01-CY",
+      "type": "primary_market_evidence_and_regulatory_route",
+      "checkedOn": "2026-09-18",
+      "finding": "CBC's 23 June 2026 Q1 release links residential-price growth to strong demand mainly from foreign buyers. Official Ministry procedure identifies non-EU property-acquisition permission. Suggested separate Republic of Cyprus collection: Paphos/Larnaca, selective Limassol.",
+      "sources": ["https://www.centralbank.cy/en/announcements/residential-property-price-index-23-06-2026", "https://www.gov.cy/moi/en/purchasing-property/"],
+      "limitations": "Not a case-specific legal/banking clearance, current inventory or future-return forecast. Do not mix northern-island offerings with Republic of Cyprus legal descriptions. Government procedure read as indexed primary text; later direct open returned an internal error."
+    },
+    {
+      "id": "F-20260918-X01-GR",
+      "type": "dated_primary_statistic_and_product_hypothesis",
+      "checkedOn": "2026-09-18",
+      "finding": "Bank of Greece provisional Q1 2026 nominal apartment price change: +5.7% national and +6.4% Thessaloniki. Suggested later research is Thessaloniki/Chalkidiki and selected Crete, not a Golden Visa offer.",
+      "sources": ["https://www.bankofgreece.gr/en/news-and-media/press-office/news-list/news?announcement=a096eb19-23d0-44e4-9445-10ef088053fb"],
+      "limitations": "Apartment-price index is not a villa return, future appreciation or residence entitlement. Current buyer/site/legal/payment permissions unverified."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D-20260918-X01",
+      "status": "accepted_for_research_scope_only",
+      "authority": "OWNER nominated Albania and northern Italy; CLOUD selected screening structure under existing research delegation",
+      "decision": "Treat Albania coastal property and northern Italy own-use/urban property as distinct research assortments. Recommend Turkey, Georgia and Republic of Cyprus as complementary next candidates; Greece later.",
+      "reason": "Diversify buyer use cases rather than adding interchangeable country flags; assess real supplier and transaction paths, not only tourism or price momentum.",
+      "implementationStatus": "Market screening and source note committed; project collections, supplier mandates, CRM imports and publication NOT performed",
+      "doesNotSupersede": ["Phuket-first public funnel", "MIRA-LOCAL-20260918-02 current priority", "MIRA-MKT-20260918-01 CRM/mail task", "C16 final bounded-day report"]
+    },
+    {
+      "id": "D-20260918-X01-DELIVERY",
+      "status": "proposed_research_outputs_not_scheduled_or_completed",
+      "decision": "Next concrete research outputs: X02 Albania 3-5 exact project candidates across at least two independently evidenced supplier groups if available; X03 northern Italy 3-5 exact project/offer candidates separated Garda/Milan and any validated Como path; X04 later one concrete supplier/transaction path per Turkey/Georgia/Republic of Cyprus.",
+      "reason": "Small verifiable pilot assortments instead of large unqualified listings; account for Italy developer versus local-agency mandates and refurbishment/secondary distinctions.",
+      "implementationStatus": "Scope written only; no new automation, new LOCAL execution task or externally sent request"
+    }
+  ],
+  "controlBoardEntry": {
+    "date": "2026-09-18",
+    "author": "CLOUD",
+    "completed": "X01 country/product screening and supplier-seed/source note",
+    "evidence": "result commit plus six findings and two research-scope decision records in this event",
+    "remainingHolds": ["Exact-project collection and independent supplier checks", "Buyer-specific legal/notary/banking applicability", "Title/permit/mandate and current inventory", "Commission and lead-protection agreement", "Media usage permissions", "Actual agency demand validation"],
+    "localAction": "Read as assortment advisory; do not delay or restart current integration and CRM tasks; do not publish countries/cards from this note"
+  },
+  "newProjectCardsCreated": 0,
+  "newPublicationApprovedMedia": 0,
+  "crmImportsPerformed": 0,
+  "externalMessagesSent": 0,
+  "externalFormsSubmitted": 0,
+  "productionChanges": 0,
+  "scheduleChanges": 0,
+  "newAutomations": 0,
+  "localTaskPrioritiesChanged": false,
+  "localReceiptConfirmed": false,
+  "c01ToC16StatusChanged": false,
+  "note": "This is an append-only shared accounting event linked from the common index/board. It records findings, decisions and actual work without rewriting other agents' historical records. It is not a final DAY-BRIEF, a sales licence or a promise of further unattended execution."
+}
