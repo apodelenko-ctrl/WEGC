@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "cloud-1157-C09",
+  "runStartLocal": "2026-09-18T11:57:37+07:00",
+  "timeSemantics": "run start supplied by automation runtime; completion minute not guessed",
+  "author": "CLOUD",
+  "block": "C09",
+  "status": "completed",
+  "artifact": "project-bible/mira/research/day-2026-09-18/results/C09-belarus-six-review-candidates.md",
+  "artifactCommit": "f8cf95738f0b94e783a5b98e654f9a25b5453599",
+  "scope": "Six corrected owner_review=yes Belarus candidates only; malformed historical detailed CSV excluded",
+  "facts": {
+    "candidatesRechecked": 6,
+    "currentCorporateRoutesRechecked": 6,
+    "exactDomainMainSearchNoHits": 6,
+    "currentOrganisationLicencesIndependentlyVerified": 0,
+    "externalMessagesSent": 0,
+    "commercialActivations": 0
+  },
+  "materialFindings": [
+    "All six retain current corporate routes and remain suitable for internal owner review",
+    "Central Borisov and Osnova publish licence numbers on their own sites; treated as self-published evidence only",
+    "Current Chamber register corroborates professional presence for Osnova and Pakodan via attested realtor workplace entries, not organisation licence status",
+    "Pakodan retains a self-described international-network/partner signal, not a verified overseas desk",
+    "Recent Chamber notices report Ministry licence suspensions, so current licence status must not be inferred from history, marketplace presence or a corporate page",
+    "Current main exact-domain search returned zero hits for all six; legal/rebrand/unpublished-CRM dedupe remains unresolved"
+  ],
+  "remainingHolds": [
+    "Authoritative current organisation-level Ministry licence verification if a licensed-status claim is needed",
+    "Unpublished LOCAL CRM dedupe",
+    "Legal-entity/rebrand uniqueness",
+    "Recipient eligibility and send approval",
+    "Exact partnership decision-makers"
+  ],
+  "externalActions": []
+}
