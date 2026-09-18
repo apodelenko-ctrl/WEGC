@@ -1093,12 +1093,6 @@
       "reason": "Historical discovery only; independent entity and business fit not freshly established"
     },
     {
-      "agency_id": "RU-A-d373db3fe4d2",
-      "segment": "unknown",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
       "agency_id": "RU-A-842cad72e9cb",
       "segment": "local_newbuild",
       "first_wave_fit": "not_checked",
@@ -1130,12 +1124,6 @@
     },
     {
       "agency_id": "RU-A-4c2c80ad2662",
-      "segment": "unknown",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
-      "agency_id": "RU-A-7c1efc75304e",
       "segment": "unknown",
       "first_wave_fit": "not_checked",
       "reason": "Historical discovery only; independent entity and business fit not freshly established"
@@ -2021,6 +2009,42 @@
       "segment": "local_greenfield_candidate",
       "first_wave_fit": "not_checked",
       "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-RGR-399",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Professional registry description explicitly advertises European overseas property since 2012; separate segment."
+    },
+    {
+      "agency_id": "RU-RGR-19031",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Operator and two distinct company/direct phone routes published; description and exact residential/new-build specialization missing."
+    },
+    {
+      "agency_id": "RU-RGR-438",
+      "segment": "local_newbuild",
+      "first_wave_fit": "hold",
+      "reason": "Registry confirms local residential/new-build services; own-site fetch failed, current parent/network status not checked."
+    },
+    {
+      "agency_id": "RU-RGR-446",
+      "segment": "hold_entity",
+      "first_wave_fit": "hold",
+      "reason": "Own site lists ООО фирма Ратмир, INN 6452039068/OGRN 1026402673340; professional registry names ИП Перевертайло. Do not assert same legal entity without resolution."
+    },
+    {
+      "agency_id": "RU-RGR-5002",
+      "segment": "hold_entity",
+      "first_wave_fit": "hold",
+      "reason": "City list still includes company, but detail page says unavailable/probably archived. Current business and contacts unverified."
+    },
+    {
+      "agency_id": "RU-RGR-19665",
+      "segment": "hold_entity",
+      "first_wave_fit": "hold",
+      "reason": "Listed in Saratov city directory, but published office address explicitly says Engels. Do not count toward Saratov city-proper target; resolve city."
     }
   ],
   "source_rows_deleted": 0

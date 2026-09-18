@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-09-18T18:10:52Z",
+  "status": "blocked_primary_sources",
+  "currentOfficialPopulationConfirmed": false,
+  "observations": [
+    {
+      "url": "https://rosstat.gov.ru/compendium/document/13282",
+      "status": "blocked",
+      "reason": "Timeout fetching"
+    },
+    {
+      "url": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+      "status": "blocked",
+      "reason": "502 Bad Gateway"
+    },
+    {
+      "url": "https://64.rosstat.gov.ru/population",
+      "status": "blocked",
+      "reason": "Not accessible via web tool"
+    },
+    {
+      "url": "https://64.rosstat.gov.ru/folder/27120?page=1&print=1",
+      "status": "blocked",
+      "reason": "Search result exists, page fetch failed"
+    }
+  ],
+  "next_action": "Retry official national file / territorial statistical tables; distinguish city proper from okrug; do not replace dates/values from secondary snippets."
+}

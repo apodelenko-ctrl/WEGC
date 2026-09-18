@@ -2603,5 +2603,16 @@
       "reason": "preserved_source_identity"
     }
   ],
-  "policy": "Never merge names merely because they share a directory host. Network offices do not count as independent agencies; legal franchise identity unresolved."
+  "policy": "Never merge names merely because they share a directory host. Network offices do not count as independent agencies; legal franchise identity unresolved.",
+  "field_corrections": [
+    {
+      "agency_id": "RU-A-d373db3fe4d2",
+      "field": "city",
+      "before": "Воронеж",
+      "after": "Саратов",
+      "source_url": "https://rss-rielt.ru/",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "reason": "First-party and RGR say Saratov; preserve historical ID."
+    }
+  ]
 }

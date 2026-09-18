@@ -17,8 +17,6 @@
   "crm_imports_this_task": 0,
   "baseline_groups": 332,
   "baseline_identity_keys_preserved": 332,
-  "baseline_network_groups_collapsed": 23,
-  "directory_groups_split": 9,
   "legacy_rows_mapped": 1844,
   "fully_enriched": 0,
   "network_group_reduction": 3,
@@ -36,5 +34,9 @@
     "Net +5 from identity corrections is NOT new discovery",
     "Historical contact values are not freshly verified",
     "Current official population not established"
-  ]
+  ],
+  "network_source_keys_normalized": 23,
+  "network_groups_removed": 3,
+  "directory_named_candidates_after_split": 9,
+  "note": "Initialization checkpoint only; current counters in COUNTS.json"
 }

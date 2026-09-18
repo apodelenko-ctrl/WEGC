@@ -1,0 +1,2869 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "checked_at": "2026-09-18T18:10:52Z",
+  "source_sha": "e31f94559265f7417f5f03240d6087197e4f9faa",
+  "counts": {
+    "canonical_candidate_groups": 345,
+    "RU": 203,
+    "BY": 59,
+    "other": 83,
+    "new_candidates_this_block": 8,
+    "existing_records_enriched": 2,
+    "reviewed_records": 10,
+    "first_wave_suitable_candidates": 4,
+    "named_role": 9,
+    "phone": 9,
+    "general_email": 7,
+    "direct_business_phone": 5,
+    "direct_public_work_email": 1,
+    "whatsapp_published_link": 1,
+    "telegram_direct": 2,
+    "telegram_channel": 2,
+    "vk": 1,
+    "fully_enriched": 0,
+    "crm_imports_this_task": 0,
+    "historical_crm_imports_confirmed": 12,
+    "external_sends": 0,
+    "cities_target_complete": 0,
+    "saratov_remaining_to_10": 6
+  },
+  "records": [
+    {
+      "agency_id": "RU-A-7c1efc75304e",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "city": "Саратов",
+      "brand": "Цитадель-А",
+      "legal_name": "ИП Панин А.В.",
+      "parent_brand": null,
+      "branch_status": "local_named_operator_no_network_signal_in_reviewed_sources",
+      "canonical_domain": "citadel-a.ru",
+      "segment": "local_newbuild",
+      "segment_evidence": [
+        {
+          "value": "agency",
+          "source_path": "project-bible/mira/data/mega-classified.csv",
+          "source_row": 88,
+          "status": "inherited_not_rechecked"
+        },
+        {
+          "value": "agency",
+          "source_path": "project-bible/mira/data/mega-verified.csv",
+          "source_row": 88,
+          "status": "inherited_not_rechecked"
+        },
+        {
+          "value": "hold_first_party_review",
+          "source_path": "project-bible/mira/sales/russia-launch-100-quality.csv",
+          "source_row": 86,
+          "status": "inherited_not_rechecked"
+        },
+        {
+          "value": "local_newbuild",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "First-party Saratov residential/new-build services; named local operator. Overseas activity remains unknown."
+        }
+      ],
+      "overseas_status": "unknown",
+      "first_wave_fit": true,
+      "fit_reason": "First-party Saratov residential/new-build services; named local operator. Overseas activity remains unknown.",
+      "company_phone": "+7 (8452) 91-42-60",
+      "direct_business_phone": "+7 (904) 240-84-05",
+      "contact_first_name": "Александр",
+      "contact_last_name": "Панин",
+      "contact_role": "Директор",
+      "general_email": "citadel-a@mail.ru",
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": "https://t.me/Mariya_Nedogreeva",
+      "telegram_kind": "direct_dialogue",
+      "vk_url": null,
+      "other_social_url": "https://t.me/nedogreevamariya",
+      "contact_page": "https://citadel-a.ru/kontakty/",
+      "field_evidence": [
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "brand",
+          "value": "Цитадель-А",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "legal_name",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "parent_brand",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "canonical_domain",
+          "value": "citadel-a.ru",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "segment",
+          "value": "unknown",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "company_phone",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_first_name",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_last_name",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_role",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "general_email",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_page",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "brand",
+          "value": "Цитадель-А",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Панин А.В.",
+          "source_url": "https://reestr.rgr.ru/agentstvo-panin-a-v-agentstvo-nedvizhimosti-citadel-a-394/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": "citadel-a.ru",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7 (8452) 91-42-60",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": "citadel-a@mail.ru",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Александр",
+          "source_url": "https://reestr.rgr.ru/agentstvo-panin-a-v-agentstvo-nedvizhimosti-citadel-a-394/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Панин",
+          "source_url": "https://reestr.rgr.ru/agentstvo-panin-a-v-agentstvo-nedvizhimosti-citadel-a-394/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Директор",
+          "source_url": "https://reestr.rgr.ru/agentstvo-panin-a-v-agentstvo-nedvizhimosti-citadel-a-394/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://citadel-a.ru/kontakty/",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "First-party Saratov residential/new-build services; named local operator. Overseas activity remains unknown."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": "+7 (904) 240-84-05",
+          "source_url": "https://citadel-a.ru/author/a_panin/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_work_contact",
+          "verification_status": "verified_public_work_contact"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://citadel-a.ru/author/a_panin/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": "https://t.me/Mariya_Nedogreeva",
+          "source_url": "https://t.me/nedogreevamariya",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "telegram_kind",
+          "value": "direct_dialogue",
+          "source_url": "https://t.me/nedogreevamariya",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": "https://t.me/nedogreevamariya",
+          "source_url": "https://citadel-a.ru/kontakty/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "telegram_kind",
+          "value": "direct_dialogue",
+          "source_url": "https://t.me/Mariya_Nedogreeva",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        }
+      ],
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "public_identity_found_not_state_registry_checked",
+      "completeness": {
+        "city": "verified_public_source",
+        "brand": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "parent_brand": "not_checked",
+        "canonical_domain": "verified_public_source",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "direct_business_phone": "verified_public_work_contact",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "general_email": "verified_public_source",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "not_found",
+        "telegram_url": "verified_published_link",
+        "telegram_kind": "verified_public_source",
+        "vk_url": "not_found",
+        "other_social_url": "verified_published_link",
+        "contact_page": "verified_public_source"
+      },
+      "next_action": "Find missing public work email/WhatsApp/social; qualify overseas activity and parent independence before outreach",
+      "legacy_ids": [
+        "RU-A-7c1efc75304e"
+      ],
+      "legacy_names": [
+        "Цитадель-А"
+      ],
+      "legacy_cities": [
+        "Саратов"
+      ],
+      "baseline_keys": [
+        "Russia|citadel-a.ru"
+      ],
+      "source_records": [
+        {
+          "path": "project-bible/mira/data/agencies-russia-pilot.csv",
+          "row": 88,
+          "legacy_id": null,
+          "status": null
+        },
+        {
+          "path": "project-bible/mira/data/mega-classified.csv",
+          "row": 88,
+          "legacy_id": null,
+          "status": "classified"
+        },
+        {
+          "path": "project-bible/mira/data/mega-discovered.csv",
+          "row": 88,
+          "legacy_id": null,
+          "status": "discovered"
+        },
+        {
+          "path": "project-bible/mira/data/mega-verified.csv",
+          "row": 88,
+          "legacy_id": null,
+          "status": "verified_source_level"
+        },
+        {
+          "path": "project-bible/mira/data/work-russia-live-qa-004.csv",
+          "row": 13,
+          "legacy_id": null,
+          "status": "discovered"
+        },
+        {
+          "path": "project-bible/mira/sales/russia-launch-100-quality.csv",
+          "row": 86,
+          "legacy_id": "RU-A-7c1efc75304e",
+          "status": null
+        },
+        {
+          "path": "project-bible/mira/sales/russia-launch-50-batch-02.csv",
+          "row": 36,
+          "legacy_id": null,
+          "status": null
+        }
+      ],
+      "inherited_classification": {
+        "agency_id": "RU-A-7c1efc75304e",
+        "rank": "85",
+        "company": "Цитадель-А",
+        "city": "Саратов",
+        "website": "https://citadel-a.ru/",
+        "segment": "hold_first_party_review",
+        "segmentation_basis": "source_cohort_signal_only",
+        "inherited_segment": "",
+        "overseas_status": "unknown",
+        "greenfield_confirmed": "false",
+        "pitch_mode": "qualification_first",
+        "live_reviewed": "false",
+        "review_join": "unmatched",
+        "alias_source_url": "",
+        "alias_checked_at": "",
+        "decision_route_signal": "",
+        "readiness": "not_live_reviewed",
+        "owner_review_wave": "false",
+        "send_status": "not_approved",
+        "source_url": "https://citadel-a.ru/",
+        "source_checked_at": "2026-09-15",
+        "review_source_path": "",
+        "evidence_note": "Regional agency expands geographic coverage of launch cohort",
+        "next_action": "Find commercial decision maker"
+      },
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized"
+    },
+    {
+      "agency_id": "RU-RGR-399",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "branch_status": "not_checked",
+      "overseas_status": "confirmed_signal",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "Риэлт-Партнер",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Перекоринская Алевтина Владимировна",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found"
+        },
+        {
+          "field": "segment",
+          "value": "existing_overseas",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7 (8452) 98-88-91",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": "alevtina_saratov@mail.ru",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Алевтина",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Перекоринская",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Руководитель",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "existing_overseas",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Professional registry description explicitly advertises European overseas property since 2012; separate segment."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": "+7 (937) 225-21-37",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/agent-perekorinskaya-alevtina-vladimirovna-1195/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_work_contact",
+          "verification_status": "verified_public_work_contact"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": "alevtina_saratov@mail.ru",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/agent-perekorinskaya-alevtina-vladimirovna-1195/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_work_contact",
+          "verification_status": "verified_public_work_contact"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "canonical_domain": "not_found",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "general_email": "verified_public_source",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "verified_public_work_contact",
+        "direct_public_work_email": "verified_public_work_contact",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "segment_evidence": [
+        {
+          "value": "existing_overseas",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Professional registry description explicitly advertises European overseas property since 2012; separate segment."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": "Саратов",
+      "brand": "Риэлт-Партнер",
+      "legal_name": "ИП Перекоринская Алевтина Владимировна",
+      "parent_brand": null,
+      "canonical_domain": null,
+      "segment": "existing_overseas",
+      "company_phone": "+7 (8452) 98-88-91",
+      "direct_business_phone": "+7 (937) 225-21-37",
+      "contact_first_name": "Алевтина",
+      "contact_last_name": "Перекоринская",
+      "contact_role": "Руководитель",
+      "general_email": "alevtina_saratov@mail.ru",
+      "direct_public_work_email": "alevtina_saratov@mail.ru",
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+      "first_wave_fit": false,
+      "fit_reason": "Professional registry description explicitly advertises European overseas property since 2012; separate segment.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "public_identity_found_not_state_registry_checked",
+      "next_action": "Professional registry description explicitly advertises European overseas property since 2012; separate segment."
+    },
+    {
+      "agency_id": "RU-RGR-19031",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "branch_status": "not_checked",
+      "overseas_status": "unknown",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "Амалия",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Сергеева Наталья Первазовна",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found"
+        },
+        {
+          "field": "segment",
+          "value": "unknown",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7-904-243-5555",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Наталья",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Сергеева",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Руководитель",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "unknown",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Operator and two distinct company/direct phone routes published; description and exact residential/new-build specialization missing."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": "+7-960-345-68-55",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/agent-sergeeva-natalya-pervazovna-145278/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_work_contact",
+          "verification_status": "verified_public_work_contact"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/agent-sergeeva-natalya-pervazovna-145278/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "canonical_domain": "not_found",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "general_email": "not_found",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "verified_public_work_contact",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "segment_evidence": [
+        {
+          "value": "unknown",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Operator and two distinct company/direct phone routes published; description and exact residential/new-build specialization missing."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": "Саратов",
+      "brand": "Амалия",
+      "legal_name": "ИП Сергеева Наталья Первазовна",
+      "parent_brand": null,
+      "canonical_domain": null,
+      "segment": "unknown",
+      "company_phone": "+7-904-243-5555",
+      "direct_business_phone": "+7-960-345-68-55",
+      "contact_first_name": "Наталья",
+      "contact_last_name": "Сергеева",
+      "contact_role": "Руководитель",
+      "general_email": null,
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+      "first_wave_fit": "hold",
+      "fit_reason": "Operator and two distinct company/direct phone routes published; description and exact residential/new-build specialization missing.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "public_identity_found_not_state_registry_checked",
+      "next_action": "Operator and two distinct company/direct phone routes published; description and exact residential/new-build specialization missing."
+    },
+    {
+      "agency_id": "RU-RGR-438",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "branch_status": "not_checked",
+      "overseas_status": "unknown",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "Рост-Риелт",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Наумов Глеб Васильевич",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": "xn----jtbinllcgjf.xn--p1ai",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7 (8452) 212167",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": "rost-rielt@yandex.ru",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Глеб",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Наумов",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Индивидуальный предприниматель",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Registry confirms local residential/new-build services; own-site fetch failed, current parent/network status not checked."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "canonical_domain": "verified_public_source",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "general_email": "verified_public_source",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "not_checked",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "blocked",
+        "telegram_url": "blocked",
+        "telegram_kind": "blocked",
+        "vk_url": "blocked",
+        "other_social_url": "blocked"
+      },
+      "segment_evidence": [
+        {
+          "value": "local_newbuild",
+          "source_url": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Registry confirms local residential/new-build services; own-site fetch failed, current parent/network status not checked."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": "Саратов",
+      "brand": "Рост-Риелт",
+      "legal_name": "ИП Наумов Глеб Васильевич",
+      "parent_brand": null,
+      "canonical_domain": "xn----jtbinllcgjf.xn--p1ai",
+      "segment": "local_newbuild",
+      "company_phone": "+7 (8452) 212167",
+      "direct_business_phone": null,
+      "contact_first_name": "Глеб",
+      "contact_last_name": "Наумов",
+      "contact_role": "Индивидуальный предприниматель",
+      "general_email": "rost-rielt@yandex.ru",
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+      "first_wave_fit": "hold",
+      "fit_reason": "Registry confirms local residential/new-build services; own-site fetch failed, current parent/network status not checked.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "public_identity_found_not_state_registry_checked",
+      "next_action": "Registry confirms local residential/new-build services; own-site fetch failed, current parent/network status not checked.",
+      "source_access_issues": [
+        {
+          "url": "http://www.xn----jtbinllcgjf.xn--p1ai/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "reason": "Web fetch failed"
+        }
+      ]
+    },
+    {
+      "agency_id": "RU-RGR-445",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "branch_status": "local_named_operator_no_network_signal_in_reviewed_sources",
+      "overseas_status": "unknown",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "СВЯТЕНЬ",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Шипачев Алексей Алексеевич",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": "svyaten.ru",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_greenfield_candidate",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7 (8452) 98-74-68",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": "svyaten@yandex.ru",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Алексей",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Шипачев",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Директор",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_greenfield_candidate",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Professional registry identifies local proprietor and residential services. Website inaccessible; no affirmative overseas signal in reviewed source, not proof of absence."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "canonical_domain": "verified_public_source",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "general_email": "verified_public_source",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "not_checked",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "blocked",
+        "telegram_url": "blocked",
+        "telegram_kind": "blocked",
+        "vk_url": "blocked",
+        "other_social_url": "blocked"
+      },
+      "segment_evidence": [
+        {
+          "value": "local_greenfield_candidate",
+          "source_url": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Professional registry identifies local proprietor and residential services. Website inaccessible; no affirmative overseas signal in reviewed source, not proof of absence."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": "Саратов",
+      "brand": "СВЯТЕНЬ",
+      "legal_name": "ИП Шипачев Алексей Алексеевич",
+      "parent_brand": null,
+      "canonical_domain": "svyaten.ru",
+      "segment": "local_greenfield_candidate",
+      "company_phone": "+7 (8452) 98-74-68",
+      "direct_business_phone": null,
+      "contact_first_name": "Алексей",
+      "contact_last_name": "Шипачев",
+      "contact_role": "Директор",
+      "general_email": "svyaten@yandex.ru",
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+      "first_wave_fit": true,
+      "fit_reason": "Professional registry identifies local proprietor and residential services. Website inaccessible; no affirmative overseas signal in reviewed source, not proof of absence.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "public_identity_found_not_state_registry_checked",
+      "next_action": "Find missing public work email/WhatsApp/social; qualify overseas activity and parent independence before outreach",
+      "source_access_issues": [
+        {
+          "url": "https://www.svyaten.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "reason": "Web fetch failed"
+        }
+      ]
+    },
+    {
+      "agency_id": "RU-RGR-446",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "branch_status": "not_checked",
+      "overseas_status": "unknown",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "Ратмир",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ООО фирма «Ратмир»",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perevertaylo-aleksey-sergeevich-an-ratmir-446/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": "ratmir-saratov.ru",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "hold_entity",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7 (8452) 34-94-09",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": "info@ratmir-saratov.ru",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Алексей",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perevertaylo-aleksey-sergeevich-an-ratmir-446/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Перевертайло",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perevertaylo-aleksey-sergeevich-an-ratmir-446/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Руководитель по реестру РГР",
+          "source_url": "https://reestr.rgr.ru/agentstvo-perevertaylo-aleksey-sergeevich-an-ratmir-446/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://ratmir-saratov.ru/",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "hold_entity",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Own site lists ООО фирма Ратмир, INN 6452039068/OGRN 1026402673340; professional registry names ИП Перевертайло. Do not assert same legal entity without resolution."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "canonical_domain": "verified_public_source",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "general_email": "verified_public_source",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "not_checked",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "segment_evidence": [
+        {
+          "value": "hold_entity",
+          "source_url": "https://ratmir-saratov.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Own site lists ООО фирма Ратмир, INN 6452039068/OGRN 1026402673340; professional registry names ИП Перевертайло. Do not assert same legal entity without resolution."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": "Саратов",
+      "brand": "Ратмир",
+      "legal_name": "ООО фирма «Ратмир»",
+      "parent_brand": null,
+      "canonical_domain": "ratmir-saratov.ru",
+      "segment": "hold_entity",
+      "company_phone": "+7 (8452) 34-94-09",
+      "direct_business_phone": null,
+      "contact_first_name": "Алексей",
+      "contact_last_name": "Перевертайло",
+      "contact_role": "Руководитель по реестру РГР",
+      "general_email": "info@ratmir-saratov.ru",
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://ratmir-saratov.ru/",
+      "first_wave_fit": "hold",
+      "fit_reason": "Own site lists ООО фирма Ратмир, INN 6452039068/OGRN 1026402673340; professional registry names ИП Перевертайло. Do not assert same legal entity without resolution.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "hold_entity",
+      "next_action": "Own site lists ООО фирма Ратмир, INN 6452039068/OGRN 1026402673340; professional registry names ИП Перевертайло. Do not assert same legal entity without resolution."
+    },
+    {
+      "agency_id": "RU-RGR-4220",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "branch_status": "local_named_operator_no_network_signal_in_reviewed_sources",
+      "overseas_status": "unknown",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "Бюро недвижимости Виктории Пуховой",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Пухова Виктория Вениаминовна",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+79378180106",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": "v680106@gmail.com",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Виктория",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Пухова",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Руководитель",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Professional registry identifies proprietor and new-build/resale services in Saratov and other Russian cities. Not a proven foreign desk. Personal-profile page inaccessible; shared company route not promoted to personal route."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "canonical_domain": "not_found",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "general_email": "verified_public_source",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "not_checked",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "segment_evidence": [
+        {
+          "value": "local_newbuild",
+          "source_url": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Professional registry identifies proprietor and new-build/resale services in Saratov and other Russian cities. Not a proven foreign desk. Personal-profile page inaccessible; shared company route not promoted to personal route."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": "Саратов",
+      "brand": "Бюро недвижимости Виктории Пуховой",
+      "legal_name": "ИП Пухова Виктория Вениаминовна",
+      "parent_brand": null,
+      "canonical_domain": null,
+      "segment": "local_newbuild",
+      "company_phone": "+79378180106",
+      "direct_business_phone": null,
+      "contact_first_name": "Виктория",
+      "contact_last_name": "Пухова",
+      "contact_role": "Руководитель",
+      "general_email": "v680106@gmail.com",
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+      "first_wave_fit": true,
+      "fit_reason": "Professional registry identifies proprietor and new-build/resale services in Saratov and other Russian cities. Not a proven foreign desk. Personal-profile page inaccessible; shared company route not promoted to personal route.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "public_identity_found_not_state_registry_checked",
+      "next_action": "Find missing public work email/WhatsApp/social; qualify overseas activity and parent independence before outreach"
+    },
+    {
+      "agency_id": "RU-RGR-5002",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "branch_status": "not_checked",
+      "overseas_status": "unknown",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "Эльдом",
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "canonical_domain",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "segment",
+          "value": "hold_entity",
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "general_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "contact_first_name",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "contact_last_name",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "contact_role",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "hold_entity",
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "City list still includes company, but detail page says unavailable/probably archived. Current business and contacts unverified."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "verified_public_source",
+        "legal_name": "blocked",
+        "canonical_domain": "blocked",
+        "segment": "analyst_classification",
+        "company_phone": "blocked",
+        "general_email": "blocked",
+        "contact_first_name": "blocked",
+        "contact_last_name": "blocked",
+        "contact_role": "blocked",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "not_checked",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "segment_evidence": [
+        {
+          "value": "hold_entity",
+          "source_url": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "City list still includes company, but detail page says unavailable/probably archived. Current business and contacts unverified."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": "Саратов",
+      "brand": "Эльдом",
+      "legal_name": null,
+      "parent_brand": null,
+      "canonical_domain": null,
+      "segment": "hold_entity",
+      "company_phone": null,
+      "direct_business_phone": null,
+      "contact_first_name": null,
+      "contact_last_name": null,
+      "contact_role": null,
+      "general_email": null,
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+      "first_wave_fit": "hold",
+      "fit_reason": "City list still includes company, but detail page says unavailable/probably archived. Current business and contacts unverified.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "hold_archived",
+      "next_action": "City list still includes company, but detail page says unavailable/probably archived. Current business and contacts unverified."
+    },
+    {
+      "agency_id": "RU-A-d373db3fe4d2",
+      "country": "Russia",
+      "city_id": "RU-CITY-001",
+      "city": "Саратов",
+      "brand": "РСС",
+      "legal_name": "ИП Лаптева Наталья Юрьевна",
+      "parent_brand": null,
+      "branch_status": "local_named_operator_no_network_signal_in_reviewed_sources",
+      "canonical_domain": "rss-rielt.ru",
+      "segment": "local_newbuild",
+      "segment_evidence": [
+        {
+          "value": "agency",
+          "source_path": "project-bible/mira/data/mega-classified.csv",
+          "source_row": 81,
+          "status": "inherited_not_rechecked"
+        },
+        {
+          "value": "agency",
+          "source_path": "project-bible/mira/data/mega-verified.csv",
+          "source_row": 81,
+          "status": "inherited_not_rechecked"
+        },
+        {
+          "value": "hold_first_party_review",
+          "source_path": "project-bible/mira/sales/russia-launch-100-quality.csv",
+          "source_row": 79,
+          "status": "inherited_not_rechecked"
+        },
+        {
+          "value": "local_newbuild",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Own site confirms Saratov, local proprietor, new-build/resale services. Old Voronezh city mapping incorrect; retain historical ID and correction trail."
+        }
+      ],
+      "overseas_status": "unknown",
+      "first_wave_fit": true,
+      "fit_reason": "Own site confirms Saratov, local proprietor, new-build/resale services. Old Voronezh city mapping incorrect; retain historical ID and correction trail.",
+      "company_phone": "+7 (8452) 46 00 95",
+      "direct_business_phone": "+7 937 964 9304",
+      "contact_first_name": "Наталья",
+      "contact_last_name": "Лаптева",
+      "contact_role": "Руководитель агентства",
+      "general_email": "rss-rielt@mail.ru",
+      "direct_public_work_email": null,
+      "whatsapp_url": "https://wa.me/79379649304",
+      "telegram_url": "https://t.me/boss_rieltor_saratov",
+      "telegram_kind": "direct_dialogue",
+      "vk_url": "https://vk.com/rss.rieltor.saratov",
+      "other_social_url": "https://t.me/saratov_rss_rieltor",
+      "contact_page": "https://rss-rielt.ru/",
+      "field_evidence": [
+        {
+          "field": "city",
+          "value": "Воронеж",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "brand",
+          "value": "РСС",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "legal_name",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "parent_brand",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "canonical_domain",
+          "value": "rss-rielt.ru",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "segment",
+          "value": "unknown",
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "company_phone",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_first_name",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_last_name",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_role",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "general_email",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "contact_page",
+          "value": null,
+          "source_url": null,
+          "checked_at": null,
+          "status": "not_checked",
+          "verification_status": "not_checked",
+          "reason": "Not freshly field-verified; see source lineage for inherited identity"
+        },
+        {
+          "field": "brand",
+          "value": "РСС",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": "Саратов",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Лаптева Наталья Юрьевна",
+          "source_url": "https://reestr.rgr.ru/agentstvo-lapteva-natalya-yurevna-agentstvo-nedvizhimosti-rss-4544/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": "rss-rielt.ru",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7 (8452) 46 00 95",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": "rss-rielt@mail.ru",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Наталья",
+          "source_url": "https://reestr.rgr.ru/agentstvo-lapteva-natalya-yurevna-agentstvo-nedvizhimosti-rss-4544/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Лаптева",
+          "source_url": "https://reestr.rgr.ru/agentstvo-lapteva-natalya-yurevna-agentstvo-nedvizhimosti-rss-4544/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Руководитель агентства",
+          "source_url": "https://reestr.rgr.ru/agentstvo-lapteva-natalya-yurevna-agentstvo-nedvizhimosti-rss-4544/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://rss-rielt.ru/",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "local_newbuild",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Own site confirms Saratov, local proprietor, new-build/resale services. Old Voronezh city mapping incorrect; retain historical ID and correction trail."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": "+7 937 964 9304",
+          "source_url": "https://t.me/saratov_rss_rieltor",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_work_contact",
+          "verification_status": "verified_public_work_contact"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://t.me/saratov_rss_rieltor",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": "https://wa.me/79379649304",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "telegram_url",
+          "value": "https://t.me/boss_rieltor_saratov",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "telegram_kind",
+          "value": "direct_dialogue",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "vk_url",
+          "value": "https://vk.com/rss.rieltor.saratov",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "other_social_url",
+          "value": "https://t.me/saratov_rss_rieltor",
+          "source_url": "https://rss-rielt.ru/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_published_link",
+          "verification_status": "verified_published_link",
+          "reason": "Exact published business URL; deliverability not tested"
+        },
+        {
+          "field": "telegram_kind",
+          "value": "direct_dialogue",
+          "source_url": "https://t.me/boss_rieltor_saratov",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        }
+      ],
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "public_identity_found_not_state_registry_checked",
+      "completeness": {
+        "city": "verified_public_source",
+        "brand": "verified_public_source",
+        "legal_name": "verified_public_source",
+        "parent_brand": "not_checked",
+        "canonical_domain": "verified_public_source",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "direct_business_phone": "verified_public_work_contact",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "general_email": "verified_public_source",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "verified_published_link",
+        "telegram_url": "verified_published_link",
+        "telegram_kind": "verified_public_source",
+        "vk_url": "verified_published_link",
+        "other_social_url": "verified_published_link",
+        "contact_page": "verified_public_source"
+      },
+      "next_action": "Find missing public work email/WhatsApp/social; qualify overseas activity and parent independence before outreach",
+      "legacy_ids": [
+        "RU-A-d373db3fe4d2"
+      ],
+      "legacy_names": [
+        "РСС"
+      ],
+      "legacy_cities": [
+        "Воронеж"
+      ],
+      "baseline_keys": [
+        "Russia|rss-rielt.ru"
+      ],
+      "source_records": [
+        {
+          "path": "project-bible/mira/data/agencies-russia-pilot.csv",
+          "row": 81,
+          "legacy_id": null,
+          "status": null
+        },
+        {
+          "path": "project-bible/mira/data/mega-classified.csv",
+          "row": 81,
+          "legacy_id": null,
+          "status": "classified"
+        },
+        {
+          "path": "project-bible/mira/data/mega-discovered.csv",
+          "row": 81,
+          "legacy_id": null,
+          "status": "discovered"
+        },
+        {
+          "path": "project-bible/mira/data/mega-verified.csv",
+          "row": 81,
+          "legacy_id": null,
+          "status": "verified_source_level"
+        },
+        {
+          "path": "project-bible/mira/data/work-russia-live-qa-004.csv",
+          "row": 6,
+          "legacy_id": null,
+          "status": "discovered"
+        },
+        {
+          "path": "project-bible/mira/sales/russia-launch-100-quality.csv",
+          "row": 79,
+          "legacy_id": "RU-A-d373db3fe4d2",
+          "status": null
+        },
+        {
+          "path": "project-bible/mira/sales/russia-launch-50-batch-02.csv",
+          "row": 29,
+          "legacy_id": null,
+          "status": null
+        }
+      ],
+      "inherited_classification": {
+        "agency_id": "RU-A-d373db3fe4d2",
+        "rank": "78",
+        "company": "РСС",
+        "city": "Воронеж",
+        "website": "https://rss-rielt.ru/",
+        "segment": "hold_first_party_review",
+        "segmentation_basis": "source_cohort_signal_only",
+        "inherited_segment": "",
+        "overseas_status": "unknown",
+        "greenfield_confirmed": "false",
+        "pitch_mode": "qualification_first",
+        "live_reviewed": "false",
+        "review_join": "unmatched",
+        "alias_source_url": "",
+        "alias_checked_at": "",
+        "decision_route_signal": "",
+        "readiness": "not_live_reviewed",
+        "owner_review_wave": "false",
+        "send_status": "not_approved",
+        "source_url": "https://rss-rielt.ru/",
+        "source_checked_at": "2026-09-15",
+        "review_source_path": "",
+        "evidence_note": "Additional Voronezh agency for diversified launch cohort",
+        "next_action": "Find direct commercial contact"
+      },
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized"
+    },
+    {
+      "agency_id": "RU-RGR-19665",
+      "country": "Russia",
+      "city_id": null,
+      "branch_status": "not_checked",
+      "overseas_status": "unknown",
+      "field_evidence": [
+        {
+          "field": "brand",
+          "value": "Агентство недвижимости Саратовской области",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "city",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "legal_name",
+          "value": "ИП Султанова Гузель Мунировна",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "canonical_domain",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "segment",
+          "value": "hold_entity",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "company_phone",
+          "value": "+7-917-989-66-40",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "general_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "blocked",
+          "verification_status": "blocked"
+        },
+        {
+          "field": "contact_first_name",
+          "value": "Гузель",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_last_name",
+          "value": "Султанова",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_role",
+          "value": "Руководитель агентства",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "contact_page",
+          "value": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "verified_public_source",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "segment",
+          "value": "hold_entity",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "verification_status": "analyst_classification",
+          "reason": "Listed in Saratov city directory, but published office address explicitly says Engels. Do not count toward Saratov city-proper target; resolve city."
+        },
+        {
+          "field": "direct_business_phone",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "direct_public_work_email",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_checked",
+          "verification_status": "not_checked"
+        },
+        {
+          "field": "whatsapp_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "telegram_kind",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "vk_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        },
+        {
+          "field": "other_social_url",
+          "value": null,
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "not_found",
+          "verification_status": "not_found",
+          "reason": "No value found in reviewed readable pages; broader search incomplete"
+        }
+      ],
+      "completeness": {
+        "brand": "verified_public_source",
+        "city": "blocked",
+        "legal_name": "verified_public_source",
+        "canonical_domain": "blocked",
+        "segment": "analyst_classification",
+        "company_phone": "verified_public_source",
+        "general_email": "blocked",
+        "contact_first_name": "verified_public_source",
+        "contact_last_name": "verified_public_source",
+        "contact_role": "verified_public_source",
+        "contact_page": "verified_public_source",
+        "direct_business_phone": "not_checked",
+        "direct_public_work_email": "not_checked",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "segment_evidence": [
+        {
+          "value": "hold_entity",
+          "source_url": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+          "checked_at": "2026-09-18T18:10:52Z",
+          "status": "analyst_classification",
+          "reason": "Listed in Saratov city directory, but published office address explicitly says Engels. Do not count toward Saratov city-proper target; resolve city."
+        }
+      ],
+      "legacy_ids": [],
+      "legacy_names": [],
+      "legacy_cities": [],
+      "baseline_keys": [],
+      "source_records": [],
+      "crm_import_status": "not_confirmed",
+      "outreach_status": "not_authorized",
+      "city": null,
+      "brand": "Агентство недвижимости Саратовской области",
+      "legal_name": "ИП Султанова Гузель Мунировна",
+      "parent_brand": null,
+      "canonical_domain": null,
+      "segment": "hold_entity",
+      "company_phone": "+7-917-989-66-40",
+      "direct_business_phone": null,
+      "contact_first_name": "Гузель",
+      "contact_last_name": "Султанова",
+      "contact_role": "Руководитель агентства",
+      "general_email": null,
+      "direct_public_work_email": null,
+      "whatsapp_url": null,
+      "telegram_url": null,
+      "telegram_kind": null,
+      "vk_url": null,
+      "other_social_url": null,
+      "contact_page": "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/",
+      "first_wave_fit": "hold",
+      "fit_reason": "Listed in Saratov city directory, but published office address explicitly says Engels. Do not count toward Saratov city-proper target; resolve city.",
+      "checked_at": "2026-09-18T18:10:52Z",
+      "entity_status": "hold_entity",
+      "next_action": "Listed in Saratov city directory, but published office address explicitly says Engels. Do not count toward Saratov city-proper target; resolve city."
+    }
+  ],
+  "verification_note": "Public-source identity/contact checks, not state legal verification or delivery tests. Fit is working classification; overseas absence not asserted."
+}

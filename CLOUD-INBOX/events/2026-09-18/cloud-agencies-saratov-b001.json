@@ -1,0 +1,78 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "checkpoint": "saratov-b001",
+  "timestamp_utc": "2026-09-18T18:10:52Z",
+  "timestamp_ict": "2026-09-19T01:10:52.000+07:00",
+  "source_sha": "e31f94559265f7417f5f03240d6087197e4f9faa",
+  "result_sha": null,
+  "result_sha_resolution": "Containing commit; exact SHA in next receipt",
+  "pushed_branch": "mira/research-night-20260918",
+  "publication": "not_deployed",
+  "counts_before": {
+    "all": 337,
+    "RU": 195
+  },
+  "counts_after": {
+    "canonical_candidate_groups": 345,
+    "RU": 203,
+    "BY": 59,
+    "other": 83,
+    "new_candidates_this_block": 8,
+    "existing_records_enriched": 2,
+    "reviewed_records": 10,
+    "first_wave_suitable_candidates": 4,
+    "named_role": 9,
+    "phone": 9,
+    "general_email": 7,
+    "direct_business_phone": 5,
+    "direct_public_work_email": 1,
+    "whatsapp_published_link": 1,
+    "telegram_direct": 2,
+    "telegram_channel": 2,
+    "vk": 1,
+    "fully_enriched": 0,
+    "crm_imports_this_task": 0,
+    "historical_crm_imports_confirmed": 12,
+    "external_sends": 0,
+    "cities_target_complete": 0,
+    "saratov_remaining_to_10": 6
+  },
+  "source_urls": [
+    "https://citadel-a.ru/kontakty/",
+    "https://reestr.rgr.ru/agentstvo-perekorinskaya-alevtina-vladimirovna-kompaniya-rielt-partner-399/",
+    "https://reestr.rgr.ru/agentstvo-sergeeva-natalya-pervazovna-an-amaliya-19031/",
+    "https://reestr.rgr.ru/agentstvo-naumov-gleb-vasilevich-an-rost-rielt-438/",
+    "https://reestr.rgr.ru/agentstvo-shipachev-aleksey-alekseevich-an-svyaten-445/",
+    "https://ratmir-saratov.ru/",
+    "https://reestr.rgr.ru/agentstvo-puhova-viktoriya-veniaminovna-byuro-nedvizhimosti-viktorii-puhovoy-4220/",
+    "https://reestr.rgr.ru/agentstvo-eldom-5002/",
+    "https://rss-rielt.ru/",
+    "https://reestr.rgr.ru/agentstvo-sultanova-guzel-munirovna-an-agentstvo-nedvizhimosti-saratovskoy-oblasti-19665/"
+  ],
+  "agency_ids": [
+    "RU-A-7c1efc75304e",
+    "RU-RGR-399",
+    "RU-RGR-19031",
+    "RU-RGR-438",
+    "RU-RGR-445",
+    "RU-RGR-446",
+    "RU-RGR-4220",
+    "RU-RGR-5002",
+    "RU-A-d373db3fe4d2",
+    "RU-RGR-19665"
+  ],
+  "city_ids": [
+    "RU-CITY-001"
+  ],
+  "tests": {
+    "unique_ids": true,
+    "all_332_baseline_keys_preserved": true,
+    "no_guessed_email_or_whatsapp": true,
+    "public_channel_separate_from_dialogue": true,
+    "legacy_IDs_preserved": true
+  },
+  "next_cursor": "RU-CITY-001",
+  "remaining": "Saratov 4/10 suitable candidates; 6 more needed. Resolve Ratmir ООО/IP, Rost-Rielt current network, Amalia fit, Eldom archive, Engels office city. Missing direct emails/WhatsApp/social. All other cities queued; official population unconfirmed.",
+  "blocker_owner": "CLOUD research; LOCAL only for CRM identity/import",
+  "external_sends": 0
+}

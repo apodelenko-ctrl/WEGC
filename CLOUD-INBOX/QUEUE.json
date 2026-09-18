@@ -212,10 +212,19 @@
       "id": "MIRA-AGENCIES-20260919-01",
       "owner": "CLOUD",
       "localRole": "private_count_reconciliation_and_selective_import",
-      "status": "in_progress_canonical_rebuilt_saratov_research",
+      "status": "in_progress_saratov_4_of_10",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-AGENCIES-20260919-01.md",
       "resumePath": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
-      "automationId": "6aad78bf2b988191b6ca5c921d60fd12"
+      "automationId": "6aad78bf2b988191b6ca5c921d60fd12",
+      "latestBatch": "project-bible/mira/research/agency-expansion-2026-09-19/batch-001-saratov.json",
+      "lastCheckpointAt": "2026-09-18T18:10:52Z",
+      "researchCounts": {
+        "canonicalCandidates": 345,
+        "RU": 203,
+        "newCandidates": 8,
+        "firstWaveSuitableReviewed": 4,
+        "crmImportsThisTask": 0
+      }
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
