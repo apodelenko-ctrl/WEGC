@@ -9,8 +9,8 @@
   "at_ict": "2026-09-19T03:07:56+07:00",
   "source_sha": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
   "pre_write_head": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
-  "result_sha": null,
-  "result_sha_note": "Exact pre-write and published SHAs are inserted by the following receipt-only commit after fetch/recheck and data commit.",
+  "result_sha": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
+  "result_sha_note": "Published B003 data/code checkpoint. A following receipt-only commit records this SHA in both RESUMEs.",
   "pushed_branch": "mira/research-night-20260918",
   "agency": {
     "before": 348,
@@ -75,5 +75,6 @@
     "developers": "Five Aileen-labelled records, Naturale Kamala and Banyan ambiguity;507 no-family and60 other-market records; legal seller/contract state and native87 crosswalk pending",
     "AUT04": "Private source/restore package, encrypted backup transfer, separate key reference and actual cloud runtime access absent"
   },
-  "stop_by": "2026-09-19T08:00:00+07:00"
+  "stop_by": "2026-09-19T08:00:00+07:00",
+  "commit_receipt": "CLOUD-INBOX/receipts/CLOUD-BOTH-BASES-B003.json"
 }

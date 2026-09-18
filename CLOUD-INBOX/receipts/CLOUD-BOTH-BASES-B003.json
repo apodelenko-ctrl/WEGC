@@ -1,0 +1,270 @@
+{
+  "checkpoint_id": "cloud-both-bases-b003",
+  "published_data_commit": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
+  "branch": "mira/research-night-20260918",
+  "source_commit": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
+  "pre_write_head": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
+  "data_tree": "37cc9a23919789cdfa41ee420abd77afd825e18d",
+  "published_files": [
+    {
+      "path": "CLOUD-INBOX/MASTER-STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41a93a016d6010ce236ec2f29683a775afe5e79d"
+    },
+    {
+      "path": "CLOUD-INBOX/QUEUE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "752a1f507591f3c5a01c1a3c26e1e78fee14a017"
+    },
+    {
+      "path": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b003.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a40a376acc49662ab1df6b359e3169e069d0a5d"
+    },
+    {
+      "path": "CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01/TEST-REPORT-B003.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f8d80f62d2c9a4a345a76cff2e2ee7d2c03b05e"
+    },
+    {
+      "path": "CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01/test_registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b4a3131ceeac746ea2cd8fb5409169fbdad0d7"
+    },
+    {
+      "path": "CLOUD-INBOX/КОНТРОЛЬ-БОРД.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6792ee7b3b14bc96c8abbc75a489eef7b7f6e35"
+    },
+    {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64e4bc73f4d9add25b81abc46df97144db1db736"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/B003-TEST-REPORT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2eba66e3648e90ca2f082fd42a776117f0a7b300"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fdd181c9650b4d4a62201c3438d9b7ef0a919ec"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/CHECKPOINT-003.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a84fba4e535d2f99eb1f5c55b0f76f872d57edf8"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/COUNTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bd14e3309ecdd31dbd2f8692e0ae9e2450b5359"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/POPULATION-CHECK-B003.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "305d6c61f3510559b4a041c5c266cb4fa3e20a3b"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11e0718a7570d45e60ec96e8400b9671a4af5012"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/batch-003-saratov-observations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "deb2b60e0f56166fbb00f8b525efb42b0abf7d26"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/batch-003-saratov.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f2bec5e3e99fea7d64f07ac1ecfed4a32eb45b1"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/contacts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dc616715961a00713999e0dee05f04990e365c7"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/coverage-by-city.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20e3ae8058ed4c338dff849639018050db8e44a4"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/master-agencies.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "913d9ba0fc2a1fa9e41b0450a1dd0daa865352f7"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/master-agencies.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee96c6d963905bdacb3a64a629e92ab09ced06ad"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/rejected-or-held.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c56cb4aec74c56c67f29679b3ee43ad12010521"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/scripts/apply-batch-003.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca2e69a5e3a34946059fa0a42604fc2a97a7fc9a"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adf67606e70c5cb2f73539b277c7bbe3b275ea9d"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/CHECKPOINT-003.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "042e4a4b4453a6322fe3663d2bd4a44112553ea8"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/RESUME.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "571751761c4d019ce78b486436d89f1a48126244"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/developers.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b4c0032bcaa5d9f395344b972d71f925acea55c"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/enrichment-queue.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db53b18ebd6c37d10525958ac92d373fbd510c09"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ce5d0a7efe58cc2ffa1282c5d0d260473da236a"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/project-links.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb4cdb30930f455b60607654e64a15633307cadd"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/public-contact-observations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba1e7ee46b79dc9dd82df4143237d5d81c1dbf64"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/source-sha256.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da64b0875ead467c311715dc7ca1ec857e9d2965"
+    }
+  ],
+  "sources": {
+    "agencies": [
+      "https://ratmir-saratov.ru/",
+      "https://reestr.rgr.ru/agentstvo-sidorovich-eduard-evgenevich-an-gamma-rielt-5030/",
+      "https://metrsaratova.ru/rieltory/vash-rieltor"
+    ],
+    "developers": [
+      "https://uniquegroupthailand.com/",
+      "https://uniquegroupthailand.com/project/aileenvillas/",
+      "https://uniquegroupthailand.com/project/uniqueecoviva/",
+      "https://uniquegroupthailand.com/contact/"
+    ],
+    "population": "Official city-proper current figure not verified; held blocked rather than substituting urban-district or agglomeration data."
+  },
+  "agency": {
+    "before": 348,
+    "after": 350,
+    "new": 2,
+    "existing_updated": 1,
+    "deleted": 0,
+    "saratov_research_fit_before": 7,
+    "saratov_research_fit_after": 10,
+    "remaining_to_10": 0,
+    "reviewed": 15,
+    "channel_coverage": {
+      "phone": 13,
+      "general_email": 11,
+      "direct_business_phone": 7,
+      "direct_public_work_email": 2,
+      "whatsapp": 1,
+      "telegram_direct": 2,
+      "telegram_channel": 2,
+      "vk": 1,
+      "named_role": 10,
+      "fully_enriched": 0
+    },
+    "next_city": "RU-CITY-002 Tyumen"
+  },
+  "developer": {
+    "before": 41,
+    "after": 42,
+    "new_group_id": "PHK-042",
+    "deleted": 0,
+    "fresh_contacts_before": 6,
+    "fresh_contacts_after": 7,
+    "project_ids_preserved": 618,
+    "primary_group_links_before": 3,
+    "primary_group_links_after": 5,
+    "unresolved_family": 6,
+    "ambiguous": 5,
+    "no_family": 507,
+    "exact_new_links": [
+      "ailin-villas",
+      "yunik-eko-viva"
+    ],
+    "blanket_aileen_merge": false
+  },
+  "tests": {
+    "registry": 25,
+    "agency_unique_ids": true,
+    "agency_ids_preserved": true,
+    "agency_replay_sha256_equal": true
+  },
+  "crm_imports": 0,
+  "external_sends": 0,
+  "cloud_restore": false,
+  "production_deploy": false,
+  "local_transition": {
+    "full_closeout_and_manifest_received": true,
+    "local_evidence_accepted": true,
+    "private_archive_in_cloud": false,
+    "external_id_crosswalk_complete": false,
+    "actual_cloud_restore_accepted": false
+  },
+  "remaining": {
+    "agencies": "Tyumen next; current official city-proper population evidence still blocked; Saratov direct-channel and legal-parent gaps remain.",
+    "developers": "Five Aileen-labelled records, Naturale Kamala and five Banyan ambiguities; 507 no-family records and 60 other-market records; legal seller, contract state and private CRM87 crosswalk pending.",
+    "AUT04": "Private source/restore package, encrypted backup transfer, separate key reference and actual cloud runtime access remain absent."
+  },
+  "scope_note": "Public research only. LOCAL native Accounts 78/87 are not added to public research totals; no outreach, CRM import or deployment."
+}

@@ -388,6 +388,8 @@
     "at": "2026-09-18T20:07:56Z",
     "sourceCommit": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
     "sourceHeadRechecked": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
+    "resultCommit": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
+    "receipt": "CLOUD-INBOX/receipts/CLOUD-BOTH-BASES-B003.json",
     "privateTransferConfirmed": false
   }
 }
