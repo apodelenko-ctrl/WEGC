@@ -2,7 +2,7 @@
   "schema_version": 1,
   "night": "2026-09-17/2026-09-18",
   "timezone": "Asia/Bangkok",
-  "schedule_status": "created_and_enabled",
+  "schedule_status": "completed",
   "first_scheduled_start": "2026-09-18T00:00:00+07:00",
   "last_scheduled_start": "2026-09-18T08:00:00+07:00",
   "scheduled_occurrences": 9,
@@ -11,8 +11,19 @@
   "write_root": "project-bible/mira/research/night-2026-09-18/",
   "production_write_authorized": false,
   "outreach_authorized": false,
-  "targets": {"vietnam_projects":15,"montenegro_projects":15,"russia_net_new_agencies":50,"belarus_net_new_agencies":30},
-  "completed_counts": {"vietnam_projects":15,"montenegro_projects":15,"russia_net_new_agencies":50,"belarus_net_new_agencies":30,"publication_approved_new_media":0},
+  "targets": {
+    "vietnam_projects": 15,
+    "montenegro_projects": 15,
+    "russia_net_new_agencies": 50,
+    "belarus_net_new_agencies": 30
+  },
+  "completed_counts": {
+    "vietnam_projects": 15,
+    "montenegro_projects": 15,
+    "russia_net_new_agencies": 50,
+    "belarus_net_new_agencies": 30,
+    "publication_approved_new_media": 0
+  },
   "quality_counts": {
     "vietnam_complete_for_discovery_slot": 11,
     "vietnam_partial_for_validation_initial": 4,
@@ -70,21 +81,86 @@
     "slot07_belarus_owner_review": 6,
     "slot07_fresh_web_checks": 8,
     "slot07_machine_validation_passed": true,
+    "slot08_fresh_web_spot_checks": 3,
+    "slot08_morning_brief_saved": true,
     "publication_approved_new_media": 0
   },
-  "counts_note": "Vietnam and Montenegro totals are source-backed discovery records, not import-ready inventory, commercially enabled projects or published catalogue rows. After validation Vietnam has 14 complete-for-discovery / 1 partial and Montenegro 10 / 5. Russia has 50 candidate-layer rows and Belarus 30 candidate-layer rows; neither count proves legal-entity uniqueness or outreach approval. Slot 07 consolidated the datasets and machine-validated parse/count/uniqueness/gates; that is not exhaustive external-link testing or production acceptance. Publication-approved new media remains zero.",
+  "counts_note": "Vietnam and Montenegro totals are source-backed discovery records, not import-ready inventory, commercially enabled projects or published catalogue rows. After validation Vietnam has 14 complete-for-discovery / 1 partial and Montenegro 10 / 5. Russia has 50 candidate-layer rows and Belarus 30 candidate-layer rows; neither count proves legal-entity uniqueness or outreach approval. Slot 07 consolidated the datasets and machine-validated parse/count/uniqueness/gates; that is not exhaustive external-link testing or production acceptance. Slot 08 saved the morning brief after three narrow fresh public spot-checks without changing counts. Publication-approved new media remains zero.",
   "slots": [
-    {"local_hour":"00:00","id":"00-vietnam","status":"completed","started_at":"2026-09-17T23:58:29+07:00","result_paths":["00-vietnam-projects.json","00-vietnam-projects.csv","00-vietnam.md"],"notes":"15 saved; 11 complete for discovery stage, 4 partial; zero downloaded or publication-approved media."},
-    {"local_hour":"01:00","id":"01-montenegro","status":"completed","started_at":"2026-09-18T01:01:08+07:00","result_paths":["01-montenegro-projects-part1.json","01-montenegro-projects-part2.json","01-montenegro-projects-part3.json","01-montenegro-projects.csv","01-montenegro.md"],"notes":"15 saved; 7 complete for discovery stage, 8 partial; 11 developer/project families; zero downloaded, reviewed or publication-approved media. Montis Russian/CIS citizenship-by-investment copy quarantined as stale."},
-    {"local_hour":"02:00","id":"02-project-validation","status":"completed","started_at":"2026-09-18T02:00:45+07:00","result_paths":["02-project-validation.json","02-project-validation.csv","02-project-validation.md"],"notes":"30 reviewed; Vietnam 14 complete/1 partial; Montenegro 10 complete/5 partial; 30 exact media source pages/documents recorded; zero publication approvals."},
-    {"local_hour":"03:00","id":"03-russia-a","status":"completed","started_at":"2026-09-18T02:58:00+07:00","result_paths":["03-russia-a.json","03-russia-a.csv","03-russia-a.md"],"notes":"29 source-backed exact-domain-net-new agency candidates saved; quality split 26 first-party without material hold / 2 first-party holds / 1 secondary-confirmed partial; 3 existing duplicates rejected; no outreach."},
-    {"local_hour":"04:00","id":"04-russia-b","status":"completed","started_at":"2026-09-18T04:13:38+07:00","result_paths":["04-russia-b.json","04-russia-b.csv","04-russia-b.md"],"notes":"21 additional current first-party exact-domain-net-new candidates saved, bringing the night Russia candidate layer to 50. Six owner-review candidates only; no outreach."},
-    {"local_hour":"05:00","id":"05-belarus","status":"completed","started_at":"2026-09-18T05:01:31+07:00","result_paths":["05-belarus-agencies.json","05-belarus-agencies.csv","05-belarus.md"],"notes":"30 net-new Belarus research candidates saved after CIS/mega/outreach seed dedupe. Five entities with current official licence-suspension notices excluded; no outreach."},
-    {"local_hour":"06:00","id":"06-quality-media","status":"completed","started_at":"2026-09-18T06:03:00+07:00","result_paths":["06-quality-media.json","06-quality-media.csv","06-quality-media.md"],"notes":"12 strongest owner-review domains rechecked against current main with zero exact-domain matches; five Bali/Dubai media gaps improved; four exact direct asset URLs recorded; one new browser/web visual review; zero publication approvals."},
-    {"local_hour":"07:00","id":"07-integration-handoff","status":"completed","started_at":"2026-09-18T06:57:36+07:00","result_paths":["vietnam-projects.json","montenegro-projects.json","russia-agencies.csv","belarus-agencies.csv","source-observations.json","MEDIA-GAPS.md","VALIDATION.json","LOCAL-AGENT-HANDOFF.md","07-integration-handoff.md"],"notes":"Consolidated package saved and read-back checked. Machine validation: Vietnam 15/15 IDs (14 complete/1 partial), Montenegro 15/15 (10/5), Russia 50/50 IDs/50 non-empty unique domains/6 owner-review, Belarus 30/30 IDs/6 owner-review. Eight representative fresh web checks; all commercial/outreach gates remain closed; zero publication-approved new media."},
-    {"local_hour":"08:00","id":"08-morning-brief","status":"pending","result_paths":[]}
+    {
+      "local_hour": "00:00",
+      "id": "00-vietnam",
+      "status": "completed",
+      "started_at": "2026-09-17T23:58:29+07:00",
+      "result_paths": ["00-vietnam-projects.json", "00-vietnam-projects.csv", "00-vietnam.md"],
+      "notes": "15 saved; 11 complete for discovery stage, 4 partial; zero downloaded or publication-approved media."
+    },
+    {
+      "local_hour": "01:00",
+      "id": "01-montenegro",
+      "status": "completed",
+      "started_at": "2026-09-18T01:01:08+07:00",
+      "result_paths": ["01-montenegro-projects-part1.json", "01-montenegro-projects-part2.json", "01-montenegro-projects-part3.json", "01-montenegro-projects.csv", "01-montenegro.md"],
+      "notes": "15 saved; 7 complete for discovery stage, 8 partial; 11 developer/project families; zero downloaded, reviewed or publication-approved media. Montis Russian/CIS citizenship-by-investment copy quarantined as stale."
+    },
+    {
+      "local_hour": "02:00",
+      "id": "02-project-validation",
+      "status": "completed",
+      "started_at": "2026-09-18T02:00:45+07:00",
+      "result_paths": ["02-project-validation.json", "02-project-validation.csv", "02-project-validation.md"],
+      "notes": "30 reviewed; Vietnam 14 complete/1 partial; Montenegro 10 complete/5 partial; 30 exact media source pages/documents recorded; zero publication approvals."
+    },
+    {
+      "local_hour": "03:00",
+      "id": "03-russia-a",
+      "status": "completed",
+      "started_at": "2026-09-18T02:58:00+07:00",
+      "result_paths": ["03-russia-a.json", "03-russia-a.csv", "03-russia-a.md"],
+      "notes": "29 source-backed exact-domain-net-new agency candidates saved; quality split 26 first-party without material hold / 2 first-party holds / 1 secondary-confirmed partial; 3 existing duplicates rejected; no outreach."
+    },
+    {
+      "local_hour": "04:00",
+      "id": "04-russia-b",
+      "status": "completed",
+      "started_at": "2026-09-18T04:13:38+07:00",
+      "result_paths": ["04-russia-b.json", "04-russia-b.csv", "04-russia-b.md"],
+      "notes": "21 additional current first-party exact-domain-net-new candidates saved, bringing the night Russia candidate layer to 50. Six owner-review candidates only; no outreach."
+    },
+    {
+      "local_hour": "05:00",
+      "id": "05-belarus",
+      "status": "completed",
+      "started_at": "2026-09-18T05:01:31+07:00",
+      "result_paths": ["05-belarus-agencies.json", "05-belarus-agencies.csv", "05-belarus.md"],
+      "notes": "30 net-new Belarus research candidates saved after CIS/mega/outreach seed dedupe. Five entities with current official licence-suspension notices excluded; no outreach."
+    },
+    {
+      "local_hour": "06:00",
+      "id": "06-quality-media",
+      "status": "completed",
+      "started_at": "2026-09-18T06:03:00+07:00",
+      "result_paths": ["06-quality-media.json", "06-quality-media.csv", "06-quality-media.md"],
+      "notes": "12 strongest owner-review domains rechecked against current main with zero exact-domain matches; five Bali/Dubai media gaps improved; four exact direct asset URLs recorded; one new browser/web visual review; zero publication approvals."
+    },
+    {
+      "local_hour": "07:00",
+      "id": "07-integration-handoff",
+      "status": "completed",
+      "started_at": "2026-09-18T06:57:36+07:00",
+      "result_paths": ["vietnam-projects.json", "montenegro-projects.json", "russia-agencies.csv", "belarus-agencies.csv", "source-observations.json", "MEDIA-GAPS.md", "VALIDATION.json", "LOCAL-AGENT-HANDOFF.md", "07-integration-handoff.md"],
+      "notes": "Consolidated package saved and read-back checked. Machine validation: Vietnam 15/15 IDs (14 complete/1 partial), Montenegro 15/15 (10/5), Russia 50/50 IDs/50 non-empty unique domains/6 owner-review, Belarus 30/30 IDs/6 owner-review. Eight representative fresh web checks; all commercial/outreach gates remain closed; zero publication-approved new media."
+    },
+    {
+      "local_hour": "08:00",
+      "id": "08-morning-brief",
+      "status": "completed",
+      "started_at": "2026-09-18T08:02:40+07:00",
+      "result_paths": ["MORNING-BRIEF.md"],
+      "notes": "Morning brief saved and read back. Three narrow fresh public spot-checks confirmed Waterpoint first-party source, AFLAT Thailand route and Absolut corporate contact page; counts unchanged. No new collection, deployment, merge or outreach."
+    }
   ],
-  "next_action": "08:00: read the saved consolidated files and write MORNING-BRIEF.md from actual results only; do not start new collection.",
+  "next_action": "Local Codex may review LOCAL-AGENT-HANDOFF.md after completing its current admin/release follow-up. Compare Russia/Belarus rows against the newest unpublished local CRM state before ingesting. Integrate Vietnam/Montenegro only in an isolated data branch with deterministic propertyTypes-to-kind mapping and full catalogue/browser acceptance. Do not deploy or send outreach from this research branch.",
   "baseline_notes": [
     "Local Codex owns backend/admin/publication and current Bali/Dubai integration; do not edit those components.",
     "Current main includes project-bible/mira/research/bali-dubai-2026-09-17/MEDIA-GAPS.md. The night branch carries only a five-item delta and no publication approval.",
@@ -93,6 +169,7 @@
     "Russia has 50 research candidates; six are owner-review candidates only. Aurum entity metadata hold, Victory content hold and Good House first-party-recovery partial remain preserved.",
     "Belarus has 30 research candidates; five entities named in current official licence-suspension notices remain excluded. Some rows intentionally remain Chamber/marketplace-backed pending corporate-route closure.",
     "The 06:00 media pass found a current exact ERA by OXO page/asset URL, exact Secana gallery candidate, two Mudon gallery routes and a current Ellington source for One River Point; Riverside Views assets remain quarantined from DAMAC Riverside. Publication-approved new media remains zero.",
-    "The 07:00 package is ready for local integration review only. Current main reports 648 public research records and PR #10 merged, while its latest status still records a later full-release local-browser failure requiring reconciliation. Do not merge/deploy this branch ahead of the local agent."
+    "The 07:00 package is ready for local integration review only. Current main reports 648 public research records and PR #10 merged, while its latest status still records full release 35250357478 with a failing local-browser stage requiring reconciliation. Do not merge/deploy this branch ahead of the local agent.",
+    "The 08:00 MORNING-BRIEF.md is the final overnight summary. Three fresh public spot-checks did not alter counts or gates."
   ]
 }
