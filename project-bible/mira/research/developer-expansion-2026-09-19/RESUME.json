@@ -38,5 +38,7 @@
     "no_family": 507,
     "excluded_non_residential": 1
   },
-  "remaining": "Aileen six and Unique one require primary developer identity; Naturale Kamala not assumed AAG; Banyan five ambiguous. Other507 missing family and60 other-market records unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending."
+  "remaining": "Aileen six and Unique one require primary developer identity; Naturale Kamala not assumed AAG; Banyan five ambiguous. Other507 missing family and60 other-market records unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
+  "latest_result_commit": "72b6c310e47dc05daaf84d1d6cac6e1d9205c9bd",
+  "latest_result_commit_note": "Published B002 data/code checkpoint; separate receipt-only commit stores this pointer."
 }

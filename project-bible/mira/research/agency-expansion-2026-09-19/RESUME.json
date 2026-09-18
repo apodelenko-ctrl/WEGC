@@ -18,7 +18,7 @@
   "externalSends": 0,
   "requiredFinalReport": "NIGHT-REPORT.md",
   "mandatoryFinalReportOnLastRun": true,
-  "latestResultCommit": "e31f94559265f7417f5f03240d6087197e4f9faa",
+  "latestResultCommit": "72b6c310e47dc05daaf84d1d6cac6e1d9205c9bd",
   "remaining": "Saratov 7/10 research-fit candidates; 3 more required. Arkair403; Rost alternative domain timeout; legal/overseas/direct-channel gaps persist. All other cities queued; official city-proper population blocked.",
   "canonicalCandidateGroups": 348,
   "canonicalRussiaGroups": 206,
@@ -28,7 +28,7 @@
   "latestCheckpointEvent": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json",
   "newAgencyCountMeaning": "11 cumulative new candidate records including holds; not 11 verified suitable agencies",
   "freshFirstWaveSuitableCandidates": 7,
-  "latestResultCommitNote": "Canonical checkpoint SHA; current Saratov checkpoint is the commit containing this RESUME. Follow latestCheckpointEvent and git history.",
+  "latestResultCommitNote": "Published B002 data/code checkpoint; separate receipt-only commit stores this pointer.",
   "latestBatch": "batch-002-saratov-observations.json",
   "lastCheckpointAt": "2026-09-18T19:11:22Z"
 }

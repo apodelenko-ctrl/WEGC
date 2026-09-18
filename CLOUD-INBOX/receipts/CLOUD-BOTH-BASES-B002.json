@@ -1,0 +1,238 @@
+{
+  "checkpoint_id": "cloud-both-bases-b002",
+  "published_data_commit": "72b6c310e47dc05daaf84d1d6cac6e1d9205c9bd",
+  "branch": "mira/research-night-20260918",
+  "source_commit": "6bdc7cccf753df3ad886b14e137f489d70d8a3e3",
+  "parent_commit": "73ca08fe1d0fdfbdb30d4c18f005cfff6f1e1ed3",
+  "data_tree": "8152cae271b3876fe86e4776876e6907e63259f0",
+  "published_files": [
+    {
+      "path": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "461d3a445da0a3545328d0d96bbcf32d376a496e"
+    },
+    {
+      "path": "CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01/TEST-REPORT-B002.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74a3cc84fc0b69fd4517474ddd5e889be3f1d904"
+    },
+    {
+      "path": "CLOUD-INBOX/MASTER-STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bd5ca3f0c58ef744c87047239c69883f8077ed5"
+    },
+    {
+      "path": "CLOUD-INBOX/QUEUE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3143dc13d4aad9a95cb4000c19b5a1628262f3a3"
+    },
+    {
+      "path": "CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01/registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0a16916853be3aee9ae82f92eae673df5a231c2"
+    },
+    {
+      "path": "project-bible/mira/data/phuket-developer-alias-map-v1.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f454eec3d9d3a6ddf77528e2f1e7f5f6db2ea6cd"
+    },
+    {
+      "path": "CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01/test_registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d089f2dcf6dd12209955e12cd47b3fb10ac7ce7"
+    },
+    {
+      "path": "CLOUD-INBOX/tasks/MIRA-PRIVATE-RECONCILIATION-B002.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e52146cd775bf30012aae7c2b8c2c448081948e"
+    },
+    {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4adb190dd9f8f99dabb01547da3c4709792ab541"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/B002-TEST-REPORT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3615e7f55f8d83a55e93d77e6651f9bc669d8824"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02533e563d5d170b12781d0ffed6479c185272cf"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/CHECKPOINT-002.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6657d8f05176fada2b57f5c2921ad9c52709321e"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/POPULATION-CHECK-B002.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed08a1006e6433879c301fb41881d3c4d6ba933d"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/COUNTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30df94a3284ab9ecd89c607a4d176e805e4d4c83"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2449f4e1d3f275c1d7a1f7d5d56e5fbe41b9779d"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/aliases.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc2f52688228fb36fb2db1f5f47ec8a8471d4547"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/batch-002-saratov-observations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d456c4f42c5ac3c225077ff7bf7c39388e2d5b06"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/batch-002-saratov.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a154148a214b3a79428c81b175e108699165faa"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/coverage-by-city.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1e218750491537c0485fe033c7b58be1fdb3a8d"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/contacts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7030b59bf4d1a9e427220297cc6c1c0e5ad6bbf1"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/master-agencies.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f6d1a2477f39d7171617fe5156c580ca58eb7cc"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/rejected-or-held.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ce3ef61ab47e4e7feff129b5a669a6ef50a56ab"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/scripts/apply-batch-002.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6999c97627c91aa37b007f3a357b5dcdeb3b7687"
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/master-agencies.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a735ad2cec306c019295cc00d1859dd4ea0d9d78"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa472c76d0e9f07f20015cc4e8ea1bcda37e3096"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/CHECKPOINT-002.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b53ee80c8b88d74bf92cb8fbcc0ba6655444ff6"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/RESUME.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2233d94146bd65e0e7568518371f13e3e02ef2a2"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/developers.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05eaeb35d271eef30e2c8d58bd57752f2b8f2092"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c17aa0d9cf07dd0eb54dc4c59b65d1a04cbd2025"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/enrichment-queue.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b2f5911ee0152de65b0308ef7355c4a4376fce"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/public-contact-observations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7acd7e09ea1e233967a51d608f4a447b7c7613da"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/project-links.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06a0de3e75319042c0f4fba1ace4b35efd9b4e57"
+    },
+    {
+      "path": "project-bible/mira/research/developer-expansion-2026-09-19/source-sha256.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7e6c0a9f8d30e1867800700fe3abf4d41735594"
+    }
+  ],
+  "agency": {
+    "before": 345,
+    "after": 348,
+    "new": 3,
+    "existing_updated": 3,
+    "saratov_research_fit": 7,
+    "remaining_to_10": 3,
+    "deleted": 0
+  },
+  "developer": {
+    "before": 40,
+    "after": 41,
+    "fresh_contacts_before": 3,
+    "fresh_contacts_after": 6,
+    "project_ids_preserved": 618,
+    "primary_group_links": 3,
+    "nonresidential_held": 1
+  },
+  "tests": {
+    "registry": 23,
+    "agency_unique_ids": true,
+    "agency_ids_preserved": true,
+    "agency_master_and_contacts_replay_sha256_equal": true
+  },
+  "crm_imports": 0,
+  "external_sends": 0,
+  "cloud_restore": false,
+  "production_deploy": false,
+  "next_private_task": "CLOUD-INBOX/tasks/MIRA-PRIVATE-RECONCILIATION-B002.md",
+  "scope_note": "Public research and non-sending projections only. LOCAL native Accounts 78/87 are not added to research totals. Latest LOCAL status files preserved."
+}

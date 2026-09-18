@@ -9,8 +9,8 @@
   "at_ict": "2026-09-19T02:19:34+07:00",
   "source_sha": "6bdc7cccf753df3ad886b14e137f489d70d8a3e3",
   "pre_write_head": "73ca08fe1d0fdfbdb30d4c18f005cfff6f1e1ed3",
-  "result_sha": null,
-  "result_sha_note": "Exact result SHA recorded in commit receipt after publication; this event is contained in that commit.",
+  "result_sha": "72b6c310e47dc05daaf84d1d6cac6e1d9205c9bd",
+  "result_sha_note": "Published data/code checkpoint. A following receipt-only commit records this SHA in both RESUMEs.",
   "pushed_branch": "mira/research-night-20260918",
   "agency": {
     "before": 345,
@@ -59,5 +59,6 @@
     "developers": "Aileen six and Unique one require primary developer identity; Naturale Kamala not assumed AAG; Banyan five ambiguous. Other507 missing family and60 other-market records unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
     "AUT04": "Private source/restore package and encrypted backup/key references plus access to actual cloud runtime absent"
   },
-  "stop_by": "2026-09-19T08:00:00+07:00"
+  "stop_by": "2026-09-19T08:00:00+07:00",
+  "commit_receipt": "CLOUD-INBOX/receipts/CLOUD-BOTH-BASES-B002.json"
 }
