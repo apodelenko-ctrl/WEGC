@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-18T06:57:36+07:00",
+  "validation_scope": "Machine parse/count/uniqueness/gate checks on the consolidated 07 package plus representative fresh public source retrieval. Not an exhaustive live HTTP check of every source URL and not production acceptance.",
+  "checks": {
+    "vietnam_json_parse": true,
+    "vietnam_record_count": 15,
+    "vietnam_unique_ids": 15,
+    "vietnam_complete": 14,
+    "vietnam_partial": 1,
+    "vietnam_all_research_only": true,
+    "vietnam_publication_approved_media": 0,
+    "montenegro_json_parse": true,
+    "montenegro_record_count": 15,
+    "montenegro_unique_ids": 15,
+    "montenegro_complete": 10,
+    "montenegro_partial": 5,
+    "montenegro_all_research_only": true,
+    "montenegro_publication_approved_media": 0,
+    "russia_csv_parse": true,
+    "russia_rows": 50,
+    "russia_unique_ids": 50,
+    "russia_unique_domains": 50,
+    "russia_owner_review_rows": 6,
+    "russia_all_outreach_not_authorized": true,
+    "belarus_csv_parse": true,
+    "belarus_rows": 30,
+    "belarus_unique_ids": 30,
+    "belarus_nonempty_unique_domains": 15,
+    "belarus_owner_review_rows": 6,
+    "belarus_all_outreach_not_authorized": true
+  },
+  "expected_vs_actual": {
+    "vietnam": {"expected": 15, "actual": 15},
+    "montenegro": {"expected": 15, "actual": 15},
+    "russia": {"expected": 50, "actual": 50},
+    "belarus": {"expected": 30, "actual": 30}
+  },
+  "known_holds": {
+    "vietnam": ["vn-waterpoint — Russian-language/Russian-speaking agency observation not established"],
+    "montenegro": [
+      "me-heights-lustica — project-specific first-party closure still incomplete in research set",
+      "me-merit-starlit — current site contains stale/marketing claims; independent agency observation gap",
+      "me-porto-budva — current first-party site live; independent agency observation/current status closure incomplete",
+      "me-poljana-olive-homes — independent agency observation/legal seller gap",
+      "me-kotor-bayview — independent Russian-language agency observation/legal seller gap"
+    ],
+    "russia": [
+      "Аурум / aurum70.ru — entity metadata hold",
+      "Виктори / victory62.org — content review hold",
+      "Good House / goodhouse51.ru — secondary-confirmed; first-party recovery incomplete"
+    ],
+    "belarus": [
+      "Some rows remain Chamber-only or marketplace/candidate-site supported; see 05-belarus-agencies.csv for detail.",
+      "Five entities with current licence-suspension notices remain excluded from the 30."
+    ],
+    "media": "0 new publication-approved project images"
+  },
+  "not_validated": [
+    "Legal-entity uniqueness for all 50 Russia candidates",
+    "Legal/licensing closure for every Belarus row",
+    "Current inventory, prices, returns, commissions, foreign-buyer eligibility or seller appointment for any project",
+    "Publication rights for Vietnam/Montenegro project media",
+    "Exhaustive HTTP status for every source URL",
+    "Any live-site integration, deployment or browser acceptance for Vietnam/Montenegro"
+  ],
+  "production_write_authorized": false,
+  "outreach_authorized": false,
+  "persistence_note": "Semantic validation was performed on the generated package before GitHub persistence. GitHub write formatting may differ from local serialization, so no byte hash is asserted in this file. Read-back is required after persistence."
+}
