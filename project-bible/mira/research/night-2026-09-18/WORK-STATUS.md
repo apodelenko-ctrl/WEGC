@@ -1,5 +1,15 @@
 # MIRA — night research status
 
+## 08:00 morning brief — completed, 18 September 2026
+
+Saved and read back `MORNING-BRIEF.md`. The overnight research/data lane is complete: Vietnam **15 rows / 14 complete-for-discovery / 1 partial**, Montenegro **15 / 10 / 5**, Russia **50 candidate rows / 50 unique non-empty domains / 6 owner-review flags**, Belarus **30 candidate rows / 6 owner-review flags**. Publication-approved new media remains **0**. All project rows remain research-only/commercially disabled and all agency rows remain `outreach_status=not_authorized`.
+
+No new collection was started after 08:00. A narrow fresh public spot-check re-opened the saved Nam Long Waterpoint source, AFLAT first-party site and Абсолют Недвижимость corporate contact page. The Waterpoint developer source still identifies the project and 17 strategic distribution agencies, but the exact Russian-language/Russian-speaking agency-observation gap remains open; AFLAT still exposes a Thailand real-estate route; Абсолют's corporate contact page remains available. Counts and gates were not changed by these checks.
+
+Current `main` was re-read. It already contains PR #10, 648 public research records and back-navigation fixes. Its latest recorded full release `35250357478` has a failing local browser stage; do not treat it as successful until the local agent inspects logs and repeats full acceptance. This research branch did not modify main, public pages, Worker/Access/D1/DNS, user permissions, the Phuket-only funnel or the local Codex worktree.
+
+Final handoff remains `LOCAL-AGENT-HANDOFF.md`. The package is ready for **local integration review only**: compare Russia/Belarus against the newest unpublished local CRM state; integrate Vietnam/Montenegro only in a separate data branch with deterministic `propertyTypes -> kind` mapping and the full catalogue/browser acceptance suite; keep all commercial and outreach gates closed. The night lane does **not** publish the live site.
+
 ## 07:00 consolidation / validation / local-agent handoff — completed, 18 September 2026
 
 Saved the consolidated integration-review package: `vietnam-projects.json`, `montenegro-projects.json`, `russia-agencies.csv`, `belarus-agencies.csv`, `source-observations.json`, `MEDIA-GAPS.md`, `VALIDATION.json`, `LOCAL-AGENT-HANDOFF.md` and `07-integration-handoff.md`. GitHub read-back of `VALIDATION.json` and `LOCAL-AGENT-HANDOFF.md` succeeded. This branch remains research-only; no deploy, merge, public-site write, Worker/Access/D1/DNS change or outreach occurred.
@@ -116,4 +126,4 @@ Some older conversation attachments expired. Current repository sources are avai
 
 ## Next
 
-08:00 read the saved consolidation package and create `MORNING-BRIEF.md`; do not start new research collection.
+Night research shift completed. Continue only through local integration review; do not merge/deploy this research branch or send outreach without separate authorization.
