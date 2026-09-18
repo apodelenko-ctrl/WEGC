@@ -1,16 +1,20 @@
 {
-  "newProjects": 30,
+  "newProjects": 60,
   "markets": {
     "phuket": 618,
+    "dubai": 15,
     "bali": 15,
-    "dubai": 15
+    "vietnam": 15,
+    "montenegro": 15
   },
-  "combinedProjects": 648,
+  "baselineExpansionProjects": 30,
+  "discoveryExpansionProjects": 30,
+  "combinedProjects": 678,
   "reviewedProjectImages": 0,
-  "typographicCovers": 30,
-  "newDetailPages": 30,
-  "newMarketIndexPages": 4,
-  "existingHTMLIntegrated": 650,
+  "typographicCovers": 60,
+  "newDetailPages": 60,
+  "newMarketIndexPages": 8,
+  "existingHTMLIntegrated": 60,
   "commerciallyEnabled": 0,
   "deployed": false,
   "phuketDataSHA256": "f3366c36c683e27e9f79d8db96a7f2985272395eba1906f751ebe019ac6b1bf4",

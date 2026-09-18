@@ -18,7 +18,7 @@ class CampaignTests(unittest.TestCase):
    self.assertTrue(any(t=='fieldset' and 'disabled' in a for t,a in tags))
  def test_source_boundary_and_bali(self):
   for v in m.VARIANTS.values():
-   s=m.build_page(v);self.assertIn('другие направления появятся позже',s);self.assertIn('данные покупателей здесь не принимаются',s);self.assertIn('переговорные проекты',s)
+   s=m.build_page(v);self.assertIn('Первый рынок нашего агентского предложения — Пхукет',s);self.assertIn('Регистрация покупателей сейчас выключена',s);self.assertIn('данные покупателей здесь не принимаются',s);self.assertIn('переговорные проекты',s)
  def test_unique_ids(self):
   for v in m.VARIANTS.values():
    ids=[a['id'] for t,a in Tags(m.build_page(v)).tags if 'id' in a];self.assertEqual(len(ids),len(set(ids)))

@@ -40,11 +40,13 @@ jobs:
             --exclude '_site' \
             --exclude '_mira_site' \
             --exclude 'project-bible' \
+            --exclude 'CLOUD-INBOX' \
             --exclude 'tests' \
             --exclude 'scripts' \
             --exclude 'cloudflare-worker/mira' \
             --exclude 'openai.chatgpt-0.5.53-universal.vsix'
           test ! -e _site/project-bible
+          test ! -e _site/CLOUD-INBOX
           test -f _site/mira/marketplace.html
           test -f _site/mira/pilot.html
           test -f _site/mira/data/catalog.json

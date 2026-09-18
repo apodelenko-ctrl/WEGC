@@ -57,7 +57,9 @@ def run(base,out):
   context.unroute('**/mira/data/phuket.json');page.locator('#retry').click();page.wait_for_selector('.project-card');mark('catalogue_retry')
   page.set_viewport_size({'width':390,'height':844});goto('/mira/phuket/');page.wait_for_selector('.project-card');assert not page.locator('#filter-options').evaluate('(e)=>e.open');assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
   page.screenshot(path=str(out/'catalogue-mobile.png'));mark('catalogue_mobile')
-  goto('/mira/access/');assert'пока закрыта'in page.locator('main').inner_text();assert page.locator('input').count()==0;mark('registration_honestly_closed')
+  goto('/mira/access/');assert'приглаш'in page.locator('main').inner_text().lower();assert page.locator('input').count()==0
+  assert page.locator('a[href="https://pilot.wegc.fund/mira/pilot.html"]').count()==1
+  assert'покупател' in page.locator('main').inner_text().lower();mark('invited_agency_next_step_no_public_signup')
   goto('/mira/documents/');assert page.locator('.doc-card').count()==9
   for path,magic in [('/mira/documents/downloads/agency-agreement.pdf',b'%PDF'),('/mira/documents/downloads/agency-agreement.docx',b'PK')]:
    response=context.request.get(base+path);assert response.ok and response.body().startswith(magic),(path,response.status)
