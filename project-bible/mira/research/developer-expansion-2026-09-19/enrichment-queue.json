@@ -226,9 +226,9 @@
   {
     "task_key": "project-developer:laguna-lakeside",
     "project_id": "laguna-lakeside",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "status": "queued",
-    "reason": "ambiguous_group",
+    "reason": "verified_public_sources",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -770,9 +770,9 @@
   {
     "task_key": "project-developer:naturale-kamala",
     "project_id": "naturale-kamala",
-    "developer_id": null,
+    "developer_id": "PHK-041",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_public_sources",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -4988,7 +4988,7 @@
   {
     "task_key": "developer-contact:PHK-007",
     "developer_id": "PHK-007",
-    "status": "queued",
+    "status": "partial",
     "reason": "contract_and_crm_state_not_imported",
     "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
   },

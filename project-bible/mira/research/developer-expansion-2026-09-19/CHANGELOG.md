@@ -25,3 +25,7 @@ Developer master **42 → 43** (+Trinity Property / Aileen Villas), fresh public
 ## Обе базы B005 — 2026-09-18T22:01:33Z
 
 Developer master remains43; fresh public contact groups **8 → 9** via the official PHK-006 sales enquiry route, not submitted. Four exact Banyan/Laguna records now use first-party Banyan Group Residences evidence, so primary links **5 → 9** and primary-or-current-public links **10 → 14**. `laguna-lakeside` remains the sole Banyan/Laguna ambiguity; Naturale Kamala remains unmatched. All618 IDs preserved;27/27 tests PASS; CRM imports/sends0; no seller, agreement or commercial gate inferred.
+
+## Обе базы B006 — 2026-09-18T23:11:27Z
+
+Developer master remains43; fresh public contact groups **9 → 10** from the official Laguna Phuket contact page. Naturale Kamala and Laguna Lakeside now have exact current public group mappings, both retained as secondary-source/non-sendable. Primary links remain9; primary-or-current-public links **14 → 16**; ambiguous0, unmatched family0, no-family507. All618 IDs preserved;29/29 tests PASS; CRM imports/sends0; legal seller, agreement and commercial gates remain unknown/closed.

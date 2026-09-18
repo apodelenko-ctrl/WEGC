@@ -42,3 +42,9 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 Агентства **356 → 366** (RU224/BY59/other83): 10 новых, существующих обогащено0, удалений0. Тольятти: 10 рассмотрено, **10/10** research-fit. Каналы: named role9, phone5, general email5, direct phone1, direct email0, WA0, TG-channel1, VK1, other social1, fully-enriched0. Official city-proper population blocked; next cursor `RU-CITY-004`. CRM imports/sends0.
 
 Застройщики остаются43; fresh contact groups **8 → 9**. Четыре Banyan/Laguna ID получили exact primary-source mapping к PHK-006; primary links **5 → 9**, total verified links **10 → 14**. `laguna-lakeside` остаётся ambiguous; legal seller/agreement unknown. Все618 IDs сохранены; tests27/27.
+
+## Обе базы B006 — 2026-09-18T23:11:27Z
+
+Агентства **366 → 376** (RU234/BY59/other83): 10 новых, существующих обогащено0, удалений0. Махачкала: 10 рассмотрено, **10/10** research-fit; федеральные Etagi/Samolet Plus/Century21 не считались. Каналы: named role2 (full name1), phone9, general email1, direct phone/email0, WA9, TG-direct4/channel1, VK1, fully-enriched0. Official city-proper population blocked; next cursor `RU-CITY-005` Barnaul. CRM imports/sends0.
+
+Застройщики остаются43; fresh contact groups **9 → 10**. Naturale Kamala и Laguna Lakeside связаны на уровне `verified_public_sources`, без открытия send gate; total verified links **14 → 16**, ambiguous/unmatched0, no-family507. Все618 IDs сохранены; tests29/29.

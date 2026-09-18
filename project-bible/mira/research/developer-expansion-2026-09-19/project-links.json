@@ -630,12 +630,11 @@
     "name": "Laguna Lakeside",
     "market": "phuket",
     "family": "Banyan / Laguna residences",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "candidate_developer_ids": [
-      "PHK-006",
-      "PHK-007"
+      "PHK-006"
     ],
-    "mapping_status": "ambiguous_group",
+    "mapping_status": "verified_public_sources",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 38,
@@ -644,7 +643,22 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "ambiguous_group",
+    "inherited_candidate_developer_ids": [
+      "PHK-006",
+      "PHK-007"
+    ],
+    "primary_evidence": {
+      "project_id": "laguna-lakeside",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.lagunaphuket.com/live/property/",
+      "secondary_source_url": "https://www.fazwaz.com/projects/thailand/phuket/thalang/choeng-thale/laguna-lakeside",
+      "checked_at": "2026-09-18T23:11:27Z",
+      "basis": "Official Laguna Phuket property page states the residential portfolio is offered by Banyan Group Residences, while current exact project sources identify Laguna Lakeside as a Laguna Property development. PHK-007 is retained as the public Laguna sales-channel entity, but the canonical project developer-group link is PHK-006. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "origin-residences-bangtao",
@@ -2083,9 +2097,11 @@
     "name": "Натурале Камала",
     "market": "phuket",
     "family": "Naturale",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-041",
+    "candidate_developer_ids": [
+      "PHK-041"
+    ],
+    "mapping_status": "verified_public_sources",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 412,
@@ -2094,7 +2110,19 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "naturale-kamala",
+      "developer_id": "PHK-041",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://kellerhenson.com/project/naturale-kamala",
+      "secondary_source_url": "https://www.facebook.com/naturalephuket/",
+      "checked_at": "2026-09-18T23:11:27Z",
+      "basis": "Current exact project page identifies Naturale Kamala developer as AAG Development; the public Naturale Phuket brand page independently publishes Naturale Kamala material. The primary Naturale website identifies AAG only for Cherng Talay, so this remains secondary-source mapping and does not verify the legal seller or contract coverage."
+    }
   },
   {
     "project_id": "naturale-cherngtalei",

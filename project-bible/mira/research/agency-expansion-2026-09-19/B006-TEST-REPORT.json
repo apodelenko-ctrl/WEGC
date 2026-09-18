@@ -1,0 +1,14 @@
+{
+  "id_preserved": true,
+  "unique_ids": true,
+  "before_at_source_commit": 366,
+  "after": 376,
+  "added_this_checkpoint": 10,
+  "replay_actual_additions": 10,
+  "existing_enriched": 0,
+  "makhachkala_reviewed": 10,
+  "makhachkala_suitable": 10,
+  "separate_overseas_or_network": 0,
+  "crm_imports": 0,
+  "external_sends": 0
+}

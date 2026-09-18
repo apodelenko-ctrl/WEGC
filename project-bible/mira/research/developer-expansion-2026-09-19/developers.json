@@ -232,42 +232,42 @@
     "missing_fields": {
       "legal_name": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       },
       "named_sales_person": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       },
       "direct_public_work_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       },
       "public_phone": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       },
       "whatsapp_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       },
       "telegram_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       },
       "line_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       },
       "agency_relations_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus"
       }
     },
@@ -300,6 +300,26 @@
         "verification_status": "inherited_not_rechecked",
         "purpose": "unclassified",
         "direct_dialogue_verified": false
+      },
+      {
+        "kind": "email",
+        "value": "info@lagunaphuket.com",
+        "purpose": "general",
+        "source_url": "https://www.lagunaphuket.com/contact/",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 (0) 7636 2300",
+        "purpose": "general",
+        "source_url": "https://www.lagunaphuket.com/contact/",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
       }
     ],
     "relationship_stage": "crm_reconciliation_required",
@@ -310,8 +330,56 @@
       "path": "project-bible/mira/data/phuket-developer-master.csv",
       "checked_at": "2026-09-15"
     },
-    "fresh_contact_verified": false,
-    "project_candidate_count": 1
+    "field_evidence": [
+      {
+        "field": "property_division",
+        "value": "Laguna Phuket branded residences and property division",
+        "source_url": "https://www.lagunaphuket.com/live/property/",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "verification_status": "verified_public_source",
+        "note": "Official page routes current residential portfolio to Banyan Group Residences; this does not identify a project legal seller."
+      }
+    ],
+    "missing_fields": {
+      "legal_name": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "source_url": "https://www.lagunaphuket.com/contact/"
+      },
+      "named_sales_person": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "source_url": "https://www.lagunaphuket.com/contact/"
+      },
+      "direct_public_work_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "source_url": "https://www.lagunaphuket.com/contact/"
+      },
+      "whatsapp_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "source_url": "https://www.lagunaphuket.com/contact/"
+      },
+      "telegram_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "source_url": "https://www.lagunaphuket.com/contact/"
+      },
+      "line_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "source_url": "https://www.lagunaphuket.com/contact/"
+      },
+      "agency_relations_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T23:11:27Z",
+        "source_url": "https://www.lagunaphuket.com/contact/"
+      }
+    },
+    "research_note": "Fresh general Laguna Phuket contact route. It is not an agency-relations recipient and was not contacted.",
+    "fresh_contact_verified": true,
+    "project_candidate_count": 0
   },
   {
     "developer_id": "PHK-008",
@@ -472,27 +540,27 @@
     "missing_fields": {
       "named_sales_person": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://thezerophuket.com/contact/"
       },
       "direct_public_work_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://thezerophuket.com/contact/"
       },
       "whatsapp_url": {
         "verification_status": "blocked",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://thezerophuket.com/contact/"
       },
       "telegram_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://thezerophuket.com/contact/"
       },
       "agency_relations_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://thezerophuket.com/contact/"
       }
     },
@@ -672,22 +740,22 @@
     "missing_fields": {
       "named_sales_person": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://phuket9.com/b2b"
       },
       "direct_public_work_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://phuket9.com/b2b"
       },
       "whatsapp_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://phuket9.com/b2b"
       },
       "telegram_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://phuket9.com/b2b"
       }
     },
@@ -1265,33 +1333,33 @@
     "missing_fields": {
       "legal_name": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.naturalephuket.com/"
       },
       "named_sales_person": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.naturalephuket.com/"
       },
       "direct_public_work_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.naturalephuket.com/"
       },
       "telegram_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.naturalephuket.com/"
       },
       "agency_relations_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.naturalephuket.com/"
       }
     },
     "research_note": "Cherng Talay project only; no automatic mapping of Naturale Kamala.",
     "fresh_contact_verified": true,
-    "project_candidate_count": 1
+    "project_candidate_count": 2
   },
   {
     "developer_id": "PHK-042",
@@ -1378,32 +1446,32 @@
     "missing_fields": {
       "legal_name": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://uniquegroupthailand.com/contact/"
       },
       "named_sales_person": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://uniquegroupthailand.com/contact/"
       },
       "direct_public_work_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://uniquegroupthailand.com/contact/"
       },
       "telegram_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://uniquegroupthailand.com/contact/"
       },
       "line_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://uniquegroupthailand.com/contact/"
       },
       "agency_relations_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://uniquegroupthailand.com/contact/"
       }
     },
@@ -1481,32 +1549,32 @@
     "missing_fields": {
       "legal_entity_registry_confirmation": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.aileenvillas.com/"
       },
       "named_sales_person": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.aileenvillas.com/"
       },
       "direct_public_work_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.aileenvillas.com/"
       },
       "telegram_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.aileenvillas.com/"
       },
       "line_url": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.aileenvillas.com/"
       },
       "agency_relations_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T22:01:33Z",
+        "checked_at": "2026-09-18T23:11:27Z",
         "source_url": "https://www.aileenvillas.com/"
       }
     },

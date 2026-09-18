@@ -21,12 +21,13 @@ class RegistryTest(unittest.TestCase):
             self.assertFalse(p['commercially_enabled'])
             self.assertIsNone(p['contract_covered'])
             if not p['family']:self.assertIsNone(p['developer_id'])
-    def test_unresolved_laguna_lakeside_preserves_both_source_ids(self):
-        links=[p for p in self.result['project_links'] if p['family']=='Banyan / Laguna residences']
-        unresolved=[p for p in links if p['mapping_status']=='ambiguous_group']
-        self.assertEqual([p['project_id'] for p in unresolved],['laguna-lakeside'])
-        self.assertEqual(unresolved[0]['candidate_developer_ids'],['PHK-006','PHK-007'])
-        self.assertIsNone(unresolved[0]['developer_id'])
+    def test_laguna_lakeside_group_resolved_without_losing_inherited_candidates(self):
+        link=next(p for p in self.result['project_links'] if p['project_id']=='laguna-lakeside')
+        self.assertEqual(link['mapping_status'],'verified_public_sources')
+        self.assertEqual(link['developer_id'],'PHK-006')
+        self.assertEqual(link['inherited_mapping_status'],'ambiguous_group')
+        self.assertEqual(link['inherited_candidate_developer_ids'],['PHK-006','PHK-007'])
+        self.assertFalse(link['legal_seller_verified'])
     def test_banyan_primary_links_are_exact_and_not_commercially_enabled(self):
         links={p['project_id']:p for p in self.result['project_links']}
         for pid in ('angsana-oceanview-residences','banyan-tree-beach-residences-oceanus','cassia-phuket','laguna-bayside'):
@@ -67,10 +68,32 @@ class RegistryTest(unittest.TestCase):
     def test_unknown_observed_developer_rejected(self):
         obs=copy.deepcopy(self.obs);obs['project_observations'][0]['developer_id']='PHK-MISSING'
         with self.assertRaises(ValueError):build(ROOT,obs)
-    def test_no_blanket_naturale_alias(self):
+    def test_naturale_projects_keep_separate_evidence_boundaries(self):
         links={p['project_id']:p for p in self.result['project_links']}
         self.assertEqual(links['naturale-cherngtalei']['developer_id'],'PHK-041')
-        self.assertIsNone(links['naturale-kamala']['developer_id'])
+        self.assertEqual(links['naturale-cherngtalei']['mapping_status'],'verified_primary_source')
+        self.assertEqual(links['naturale-kamala']['developer_id'],'PHK-041')
+        self.assertEqual(links['naturale-kamala']['mapping_status'],'verified_public_sources')
+        self.assertFalse(links['naturale-kamala']['legal_seller_verified'])
+
+    def test_b006_secondary_links_remain_unsendable(self):
+        links={p['project_id']:p for p in self.result['project_links']}
+        developers={d['developer_id']:d for d in self.result['developers']}
+        for pid in ('naturale-kamala','laguna-lakeside'):
+            link=links[pid]
+            case={'case_id':'case-'+pid,'agency_id':'agency-test','project_id':pid,
+                  'request_revision':1,'profile':'mira_agency'}
+            agreement={'developer_id':link['developer_id'],'status':'active','evidence_ref':'fixture',
+                       'project_ids':[pid],'valid_at_request':True}
+            planned=plan_inquiry(case,link,developers[link['developer_id']],agreement)
+            self.assertIn('project_developer_not_verified',planned['blockers'])
+            self.assertFalse(planned['send_authorized'])
+
+    def test_laguna_fresh_general_contact_is_not_partner_recipient(self):
+        d=next(d for d in self.result['developers'] if d['developer_id']=='PHK-007')
+        self.assertTrue(d['fresh_contact_verified'])
+        self.assertTrue(any(c.get('value')=='info@lagunaphuket.com' for c in d['contacts']))
+        self.assertFalse(any(c.get('purpose') in {'sales','agency_relations'} and c.get('kind')=='email' for c in d['contacts']))
     def test_nonresidential_record_preserved_but_held(self):
         p=next(p for p in self.result['project_links'] if p['project_id']=='andamanda-phuket')
         self.assertEqual(p['mapping_status'],'excluded_non_residential');self.assertIsNone(p['developer_id'])

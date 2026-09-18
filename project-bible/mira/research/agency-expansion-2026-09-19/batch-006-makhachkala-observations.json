@@ -1,0 +1,214 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "batch_id": "B006-MAKHACHKALA",
+  "city_id": "RU-CITY-004",
+  "checked_at": "2026-09-18T23:11:27Z",
+  "source_commit": "a703c6d3815bcda12fdd19b5d96286500b60463f",
+  "population_check": {
+    "city": "Махачкала",
+    "status": "blocked_official_source",
+    "official_value": null,
+    "reason": "Dagestanstat/Rosstat city-proper 2025/2026 table was not discoverable through accessible official search results. The existing rounded secondary estimate is retained only for queue ordering; municipal district or urban agglomeration figures were not substituted.",
+    "attempted_sources": [
+      "https://05.rosstat.gov.ru/",
+      "https://rosstat.gov.ru/"
+    ]
+  },
+  "records": [
+    {
+      "agency_id": "RU-2GIS-70000001059513438",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001059513438",
+      "fields": {
+        "brand": "100 Квадратов",
+        "city": "Махачкала",
+        "company_phone": "+7 988 293-30-09",
+        "whatsapp_url": "https://wa.me/79882933009",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001059513438"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current business-managed 2GIS card identifies a Makhachkala real-estate centre and publishes a business WhatsApp route. Independence, legal entity and overseas activity still require verification before outreach.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","canonical_domain":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","general_email":"not_found","direct_public_work_email":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001032965612",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001032965612",
+      "fields": {
+        "brand": "Home",
+        "city": "Махачкала",
+        "company_phone": "+7 988 304-66-66",
+        "general_email": "home.realty@list.ru",
+        "whatsapp_url": "https://wa.me/79883046666",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001032965612"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current business-managed 2GIS card identifies a Makhachkala realtor company and publishes email and WhatsApp. Independence, legal entity and overseas activity remain unverified.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","canonical_domain":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","direct_public_work_email":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001104464238",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001104464238",
+      "fields": {
+        "brand": "Чамсаев Групп",
+        "city": "Махачкала",
+        "legal_name": "ООО «Чамсаев Групп»",
+        "company_phone": "+7 966 748-88-88",
+        "whatsapp_url": "https://wa.me/79667488888",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001104464238"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current business-managed 2GIS card names the legal operator and describes land and real-estate services in Makhachkala, with a published WhatsApp route. Residential/new-build depth and overseas activity remain unverified.",
+      "gaps": {"parent_brand":"not_found","canonical_domain":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","general_email":"not_found","direct_public_work_email":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001054063408",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001054063408",
+      "fields": {
+        "brand": "B2B Garant",
+        "city": "Махачкала",
+        "company_phone": "+7 906 448-44-56",
+        "whatsapp_url": "https://wa.me/79064484456",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001054063408"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current business-managed 2GIS card classifies B2B Garant as a Makhachkala real-estate agency and publishes a WhatsApp route. Legal entity, independence and service mix require further verification.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","canonical_domain":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","general_email":"not_found","direct_public_work_email":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001042811055",
+      "record_action": "add_candidate",
+      "domain": "profigroup05.ru",
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001042811055",
+      "fields": {
+        "brand": "Profi Group",
+        "city": "Махачкала",
+        "canonical_domain": "profigroup05.ru",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001042811055"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current 2GIS card identifies a real-estate agency with one additional regional branch and publishes its own domain. The two branches count as one organisation; legal entity, exact phone and overseas activity remain unverified.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","company_phone":"blocked_hidden_by_source","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","general_email":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001090562386",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001090562386",
+      "fields": {
+        "brand": "ZN Group",
+        "city": "Махачкала",
+        "company_phone": "+7 928 254-94-56",
+        "whatsapp_url": "https://wa.me/79282549456",
+        "telegram_url": "https://t.me/+79282549456",
+        "telegram_kind": "direct_dialogue",
+        "other_social_url": "https://t.me/nedviga_mhk",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001090562386"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current business-managed 2GIS card identifies a Makhachkala real-estate company and publishes separate WhatsApp, direct Telegram and public Telegram-channel routes. Legal entity and overseas activity remain unverified.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","canonical_domain":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","general_email":"not_found","direct_public_work_email":"not_found","vk_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001111681262",
+      "record_action": "add_candidate",
+      "domain": "dreamhouse05.ru",
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001111681262",
+      "fields": {
+        "brand": "Dream House",
+        "city": "Махачкала",
+        "canonical_domain": "dreamhouse05.ru",
+        "company_phone": "+7 988 292-62-66",
+        "whatsapp_url": "https://wa.me/79882926266",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001111681262"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current 2GIS card identifies a Makhachkala real-estate company with three local branches, an own domain and WhatsApp. Branches count once; legal entity and overseas activity require verification.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","general_email":"not_found","direct_public_work_email":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001043650525",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001043650525",
+      "fields": {
+        "brand": "Kvartira 05",
+        "city": "Махачкала",
+        "company_phone": "+7 988 218-18-18",
+        "whatsapp_url": "https://wa.me/79882181818",
+        "telegram_url": "https://t.me/kvartira_05",
+        "telegram_kind": "direct_dialogue",
+        "vk_url": "https://vk.com/kvartira_05vk",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001043650525"
+      },
+      "person": {
+        "source_url": "https://t.me/kvartira_05",
+        "contact_first_name": "Сара",
+        "contact_role": "Администратор публичного рабочего Telegram"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current 2GIS card identifies a two-branch Makhachkala agency and publishes WhatsApp, Telegram and VK. Telegram itself names the public work administrator. Branches count once; legal entity and overseas activity remain unverified.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","canonical_domain":"not_found","direct_business_phone":"not_found","contact_last_name":"not_found","general_email":"not_found","direct_public_work_email":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001056026293",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001056026293",
+      "fields": {
+        "brand": "Риэлт Эксперт",
+        "city": "Махачкала",
+        "company_phone": "+7 988 293-30-07",
+        "whatsapp_url": "https://wa.me/79882933007",
+        "telegram_url": "https://t.me/rielt_expert",
+        "telegram_kind": "direct_dialogue",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001056026293"
+      },
+      "person": {
+        "source_url": "https://t.me/rielt_expert",
+        "contact_first_name": "Шапи",
+        "contact_last_name": "Омаров",
+        "contact_role": "Эксперт по недвижимости"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Current business-managed 2GIS card identifies a Makhachkala agency and publishes WhatsApp and direct Telegram. The Telegram profile names Shapi Omarov and explicitly describes residential and commercial real-estate work. Legal entity and overseas activity remain unverified.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","canonical_domain":"not_found","direct_business_phone":"not_found","general_email":"not_found","direct_public_work_email":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-2GIS-70000001094304785",
+      "record_action": "add_candidate",
+      "domain": null,
+      "source_url": "https://2gis.ru/makhachkala/firm/70000001094304785",
+      "fields": {
+        "brand": "Arsel",
+        "city": "Махачкала",
+        "company_phone": "+7 989 560-77-77",
+        "whatsapp_url": "https://wa.me/79895607777",
+        "telegram_url": "https://t.me/+79895607777",
+        "telegram_kind": "direct_dialogue",
+        "contact_page": "https://2gis.ru/makhachkala/firm/70000001094304785"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "2GIS currently lists Arsel in Makhachkala's real-estate category and exposes WhatsApp and direct Telegram routes. The company has not recently refreshed the listing, so current activity, legal entity, independence and overseas activity require verification before outreach.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_checked","canonical_domain":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","general_email":"not_found","direct_public_work_email":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    }
+  ],
+  "new_crm_imports": 0,
+  "external_sends": 0
+}

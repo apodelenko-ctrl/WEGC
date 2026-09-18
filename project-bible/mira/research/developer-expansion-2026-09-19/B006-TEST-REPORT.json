@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-18T23:11:27Z",
+  "registry_tests_passed": 29,
+  "project_ids_preserved": 618,
+  "developer_master_rows_preserved": 43,
+  "fresh_public_contact_groups": 10,
+  "primary_project_group_links": 9,
+  "verified_public_project_group_links": 16,
+  "ambiguous_group": 0,
+  "unresolved_family_not_in_master": 0,
+  "unresolved_no_family": 507,
+  "secondary_links_sendable": false,
+  "crm_imports": 0,
+  "external_sends": 0
+}

@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-18T23:11:27Z",
+  "city": "Махачкала",
+  "status": "blocked_official_source",
+  "official_value": null,
+  "reason": "Dagestanstat/Rosstat city-proper 2025/2026 table was not discoverable through accessible official search results. The existing rounded secondary estimate is retained only for queue ordering; municipal district or urban agglomeration figures were not substituted.",
+  "attempted_sources": [
+    "https://05.rosstat.gov.ru/",
+    "https://rosstat.gov.ru/"
+  ]
+}
