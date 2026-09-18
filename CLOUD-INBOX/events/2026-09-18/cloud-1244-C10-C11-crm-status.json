@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "eventId": "cloud-1244-C10-C11-crm-status",
+  "runId": "cloud-1244-C10-C11",
+  "author": "CLOUD",
+  "startedAt": "2026-09-18T12:44:28+07:00",
+  "recordedAt": "2026-09-18T12:56:33+07:00",
+  "timezone": "Asia/Bangkok",
+  "trigger": "Owner requested actual day-plan continuation and a concrete CRM integration update",
+  "completedBlocks": ["C10", "C11"],
+  "results": [
+    {"path":"project-bible/mira/research/day-2026-09-18/results/C10-agency-review-pack.json","commit":"78c75ea71a810d292e96bf19cdca384ab8271529","scope":"12 existing agency candidates, stable IDs, corporate source routes, segment drafts and explicit closed gates; not subscriber or native CRM import list"},
+    {"path":"project-bible/mira/research/day-2026-09-18/results/C10-owner-review-and-crm-staging.md","commit":"684a686163f1dfa338a6d89def6aca69767d95b7","scope":"Review pack, sample assembled draft and LOCAL field-mapping specification"},
+    {"path":"project-bible/mira/research/day-2026-09-18/results/C10-validation.json","commit":"71dba3a7c016c17e09824e1639f8574c230fcf82","scope":"14/14 actual offline JSON/gate checks; exact GitHub blob matched tested bytes"},
+    {"path":"project-bible/mira/research/day-2026-09-18/results/C11-current-product-demo-and-one-pager.md","commit":"a7084382b517504c8714ca36d4b9e53556ced22c","scope":"Existing demo and one-pager adapted to current source and last documented live acceptance; not a new public deployment or rehearsal"}
+  ],
+  "observations": {
+    "c10CorporateRoutesReadable": 11,
+    "c10CorporateRouteToolErrors": 1,
+    "errorRoute": "https://garantus.by/",
+    "errorHandling": "Retained prior C09 evidence, explicitly marked failed new read; no inference of company closure or site outage",
+    "mainReadCommit": "1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b",
+    "mainChangedSinceC08C09": false,
+    "dedupe": "Reuse C08/C09 exact-domain search scope; unpublished LOCAL CRM and legal/rebrand dedupe remain unverified",
+    "productTruth": "Current operations doc and latest WORK say compose-email opens the operator mail client and neither sends messages nor records sent history",
+    "publicMiraRead": "Three web-reader attempts unavailable; source review plus earlier documented deployment only, not a fresh HTTP/live-browser or Russia probe"
+  },
+  "crmEvidenceReview": {
+    "taskId": "MIRA-MKT-20260918-01",
+    "queueStatusObserved": "ready_for_local_implementation",
+    "localReceiptObserved": false,
+    "issue14CommentsObservedBeforeThisEvent": 3,
+    "localImplementationReplyObserved": false,
+    "researchInboxReceiptDirectoryObserved": false,
+    "newCrmIntegrationCommitFoundInCurrentMain": false,
+    "macProcessObserved": false,
+    "conclusion": "CRM installation and Brevo integration are not confirmed in shared evidence; do not claim the local agent did no unpublished work",
+    "preparationAlreadyExists": "M05/M06 and 12 passed generator tests; do not repeat provider selection",
+    "nextLocalProof": "Actual isolated runtime/app login, then reviewed organisation import, appropriate IMAP/campaign integration, cap200, stop-on-reply, unsubscribe/complaint handling and controlled delivery evidence",
+    "noNewRoutineChoiceApprovalRequired": true
+  },
+  "dataCountsUnchanged": {"vietnam":15,"montenegro":15,"completeForDiscovery":27,"partialForValidation":3,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
+  "externalMessagesSent": 0,
+  "newSoftwareInstalled": 0,
+  "crmImportsPerformed": 0,
+  "m04LiveTestsPerformed": 0,
+  "productionChanges": 0,
+  "automationChanges": 0,
+  "remainingBlocksAtRead": ["C12", "C13", "C14", "C15", "C16"],
+  "remainingHolds": ["LOCAL installation receipt and actual runtime/provider access", "Recipient eligibility and actual sender/list release", "Local CRM/legal/rebrand dedupe", "Current organisation-level licence evidence for all six BY candidates", "Fresh live demo rehearsal", "Project-specific supply and publication rights"],
+  "nextAction": "Continue first independent pending block from fresh RESUME, normally C12; do not invent a new queue while C12-C16 remain. Keep LOCAL as sole integrator/deployer."
+}
