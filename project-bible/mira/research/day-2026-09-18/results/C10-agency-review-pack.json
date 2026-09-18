@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "packageId": "MIRA-C10-20260918",
+  "date": "2026-09-18",
+  "timezone": "Asia/Bangkok",
+  "runId": "cloud-1244-C10-C11",
+  "status": "internal_review_not_send_list",
+  "sourceMainCommit": "1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b",
+  "sourceBlocks": ["C08-russia-six-review-candidates.md", "C09-belarus-six-review-candidates.md"],
+  "sourceBlocksCheckedAt": "2026-09-18",
+  "counts": {"records": 12, "RU": 6, "BY": 6, "publicRoutesReadableThisRun": 11, "publicRouteReadErrorsThisRun": 1, "sendApproved": 0, "marketingEligible": 0},
+  "defaults": {
+    "entityType": "agency",
+    "crmStage": "research_review",
+    "marketingPermission": "unknown",
+    "sendApproved": false,
+    "outreachStatus": "not_authorized",
+    "commercialStatus": "research_only",
+    "commerciallyEnabled": false,
+    "buyerRegistrationEnabled": false,
+    "newsletterEnrollmentAllowed": false,
+    "localCrmDeduplication": "not_verified",
+    "legalEntityDeduplication": "not_verified",
+    "decisionMakerVerified": false,
+    "actualRecipient": null,
+    "accountImported": false,
+    "defaultMarketingSuppressed": true,
+    "campaignMarket": "Phuket"
+  },
+  "dedupeEvidence": {
+    "inheritedFrom": "C08/C09",
+    "checkedAt": "2026-09-18",
+    "mainCommit": "1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b",
+    "method": "exact-domain repository search",
+    "hits": 0,
+    "repeatedThisRun": false,
+    "limitation": "Not proof of legal/rebrand uniqueness or comparison with unpublished LOCAL CRM; no whole-dataset recollection"
+  },
+  "draftAssembly": {
+    "language": "ru",
+    "greeting": "Добрый день, команда {{name}}!",
+    "order": ["greeting", "hook", "bodyBySegment", "cta", "verifiedSenderFooter"],
+    "bodyBySegment": {
+      "international": "Я представляю МИРА — B2B-маркетплейс для агентств недвижимости. Начинаем с Пхукета и предлагаем обсудить дополнительный процесс работы с зарубежным предложением без отказа от ваших текущих партнёров. Клиентская коммуникация остаётся у вашего агентства; коммерческие условия подтверждаются по конкретному проекту.",
+      "newbuild": "Мы развиваем МИРА — B2B-маркетплейс, который помогает агентству рассмотреть Пхукет как дополнительное направление. Модель не требует переносить всю клиентскую базу или менять ваш бренд. Исследовательский каталог можно изучить сейчас, а порядок сотрудничества и условия подтверждаются отдельно по каждому проекту.",
+      "regional": "Мы развиваем МИРА — B2B-маркетплейс для агентств, начинающий работу с Пхукета. Предлагаем обсудить, подходит ли зарубежное направление вашей команде. В нашей модели отношения с клиентом остаются у агентства; коммерческий процесс согласуется отдельно по проекту."
+    },
+    "cta": "Предлагаю короткую демонстрацию и разговор о задачах вашей команды. Уместно согласовать такой разговор с коллегой, который отвечает за партнёрства?",
+    "verifiedSenderFooter": "{{Подтверждённые имя, компания, читаемый Reply-To и применимое прекращение обращений — заполнить перед выпуском}}",
+    "releaseNote": "Draft only. No invented prior conversation, interested buyer, licence clearance, commission, available unit or partnership. Do not put these records in Brevo without separate recipient eligibility."
+  },
+  "records": [
+    {"id":"RU-NIGHT-A-005","name":"AFLAT","city":"Владивосток","country":"RU","website":"https://aflat.online/","corporateRoute":"https://aflat.online/","segment":"international","subject":"AFLAT × МИРА: дополнительный процесс работы с Пхукетом","hook":"На вашем сайте есть отдельное направление недвижимости в Таиланде.","discoveryQuestion":"Какая часть работы с Таиландом могла бы быть полезна как дополнительная поддержка, без замены ваших действующих партнёров?","signalBoundary":"Public Thailand service only; no verified Phuket supply, buyer demand or MIRA agreement","sourceUrl":"https://aflat.online/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_assessed","hold":"Partnership decision-maker, current model and recipient eligibility unknown"},
+    {"id":"RU-NIGHT-B-003","name":"Welcome","city":"Ставрополь","country":"RU","website":"https://www.welcome26.ru/","corporateRoute":"https://www.welcome26.ru/","segment":"newbuild","subject":"Welcome × МИРА: Пхукет как дополнительное направление","hook":"В вашем каталоге представлены новостройки; поэтому предлагаем обсудить дополнительное направление для команды, уже знакомой с предложением застройщиков.","discoveryQuestion":"Кто у вас рассматривает новые партнёрские направления и обучение команды?","signalBoundary":"New-build catalogue; overseas desk and overseas demand not established","sourceUrl":"https://www.welcome26.ru/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_assessed","hold":"No verified foreign desk or Phuket demand"},
+    {"id":"RU-NIGHT-B-005","name":"Агентство на Ярославской / HOUSE GROUP","city":"Чебоксары","country":"RU","website":"https://housegroup21.ru/","corporateRoute":"https://housegroup21.ru/","segment":"regional","subject":"HOUSE GROUP × МИРА: обсуждение зарубежного направления","hook":"На вашем сайте представлен подбор недвижимости в Чебоксарах и Чувашии.","discoveryQuestion":"Бывают ли сейчас зарубежные запросы и как вы обычно с ними работаете?","signalBoundary":"C08 single historical Spain enquiry retained as internal signal only; not quoted as current demand or a foreign desk","sourceUrl":"https://housegroup21.ru/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_assessed","hold":"Recurring foreign demand and delivery capability unknown"},
+    {"id":"RU-NIGHT-B-009","name":"РИЭЛ-МАКС","city":"Брянск","country":"RU","website":"https://riel-max.ru/","corporateRoute":"https://riel-max.ru/kontakty","segment":"newbuild","subject":"РИЭЛ-МАКС × МИРА: дополнительное направление для агентства","hook":"На вашем корпоративном сайте представлены риэлторские услуги и сопровождение сделок в Брянске.","discoveryQuestion":"Рассматривает ли команда зарубежное направление дополнительно к местному рынку?","signalBoundary":"New-build fit from C08; this run re-read corporate contacts and services, not overseas activity","sourceUrl":"https://riel-max.ru/kontakty","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_assessed","hold":"International interest and partnership decision-maker unknown"},
+    {"id":"RU-NIGHT-B-011","name":"БСН Недвижимость","city":"Брянск","country":"RU","website":"https://bsnnedvizhimost.ru/","corporateRoute":"https://bsnnedvizhimost.ru/","segment":"newbuild","subject":"БСН × МИРА: Пхукет для команды по новостройкам","hook":"На вашем сайте есть отдельные разделы новостроек и жилых комплексов Брянска.","discoveryQuestion":"Какой формат ознакомления с зарубежным рынком удобен вашей команде?","signalBoundary":"Local new-build catalogue; no measured overseas demand","sourceUrl":"https://bsnnedvizhimost.ru/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_assessed","hold":"Foreign-market intent and exact recipient unknown"},
+    {"id":"RU-NIGHT-B-012","name":"Формула","city":"Тюмень","country":"RU","website":"https://formula-agency.ru/","corporateRoute":"https://formula-agency.ru/","segment":"newbuild","subject":"Формула × МИРА: дополнительное направление Пхукет","hook":"Ваш сайт специализируется на подборе новостроек в Тюмени.","discoveryQuestion":"Кто принимает решение о тестировании нового направления для вашей команды?","signalBoundary":"New-build specialism only; first-party operator naming is not independent entity clearance","sourceUrl":"https://formula-agency.ru/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_assessed","hold":"Brand/legal-operator relationship and local CRM dedupe still need review"},
+    {"id":"by-centr-nedvizhimosti-24-na-7","name":"Центр недвижимости 24 на 7","city":"Борисов / Минская область","country":"BY","website":"https://central-borisov.by/","corporateRoute":"https://central-borisov.by/","segment":"newbuild","subject":"24 на 7 × МИРА: обсуждение направления Пхукет","hook":"На вашем сайте представлены услуги по покупке жилья и новостроек в Минской области.","discoveryQuestion":"Кто у вас рассматривает новые партнёрские направления?","signalBoundary":"Own-site licence statement is not independently verified current organisation status","sourceUrl":"https://central-borisov.by/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_independently_verified_current","hold":"Current regulator organisation-level licence evidence and recipient eligibility absent"},
+    {"id":"by-osnova","name":"Сектор недвижимости Основа","city":"Гомель","country":"BY","website":"https://osnova.by/","corporateRoute":"https://osnova.by/","segment":"regional","subject":"Основа × МИРА: зарубежное направление для агентства","hook":"На вашем сайте представлены услуги продажи, покупки, обмена и аренды недвижимости в Гомеле.","discoveryQuestion":"Как вы обрабатываете запросы на недвижимость за пределами Беларуси?","signalBoundary":"General service range; historical licence and realtor workplace evidence do not prove current organisation clearance","sourceUrl":"https://osnova.by/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_independently_verified_current","hold":"Current regulator organisation-level licence evidence absent"},
+    {"id":"by-absolut-nedvizhimost","name":"Абсолют Недвижимость","city":"Минск","country":"BY","website":"https://aan.by/","corporateRoute":"https://aan.by/contacts/","segment":"regional","subject":"Абсолют Недвижимость × МИРА: обсуждение партнёрства","hook":"Ваш корпоративный сайт представляет агентство недвижимости в Минске и центральный канал связи с командой.","discoveryQuestion":"Кто отвечает за развитие партнёрских направлений?","signalBoundary":"Identity/contact route only, not licence clearance or established foreign desk","sourceUrl":"https://aan.by/contacts/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_independently_verified_current","hold":"Current regulator organisation-level licence evidence absent"},
+    {"id":"by-garant-uspeha","name":"Гарант успеха","city":"Брест","country":"BY","website":"https://garantus.by/","corporateRoute":"https://garantus.by/","segment":"regional","subject":"Гарант успеха × МИРА: обсуждение направления Пхукет","hook":"Обращаемся к вашей команде с предложением обсудить новое партнёрское направление.","discoveryQuestion":"Кто у вас рассматривает сотрудничество по зарубежным направлениям?","signalBoundary":"C09 service review retained; new direct read failed and was not treated as company closure or successful fresh validation","sourceUrl":"https://garantus.by/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"tool_read_error_prior_C09_evidence_retained","licensingStatus":"not_independently_verified_current","hold":"Recheck route when preparing an actually approved contact; current regulator organisation-level licence evidence absent"},
+    {"id":"by-uyut-i-k","name":"Агентство Уют и К","city":"Витебск","country":"BY","website":"https://n-v.by/","corporateRoute":"https://n-v.by/kontakty/","segment":"regional","subject":"Уют и К × МИРА: дополнительное направление для агентства","hook":"На вашем сайте опубликован корпоративный контакт агентства в Витебске.","discoveryQuestion":"Есть ли в команде сотрудник, который рассматривает новые рынки и партнёрства?","signalBoundary":"Corporate presence, not a current organisation licence lookup","sourceUrl":"https://n-v.by/kontakty/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_independently_verified_current","hold":"Current regulator organisation-level licence evidence absent"},
+    {"id":"by-pakodan-estate","name":"ПАКОДАН ЭСТЕЙТ","city":"Гродно","country":"BY","website":"https://pakodangrodno.by/","corporateRoute":"https://pakodangrodno.by/","segment":"regional","subject":"ПАКОДАН ЭСТЕЙТ × МИРА: дополнительное партнёрское направление","hook":"Ваш сайт представляет агентство недвижимости ПАКОДАН ЭСТЕЙТ в Гродно.","discoveryQuestion":"Как согласуется новое международное направление внутри вашей сети?","signalBoundary":"Self-described network/partner signal from C09; no verified Phuket desk or network-wide authority","sourceUrl":"https://pakodangrodno.by/","sourceCheckedAt":"2026-09-18","routeReadThisRun":"readable","licensingStatus":"not_independently_verified_current","hold":"Network/local authority and current regulator organisation-level licence evidence absent"}
+  ]
+}
