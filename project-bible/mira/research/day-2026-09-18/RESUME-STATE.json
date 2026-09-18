@@ -6,6 +6,7 @@
   "branch": "mira/research-night-20260918",
   "writeRoot": "project-bible/mira/research/day-2026-09-18/",
   "mainBaselineRead": "1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b",
+  "currentMainRead": "22186058eb478239277ceddce52295688f5512c5",
   "nightSourceRead": "beb9707c8561c138c896b122c6776a217ee4b3f0",
   "logicalBlockMinutes": 30,
   "maximumAutomaticFrequency": "hourly",
@@ -13,6 +14,9 @@
   "outreachAuthorized": false,
   "purchasesAuthorized": false,
   "localProcessReceiptConfirmed": false,
+  "localIssueAcceptanceConfirmed": true,
+  "structuredLocalTaskReceiptPresent": false,
+  "structuredCrmTaskReceiptPresent": false,
   "completedBeforeSchedule": [
     "Night dataset export and SHA256 validation for 230 source files",
     "Belarus detailed CSV repaired from structured JSON: 30 rows; 14 malformed historical rows not imported; missing by-eksklyuziv-group restored",
@@ -38,12 +42,35 @@
     {"id":"C13","status":"completed","topic":"Expo QR-to-next-step content review, no code or deployment","runId":"cloud-1302-C12-C13","runStartedAt":"2026-09-18T13:02:42+07:00","owner":"CLOUD","output":"results/C13-expo-qr-to-next-step-review.md","note":"Verified existing expo QR source points to /mira/start/ and discovery remains Phuket-first. Found a source-level contradiction: start/access pages still say working intake closed while newer AGENCY-INTAKE-OPERATIONS records owner-approved invite-only controlled intake. Proposed LOCAL reconciliation and one truthful agency next step; no code/deploy/form change."},
     {"id":"C14","status":"completed","topic":"Canonical dashboard evidence-source reconciliation proposal","runId":"cloud-1357-C14-C15","runStartedAt":"2026-09-18T13:57:30+07:00","owner":"CLOUD","output":"results/C14-dashboard-evidence-source-reconciliation.md","note":"Located stale dashboard state in generator/source rather than only generated output. Proposed four-dimensional evidence model (implementation/deployment/live_acceptance/commercial_gate), preserved owner-reported applicant evidence provenance, buyer/send gates and unknown business counts. No main/generated/product edit."},
     {"id":"C15","status":"completed","topic":"Validate changed handoff data and actual remaining holds","runId":"cloud-1357-C14-C15","runStartedAt":"2026-09-18T13:57:30+07:00","owner":"CLOUD","output":"results/C15-final-handoff-validation-and-holds.md","note":"Re-read current handoff/taxonomy/queue and prior machine QA; preserved repaired Belarus path, 80 unique-candidate proof, 30 taxonomy mappings and closed gates. Prior machine verification is not mislabelled as a fresh rerun; shell clone rerun blocked by DNS, GitHub connector reads succeeded."},
-    {"id":"C16","status":"pending","topic":"Final day report and bounded continuation handoff"}
+    {"id":"C16","status":"completed","topic":"Final day report and bounded continuation handoff","runId":"cloud-1557-C16-final","runStartedAt":"2026-09-18T15:57:27+07:00","owner":"CLOUD","output":"results/C16-end-of-day-status.md","additionalOutputs":["../DAY-BRIEF.md"],"note":"Final measured report reconciled fresh LOCAL acceptance, main PR15 source integration, successful launch QA and Pages workflow, exact remaining holds and no automatic continuation. No CLOUD production write or external send."}
   ],
-  "nextAction":"Only C16 remains in the bounded day queue. At the final scheduled day run, create DAY-BRIEF.md from measured C01-C15 results, actual remaining holds and LOCAL handoff/receipt state. Do not start new collection after the day boundary and do not extend the schedule automatically.",
+  "nextAction":"Bounded C01-C16 research/content queue is complete. Do not create another Cxx or extend this series. Operational implementation remains under existing LOCAL tasks and evidence/receipt protocol; separate future research requires separate explicit bounded work.",
   "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":27,"partialForValidation":3,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
-  "countsScope":"Research counts unchanged by C14/C15. Dashboard reconciliation is a source proposal, not a deployment. C15 preserves the earlier machine-verified transport scope and closed commercial/send/buyer/media gates; no LOCAL integration, CRM import, external send or buyer activation is inferred.",
+  "countsScope":"Final research counts. Main PR15 source integration and successful workflows do not convert research records into current inventory, subscribers, commercially enabled supply or completed applicant acceptance.",
   "latestCheckpoint": {
+    "runId":"cloud-1557-C16-final",
+    "runStartRecordedAt":"2026-09-18T15:57:27+07:00",
+    "completed":["C16"],
+    "result":"results/C16-end-of-day-status.md",
+    "dayBrief":"DAY-BRIEF.md",
+    "events":["CLOUD-INBOX/events/2026-09-18/cloud-1557-C16-final.json"],
+    "sharedAccountingUpdated":true,
+    "mainCommitRead":"22186058eb478239277ceddce52295688f5512c5",
+    "pr15Merged":true,
+    "launchQaRun":{"id":35327093151,"status":"completed","conclusion":"success"},
+    "pagesRun":{"id":35327093244,"status":"completed","conclusion":"success"},
+    "localIssueAcceptanceConfirmed":true,
+    "structuredMainTaskReceiptPresent":false,
+    "structuredCrmTaskReceiptPresent":false,
+    "applicantTail":"operator decision -> applicant-visible result -> fresh login remains pending in shared evidence",
+    "buyerRegistrationClosed":true,
+    "crmIntegrationConfirmed":false,
+    "externalMessagesSent":0,
+    "externalFormsSubmitted":0,
+    "productionWrites":0,
+    "automaticContinuationAuthorized":false
+  },
+  "priorCheckpointC14C15": {
     "runId":"cloud-1357-C14-C15",
     "runStartRecordedAt":"2026-09-18T13:57:30+07:00",
     "completed":["C14","C15"],
@@ -156,8 +183,8 @@
     "testedScriptSha256":"64079f1dcc6b1ba0ed22d938f254ecc9da8dc742d0313cf6efdd209453d6997b","githubBlobMatchesTestedScript":true,
     "runtimeStatus":"BLOCKED_RUNTIME_DOCKER_ABSENT","appBrowserMailAcceptance":"NOT_RUN","localTaskId":"MIRA-MKT-20260918-01","localTaskStatus":"ready_for_local_implementation","localReceiptConfirmed":false,"localStartupRuleInstalled":false,
     "existingAutomationPromptUpdatedAt":"2026-09-18T09:53:46+07:00","automationChange":"Shared accounting added to prompt only; original bounded schedule unchanged","newAutomationCreated":false,"researchQueueChanged":false,
-    "nextCloudAction":"Read shared journals; continue next independent Cxx, not another provider comparison",
-    "remainingHolds":["LOCAL receipt and runtime installation","Actual provider login/OTP/corporate facts and verified sender/domain","Recipient eligibility and content/channel fit","cap200, reply-stop, global suppression and real delivery acceptance"]
+    "nextCloudAction":"Bounded C01-C16 lane completed; no further Cxx from this series",
+    "remainingHolds":["LOCAL structured receipt and runtime installation","Actual provider login/OTP/corporate facts and verified sender/domain","Recipient eligibility and content/channel fit","cap200, reply-stop, global suppression and real delivery acceptance"]
   },
   "crmEvidenceRecheck1244": {
     "checkedAt":"2026-09-18T12:56:33+07:00",
@@ -168,7 +195,7 @@
     "currentProductMailAction":"Compose opens operator mail client; application does not send or track sent mail",
     "installationOrProviderIntegrationConfirmed":false,
     "macProcessObserved":false,
-    "conclusionScope":"No installation/integration evidence in shared repo/handoff checked; no assertion that unpublished local work does not exist",
+    "conclusionScope":"No installation/integration evidence in shared repo/handoff checked at 12:56; superseded for task-receipt status by later issue-level LOCAL acceptance only, not by structured CRM completion evidence",
     "nextLocalAction":"Execute and report existing M05/M06 isolated install plus actual app/import/mail acceptance, or exact unresolved access; no repeated software-choice approval"
   }
 }
