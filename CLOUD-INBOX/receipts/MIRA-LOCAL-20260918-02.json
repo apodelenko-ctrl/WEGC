@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "task_id": "MIRA-LOCAL-20260918-02",
+  "implementation_supplement": "MIRA-INTEGRATE-20260918-01",
+  "status": "partial_with_holds",
+  "source_commit_read": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
+  "supplemental_source_read": "40a1f55 (C16 pre-final and X01; X01 does not change implementation priorities)",
+  "local_branch": "codex/mira-cloud-inbox-20260918",
+  "local_commit": "8b6936a (local-only checkpoint)",
+  "local_checkpoint_preserved": "c06efe1 (local-only)",
+  "public_release": {
+    "pr": "https://github.com/apodelenko-ctrl/WEGC/pull/15",
+    "source_commit": "4bd05d7044fdcd37600e697ba0405004f8bc86b6",
+    "merge_commit": "22186058eb478239277ceddce52295688f5512c5",
+    "pages_snapshot": "4972b4bca407d6944ca39dfacc810dc16147efbb",
+    "deploy_run": 35327093244,
+    "verification_run": 35327298919,
+    "verification_status": "success",
+    "artifact_id": 10539457861,
+    "artifact_sha256": "8c2fc18baab68ce26856e0652e61731f8855450db0084246f4108da54d774ea0"
+  },
+  "per_workstream_status": {
+    "P0": {
+      "status": "blocked_owner_browser",
+      "passed_before_run": [
+        "invited applicant login",
+        "technical application receipt",
+        "receipt persists after refresh"
+      ],
+      "not_run": [
+        "operator decision",
+        "applicant sees decision",
+        "logout and fresh OTP login"
+      ],
+      "reason": "Native browser reports Mac locked. Unlock requested; no duplicate application or recreated auth."
+    },
+    "I1": {
+      "status": "in_progress_runtime_download",
+      "actual_changes": [
+        "80 stable-ID staging records reconciled; damaged BY CSV excluded",
+        "12 C10 native-import candidates and dispositions prepared, not yet imported",
+        "official Lima installed; verified pinned EspoCRM and MariaDB images selected",
+        "isolated lab configuration and private credentials prepared outside Git"
+      ],
+      "not_run": [
+        "CRM application login",
+        "native Accounts import and dedupe",
+        "restart persistence"
+      ],
+      "reason": "Official Ubuntu ARM image for dedicated no-host-mount VM is still downloading; M06 preparation tests are not runtime acceptance."
+    },
+    "I2": {
+      "status": "drafts_prepared_account_hold",
+      "actual_changes": [
+        "12 organisation-specific agency drafts",
+        "developer and weekly drafts retained; Lustica Bay first developer target"
+      ],
+      "not_run": [
+        "real corporate mailbox connection",
+        "Brevo sender/domain verification",
+        "M04 A01-A14 live acceptance"
+      ],
+      "reason": "Corporate sender mailbox and Brevo account access requested; no answer yet. No recipients subscribed and no external send."
+    },
+    "I3": {
+      "status": "deployed_verified",
+      "records": {
+        "phuket": 618,
+        "bali": 15,
+        "dubai": 15,
+        "vietnam": 15,
+        "montenegro": 15,
+        "total": 678
+      },
+      "preserved_prior_detail_routes": 648,
+      "phuket_data_sha256": "f3366c36c683e27e9f79d8db96a7f2985272395eba1906f751ebe019ac6b1bf4",
+      "new_record_dispositions": {
+        "integrated": 30,
+        "held_from_public": 0,
+        "rejected": 0,
+        "commercially_enabled": 0,
+        "discovery_complete": 27,
+        "discovery_partial": 3
+      },
+      "actual_changes": [
+        "stable-ID VN/ME integration",
+        "explicit condo/villa/mixed/hotel and original propertyTypes",
+        "five-country filtering/search/pagination/shared shortlist/download",
+        "independent feed failure and storage fallback preserved"
+      ]
+    },
+    "I4": {
+      "status": "deployed_browser_verified",
+      "actual_changes": [
+        "selected original QR path retained",
+        "Phuket staff-assisted invited-intake copy reconciled",
+        "buyer operations stay closed"
+      ],
+      "not_run": [
+        "physical printed QR",
+        "Russia target network without VPN"
+      ]
+    },
+    "I5": {
+      "status": "prepared_with_rights_holds",
+      "actual_changes": [
+        "30-ID Bali/Dubai media-permission register",
+        "private original VIVI agreement reviewed; dossier and unsent clarification saved outside Git"
+      ],
+      "new_approved_project_images": 0,
+      "reason": "Exact-asset publishing rights and project operating evidence remain required. Labelled branded covers remain in use; no fabricated commercial activation."
+    },
+    "I6": {
+      "status": "local_sources_updated_receipt_shared",
+      "actual_changes": [
+        "source-driven dashboard separates deployment/live/commercial/evidence",
+        "WORK-STATUS and RESUME-STATE history preserved",
+        "structured sanitized receipt returned independently from private materials"
+      ]
+    }
+  },
+  "tests": {
+    "local_integrated": {
+      "node": 130,
+      "python": 150,
+      "markets_browser_groups": 17,
+      "public_browser_groups": 12,
+      "campaign_browser_groups": 15,
+      "status": "PASS"
+    },
+    "isolated_public_branch": {
+      "node": 130,
+      "python": 144,
+      "status": "PASS"
+    },
+    "github_actual_domain": {
+      "run": 35327298919,
+      "status": "PASS",
+      "includes": [
+        "exact rebuild",
+        "regression",
+        "isolated pilot browser",
+        "local HTTP/CSP",
+        "actual-domain bytes/downloads/links/smoke",
+        "actual-domain market/public/campaign/editorial browser"
+      ]
+    },
+    "mac_live_repeat": {
+      "status": "INCOMPLETE_TIMEOUT",
+      "reason": "Page navigation timed out at 30/45 seconds; preserved separately, not relabelled as pass."
+    },
+    "registration_end_to_end": "NOT_COMPLETE"
+  },
+  "verified_urls": [
+    "https://wegc.fund/mira/catalog/",
+    "https://wegc.fund/mira/catalog/bali/",
+    "https://wegc.fund/mira/catalog/dubai/",
+    "https://wegc.fund/mira/catalog/vietnam/",
+    "https://wegc.fund/mira/catalog/montenegro/"
+  ],
+  "remaining_holds": [
+    "Unlock Mac for existing operator decision and fresh applicant OTP",
+    "Finish CRM runtime/native import/persistence",
+    "Corporate mailbox and Brevo account/sender access",
+    "Project media permissions and VIVI operational evidence",
+    "Physical QR and Russia-without-VPN measurement"
+  ],
+  "boundaries": {
+    "worker_access_d1_changed": false,
+    "buyer_registration_enabled": false,
+    "external_messages_sent": 0,
+    "private_contracts_or_mailboxes_published": false
+  },
+  "publication_note": "Automatic approval rejected the full internal branch payload. A separate public-only branch excluding internal datasets, CRM staging, contracts, operational documents and Worker changes was approved and published. Internal checkpoint stays local; this receipt is sanitized.",
+  "next_action": "Finish the existing isolated CRM installation, then native import/persistence acceptance. Resume remaining P0 live steps when the owner's browser is available. Do not restart already passed intake or create a new watcher."
+}
