@@ -42,5 +42,48 @@
   ],
   "nextAction":"Continue C04 unless already in progress. Waterpoint remains a documented discovery hold; do not repeat broad Waterpoint searches without a new lead. Heights is the only partial upgraded in the 09:00 checkpoint.",
   "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":25,"partialForValidation":5,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
-  "countsScope":"Current research-quality recommendation after C02/C03. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance or ordinary-applicant acceptance."
+  "countsScope":"Current research-quality recommendation after C02/C03. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance or ordinary-applicant acceptance.",
+  "ownerRequestedMarketingExtension": {
+    "checkpointLocal": "2026-09-18T09:26:26+07:00",
+    "status": "research_and_content_completed_implementation_not_started",
+    "source": "Direct owner request for ready-made email/SMTP/CRM, marketing and Instagram research, plus a root cloud-to-local inbox",
+    "results": [
+      "results/M01-smtp-crm-decision.md",
+      "results/M02-marketing-waves-and-lustica-drafts.md",
+      "results/M03-hugging-face-and-instagram.md",
+      "results/M04-local-integration-task.md"
+    ],
+    "resultsCommit": "2d5b7ca138a5905e2dc9bcf8baef4cec05d520c0",
+    "rootInboxCommit": "d8414ce1a7687beb4746635f6119322e9f68be26",
+    "explicitDocumentationWriteException": ["CLOUD-INBOX/README.md", "CLOUD-INBOX/QUEUE.json"],
+    "exceptionScope": "Only owner-requested documentation handoff on the existing research branch; no main, core statuses, AGENTS, website, code or infrastructure writes",
+    "localTaskId": "MIRA-MKT-20260918-01",
+    "localTaskStatus": "ready_for_local_review",
+    "localStartupRuleInstalled": false,
+    "mainInboxIntegrationConfirmed": false,
+    "firstPersonalDeveloperTarget": "Lustica Bay",
+    "targetPriorityIsOwnershipClaim": false,
+    "exactTargetEmailVerified": false,
+    "preferredStack": "EspoCRM plus a permitted SMTP relay; listmonk only if native marketing acceptance is insufficient",
+    "newSoftwareInstalled": false,
+    "externalMessagesSent": 0,
+    "newPublicationApprovedMedia": 0,
+    "localAcceptanceScenariosPrepared": 14,
+    "localAcceptanceScenariosExecuted": 0,
+    "huggingFaceExactModelCardsChecked": 3,
+    "huggingFaceSpaceDiscovery": "Incomplete: relevant listing unavailable through web/API/runtime DNS; do not repeat identical failed queries without a new route",
+    "launchPlanningTarget": "2026-09-19/2026-09-20, conditional on actual product, sender, recipient and owner acceptance",
+    "scheduleChanged": false,
+    "researchQueueChanged": false,
+    "remainingHolds": [
+      "Local receipt and startup-rule integration",
+      "Current local mail/CRM/server inventory and applicable data processing location",
+      "Provider suitability and SMTP production access where needed",
+      "Recipient marketing permission and jurisdiction-specific review, including Belarus gap",
+      "Reply-stop, complaint and global suppression acceptance",
+      "Exact sender/list/template owner approval before external mail",
+      "Lustica Bay recipient and working language",
+      "Instagram account/app permissions, advertising rules and asset rights"
+    ]
+  }
 }
