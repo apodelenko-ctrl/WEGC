@@ -3,29 +3,26 @@
   "task_id": "MIRA-MKT-20260918-01",
   "source_commit_read": "ed2db2e9e22956547a2c24dd93fd92bb9f31319f",
   "local_branch": "codex/mira-cloud-inbox-20260918",
-  "local_commit": "f72cee88463379a9bf90acf29912d2f4d7b08243 (local-only)",
+  "local_commit": "d472b7462de1a3f50eb571ca756580c1fe3ba2fa (local-only)",
   "status": "partial",
-  "updated_at": "2026-09-18T17:27:20Z",
+  "updated_at": "2026-09-18T18:39:09Z",
   "implemented_scope": [
-    "Same private Lima VM and persistent volumes; EspoCRM 10.0.8 and MariaDB 11.4 pinned official images",
-    "12 C10 native Accounts plus one synthetic test Account",
-    "15 native research/provenance/gate fields; no mailbox/contact or subscriber import",
-    "12 inactive organisation templates linked as Account Notes, plus 8 inactive editorial templates",
-    "Actual API and browser login; native detail, refresh and full container restart persistence",
-    "Same VM recovered after stop; all 12 research records reverified",
-    "20 native inactive EmailTemplates: 12 C10 + LB-01, AG-01, DV-01, FU-01, four weekly drafts",
-    "12 C10 drafts linked to their native Accounts",
-    "Owner selected working correspondence address; connected Codex Gmail profile confirmed, not an Espo mailbox connection"
+    "Native existing CRM relationship centre, three-step draft/review and 1–4 delayed steps",
+    "Immutable approval digest, approved attachment SHA256 recheck and actual reply threading",
+    "Native SMTP/IMAP with verified local TLS; native unattended scheduled outbound/inbound",
+    "Incoming deterministic RU/EN classification to assigned Task and bell Notification",
+    "Global unsubscribe/reply/manual complaint/bounce suppression; 200/day attempted-send hard cap",
+    "78 agency and87 developer research Accounts plus2 synthetic; no commercial activation"
   ],
   "native_import": {
-    "input": 12,
-    "imported_during_run": 12,
-    "final_rerun": {
-      "already_present": 12,
-      "held": 0,
-      "rejected": 0
-    },
-    "other_staging": 68
+    "agency_research": 78,
+    "agency_identity_holds": 2,
+    "developer_research": 87,
+    "developer_taxonomy_holds": 19,
+    "developer_domain_holds": 2,
+    "synthetic": 2,
+    "total_native_accounts": 167,
+    "inactive_templates": 20
   },
   "M04": {
     "A01": "PASS_LOCAL_NATIVE_CRM",
@@ -40,24 +37,147 @@
     "native Accounts/templates/Notes readback",
     "repeat import without duplicates",
     "container restart and subsequent VM restart persistence",
-    "existing live MIRA operator review and applicant re-login"
+    "existing live MIRA operator review and applicant re-login",
+    "47 Python and36 PHP checks",
+    "9 native mail acceptance groups",
+    "Non-admin ACL and desktop/mobile mail workflow",
+    "Actual encrypted backup restore to isolated database"
   ],
   "failed_tests_resolved": [
     "official entrypoint assumed literal admin username",
     "rootless internal-only network did not publish port; isolated gateway added"
   ],
   "not_run_tests": [
-    "Espo SMTP/IMAP or OAuth mailbox integration",
-    "Brevo account, sender/Reply-To and domain authentication",
-    "Actual aggregate cap200, reply-stop, global unsubscribe/complaint/bounce, delivery and kill-switch acceptance"
+    "Public VPS/mail domain/TLS/identity and controlled external deliverability",
+    "Automatic authenticated DSN/complaint ingestion (manual stop is implemented only)",
+    "Real staff/MFA, approved documents and actual sender footer",
+    "Offsite retention/load/recovery operation",
+    "Complete60-city canonical contact reconciliation",
+    "Newer CLOUD client flow and live model/channel connection",
+    "Media/contract evidence and physical QR/Russia-noVPN/liveadmin403"
   ],
   "external_actions_performed": [
     "sanitized receipt returned to GitHub"
   ],
   "external_messages_sent": 0,
   "remaining_holds": [
-    "Espo mailbox connection and Brevo account/sender/domain access",
-    "M04 cap200, reply-stop, suppression/complaint/bounce and controlled delivery acceptance"
+    "Public VPS/mail domain/TLS/identity and controlled external deliverability",
+    "Automatic authenticated DSN/complaint ingestion (manual stop is implemented only)",
+    "Real staff/MFA, approved documents and actual sender footer",
+    "Offsite retention/load/recovery operation",
+    "Complete60-city canonical contact reconciliation",
+    "Newer CLOUD client flow and live model/channel connection",
+    "Media/contract evidence and physical QR/Russia-noVPN/liveadmin403"
   ],
-  "next_owner_action_if_truly_required": "Confirm whether a Brevo account already exists; its login/setup is separate from the selected correspondence address."
+  "next_owner_action_if_truly_required": "Review prepared VPS option; purchase remains separate. Do not repeat Brevo-choice or old OTP workflow questions.",
+  "history": [
+    {
+      "schema_version": 1,
+      "task_id": "MIRA-MKT-20260918-01",
+      "source_commit_read": "ed2db2e9e22956547a2c24dd93fd92bb9f31319f",
+      "local_branch": "codex/mira-cloud-inbox-20260918",
+      "local_commit": "f72cee88463379a9bf90acf29912d2f4d7b08243 (local-only)",
+      "status": "partial",
+      "updated_at": "2026-09-18T17:27:20Z",
+      "implemented_scope": [
+        "Same private Lima VM and persistent volumes; EspoCRM 10.0.8 and MariaDB 11.4 pinned official images",
+        "12 C10 native Accounts plus one synthetic test Account",
+        "15 native research/provenance/gate fields; no mailbox/contact or subscriber import",
+        "12 inactive organisation templates linked as Account Notes, plus 8 inactive editorial templates",
+        "Actual API and browser login; native detail, refresh and full container restart persistence",
+        "Same VM recovered after stop; all 12 research records reverified",
+        "20 native inactive EmailTemplates: 12 C10 + LB-01, AG-01, DV-01, FU-01, four weekly drafts",
+        "12 C10 drafts linked to their native Accounts",
+        "Owner selected working correspondence address; connected Codex Gmail profile confirmed, not an Espo mailbox connection"
+      ],
+      "native_import": {
+        "input": 12,
+        "imported_during_run": 12,
+        "final_rerun": {
+          "already_present": 12,
+          "held": 0,
+          "rejected": 0
+        },
+        "other_staging": 68
+      },
+      "M04": {
+        "A01": "PASS_LOCAL_NATIVE_CRM",
+        "A03": "PARTIAL",
+        "A04": "PARTIAL_UNRESOLVED_FOOTER",
+        "A13": "PARTIAL",
+        "A14": "PASS_SCOPED",
+        "others": "NOT_RUN"
+      },
+      "completed_tests": [
+        "actual API/UI login",
+        "native Accounts/templates/Notes readback",
+        "repeat import without duplicates",
+        "container restart and subsequent VM restart persistence",
+        "existing live MIRA operator review and applicant re-login"
+      ],
+      "failed_tests_resolved": [
+        "official entrypoint assumed literal admin username",
+        "rootless internal-only network did not publish port; isolated gateway added"
+      ],
+      "not_run_tests": [
+        "Espo SMTP/IMAP or OAuth mailbox integration",
+        "Brevo account, sender/Reply-To and domain authentication",
+        "Actual aggregate cap200, reply-stop, global unsubscribe/complaint/bounce, delivery and kill-switch acceptance"
+      ],
+      "external_actions_performed": [
+        "sanitized receipt returned to GitHub"
+      ],
+      "external_messages_sent": 0,
+      "remaining_holds": [
+        "Espo mailbox connection and Brevo account/sender/domain access",
+        "M04 cap200, reply-stop, suppression/complaint/bounce and controlled delivery acceptance"
+      ],
+      "next_owner_action_if_truly_required": "Confirm whether a Brevo account already exists; its login/setup is separate from the selected correspondence address."
+    }
+  ],
+  "owner_mail_decision": "Own mail server integrated with existing CRM. No VPS exists; prepare option only, purchase not authorized. This supersedes required Brevo choice, not outreach/document release gates.",
+  "current_checkpoint": {
+    "at": "2026-09-18T18:39:09Z",
+    "source_commit": "54d80452d36080ded3d141fbac56a2c22506f16c",
+    "we_gc_checkpoint": "d472b7462de1a3f50eb571ca756580c1fe3ba2fa",
+    "scope": "PRIVATE_LOCAL_LAB_NOT_HOSTED_PUBLIC_MAIL",
+    "counts": {
+      "agency_research": 78,
+      "agency_identity_holds": 2,
+      "developer_research": 87,
+      "developer_taxonomy_holds": 19,
+      "developer_domain_holds": 2,
+      "synthetic": 2,
+      "total_native_accounts": 167,
+      "inactive_templates": 20
+    },
+    "acceptance": {
+      "python": 47,
+      "php_invariants": 36,
+      "native_mail_groups": 9,
+      "non_admin_acl": "PASS",
+      "unattended_native_smtp_imap_task": "PASS",
+      "desktop_mobile_refresh": "PASS",
+      "encrypted_isolated_database_restore": "PASS",
+      "external_messages": 0,
+      "public_mail": "NOT_RUN"
+    },
+    "backup": {
+      "sha256": "48945a6b0ebee8d52bb9b4b32198119cdd78afb55a4578e6a62778de93a25140",
+      "cipher": "AES-256-GCM",
+      "offsite": false
+    },
+    "owner_decision": "Own mail server integrated with existing CRM. No VPS exists; prepare option only, purchase not authorized. This supersedes required Brevo choice, not outreach/document release gates.",
+    "vps_candidate": "Timeweb Cloud MSK80 4vCPU/8GB/80GB + separate IPv4; verify monthly all-in price, SMTP25, PTR and IP reputation before order. No purchase/DNS changes.",
+    "remaining": [
+      "Public VPS/mail domain/TLS/identity and controlled external deliverability",
+      "Automatic authenticated DSN/complaint ingestion (manual stop is implemented only)",
+      "Real staff/MFA, approved documents and actual sender footer",
+      "Offsite retention/load/recovery operation",
+      "Complete60-city canonical contact reconciliation",
+      "Newer CLOUD client flow and live model/channel connection",
+      "Media/contract evidence and physical QR/Russia-noVPN/liveadmin403"
+    ],
+    "all_done": false
+  }
 }
