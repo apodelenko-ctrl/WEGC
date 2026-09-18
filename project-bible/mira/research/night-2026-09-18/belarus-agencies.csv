@@ -1,0 +1,31 @@
+id,country,city,brand,official_domain,source_status,owner_review,outreach_status,commercial_status,commerciallyEnabled,detail_source_file,checked_at
+by-chas-pik,Belarus,Minsk,Час-Пик,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-liga-prava-nedvizhimost,Belarus,Gomel region,Лига права – Недвижимость,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-centr-nedvizhimosti-24-na-7,Belarus,Borisov / Minsk region,Центр недвижимости 24 на 7,central-borisov.by,current_first_party_plus_chamber,yes,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-mir-nedvizhimosti,Belarus,,Агентство Мир Недвижимости,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-bugrealt,Belarus,Brest / Brest region,Бугриэлт,bugrealt.by,current_chamber_plus_official_route,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-korolevskoe-zhilie,Belarus,,Королевское Жилье,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-osnova,Belarus,Gomel,Сектор недвижимости Основа,osnova.by,current_first_party_plus_chamber,yes,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-absolut-nedvizhimost,Belarus,Minsk,Абсолют Недвижимость,aan.by,current_first_party_plus_chamber,yes,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-rielt-dom-grupp,Belarus,Bobruisk / Mogilev region,Риэлт дом групп,,current_chamber_plus_current_marketplace,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-assistance-health-realt,Belarus,Bobruisk / Mogilev region,АССИСТАНС ХЭЛС РИЭЛТ,rieltor-bobr.by,current_chamber_plus_route_timeout,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-artel-nedvizhimost,Belarus,Minsk,Артель Недвижимость,,current_chamber_plus_current_marketplace,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-ekoreal,Belarus,Minsk / Minsk region,Экореал,,current_chamber_plus_current_marketplace,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-sobstvennaya-krysha-estate,Belarus,Minsk / Minsk region,Собственная Крыша Эстейт,,current_chamber_plus_current_marketplace,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-metrium,Belarus,,Агентство недвижимости Метриум,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-eksklyuziv-group,Belarus,Minsk,Группа компаний Эксклюзив,,current_chamber_plus_current_marketplace_entity_hold,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-rielt-center-stolicy,Belarus,Minsk,Риэлтерский центр Столицы,rcs-agency.by,current_first_party_plus_chamber,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-miraval,Belarus,,Мираваль,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-dianest,Belarus,Minsk,ДИАНЭСТ,,current_chamber_plus_current_marketplace,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-kvartiry-stolicy,Belarus,Minsk,Квартиры Столицы,kv-st.by,current_first_party_plus_chamber,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-prospekt-rielt,Belarus,Novopolotsk,Проспект Риэлт,prospekt-rielt.by,current_chamber_plus_directory_official_route,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-metrazhi,Belarus,Mogilev,Агентство недвижимости МЕТРАЖИ,,current_chamber_plus_current_marketplace,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-variant,Belarus,,Агентство недвижимости ВАРИАНТ,variant-zvd.pro,current_chamber_plus_candidate_site_match_medium,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-garant-uspeha,Belarus,Brest,Гарант успеха,garantus.by,current_first_party_plus_chamber,yes,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-iq-property-group,Belarus,Minsk,Ай Кью Проперти Групп,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-pirmas,Belarus,,Пирмас,,current_chamber_only,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-uyut-i-k,Belarus,Vitebsk,Агентство Уют и К,n-v.by,current_first_party,yes,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-zolotoy-klyuch,Belarus,,Агентство Золотой ключ,g-k.by,current_first_party,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-alef-life,Belarus,Minsk / Zhodino,Алеф Лайф,alef.by,current_first_party,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-pakodan-estate,Belarus,Grodno,ПАКОДАН ЭСТЕЙТ,pakodangrodno.by,current_first_party,yes,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
+by-realtelite,Belarus,Grodno / Grodno region,RealtElite,realtelite.by,current_first_party_legal_entity_not_closed,no,not_authorized,research_only,false,05-belarus-agencies.csv,2026-09-18
