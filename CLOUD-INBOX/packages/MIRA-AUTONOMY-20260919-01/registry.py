@@ -128,6 +128,18 @@ def build(root, observations):
     }
     manifest = {str(p): hashlib.sha256((root/p).read_bytes()).hexdigest()
                 for p in (master_path, alias_path, catalog_path)}
+    receipt_path = Path('CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json')
+    if (root/receipt_path).exists():
+        receipt = read_json(root, receipt_path)
+        checkpoint = receipt.get('current_checkpoint', {})
+        metrics['native_crm_snapshot'] = {
+            'source_path': str(receipt_path), 'updated_at': receipt.get('updated_at'),
+            'counts': checkpoint.get('counts', receipt.get('native_import', {})),
+            'scope': checkpoint.get('scope', 'see_receipt'),
+            'source': 'LOCAL_receipt_not_independent_cloud_live_test',
+            'crosswalk_to_research_master': 'pending; do not add these counts together',
+        }
+        manifest[str(receipt_path)] = hashlib.sha256((root/receipt_path).read_bytes()).hexdigest()
     return {'developers': developers, 'project_links': links, 'enrichment_queue': queue,
             'metrics': metrics, 'source_sha256': manifest}
 

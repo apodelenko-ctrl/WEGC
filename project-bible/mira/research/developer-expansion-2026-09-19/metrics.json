@@ -16,5 +16,22 @@
   "developer_replies_total": null,
   "unknown_metric_reason": "Private CRM, mail history and agreements have not been imported. Unknown is not zero.",
   "crm_imports_this_run": 0,
-  "external_sends_this_run": 0
+  "external_sends_this_run": 0,
+  "native_crm_snapshot": {
+    "source_path": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
+    "updated_at": "2026-09-18T18:39:09Z",
+    "counts": {
+      "agency_research": 78,
+      "agency_identity_holds": 2,
+      "developer_research": 87,
+      "developer_taxonomy_holds": 19,
+      "developer_domain_holds": 2,
+      "synthetic": 2,
+      "total_native_accounts": 167,
+      "inactive_templates": 20
+    },
+    "scope": "PRIVATE_LOCAL_LAB_NOT_HOSTED_PUBLIC_MAIL",
+    "source": "LOCAL_receipt_not_independent_cloud_live_test",
+    "crosswalk_to_research_master": "pending; do not add these counts together"
+  }
 }

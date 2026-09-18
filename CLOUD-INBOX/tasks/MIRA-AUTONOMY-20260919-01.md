@@ -15,3 +15,9 @@ LOCAL после checkpoint:
 CLOUD принимает результат только после восстановления и сквозных проверок без Mac. При отсутствии пригодного сервера/доступа сохранить конкретный blocker и подготовленный вариант; закупка не предполагается автоматически. Mac CRM не выключать до принятого cutover.
 
 Общий текущий status — MASTER-STATUS; machine queue — QUEUE.json; history — events и Git. Receipt этого блока: `CLOUD-INBOX/receipts/MIRA-AUTONOMY-20260919-01.json` с отдельными flags code_ready, data_ready, crm_integrated, cloud_restored, deployed, live_accepted и remaining. Не заменять старые receipts и не ставить all_done=true по unit tests.
+
+
+Принято CLOUD после первого handoff: MKT receipt18:39:09UTC подтверждает native CRM78 agencies/87developers +2synthetic, local mail/backup acceptance. Эти действия повторять не нужно. Следующий результат — crosswalk IDs к research datasets, final closeout и deployable cloud handoff. Public VPS/mail, automatic DSN/complaint ingestion и newer CLOUD flow live остаются pending.
+
+
+Построчный closeout/manifest также получен (5f6c4245). Не возвращайте второй общий аудит: следующий конкретный выход — безопасно доступные CLOUD приватный код/restore procedure и encrypted backup, ключ отдельно, external-ID crosswalk CRM ↔ research. В текущем manifest archive только на Mac; подготовка архива не является передачей. Если нет доступного приватного канала/хранилища — точный blocker и подготовленные файлы, без публикации в Git.

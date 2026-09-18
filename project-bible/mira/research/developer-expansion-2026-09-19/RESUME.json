@@ -10,6 +10,7 @@
     "draft_inquiry_planner_14_tests"
   ],
   "next_actions": [
+    "Obtain sanitized LOCAL external-ID crosswalk for native87 developer Accounts versus public master40; do not sum these",
     "reconcile pilot31/TOP60/stage8 with master40, preserve conflicts",
     "resolve unmatched family15 and ambiguous5 before remaining no-family507",
     "verify missing developer contacts using primary sources",
@@ -21,5 +22,7 @@
   "crm_imported": false,
   "external_sends": 0,
   "final_report_required": true,
-  "stop_by": "2026-09-19T08:00:00+07:00"
+  "stop_by": "2026-09-19T08:00:00+07:00",
+  "latest_native_crm_source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
+  "native_developer_research_count": 87
 }

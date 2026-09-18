@@ -99,7 +99,7 @@
     {
       "id": "MIRA-MKT-20260918-01",
       "priority": "P1-owner-request",
-      "status": "native_crm_and_drafts_ready_mail_pending",
+      "status": "private_native_mail_lab_accepted_public_vps_pending",
       "owner": "LOCAL",
       "title": "Use Brevo Free marketing path and prepare EspoCRM lab without repeated software-choice approval",
       "sourceCommit": "ba46adab04af7d9e259d122384efd811d23392e7",
@@ -116,10 +116,10 @@
         "project-bible/mira/research/day-2026-09-18/results/M03-hugging-face-and-instagram.md"
       ],
       "cloudCompleted": "Free-tier comparison, delegated technical decision, shared records, isolated lab preparer and 12 passed generator unit tests; not software installation or real mail",
-      "preferredStack": "EspoCRM for relationships plus Brevo Free Campaigns/Marketing Automation; existing suitable CRM may be retained",
+      "preferredStack": "Existing EspoCRM + own mail server per latest owner decision; public VPS not provisioned",
       "providerDailyFreeAllowance": 300,
       "dailyTotalEmailCapProposal": 200,
-      "dailyCapActuallyConfigured": false,
+      "dailyCapActuallyConfigured": true,
       "providerAccountConnected": false,
       "newSoftwareInstalled": true,
       "firstPersonalDeveloperTarget": "Lustica Bay",
@@ -134,13 +134,13 @@
         "scope": "configuration preparation only"
       },
       "remainingHolds": [
-        "Actual provider account, corporate attestation, login/OTP and verified sender/domain; not another request to choose software",
-        "Recipient permission and jurisdiction-specific assessment; research candidates are not subscribers",
-        "Native reply-stop, daily cap200 and complaint/global suppression acceptance",
-        "Actual sender/list/template release before external mail",
-        "Exact Lustica Bay recipient and working language",
-        "Instagram account permissions and applicable rules; not a mail-launch dependency",
-        "Hugging Face Spaces discovery incomplete; not a mail-launch dependency"
+        "Public VPS/domain/TLS/identity and controlled external deliverability",
+        "Authenticated automatic DSN/complaint ingestion (manual stop only)",
+        "Real staff/MFA, approved documents and sender footer",
+        "Offsite retention/load/recovery",
+        "Complete city/canonical/contact reconciliation",
+        "Newer CLOUD flow and live model/channel connection",
+        "Media/contracts/QR/Russia-noVPN/admin403"
       ],
       "mustNotRepeat": [
         "Owner choice confirmation for EspoCRM/free provider/routine isolated setup",
@@ -152,15 +152,28 @@
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
       "receipt": {
         "path": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
-        "updatedAt": "2026-09-18T17:27:20Z",
-        "readAtSourceCommit": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
-        "doesNotAcceptNewerClientFlow": true
+        "updatedAt": "2026-09-18T18:39:09Z",
+        "localCommit": "d472b7462de1a3f50eb571ca756580c1fe3ba2fa",
+        "publicMailAccepted": false
       },
       "latestOwnerRequestViaLocalReceipt": {
         "source": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
         "request": "Own mail server integrated with existing CRM; prepare option, no VPS purchase",
         "disposition": "LOCAL must reconcile earlier Brevo plan with latest owner request; preserve current checkpoint"
-      }
+      },
+      "nativeImportSnapshot": {
+        "agencyResearch": 78,
+        "developerResearch": 87,
+        "synthetic": 2,
+        "totalAccounts": 167,
+        "agencyIdentityHolds": 2,
+        "developerTaxonomyHolds": 19,
+        "developerDomainHolds": 2,
+        "inactiveTemplates": 20
+      },
+      "ownerMailDecision": "Own mail server; supersedes required Brevo choice. Local lab passed; VPS prepared only, no purchase.",
+      "dailyCapScope": "LOCAL native mail lab; 200/day attempted sends, no public external sending",
+      "previousPreferredStackHistorical": "EspoCRM for relationships plus Brevo Free Campaigns/Marketing Automation; existing suitable CRM may be retained"
     },
     {
       "id": "MIRA-OMNI-20260918-01",
@@ -209,12 +222,18 @@
       "id": "MIRA-CLOSEOUT-20260918-01",
       "owner": "LOCAL",
       "priority": "P0-after-current-checkpoint",
-      "status": "accepted_final_report_pending",
+      "status": "per_item_checkpoint_report_received_remaining_partial",
       "sourcePath": "CLOUD-INBOX/MASTER-STATUS.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
       "preservesExistingTaskIds": true,
       "ackAt": "2026-09-18T18:23:20Z",
-      "ackReadSourceCommit": "ad312425b83b19f0b148d78d66103fb02d338538"
+      "ackReadSourceCommit": "ad312425b83b19f0b148d78d66103fb02d338538",
+      "receipt": {
+        "path": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
+        "updatedAt": "2026-09-18T18:39:09Z",
+        "allDone": false,
+        "migration": "prepared_not_migrated"
+      }
     },
     {
       "id": "MIRA-AGENCIES-20260919-01",
@@ -246,7 +265,7 @@
       ],
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-AUTONOMY-20260919-01.json",
       "createdAt": "2026-09-18T18:36:48.626807Z",
-      "nextAction": "Continue both datasets; accept full LOCAL handoff then restore in cloud; do not infer completion from ACK",
+      "nextAction": "Continue both datasets; private code/archive transfer and ID crosswalk after returned LOCAL manifest, then actual cloud restore",
       "acceptance": [
         "AUT-00–AUT-10 tracked with evidence",
         "No Mac dependency after actual cloud restore and cutover",
@@ -256,7 +275,8 @@
       "codeReady": true,
       "crmIntegrated": false,
       "cloudRestored": false,
-      "liveAccepted": false
+      "liveAccepted": false,
+      "localPerItemReportReceived": true
     },
     {
       "id": "MIRA-DEVELOPERS-20260919-01",
@@ -266,7 +286,7 @@
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-DEVELOPERS-20260919-01.md",
       "resumePath": "project-bible/mira/research/developer-expansion-2026-09-19/RESUME.json",
       "createdAt": "2026-09-18T18:36:48.626807Z",
-      "nextAction": "Resolve 507 no-family and other ambiguous/unmatched projects; enrich named public contacts; reconcile existing mail/agreements privately",
+      "nextAction": "First reconcile private CRM87 developer records with public master40 and remaining source layers by IDs; continue source enrichment and project mapping",
       "acceptance": [
         "Each catalog project has verified developer/legal seller or explicit unresolved task",
         "Existing source IDs preserved; all source layers reconciled",
@@ -310,10 +330,22 @@
     "allTasksComplete": false
   },
   "cloudTransition": {
-    "status": "local_ack_received_final_handoff_pending",
+    "status": "local_per_item_report_received_private_artifact_transfer_pending",
     "roadmapTask": "MIRA-AUTONOMY-20260919-01",
     "localReceipt": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
     "ackAt": "2026-09-18T18:23:20Z",
-    "cloudRestoreConfirmed": false
+    "cloudRestoreConfirmed": false,
+    "localReportUpdatedAt": "2026-09-18T18:39:09Z",
+    "privateArchiveInCloud": false
+  },
+  "latestNativeCrmSnapshot": {
+    "source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
+    "updatedAt": "2026-09-18T18:39:09Z",
+    "agencyResearch": 78,
+    "developerResearch": 87,
+    "synthetic": 2,
+    "totalAccounts": 167,
+    "scope": "PRIVATE_LOCAL_LAB_NOT_HOSTED_PUBLIC_MAIL",
+    "canonicalCrosswalkComplete": false
   }
 }

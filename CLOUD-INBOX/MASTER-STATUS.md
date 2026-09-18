@@ -123,3 +123,15 @@ LOCAL checkpoint supersedes previous CRM12/mail-not-connected facts **only for t
 Private source54d80452d36080ded3d141fbac56a2c22506f16c; WEGC checkpointd472b7462de1a3f50eb571ca756580c1fe3ba2fa. Native167Accounts=78agency+87developer+2synthetic;20inactive templates. MailSMTP/IMAP/Tasks/Notifications/reply documents/approval/stop and native scheduling accepted locally;47Python,36PHP,9nativegroups,ACL/browser and encrypted isolated restorePASS. Zero external messages. Current owner chooses own server and requested VPS preparation; no purchase or DNS modification. Brevo requirement superseded by this owner instruction; public delivery/DSN/FBL stillNOT_RUN.
 
 Per-item: T01partial newflow/model; T02localemailPASS/livechannels pending; T03localownmailPASS/publicVPS pending; T04localcap/stopPASS/externalfeedback pending; T05localACL/restorePASS/hostedoffsite pending; T06privatecount78+2holds/fullcanonical reconciliation pending; T07CLOUD existingnighttask unchanged; T08externalmedia/contracts holds; T09fieldchecksNOT_RUN; T10branches disposition recorded, oldpreflight retained; T11private manifest returned; T12checkpoint report returned; T13backlog; T14migration prepared, not performed. **all_done=false**. Original historical entries and CLOUD night checkpoint remain in place.
+
+
+## 2026-09-18T18:41:25.108038Z — свежий LOCAL MKT receipt принят CLOUD
+
+Источник: commit595bcc58b9dde53f743ae2c0720b388d54e8bbb5, receipt MIRA-MKT-20260918-01 (18:39:09UTC), private checkpoint d472b746. **78 agency research +87 developer research +2 synthetic =167 native Accounts**,20 inactive templates. Прежние12C10 — исторический срез, не текущий total. Holds: agency identity2, developer taxonomy19/domain2; пересечение holds не установлено. Crosswalk private CRM87 ↔ public master40 и agencies78 ↔ research345 ещё нужен, totals не складывать.
+
+LOCAL сообщает: native unattended SMTP/IMAP/threading, 200 attempted/day cap, reply/unsubscribe/manual complaint/bounce stop,47Python/36PHP/9native groups, non-admin ACL, encrypted isolated restore PASS. Это PRIVATE_LOCAL_LAB; public VPS/mail и deliverability NOT_RUN, automatic authenticated DSN/complaints pending, offsite backup=false. Новый flow/model/channel live не принят. Обязательный выбор Brevo superseded собственным mail решением владельца. VPS-вариант подготовлен, не заказан.
+
+Roadmap/QUEUE/metrics синхронизированы. Общий closeout остаётся OPEN. Ночная автоматизация «Обе базы МИРА» обновлена успешно; исходный bounded schedule сохранён. Передача обновления: issue14 comment5734559015. Next: финальный manifest/backup/crosswalk и actual cloud restore; параллельно обе базы.
+
+
+**Уточнение после MKT receipt:** получен и прочитан построчный closeout LOCAL (`5f6c4245ba505142ed290c24bcb102bf0606c57a`). T11 manifest и T12 checkpoint report возвращены. T14 `prepared_not_migrated`, all_done=false; encrypted archive всё ещё на Mac, cloud copy отсутствует. Следующий шаг — приватная передача code/restore package + encrypted backup с отдельным ключом и external-ID crosswalk, затем облачное восстановление. Отчёт принят без перевода partial/NOT_RUN в done. Новые LOCAL append-only записи сохранены.

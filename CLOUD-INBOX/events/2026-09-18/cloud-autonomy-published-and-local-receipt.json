@@ -1,0 +1,23 @@
+{
+  "task_id": "MIRA-AUTONOMY-20260919-01",
+  "at": "2026-09-18T18:41:25.108038Z",
+  "source_sha": "74f3a5a44380eaf79820aba0f5508fcd8179bdfd",
+  "implementation_sha": "e9beae6fdb061f656df303c8013d9830de8a660a",
+  "handoff_url": "https://github.com/apodelenko-ctrl/WEGC/issues/14#issuecomment-5734559015",
+  "automation_id": "6aad78bf2b988191b6ca5c921d60fd12",
+  "automation_updated": true,
+  "schedule_changed": false,
+  "local_final_handoff": false,
+  "local_lab_mail_receipt_accepted": true,
+  "native_accounts": {
+    "agencies": 78,
+    "developers": 87,
+    "synthetic": 2,
+    "total": 167
+  },
+  "deployed": false,
+  "next_action": "Private code/archive transfer and external-ID crosswalk, then actual cloud restore",
+  "local_per_item_report_received": true,
+  "migration_status": "prepared_not_migrated",
+  "private_archive_in_cloud": false
+}
