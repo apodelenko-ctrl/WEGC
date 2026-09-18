@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "eventId": "cloud-1302-C12-C13",
+  "date": "2026-09-18",
+  "timezone": "Asia/Bangkok",
+  "runStart": "2026-09-18T13:02:42+07:00",
+  "author": "CLOUD",
+  "scope": "research_content_only",
+  "completed": ["C12", "C13"],
+  "artifacts": [
+    "project-bible/mira/research/day-2026-09-18/results/C12-phuket-vivi-commercial-evidence-gap.md",
+    "project-bible/mira/research/day-2026-09-18/results/C13-expo-qr-to-next-step-review.md"
+  ],
+  "findings": [
+    "VIVI selected as first Phuket supply acceptance path because a current first-party project route and private project-specific WET agency evidence both exist.",
+    "Private VIVI commercial documents were reviewed without copying confidential terms, buyer data, identity documents or original agreement bytes into GitHub.",
+    "No separate renewal/continuation artifact surfaced in the checked connected Drive/Gmail search; this is not proof that no renewal exists.",
+    "Current inventory, current price/payment plan, detailed lead-protection rules, downstream partner right and downstream media scope remain unresolved for operational release.",
+    "Existing expo QR encodes https://wegc.fund/mira/start/ and the discovery path is Phuket-first.",
+    "Current /mira/start/ and /mira/access/ source still says working intake is closed, while the newer AGENCY-INTAKE-OPERATIONS handoff records owner-approved invite-only controlled agency intake. This is a source/content reconciliation defect, not evidence of a site outage."
+  ],
+  "decisions": [
+    "Use VIVI as the first one-project Phuket commercial acceptance dossier; do not treat the 618-record research catalogue as sellable supply.",
+    "Keep confidential developer agreement fields in private operational storage; public GitHub stores only evidence/gap state.",
+    "For the exhibition journey, preserve public discovery but make the final agency next step truthful to the invite-only controlled-intake model; do not equate QR scan, local brief, Access login or application with activation."
+  ],
+  "externalMessagesSent": 0,
+  "externalFormsSubmitted": 0,
+  "productionWrites": 0,
+  "crmImportsPerformed": 0,
+  "newSoftwareInstalled": 0,
+  "localReceiptConfirmed": false,
+  "remainingHolds": [
+    "LOCAL receipt and selective integration evidence",
+    "Private reconciliation of VIVI agreement continuity/renewal",
+    "Current VIVI inventory, price/payment plan and exact buyer contracting/seller path",
+    "Current VIVI lead registration/protection/duplicate attribution rules",
+    "Downstream MIRA partner/sub-agent commercial and media rights",
+    "Reconcile /mira/start/ and /mira/access/ copy/CTA with accepted invite-only controlled intake",
+    "Physical QR proof and separate Russia-network reachability measurement",
+    "CRM/Brevo installation and M04 live acceptance remain LOCAL dependencies"
+  ],
+  "nextIndependentBlock": "C14"
+}
