@@ -6,7 +6,7 @@
   "source_commit_read": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
   "supplemental_source_read": "ed2db2e9e22956547a2c24dd93fd92bb9f31319f (C16, X01 and OMNI; separate selective integration)",
   "local_branch": "codex/mira-cloud-inbox-20260918",
-  "local_commit": "8b6936a (local-only checkpoint)",
+  "local_commit": "f72cee88463379a9bf90acf29912d2f4d7b08243 (local-only)",
   "local_checkpoint_preserved": "c06efe1 (local-only)",
   "public_release": {
     "pr": "https://github.com/apodelenko-ctrl/WEGC/pull/15",
@@ -40,32 +40,55 @@
       "buyer_registration": false
     },
     "I1": {
-      "status": "in_progress_runtime_download",
+      "status": "accepted_local_native_crm",
       "actual_changes": [
-        "80 stable-ID staging records reconciled; damaged BY CSV excluded",
-        "12 C10 native-import candidates and dispositions prepared, not yet imported",
-        "official Lima installed; verified pinned EspoCRM and MariaDB images selected",
-        "isolated lab configuration and private credentials prepared outside Git"
+        "Same private Lima VM and persistent volumes; EspoCRM 10.0.8 and MariaDB 11.4 pinned official images",
+        "12 C10 native Accounts plus one synthetic test Account",
+        "15 native research/provenance/gate fields; no mailbox/contact or subscriber import",
+        "12 inactive organisation templates linked as Account Notes, plus 8 inactive editorial templates",
+        "Actual API and browser login; native detail, refresh and full container restart persistence",
+        "Same VM recovered after stop; all 12 research records reverified"
       ],
+      "native_import": {
+        "input": 12,
+        "imported_during_run": 12,
+        "final_rerun": {
+          "already_present": 12,
+          "held": 0,
+          "rejected": 0
+        },
+        "other_staging": 68
+      },
       "not_run": [
-        "CRM application login",
-        "native Accounts import and dedupe",
-        "restart persistence"
+        "hosted production CRM",
+        "scoped non-admin role acceptance and backup restore"
       ],
-      "reason": "Official Ubuntu ARM image for dedicated no-host-mount VM is still downloading; M06 preparation tests are not runtime acceptance."
+      "limitations": [
+        "Intermittent local request timeouts observed; not a production uptime claim",
+        "Record flags are not tested campaign enforcement; CRM egress internal and no SMTP configured"
+      ]
     },
     "I2": {
-      "status": "drafts_prepared_account_hold",
+      "status": "native_drafts_prepared_mail_connection_pending",
       "actual_changes": [
-        "12 organisation-specific agency drafts",
-        "developer and weekly drafts retained; Lustica Bay first developer target"
+        "20 native inactive EmailTemplates: 12 C10 + LB-01, AG-01, DV-01, FU-01, four weekly drafts",
+        "12 C10 drafts linked to their native Accounts",
+        "Owner selected working correspondence address; connected Codex Gmail profile confirmed, not an Espo mailbox connection"
       ],
       "not_run": [
-        "real corporate mailbox connection",
-        "Brevo sender/domain verification",
-        "M04 A01-A14 live acceptance"
+        "Espo SMTP/IMAP or OAuth mailbox integration",
+        "Brevo account, sender/Reply-To and domain authentication",
+        "Actual aggregate cap200, reply-stop, global unsubscribe/complaint/bounce, delivery and kill-switch acceptance"
       ],
-      "reason": "Corporate sender mailbox and Brevo account access requested; no answer yet. No recipients subscribed and no external send."
+      "M04": {
+        "A01": "PASS_LOCAL_NATIVE_CRM",
+        "A03": "PARTIAL",
+        "A04": "PARTIAL_UNRESOLVED_FOOTER",
+        "A13": "PARTIAL",
+        "A14": "PASS_SCOPED",
+        "others": "NOT_RUN"
+      },
+      "reason": "Brevo account access and sender setup remain unresolved. No campaign audience, subscription or external send."
     },
     "I3": {
       "status": "deployed_verified",
@@ -116,11 +139,12 @@
       "reason": "Exact-asset publishing rights and project operating evidence remain required. Labelled branded covers remain in use; no fabricated commercial activation."
     },
     "I6": {
-      "status": "local_sources_updated_receipt_shared",
+      "status": "local_dashboard_rebuilt_receipts_shared",
       "actual_changes": [
-        "source-driven dashboard separates deployment/live/commercial/evidence",
-        "WORK-STATUS and RESUME-STATE history preserved",
-        "structured sanitized receipt returned independently from private materials"
+        "WORK/RESUME appended with superseding factual results, history retained",
+        "Canonical dashboard regenerated from source evidence",
+        "Commercial activation and business KPI remain separate from accepted technical intake",
+        "Sanitized results shared through task receipts; private data retained outside public release"
       ]
     }
   },
@@ -154,7 +178,25 @@
       "status": "INCOMPLETE_TIMEOUT",
       "reason": "Page navigation timed out at 30/45 seconds; preserved separately, not relabelled as pass."
     },
-    "registration_end_to_end": "PASS_TECHNICAL_INVITED_INTAKE; commercial activation not claimed"
+    "registration_end_to_end": "PASS_TECHNICAL_INVITED_INTAKE; commercial activation not claimed",
+    "followup_python": {
+      "passed": 150,
+      "status": "PASS"
+    },
+    "omni": {
+      "passed": 43,
+      "status": "PASS_LOCAL",
+      "native_crm": "one actual Note and one assigned Task from synthetic event; replay/redispatch no duplicate",
+      "real_provider": "NOT_RUN",
+      "paid_model_calls": 0
+    },
+    "public_get_followup": {
+      "status": "PASS",
+      "observed_at": "2026-09-18T17:27:20Z",
+      "urls": 5,
+      "http_status": 200,
+      "scope": "bounded GET only; not fresh browser or Russia network acceptance"
+    }
   },
   "verified_urls": [
     "https://wegc.fund/mira/catalog/",
@@ -164,9 +206,10 @@
     "https://wegc.fund/mira/catalog/montenegro/"
   ],
   "remaining_holds": [
-    "Finish CRM runtime/native import/persistence",
-    "Corporate mailbox and Brevo account/sender access",
-    "Project media permissions and VIVI operational evidence",
+    "Espo mailbox connection and Brevo account/sender/domain access",
+    "M04 cap200, reply-stop, suppression/complaint/bounce and controlled delivery acceptance",
+    "One real approved OMNI endpoint, provider credentials, scoped CRM API key and private bridge; current synthetic test is not a live channel cycle",
+    "Project media permissions and VIVI current operating evidence",
     "Physical QR and Russia-without-VPN measurement"
   ],
   "boundaries": {
@@ -176,6 +219,7 @@
     "private_contracts_or_mailboxes_published": false
   },
   "publication_note": "Automatic approval rejected the full internal branch payload. A separate public-only branch excluding internal datasets, CRM staging, contracts, operational documents and Worker changes was approved and published. Internal checkpoint stays local; this receipt is sanitized.",
-  "next_action": "Finish native CRM browser/restart acceptance; keep mailbox and sender integration separate from successful technical MIRA intake.",
-  "updated_at": "2026-09-18T11:05:00Z"
+  "next_action": "Continue existing local CRM and one selected sender account. Ask owner only for the missing account access, one question at a time. Keep public release and successful intake; do not reinstall server or repeat technical application.",
+  "updated_at": "2026-09-18T17:27:20Z",
+  "startup_inbox_rule_installed": true
 }
