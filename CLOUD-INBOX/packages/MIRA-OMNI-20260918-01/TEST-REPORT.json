@@ -3,8 +3,8 @@
   "date": "2026-09-18",
   "implementation": "integration_candidate",
   "command": "python3 -m unittest discover -s tests -v",
-  "tests_run": 41,
-  "tests_passed": 41,
+  "tests_run": 53,
+  "tests_passed": 53,
   "test_mode": "local standard-library runtime; real SQLite and loopback HTTP; synthetic identities and stub intelligence/providers",
   "verified": [
     "durable ingestion and restart",
@@ -28,7 +28,12 @@
     "cross-product same-ID isolation",
     "knowledge audience/visibility filtering",
     "CRM private field and internal note exclusion",
-    "cross-profile model fact selection rejection"
+    "cross-profile model fact selection rejection",
+    "multi-turn client brief with verbatim evidence",
+    "research catalogue shortlist",
+    "handoff with saved shortlist",
+    "review-only knowledge gaps",
+    "LOCAL discovered mandatory Espo task assignee contract"
   ],
   "not_run": [
     "real model API",
@@ -45,5 +50,6 @@
   "external_messages_sent": 0,
   "production_changed": false,
   "knowledge_blocks": 23,
-  "unapproved_project_references": 47
+  "unapproved_project_references": 47,
+  "real_catalog_smoke": "DEAL-SMOKE-REPORT.json"
 }

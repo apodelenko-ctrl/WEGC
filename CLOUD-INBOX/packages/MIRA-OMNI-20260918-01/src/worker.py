@@ -22,6 +22,15 @@ if __name__=='__main__':
     args=parser.parse_args(); env=os.environ
     store=Store(env['MIRA_DB'],profile=env['MIRA_PROFILE'])
     with open(env['MIRA_KB'],encoding='utf-8') as f: kb=json.load(f)
-    engine=Engine(store,AnthropicIntelligence(),kb)
+    flow=None
+    if env.get('MIRA_CATALOG_CONFIG'):
+        from deal_flow import DealFlow,normalize_catalog
+        with open(env['MIRA_CATALOG_CONFIG'],encoding='utf-8') as f: sources=json.load(f)
+        catalog=[]
+        for source in sources:
+            with open(source['path'],encoding='utf-8') as f:
+                catalog.extend(normalize_catalog(json.load(f),market=source['market'],source=source['source']))
+        flow=DealFlow(store,catalog)
+    engine=Engine(store,AnthropicIntelligence(),kb,deal_flow=flow)
     dispatcher=Dispatcher(store,Sender(),enabled=env.get('MIRA_SEND_ENABLED')=='true')
     print(json.dumps(run(store,engine,dispatcher,args.limit),ensure_ascii=False))

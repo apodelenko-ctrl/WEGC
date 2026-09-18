@@ -6,9 +6,19 @@
       "bytes": 43
     },
     {
+      "path": "ASSISTANT-MIRA-FLOW-RU.md",
+      "sha256": "b7b5c87b66da42159e0600cceb549f495ccc08d14ff74d5b09cf0b1b39cf67bd",
+      "bytes": 10301
+    },
+    {
       "path": "CHANNEL-MATRIX.md",
       "sha256": "62fd78703b7ff0c21889d03285faeaddc073e4176275bee9845eb7427ccc8896",
       "bytes": 4287
+    },
+    {
+      "path": "DEAL-SMOKE-REPORT.json",
+      "sha256": "4ef87d300d5019f4e82aff23f9290544f41c66d125fffefdc6e28ea68858e378",
+      "bytes": 233
     },
     {
       "path": "DISCOVERY.md",
@@ -22,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "55e3cefb5d4b162f1880a24a04de70fe47f9057723e8450231deb79b8e7e7caa",
-      "bytes": 10401
+      "sha256": "1ea8253cc19717e8f8ebc86706a8e8313bfa64b9152813b530d5252a317e6ec2",
+      "bytes": 10805
     },
     {
       "path": "SOURCE-TZ.md",
@@ -32,8 +42,8 @@
     },
     {
       "path": "TEST-REPORT.json",
-      "sha256": "af63010ced04ed465dd3a48ea47f05882c1b7ff22e53e98e07e87d6ace2587d2",
-      "bytes": 1658
+      "sha256": "f9fa366086b42f1d34bd943a27dc8094f0f7d6abcce73d17cc7019717abf735e",
+      "bytes": 1930
     },
     {
       "path": "knowledge/approved-context.json",
@@ -47,8 +57,8 @@
     },
     {
       "path": "src/adapters.py",
-      "sha256": "885b7b99efb51740cdc5e6dd756f8b2d13425e2977b61a0c3bfe9921c10fb4d7",
-      "bytes": 8417
+      "sha256": "478b4336d2ebff94e47f43d69711af90d2d5aeb69a55ceac78d67e2a250dad53",
+      "bytes": 9436
     },
     {
       "path": "src/admin.py",
@@ -57,8 +67,13 @@
     },
     {
       "path": "src/core.py",
-      "sha256": "c963bfc489bca058e9a62143fa46e82c3d8885decc139e6af9dafb338c322bbb",
-      "bytes": 15710
+      "sha256": "0cfad791887b1ce48bf226e284cf1d644e3ca1ad28476a2d25983b79a39b1c92",
+      "bytes": 16903
+    },
+    {
+      "path": "src/deal_flow.py",
+      "sha256": "6806e9dbe1c3a2a15e519fc45dba6944762fda51b179e2e9966b0997ac5caf66",
+      "bytes": 9065
     },
     {
       "path": "src/enrich.py",
@@ -67,8 +82,8 @@
     },
     {
       "path": "src/profiles.py",
-      "sha256": "86b32e49e71d8b4f0fafcdf7b42bc638156449a9549c1e62fee2e82a341c978d",
-      "bytes": 5927
+      "sha256": "1f4788f1d21281adb57eddf47709fa3d2810c235e0fc31796748059090d53457",
+      "bytes": 5923
     },
     {
       "path": "src/service.py",
@@ -77,13 +92,18 @@
     },
     {
       "path": "src/worker.py",
-      "sha256": "1f902857aad8ccbe22b22e93c703083a66ea6c797b32e8600adeb6a5706a3cfe",
-      "bytes": 1465
+      "sha256": "5762539a5d4aa5601c1924526dc376a89866e91f36ccbb04151454218e336dcc",
+      "bytes": 1940
+    },
+    {
+      "path": "tests/test_deal_flow.py",
+      "sha256": "fb5fc8c9042ea7bc5b5f0b349723fc36f05d69698f229fff6af9fb5a224c34ac",
+      "bytes": 6807
     },
     {
       "path": "tests/test_profiles.py",
-      "sha256": "e76e62c25603efd02c4773ce3c948fc79e73970b093a5e5b0ac3f11ae6b5e48a",
-      "bytes": 5875
+      "sha256": "d05192e324b69bdeb20a5b02bde871f979ed72f23952b6f75d9ef52bd0ffc60f",
+      "bytes": 5873
     },
     {
       "path": "tests/test_runtime.py",

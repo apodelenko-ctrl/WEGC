@@ -68,7 +68,15 @@ class AnthropicIntelligence:
           'handoff=true if uncertain, no complete answer, complaint, negotiation, legal/tax advice, '
           'individual commercial terms, non-text attachment, or explicit request for a person. '
           'UNSUBSCRIBE applies to a genuine request to stop messages; NOT_INTERESTED applies to refusal. '
-          'Do not return free-form sales promises. Do not ask a known agency to introduce itself again.')
+          'Do not return free-form sales promises. Do not ask a known agency to introduce itself again. '
+          'When actions_enabled is true and the agency describes an actual buyer request, you may return '
+          'action=collect_brief or shortlist or request_specialist with intent=REQUEST_PROJECTS. '
+          'criteria_updates is an object keyed only by market,property_type,purpose,budget,district,timing; '
+          'each entry is {quote:exact verbatim substring of CURRENT message}. Do not infer omitted facts. '
+          'client_brief is existing saved context: ask only missing details. Preserve original currency. '
+          'Use request_specialist only on an explicit request to check projects/terms; do not set handoff=true '
+          'for this action because the action itself creates the task. Never invent a booking or CRM result. '
+          'Optional draft_reply is for human review only, never automatic delivery.')
         result=self.transport('https://api.anthropic.com/v1/messages',{'model':env['ANTHROPIC_MODEL'],
           'max_tokens':500,'system':system,'messages':[{'role':'user','content':packed(context)}]},
           {'x-api-key':env['ANTHROPIC_API_KEY'],'anthropic-version':'2023-06-01'})
@@ -87,7 +95,9 @@ class Sender:
             if not parent: raise ValueError('verified CRM account ID required')
             base=env['ESPO_URL'].rstrip('/')+'/api/v1/'
             if kind=='crm_task':
-                entity='Task'; body={'name':'MIRA: '+payload['intent'],'status':'Not Started',
+                assignee=env.get('ESPO_TASK_ASSIGNEE_ID')
+                if not assignee: raise ValueError('server-configured task assignee required')
+                entity='Task'; body={'name':'MIRA: '+payload['intent'],'status':'Not Started','assignedUserId':assignee,
                   'parentType':'Account','parentId':parent,'description':packed({'event_key':oid,**payload})}
             else:
                 entity='Note'; body={'type':'Post','parentType':'Account','parentId':parent,

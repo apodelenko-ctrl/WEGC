@@ -4,6 +4,10 @@ Task: **MIRA-OMNI-20260918-01**. Prepared 2026-09-18. State: **implemented and l
 
 This is executable code, not another discovery request. It extends the shared-intelligence architecture already present in `cloudflare-worker/wegc-ai-agent.js`. Existing product integration and deployment belong to LOCAL. Do not merge the research branch wholesale or publish this internal folder with the website.
 
+## Assistant MIRA client-request flow
+
+Owner-approved name: **Ассистент МИРА**. Read [ASSISTANT-MIRA-FLOW-RU.md](ASSISTANT-MIRA-FLOW-RU.md). Optional `MIRA_CATALOG_CONFIG` connects the existing catalogue to the agency-only brief/shortlist/action flow. Current suite: **53/53** local tests. This supplement supersedes previous test totals, but not outstanding live integration requirements.
+
 ## Required product-profile update
 
 Read [KNOWLEDGE-AUDIT-RU.md](KNOWLEDGE-AUDIT-RU.md) first. Set server-owned `MIRA_PROFILE` to `phuket_buyer`, `mira_agency`, or `mira_developer`; use separate private databases/tokens/routes for each. All Store callers now require explicit profile; contexts and incoming events carry the same profile. Old unscoped staging journals require deliberate migration, never automatic reuse. Use `knowledge/approved-context.json` (23 sourced blocks) with strict profile/visibility filtering. The 47 project references are unapproved review seeds, not current inventory. Current suite: 41/41 local tests PASS. This update supersedes any earlier instruction to share raw buyer and agency memory.

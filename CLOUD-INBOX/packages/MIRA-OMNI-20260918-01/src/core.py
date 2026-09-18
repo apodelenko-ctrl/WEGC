@@ -116,8 +116,10 @@ class Store:
         with self.connect() as db: return [dict(r) for r in db.execute('SELECT * FROM '+table)]
 
 class Engine:
-    def __init__(self, store, intelligence, knowledge):
+    def __init__(self, store, intelligence, knowledge, deal_flow=None):
         self.store,self.intelligence,self.knowledge=store,intelligence,knowledge
+        self.deal_flow=deal_flow
+        if deal_flow and (store.profile != "mira_agency" or deal_flow.store is not store): raise ValueError("flow scope")
     def process(self, eid):
         s=self.store; token=str(uuid.uuid4()); now=time.time()
         with s.tx() as db:
@@ -137,14 +139,16 @@ class Engine:
         stop=text in {'stop','/stop','unsubscribe','отписаться','не пишите','не пишите мне','удалите мой контакт'}
         human=any(v in text for v in ['позвоните','хочу поговорить с человеком','оператор','менеджера','call me','human please'])
         approved=allowed_facts(self.knowledge,s.profile,cid,now)
-        reason=None; reply=None; intent='UNKNOWN'; selected=[]
+        reason=None; reply=None; intent='UNKNOWN'; selected=[]; flow_plan=None; decision={}
         try:
             if stop: intent='UNSUBSCRIBE'
             elif c['suppressed']: intent='UNSUBSCRIBE'
             elif c['paused']: intent='HUMAN_REQUIRED'
-            elif human: intent='REQUEST_CALL'; reason='explicit_human_request'
+            elif human:
+                intent='REQUEST_CALL'; reason='explicit_human_request'
+                if self.deal_flow: flow_plan=self.deal_flow.propose(cid,e,{'action':'request_specialist'})
             else:
-                decision=self.intelligence({'profile':s.profile,'context':model_context(ctx,s.profile),'history':model_history(history),'message':e,'facts':approved})
+                decision=self.intelligence({'profile':s.profile,'context':model_context(ctx,s.profile),'history':model_history(history),'message':e,'facts':approved,'client_brief':self.deal_flow.current(cid) if self.deal_flow else {},'actions_enabled':bool(self.deal_flow)})
                 intent=decision.get('intent','UNKNOWN')
                 if intent not in INTENTS: intent='UNKNOWN'
                 ids=decision.get('fact_ids',[])
@@ -152,6 +156,9 @@ class Engine:
                 if decision.get('handoff') or intent in {'HUMAN_REQUIRED','REQUEST_CALL','WRONG_CONTACT','UNKNOWN'}:
                     reason='human_or_uncertain'
                 elif intent=='UNSUBSCRIBE': stop=True
+                elif self.deal_flow and decision.get('action') in {'collect_brief','shortlist','request_specialist'}:
+                    flow_plan=self.deal_flow.propose(cid,e,decision)
+                    reply=flow_plan['reply']
                 elif not isinstance(ids,list) or not ids or any(not isinstance(i,str) or i not in facts for i in ids):
                     reason='no_approved_answer'
                 else:
@@ -166,14 +173,20 @@ class Engine:
             if not lease or lease['token']!=token or lease['until']<time.time(): return 'lease_lost'
             current=dict(db.execute('SELECT * FROM contacts WHERE id=?',(cid,)).fetchone())
             if stop: db.execute('UPDATE contacts SET suppressed=1,paused=1 WHERE id=?',(cid,))
-            if reason and not current['suppressed']:
+            if self.deal_flow and reason and reason!='explicit_human_request':
+                self.deal_flow.gap(db,cid,eid,e,reason,decision.get('draft_reply'))
+            if flow_plan and not current['suppressed'] and not current['paused'] and not stop:
+                self.deal_flow.persist(db,cid,eid,e,ctx,flow_plan)
+                if flow_plan['handoff']:
+                    db.execute('UPDATE contacts SET paused=1 WHERE id=?',(cid,)); reply=None
+            if reason and not current['suppressed'] and not (flow_plan and flow_plan['handoff']):
                 db.execute('UPDATE contacts SET paused=1 WHERE id=?',(cid,))
                 s.queue(db,eid+':task',cid,'crm_task',{'context':ctx,'reason':reason,'intent':intent,
                     'summary':e['text'][:1500], 'recent_history':history[-6:], 'source_event':eid})
                 reply=None # No claim that a human was notified before CRM delivery succeeds.
             if current['paused'] or current['suppressed'] or stop: reply=None
             if reply:
-                s.queue(db,eid+':reply',cid,'reply',{'event':e,'text':reply,'fact_ids':selected,'valid_until':min(facts[i]['valid_until'] for i in selected)})
+                s.queue(db,eid+':reply',cid,'reply',{'event':e,'text':reply,'fact_ids':selected,'valid_until':min(facts[i]['valid_until'] for i in selected) if selected else now+3600})
             s.queue(db,eid+':note',cid,'crm_note',{'context':ctx,'source_event':eid,'event':e,
                      'intent':intent,'handoff_reason':reason,'reply_planned':reply,'fact_ids':selected})
             s.log(db,eid+':decision',cid,{'direction':'decision','intent':intent,'reason':reason,'fact_ids':selected})

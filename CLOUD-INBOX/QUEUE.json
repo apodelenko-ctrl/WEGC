@@ -157,7 +157,7 @@
         "CLOUD-INBOX/packages/MIRA-OMNI-20260918-01/README.md",
         "CLOUD-INBOX/packages/MIRA-OMNI-20260918-01/TEST-REPORT.json"
       ],
-      "cloudCompleted": "Executable integration candidate plus isolated product knowledge/context; 41/41 local tests PASS; live accounts/site migration NOT_RUN",
+      "cloudCompleted": "53/53 local tests; product-scoped KB plus client brief/research shortlist/CRM outbox/handoff flow; real account/model/site acceptance pending",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-OMNI-20260918-01.json",
       "receipt": null,
       "preservesExistingLocalAndMktTasks": true,
@@ -174,6 +174,14 @@
           "mira_developer"
         ],
         "productionUpdated": false
+      },
+      "clientRequestFlowUpdate": {
+        "id": "ASSISTANT-MIRA-FLOW-20260918",
+        "status": "cloud_implemented_pending_local_integration",
+        "path": "CLOUD-INBOX/packages/MIRA-OMNI-20260918-01/ASSISTANT-MIRA-FLOW-RU.md",
+        "testsPassed": 53,
+        "catalogSmokeRecords": 618,
+        "productionChanged": false
       }
     }
   ],
