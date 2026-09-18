@@ -1,5 +1,15 @@
 # MIRA cloud lane — 18 September 2026
 
+## 11:09 Bangkok — C06/C07 completed
+
+C06 mapped current exact media/rightsholder/partner/permission routes for **all 15 existing Dubai research records**. Result: `results/C06-dubai-media-rights-routes.md` (commit `13f2f6320cb127a81ab77feffa2fd666c2a90a58`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-1102-C06.json`.
+
+Material improvements: Emaar Creek Waters now has the exact current Asset Usage Policy route requiring prior approval; One River Point stays on the C01 Ellington terms/draft path; Dubai Holding/Meraas Design Quarter, OMNIYAT ORLA, Dubai Properties Al Ranim and Imtiaz Cove Edition have current explicit commercial-reuse/licence gates; Sobha, DAMAC, Select Group and Tiger have current channel-partner/broker routes; Danube and SAMANA have official asset hubs without a confirmed publicly rendered BAYZ 102 / Barari Views asset bundle; Azizi Venice now has a current first-party exact gallery route. DAMAC Riverside remains explicitly quarantined from Riverside Views imagery. Six Senses and Dorchester-branded assets retain a possible separate brand/licensor layer.
+
+C07 consolidated C01/C05/C06 into a **30-project permission-request matrix** plus a reusable unsent request draft and a Phuket own-content field-photography brief. Result: `results/C07-permission-matrix-phuket-field-photo-brief.md` (commit `67557401e2491f3e61dc92f14921cae0bbaf3d80`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-1109-C07.json`. The brief separates site access, commercial media permission, exact project/phase/date, photographer/right chain, visual QA, privacy/safety and downstream channel rights. Current CAAT/UAS guidance was rechecked; drone use is a separate exact-date/location execution gate and is not part of the default shot list.
+
+Proof state remains unchanged where it matters: **new publication-approved media = 0; new asset bytes committed = 0; external permission requests sent = 0; Phuket shoots = 0; drone flights = 0**. No prices, inventory, ROI, completion, commission, residency or buyer-right claim was promoted from mutable developer pages. Shared `Находки`, `Решения` and `КОНТРОЛЬ-БОРД` were updated after separate event checkpoints. LOCAL receipt on Mac remains unconfirmed. Next independent research block: **C08 — six Russian review-candidates**, unless a fresher run already claims it.
+
 ## 10:26 Bangkok — C05 completed
 
 C05 mapped current exact media/rightsholder/permission routes for **all 15 existing Bali research records** without repeating the prior 28-file visual review. Result: `results/C05-bali-media-rights-routes.md` (commit `3899792848528a4c2082e2012b0d5615de4e4893`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-1015-C05.json`.
