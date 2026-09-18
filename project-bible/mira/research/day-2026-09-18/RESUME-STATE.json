@@ -26,7 +26,7 @@
     {"id":"C01","status":"completed","output":"results/C01-media-source-delta.md","note":"ERA/One River Point source and terms rechecked; drafts prepared, not sent; no approved media"},
     {"id":"C02","status":"completed","output":"results/C02-waterpoint-vietnam-closure.md","note":"Waterpoint identity/current Ben Luc, Tay Ninh label strengthened; exact Russian-speaking agency observation not found, so Waterpoint remains partial"},
     {"id":"C03","status":"completed","output":"results/C03-montenegro-heights-merit-porto-budva.md","note":"Heights source gap closed for discovery; Merit and Porto Budva remain partial; stale return/residency claims quarantined"},
-    {"id":"C04","status":"pending","topic":"Montenegro Poljana/Kotor Bayview source gaps"},
+    {"id":"C04","status":"completed","output":"results/C04-montenegro-poljana-kotor-bayview.md","note":"Poljana and Kotor Bayview now have current exact-project primary routes plus independent exact-project agency observations; recommend both complete_for_discovery_after_validation; legal seller/media rights remain unresolved"},
     {"id":"C05","status":"pending","topic":"Remaining Bali exact media and usage-basis routes"},
     {"id":"C06","status":"pending","topic":"Remaining Dubai exact media and usage-basis routes"},
     {"id":"C07","status":"pending","topic":"Owner-ready media-request matrix and Phuket field-photo brief; no sends"},
@@ -40,19 +40,14 @@
     {"id":"C15","status":"pending","topic":"Validate changed handoff data and actual remaining holds"},
     {"id":"C16","status":"pending","topic":"Final day report and bounded continuation handoff"}
   ],
-  "nextAction":"Continue C04 unless already in progress. Waterpoint remains a documented discovery hold; do not repeat broad Waterpoint searches without a new lead. Heights is the only partial upgraded in the 09:00 checkpoint.",
-  "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":25,"partialForValidation":5,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
-  "countsScope":"Current research-quality recommendation after C02/C03. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance or ordinary-applicant acceptance.",
+  "nextAction":"Continue C05 unless already in progress. Remaining VN/ME partials are Waterpoint, Merit Starlit and Porto Budva; do not repeat closed Poljana/Kotor source searches.",
+  "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":27,"partialForValidation":3,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
+  "countsScope":"Current research-quality recommendation after C04. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance or ordinary-applicant acceptance.",
   "ownerRequestedMarketingExtension": {
     "checkpointLocal": "2026-09-18T09:26:26+07:00",
     "status": "research_and_content_completed_implementation_not_started",
     "source": "Direct owner request for ready-made email/SMTP/CRM, marketing and Instagram research, plus a root cloud-to-local inbox",
-    "results": [
-      "results/M01-smtp-crm-decision.md",
-      "results/M02-marketing-waves-and-lustica-drafts.md",
-      "results/M03-hugging-face-and-instagram.md",
-      "results/M04-local-integration-task.md"
-    ],
+    "results": ["results/M01-smtp-crm-decision.md","results/M02-marketing-waves-and-lustica-drafts.md","results/M03-hugging-face-and-instagram.md","results/M04-local-integration-task.md"],
     "resultsCommit": "2d5b7ca138a5905e2dc9bcf8baef4cec05d520c0",
     "rootInboxCommit": "d8414ce1a7687beb4746635f6119322e9f68be26",
     "explicitDocumentationWriteException": ["CLOUD-INBOX/README.md", "CLOUD-INBOX/QUEUE.json"],
@@ -75,16 +70,7 @@
     "launchPlanningTarget": "2026-09-19/2026-09-20, conditional on actual product, sender, recipient and owner acceptance",
     "scheduleChanged": false,
     "researchQueueChanged": false,
-    "remainingHolds": [
-      "Local receipt and startup-rule integration",
-      "Current local mail/CRM/server inventory and applicable data processing location",
-      "Provider suitability and SMTP production access where needed",
-      "Recipient marketing permission and jurisdiction-specific review, including Belarus gap",
-      "Reply-stop, complaint and global suppression acceptance",
-      "Exact sender/list/template owner approval before external mail",
-      "Lustica Bay recipient and working language",
-      "Instagram account/app permissions, advertising rules and asset rights"
-    ]
+    "remainingHolds": ["Local receipt and startup-rule integration","Current local mail/CRM/server inventory and applicable data processing location","Provider suitability and SMTP production access where needed","Recipient marketing permission and jurisdiction-specific review, including Belarus gap","Reply-stop, complaint and global suppression acceptance","Exact sender/list/template owner approval before external mail","Lustica Bay recipient and working language","Instagram account/app permissions, advertising rules and asset rights"]
   },
   "ownerRequestedFreeEmailAndGovernance": {
     "date": "2026-09-18",
