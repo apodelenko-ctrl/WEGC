@@ -1,5 +1,17 @@
 # MIRA cloud lane — 18 September 2026
 
+## 11:57 Bangkok run — C08/C09 completed
+
+C08 rechecked the **six Russian records already marked `owner_review=yes`**, without broad recollection: AFLAT, Welcome, HOUSE GROUP, RIEL-MAX, БСН Недвижимость and Формула. Result: `results/C08-russia-six-review-candidates.md` (commit `1c6e0b25de308e71f0d173fbbb233799b03e7c8b`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-1157-C08.json`.
+
+Fresh current first-party checks preserve a deliberately narrow segmentation: **AFLAT** retains a direct Thailand-service signal; **HOUSE GROUP** retains only a public Spain-enquiry signal from its own request feed, not a verified foreign desk; **Welcome, RIEL-MAX, БСН and Формула** retain current new-build/developer-facing or full-service fit. Exact-domain search on current `main` returned zero hits for all six. This is a text/default-branch dedupe check only and does not prove legal/rebrand uniqueness or absence from unpublished LOCAL CRM. All six remain internal owner-review candidates with `outreach_status=not_authorized`, `commercial_status=research_only`; external sends=0.
+
+C09 rechecked the **six Belarus records already marked `owner_review=yes`** using the corrected 30-record JSON, not the malformed historical detailed CSV: Центр недвижимости 24 на 7, Основа, Абсолют Недвижимость, Гарант успеха, Уют и К, ПАКОДАН ЭСТЕЙТ. Result: `results/C09-belarus-six-review-candidates.md` (commit `f8cf95738f0b94e783a5b98e654f9a25b5453599`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-1157-C09.json`.
+
+C09 adds a strict current-evidence boundary. Central Borisov and Основа self-publish licence numbers; current Chamber evidence can corroborate professional presence for some organisations, but recent 2026 Chamber notices also record Ministry licence suspensions. An authoritative current organisation-level Ministry licence lookup for these six was not recovered in this run, so **current organisation licence independently verified = 0** and all six keep `licensing_status=not_independently_verified_current`. Current corporate route/marketplace/Chamber presence is not promoted to legal clearance. ПАКОДАН retains only a self-described international-network/partner signal, not a verified overseas desk. Exact-domain current-main search returned zero hits for all six, subject to the same local-CRM/legal/rebrand limitation.
+
+Shared `Находки`, `Решения` and `КОНТРОЛЬ-БОРД` were updated after unique C08/C09 event checkpoints; decision `D-20260918-09` now requires organisation-level current regulator evidence before a Belarus `current licence verified` claim. LOCAL receipt remains unconfirmed. **C01–C09 are now complete; next independent block is C10 — the 12-candidate owner-review package.**
+
 ## 11:09 Bangkok — C06/C07 completed
 
 C06 mapped current exact media/rightsholder/partner/permission routes for **all 15 existing Dubai research records**. Result: `results/C06-dubai-media-rights-routes.md` (commit `13f2f6320cb127a81ab77feffa2fd666c2a90a58`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-1102-C06.json`.
