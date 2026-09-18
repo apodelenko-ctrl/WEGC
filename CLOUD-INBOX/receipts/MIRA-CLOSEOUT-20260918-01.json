@@ -1,0 +1,12 @@
+{
+  "task_id": "MIRA-CLOSEOUT-20260918-01",
+  "status": "accepted",
+  "ack_at": "2026-09-18 18:23:20 UTC",
+  "read_source_sha": "ad312425b83b19f0b148d78d66103fb02d338538",
+  "active_local_branch": "codex/mira-cloud-inbox-20260918",
+  "active_local_head": "f72cee88463379a9bf90acf29912d2f4d7b08243",
+  "current_owner_request": "Own mail server integrated into the existing local CRM; owner has no VPS and requested a prepared option, not a purchase.",
+  "preserves_current_checkpoint": true,
+  "all_done": false,
+  "next_action": "Finish the current private CRM/mail acceptance checkpoint, return sanitized per-item dispositions and updated receipts. No whole research merge or server recreation."
+}
