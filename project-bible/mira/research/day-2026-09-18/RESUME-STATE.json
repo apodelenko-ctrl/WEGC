@@ -85,5 +85,38 @@
       "Lustica Bay recipient and working language",
       "Instagram account/app permissions, advertising rules and asset rights"
     ]
+  },
+  "ownerRequestedFreeEmailAndGovernance": {
+    "date": "2026-09-18",
+    "status": "shared_records_and_tested_preparer_saved_local_installation_pending",
+    "supersedes": "Earlier marketing-extension default transport and routine-choice approval assumptions only; prior checkpoint preserved as history",
+    "sourceCommit": "94efc3a833dd0b2171601ffd15fc15a64f2afe18",
+    "routineLocalChoiceAndPreparationAuthorized": true,
+    "ownerApprovalNeededForRoutineSoftwareChoice": false,
+    "preferredStack": "Brevo Free Campaigns/Marketing Automation plus EspoCRM or an existing suitable CRM",
+    "providerFreeDailyAllowance": 300,
+    "miraDailyCapTarget": 200,
+    "capActuallyConfigured": false,
+    "providerAccountConnected": false,
+    "newSoftwareInstalled": false,
+    "externalMessagesSent": 0,
+    "sharedRecords": ["CLOUD-INBOX/Находки.md", "CLOUD-INBOX/Решения.md", "CLOUD-INBOX/КОНТРОЛЬ-БОРД.md"],
+    "additionalWriteScope": "Owner-requested shared journals/navigation and offline lab preparation in day/results only; no main or production writes",
+    "results": ["results/M05-free-email-and-governance.md", "results/M06-prepare-crm-lab.py", "results/M06-TEST-REPORT.json"],
+    "generatorUnitTests": {"executed":12,"passed":12,"checkedAt":"2026-09-18T09:48:18+07:00"},
+    "testedScriptSha256": "64079f1dcc6b1ba0ed22d938f254ecc9da8dc742d0313cf6efdd209453d6997b",
+    "githubBlobMatchesTestedScript": true,
+    "runtimeStatus": "BLOCKED_RUNTIME_DOCKER_ABSENT",
+    "appBrowserMailAcceptance": "NOT_RUN",
+    "localTaskId": "MIRA-MKT-20260918-01",
+    "localTaskStatus": "ready_for_local_implementation",
+    "localReceiptConfirmed": false,
+    "localStartupRuleInstalled": false,
+    "existingAutomationPromptUpdatedAt": "2026-09-18T09:53:46+07:00",
+    "automationChange": "Shared accounting added to prompt only; original hourly COUNT10 schedule and final 18:00 launch unchanged",
+    "newAutomationCreated": false,
+    "researchQueueChanged": false,
+    "nextCloudAction": "Read shared journals; continue next independent Cxx, not another provider comparison",
+    "remainingHolds": ["LOCAL receipt and runtime installation", "Actual provider login/OTP/corporate facts and verified sender/domain", "Recipient eligibility and content/channel fit", "cap200, reply-stop, global suppression and real delivery acceptance"]
   }
 }
