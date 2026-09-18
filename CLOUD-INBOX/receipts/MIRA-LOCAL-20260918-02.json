@@ -4,7 +4,7 @@
   "implementation_supplement": "MIRA-INTEGRATE-20260918-01",
   "status": "partial_with_holds",
   "source_commit_read": "b28dbb67d1204d5400cbc8ba69045cb4507f2381",
-  "supplemental_source_read": "40a1f55 (C16 pre-final and X01; X01 does not change implementation priorities)",
+  "supplemental_source_read": "ed2db2e9e22956547a2c24dd93fd92bb9f31319f (C16, X01 and OMNI; separate selective integration)",
   "local_branch": "codex/mira-cloud-inbox-20260918",
   "local_commit": "8b6936a (local-only checkpoint)",
   "local_checkpoint_preserved": "c06efe1 (local-only)",
@@ -21,18 +21,23 @@
   },
   "per_workstream_status": {
     "P0": {
-      "status": "blocked_owner_browser",
-      "passed_before_run": [
-        "invited applicant login",
-        "technical application receipt",
-        "receipt persists after refresh"
+      "status": "accepted_technical_invited_intake",
+      "passed": [
+        "ordinary applicant receipt and refresh",
+        "operator review decision on the existing technical enquiry",
+        "operator refresh preserves version 1",
+        "Access logout",
+        "fresh applicant OTP login",
+        "same single receipt and review history visible to ordinary applicant"
       ],
       "not_run": [
-        "operator decision",
-        "applicant sees decision",
-        "logout and fresh OTP login"
+        "direct live admin API server-403 observation",
+        "commercial onboarding requires genuine agreement evidence",
+        "Russia network without VPN"
       ],
-      "reason": "Native browser reports Mac locked. Unlock requested; no duplicate application or recreated auth."
+      "duplicate_application_created": false,
+      "commercial_activation": false,
+      "buyer_registration": false
     },
     "I1": {
       "status": "in_progress_runtime_download",
@@ -149,7 +154,7 @@
       "status": "INCOMPLETE_TIMEOUT",
       "reason": "Page navigation timed out at 30/45 seconds; preserved separately, not relabelled as pass."
     },
-    "registration_end_to_end": "NOT_COMPLETE"
+    "registration_end_to_end": "PASS_TECHNICAL_INVITED_INTAKE; commercial activation not claimed"
   },
   "verified_urls": [
     "https://wegc.fund/mira/catalog/",
@@ -159,7 +164,6 @@
     "https://wegc.fund/mira/catalog/montenegro/"
   ],
   "remaining_holds": [
-    "Unlock Mac for existing operator decision and fresh applicant OTP",
     "Finish CRM runtime/native import/persistence",
     "Corporate mailbox and Brevo account/sender access",
     "Project media permissions and VIVI operational evidence",
@@ -172,5 +176,6 @@
     "private_contracts_or_mailboxes_published": false
   },
   "publication_note": "Automatic approval rejected the full internal branch payload. A separate public-only branch excluding internal datasets, CRM staging, contracts, operational documents and Worker changes was approved and published. Internal checkpoint stays local; this receipt is sanitized.",
-  "next_action": "Finish the existing isolated CRM installation, then native import/persistence acceptance. Resume remaining P0 live steps when the owner's browser is available. Do not restart already passed intake or create a new watcher."
+  "next_action": "Finish native CRM browser/restart acceptance; keep mailbox and sender integration separate from successful technical MIRA intake.",
+  "updated_at": "2026-09-18T11:05:00Z"
 }
