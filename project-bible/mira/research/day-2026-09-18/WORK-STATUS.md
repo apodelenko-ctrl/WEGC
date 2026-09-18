@@ -1,5 +1,11 @@
 # MIRA cloud lane — 18 September 2026
 
+## 10:14 Bangkok — C04 completed
+
+C04 closed both remaining Montenegro records in this block at discovery-source level. **Poljana Olive Homes** now has a current Montenegrimmo exact-project route plus an independent exact-project Astra Real Estate observation. **Kotor Bayview Residence** has a current exact project site naming ARS Intertrade as developer plus an independent exact-project First Realty observation. Result: `results/C04-montenegro-poljana-kotor-bayview.md` (commit `de5dfadff00eac7b5a755a35d1e471b4f9022da5`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-0959-C04.json`.
+
+Research recommendation for the 30 Vietnam+Montenegro records is now **27 complete-for-discovery / 3 partial**. Remaining partials: Waterpoint, Merit Starlit, Porto Budva. Both C04 records keep `legalSeller=null`, `commercialStatus=research_only`, no current inventory/price/commission/residency/tax claim, and no publication-approved imagery. No external outreach or production write occurred. Next independent block: C05 Bali media/rightsholder routes unless already claimed by a fresher run.
+
 ## Latest owner extension — shared accounting, free email and tested preparation
 
 Created shared `CLOUD-INBOX/Находки.md`, `Решения.md` and `КОНТРОЛЬ-БОРД.md`, with source dates, decision reasons, separate implementation status and a retrospective index to existing history. Updated root README/QUEUE so CLOUD and LOCAL read the common records at startup and append factual checkpoints. Historical decisions and existing Cxx results are preserved, not re-created.
