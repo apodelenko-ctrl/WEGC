@@ -1,0 +1,984 @@
+[
+  {
+    "developer_id": "PHK-001",
+    "name": "Rhom Bho Property / THE TITLE",
+    "entity_type": "developer",
+    "legal_name_candidate": "Rhom Bho Property PCL",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://thetitleresidence.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "sales@rhombho.co.th",
+        "purpose": "sales",
+        "source_url": "https://thetitleresidence.com/condominium/serenity-naiyang/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "verification_method": "official domain search excerpt and project page",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 (0)63-642-8111",
+        "purpose": "sales",
+        "source_url": "https://thetitleresidence.com/condominium/serenity-naiyang/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": true,
+    "project_candidate_count": 28
+  },
+  {
+    "developer_id": "PHK-002",
+    "name": "Botanica Luxury Villas",
+    "entity_type": "developer",
+    "legal_name_candidate": "AAP Architecture Properties & Development",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.botanicaluxuryvilla.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "info@botanicaluxuryvilla.com",
+        "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 9 8394 7097",
+        "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "email",
+        "value": "info@botanicaluxuryvilla.com",
+        "purpose": "agency_relations",
+        "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 (0)9 8394 7097",
+        "purpose": "general",
+        "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "line",
+        "value": "@botanicaluxury",
+        "purpose": "general",
+        "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": true,
+    "project_candidate_count": 34
+  },
+  {
+    "developer_id": "PHK-003",
+    "name": "AssetWise",
+    "entity_type": "developer",
+    "legal_name_candidate": "AssetWise PCL",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://assetwise.co.th/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 1
+  },
+  {
+    "developer_id": "PHK-004",
+    "name": "Origin Property",
+    "entity_type": "developer",
+    "legal_name_candidate": "Origin Property PCL",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://origin.co.th/",
+    "contacts": [
+      {
+        "kind": "phone",
+        "value": "1498",
+        "source_url": "https://origin.co.th/en/origin-agent-club",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 5
+  },
+  {
+    "developer_id": "PHK-005",
+    "name": "Sansiri",
+    "entity_type": "developer",
+    "legal_name_candidate": "Sansiri PCL",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://sansiri.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "internationalbuyers@sansiri.com",
+        "source_url": "https://www.sansiri.com/agent-recruitment/en/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 5
+  },
+  {
+    "developer_id": "PHK-006",
+    "name": "Banyan Group Residences",
+    "entity_type": "developer_group",
+    "legal_name_candidate": "Banyan Group",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://banyangroupresidences.com/",
+    "contacts": [
+      {
+        "kind": "phone",
+        "value": "+66 76 362 333",
+        "source_url": "https://banyangroupresidences.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 5
+  },
+  {
+    "developer_id": "PHK-007",
+    "name": "Laguna Phuket / Laguna Residences",
+    "entity_type": "sales_channel_or_developer_entity",
+    "legal_name_candidate": "Laguna Phuket",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.lagunaphuket.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "SILK@lagunaphuket.com",
+        "source_url": "https://www.lagunaphuket.com/contact-us/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 76 304 504",
+        "source_url": "https://www.lagunaphuket.com/contact-us/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 5
+  },
+  {
+    "developer_id": "PHK-008",
+    "name": "Utopia Corporation",
+    "entity_type": "developer",
+    "legal_name_candidate": "Utopia Corporation",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://utopia.co.th/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-009",
+    "name": "Thai Fareast Property / Bluepoint",
+    "entity_type": "developer",
+    "legal_name_candidate": "Thai Fareast Property Co., Ltd.",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://bluepointcondo.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-010",
+    "name": "The Ozone Group Phuket",
+    "entity_type": "developer",
+    "legal_name_candidate": "The Ozone Group Phuket Co., Ltd.",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://ozonephuket.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "sales@theozonegroupphuket.com",
+        "source_url": "https://www.ozonephuket.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 62 426 4197; +66 62 426 3928",
+        "source_url": "https://www.ozonephuket.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "email",
+        "value": "sales@theozonegroupphuket.com",
+        "purpose": "sales",
+        "source_url": "https://www.ozonephuket.com/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66(0)62 426 4197",
+        "name": "SOM O",
+        "language": "TH",
+        "purpose": "sales",
+        "source_url": "https://www.ozonephuket.com/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66(0)62 426 3928",
+        "name": "ANIL",
+        "language": "EN/CN/RU",
+        "purpose": "sales",
+        "source_url": "https://www.ozonephuket.com/",
+        "checked_at": "2026-09-18T18:28:30Z",
+        "verification_status": "verified_public_source",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": true,
+    "project_candidate_count": 5
+  },
+  {
+    "developer_id": "PHK-011",
+    "name": "The Zero Phuket",
+    "entity_type": "developer",
+    "legal_name_candidate": "Zero Developments Co., Ltd.",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://thezerophuket.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-012",
+    "name": "Anchan Villas / Pearl Island Property",
+    "entity_type": "developer",
+    "legal_name_candidate": "Pearl Island Property Co., Ltd.",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://anchanvillas.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "info@anchanvillas.com",
+        "source_url": "https://anchanvillas.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 92 389 9000",
+        "source_url": "https://anchanvillas.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 13
+  },
+  {
+    "developer_id": "PHK-013",
+    "name": "The ONE Group",
+    "entity_type": "developer",
+    "legal_name_candidate": "The ONE Group",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://theonephuket.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-014",
+    "name": "SKHAI",
+    "entity_type": "developer_or_project_group",
+    "legal_name_candidate": "SKHAI",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://skhai.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-015",
+    "name": "Sunny Holding",
+    "entity_type": "developer",
+    "legal_name_candidate": "Sunny Holding",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://sunnyholding.com/development/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-016",
+    "name": "Phuket9",
+    "entity_type": "developer",
+    "legal_name_candidate": "Phuket9",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://phuket9.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "sales@phuket9.com",
+        "source_url": "https://phuket9.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 98 674 7096",
+        "source_url": "https://phuket9.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-017",
+    "name": "Aquella",
+    "entity_type": "developer_or_boundary_market_project",
+    "legal_name_candidate": "Aquella / PCPD",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://aquella.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "sales@aquella.com",
+        "source_url": "https://aquella.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 2 150 0575; +852 5804 9780",
+        "source_url": "https://aquella.com/",
+        "checked_at": "2026-09-15",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-018",
+    "name": "Fivewood Estate / Annara Residences",
+    "entity_type": "developer",
+    "legal_name_candidate": "Fivewood Estate Co., Ltd.",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.annaragroup.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-019",
+    "name": "Wallaya Villas",
+    "entity_type": "developer",
+    "legal_name_candidate": "Wallaya Villas",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.wallayavillas.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-020",
+    "name": "Supalai",
+    "entity_type": "developer",
+    "legal_name_candidate": "Supalai PCL",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.supalai.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-021",
+    "name": "Layan Green Park",
+    "entity_type": "developer_or_project_entity",
+    "legal_name_candidate": "Layan Green Park Co Ltd",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://layan.greenparkphuket.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-022",
+    "name": "Layan Verde",
+    "entity_type": "developer_or_project_entity",
+    "legal_name_candidate": "Layan Verde",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://layanverde.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-023",
+    "name": "Trichada Villas",
+    "entity_type": "developer",
+    "legal_name_candidate": "Trichada Co Ltd",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://trichada.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-024",
+    "name": "Habitat Group",
+    "entity_type": "developer",
+    "legal_name_candidate": "Habitat Group Co Ltd",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.habitatgroup.co.th/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-025",
+    "name": "Arthouse Group",
+    "entity_type": "developer",
+    "legal_name_candidate": "Arthouse Group",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://arthousegroup.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-026",
+    "name": "VIP Thailand Group",
+    "entity_type": "developer_or_sales_group",
+    "legal_name_candidate": "VIP Thailand Group",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://vipthailandgroup.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-027",
+    "name": "Andaman Riviera",
+    "entity_type": "project_or_developer_entity",
+    "legal_name_candidate": "Andaman Riviera",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://andamanriviera.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-028",
+    "name": "The Residence Prime",
+    "entity_type": "project_or_developer_entity",
+    "legal_name_candidate": "The Residence Prime",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://theresidenceprime.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-029",
+    "name": "The Niche Estates",
+    "entity_type": "developer_or_estate_group",
+    "legal_name_candidate": "The Niche Estates",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://thenicheestates.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-030",
+    "name": "Eden Development Phuket",
+    "entity_type": "developer",
+    "legal_name_candidate": "Eden Development Phuket",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://edenphuket.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-031",
+    "name": "7th Heaven Phuket",
+    "entity_type": "project_or_developer_entity",
+    "legal_name_candidate": "7th Heaven Phuket",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://7thheavenphuket.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-032",
+    "name": "Royal Phuket Marina",
+    "entity_type": "mixed_use_developer_or_operator",
+    "legal_name_candidate": "Royal Phuket Marina",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.royalphuketmarina.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-033",
+    "name": "MontAzure",
+    "entity_type": "master_development_or_developer_group",
+    "legal_name_candidate": "MontAzure",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.montazure.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-034",
+    "name": "The Palm Residences Phuket",
+    "entity_type": "project_or_developer_entity",
+    "legal_name_candidate": "The Palm Residences",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://thepalmresidences.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-035",
+    "name": "Chalong Miracle Lakeview",
+    "entity_type": "project_or_developer_entity",
+    "legal_name_candidate": "Chalong Miracle Lakeview",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://chalongmiracle.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-036",
+    "name": "Minor International / Anantara Residences",
+    "entity_type": "branded_residence_parent_or_operator",
+    "legal_name_candidate": "Minor International PCL",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.anantara.com/en/layan-phuket",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-037",
+    "name": "Marriott-branded Phuket residences",
+    "entity_type": "branded_residence_operator_signal",
+    "legal_name_candidate": "project entity unknown",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.marriottresidencesphuket.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-038",
+    "name": "Rosewood Phuket Residences",
+    "entity_type": "branded_residence_operator_signal",
+    "legal_name_candidate": "project entity unknown",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.rosewoodhotels.com/en/phuket",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-039",
+    "name": "The Standard Residences Phuket",
+    "entity_type": "branded_residence_operator_signal",
+    "legal_name_candidate": "project entity unknown",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.standardhotels.com/phuket",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-040",
+    "name": "The Phuket Yacht Club Residences",
+    "entity_type": "project_or_residence_entity",
+    "legal_name_candidate": "project entity unknown",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.thephuketyachtclub.com/",
+    "contacts": [],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-15"
+    },
+    "fresh_contact_verified": false,
+    "project_candidate_count": 0
+  }
+]

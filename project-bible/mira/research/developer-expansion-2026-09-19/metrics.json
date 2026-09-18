@@ -1,0 +1,20 @@
+{
+  "projects_total": 618,
+  "developer_master_rows": 40,
+  "developer_rows_are_verified_legal_entities": false,
+  "projects_with_inherited_family": 111,
+  "project_mapping_counts": {
+    "inherited_group_match_needs_verification": 91,
+    "unresolved_family_not_in_master": 15,
+    "ambiguous_group": 5,
+    "unresolved_no_family": 507
+  },
+  "developers_with_fresh_public_contacts": 3,
+  "signed_contracts_total": null,
+  "projects_covered_by_active_contract": null,
+  "emails_sent_total": null,
+  "developer_replies_total": null,
+  "unknown_metric_reason": "Private CRM, mail history and agreements have not been imported. Unknown is not zero.",
+  "crm_imports_this_run": 0,
+  "external_sends_this_run": 0
+}

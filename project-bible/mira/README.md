@@ -167,3 +167,9 @@
 [Dedicated agency funnel](https://wegc.fund/mira/agency/) → [marketplace demo](https://wegc.fund/mira/marketplace.html) → local three-question brief → owner/operator-approved pilot. The general `/mira/` page remains intact. No public intake, automatic admission or live registration is implied.
 
 Source behavior, campaign entry URLs, measurement boundaries and release checks: [agency-funnel.md](./product/agency-funnel.md).
+
+
+
+## Принятый roadmap автономной МИРА — 18.09.2026
+
+[Цель, AUT-00–AUT-10, архитектура, критерии приёмки и контроль истории](operations/AUTONOMOUS-MIRA-ROADMAP.md). Обогащение обеих баз уже в работе; перенос после verified closeout/restore. Единый текущий статус — [MASTER-STATUS](../../CLOUD-INBOX/MASTER-STATUS.md), очередь — [QUEUE](../../CLOUD-INBOX/QUEUE.json). [Первый executable checkpoint](../../CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01/README.md).

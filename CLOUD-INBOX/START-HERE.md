@@ -1,3 +1,5 @@
+> **Новое принятое поручение:** [MIRA-AUTONOMY-20260919-01](tasks/MIRA-AUTONOMY-20260919-01.md), [roadmap](../project-bible/mira/operations/AUTONOMOUS-MIRA-ROADMAP.md). Closeout LOCAL **ACK 18:23:20 UTC получен**, all_done=false; старое «получение не подтверждено» ниже — историческое. Текущий LOCAL mail/CRM checkpoint сохраняется. CLOUD выполняет обе базы; текущие задачи не заменены.
+
 > **Актуальная сверка18.09 17:46UTC:** [MASTER-STATUS.md](MASTER-STATUS.md) — единый реестр результатов, хвостов и обязательного отчёта LOCAL. Старые pending ниже исторические: technical intake и native CRM уже подтверждены receipts. Новое задание MIRA-CLOSEOUT-20260918-01 брать после текущего checkpoint; ночной сбор MIRA-AGENCIES-20260919-01 выполняет CLOUD.
 
 # CLOUD-INBOX — начать здесь
@@ -77,3 +79,4 @@ CLOUD проверил старую wegc-kb.js и документы МИРА, �
 По одобрению владельца имя — **Ассистент МИРА**; реализован agency-only сценарий накопления критериев с дословными источниками, уточнения недостающего, исследовательской подборки из repo feeds, CRM Note/Task и handoff pause. [Подключение и границы](./packages/MIRA-OMNI-20260918-01/ASSISTANT-MIRA-FLOW-RU.md).
 **53/53 local tests PASS**; отдельный smoke на 618 фактических Phuket records, synthetic request, три структурных совпадения без цен/наличия. Цель/бюджет/сроки не выдаются за проверенные; свободный model draft — только review. Добавлен private knowledge_gaps, не auto-learning.
 Это обновление принятой LOCAL задачи MIRA-OMNI-20260918-01, не новая установка/очередь. Previous LOCAL acceptance сохранён; новый flow требует отдельной интеграционной проверки. Один активный brief на контакт, многоклиентский case routing пока не реализован. Production/внешние отправки не выполнялись.
+

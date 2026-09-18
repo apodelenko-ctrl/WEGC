@@ -98,3 +98,19 @@ T06 / MIRA-AGENCIES-20260919-01 — IN_PROGRESS. Восстановлен master
 ## Саратов B001 — 2026-09-18T18:10:52Z
 
 T06 IN_PROGRESS. Canonical345 (RU203/BY59/прочие83); новых кандидатов8, обогащены2 прежние записи;4 подходящих рабочих кандидата в Саратове из10, остальные требуют проверки. Прямые Telegram2, WhatsApp URL1; полная статистика и holds в [CHECKPOINT-001](../project-bible/mira/research/agency-expansion-2026-09-19/CHECKPOINT-001.md). RSS исправлен Воронеж→Саратов с сохранением ID. Canonical base SHA e31f94559265f7417f5f03240d6087197e4f9faa. CRM12 прежних импортов, новых0; рассылок0. Следующий cursor Саратов; официальная статистика населения не подтверждена. Новых обязательств LOCAL не добавлено.
+
+
+
+## Автономная МИРА — принятое продолжение, 2026-09-18T18:36:48.626807Z
+
+MIRA-AUTONOMY-20260919-01 / AUT-00–AUT-10: [единый roadmap](../project-bible/mira/operations/AUTONOMOUS-MIRA-ROADMAP.md). Это следующая стадия существующей системы. AUT-01/02 идут до передачи Mac; AUT-04 требует настоящего восстановления.
+
+**Исправление T12/T14:** receipt MIRA-CLOSEOUT-20260918-01 от 18:23:20UTC подтверждает ACK (source ad312425), all_done=false. Старое «ACK нет» выше superseded. LOCAL заканчивает current private CRM/mail checkpoint; final manifest/backup/restore пока не представлены. По receipt владелец запросил собственный mail server option и пока не имеет VPS; покупки не одобрены. Старую MKT-постановку сверить с этим поручением, не навязывать повторный выбор ПО.
+
+**AUT-02 / новая база застройщиков:** найдены existing master40, pilot31, TOP60 project-contact rows, stage8. Код сохранил все 618 IDs и создал 618 задач связи плюс40 задач контактов/CRM. Family:111/618; однозначный inherited join91, ambiguous5, unmatched family15, no family507. Это кандидаты связей, не подтверждённые продавцы. Свежие публичные контакты3 застройщиков, источники по полям. Договоры/sent/replied totals=null до private reconciliation.
+
+**AUT-08:** pure inquiry planner с case scope, contract/project/recipient checks и стабильным ключом; draft-only, CRM/live интеграция pending. 14 local tests PASS. Research output и code ready не равны deployed/accepted.
+
+**Агентства:** сохранён последний подтверждённый checkpoint345 provisional groups (203RU/59BY/83other), Saratov4 suitable,12 прежних CRM C10; этот блок не добавлял новые агентства. Ночная задача расширяется на developer backlog и проверку свежих LOCAL receipts. Массовых отправок нет.
+
+Следующий LOCAL результат обязателен по прежней closeout схеме плюс [новое дополнение](tasks/MIRA-AUTONOMY-20260919-01.md). Передача этого обновления в Git не означает новый ACK или завершение облачного переноса.

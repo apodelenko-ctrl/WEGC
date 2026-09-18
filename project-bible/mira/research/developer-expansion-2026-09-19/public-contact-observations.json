@@ -1,0 +1,20 @@
+{
+  "task_id": "MIRA-DEVELOPERS-20260919-01",
+  "checked_at": "2026-09-18T18:28:30Z",
+  "records": [
+    {"developer_id":"PHK-001","visibility":"public_business","contacts":[
+      {"kind":"email","value":"sales@rhombho.co.th","purpose":"sales","source_url":"https://thetitleresidence.com/condominium/serenity-naiyang/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","verification_method":"official domain search excerpt and project page","direct_dialogue_verified":false},
+      {"kind":"phone","value":"+66 (0)63-642-8111","purpose":"sales","source_url":"https://thetitleresidence.com/condominium/serenity-naiyang/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false}
+    ]},
+    {"developer_id":"PHK-002","visibility":"public_business","contacts":[
+      {"kind":"email","value":"info@botanicaluxuryvilla.com","purpose":"agency_relations","source_url":"https://www.botanicaluxuryvilla.com/agent_club/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
+      {"kind":"phone","value":"+66 (0)9 8394 7097","purpose":"general","source_url":"https://www.botanicaluxuryvilla.com/agent_club/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
+      {"kind":"line","value":"@botanicaluxury","purpose":"general","source_url":"https://www.botanicaluxuryvilla.com/agent_club/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false}
+    ]},
+    {"developer_id":"PHK-010","visibility":"public_business","contacts":[
+      {"kind":"email","value":"sales@theozonegroupphuket.com","purpose":"sales","source_url":"https://www.ozonephuket.com/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
+      {"kind":"phone","value":"+66(0)62 426 4197","name":"SOM O","language":"TH","purpose":"sales","source_url":"https://www.ozonephuket.com/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
+      {"kind":"phone","value":"+66(0)62 426 3928","name":"ANIL","language":"EN/CN/RU","purpose":"sales","source_url":"https://www.ozonephuket.com/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false}
+    ]}
+  ]
+}

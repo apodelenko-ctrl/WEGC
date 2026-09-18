@@ -1,0 +1,25 @@
+{
+  "task_id": "MIRA-DEVELOPERS-20260919-01",
+  "status": "in_progress",
+  "source_commit": "4a84228daf04f928bcbe995a33263bbddb7cb019",
+  "checkpoint_at": "2026-09-18T18:36:48.626807Z",
+  "completed": [
+    "existing_source_inventory",
+    "exact_alias_projection_618_phuket",
+    "public_contacts_title_botanica_ozone",
+    "draft_inquiry_planner_14_tests"
+  ],
+  "next_actions": [
+    "reconcile pilot31/TOP60/stage8 with master40, preserve conflicts",
+    "resolve unmatched family15 and ambiguous5 before remaining no-family507",
+    "verify missing developer contacts using primary sources",
+    "LOCAL reconcile existing Botanica/The Title mail and contracts privately",
+    "extend to other60 published market records",
+    "dry-run native CRM mapping after schema handoff"
+  ],
+  "developer_cursor": "unresolved_family_not_in_master",
+  "crm_imported": false,
+  "external_sends": 0,
+  "final_report_required": true,
+  "stop_by": "2026-09-19T08:00:00+07:00"
+}

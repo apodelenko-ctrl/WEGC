@@ -37,7 +37,8 @@
     "dailyControlBoard": "CLOUD-INBOX/КОНТРОЛЬ-БОРД.md",
     "historicalDecisions": "project-bible/mira/08-decisions-log.md",
     "writePolicy": "Read current SHA, preserve other agents, append dated evidence with IDs; never replace history with plans",
-    "masterStatus": "CLOUD-INBOX/MASTER-STATUS.md"
+    "masterStatus": "CLOUD-INBOX/MASTER-STATUS.md",
+    "autonomyRoadmap": "project-bible/mira/operations/AUTONOMOUS-MIRA-ROADMAP.md"
   },
   "tasks": [
     {
@@ -154,6 +155,11 @@
         "updatedAt": "2026-09-18T17:27:20Z",
         "readAtSourceCommit": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
         "doesNotAcceptNewerClientFlow": true
+      },
+      "latestOwnerRequestViaLocalReceipt": {
+        "source": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
+        "request": "Own mail server integrated with existing CRM; prepare option, no VPS purchase",
+        "disposition": "LOCAL must reconcile earlier Brevo plan with latest owner request; preserve current checkpoint"
       }
     },
     {
@@ -203,10 +209,12 @@
       "id": "MIRA-CLOSEOUT-20260918-01",
       "owner": "LOCAL",
       "priority": "P0-after-current-checkpoint",
-      "status": "handed_off_ack_pending",
+      "status": "accepted_final_report_pending",
       "sourcePath": "CLOUD-INBOX/MASTER-STATUS.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
-      "preservesExistingTaskIds": true
+      "preservesExistingTaskIds": true,
+      "ackAt": "2026-09-18T18:23:20Z",
+      "ackReadSourceCommit": "ad312425b83b19f0b148d78d66103fb02d338538"
     },
     {
       "id": "MIRA-AGENCIES-20260919-01",
@@ -225,6 +233,46 @@
         "firstWaveSuitableReviewed": 4,
         "crmImportsThisTask": 0
       }
+    },
+    {
+      "id": "MIRA-AUTONOMY-20260919-01",
+      "priority": "P1-owner-approved",
+      "owner": "CLOUD coordination; LOCAL current integration until accepted handoff",
+      "status": "roadmap_and_first_code_checkpoint_ready_integration_pending",
+      "sourcePaths": [
+        "project-bible/mira/operations/AUTONOMOUS-MIRA-ROADMAP.md",
+        "CLOUD-INBOX/tasks/MIRA-AUTONOMY-20260919-01.md",
+        "CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01/README.md"
+      ],
+      "receiptPath": "CLOUD-INBOX/receipts/MIRA-AUTONOMY-20260919-01.json",
+      "createdAt": "2026-09-18T18:36:48.626807Z",
+      "nextAction": "Continue both datasets; accept full LOCAL handoff then restore in cloud; do not infer completion from ACK",
+      "acceptance": [
+        "AUT-00–AUT-10 tracked with evidence",
+        "No Mac dependency after actual cloud restore and cutover",
+        "Full agency→developer→agency live case accepted with replay/restart/suppression",
+        "Dashboard metrics grounded in records/provider events"
+      ],
+      "codeReady": true,
+      "crmIntegrated": false,
+      "cloudRestored": false,
+      "liveAccepted": false
+    },
+    {
+      "id": "MIRA-DEVELOPERS-20260919-01",
+      "priority": "P1-parallel-night-data",
+      "owner": "CLOUD; LOCAL private CRM evidence",
+      "status": "in_progress",
+      "sourcePath": "CLOUD-INBOX/tasks/MIRA-DEVELOPERS-20260919-01.md",
+      "resumePath": "project-bible/mira/research/developer-expansion-2026-09-19/RESUME.json",
+      "createdAt": "2026-09-18T18:36:48.626807Z",
+      "nextAction": "Resolve 507 no-family and other ambiguous/unmatched projects; enrich named public contacts; reconcile existing mail/agreements privately",
+      "acceptance": [
+        "Each catalog project has verified developer/legal seller or explicit unresolved task",
+        "Existing source IDs preserved; all source layers reconciled",
+        "CRM stages and active agreements supported by private evidence",
+        "Replay-safe CRM import reported separately from research counts"
+      ]
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
@@ -260,5 +308,12 @@
     "publicIntegrationConfirmed": true,
     "wholeResearchBranchIntegrated": false,
     "allTasksComplete": false
+  },
+  "cloudTransition": {
+    "status": "local_ack_received_final_handoff_pending",
+    "roadmapTask": "MIRA-AUTONOMY-20260919-01",
+    "localReceipt": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
+    "ackAt": "2026-09-18T18:23:20Z",
+    "cloudRestoreConfirmed": false
   }
 }
