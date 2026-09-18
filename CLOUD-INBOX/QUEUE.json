@@ -51,7 +51,8 @@
         "CLOUD-INBOX/tasks/MIRA-LOCAL-20260918-02.md",
         "CLOUD-INBOX/DATA-HANDOFF-20260918.md",
         "CLOUD-INBOX/project-taxonomy-20260918.json",
-        "CLOUD-INBOX/receipts/README.md"
+        "CLOUD-INBOX/receipts/README.md",
+        "CLOUD-INBOX/LOCAL-INTEGRATION-2026-09-18.md"
       ],
       "acceptance": [
         "Accepted receipt references exact read source commit and actual local worktree/HEAD",
@@ -143,5 +144,19 @@
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
-  "note": "Latest owner-reported applicant submission supersedes older pending-login notes only. It is not a local receipt for the inbox, commercial activation or permission for mass intake/sends. Prior tasks and decision history are preserved. Local remains sole integrator/deployer."
+  "note": "Latest owner-reported applicant submission supersedes older pending-login notes only. It is not a local receipt for the inbox, commercial activation or permission for mass intake/sends. Prior tasks and decision history are preserved. Local remains sole integrator/deployer.",
+  "implementationSupplement": {
+    "id": "MIRA-INTEGRATE-20260918-01",
+    "path": "CLOUD-INBOX/LOCAL-INTEGRATION-2026-09-18.md",
+    "sourceCommit": "03db1ac77f9ce30e8072121746e022251cf40198",
+    "attachedToTaskId": "MIRA-LOCAL-20260918-02",
+    "reusesTaskIds": ["MIRA-COORD-20260918-01", "MIRA-MKT-20260918-01"],
+    "status": "ready_for_local_implementation",
+    "relationship": "Concrete deliverables and acceptance criteria; not a competing queue or second CRM installation",
+    "preservesNextTaskAndOwnerReportedProgress": true,
+    "workstreams": ["I1 CRM runtime and organisation import", "I2 permitted mail integration and drafts", "I3 data integration using DATA-HANDOFF and explicit taxonomy", "I4 current demo and selected QR route", "I5 media register and private VIVI dossier", "I6 evidence-based dashboard and return report"],
+    "evidenceReturn": "Use current main-task receipt plus existing CRM task receipt; do not require duplicate receipts",
+    "accountingEvent": "CLOUD-INBOX/events/2026-09-18/cloud-1350-integration-handoff.json",
+    "localReceiptConfirmed": false
+  }
 }
