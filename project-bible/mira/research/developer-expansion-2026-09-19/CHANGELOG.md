@@ -17,3 +17,7 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 ## Обе базы B003 — 2026-09-18T20:03:00Z
 
 Agency350; Саратов10/10 minimum met. Developer master42, fresh contacts7, primary project-group links5. Unique Group exact primary sources resolve Aileen Phase1 and Unique Eco Viva only; five other Aileen-labelled records remain unresolved. 618 IDs preserved, 25 tests pass, CRM imports/sends0. Private crosswalk and actual cloud restore remain pending.
+
+## Обе базы B004 — 2026-09-18T21:20:00Z
+
+Developer master **42 → 43** (+Trinity Property / Aileen Villas), fresh public contact groups **7 → 8**. Primary links remain5; total links backed by primary or current exact public sources **5 → 10**. Five Aileen IDs use `verified_public_sources`, so the inquiry planner still blocks them. Unmatched family **6 → 1**; ambiguous5, no-family507, non-residential1. All618 IDs preserved;26/26 tests PASS; CRM imports/sends0.

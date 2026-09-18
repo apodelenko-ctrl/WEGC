@@ -104,9 +104,9 @@ def build(root, observations):
             raise ValueError('project observation lacks evidence')
         if not row['source_url'].startswith('https://'):
             raise ValueError('non-web project source')
-        if row.get('mapping_status') not in {'verified_primary_source', 'excluded_non_residential'}:
+        if row.get('mapping_status') not in {'verified_primary_source', 'verified_public_sources', 'excluded_non_residential'}:
             raise ValueError('unsupported project observation status')
-        if row['mapping_status'] == 'verified_primary_source' and row.get('developer_id') not in by_id:
+        if row['mapping_status'] in {'verified_primary_source', 'verified_public_sources'} and row.get('developer_id') not in by_id:
             raise ValueError('unknown observed developer ID')
         if row['mapping_status'] == 'excluded_non_residential' and row.get('developer_id') is not None:
             raise ValueError('excluded taxonomy must not silently assign a developer')
@@ -159,6 +159,7 @@ def build(root, observations):
         'developers_with_fresh_public_contacts': sum(d['fresh_contact_verified'] for d in developers),
         'projects_excluded_non_residential': counts.get('excluded_non_residential', 0),
         'projects_with_primary_developer_group': counts.get('verified_primary_source', 0),
+        'projects_with_verified_public_developer_group': counts.get('verified_primary_source', 0) + counts.get('verified_public_sources', 0),
         'fresh_contact_coverage_by_kind': {kind: sum(any(c.get('kind') == kind and c.get('verification_status') == 'verified_public_source' for c in d['contacts']) for d in developers) for kind in ('email', 'phone', 'whatsapp', 'telegram', 'line', 'broker_portal')},
         'signed_contracts_total': None, 'projects_covered_by_active_contract': None,
         'emails_sent_total': None, 'developer_replies_total': None,

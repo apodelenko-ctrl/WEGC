@@ -1,0 +1,97 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "batch_id": "B004",
+  "checked_at": "2026-09-18T21:20:00Z",
+  "source_commit": "07527a6b9b90a5063553c64188c1f5ef5ddd318e",
+  "city_id": "RU-CITY-002",
+  "records": [
+    {
+      "agency_id": "RU-A-bb2974123b23", "record_action": "enrich_existing", "domain": "ndv72.ru", "source_url": "https://www.ndv72.ru/",
+      "fields": {"brand":"Панорама недвижимости","city":"Тюмень","canonical_domain":"ndv72.ru","company_phone":"+7 3452 670-777; 8 800 3000-140","contact_page":"https://www.ndv72.ru/"},
+      "segment":"known_overseas_separate_segment", "fit":false, "overseas_status":"confirmed_active_overseas", "branch_status":"local_operator_overseas_offering", "reason":"Current first-party site publishes Tyumen offices and residential services but also a dedicated Turkey property section. Keep outside the local-first priority wave; this is not a claim about corporate ownership.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","general_email":"not_found","direct_business_phone":"not_checked","direct_public_work_email":"not_checked","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_promoted","other_social_url":"not_promoted"}
+    },
+    {
+      "agency_id":"RU-A-842cad72e9cb", "record_action":"enrich_existing", "domain":"orbita72.com", "source_url":"https://orbita72.com/properties/66974",
+      "fields":{"brand":"Орбита 72","city":"Тюмень","canonical_domain":"orbita72.com","company_phone":"8 (3452) 777-888","general_email":"orbita-72@bk.ru","contact_page":"https://orbita72.com/"},
+      "field_status":"indexed_first_party_current_page_direct_fetch_blocked", "segment":"local_full_service", "fit":true, "reason":"Current indexed first-party listing identifies a Tyumen real-estate agency and active local inventory. Phone and email are retained from the existing canonical record because direct site fetch failed; they are not upgraded as freshly verified fields.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","direct_business_phone":"not_checked","contact_first_name":"not_checked","contact_last_name":"not_checked","contact_role":"not_checked","direct_public_work_email":"not_checked","whatsapp_url":"not_checked","telegram_url":"not_checked","telegram_kind":"not_checked","vk_url":"not_checked","other_social_url":"not_checked"}
+    },
+    {
+      "agency_id":"RU-A-0a4b7d7094c1", "record_action":"enrich_existing", "domain":"newflat72.ru", "source_url":"https://newflat72.ru/",
+      "fields":{"brand":"Центр недвижимости","city":"Тюмень","canonical_domain":"newflat72.ru","company_phone":"+7 (3452) 607-937; +7 922 262-75-50","general_email":"newf1at72@yandex.ru","contact_page":"https://newflat72.ru/"},
+      "person":{"source_url":"https://newflat72.ru/","contact_first_name":"Иван","contact_last_name":"Невидимов","contact_role":"Специалист по недвижимости","direct_business_phone":"+7 922 000-14-18","direct_public_work_email":"nevidimov.vanya@mail.ru"},
+      "segment":"local_full_service", "fit":true, "reason":"Current first-party site identifies the Tyumen agency, new-build/resale services, central contacts and public staff work endpoints. No federal-network or overseas offering was found in the reviewed page; absence is not proof of no overseas business.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id":"RU-A-88b929ad9fb4", "record_action":"enrich_existing", "domain":"newgorod.ru", "source_url":"https://newgorod.ru/",
+      "fields":{"brand":"Новый Город","city":"Тюмень","canonical_domain":"newgorod.ru","company_phone":"+7 919 950-82-25; +7 (3452) 52-92-02","contact_page":"https://newgorod.ru/"},
+      "segment":"premium_local", "fit":true, "reason":"Current first-party site publishes the Tyumen office and residential segments including new builds. The inherited CEO name is not promoted as freshly verified in this block. No federal-network or overseas signal found in the reviewed page.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","general_email":"not_found","direct_business_phone":"not_checked","contact_first_name":"not_checked","contact_last_name":"not_checked","contact_role":"not_checked","direct_public_work_email":"not_checked","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_promoted","other_social_url":"not_found"}
+    },
+    {
+      "agency_id":"MIRA-A-97117f879f88", "record_action":"enrich_existing", "domain":"ecn72.ru", "source_url":"https://www.ecn72.ru/",
+      "fields":{"brand":"Единый Центр Недвижимости","city":"Тюмень","canonical_domain":"ecn72.ru","company_phone":"+7 (929) 269-66-94; +7 (3452) 707-202","general_email":"ecntmn@yandex.ru","contact_page":"https://www.ecn72.ru/"},
+      "person":{"source_url":"https://www.ecn72.ru/","contact_first_name":"Наталья","contact_last_name":"Загарских","contact_role":"Директор компании"},
+      "segment":"local_full_service", "fit":true, "reason":"Current first-party site identifies the director, Tyumen contacts and a broad local property service. The expert phone is not attributed to the director, so it remains a company route. No federal-network or overseas signal found in the reviewed page.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id":"RU-NIGHT-B-012", "record_action":"enrich_existing", "domain":"formula-agency.ru", "source_url":"https://formula-agency.ru/",
+      "fields":{"brand":"Формула","city":"Тюмень","legal_name":"ООО «НЕОЛИТИКА»","canonical_domain":"formula-agency.ru","company_phone":"+7 (3452) 69-84-01","contact_page":"https://formula-agency.ru/"},
+      "segment":"local_newbuild", "fit":true, "reason":"Current first-party site publishes the operator INN/OGRN, Tyumen phone and new-build/developer specialization. No federal-network or overseas signal found in the reviewed page.",
+      "gaps":{"parent_brand":"not_found","general_email":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id":"RU-RGR-NV72", "record_action":"add_candidate", "domain":"nv72.ru", "source_url":"https://reestr.rgr.ru/agentstvo-agentstvo-nedvizhimosti-nadezhnyy-vybor-3000/",
+      "fields":{"brand":"Надёжный выбор","city":"Тюмень","canonical_domain":"nv72.ru","company_phone":"+7 (3452) 51-51-07","general_email":"barmin@nv72.ru","contact_page":"https://nv72.ru/kontakty"},
+      "person":{"source_url":"https://reestr.rgr.ru/agentstvo-agentstvo-nedvizhimosti-nadezhnyy-vybor-3000/","contact_first_name":"Александр","contact_last_name":"Бармин","contact_role":"Директор","direct_business_phone":"+7 (3452) 51-51-07","direct_public_work_email":"barmin@nv72.ru"},
+      "segment":"local_full_service", "fit":true, "reason":"Current RGR and public business profiles identify a Tyumen agency and named director. Public sources conflict on LLC versus sole-proprietor form, so legal_name is held pending registry resolution; no federal-network signal was found.",
+      "gaps":{"legal_name":"blocked_source_conflict","parent_brand":"not_found","whatsapp_url":"not_checked","telegram_url":"not_checked","telegram_kind":"not_checked","vk_url":"not_checked","other_social_url":"not_checked"}
+    },
+    {
+      "agency_id":"RU-WEB-DEPTMN", "record_action":"add_candidate", "domain":"deptmn.ru", "source_url":"https://deptmn.ru/o-kompanii/komanda",
+      "fields":{"brand":"Департамент Недвижимости","city":"Тюмень","legal_name":"ИП Бабанов Павел Владимирович","canonical_domain":"deptmn.ru","company_phone":"+7 992 301-28-39","whatsapp_url":"https://wa.me/79923012839","telegram_url":"https://t.me/deptmn","telegram_kind":"public_channel","contact_page":"https://deptmn.ru/o-kompanii/komanda"},
+      "person":{"source_url":"https://deptmn.ru/o-kompanii/komanda","contact_first_name":"Павел","contact_last_name":"Бабанов","contact_role":"Руководитель","direct_business_phone":"+7 992 301-28-39"},
+      "segment":"local_newbuild", "fit":true, "reason":"Current first-party team page publishes the proprietor registration, named head, Tyumen phone, new-build services and exact WhatsApp/Telegram links. Telegram is a public channel, not verified direct dialogue.",
+      "gaps":{"parent_brand":"not_found","general_email":"not_found","direct_public_work_email":"not_found","vk_url":"not_checked","other_social_url":"not_checked"}
+    },
+    {
+      "agency_id":"RU-WEB-INTELLECT-INVEST-TMN", "record_action":"add_candidate", "domain":"intellect-invest.webflow.io", "source_url":"https://intellect-invest.webflow.io/",
+      "fields":{"brand":"Интеллект-Инвест","city":"Тюмень","canonical_domain":"intellect-invest.webflow.io","company_phone":"+7 982 783-70-60","contact_page":"https://intellect-invest.webflow.io/"},
+      "segment":"local_investment", "fit":true, "reason":"Current first-party landing page identifies a Tyumen real-estate team offering new-build, resale and investment services with a published phone. Legal operator and named partner owner were not found; no federal-network signal found.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","general_email":"not_found","direct_business_phone":"not_checked","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id":"RU-WEB-TCN72", "record_action":"add_candidate", "domain":"novostroika72.ru", "source_url":"https://novostroika72.ru/",
+      "fields":{"brand":"Тюменский Центр Новостроек","city":"Тюмень","legal_name":"ООО «Тюменский Центр Новостроек»","canonical_domain":"novostroika72.ru","company_phone":"+7 (3452) 98-00-05","contact_page":"https://novostroika72.ru/"},
+      "segment":"local_newbuild", "fit":true, "reason":"Current first-party site publishes the Tyumen operator name, phone and current new-build catalogue. No federal-network or overseas signal was found in the reviewed page.",
+      "gaps":{"parent_brand":"not_found","general_email":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id":"RU-WEB-100-KVADRATOV-TMN", "record_action":"add_candidate", "domain":"100kvadratov.com", "source_url":"https://100kvadratov.com/",
+      "fields":{"brand":"100 КВАДРАТОВ","city":"Тюмень","legal_name":"ООО «СТРОЙИНДУСТРИЯ»","canonical_domain":"100kvadratov.com","company_phone":"+7 (3452) 699-003","contact_page":"https://100kvadratov.com/"},
+      "person":{"source_url":"https://100kvadratov.com/","contact_first_name":"Светлана","contact_last_name":"Кондинкина","contact_role":"Руководитель / публичный сотрудник компании","direct_business_phone":"+7 922 488-10-51","direct_public_work_email":"kondinkina@100kvadratov.com"},
+      "segment":"local_full_service", "fit":true, "reason":"Current first-party site publishes a Tyumen office, local inventory, residential/new-build services and public staff work contacts. Current Domclick profile identifies the same operator and recent activity; no federal-network signal found.",
+      "gaps":{"parent_brand":"not_found","general_email":"not_found","whatsapp_url":"not_checked","telegram_url":"not_checked","telegram_kind":"not_checked","vk_url":"not_checked","other_social_url":"not_checked"}
+    },
+    {
+      "agency_id":"RU-WEB-METRIKA-TMN", "record_action":"add_candidate", "domain":"metrika.com", "source_url":"https://metrika.com/",
+      "fields":{"brand":"Метрика Недвижимость","city":"Тюмень","canonical_domain":"metrika.com","company_phone":"+7 (3452) 619-619","contact_page":"https://metrika.com/"},
+      "segment":"known_overseas_network_separate_segment", "fit":false, "overseas_status":"confirmed_active_overseas", "branch_status":"multi_country_network", "reason":"Current first-party site states 500+ specialists, offices in Russia, UK, UAE and Indonesia and international transactions. Preserve as one network group outside the local-first priority wave.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","general_email":"not_found","direct_business_phone":"not_checked","contact_first_name":"not_checked","contact_last_name":"not_checked","contact_role":"not_checked","direct_public_work_email":"not_checked","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    }
+  ],
+  "population_check": {
+    "status":"blocked", "population":null, "unit":"city_proper",
+    "attempts":[
+      {"url":"https://72.rosstat.gov.ru/","outcome":"official_site_search_did_not_yield_current_city_proper_table"},
+      {"url":"https://rosstat.gov.ru/compendium/document/13282","outcome":"not_accessible"},
+      {"url":"https://tyumen-city.ru/","outcome":"official_city_site_no_current_city_proper_figure_found"}
+    ],
+    "note":"Fresh primary city-proper population was not obtained. The current secondary figure was not promoted as official; city, urban district and agglomeration are not substituted."
+  },
+  "new_crm_imports":0,
+  "external_sends":0
+}

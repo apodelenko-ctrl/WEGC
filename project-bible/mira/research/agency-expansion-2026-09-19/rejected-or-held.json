@@ -1070,9 +1070,9 @@
     },
     {
       "agency_id": "RU-A-bb2974123b23",
-      "segment": "unknown",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+      "segment": "known_overseas_separate_segment",
+      "first_wave_fit": false,
+      "reason": "Current first-party site publishes Tyumen offices and residential services but also a dedicated Turkey property section. Keep outside the local-first priority wave; this is not a claim about corporate ownership."
     },
     {
       "agency_id": "RU-A-0078bdff6edc",
@@ -1089,24 +1089,6 @@
     {
       "agency_id": "RU-A-f4628c74a7e8",
       "segment": "unknown",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
-      "agency_id": "RU-A-842cad72e9cb",
-      "segment": "local_newbuild",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
-      "agency_id": "RU-A-0a4b7d7094c1",
-      "segment": "local_newbuild",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
-      "agency_id": "RU-A-88b929ad9fb4",
-      "segment": "premium_local",
       "first_wave_fit": "not_checked",
       "reason": "Historical discovery only; independent entity and business fit not freshly established"
     },
@@ -1525,12 +1507,6 @@
       "reason": "Historical discovery only; independent entity and business fit not freshly established"
     },
     {
-      "agency_id": "MIRA-A-97117f879f88",
-      "segment": "unknown",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
       "agency_id": "RU-NIGHT-A-001",
       "segment": "local_newbuild",
       "first_wave_fit": "not_checked",
@@ -1760,12 +1736,6 @@
     },
     {
       "agency_id": "RU-NIGHT-B-011",
-      "segment": "local_newbuild",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
-      "agency_id": "RU-NIGHT-B-012",
       "segment": "local_newbuild",
       "first_wave_fit": "not_checked",
       "reason": "Historical discovery only; independent entity and business fit not freshly established"
@@ -2039,6 +2009,12 @@
       "segment": "hold_entity",
       "first_wave_fit": "hold",
       "reason": "Independent discovery from public directories; official domain returned HTTP403. Current legal operator, specialization and contacts not verified. No directory phone promoted to verified business route."
+    },
+    {
+      "agency_id": "RU-WEB-METRIKA-TMN",
+      "segment": "known_overseas_network_separate_segment",
+      "first_wave_fit": false,
+      "reason": "Current first-party site states 500+ specialists, offices in Russia, UK, UAE and Indonesia and international transactions. Preserve as one network group outside the local-first priority wave."
     }
   ],
   "source_rows_deleted": 0

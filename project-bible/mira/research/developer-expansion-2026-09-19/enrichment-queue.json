@@ -378,41 +378,41 @@
   {
     "task_key": "project-developer:ailin-villas-6-faza",
     "project_id": "ailin-villas-6-faza",
-    "developer_id": null,
+    "developer_id": "PHK-043",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_public_sources",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:ailin-villas-vtoraya-faza",
     "project_id": "ailin-villas-vtoraya-faza",
-    "developer_id": null,
+    "developer_id": "PHK-043",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_public_sources",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:ailin-villas-ravaii",
     "project_id": "ailin-villas-ravaii",
-    "developer_id": null,
+    "developer_id": "PHK-043",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_public_sources",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:ailin-rezidens-bangtao",
     "project_id": "ailin-rezidens-bangtao",
-    "developer_id": null,
+    "developer_id": "PHK-043",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_public_sources",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:ailin-rezidens-lagun",
     "project_id": "ailin-rezidens-lagun",
-    "developer_id": null,
+    "developer_id": "PHK-043",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_public_sources",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -5233,6 +5233,13 @@
   {
     "task_key": "developer-contact:PHK-042",
     "developer_id": "PHK-042",
+    "status": "partial",
+    "reason": "contract_and_crm_state_not_imported",
+    "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
+  },
+  {
+    "task_key": "developer-contact:PHK-043",
+    "developer_id": "PHK-043",
     "status": "partial",
     "reason": "contract_and_crm_state_not_imported",
     "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"

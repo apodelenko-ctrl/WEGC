@@ -30,3 +30,9 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 Агентства350 (RU208/BY59/other83), Саратов10/10 minimum met; +2 candidates,1 existing enriched, удалений0. Канальная полнота: phone13/general email11/direct phone7/direct email2/WA1/TG-direct2/TG-channel2/VK1/fully-enriched0. Official city-proper population blocked. CRM imports/sends0. Next cursor Тюмень.
 
 Застройщики42; fresh contact groups7; exact primary links5/618. Unique Group Thailand подтверждает Aileen Villas Phase1 и Unique Eco Viva; остальные Aileen labels не объединены. Tests25/25. Private CRM78/87 не складываются с research350/42; crosswalk и cloud restore pending.
+
+## Обе базы B004 — 2026-09-18T21:20:00Z
+
+Агентства **350 → 356** (RU214/BY59/other83): 6 новых, 6 существующих обогащены, удалений0. Тюмень: 12 рассмотрено, **10/10** подходят в local-first wave; «Панорама» и «Метрика» сохранены отдельно из-за опубликованной зарубежной деятельности. Каналы: phone11, general email3, direct phone4, direct email3, WA1, TG-channel1, fully-enriched0. Official city-proper population blocked; next cursor RU-CITY-003. CRM imports/sends0.
+
+Застройщики **42 → 43**, fresh contact groups **7 → 8**. Добавлена Trinity Property / Aileen Villas. Пять оставшихся Aileen IDs связаны по точным текущим публичным источникам, но не повышены до primary-source/sendable; legal seller/agreement unknown. Все618 IDs сохранены; tests26/26.

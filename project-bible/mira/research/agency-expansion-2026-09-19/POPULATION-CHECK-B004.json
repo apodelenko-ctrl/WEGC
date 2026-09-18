@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-09-18T21:20:00Z",
+  "status": "blocked",
+  "population": null,
+  "unit": "city_proper",
+  "attempts": [
+    {
+      "url": "https://72.rosstat.gov.ru/",
+      "outcome": "official_site_search_did_not_yield_current_city_proper_table"
+    },
+    {
+      "url": "https://rosstat.gov.ru/compendium/document/13282",
+      "outcome": "not_accessible"
+    },
+    {
+      "url": "https://tyumen-city.ru/",
+      "outcome": "official_city_site_no_current_city_proper_figure_found"
+    }
+  ],
+  "note": "Fresh primary city-proper population was not obtained. The current secondary figure was not promoted as official; city, urban district and agglomeration are not substituted."
+}

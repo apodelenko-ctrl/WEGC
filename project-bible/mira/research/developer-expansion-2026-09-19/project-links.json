@@ -996,9 +996,11 @@
     "name": "Айлин Виллас 6 фаза",
     "market": "phuket",
     "family": "Aileen",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-043",
+    "candidate_developer_ids": [
+      "PHK-043"
+    ],
+    "mapping_status": "verified_public_sources",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 57,
@@ -1007,16 +1009,29 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "ailin-villas-6-faza",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/projects/thailand/phuket/thalang/sakhu/aileen-villas-phase-6",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current project page explicitly identifies Trinity Property Co., Ltd. as developer of Aileen Villas Phase 6; first-party Aileen site independently identifies the Aileen brand as developed by Trinity. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "ailin-villas-vtoraya-faza",
     "name": "Айлин Виллас вторая фаза",
     "market": "phuket",
     "family": "Aileen",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-043",
+    "candidate_developer_ids": [
+      "PHK-043"
+    ],
+    "mapping_status": "verified_public_sources",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 58,
@@ -1025,16 +1040,29 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "ailin-villas-vtoraya-faza",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/property-developers/trinity-property-co-ltd-d2698",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current developer project index lists Aileen Villas Tropico Phase 2 under Trinity Property; first-party Aileen site independently identifies the brand as developed by Trinity. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "ailin-villas-ravaii",
     "name": "Айлин Виллас Равайи",
     "market": "phuket",
     "family": "Aileen",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-043",
+    "candidate_developer_ids": [
+      "PHK-043"
+    ],
+    "mapping_status": "verified_public_sources",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 59,
@@ -1043,16 +1071,29 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "ailin-villas-ravaii",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/property-developers/trinity-property-co-ltd-d2698",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current developer project index lists Aileen Villas Rawai under Trinity Property; first-party Aileen site independently identifies the brand as developed by Trinity. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "ailin-rezidens-bangtao",
     "name": "Айлин Резиденс Бангтао",
     "market": "phuket",
     "family": "Aileen",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-043",
+    "candidate_developer_ids": [
+      "PHK-043"
+    ],
+    "mapping_status": "verified_public_sources",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 60,
@@ -1061,16 +1102,29 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "ailin-rezidens-bangtao",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://propertyscout.co.th/en/phuket/townhouse/aileen-residence-bangtao-1-townhouse/",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current exact project page states Aileen Residence Bangtao 1 is developed by Trinity Property Co., Ltd.; first-party Aileen site independently identifies the group. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "ailin-rezidens-lagun",
     "name": "Айлин Резиденс Лагун",
     "market": "phuket",
     "family": "Aileen",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-043",
+    "candidate_developer_ids": [
+      "PHK-043"
+    ],
+    "mapping_status": "verified_public_sources",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 61,
@@ -1079,7 +1133,18 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "ailin-rezidens-lagun",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/projects/thailand/phuket/thalang/choeng-thale/aileen-residence-lagoon",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current exact project page identifies Trinity Property Co., Ltd. as developer of Aileen Residence Lagoon; first-party Aileen site independently identifies the group. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "anchan-1-i-2",

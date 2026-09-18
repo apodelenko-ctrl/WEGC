@@ -1,6 +1,6 @@
 {
   "projects_total": 618,
-  "developer_master_rows": 42,
+  "developer_master_rows": 43,
   "developer_rows_are_verified_legal_entities": false,
   "projects_with_inherited_family": 111,
   "project_mapping_counts": {
@@ -8,15 +8,17 @@
     "excluded_non_residential": 1,
     "ambiguous_group": 5,
     "verified_primary_source": 5,
-    "unresolved_family_not_in_master": 6,
+    "verified_public_sources": 5,
+    "unresolved_family_not_in_master": 1,
     "unresolved_no_family": 507
   },
-  "developers_with_fresh_public_contacts": 7,
+  "developers_with_fresh_public_contacts": 8,
   "projects_excluded_non_residential": 1,
   "projects_with_primary_developer_group": 5,
+  "projects_with_verified_public_developer_group": 10,
   "fresh_contact_coverage_by_kind": {
-    "email": 7,
-    "phone": 7,
+    "email": 8,
+    "phone": 8,
     "whatsapp": 2,
     "telegram": 0,
     "line": 1,

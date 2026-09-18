@@ -67,13 +67,16 @@ class RegistryTest(unittest.TestCase):
     def test_nonresidential_record_preserved_but_held(self):
         p=next(p for p in self.result['project_links'] if p['project_id']=='andamanda-phuket')
         self.assertEqual(p['mapping_status'],'excluded_non_residential');self.assertIsNone(p['developer_id'])
-    def test_unique_group_exact_projects_only(self):
+    def test_unique_and_trinity_exact_project_boundaries(self):
         links={p['project_id']:p for p in self.result['project_links']}
         for pid in ('ailin-villas','yunik-eko-viva'):
             self.assertEqual(links[pid]['developer_id'],'PHK-042')
             self.assertEqual(links[pid]['mapping_status'],'verified_primary_source')
         for pid in ('ailin-villas-6-faza','ailin-villas-vtoraya-faza','ailin-villas-ravaii','ailin-rezidens-bangtao','ailin-rezidens-lagun'):
-            self.assertIsNone(links[pid]['developer_id'])
+            self.assertEqual(links[pid]['developer_id'],'PHK-043')
+            self.assertEqual(links[pid]['mapping_status'],'verified_public_sources')
+            self.assertFalse(links[pid]['legal_seller_verified'])
+            self.assertFalse(links[pid]['commercially_enabled'])
     def test_unique_group_contact_is_public_but_not_partner_route(self):
         d=next(d for d in self.result['developers'] if d['developer_id']=='PHK-042')
         self.assertTrue(d['fresh_contact_verified'])
@@ -83,6 +86,14 @@ class RegistryTest(unittest.TestCase):
         obs=copy.deepcopy(self.obs)
         row=next(r for r in obs['records'] if r.get('field_evidence'));del row['field_evidence'][0]['source_url']
         with self.assertRaises(ValueError):build(ROOT,obs)
+    def test_secondary_verified_mapping_is_not_sendable(self):
+        link=next(p for p in self.result['project_links'] if p['project_id']=='ailin-villas-6-faza')
+        dev=next(d for d in self.result['developers'] if d['developer_id']=='PHK-043')
+        case={'case_id':'case-secondary','agency_id':'agency-test','project_id':link['project_id'],'request_revision':1,'profile':'mira_agency'}
+        agreement={'developer_id':'PHK-043','status':'active','evidence_ref':'fixture','project_ids':[link['project_id']],'valid_at_request':True}
+        planned=plan_inquiry(case,link,dev,agreement)
+        self.assertIn('project_developer_not_verified',planned['blockers'])
+        self.assertFalse(planned['send_authorized'])
 
 class InquiryTest(unittest.TestCase):
     def setUp(self):

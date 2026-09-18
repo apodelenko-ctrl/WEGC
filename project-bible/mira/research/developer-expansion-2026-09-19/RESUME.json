@@ -1,8 +1,8 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
   "status": "in_progress",
-  "source_commit": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
-  "checkpoint_at": "2026-09-18T20:03:00Z",
+  "source_commit": "07527a6b9b90a5063553c64188c1f5ef5ddd318e",
+  "checkpoint_at": "2026-09-18T21:20:00Z",
   "completed": [
     "existing_source_inventory",
     "exact_alias_projection_618_phuket",
@@ -14,34 +14,38 @@
     "B002_registry23tests",
     "B003_Unique_Group_primary_site",
     "B003_Aileen_Phase1_and_Unique_Eco_Viva_exact_links",
-    "B003_registry25tests"
+    "B003_registry25tests",
+    "B004_Trinity_Property_public_group_and_contacts",
+    "B004_five_Aileen_exact_public_source_links",
+    "B004_registry26tests_secondary_links_remain_unsendable"
   ],
   "next_actions": [
-    "Private native87 ↔ public master41 crosswalk; no total addition",
-    "Aileen remaining5, Naturale Kamala1, Banyan ambiguity5",
+    "Private native87 ↔ public master43 crosswalk; no total addition",
+    "Naturale Kamala1 and Banyan ambiguity5",
     "Review possible Zero Bang Tao / Nai Yang / Silhouette duplicate catalogue labels without deleting IDs",
     "Missing family507; then other60 published market records",
     "Named agency-relations and missing messenger fields",
     "Private Botanica/The Title reconciliation; do not send first-contact again"
   ],
-  "developer_cursor": "Aileen_remaining_5_then_Naturale_Kamala_1_and_Banyan_5",
+  "developer_cursor": "Naturale_Kamala_1_then_Banyan_5",
   "crm_imported": false,
   "external_sends": 0,
   "final_report_required": true,
   "stop_by": "2026-09-19T08:00:00+07:00",
   "latest_native_crm_source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
   "native_developer_research_count": 87,
-  "latest_checkpoint_event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b003.json",
+  "latest_checkpoint_event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b004.json",
   "counts": {
-    "developer_master_rows": 42,
-    "fresh_public_contacts": 7,
+    "developer_master_rows": 43,
+    "fresh_public_contacts": 8,
     "primary_project_group_links": 5,
-    "unmatched_family": 6,
+    "verified_public_project_group_links": 10,
+    "unmatched_family": 1,
     "ambiguous": 5,
     "no_family": 507,
     "excluded_non_residential": 1
   },
-  "remaining": "Aileen Phase1 and Unique Eco Viva now have exact primary group links. Five other Aileen-labelled records remain unresolved because at least one current Aileen Residence line is attributed by secondary sources to a different developer; Naturale Kamala is not assumed AAG; Banyan five remain ambiguous. Other507 missing family and60 other-market records are unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
+  "remaining": "Five remaining Aileen-labelled records now have exact current public-source links to Trinity Property, while Phase1 remains mapped to Unique Group from its primary project page. These five links are not primary-source grade and are deliberately not sendable. Naturale Kamala is not assumed AAG; Banyan five remain ambiguous. Other507 missing-family and60 other-market records are unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
   "latest_result_commit": "cc1dc0876e8ac5c1793c52750136c7aa11df2db7",
-  "latest_result_commit_note": "Published B003 data/code checkpoint after full-blob repair; separate receipt-only commit stores this pointer."
+  "latest_result_commit_note": "B004 data/code commit will be recorded by the following receipt-only commit."
 }

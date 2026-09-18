@@ -325,6 +325,53 @@
         "agency_relations_email": "not_found"
       },
       "note": "The official site links both Aileen Villas Phase 1 and Unique Eco Viva to this group. The WhatsApp target is the exact published link; no message was sent. Other Aileen-labelled catalogue rows are not assigned by name alone."
+    },
+    {
+      "developer_id": "PHK-043",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "info@aileenvillas.com",
+          "source_url": "https://www.aileenvillas.com/",
+          "checked_at": "2026-09-18T21:20:00Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false,
+          "evidence_capture": "indexed_first_party_content; direct_open_timeout"
+        },
+        {
+          "kind": "phone",
+          "value": "+66 64 398 8468",
+          "source_url": "https://www.aileenvillas.com/",
+          "checked_at": "2026-09-18T21:20:00Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false,
+          "evidence_capture": "indexed_first_party_content; direct_open_timeout"
+        }
+      ],
+      "field_evidence": [
+        {
+          "field": "developer_group",
+          "value": "Trinity Property Co., Ltd.",
+          "source_url": "https://www.aileenvillas.com/",
+          "checked_at": "2026-09-18T21:20:00Z",
+          "verification_status": "first_party_claim_not_registry_verified",
+          "evidence_capture": "indexed_first_party_content; direct_open_timeout"
+        }
+      ],
+      "missing_fields": {
+        "legal_entity_registry_confirmation": "not_found",
+        "named_sales_person": "not_found",
+        "direct_public_work_email": "not_found",
+        "telegram_url": "not_found",
+        "line_url": "not_found",
+        "agency_relations_email": "not_found"
+      },
+      "note": "The indexed first-party brand site names Trinity Property and publishes general contacts. Exact project mappings below remain separate evidence decisions. No contact attempt was made and no active agreement, price, availability or commission is asserted."
     }
   ],
   "project_observations": [
@@ -382,6 +429,51 @@
       "checked_at": "2026-09-18T19:11:22Z",
       "basis": "Retrieved official homepage search content describes a water park, not a residential project. Direct open failed. Hold out of residential supplier target, retain catalogue ID and request LOCAL taxonomy correction.",
       "evidence_capture": "official_search_result_content; direct_open_blocked"
+    },
+    {
+      "project_id": "ailin-villas-6-faza",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/projects/thailand/phuket/thalang/sakhu/aileen-villas-phase-6",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current project page explicitly identifies Trinity Property Co., Ltd. as developer of Aileen Villas Phase 6; first-party Aileen site independently identifies the Aileen brand as developed by Trinity. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "ailin-villas-vtoraya-faza",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/property-developers/trinity-property-co-ltd-d2698",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current developer project index lists Aileen Villas Tropico Phase 2 under Trinity Property; first-party Aileen site independently identifies the brand as developed by Trinity. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "ailin-villas-ravaii",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/property-developers/trinity-property-co-ltd-d2698",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current developer project index lists Aileen Villas Rawai under Trinity Property; first-party Aileen site independently identifies the brand as developed by Trinity. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "ailin-rezidens-bangtao",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://propertyscout.co.th/en/phuket/townhouse/aileen-residence-bangtao-1-townhouse/",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current exact project page states Aileen Residence Bangtao 1 is developed by Trinity Property Co., Ltd.; first-party Aileen site independently identifies the group. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "ailin-rezidens-lagun",
+      "developer_id": "PHK-043",
+      "mapping_status": "verified_public_sources",
+      "visibility": "public_business",
+      "source_url": "https://www.fazwaz.com/projects/thailand/phuket/thalang/choeng-thale/aileen-residence-lagoon",
+      "checked_at": "2026-09-18T21:20:00Z",
+      "basis": "Current exact project page identifies Trinity Property Co., Ltd. as developer of Aileen Residence Lagoon; first-party Aileen site independently identifies the group. Legal seller and contract coverage remain unverified."
     }
   ]
 }
