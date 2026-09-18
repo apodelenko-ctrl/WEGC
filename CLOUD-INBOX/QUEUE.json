@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-18",
+  "timezone": "Asia/Bangkok",
+  "repository": "apodelenko-ctrl/WEGC",
+  "sourceBranch": "mira/research-night-20260918",
+  "scope": "owner_requested_documentation_handoff_only",
+  "mainIntegrationConfirmed": false,
+  "localStartupRuleInstalled": false,
+  "localReceiptConfirmed": false,
+  "outreachAuthorized": false,
+  "productionWriteAuthorizedForCloud": false,
+  "newAutomationCreated": false,
+  "handoffIssue": 14,
+  "tasks": [
+    {
+      "id": "MIRA-COORD-20260918-01",
+      "priority": "P0-coordination",
+      "status": "ready_for_local_review",
+      "owner": "LOCAL",
+      "title": "Read shared cloud inbox and integrate startup pointer without replacing existing instructions",
+      "sourcePath": "CLOUD-INBOX/README.md",
+      "sourceCommit": "6aad9712eb81c5b6ee4a3e5406d74596df899a74",
+      "acceptance": [
+        "Existing worktree and current progress preserved",
+        "Local instructions point to README and QUEUE, including explicit research branch until reviewed integration",
+        "Receipt links task ID, exact source commit and local result",
+        "No public-site section, new watcher or scheduler created"
+      ],
+      "receiptPath": "CLOUD-INBOX/receipts/MIRA-COORD-20260918-01.json",
+      "receipt": null
+    },
+    {
+      "id": "MIRA-MKT-20260918-01",
+      "priority": "P1-owner-request",
+      "status": "ready_for_local_review",
+      "owner": "LOCAL",
+      "title": "Evaluate existing tools first; accept ready-made CRM and permissioned email pilot",
+      "sourceCommit": "2d5b7ca138a5905e2dc9bcf8baef4cec05d520c0",
+      "sourcePaths": [
+        "project-bible/mira/research/day-2026-09-18/results/M01-smtp-crm-decision.md",
+        "project-bible/mira/research/day-2026-09-18/results/M02-marketing-waves-and-lustica-drafts.md",
+        "project-bible/mira/research/day-2026-09-18/results/M03-hugging-face-and-instagram.md",
+        "project-bible/mira/research/day-2026-09-18/results/M04-local-integration-task.md"
+      ],
+      "cloudCompleted": "Public-source research, software recommendation, marketing drafts and local acceptance specification only",
+      "preferredStack": "EspoCRM plus an approved SMTP relay; listmonk only if native marketing acceptance is insufficient",
+      "firstPersonalDeveloperTarget": "Lustica Bay",
+      "firstTargetEmailVerified": false,
+      "agencyFunnelMarket": "Phuket",
+      "planningTarget": "2026-09-19/2026-09-20, subject to actual acceptance; no completion guarantee",
+      "dailyTotalEmailCapProposal": 200,
+      "initialApprovedPilotSizeProposal": "10-20 eligible recipients; not an approved list",
+      "allAcceptanceTestsInitialStatus": "NOT_RUN",
+      "remainingHolds": [
+        "Current private local CRM/mail/server configuration not observed",
+        "Sender/provider suitability, credentials and infrastructure permission",
+        "Recipient permission and jurisdiction-specific assessment",
+        "SMTP production access if using a sandbox account",
+        "Native reply-stop and complaint/global suppression acceptance",
+        "Actual source-based sender/template/list approval before any external mail",
+        "Exact Lustica Bay recipient and working language",
+        "Instagram account/app permissions and applicable advertising restrictions",
+        "Hugging Face Spaces discovery incomplete; three exact model cards reviewed, no model test performed"
+      ],
+      "mustNotRepeat": [
+        "Existing MIRA deployment/operator setup",
+        "Already completed local ordinary-applicant acceptance, if newer evidence confirms it",
+        "Whole 80-agency dataset collection",
+        "Import from damaged historical detailed Belarus CSV"
+      ],
+      "receiptPath": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
+      "receipt": null
+    }
+  ],
+  "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
+  "note": "This queue does not change C04-C16 status, create continuous execution, authorize external messages, or prove delivery to the local Mac process. Local remains sole integrator/deployer."
+}
