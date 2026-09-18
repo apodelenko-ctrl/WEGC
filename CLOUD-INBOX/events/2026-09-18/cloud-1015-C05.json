@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "eventId": "EV-20260918-CLOUD-1015-C05",
+  "recordedAt": "2026-09-18T10:26:00+07:00",
+  "actor": "CLOUD",
+  "taskId": "C05",
+  "status": "completed_research_routes_not_licensed",
+  "artifact": "project-bible/mira/research/day-2026-09-18/results/C05-bali-media-rights-routes.md",
+  "artifactCommit": "3899792848528a4c2082e2012b0d5615de4e4893",
+  "scope": "15 existing Bali research records; exact media/rightsholder/permission routes only",
+  "keyResults": [
+    "Magnum Berawa/Sanur have an official current media-kit route with terms and approval requirements",
+    "Mirah site terms explicitly require prior written consent for commercial/non-personal use, covering Secana/SOMOS site assets unless separately licensed",
+    "BREIG ELYSIUM current legal terms require written permission for commercial reproduction",
+    "Nuanu Ecoverse/ORIGINS partner routes expose exact project resources but no public redistribution licence was found",
+    "LOYO has a registered/accredited-agent material route for XO Pandawa; MIRA accreditation is not inferred",
+    "NEXA, BALIX, Sunny, SWOI, ANTA and EDEM now have precise corporate permission routes; no public licence found",
+    "ERA stays on the already-prepared C01 permission route; no repeated blind download"
+  ],
+  "newPublicationApprovedMedia": 0,
+  "newAssetBytesCommitted": 0,
+  "externalActions": 0,
+  "holds": [
+    "Magnum media-kit full terms must be reviewed/accepted for exact intended channels before asset use",
+    "Written consent or partner/accreditation terms are still required for all other Bali records",
+    "Uninspected direct asset URLs remain not visually verified",
+    "No project price/availability/ROI/completion/commission claim was validated in this block"
+  ]
+}
