@@ -1,5 +1,17 @@
 # MIRA cloud lane — 18 September 2026
 
+## 09:26 Bangkok — owner-requested SMTP/CRM/marketing extension
+
+Completed four separate research/content artifacts, not software installation or live marketing:
+- `results/M01-smtp-crm-decision.md`: ready-made CRM/email comparison; recommended EspoCRM plus permitted SMTP relay, listmonk only if native campaign acceptance is insufficient. Current Zoho Mail marketing restrictions, SES sandbox/explicit-request gate and current Essentials versus à-la-carte pricing were checked. No provider account, plan or credentials were provisioned.
+- `results/M02-marketing-waves-and-lustica-drafts.md`: separate agency/developer introductions, personal **Luštica Bay first-priority** draft, one follow-up and four-week permissioned content plan. The owner priority is not a claim of project ownership or an existing agreement. Exact Luštica recipient is unresolved; no address was guessed and no message sent.
+- `results/M03-hugging-face-and-instagram.md`: three exact model cards checked (Qwen3-8B, bge-m3, Whisper large-v3-turbo); Postiz integration prerequisites and draft editorial programme. Relevant Hugging Face Spaces discovery was unavailable; this is not an exhaustive scan or runtime benchmark. No model or social account was deployed.
+- `results/M04-local-integration-task.md`: local-only implementation proposal, existing CRM-field reuse, recipient/suppression gates, 14 acceptance scenarios all NOT_RUN, and a factual receipt protocol. Existing MIRA access/admin and buyer-operation gates are preserved.
+
+By the owner's NEW explicit request for a root shared task folder, created **CLOUD-INBOX/README.md** and **CLOUD-INBOX/QUEUE.json** on the same research branch. This is a narrow documentation-handoff exception to the previous day-folder-only scope, not permission to change main, AGENTS, production code, DNS, accounts or permissions. Local must selectively integrate the startup pointer and acknowledge it. Mac receipt, main integration and installed startup rule remain unconfirmed. Reference snapshots: M01–M04 at `2d5b7ca138a5905e2dc9bcf8baef4cec05d520c0`; root queue at `d8414ce1a7687beb4746635f6119322e9f68be26`.
+
+The requested 19–20 September launch is a planning target subject to actual local/site/mail/recipient acceptance, not an achieved or guaranteed deadline. All marketing drafts are unapproved for sending. Public funnel remains Phuket-only. Research counts remain 25 complete / 5 partial, 80 agency candidates and zero new approved images. No new automation or changes to the bounded hourly series were made. This direct owner extension does NOT mark C04–C16 done: next scheduled research task remains C04 unless another run has since claimed it.
+
 ## 09:00 checkpoint — C02/C03 completed
 
 C02 Waterpoint: current Nam Long/Waterpoint first-party sources strengthen the project identity and normalize the current location label to **Ben Luc, Tay Ninh**, while preserving older Long An references as historical source context. A targeted fresh search did not establish a concrete Russian-language/Russian-speaking agency publication for the exact Waterpoint project. Waterpoint therefore remains `partial_for_validation`; `agencyPublisherCount=0` should remain until real evidence exists. Result: `results/C02-waterpoint-vietnam-closure.md`.
