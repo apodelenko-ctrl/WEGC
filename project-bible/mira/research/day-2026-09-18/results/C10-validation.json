@@ -1,0 +1,33 @@
+{
+  "packageId": "MIRA-C10-20260918",
+  "date": "2026-09-18",
+  "timezone": "Asia/Bangkok",
+  "runId": "cloud-1244-C10-C11",
+  "input": "C10-agency-review-pack.json",
+  "checks": {
+    "json_parses": true,
+    "exact_12_records": true,
+    "six_RU_six_BY": true,
+    "unique_stable_IDs": true,
+    "web_sources_all_present": true,
+    "no_actual_recipients": true,
+    "send_gate_false": true,
+    "newsletter_gate_false": true,
+    "commercial_gate_false": true,
+    "buyer_gate_false": true,
+    "all_BY_licences_unverified": true,
+    "route_error_preserved": true,
+    "draft_fields_complete": true,
+    "all_segments_have_body": true
+  },
+  "executed": 14,
+  "passed": 14,
+  "failed": 0,
+  "inputSha256": "ee4df8e24c4915af496152b5369d78b7d5bfc3cdb89137ddb30240eba036fd17",
+  "inputGitBlobSha1": "50c050f0204b04ad9f80298a3e872e3f43e8259d",
+  "githubFetchConfirmedMatchingBlob": true,
+  "scope": "Offline JSON structure and gate checks only; not CRM import, application/browser tests, provider account setup or live delivery",
+  "m04LiveAcceptanceTestsExecutedThisRun": 0,
+  "newApplicationsInstalledThisRun": 0,
+  "externalMessagesSentThisRun": 0
+}
