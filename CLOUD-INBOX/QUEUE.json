@@ -78,7 +78,7 @@
     {
       "id": "MIRA-COORD-20260918-01",
       "priority": "P0-coordination",
-      "status": "startup_rule_installed_accounting_reconciliation_pending",
+      "status": "done_scoped_coordination_only",
       "owner": "LOCAL",
       "title": "Integrate shared findings, decisions and daily board into existing startup/checkpoint instructions",
       "sourcePath": "CLOUD-INBOX/README.md",
@@ -93,13 +93,16 @@
         "No public-site section, new watcher or new scheduler created"
       ],
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-COORD-20260918-01.json",
-      "receipt": null,
+      "receipt": {
+        "path": "CLOUD-INBOX/receipts/MIRA-COORD-20260918-01.json",
+        "updatedAt": "2026-09-18T18:39:09Z"
+      },
       "evidenceReceiptPath": "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json"
     },
     {
       "id": "MIRA-MKT-20260918-01",
       "priority": "P1-owner-request",
-      "status": "private_native_mail_lab_accepted_public_vps_pending",
+      "status": "local_own_mail_accepted_public_vps_pending",
       "owner": "LOCAL",
       "title": "Use Brevo Free marketing path and prepare EspoCRM lab without repeated software-choice approval",
       "sourceCommit": "ba46adab04af7d9e259d122384efd811d23392e7",
@@ -116,7 +119,7 @@
         "project-bible/mira/research/day-2026-09-18/results/M03-hugging-face-and-instagram.md"
       ],
       "cloudCompleted": "Free-tier comparison, delegated technical decision, shared records, isolated lab preparer and 12 passed generator unit tests; not software installation or real mail",
-      "preferredStack": "Existing EspoCRM + own mail server per latest owner decision; public VPS not provisioned",
+      "preferredStack": "Existing EspoCRM + owner-requested own Postfix/Dovecot; Brevo no longer mandatory",
       "providerDailyFreeAllowance": 300,
       "dailyTotalEmailCapProposal": 200,
       "dailyCapActuallyConfigured": true,
@@ -134,13 +137,13 @@
         "scope": "configuration preparation only"
       },
       "remainingHolds": [
-        "Public VPS/domain/TLS/identity and controlled external deliverability",
-        "Authenticated automatic DSN/complaint ingestion (manual stop only)",
-        "Real staff/MFA, approved documents and sender footer",
-        "Offsite retention/load/recovery",
-        "Complete city/canonical/contact reconciliation",
-        "Newer CLOUD flow and live model/channel connection",
-        "Media/contracts/QR/Russia-noVPN/admin403"
+        "Public VPS/mail domain/TLS/identity and controlled external deliverability",
+        "Automatic authenticated DSN/complaint ingestion (manual stop is implemented only)",
+        "Real staff/MFA, approved documents and actual sender footer",
+        "Offsite retention/load/recovery operation",
+        "Complete60-city canonical contact reconciliation",
+        "Newer CLOUD client flow and live model/channel connection",
+        "Media/contract evidence and physical QR/Russia-noVPN/liveadmin403"
       ],
       "mustNotRepeat": [
         "Owner choice confirmation for EspoCRM/free provider/routine isolated setup",
@@ -153,8 +156,7 @@
       "receipt": {
         "path": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
         "updatedAt": "2026-09-18T18:39:09Z",
-        "localCommit": "d472b7462de1a3f50eb571ca756580c1fe3ba2fa",
-        "publicMailAccepted": false
+        "localSourceCommit": "54d80452d36080ded3d141fbac56a2c22506f16c"
       },
       "latestOwnerRequestViaLocalReceipt": {
         "source": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
@@ -173,7 +175,25 @@
       },
       "ownerMailDecision": "Own mail server; supersedes required Brevo choice. Local lab passed; VPS prepared only, no purchase.",
       "dailyCapScope": "LOCAL native mail lab; 200/day attempted sends, no public external sending",
-      "previousPreferredStackHistorical": "EspoCRM for relationships plus Brevo Free Campaigns/Marketing Automation; existing suitable CRM may be retained"
+      "previousPreferredStackHistorical": "EspoCRM for relationships plus Brevo Free Campaigns/Marketing Automation; existing suitable CRM may be retained",
+      "history": [
+        {
+          "at": "2026-09-18T18:39:09Z",
+          "status": "private_native_mail_lab_accepted_public_vps_pending",
+          "preferredStack": "Existing EspoCRM + own mail server per latest owner decision; public VPS not provisioned",
+          "remainingHolds": [
+            "Public VPS/domain/TLS/identity and controlled external deliverability",
+            "Authenticated automatic DSN/complaint ingestion (manual stop only)",
+            "Real staff/MFA, approved documents and sender footer",
+            "Offsite retention/load/recovery",
+            "Complete city/canonical/contact reconciliation",
+            "Newer CLOUD flow and live model/channel connection",
+            "Media/contracts/QR/Russia-noVPN/admin403"
+          ]
+        }
+      ],
+      "ownerDecision": "Own mail server integrated with existing CRM. No VPS exists; prepare option only, purchase not authorized. This supersedes required Brevo choice, not outreach/document release gates.",
+      "dailyCapAcceptanceScope": "Isolated native journal200/201; public acceptance NOT_RUN"
     },
     {
       "id": "MIRA-OMNI-20260918-01",
@@ -222,7 +242,7 @@
       "id": "MIRA-CLOSEOUT-20260918-01",
       "owner": "LOCAL",
       "priority": "P0-after-current-checkpoint",
-      "status": "per_item_checkpoint_report_received_remaining_partial",
+      "status": "partial_checkpoint_returned",
       "sourcePath": "CLOUD-INBOX/MASTER-STATUS.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
       "preservesExistingTaskIds": true,
@@ -230,9 +250,7 @@
       "ackReadSourceCommit": "ad312425b83b19f0b148d78d66103fb02d338538",
       "receipt": {
         "path": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
-        "updatedAt": "2026-09-18T18:39:09Z",
-        "allDone": false,
-        "migration": "prepared_not_migrated"
+        "updatedAt": "2026-09-18T18:39:09Z"
       }
     },
     {
@@ -323,11 +341,12 @@
   },
   "latestEvidenceReconciliation": {
     "sourceCommitRead": "e0f7e405c0e040ff4208a6c3b26f9f6a20b33fa6",
-    "at": "2026-09-18T17:46:00Z",
+    "at": "2026-09-18T18:39:09Z",
     "source": "receipts updated2026-09-18T17:27:20Z",
     "publicIntegrationConfirmed": true,
     "wholeResearchBranchIntegrated": false,
-    "allTasksComplete": false
+    "allTasksComplete": false,
+    "localMailCheckpoint": "54d80452d36080ded3d141fbac56a2c22506f16c"
   },
   "cloudTransition": {
     "status": "local_per_item_report_received_private_artifact_transfer_pending",
@@ -347,5 +366,9 @@
     "totalAccounts": 167,
     "scope": "PRIVATE_LOCAL_LAB_NOT_HOSTED_PUBLIC_MAIL",
     "canonicalCrosswalkComplete": false
+  },
+  "currentOwnerFollowup": {
+    "at": "2026-09-18 18:44:24 UTC",
+    "scope": "Read Botanica document request, inventory Singapore company files, create owner-only document vault and project-bible index; no sending/signing or public document upload."
   }
 }
