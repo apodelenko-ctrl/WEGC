@@ -20,7 +20,7 @@ if __name__=='__main__':
     os.umask(0o077)
     parser=argparse.ArgumentParser(); parser.add_argument('--limit',type=int,default=100)
     args=parser.parse_args(); env=os.environ
-    store=Store(env['MIRA_DB'])
+    store=Store(env['MIRA_DB'],profile=env['MIRA_PROFILE'])
     with open(env['MIRA_KB'],encoding='utf-8') as f: kb=json.load(f)
     engine=Engine(store,AnthropicIntelligence(),kb)
     dispatcher=Dispatcher(store,Sender(),enabled=env.get('MIRA_SEND_ENABLED')=='true')

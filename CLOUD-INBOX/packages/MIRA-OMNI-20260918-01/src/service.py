@@ -33,6 +33,9 @@ def handler(store, env):
                     if not checked_secret(self.headers.get('Authorization'), 'Bearer '+env['MIRA_INTERNAL_TOKEN']):
                         return self.reply(403,{'error':'forbidden'})
                     e=json.loads(body)
+                    # Server setting wins; a browser cannot choose the product.
+                    if 'profile' in e and e['profile']!=store.profile: raise ValueError('profile override')
+                    e['profile']=store.profile
                     if e.get('channel') not in {'web','email'}: raise ValueError('bridge channel')
                     result=[store.ingest(e)]
                 else:
@@ -51,5 +54,5 @@ if __name__=='__main__':
     os.umask(0o077)
     env=os.environ
     if len(env.get('MIRA_INTERNAL_TOKEN',''))<32: raise SystemExit('Private MIRA_INTERNAL_TOKEN of at least 32 characters required')
-    server=ThreadingHTTPServer(('127.0.0.1',int(env.get('MIRA_PORT','8789'))),handler(Store(env['MIRA_DB']),env))
+    server=ThreadingHTTPServer(('127.0.0.1',int(env.get('MIRA_PORT','8789'))),handler(Store(env['MIRA_DB'],profile=env['MIRA_PROFILE']),env))
     server.serve_forever()

@@ -1,0 +1,22 @@
+{
+  "id": "KB-PROFILES-20260918",
+  "task_id": "MIRA-OMNI-20260918-01",
+  "date": "2026-09-18",
+  "owner_request": "Reuse the best of Phuket AI knowledge for MIRA, enrich from project context, prevent MIRA conversations in Phuket buyer assistant",
+  "findings": [
+    "legacy knowledge mixes buyer sales, project assertions, payment instructions",
+    "legacy unknown-project rule asserts index presence without lookup"
+  ],
+  "decisions": [
+    "same engine/provider; different server profiles, databases, scopes and histories",
+    "curated MIRA context from accepted decisions and sales playbook",
+    "no automatic approval of inherited commercial or legal assertions"
+  ],
+  "completed": {
+    "tests_passed": 41,
+    "context_blocks": 23,
+    "unapproved_reference_records": 47
+  },
+  "production_changed": false,
+  "local_receipt": null
+}

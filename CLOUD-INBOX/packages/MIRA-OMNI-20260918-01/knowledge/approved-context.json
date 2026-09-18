@@ -1,0 +1,530 @@
+[
+  {
+    "id": "mira.identity",
+    "text": "МИРА — «Международная инфраструктура риэлторских агентств»: B2B-продукт для агентств, которые хотят добавить зарубежную недвижимость в свой ассортимент. Базовая модель — агентство сохраняет клиента и свой бренд, а МИРА помогает организовать международную часть сделки.",
+    "profiles": [
+      "mira_agency",
+      "mira_developer"
+    ],
+    "audiences": [
+      "agency",
+      "developer"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/08-decisions-log.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "what_is_mira",
+      "positioning"
+    ]
+  },
+  {
+    "id": "mira.client",
+    "text": "Клиент и отношения с ним остаются у вашего агентства. Вы ведёте своего клиента под собственным брендом; условия регистрации клиента и взаимодействия с застройщиком согласуются по конкретному проекту.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "client_ownership",
+      "brand",
+      "objection"
+    ]
+  },
+  {
+    "id": "mira.value",
+    "text": "МИРА помогает агентству организовать зарубежное направление без самостоятельной сборки всей международной инфраструктуры. В модели продукта объединены проекты, координация с застройщиком, материалы и сопровождение международной части сделки; конкретный объём работы согласуется для выбранного проекта.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "value",
+      "scope"
+    ]
+  },
+  {
+    "id": "mira.first_market",
+    "text": "Пхукет — стартовый фокус агентского направления МИРА. Если у вас есть запрос по другой стране, его можно отдельно разобрать со специалистом и проверить доступность подходящих проектов и условий.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/08-decisions-log.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "markets",
+      "phuket_first"
+    ]
+  },
+  {
+    "id": "mira.catalog",
+    "text": "Карточка в исследовательском каталоге помогает изучить проект. Она сама по себе не подтверждает свободный лот, актуальную цену, подписанный договор с застройщиком или возможность бронирования. Эти сведения проверяются отдельно по выбранному проекту.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "response_policy",
+    "tags": [
+      "catalog",
+      "availability"
+    ]
+  },
+  {
+    "id": "mira.commission",
+    "text": "Комиссия и доля агентства зависят от конкретного проекта, условий застройщика и договора. Единого подтверждённого процента для всех объектов нет. Укажите интересующий проект — точные условия нужно сверить со специалистом.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": [
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/08-decisions-log.md",
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md"
+    ],
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "commission",
+      "split"
+    ]
+  },
+  {
+    "id": "mira.payout",
+    "text": "Порядок и срок выплаты комиссии определяются условиями конкретного проекта и договора. Чтобы назвать точный срок, специалисту нужно проверить условия выбранной сделки.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "payout",
+      "timing"
+    ]
+  },
+  {
+    "id": "mira.lead_protection",
+    "text": "Регистрация и защита клиента зависят от правил конкретного застройщика и проекта. До регистрации нужно уточнить порядок закрепления клиента и обработки повторных обращений; универсальный срок защиты не обещаем.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "lead_registration",
+      "lead_protection"
+    ]
+  },
+  {
+    "id": "mira.payment_support",
+    "text": "Для доступных сделок платёжное сопровождение обсуждается как отдельная услуга. Возможность проведения, стоимость и необходимые документы уточняются по конкретной сделке; агентская комиссия и стоимость платёжного сопровождения не смешиваются.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": [
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/08-decisions-log.md",
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md"
+    ],
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "payment_support"
+    ]
+  },
+  {
+    "id": "mira.intake",
+    "text": "Подключение агентства проходит через согласованный доступ и рассмотрение заявки. Приглашение и квитанция о подаче заявки ещё не означают активацию: для активного агентства требуется проверка представителя и действующий договор.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/operations/AGENCY-INTAKE-OPERATIONS.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "onboarding",
+      "access"
+    ]
+  },
+  {
+    "id": "mira.next_step",
+    "text": "Начать можно с демонстрации или разбора конкретного запроса вашего клиента. Что сейчас полезнее вашему агентству: понять модель сотрудничества или обсудить уже существующий запрос на зарубежную недвижимость?",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "start",
+      "demo",
+      "next_step"
+    ]
+  },
+  {
+    "id": "mira.already_abroad",
+    "text": "Если вы уже продаёте зарубежную недвижимость, МИРА можно рассматривать как дополнительный источник проектов и поддержки международных сделок. Отказываться от ваших действующих партнёров для обсуждения сотрудничества не требуется.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "objection",
+      "existing_partners"
+    ]
+  },
+  {
+    "id": "mira.direct_developer",
+    "text": "Работать напрямую с застройщиком тоже можно. Идея МИРА — упростить подключение проектов и международную координацию через единый процесс, когда агентству неудобно выстраивать каждый элемент отдельно.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "objection",
+      "direct_developer"
+    ]
+  },
+  {
+    "id": "mira.no_current_demand",
+    "text": "Необязательно перестраивать весь бизнес ради зарубежного направления. Сначала можно обсудить, какие запросы встречаются у вашей клиентской базы и имеет ли смысл готовить для неё конкретное предложение.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "objection",
+      "no_demand"
+    ]
+  },
+  {
+    "id": "mira.materials",
+    "text": "Материалы подбираются по конкретным проектам. Перед передачей для публикации или работы под брендом агентства нужно проверить, какие файлы доступны и на каких условиях их можно использовать.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "materials",
+      "white_label"
+    ]
+  },
+  {
+    "id": "mira.contract",
+    "text": "Для обсуждения договора нужны сведения об агентстве и уполномоченном представителе. Актуальную редакцию и индивидуальные условия передаёт специалист; переписка с помощником не заменяет подписание договора.",
+    "profiles": [
+      "mira_agency"
+    ],
+    "audiences": [
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": [
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md",
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/operations/AGENCY-INTAKE-OPERATIONS.md"
+    ],
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "contract"
+    ]
+  },
+  {
+    "id": "mira.developer_start",
+    "text": "МИРА развивает взаимодействие агентств и застройщиков. Для обсуждения подключения важны конкретный проект и контакт ответственного за агентскую работу; коммерческие условия согласуются отдельно.",
+    "profiles": [
+      "mira_developer"
+    ],
+    "audiences": [
+      "developer"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/08-decisions-log.md",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "developer",
+      "start"
+    ]
+  },
+  {
+    "id": "mira.developer_materials",
+    "text": "Для предметного обсуждения проекта понадобятся актуальные проектные материалы и условия работы с агентствами. Права на использование изображений, правила регистрации клиентов и коммерческие условия нужно подтвердить отдельно.",
+    "profiles": [
+      "mira_developer"
+    ],
+    "audiences": [
+      "developer"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": [
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/08-decisions-log.md",
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md"
+    ],
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "product_policy",
+    "tags": [
+      "developer",
+      "materials"
+    ]
+  },
+  {
+    "id": "phuket.identity",
+    "text": "Я Анна, консультант WEGC по недвижимости на Пхукете. Помогу уточнить запрос и подобрать направление поиска: вы рассматриваете недвижимость для жизни, аренды или другой цели?",
+    "profiles": [
+      "phuket_buyer"
+    ],
+    "audiences": [
+      "buyer"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "assistant_scope",
+    "tags": [
+      "intro",
+      "purpose"
+    ]
+  },
+  {
+    "id": "phuket.qualify",
+    "text": "Чтобы подобрать подходящие варианты на Пхукете, важно понять ваш бюджет, предпочтительный район, тип недвижимости и сроки. Можно начать с того, что для вас важнее всего.",
+    "profiles": [
+      "phuket_buyer"
+    ],
+    "audiences": [
+      "buyer"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "assistant_scope",
+    "tags": [
+      "qualification"
+    ]
+  },
+  {
+    "id": "phuket.catalog_link",
+    "text": "Каталог недвижимости Пхукета: https://wegc.fund/ru/katalog.html. Если уже присмотрели конкретный проект, напишите его название — актуальные условия по нему нужно проверить отдельно.",
+    "profiles": [
+      "phuket_buyer"
+    ],
+    "audiences": [
+      "buyer"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "navigation",
+    "tags": [
+      "catalog_link"
+    ]
+  },
+  {
+    "id": "shared.confirm_project",
+    "text": "По выбранному проекту нужно отдельно подтвердить актуальные цены, наличие и комплектацию. Без свежего подтверждения я не буду называть их установленными условиями.",
+    "profiles": [
+      "phuket_buyer",
+      "mira_agency"
+    ],
+    "audiences": [
+      "buyer",
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": [
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md"
+    ],
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "response_policy",
+    "tags": [
+      "price",
+      "availability",
+      "fitout"
+    ]
+  },
+  {
+    "id": "shared.no_return_guarantee",
+    "text": "Доходность не является гарантией. Для обсуждения конкретного объекта нужны исходные данные и условия расчёта; неподтверждённую цифру доходности я не назову.",
+    "profiles": [
+      "phuket_buyer",
+      "mira_agency"
+    ],
+    "audiences": [
+      "buyer",
+      "agency"
+    ],
+    "visibility": "public_answer",
+    "approved": true,
+    "approval_basis": "curated from accepted project decisions and existing assistant scope; no new commercial terms",
+    "source": [
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+      "https://github.com/apodelenko-ctrl/WEGC/blob/main/project-bible/mira/sales/AGENCY-SALES-PLAYBOOK.md"
+    ],
+    "reviewed_at": "2026-09-18",
+    "valid_until": 1792281600.0,
+    "expiry_basis": "editorial re-review deadline only",
+    "fact_type": "response_policy",
+    "tags": [
+      "yield"
+    ]
+  }
+]

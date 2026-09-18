@@ -1,0 +1,801 @@
+[
+  {
+    "name": "Casa de Monte",
+    "url": "https://wegc.fund/projects/casa-de-monte.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Vivana",
+    "url": "https://wegc.fund/projects/the-title-vivana.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Sierra",
+    "url": "https://wegc.fund/projects/the-title-sierra.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Olive",
+    "url": "https://wegc.fund/projects/the-olive.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Modeva",
+    "url": "https://wegc.fund/projects/the-modeva.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Artrio",
+    "url": "https://wegc.fund/projects/the-title-artrio.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Katabello",
+    "url": "https://wegc.fund/projects/the-title-katabello.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Adora",
+    "url": "https://wegc.fund/projects/the-title-adora.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Vivi",
+    "url": "https://wegc.fund/projects/title-vivi.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Balcony",
+    "url": "https://wegc.fund/projects/the-title-balcony.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Biancana",
+    "url": "https://wegc.fund/projects/the-title-biancana.html",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Coralina",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-coralina",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Cielo",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-cielo",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Halo",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-halo",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Heritage",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-heritage",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Legendary",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-legendary",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Serenity",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-serenity",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Villa Kirara",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-villa-kirara",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Title Villa Estella",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-title-villa-estella",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Grand Avenue",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-grand-avenue",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Hythe",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-hythe",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Four Seasons",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-four-seasons",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Modern Loft",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-modern-loft",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Chalong Bay",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-chalong-bay",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Foresta",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-foresta",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Forestique",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-forestique",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica MontAzure",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-montazure",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Sky Valley",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-sky-valley",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Wisdom",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-wisdom",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Lakeside",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-lakeside",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Louvre",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-louvre",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Grand Sea Through",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanica-grand-sea-through",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Botanica Pru Jampa",
+    "url": "https://wegc.fund/ru/zhk.html?p=botanika-pru-dzhampa",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Laguna Bayside",
+    "url": "https://wegc.fund/ru/zhk.html?p=laguna-bayside",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Laguna Lakeside / Aster",
+    "url": "https://wegc.fund/ru/zhk.html?p=laguna-lakeside",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Laguna Hibiscus",
+    "url": "https://wegc.fund/ru/zhk.html?p=laguna-golf-gibiskus",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Cassia Phuket",
+    "url": "https://wegc.fund/ru/zhk.html?p=cassia-phuket",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Angsana Oceanview Residences",
+    "url": "https://wegc.fund/ru/zhk.html?p=angsana-oceanview-residences",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Banyan Tree Beach Residences Oceanus",
+    "url": "https://wegc.fund/ru/zhk.html?p=banyan-tree-beach-residences-oceanus",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Rhea by Sansiri",
+    "url": "https://wegc.fund/ru/zhk.html?p=rhea-by-sansiri",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Base Cherngtalay",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-base-cherngtalay",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Base Rise",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-base-rise",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "The Base Bukit Phuket",
+    "url": "https://wegc.fund/ru/zhk.html?p=the-base-bukit-phuket",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "So Origin Lagoon",
+    "url": "https://wegc.fund/ru/zhk.html?p=so-origin-lagoon",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "SO Origin Kata",
+    "url": "https://wegc.fund/ru/zhk.html?p=so-origin-kata",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Origin Residences Bangtao",
+    "url": "https://wegc.fund/ru/zhk.html?p=origin-residences-bangtao",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  },
+  {
+    "name": "Origin Place Centre Phuket",
+    "url": "https://wegc.fund/ru/zhk.html?p=origin-place-centre-phuket",
+    "source": "https://github.com/apodelenko-ctrl/WEGC/blob/main/cloudflare-worker/wegc-kb.js",
+    "source_section": "MARKET_PROJECTS",
+    "status": "legacy_reference_requires_current_verification",
+    "approved": false,
+    "excluded_fields": [
+      "priceFrom",
+      "handover",
+      "structure",
+      "area",
+      "note",
+      "contract_status",
+      "media_rights"
+    ]
+  }
+]

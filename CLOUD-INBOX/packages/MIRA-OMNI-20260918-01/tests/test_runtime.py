@@ -10,22 +10,22 @@ import threading, urllib.request
 class RuntimeTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
-        self.path=pathlib.Path(self.tmp.name)/'db.sqlite'; self.s=Store(self.path)
-        self.ctx={'name':'Synthetic agency','role':'agency','crm_account_id':'fixture-account'}
+        self.path=pathlib.Path(self.tmp.name)/'db.sqlite'; self.s=Store(self.path,profile='mira_agency')
+        self.ctx={'profile':'mira_agency','name':'Synthetic agency','role':'agency','crm_account_id':'fixture-account'}
         self.s.bind('fixture',self.ctx,'telegram','bot','10','synthetic operator evidence')
         self.facts=[{'id':'about','text':'SYNTHETIC APPROVED RESPONSE','source':'https://example.invalid/fixture',
-                     'audience':'agency','approved':True,'valid_until':time.time()+1000}]
+                     'audience':'agency','profiles':['mira_agency'],'visibility':'public_answer','approved':True,'valid_until':time.time()+1000}]
         self.calls=[]
         def ai(ctx): self.calls.append(ctx); return {'intent':'QUESTION','fact_ids':['about'],'handoff':False}
         self.ai=ai; self.engine=Engine(self.s,ai,self.facts)
     def event(self, mid='1', **kw):
-        return {'channel':'telegram','account':'bot','peer':'10','message_id':mid,'text':'question',
+        return {'profile':'mira_agency','channel':'telegram','account':'bot','peer':'10','message_id':mid,'text':'question',
                 'occurred_at':time.time(),**kw}
     def process(self, **kw):
         result=self.s.ingest(self.event(**kw)); self.engine.process(result['id']); return result['id']
     def replies(self): return [r for r in self.s.rows('outbox') if r['kind']=='reply']
     def test_durable_restart_and_duplicate(self):
-        e=self.event(); r=self.s.ingest(e); s2=Store(self.path)
+        e=self.event(); r=self.s.ingest(e); s2=Store(self.path,profile='mira_agency')
         self.assertTrue(s2.ingest(e)['duplicate']); self.assertEqual(len(s2.rows('inbox')),1)
         self.engine.process(r['id']); self.assertEqual(self.engine.process(r['id']),'skipped'); self.assertEqual(len(self.replies()),1)
     def test_unverified_endpoint_quarantine(self):
@@ -45,7 +45,7 @@ class RuntimeTests(unittest.TestCase):
         self.assertTrue(any(x.get('campaign')=='fixture' for x in self.calls[-1]['history']))
         self.assertTrue(any(x.get('channel')=='telegram' for x in self.calls[-1]['history']))
     def test_contact_isolation(self):
-        self.s.bind('other',{'role':'agency'},'telegram','bot','30','verified')
+        self.s.bind('other',{'role':'agency','profile':'mira_agency'},'telegram','bot','30','verified')
         self.s.ingest(self.event(peer='30',text='PRIVATE OTHER'))
         self.process(); self.assertNotIn('PRIVATE OTHER',json.dumps(self.calls))
     def test_future_messages_not_in_context(self):
@@ -114,20 +114,20 @@ class RuntimeTests(unittest.TestCase):
     def test_telegram_secret_and_echo(self):
         e={'update_id':1,'message':{'chat':{'id':10,'type':'private'},'from':{'id':10},'text':'hi','date':time.time()}}
         raw=json.dumps(e).encode()
-        with self.assertRaises(PermissionError): normalize('telegram','bot',raw,{}, {'WEBHOOK_SECRET':'secret'})
-        self.assertEqual(len(normalize('telegram','bot',raw,{'X-Telegram-Bot-Api-Secret-Token':'secret'},{'WEBHOOK_SECRET':'secret'})),1)
+        with self.assertRaises(PermissionError): normalize('telegram','bot',raw,{}, {'MIRA_PROFILE':'mira_agency','WEBHOOK_SECRET':'secret'})
+        self.assertEqual(len(normalize('telegram','bot',raw,{'X-Telegram-Bot-Api-Secret-Token':'secret'},{'MIRA_PROFILE':'mira_agency','WEBHOOK_SECRET':'secret'})),1)
         e['message']['from']['id']=20
-        self.assertEqual(normalize('telegram','bot',json.dumps(e).encode(),{'X-Telegram-Bot-Api-Secret-Token':'secret'},{'WEBHOOK_SECRET':'secret'}),[])
+        self.assertEqual(normalize('telegram','bot',json.dumps(e).encode(),{'X-Telegram-Bot-Api-Secret-Token':'secret'},{'MIRA_PROFILE':'mira_agency','WEBHOOK_SECRET':'secret'}),[])
     def test_whatsapp_batch_signature(self):
         data={'entry':[{'changes':[{'value':{'metadata':{'phone_number_id':'sender'},'messages':[
           {'from':'20','id':str(i),'timestamp':str(time.time()),'text':{'body':'hi'}} for i in range(2)]}}]}]}
         raw=json.dumps(data).encode(); signature='sha256='+hmac.new(b'secret',raw,hashlib.sha256).hexdigest()
-        self.assertEqual(len(normalize('whatsapp','sender',raw,{'X-Hub-Signature-256':signature},{'META_APP_SECRET':'secret'})),2)
-        with self.assertRaises(PermissionError): normalize('whatsapp','sender',raw+b' ',{'X-Hub-Signature-256':signature},{'META_APP_SECRET':'secret'})
+        self.assertEqual(len(normalize('whatsapp','sender',raw,{'X-Hub-Signature-256':signature},{'MIRA_PROFILE':'mira_agency','META_APP_SECRET':'secret'})),2)
+        with self.assertRaises(PermissionError): normalize('whatsapp','sender',raw+b' ',{'X-Hub-Signature-256':signature},{'MIRA_PROFILE':'mira_agency','META_APP_SECRET':'secret'})
     def test_max_inbound(self):
         data={'update_type':'message_created','timestamp':time.time()*1000,'message':{
          'sender':{'user_id':20},'recipient':{'chat_type':'dialog'},'body':{'mid':'fixture','text':'hi'}}}
-        events=normalize('max','max-bot',json.dumps(data).encode(),{'X-Max-Bot-Api-Secret':'secret'},{'MAX_WEBHOOK_SECRET':'secret'})
+        events=normalize('max','max-bot',json.dumps(data).encode(),{'X-Max-Bot-Api-Secret':'secret'},{'MIRA_PROFILE':'mira_agency','MAX_WEBHOOK_SECRET':'secret'})
         self.assertEqual(events[0]['peer'],'20')
     def test_enrichment_no_invented_membership(self):
         rows=extract('<a href="tel:+12345678901">phone</a><a href="https://wa.me/12345678901">WA</a><a href="https://t.me/fixture">TG</a>', 'https://example.invalid')
@@ -141,7 +141,7 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(calls[0][1]['parentId'],'fixture-account')
         with self.assertRaises(ValueError): sender('reply',{'event':self.event(),'text':'fixture'},'event')
     def test_http_ingress_persists_before_ack(self):
-        env={'TELEGRAM_ACCOUNT_ID':'bot','WEBHOOK_SECRET':'fixture-secret'}
+        env={'MIRA_PROFILE':'mira_agency','TELEGRAM_ACCOUNT_ID':'bot','WEBHOOK_SECRET':'fixture-secret'}
         server=ThreadingHTTPServer(('127.0.0.1',0),handler(self.s,env))
         thread=threading.Thread(target=server.serve_forever,daemon=True); thread.start()
         try:
@@ -149,7 +149,7 @@ class RuntimeTests(unittest.TestCase):
             req=urllib.request.Request('http://127.0.0.1:'+str(server.server_port)+'/telegram',data=json.dumps(data).encode(),
                  headers={'X-Telegram-Bot-Api-Secret-Token':'fixture-secret'})
             with urllib.request.urlopen(req) as res: result=json.load(res)
-            self.assertEqual(result['accepted'][0]['state'],'pending'); self.assertEqual(len(Store(self.path).rows('inbox')),1)
+            self.assertEqual(result['accepted'][0]['state'],'pending'); self.assertEqual(len(Store(self.path,profile='mira_agency').rows('inbox')),1)
         finally: server.shutdown(); server.server_close(); thread.join()
 
 if __name__=='__main__': unittest.main()

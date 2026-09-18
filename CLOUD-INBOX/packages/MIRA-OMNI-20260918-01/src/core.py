@@ -2,6 +2,7 @@
 SQLite is a private transport journal; the connected CRM owns organisations.
 """
 import contextlib, hashlib, json, sqlite3, time, uuid
+from profiles import profile_config, allowed_facts, model_context, model_history
 
 CHANNELS = {'telegram', 'whatsapp', 'max', 'email', 'web'}
 INTENTS = {'INTERESTED','QUESTION','REQUEST_DETAILS','REQUEST_PROJECTS','REQUEST_TERMS',
@@ -12,9 +13,18 @@ def packed(value): return json.dumps(value, ensure_ascii=False, separators=(',',
 def key(*parts): return hashlib.sha256(packed(parts).encode()).hexdigest()
 
 class Store:
-    def __init__(self, path):
+    def __init__(self, path, *, profile):
+        self.profile = profile
+        profile_config(profile)
         self.path = str(path)
         with self.connect() as db:
+            existing=db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='contacts'").fetchone()
+            meta=db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='product_profile'").fetchone()
+            if existing and not meta: raise ValueError('unscoped legacy journal: explicit migration required')
+            db.execute('CREATE TABLE IF NOT EXISTS product_profile(singleton INTEGER PRIMARY KEY CHECK(singleton=1), profile TEXT NOT NULL)')
+            db.execute('INSERT OR IGNORE INTO product_profile VALUES(1,?)',(profile,))
+            if db.execute('SELECT profile FROM product_profile WHERE singleton=1').fetchone()['profile']!=profile:
+                raise ValueError('journal belongs to another product profile')
             db.executescript('''
             PRAGMA journal_mode=WAL;
             CREATE TABLE IF NOT EXISTS contacts(id TEXT PRIMARY KEY, context TEXT NOT NULL,
@@ -44,6 +54,7 @@ class Store:
         finally: db.close()
     def bind(self, contact, context, channel, account, peer, evidence):
         """Operator/private CRM call ONLY. Never trust identity from message text."""
+        if context.get('profile')!=self.profile or context.get('role')!=profile_config(self.profile)['role']: raise ValueError('context profile/role mismatch')
         if channel not in CHANNELS or not all([contact,account,peer,evidence]): raise ValueError('invalid binding')
         with self.tx() as db:
             old = db.execute('SELECT contact FROM endpoints WHERE channel=? AND account=? AND peer=?',
@@ -53,13 +64,14 @@ class Store:
                        (contact,packed(context)))
             db.execute('INSERT OR IGNORE INTO endpoints VALUES(?,?,?,?,?)', (channel,account,str(peer),contact,evidence))
     def ingest(self, event):
-        required = ['channel','account','peer','message_id','text','occurred_at']
+        required = ['profile','channel','account','peer','message_id','text','occurred_at']
+        if event.get('profile')!=self.profile: raise ValueError('event profile mismatch')
         if any(k not in event for k in required) or event['channel'] not in CHANNELS: raise ValueError('invalid event')
         if not isinstance(event['text'],str) or len(event['text']) > 16000: raise ValueError('invalid text')
         if not all(str(event[k]) for k in ['account','peer','message_id']): raise ValueError('empty ID')
         stamp=float(event['occurred_at'])
         if not 0 < stamp <= time.time()+300: raise ValueError('invalid timestamp')
-        eid=key(event['channel'],event['account'],str(event['peer']),str(event['message_id']))
+        eid=key(self.profile,event['channel'],event['account'],str(event['peer']),str(event['message_id']))
         with self.tx() as db:
             old=db.execute('SELECT * FROM inbox WHERE id=?',(eid,)).fetchone()
             if old: return {'id':eid,'state':old['state'],'duplicate':True}
@@ -124,10 +136,7 @@ class Engine:
         # Exact stop commands take precedence over both paused AI and the model.
         stop=text in {'stop','/stop','unsubscribe','отписаться','не пишите','не пишите мне','удалите мой контакт'}
         human=any(v in text for v in ['позвоните','хочу поговорить с человеком','оператор','менеджера','call me','human please'])
-        approved=[f for f in self.knowledge if f.get('approved') is True and f.get('audience')==ctx.get('role','agency')
-                  and isinstance(f.get('valid_until'),(int,float)) and f['valid_until']>now
-                  and f.get('source') and f.get('text') and f.get('id')
-                  and (not f.get('contact_ids') or cid in f['contact_ids'])]
+        approved=allowed_facts(self.knowledge,s.profile,cid,now)
         reason=None; reply=None; intent='UNKNOWN'; selected=[]
         try:
             if stop: intent='UNSUBSCRIBE'
@@ -135,7 +144,7 @@ class Engine:
             elif c['paused']: intent='HUMAN_REQUIRED'
             elif human: intent='REQUEST_CALL'; reason='explicit_human_request'
             else:
-                decision=self.intelligence({'context':ctx,'history':history,'message':e,'facts':approved})
+                decision=self.intelligence({'profile':s.profile,'context':model_context(ctx,s.profile),'history':model_history(history),'message':e,'facts':approved})
                 intent=decision.get('intent','UNKNOWN')
                 if intent not in INTENTS: intent='UNKNOWN'
                 ids=decision.get('fact_ids',[])

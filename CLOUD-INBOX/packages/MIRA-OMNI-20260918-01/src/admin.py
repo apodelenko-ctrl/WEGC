@@ -4,13 +4,13 @@ from core import Store
 
 if __name__=='__main__':
     os.umask(0o077)
-    p=argparse.ArgumentParser(); p.add_argument('--db',required=True)
+    p=argparse.ArgumentParser(); p.add_argument('--db',required=True); p.add_argument('--profile',required=True)
     sub=p.add_subparsers(dest='command',required=True)
     b=sub.add_parser('bind'); b.add_argument('private_bindings_json')
     r=sub.add_parser('resolve'); r.add_argument('event_id')
     a=sub.add_parser('resume'); a.add_argument('contact'); a.add_argument('--operator',required=True); a.add_argument('--reason',required=True)
     q=sub.add_parser('counts')
-    args=p.parse_args(); store=Store(args.db)
+    args=p.parse_args(); store=Store(args.db,profile=args.profile)
     if args.command=='bind':
         with open(args.private_bindings_json,encoding='utf-8') as f: rows=json.load(f)
         for r in rows: store.bind(r['contact'],r['context'],r['channel'],r['account'],str(r['peer']),r['evidence'])
