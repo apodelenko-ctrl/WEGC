@@ -27,7 +27,7 @@
     {"id":"C02","status":"completed","output":"results/C02-waterpoint-vietnam-closure.md","note":"Waterpoint identity/current Ben Luc, Tay Ninh label strengthened; exact Russian-speaking agency observation not found, so Waterpoint remains partial"},
     {"id":"C03","status":"completed","output":"results/C03-montenegro-heights-merit-porto-budva.md","note":"Heights source gap closed for discovery; Merit and Porto Budva remain partial; stale return/residency claims quarantined"},
     {"id":"C04","status":"completed","output":"results/C04-montenegro-poljana-kotor-bayview.md","note":"Poljana and Kotor Bayview now have current exact-project primary routes plus independent exact-project agency observations; recommend both complete_for_discovery_after_validation; legal seller/media rights remain unresolved"},
-    {"id":"C05","status":"pending","topic":"Remaining Bali exact media and usage-basis routes"},
+    {"id":"C05","status":"completed","output":"results/C05-bali-media-rights-routes.md","note":"Mapped exact current source/rightsholder or permission routes for all 15 Bali records. Magnum has an official terms-gated media kit; Mirah/BREIG have explicit written-permission restrictions; Nuanu/LOYO expose partner routes; other projects have precise corporate permission routes. New publication-approved media remains zero."},
     {"id":"C06","status":"pending","topic":"Remaining Dubai exact media and usage-basis routes"},
     {"id":"C07","status":"pending","topic":"Owner-ready media-request matrix and Phuket field-photo brief; no sends"},
     {"id":"C08","status":"pending","topic":"Six Russian review-candidates: route/segment quality"},
@@ -40,9 +40,9 @@
     {"id":"C15","status":"pending","topic":"Validate changed handoff data and actual remaining holds"},
     {"id":"C16","status":"pending","topic":"Final day report and bounded continuation handoff"}
   ],
-  "nextAction":"Continue C05 unless already in progress. Remaining VN/ME partials are Waterpoint, Merit Starlit and Porto Budva; do not repeat closed Poljana/Kotor source searches.",
+  "nextAction":"Continue C06 unless already in progress. Do not re-run Bali broad image search; C05 mapped permission routes and approval remains zero.",
   "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":27,"partialForValidation":3,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
-  "countsScope":"Current research-quality recommendation after C04. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance or ordinary-applicant acceptance.",
+  "countsScope":"Current research-quality recommendation after C04 plus C05 media-route mapping. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance, media licence or ordinary-applicant acceptance.",
   "ownerRequestedMarketingExtension": {
     "checkpointLocal": "2026-09-18T09:26:26+07:00",
     "status": "research_and_content_completed_implementation_not_started",
