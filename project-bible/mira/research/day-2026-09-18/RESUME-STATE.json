@@ -28,8 +28,8 @@
     {"id":"C03","status":"completed","output":"results/C03-montenegro-heights-merit-porto-budva.md","note":"Heights source gap closed for discovery; Merit and Porto Budva remain partial; stale return/residency claims quarantined"},
     {"id":"C04","status":"completed","output":"results/C04-montenegro-poljana-kotor-bayview.md","note":"Poljana and Kotor Bayview now have current exact-project primary routes plus independent exact-project agency observations; recommend both complete_for_discovery_after_validation; legal seller/media rights remain unresolved"},
     {"id":"C05","status":"completed","output":"results/C05-bali-media-rights-routes.md","note":"Mapped exact current source/rightsholder or permission routes for all 15 Bali records. Magnum has an official terms-gated media kit; Mirah/BREIG have explicit written-permission restrictions; Nuanu/LOYO expose partner routes; other projects have precise corporate permission routes. New publication-approved media remains zero."},
-    {"id":"C06","status":"pending","topic":"Remaining Dubai exact media and usage-basis routes"},
-    {"id":"C07","status":"pending","topic":"Owner-ready media-request matrix and Phuket field-photo brief; no sends"},
+    {"id":"C06","status":"completed","output":"results/C06-dubai-media-rights-routes.md","note":"Mapped current exact source/media/rightsholder/permission routes for all 15 Dubai records. Current explicit usage gates found for Emaar, Ellington, Dubai Holding, OMNIYAT, Dubai Properties and Imtiaz; official partner/asset routes mapped for remaining records. DAMAC Riverside remains quarantined from Riverside Views. New publication-approved media remains zero."},
+    {"id":"C07","status":"completed","output":"results/C07-permission-matrix-phuket-field-photo-brief.md","note":"Prepared 30-project Bali/Dubai permission-request matrix, reusable unsent request draft and Phuket own-content field-photography brief with rights/privacy/safety/drone gates. No requests, shoots, flights or new approved images occurred."},
     {"id":"C08","status":"pending","topic":"Six Russian review-candidates: route/segment quality"},
     {"id":"C09","status":"pending","topic":"Six Belarus review-candidates: route and current evidence"},
     {"id":"C10","status":"pending","topic":"12 candidate owner-review pack, unapproved drafts"},
@@ -40,9 +40,29 @@
     {"id":"C15","status":"pending","topic":"Validate changed handoff data and actual remaining holds"},
     {"id":"C16","status":"pending","topic":"Final day report and bounded continuation handoff"}
   ],
-  "nextAction":"Continue C06 unless already in progress. Do not re-run Bali broad image search; C05 mapped permission routes and approval remains zero.",
+  "nextAction":"Continue C08 unless already in progress. Do not repeat Bali/Dubai broad image search; C05/C06 mapped rights routes and C07 consolidated unsent requests. New publication-approved media remains zero.",
   "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":27,"partialForValidation":3,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
-  "countsScope":"Current research-quality recommendation after C04 plus C05 media-route mapping. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance, media licence or ordinary-applicant acceptance.",
+  "countsScope":"Current research-quality recommendation after C04 plus C05/C06 rights-route mapping and C07 request/field-content preparation. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance, media licence, shoot completion or ordinary-applicant acceptance.",
+  "latestCheckpoint": {
+    "recordedAt": "2026-09-18T11:09:00+07:00",
+    "completed": ["C06", "C07"],
+    "resultCommits": {
+      "C06": "13f2f6320cb127a81ab77feffa2fd666c2a90a58",
+      "C07": "67557401e2491f3e61dc92f14921cae0bbaf3d80"
+    },
+    "events": [
+      "CLOUD-INBOX/events/2026-09-18/cloud-1102-C06.json",
+      "CLOUD-INBOX/events/2026-09-18/cloud-1109-C07.json"
+    ],
+    "sharedAccountingUpdated": true,
+    "newApprovedMedia": 0,
+    "newAssetBytesCommitted": 0,
+    "permissionRequestsSent": 0,
+    "phuketShoots": 0,
+    "droneFlights": 0,
+    "localReceiptConfirmed": false,
+    "nextIndependentBlock": "C08"
+  },
   "ownerRequestedMarketingExtension": {
     "checkpointLocal": "2026-09-18T09:26:26+07:00",
     "status": "research_and_content_completed_implementation_not_started",
@@ -99,7 +119,7 @@
     "localReceiptConfirmed": false,
     "localStartupRuleInstalled": false,
     "existingAutomationPromptUpdatedAt": "2026-09-18T09:53:46+07:00",
-    "automationChange": "Shared accounting added to prompt only; original hourly COUNT10 schedule and final 18:00 launch unchanged",
+    "automationChange": "Shared accounting added to prompt only; original bounded schedule unchanged",
     "newAutomationCreated": false,
     "researchQueueChanged": false,
     "nextCloudAction": "Read shared journals; continue next independent Cxx, not another provider comparison",
