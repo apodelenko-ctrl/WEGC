@@ -24,8 +24,8 @@
   ],
   "tasks": [
     {"id":"C01","status":"completed","output":"results/C01-media-source-delta.md","note":"ERA/One River Point source and terms rechecked; drafts prepared, not sent; no approved media"},
-    {"id":"C02","status":"pending","topic":"Waterpoint and Vietnam source/metadata closure"},
-    {"id":"C03","status":"pending","topic":"Montenegro Heights/Merit/Porto Budva source gaps"},
+    {"id":"C02","status":"completed","output":"results/C02-waterpoint-vietnam-closure.md","note":"Waterpoint identity/current Ben Luc, Tay Ninh label strengthened; exact Russian-speaking agency observation not found, so Waterpoint remains partial"},
+    {"id":"C03","status":"completed","output":"results/C03-montenegro-heights-merit-porto-budva.md","note":"Heights source gap closed for discovery; Merit and Porto Budva remain partial; stale return/residency claims quarantined"},
     {"id":"C04","status":"pending","topic":"Montenegro Poljana/Kotor Bayview source gaps"},
     {"id":"C05","status":"pending","topic":"Remaining Bali exact media and usage-basis routes"},
     {"id":"C06","status":"pending","topic":"Remaining Dubai exact media and usage-basis routes"},
@@ -40,7 +40,7 @@
     {"id":"C15","status":"pending","topic":"Validate changed handoff data and actual remaining holds"},
     {"id":"C16","status":"pending","topic":"Final day report and bounded continuation handoff"}
   ],
-  "nextAction":"Read PLAN.md, preserve completed C01; continue the next independent pending block with public sources and actual outputs. A waiting licence/owner action is a blocker for publication, not a reason to repeat source lookup forever.",
-  "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":24,"partialForValidation":6,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
-  "countsScope":"Transfer data checks only, not local integration, live release, current inventory, legal entity clearance or acceptance of the ordinary applicant."
+  "nextAction":"Continue C04 unless already in progress. Waterpoint remains a documented discovery hold; do not repeat broad Waterpoint searches without a new lead. Heights is the only partial upgraded in the 09:00 checkpoint.",
+  "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":25,"partialForValidation":5,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
+  "countsScope":"Current research-quality recommendation after C02/C03. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance or ordinary-applicant acceptance."
 }
