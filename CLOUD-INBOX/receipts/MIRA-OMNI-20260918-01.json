@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_id": "MIRA-OMNI-20260918-01",
+  "status": "accepted",
+  "source_commit_read": "ed2db2e9e22956547a2c24dd93fd92bb9f31319f",
+  "accepted_at": "2026-09-18T10:27:00Z",
+  "local_branch": "codex/mira-cloud-inbox-20260918",
+  "local_commit": "8b6936a (preserved local-only checkpoint)",
+  "actual_changes": [
+    "Read current QUEUE, task, README, product-profile audit and discovery",
+    "Selective private source checkout in progress; existing CRM runtime reused"
+  ],
+  "tests": {
+    "cloud_report": "41 tests reported by CLOUD; local rerun pending",
+    "local": "NOT_RUN",
+    "live": "NOT_RUN"
+  },
+  "remaining_holds": [
+    "Finish CRM runtime/native acceptance before dependent communication integration",
+    "Actual approved pilot channel, private source-scoped bindings, and existing provider configuration must be inspected before any external send",
+    "No permission to modify unrelated WEGC production projects"
+  ],
+  "production_changed": false,
+  "external_messages_sent": 0,
+  "next_action": "Run pinned package tests privately and review CRM/profiles integration without changing current webhooks or auth."
+}
