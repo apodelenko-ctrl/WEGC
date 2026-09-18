@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "task_id": "MIRA-MKT-20260918-01",
+  "source_commit_read": "ed2db2e9e22956547a2c24dd93fd92bb9f31319f",
+  "local_branch": "codex/mira-cloud-inbox-20260918",
+  "local_commit": "f72cee88463379a9bf90acf29912d2f4d7b08243 (local-only)",
+  "status": "partial",
+  "updated_at": "2026-09-18T17:27:20Z",
+  "implemented_scope": [
+    "Same private Lima VM and persistent volumes; EspoCRM 10.0.8 and MariaDB 11.4 pinned official images",
+    "12 C10 native Accounts plus one synthetic test Account",
+    "15 native research/provenance/gate fields; no mailbox/contact or subscriber import",
+    "12 inactive organisation templates linked as Account Notes, plus 8 inactive editorial templates",
+    "Actual API and browser login; native detail, refresh and full container restart persistence",
+    "Same VM recovered after stop; all 12 research records reverified",
+    "20 native inactive EmailTemplates: 12 C10 + LB-01, AG-01, DV-01, FU-01, four weekly drafts",
+    "12 C10 drafts linked to their native Accounts",
+    "Owner selected working correspondence address; connected Codex Gmail profile confirmed, not an Espo mailbox connection"
+  ],
+  "native_import": {
+    "input": 12,
+    "imported_during_run": 12,
+    "final_rerun": {
+      "already_present": 12,
+      "held": 0,
+      "rejected": 0
+    },
+    "other_staging": 68
+  },
+  "M04": {
+    "A01": "PASS_LOCAL_NATIVE_CRM",
+    "A03": "PARTIAL",
+    "A04": "PARTIAL_UNRESOLVED_FOOTER",
+    "A13": "PARTIAL",
+    "A14": "PASS_SCOPED",
+    "others": "NOT_RUN"
+  },
+  "completed_tests": [
+    "actual API/UI login",
+    "native Accounts/templates/Notes readback",
+    "repeat import without duplicates",
+    "container restart and subsequent VM restart persistence",
+    "existing live MIRA operator review and applicant re-login"
+  ],
+  "failed_tests_resolved": [
+    "official entrypoint assumed literal admin username",
+    "rootless internal-only network did not publish port; isolated gateway added"
+  ],
+  "not_run_tests": [
+    "Espo SMTP/IMAP or OAuth mailbox integration",
+    "Brevo account, sender/Reply-To and domain authentication",
+    "Actual aggregate cap200, reply-stop, global unsubscribe/complaint/bounce, delivery and kill-switch acceptance"
+  ],
+  "external_actions_performed": [
+    "sanitized receipt returned to GitHub"
+  ],
+  "external_messages_sent": 0,
+  "remaining_holds": [
+    "Espo mailbox connection and Brevo account/sender/domain access",
+    "M04 cap200, reply-stop, suppression/complaint/bounce and controlled delivery acceptance"
+  ],
+  "next_owner_action_if_truly_required": "Confirm whether a Brevo account already exists; its login/setup is separate from the selected correspondence address."
+}
