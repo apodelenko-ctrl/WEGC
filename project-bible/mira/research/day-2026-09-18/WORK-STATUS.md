@@ -1,5 +1,13 @@
 # MIRA cloud lane — 18 September 2026
 
+## 10:26 Bangkok — C05 completed
+
+C05 mapped current exact media/rightsholder/permission routes for **all 15 existing Bali research records** without repeating the prior 28-file visual review. Result: `results/C05-bali-media-rights-routes.md` (commit `3899792848528a4c2082e2012b0d5615de4e4893`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-1015-C05.json`.
+
+Material improvements: Magnum Berawa/Sanur now have an official Jan-2026 media-kit/terms route; current Mirah terms explicitly require prior written consent for commercial/non-personal use of site imagery; current BREIG ELYSIUM legal terms require written permission for commercial reproduction; Nuanu Ecoverse/ORIGINS have exact partner-project asset routes but no public redistribution licence; LOYO exposes an accredited-agent materials route for XO Pandawa without proving MIRA accreditation; NEXA, BALIX, Sunny, SWOI, ANTA and EDEM now have precise corporate permission routes. The ERA remains on C01's existing permission path rather than being searched/downloaded again.
+
+Proof level remains conservative: **new publication-approved media = 0; new asset bytes committed = 0**. An available gallery/media kit/partner portal does not itself establish the exact MIRA/partner-agency licence scope. No prices, current inventory, ROI, completion, commission or buyer-right claims were promoted from the source pages. C05 is complete as a rights-route map; actual permission/terms acceptance remains a later gate. Next independent block: C06 Dubai media/rightsholder routes unless already claimed by a fresher run.
+
 ## 10:14 Bangkok — C04 completed
 
 C04 closed both remaining Montenegro records in this block at discovery-source level. **Poljana Olive Homes** now has a current Montenegrimmo exact-project route plus an independent exact-project Astra Real Estate observation. **Kotor Bayview Residence** has a current exact project site naming ARS Intertrade as developer plus an independent exact-project First Realty observation. Result: `results/C04-montenegro-poljana-kotor-bayview.md` (commit `de5dfadff00eac7b5a755a35d1e471b4f9022da5`). Shared event: `CLOUD-INBOX/events/2026-09-18/cloud-0959-C04.json`.
