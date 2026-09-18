@@ -20,7 +20,7 @@
   "externalSends": 0,
   "requiredFinalReport": "NIGHT-REPORT.md",
   "mandatoryFinalReportOnLastRun": true,
-  "latestResultCommit": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
+  "latestResultCommit": "cc1dc0876e8ac5c1793c52750136c7aa11df2db7",
   "remaining": "Saratov minimum met at 10/10 research-fit candidates; legal/overseas/direct-channel gaps remain and own site for Your Realtor returned 403. Tyumen is next. Official city-proper population remains blocked.",
   "canonicalCandidateGroups": 350,
   "canonicalRussiaGroups": 208,
@@ -30,7 +30,7 @@
   "latestCheckpointEvent": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b003.json",
   "newAgencyCountMeaning": "13 cumulative new candidate records including holds; not 13 verified suitable agencies",
   "freshFirstWaveSuitableCandidates": 10,
-  "latestResultCommitNote": "Published B003 data/code checkpoint; separate receipt-only commit stores this pointer.",
+  "latestResultCommitNote": "Published B003 data/code checkpoint after full-blob repair; separate receipt-only commit stores this pointer.",
   "latestBatch": "batch-003-saratov-observations.json",
   "lastCheckpointAt": "2026-09-18T20:03:00Z"
 }

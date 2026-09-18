@@ -9,8 +9,8 @@
   "at_ict": "2026-09-19T03:07:56+07:00",
   "source_sha": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
   "pre_write_head": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
-  "result_sha": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
-  "result_sha_note": "Published B003 data/code checkpoint. A following receipt-only commit records this SHA in both RESUMEs.",
+  "result_sha": "cc1dc0876e8ac5c1793c52750136c7aa11df2db7",
+  "result_sha_note": "Published B003 data/code checkpoint after full-blob repair. A following receipt-only commit records this SHA in both RESUMEs.",
   "pushed_branch": "mira/research-night-20260918",
   "agency": {
     "before": 348,

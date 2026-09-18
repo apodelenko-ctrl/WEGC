@@ -42,6 +42,6 @@
     "excluded_non_residential": 1
   },
   "remaining": "Aileen Phase1 and Unique Eco Viva now have exact primary group links. Five other Aileen-labelled records remain unresolved because at least one current Aileen Residence line is attributed by secondary sources to a different developer; Naturale Kamala is not assumed AAG; Banyan five remain ambiguous. Other507 missing family and60 other-market records are unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
-  "latest_result_commit": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
-  "latest_result_commit_note": "Published B003 data/code checkpoint; separate receipt-only commit stores this pointer."
+  "latest_result_commit": "cc1dc0876e8ac5c1793c52750136c7aa11df2db7",
+  "latest_result_commit_note": "Published B003 data/code checkpoint after full-blob repair; separate receipt-only commit stores this pointer."
 }

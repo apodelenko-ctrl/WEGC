@@ -1,11 +1,15 @@
 {
   "checkpoint_id": "cloud-both-bases-b003",
-  "published_data_commit": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
+  "initial_data_commit": "7da704bcc54a7a5a8afa7bbf28e574f88fa9a513",
+  "initial_receipt_pointer_commit": "a8e86138cdada0fe799be618b68ed0a2389ce571",
+  "published_data_commit": "cc1dc0876e8ac5c1793c52750136c7aa11df2db7",
   "branch": "mira/research-night-20260918",
   "source_commit": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
   "pre_write_head": "4da9e31f8de61e42154e94c5cd650fcf31e6ce74",
-  "data_tree": "37cc9a23919789cdfa41ee420abd77afd825e18d",
-  "published_files": [
+  "initial_data_tree": "37cc9a23919789cdfa41ee420abd77afd825e18d",
+  "data_tree": "76eb045cd506817e0927c7232e703a04f9a408a9",
+  "correction_note": "The initial API publication truncated two multi-megabyte agency master blobs. The canonical published_data_commit replaces both with their full local Git blobs; use it rather than initial_data_commit.",
+  "initial_published_files": [
     {
       "path": "CLOUD-INBOX/MASTER-STATUS.md",
       "mode": "100644",
@@ -185,6 +189,18 @@
       "mode": "100644",
       "type": "blob",
       "sha": "da64b0875ead467c311715dc7ca1ec857e9d2965"
+    }
+  ],
+  "corrected_full_blobs": [
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/master-agencies.csv",
+      "sha": "46816bb484049d4762639910bc97c8cc11b78fb4",
+      "size_bytes": 2194984
+    },
+    {
+      "path": "project-bible/mira/research/agency-expansion-2026-09-19/master-agencies.json",
+      "sha": "5f13ee5cee0c3d385ab1f573104505e347faece6",
+      "size_bytes": 2635111
     }
   ],
   "sources": {
