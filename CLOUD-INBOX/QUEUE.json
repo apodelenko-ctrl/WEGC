@@ -120,7 +120,11 @@
       "planningTarget": "2026-09-19/2026-09-20, subject to actual acceptance; no completion guarantee",
       "initialApprovedPilotSizeProposal": "10-20 eligible recipients; not an approved list",
       "allM04LiveAcceptanceTestsStatus": "NOT_RUN",
-      "generatorUnitTests": {"executed": 12, "passed": 12, "scope": "configuration preparation only"},
+      "generatorUnitTests": {
+        "executed": 12,
+        "passed": 12,
+        "scope": "configuration preparation only"
+      },
       "remainingHolds": [
         "Local receipt and current private mail/CRM/host inventory",
         "Cloud runtime lacks Docker; LOCAL must resolve verified official image digests and run the isolated lab on its authorized machine",
@@ -141,6 +145,22 @@
       ],
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
       "receipt": null
+    },
+    {
+      "id": "MIRA-OMNI-20260918-01",
+      "priority": "P1-owner-request-after-current-independent-block",
+      "owner": "LOCAL",
+      "status": "ready_for_local_integration",
+      "title": "Connect implemented shared MIRA communication core",
+      "sourcePaths": [
+        "CLOUD-INBOX/tasks/MIRA-OMNI-20260918-01.md",
+        "CLOUD-INBOX/packages/MIRA-OMNI-20260918-01/README.md",
+        "CLOUD-INBOX/packages/MIRA-OMNI-20260918-01/TEST-REPORT.json"
+      ],
+      "cloudCompleted": "Executable integration candidate; 28/28 local tests PASS; real accounts/deployment NOT_RUN",
+      "receiptPath": "CLOUD-INBOX/receipts/MIRA-OMNI-20260918-01.json",
+      "receipt": null,
+      "preservesExistingLocalAndMktTasks": true
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
@@ -150,11 +170,21 @@
     "path": "CLOUD-INBOX/LOCAL-INTEGRATION-2026-09-18.md",
     "sourceCommit": "03db1ac77f9ce30e8072121746e022251cf40198",
     "attachedToTaskId": "MIRA-LOCAL-20260918-02",
-    "reusesTaskIds": ["MIRA-COORD-20260918-01", "MIRA-MKT-20260918-01"],
+    "reusesTaskIds": [
+      "MIRA-COORD-20260918-01",
+      "MIRA-MKT-20260918-01"
+    ],
     "status": "ready_for_local_implementation",
     "relationship": "Concrete deliverables and acceptance criteria; not a competing queue or second CRM installation",
     "preservesNextTaskAndOwnerReportedProgress": true,
-    "workstreams": ["I1 CRM runtime and organisation import", "I2 permitted mail integration and drafts", "I3 data integration using DATA-HANDOFF and explicit taxonomy", "I4 current demo and selected QR route", "I5 media register and private VIVI dossier", "I6 evidence-based dashboard and return report"],
+    "workstreams": [
+      "I1 CRM runtime and organisation import",
+      "I2 permitted mail integration and drafts",
+      "I3 data integration using DATA-HANDOFF and explicit taxonomy",
+      "I4 current demo and selected QR route",
+      "I5 media register and private VIVI dossier",
+      "I6 evidence-based dashboard and return report"
+    ],
     "evidenceReturn": "Use current main-task receipt plus existing CRM task receipt; do not require duplicate receipts",
     "accountingEvent": "CLOUD-INBOX/events/2026-09-18/cloud-1350-integration-handoff.json",
     "localReceiptConfirmed": false
