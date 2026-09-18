@@ -1,0 +1,54 @@
+{
+  "event_id": "cloud-both-bases-b006",
+  "task_ids": ["MIRA-AGENCIES-20260919-01", "MIRA-DEVELOPERS-20260919-01", "MIRA-AUTONOMY-20260919-01"],
+  "at_utc": "2026-09-18T23:11:27Z",
+  "at_ict": "2026-09-19T06:11:27+07:00",
+  "source_sha": "a703c6d3815bcda12fdd19b5d96286500b60463f",
+  "pre_write_head": "a703c6d3815bcda12fdd19b5d96286500b60463f",
+  "result_sha": "9a3db807f13c09439fd1793de2beb669b68f2eeb",
+  "pushed_branch": "mira/research-night-20260918",
+  "publication_evidence": {
+    "initial_commit": "57b4ec09f8fc219f2cb73aac1b1ff55c6c273cb4",
+    "complete_master_repair_commit": "9a3db807f13c09439fd1793de2beb669b68f2eeb",
+    "verified_tree_sha": "8bf4179e3d058f12d090b644c7a0eb64d301b871",
+    "remote_tree_matches_local": true
+  },
+  "agency": {
+    "before": 366,
+    "after": 376,
+    "new_candidates": 10,
+    "existing_records_enriched": 0,
+    "existing_rows_deleted": 0,
+    "city_completed": "RU-CITY-004",
+    "next_city_cursor": "RU-CITY-005",
+    "reviewed": 10,
+    "first_wave_suitable": 10,
+    "channel_coverage": {"named_role": 2, "full_named_role": 1, "phone": 9, "general_email": 1, "direct_business_phone": 0, "direct_public_work_email": 0, "whatsapp": 9, "telegram_direct": 4, "telegram_channel": 1, "vk": 1, "other_social": 1, "fully_enriched": 0}
+  },
+  "developer": {
+    "before": 43,
+    "after": 43,
+    "contact_groups_before": 9,
+    "contact_groups_after": 10,
+    "project_ids_preserved": 618,
+    "primary_project_group_links": 9,
+    "verified_public_project_group_links": 16,
+    "unresolved_family_after": 0,
+    "ambiguous": 0,
+    "no_family": 507,
+    "exact_new_secondary_links": ["naturale-kamala", "laguna-lakeside"],
+    "send_gate_opened": false
+  },
+  "tests": {"registry_passed": 29, "agency_id_preservation": true, "agency_unique_ids": true},
+  "crm_imports": 0,
+  "external_sends": 0,
+  "publication": "research_only_not_deployed",
+  "local": {"closeout_received": true, "manifest_received": true, "T14": "prepared_not_migrated", "private_backup_cloud": false, "crosswalk_complete": false, "cloud_restore": false},
+  "remaining": {
+    "agencies": "RU-CITY-005 Barnaul next; official population and direct-channel gaps remain",
+    "developers": "Zero duplicate-label review, 507 no-family, 60 other-market, legal seller/contract and native87 crosswalk",
+    "AUT04": "Private package, encrypted backup, separate key and actual cloud runtime access absent"
+  },
+  "stop_by": "2026-09-19T08:00:00+07:00",
+  "commit_receipt": "CLOUD-INBOX/receipts/CLOUD-BOTH-BASES-B006.json"
+}

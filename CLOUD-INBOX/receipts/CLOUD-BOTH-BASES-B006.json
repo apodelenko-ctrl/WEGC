@@ -1,0 +1,40 @@
+{
+  "checkpoint_id": "cloud-both-bases-b006",
+  "published_data_commit": "9a3db807f13c09439fd1793de2beb669b68f2eeb",
+  "branch": "mira/research-night-20260918",
+  "source_commit": "a703c6d3815bcda12fdd19b5d96286500b60463f",
+  "verified_tree_sha": "8bf4179e3d058f12d090b644c7a0eb64d301b871",
+  "sources": {
+    "agencies": [
+      "https://2gis.ru/makhachkala/firm/70000001059513438",
+      "https://2gis.ru/makhachkala/firm/70000001032965612",
+      "https://2gis.ru/makhachkala/firm/70000001104464238",
+      "https://2gis.ru/makhachkala/firm/70000001054063408",
+      "https://2gis.ru/makhachkala/firm/70000001042811055",
+      "https://2gis.ru/makhachkala/firm/70000001090562386",
+      "https://2gis.ru/makhachkala/firm/70000001111681262",
+      "https://2gis.ru/makhachkala/firm/70000001043650525",
+      "https://2gis.ru/makhachkala/firm/70000001056026293",
+      "https://2gis.ru/makhachkala/firm/70000001094304785"
+    ],
+    "developers": [
+      "https://www.naturalephuket.com/",
+      "https://www.facebook.com/naturalephuket/",
+      "https://kellerhenson.com/project/naturale-kamala",
+      "https://www.lagunaphuket.com/live/property/",
+      "https://www.lagunaphuket.com/contact/",
+      "https://www.banyangroupresidences.com/",
+      "https://www.fazwaz.com/projects/thailand/phuket/thalang/choeng-thale/laguna-lakeside"
+    ],
+    "population": "Official current city-proper figure not verified; no urban-district or agglomeration substitute."
+  },
+  "agency": {"before": 366, "after": 376, "new": 10, "existing_updated": 0, "deleted": 0, "reviewed": 10, "first_wave_suitable": 10, "next_city": "RU-CITY-005"},
+  "developer": {"before": 43, "after": 43, "fresh_contacts_before": 9, "fresh_contacts_after": 10, "project_ids_preserved": 618, "primary_group_links": 9, "verified_public_group_links": 16, "unresolved_family": 0, "ambiguous": 0, "no_family": 507},
+  "tests": {"registry": 29, "agency_unique_ids": true, "agency_ids_preserved": true},
+  "crm_imports": 0,
+  "external_sends": 0,
+  "production_deploy": false,
+  "cloud_restore": false,
+  "local_transition": {"full_closeout_and_manifest_received": true, "local_evidence_accepted": true, "private_archive_in_cloud": false, "external_id_crosswalk_complete": false, "actual_cloud_restore_accepted": false},
+  "scope_note": "Public research only. LOCAL native Accounts78/87 are not added to public research totals. Secondary developer mappings do not authorize outreach. No outreach, CRM import or deployment."
+}

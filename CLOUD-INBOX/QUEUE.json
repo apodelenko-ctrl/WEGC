@@ -257,19 +257,19 @@
       "id": "MIRA-AGENCIES-20260919-01",
       "owner": "CLOUD",
       "localRole": "private_count_reconciliation_and_selective_import",
-      "status": "in_progress_togliatti_minimum_met_next_city_RU-CITY-004",
+      "status": "in_progress_makhachkala_minimum_met_next_city_RU-CITY-005",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-AGENCIES-20260919-01.md",
       "resumePath": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
       "automationId": "6aad78bf2b988191b6ca5c921d60fd12",
-      "latestBatch": "project-bible/mira/research/agency-expansion-2026-09-19/batch-005-togliatti-observations.json",
-      "lastCheckpointAt": "2026-09-18T22:01:33Z",
+      "latestBatch": "project-bible/mira/research/agency-expansion-2026-09-19/batch-006-makhachkala-observations.json",
+      "lastCheckpointAt": "2026-09-18T23:11:27Z",
       "researchCounts": {
-        "canonicalCandidates": 366,
-        "RU": 224,
+        "canonicalCandidates": 376,
+        "RU": 234,
         "newCandidatesThisBlock": 10,
-        "newCandidatesThisTask": 35,
+        "newCandidatesThisTask": 45,
         "firstWaveSuitableReviewed": 10,
-        "citiesMinimumMet": 3,
+        "citiesMinimumMet": 4,
         "crmImportsThisTask": 0
       }
     },
@@ -306,21 +306,24 @@
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-DEVELOPERS-20260919-01.md",
       "resumePath": "project-bible/mira/research/developer-expansion-2026-09-19/RESUME.json",
       "createdAt": "2026-09-18T18:36:48.626807Z",
-      "nextAction": "Resolve Naturale Kamala1 and Laguna Lakeside ambiguity1; private native87 ↔ master43 crosswalk; then missing family507 and other market60",
+      "nextAction": "Review Zero duplicate labels, then missing family507 and other market60; private native87 ↔ master43 crosswalk remains separate",
       "acceptance": [
         "Each catalog project has verified developer/legal seller or explicit unresolved task",
         "Existing source IDs preserved; all source layers reconciled",
         "CRM stages and active agreements supported by private evidence",
         "Replay-safe CRM import reported separately from research counts"
       ],
-      "lastCheckpointAt": "2026-09-18T22:01:33Z",
-      "latestBatch": "project-bible/mira/research/developer-expansion-2026-09-19/CHECKPOINT-005.md",
+      "lastCheckpointAt": "2026-09-18T23:11:27Z",
+      "latestBatch": "project-bible/mira/research/developer-expansion-2026-09-19/CHECKPOINT-006.md",
       "researchCounts": {
         "developerMasterRows": 43,
         "newRowsThisBlock": 0,
-        "freshPublicContactGroups": 9,
+        "freshPublicContactGroups": 10,
         "primaryProjectGroupLinks": 9,
-        "verifiedPublicProjectGroupLinks": 14,
+        "verifiedPublicProjectGroupLinks": 16,
+        "unresolvedFamily": 0,
+        "ambiguous": 0,
+        "noFamily": 507,
         "projects618Preserved": true,
         "crmImportsThisTask": 0
       }
@@ -385,12 +388,12 @@
     "scope": "Read Botanica document request, inventory Singapore company files, create owner-only document vault and project-bible index; no sending/signing or public document upload."
   },
   "latestCloudResearchCheckpoint": {
-    "event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b004.json",
-    "at": "2026-09-18T21:20:00Z",
-    "sourceCommit": "07527a6b9b90a5063553c64188c1f5ef5ddd318e",
-    "sourceHeadRechecked": "07527a6b9b90a5063553c64188c1f5ef5ddd318e",
-    "resultCommit": "1a9aaa28eb2dc3c684babedeb16398076b6b9825",
-    "receipt": "CLOUD-INBOX/receipts/CLOUD-BOTH-BASES-B004.json",
+    "event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b006.json",
+    "at": "2026-09-18T23:11:27Z",
+    "sourceCommit": "a703c6d3815bcda12fdd19b5d96286500b60463f",
+    "sourceHeadRechecked": "a703c6d3815bcda12fdd19b5d96286500b60463f",
+    "resultCommit": "9a3db807f13c09439fd1793de2beb669b68f2eeb",
+    "receipt": "CLOUD-INBOX/receipts/CLOUD-BOTH-BASES-B006.json",
     "privateTransferConfirmed": false
   }
 }

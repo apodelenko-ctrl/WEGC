@@ -52,6 +52,6 @@
     "excluded_non_residential": 1
   },
   "remaining": "Naturale Kamala and Laguna Lakeside now have exact current public group mappings, retained as secondary-source and non-sendable. Other507 missing-family and60 other-market records are unprocessed. Zero duplicate labels require review. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
-  "latest_result_commit": "1f58ccc4dae1c6a33b2f7e6d112d154c2eeacae3",
-  "latest_result_commit_note": "Published B005 data/code checkpoint; a following receipt-only commit stores this pointer."
+  "latest_result_commit": "9a3db807f13c09439fd1793de2beb669b68f2eeb",
+  "latest_result_commit_note": "Published B006 data/code checkpoint; a following receipt-only commit stores this pointer."
 }
