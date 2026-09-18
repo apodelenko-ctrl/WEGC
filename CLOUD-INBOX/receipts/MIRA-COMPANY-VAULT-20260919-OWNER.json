@@ -1,0 +1,56 @@
+{
+  "task_id": "MIRA-COMPANY-VAULT-20260919-OWNER",
+  "status": "partial",
+  "requested_by": "owner in current LOCAL thread",
+  "updated_at": "2026-09-18 19:02:44 UTC",
+  "archive_collection_status": "complete_for_located_materials",
+  "contract_readiness": "pending",
+  "all_done": false,
+  "local_branch": "codex/mira-cloud-inbox-20260918",
+  "local_commit": "03e0aec",
+  "source_index_commit": "c769cbe3c3337e6f5a48060d72f052e5871689f6",
+  "completed": [
+    "Read actual developer correspondence and requirements.",
+    "Collected 13 unchanged original PDFs for the Singapore entity; wrong-entity materials excluded.",
+    "Uploaded to owner-only Google Drive; originals and private evidence outside Git/public site.",
+    "Created dated private checklist, source/hash manifest, and superseded-document archive.",
+    "Added permanent safe index to project bible and README; preserved WORK-STATUS and RESUME-STATE history."
+  ],
+  "tests": {
+    "pdf_count": 13,
+    "remote_sha256_matches": 13,
+    "private_pdf_acl_checks": 13,
+    "private_folder_acl_checks": 4,
+    "support_document_acl_checks": 3,
+    "public_document_uploads": 0,
+    "external_messages_sent": 0,
+    "signed_documents_created": 0
+  },
+  "private_vault_url": "https://drive.google.com/drive/folders/1S__uKm4fd-D4yPPOLK4Jp1MJu0NoVIPV",
+  "evidence_urls": [
+    "https://github.com/apodelenko-ctrl/WEGC/blob/c769cbe3c3337e6f5a48060d72f052e5871689f6/project-bible/mira/COMPANY-DOCUMENTS.md"
+  ],
+  "needs_owner": [
+    "Signed counterpart-specific agreement was not located; do not fabricate or sign on owner's behalf.",
+    "Confirm the intended current corporate account before recipient disclosure."
+  ],
+  "needs_counterparty": [
+    "Accept Singapore registry evidence for the generic company-registration request.",
+    "Accept the located account confirmation as the requested bank-document equivalent."
+  ],
+  "review_notes": [
+    "A corporate source file has a cover-field inconsistency; private checklist records it.",
+    "Historical address-bearing copies are archived, not current address evidence.",
+    "No independent registry-authenticity or electronic-signature legal audit claimed."
+  ],
+  "unchanged": [
+    "Worker",
+    "Access",
+    "D1",
+    "registration",
+    "public marketplace",
+    "mail DNS",
+    "VPS not purchased"
+  ],
+  "data_policy": "GitHub contains pointers and non-sensitive status only; no passport/account identifiers, documents, private email body, keys, cookies or tokens."
+}
