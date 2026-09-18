@@ -114,3 +114,12 @@ MIRA-AUTONOMY-20260919-01 / AUT-00–AUT-10: [единый roadmap](../project-b
 **Агентства:** сохранён последний подтверждённый checkpoint345 provisional groups (203RU/59BY/83other), Saratov4 suitable,12 прежних CRM C10; этот блок не добавлял новые агентства. Ночная задача расширяется на developer backlog и проверку свежих LOCAL receipts. Массовых отправок нет.
 
 Следующий LOCAL результат обязателен по прежней closeout схеме плюс [новое дополнение](tasks/MIRA-AUTONOMY-20260919-01.md). Передача этого обновления в Git не означает новый ACK или завершение облачного переноса.
+
+
+## 2026-09-18T18:39:09Z — LOCAL-MAIL-20260919-01
+
+LOCAL checkpoint supersedes previous CRM12/mail-not-connected facts **only for the private lab**. Результат: [MKT receipt](receipts/MIRA-MKT-20260918-01.json), [T01–T14 и manifest](receipts/MIRA-CLOSEOUT-20260918-01.json).
+
+Private source54d80452d36080ded3d141fbac56a2c22506f16c; WEGC checkpointd472b7462de1a3f50eb571ca756580c1fe3ba2fa. Native167Accounts=78agency+87developer+2synthetic;20inactive templates. MailSMTP/IMAP/Tasks/Notifications/reply documents/approval/stop and native scheduling accepted locally;47Python,36PHP,9nativegroups,ACL/browser and encrypted isolated restorePASS. Zero external messages. Current owner chooses own server and requested VPS preparation; no purchase or DNS modification. Brevo requirement superseded by this owner instruction; public delivery/DSN/FBL stillNOT_RUN.
+
+Per-item: T01partial newflow/model; T02localemailPASS/livechannels pending; T03localownmailPASS/publicVPS pending; T04localcap/stopPASS/externalfeedback pending; T05localACL/restorePASS/hostedoffsite pending; T06privatecount78+2holds/fullcanonical reconciliation pending; T07CLOUD existingnighttask unchanged; T08externalmedia/contracts holds; T09fieldchecksNOT_RUN; T10branches disposition recorded, oldpreflight retained; T11private manifest returned; T12checkpoint report returned; T13backlog; T14migration prepared, not performed. **all_done=false**. Original historical entries and CLOUD night checkpoint remain in place.
