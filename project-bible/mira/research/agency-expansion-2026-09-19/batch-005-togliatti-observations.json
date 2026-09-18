@@ -1,0 +1,99 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "batch_id": "B005",
+  "checked_at": "2026-09-18T22:01:33Z",
+  "source_commit": "2dfdc86b3597f2756b2acb9901d9e1aca805cc09",
+  "city_id": "RU-CITY-003",
+  "records": [
+    {
+      "agency_id": "RU-WEB-RUSJEM-TLT", "record_action": "add_candidate", "domain": "rusjem.ru", "source_url": "https://rusjem.ru/",
+      "fields": {"brand":"Русская Жемчужина","city":"Тольятти","legal_name":"ООО «Русская Жемчужина»","canonical_domain":"rusjem.ru","company_phone":"+7 (8482) 53-33-33","general_email":"info@rusjem.ru","contact_page":"https://rusjem.ru/"},
+      "person": {"source_url":"https://rusjem.ru/","contact_first_name":"Алексей","contact_last_name":"Кирюшин","contact_role":"Генеральный директор / владелец","direct_business_phone":"+7 (927) 268-43-13"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current first-party site identifies the Togliatti office, legal operator, residential and new-build services, general routes and a named owner/director with a public work phone. The separate Samara city selector does not by itself establish a federal network or parent company.",
+      "gaps": {"parent_brand":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-GLOBAL-TLT", "record_action": "add_candidate", "domain": "global-tlt.ru", "source_url": "https://reestr.rgr.ru/agentstvo-global-nedvizhimost-19144/",
+      "fields": {"brand":"Глобал-Недвижимость","city":"Тольятти","legal_name":"ООО «Глобал-Недвижимость»","canonical_domain":"global-tlt.ru","company_phone":"+7 (958) 756-97-80","general_email":"office@global-tlt.ru","contact_page":"https://global-tlt.ru/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-global-nedvizhimost-19144/","contact_first_name":"Надежда","contact_last_name":"Сарана","contact_role":"Генеральный директор"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current RGR record and first-party site identify an independent Togliatti full-service residential agency, named director and public company contacts. No foreign-property desk was found in the reviewed sources; absence is not proof of no overseas activity.",
+      "gaps": {"parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-EDINSTVO-TLT", "record_action": "add_candidate", "domain": null, "source_url": "https://reestr.rgr.ru/agentstvo-edinstvo-plus-19147/",
+      "fields": {"brand":"Единство+","city":"Тольятти","legal_name":"ООО «Единство+»","general_email":"edinstvo.tlt2020@yandex.ru","other_social_url":"https://www.instagram.com/a_n_edinstvo_tlt","contact_page":"https://reestr.rgr.ru/agentstvo-edinstvo-plus-19147/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-edinstvo-plus-19147/","contact_first_name":"Светлана","contact_last_name":"Кукунина","contact_role":"Генеральный директор"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current RGR record identifies a Togliatti agency, named director, public email and residential/new-build services. The listed Instagram page is a public company social route, not a verified direct dialogue endpoint.",
+      "gaps": {"parent_brand":"not_found","canonical_domain":"not_found","company_phone":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-SOLNCE-TLT", "record_action": "add_candidate", "domain": "ooo-solnce.ru", "source_url": "https://reestr.rgr.ru/agentstvo-solnce-18861/",
+      "fields": {"brand":"Солнце","city":"Тольятти","legal_name":"ООО «Солнце»","canonical_domain":"ooo-solnce.ru","company_phone":"+7 (927) 211-53-35","general_email":"ooo-solnce@yandex.ru","contact_page":"https://ooo-solnce.ru/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-solnce-18861/","contact_first_name":"Любовь","contact_last_name":"Василика","contact_role":"Директор"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current RGR record identifies the Togliatti operator, public company routes, named director and local residential services. Published work in other Russian cities does not establish a foreign-property desk or a franchise relationship.",
+      "gaps": {"parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-BIEM-TLT", "record_action": "add_candidate", "domain": "biemdom.ru", "source_url": "https://reestr.rgr.ru/agentstvo-biem-nedvizhimost-19120/",
+      "fields": {"brand":"Биэм-Недвижимость","city":"Тольятти","legal_name":"ООО «Биэм-Недвижимость»","canonical_domain":"biemdom.ru","company_phone":"+7 (8482) 202-212","general_email":"biemn@mail.ru","telegram_url":"https://t.me/biemdom","telegram_kind":"public_channel","vk_url":"https://vk.ru/biemdom","contact_page":"https://biemdom.ru/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-biem-nedvizhimost-19120/","contact_first_name":"Наталья","contact_last_name":"Акатьева","contact_role":"Генеральный директор"},
+      "segment": "local_newbuild", "fit": true,
+      "reason": "Current RGR record identifies the Togliatti company, named director, new-build/resale services and exact public company Telegram/VK routes. Telegram is classified as a public channel, not verified direct dialogue.",
+      "gaps": {"parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-WEB-MOST-TLT", "record_action": "add_candidate", "domain": "xn--01-dlcheinb0bds0bn4l.xn--p1ai", "source_url": "https://xn--01-dlcheinb0bds0bn4l.xn--p1ai/",
+      "fields": {"brand":"МОСТ","city":"Тольятти","canonical_domain":"xn--01-dlcheinb0bds0bn4l.xn--p1ai","company_phone":"+7 (8482) 31-10-31","contact_page":"https://xn--01-dlcheinb0bds0bn4l.xn--p1ai/"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current first-party page identifies a Togliatti real-estate agency, consultation route and local office. Legal operator, named recipient and direct channels were not found in the reviewed page.",
+      "gaps": {"legal_name":"not_found","parent_brand":"not_found","general_email":"not_found","direct_business_phone":"not_found","contact_first_name":"not_found","contact_last_name":"not_found","contact_role":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-DC-VEKTOR-TLT", "record_action": "add_candidate", "domain": null, "source_url": "https://agencies.domclick.ru/agency/371446",
+      "fields": {"brand":"АН Вектор","city":"Тольятти","legal_name":"ИП Юдахина Анна Викторовна","contact_page":"https://agencies.domclick.ru/agency/371446"},
+      "person": {"source_url":"https://agencies.domclick.ru/agency/371446","contact_first_name":"Анна","contact_last_name":"Юдахина","contact_role":"Индивидуальный предприниматель / риелтор"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current Domclick profile identifies the proprietor, Togliatti office, six-person team, recent transactions and active residential listings. Public phone is hidden and no independent website or direct public channel was verified.",
+      "gaps": {"parent_brand":"not_found","canonical_domain":"not_found","company_phone":"blocked_hidden_by_source","general_email":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-DC-100KV-TLT", "record_action": "add_candidate", "domain": null, "source_url": "https://agencies.domclick.ru/agency/6050",
+      "fields": {"brand":"СТО КВАДРАТОВ","city":"Тольятти","legal_name":"ООО «СТО КВАДРАТОВ»","contact_page":"https://agencies.domclick.ru/agency/6050"},
+      "person": {"source_url":"https://agencies.domclick.ru/agency/6050","contact_first_name":"Татьяна","contact_last_name":"Воронкова","contact_role":"Риелтор / публичный сотрудник компании"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current Domclick profile identifies the Togliatti legal operator, local office, 16-person team, recent transactions and active listings. Phone is hidden and no decision-maker role or direct public endpoint was verified.",
+      "gaps": {"parent_brand":"not_found","canonical_domain":"not_found","company_phone":"blocked_hidden_by_source","general_email":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-DC-PRO-NEDV-TLT", "record_action": "add_candidate", "domain": null, "source_url": "https://agencies.domclick.ru/agency/356584",
+      "fields": {"brand":"ПРО.НЕДВИЖИМОСТЬ","city":"Тольятти","legal_name":"ИП Прохорова Наталья Сергеевна","contact_page":"https://agencies.domclick.ru/agency/356584"},
+      "person": {"source_url":"https://agencies.domclick.ru/agency/356584","contact_first_name":"Наталья","contact_last_name":"Прохорова","contact_role":"Индивидуальный предприниматель / риелтор"},
+      "segment": "local_newbuild", "fit": true,
+      "reason": "Current Domclick profile identifies the proprietor, Togliatti office, active listings, recent transactions and an explicit new-build specialization across Russia. This domestic scope is not treated as overseas activity.",
+      "gaps": {"parent_brand":"not_found","canonical_domain":"not_found","company_phone":"blocked_hidden_by_source","general_email":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-DC-SFERA-TLT", "record_action": "add_candidate", "domain": null, "source_url": "https://agencies.domclick.ru/agency/6265",
+      "fields": {"brand":"СФЕРА","city":"Тольятти","legal_name":"ООО «СФЕРА»","contact_page":"https://agencies.domclick.ru/agency/6265"},
+      "person": {"source_url":"https://agencies.domclick.ru/agency/6265","contact_first_name":"Людмила","contact_last_name":"Давыдкина","contact_role":"Риелтор / публичный сотрудник компании"},
+      "segment": "local_full_service", "fit": true,
+      "reason": "Current Domclick profile identifies the Togliatti legal operator, local office, 28-person team, recent transactions and active residential listings. Phone is hidden and no decision-maker or direct public endpoint was verified.",
+      "gaps": {"parent_brand":"not_found","canonical_domain":"not_found","company_phone":"blocked_hidden_by_source","general_email":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    }
+  ],
+  "population_check": {
+    "status": "blocked", "population": null, "unit": "city_proper",
+    "attempts": [
+      {"url":"https://63.rosstat.gov.ru/","outcome":"official_site_search_did_not_yield_a_current_city-proper_table"},
+      {"url":"https://rosstat.gov.ru/compendium/document/13282","outcome":"official_compendium_not_accessible_in_current_research_session"},
+      {"url":"https://tgl.ru/","outcome":"official_city_site_search_did_not_yield_a_current_city-proper_figure"}
+    ],
+    "note": "Fresh primary city-proper population was not obtained. The approximate secondary figure remains unpromoted; city, urban district and agglomeration are not substituted."
+  },
+  "new_crm_imports": 0,
+  "external_sends": 0
+}

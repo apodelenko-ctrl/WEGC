@@ -6,23 +6,23 @@
   "project_mapping_counts": {
     "inherited_group_match_needs_verification": 94,
     "excluded_non_residential": 1,
-    "ambiguous_group": 5,
-    "verified_primary_source": 5,
+    "verified_primary_source": 9,
+    "ambiguous_group": 1,
     "verified_public_sources": 5,
     "unresolved_family_not_in_master": 1,
     "unresolved_no_family": 507
   },
-  "developers_with_fresh_public_contacts": 8,
+  "developers_with_fresh_public_contacts": 9,
   "projects_excluded_non_residential": 1,
-  "projects_with_primary_developer_group": 5,
-  "projects_with_verified_public_developer_group": 10,
+  "projects_with_primary_developer_group": 9,
+  "projects_with_verified_public_developer_group": 14,
   "fresh_contact_coverage_by_kind": {
     "email": 8,
     "phone": 8,
     "whatsapp": 2,
     "telegram": 0,
     "line": 1,
-    "broker_portal": 1
+    "broker_portal": 2
   },
   "signed_contracts_total": null,
   "projects_covered_by_active_contract": null,

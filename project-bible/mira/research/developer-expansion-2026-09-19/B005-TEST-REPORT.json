@@ -1,0 +1,12 @@
+{
+  "checkpoint": "B005",
+  "checked_at": "2026-09-18T22:01:33Z",
+  "registry_tests_passed": 27,
+  "registry_tests_failed": 0,
+  "project_ids_preserved": 618,
+  "new_primary_links": 4,
+  "ambiguous_after": 1,
+  "commercial_gates_opened": 0,
+  "crm_imports": 0,
+  "external_sends": 0
+}

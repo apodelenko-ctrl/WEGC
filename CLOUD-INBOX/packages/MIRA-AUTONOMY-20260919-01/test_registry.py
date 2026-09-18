@@ -21,12 +21,19 @@ class RegistryTest(unittest.TestCase):
             self.assertFalse(p['commercially_enabled'])
             self.assertIsNone(p['contract_covered'])
             if not p['family']:self.assertIsNone(p['developer_id'])
-    def test_ambiguous_banyan_preserves_both_source_ids(self):
+    def test_unresolved_laguna_lakeside_preserves_both_source_ids(self):
         links=[p for p in self.result['project_links'] if p['family']=='Banyan / Laguna residences']
-        self.assertTrue(links)
-        for p in links:
-            self.assertEqual(p['candidate_developer_ids'],['PHK-006','PHK-007'])
-            self.assertIsNone(p['developer_id'])
+        unresolved=[p for p in links if p['mapping_status']=='ambiguous_group']
+        self.assertEqual([p['project_id'] for p in unresolved],['laguna-lakeside'])
+        self.assertEqual(unresolved[0]['candidate_developer_ids'],['PHK-006','PHK-007'])
+        self.assertIsNone(unresolved[0]['developer_id'])
+    def test_banyan_primary_links_are_exact_and_not_commercially_enabled(self):
+        links={p['project_id']:p for p in self.result['project_links']}
+        for pid in ('angsana-oceanview-residences','banyan-tree-beach-residences-oceanus','cassia-phuket','laguna-bayside'):
+            self.assertEqual(links[pid]['developer_id'],'PHK-006')
+            self.assertEqual(links[pid]['mapping_status'],'verified_primary_source')
+            self.assertFalse(links[pid]['legal_seller_verified'])
+            self.assertFalse(links[pid]['commercially_enabled'])
     def test_repeat_build_has_stable_ids_and_no_duplicates(self):
         self.assertEqual(self.result,build(ROOT,self.obs))
         keys=[x['task_key'] for x in self.result['enrichment_queue']]

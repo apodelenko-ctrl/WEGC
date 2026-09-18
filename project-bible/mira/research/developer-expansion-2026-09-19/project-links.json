@@ -254,12 +254,11 @@
     "name": "Angsana Oceanview Residences",
     "market": "phuket",
     "family": "Banyan / Laguna residences",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "candidate_developer_ids": [
-      "PHK-006",
-      "PHK-007"
+      "PHK-006"
     ],
-    "mapping_status": "ambiguous_group",
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 40,
@@ -268,19 +267,32 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "ambiguous_group",
+    "inherited_candidate_developer_ids": [
+      "PHK-006",
+      "PHK-007"
+    ],
+    "primary_evidence": {
+      "project_id": "angsana-oceanview-residences",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/angsana-residences",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Official Banyan Group Residences portfolio explicitly lists Angsana Oceanview Residences Phuket. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "banyan-tree-beach-residences-oceanus",
     "name": "Banyan Tree Beach Residences Oceanus",
     "market": "phuket",
     "family": "Banyan / Laguna residences",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "candidate_developer_ids": [
-      "PHK-006",
-      "PHK-007"
+      "PHK-006"
     ],
-    "mapping_status": "ambiguous_group",
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 41,
@@ -289,7 +301,21 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "ambiguous_group",
+    "inherited_candidate_developer_ids": [
+      "PHK-006",
+      "PHK-007"
+    ],
+    "primary_evidence": {
+      "project_id": "banyan-tree-beach-residences-oceanus",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Exact project page on the official Banyan Group Residences domain. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "base-cherngtalei",
@@ -536,12 +562,11 @@
     "name": "Cassia Phuket",
     "market": "phuket",
     "family": "Banyan / Laguna residences",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "candidate_developer_ids": [
-      "PHK-006",
-      "PHK-007"
+      "PHK-006"
     ],
-    "mapping_status": "ambiguous_group",
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 39,
@@ -550,19 +575,32 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "ambiguous_group",
+    "inherited_candidate_developer_ids": [
+      "PHK-006",
+      "PHK-007"
+    ],
+    "primary_evidence": {
+      "project_id": "cassia-phuket",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/cassia-residences",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Official Banyan Group Residences portfolio explicitly lists Cassia Phuket. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "laguna-bayside",
     "name": "Laguna Bayside",
     "market": "phuket",
     "family": "Banyan / Laguna residences",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "candidate_developer_ids": [
-      "PHK-006",
-      "PHK-007"
+      "PHK-006"
     ],
-    "mapping_status": "ambiguous_group",
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 37,
@@ -571,7 +609,21 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "ambiguous_group",
+    "inherited_candidate_developer_ids": [
+      "PHK-006",
+      "PHK-007"
+    ],
+    "primary_evidence": {
+      "project_id": "laguna-bayside",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/news/banyan-group-residences-unveils-exclusive-laguna-beach-residences-bayside-laguna-phuket",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Official Banyan Group Residences announcement names Laguna Beach Residences Bayside at Laguna Phuket. Legal seller and contract coverage remain unverified."
+    }
   },
   {
     "project_id": "laguna-lakeside",

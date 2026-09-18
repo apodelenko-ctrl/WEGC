@@ -1,6 +1,6 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
-  "checked_at": "2026-09-18T19:11:22Z",
+  "checked_at": "2026-09-18T22:01:33Z",
   "records": [
     {
       "developer_id": "PHK-001",
@@ -372,6 +372,42 @@
         "agency_relations_email": "not_found"
       },
       "note": "The indexed first-party brand site names Trinity Property and publishes general contacts. Exact project mappings below remain separate evidence decisions. No contact attempt was made and no active agreement, price, availability or commission is asserted."
+    },
+    {
+      "developer_id": "PHK-006",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "broker_portal",
+          "value": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+          "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+          "checked_at": "2026-09-18T22:01:33Z",
+          "verification_status": "verified_public_source",
+          "purpose": "sales_inquiry_form",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        }
+      ],
+      "field_evidence": [
+        {
+          "field": "developer_group",
+          "value": "Banyan Group Residences",
+          "source_url": "https://www.banyangroupresidences.com/",
+          "checked_at": "2026-09-18T22:01:33Z",
+          "verification_status": "verified_public_source"
+        }
+      ],
+      "missing_fields": {
+        "legal_name": "not_found",
+        "named_sales_person": "not_found",
+        "direct_public_work_email": "not_found",
+        "public_phone": "not_found",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "line_url": "not_found",
+        "agency_relations_email": "not_found"
+      },
+      "note": "Official project page exposes a public sales enquiry form. It was not submitted and is not evidence of an active agency agreement or direct dialogue. No phone, email or messenger was inferred."
     }
   ],
   "project_observations": [
@@ -474,6 +510,42 @@
       "source_url": "https://www.fazwaz.com/projects/thailand/phuket/thalang/choeng-thale/aileen-residence-lagoon",
       "checked_at": "2026-09-18T21:20:00Z",
       "basis": "Current exact project page identifies Trinity Property Co., Ltd. as developer of Aileen Residence Lagoon; first-party Aileen site independently identifies the group. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "angsana-oceanview-residences",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/angsana-residences",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Official Banyan Group Residences portfolio explicitly lists Angsana Oceanview Residences Phuket. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "banyan-tree-beach-residences-oceanus",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/thailand/phuket/banyan-tree-beach-residences-oceanus",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Exact project page on the official Banyan Group Residences domain. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "cassia-phuket",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/cassia-residences",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Official Banyan Group Residences portfolio explicitly lists Cassia Phuket. Legal seller and contract coverage remain unverified."
+    },
+    {
+      "project_id": "laguna-bayside",
+      "developer_id": "PHK-006",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.banyangroupresidences.com/news/banyan-group-residences-unveils-exclusive-laguna-beach-residences-bayside-laguna-phuket",
+      "checked_at": "2026-09-18T22:01:33Z",
+      "basis": "Official Banyan Group Residences announcement names Laguna Beach Residences Bayside at Laguna Phuket. Legal seller and contract coverage remain unverified."
     }
   ]
 }

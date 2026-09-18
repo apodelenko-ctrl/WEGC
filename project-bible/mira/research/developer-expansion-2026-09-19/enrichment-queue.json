@@ -98,17 +98,17 @@
   {
     "task_key": "project-developer:angsana-oceanview-residences",
     "project_id": "angsana-oceanview-residences",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "status": "queued",
-    "reason": "ambiguous_group",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:banyan-tree-beach-residences-oceanus",
     "project_id": "banyan-tree-beach-residences-oceanus",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "status": "queued",
-    "reason": "ambiguous_group",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -210,17 +210,17 @@
   {
     "task_key": "project-developer:cassia-phuket",
     "project_id": "cassia-phuket",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "status": "queued",
-    "reason": "ambiguous_group",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:laguna-bayside",
     "project_id": "laguna-bayside",
-    "developer_id": null,
+    "developer_id": "PHK-006",
     "status": "queued",
-    "reason": "ambiguous_group",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -4981,7 +4981,7 @@
   {
     "task_key": "developer-contact:PHK-006",
     "developer_id": "PHK-006",
-    "status": "queued",
+    "status": "partial",
     "reason": "contract_and_crm_state_not_imported",
     "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
   },

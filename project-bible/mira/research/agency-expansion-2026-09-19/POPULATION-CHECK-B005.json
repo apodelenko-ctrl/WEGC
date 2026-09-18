@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-09-18T22:01:33Z",
+  "status": "blocked",
+  "population": null,
+  "unit": "city_proper",
+  "attempts": [
+    {
+      "url": "https://63.rosstat.gov.ru/",
+      "outcome": "official_site_search_did_not_yield_a_current_city-proper_table"
+    },
+    {
+      "url": "https://rosstat.gov.ru/compendium/document/13282",
+      "outcome": "official_compendium_not_accessible_in_current_research_session"
+    },
+    {
+      "url": "https://tgl.ru/",
+      "outcome": "official_city_site_search_did_not_yield_a_current_city-proper_figure"
+    }
+  ],
+  "note": "Fresh primary city-proper population was not obtained. The approximate secondary figure remains unpromoted; city, urban district and agglomeration are not substituted."
+}

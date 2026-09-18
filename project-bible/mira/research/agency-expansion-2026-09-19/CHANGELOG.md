@@ -36,3 +36,9 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 Агентства **350 → 356** (RU214/BY59/other83): 6 новых, 6 существующих обогащены, удалений0. Тюмень: 12 рассмотрено, **10/10** подходят в local-first wave; «Панорама» и «Метрика» сохранены отдельно из-за опубликованной зарубежной деятельности. Каналы: phone11, general email3, direct phone4, direct email3, WA1, TG-channel1, fully-enriched0. Official city-proper population blocked; next cursor RU-CITY-003. CRM imports/sends0.
 
 Застройщики **42 → 43**, fresh contact groups **7 → 8**. Добавлена Trinity Property / Aileen Villas. Пять оставшихся Aileen IDs связаны по точным текущим публичным источникам, но не повышены до primary-source/sendable; legal seller/agreement unknown. Все618 IDs сохранены; tests26/26.
+
+## Обе базы B005 — 2026-09-18T22:01:33Z
+
+Агентства **356 → 366** (RU224/BY59/other83): 10 новых, существующих обогащено0, удалений0. Тольятти: 10 рассмотрено, **10/10** research-fit. Каналы: named role9, phone5, general email5, direct phone1, direct email0, WA0, TG-channel1, VK1, other social1, fully-enriched0. Official city-proper population blocked; next cursor `RU-CITY-004`. CRM imports/sends0.
+
+Застройщики остаются43; fresh contact groups **8 → 9**. Четыре Banyan/Laguna ID получили exact primary-source mapping к PHK-006; primary links **5 → 9**, total verified links **10 → 14**. `laguna-lakeside` остаётся ambiguous; legal seller/agreement unknown. Все618 IDs сохранены; tests27/27.

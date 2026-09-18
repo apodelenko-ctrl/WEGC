@@ -21,3 +21,7 @@ Agency350; Саратов10/10 minimum met. Developer master42, fresh contacts7,
 ## Обе базы B004 — 2026-09-18T21:20:00Z
 
 Developer master **42 → 43** (+Trinity Property / Aileen Villas), fresh public contact groups **7 → 8**. Primary links remain5; total links backed by primary or current exact public sources **5 → 10**. Five Aileen IDs use `verified_public_sources`, so the inquiry planner still blocks them. Unmatched family **6 → 1**; ambiguous5, no-family507, non-residential1. All618 IDs preserved;26/26 tests PASS; CRM imports/sends0.
+
+## Обе базы B005 — 2026-09-18T22:01:33Z
+
+Developer master remains43; fresh public contact groups **8 → 9** via the official PHK-006 sales enquiry route, not submitted. Four exact Banyan/Laguna records now use first-party Banyan Group Residences evidence, so primary links **5 → 9** and primary-or-current-public links **10 → 14**. `laguna-lakeside` remains the sole Banyan/Laguna ambiguity; Naturale Kamala remains unmatched. All618 IDs preserved;27/27 tests PASS; CRM imports/sends0; no seller, agreement or commercial gate inferred.

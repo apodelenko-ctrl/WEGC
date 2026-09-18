@@ -1,8 +1,8 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
   "status": "in_progress",
-  "source_commit": "07527a6b9b90a5063553c64188c1f5ef5ddd318e",
-  "checkpoint_at": "2026-09-18T21:20:00Z",
+  "source_commit": "2dfdc86b3597f2756b2acb9901d9e1aca805cc09",
+  "checkpoint_at": "2026-09-18T22:01:33Z",
   "completed": [
     "existing_source_inventory",
     "exact_alias_projection_618_phuket",
@@ -17,35 +17,38 @@
     "B003_registry25tests",
     "B004_Trinity_Property_public_group_and_contacts",
     "B004_five_Aileen_exact_public_source_links",
-    "B004_registry26tests_secondary_links_remain_unsendable"
+    "B004_registry26tests_secondary_links_remain_unsendable",
+    "B005_four_Banyan_Group_primary_links",
+    "B005_Banyan_public_inquiry_form_no_submission",
+    "B005_registry27tests_Laguna_Lakeside_stays_ambiguous"
   ],
   "next_actions": [
     "Private native87 ↔ public master43 crosswalk; no total addition",
-    "Naturale Kamala1 and Banyan ambiguity5",
+    "Naturale Kamala1 and Laguna Lakeside ambiguity1",
     "Review possible Zero Bang Tao / Nai Yang / Silhouette duplicate catalogue labels without deleting IDs",
     "Missing family507; then other60 published market records",
     "Named agency-relations and missing messenger fields",
     "Private Botanica/The Title reconciliation; do not send first-contact again"
   ],
-  "developer_cursor": "Naturale_Kamala_1_then_Banyan_5",
+  "developer_cursor": "Naturale_Kamala_1_then_Laguna_Lakeside_1",
   "crm_imported": false,
   "external_sends": 0,
   "final_report_required": true,
   "stop_by": "2026-09-19T08:00:00+07:00",
   "latest_native_crm_source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
   "native_developer_research_count": 87,
-  "latest_checkpoint_event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b004.json",
+  "latest_checkpoint_event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b005.json",
   "counts": {
     "developer_master_rows": 43,
-    "fresh_public_contacts": 8,
-    "primary_project_group_links": 5,
-    "verified_public_project_group_links": 10,
+    "fresh_public_contacts": 9,
+    "primary_project_group_links": 9,
+    "verified_public_project_group_links": 14,
     "unmatched_family": 1,
-    "ambiguous": 5,
+    "ambiguous": 1,
     "no_family": 507,
     "excluded_non_residential": 1
   },
-  "remaining": "Five remaining Aileen-labelled records now have exact current public-source links to Trinity Property, while Phase1 remains mapped to Unique Group from its primary project page. These five links are not primary-source grade and are deliberately not sendable. Naturale Kamala is not assumed AAG; Banyan five remain ambiguous. Other507 missing-family and60 other-market records are unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
+  "remaining": "Four Banyan/Laguna catalogue rows now map to PHK-006 from exact first-party Banyan Group Residences pages. Laguna Lakeside remains ambiguous between PHK-006 and PHK-007 because an exact current primary project identity was not established. Naturale Kamala is not assumed AAG. Other507 missing-family and60 other-market records are unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
   "latest_result_commit": "1a9aaa28eb2dc3c684babedeb16398076b6b9825",
-  "latest_result_commit_note": "Published B004 data/code checkpoint; a following receipt-only commit stores this pointer."
+  "latest_result_commit_note": "B005 working tree is based on source_commit; result SHA is recorded in the following receipt commit."
 }
