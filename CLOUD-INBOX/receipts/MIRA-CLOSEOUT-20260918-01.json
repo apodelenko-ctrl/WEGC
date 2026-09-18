@@ -1,12 +1,160 @@
 {
   "task_id": "MIRA-CLOSEOUT-20260918-01",
-  "status": "accepted",
+  "status": "partial",
   "ack_at": "2026-09-18 18:23:20 UTC",
   "read_source_sha": "ad312425b83b19f0b148d78d66103fb02d338538",
   "active_local_branch": "codex/mira-cloud-inbox-20260918",
-  "active_local_head": "f72cee88463379a9bf90acf29912d2f4d7b08243",
+  "active_local_head": "d472b7462de1a3f50eb571ca756580c1fe3ba2fa",
   "current_owner_request": "Own mail server integrated into the existing local CRM; owner has no VPS and requested a prepared option, not a purchase.",
   "preserves_current_checkpoint": true,
   "all_done": false,
-  "next_action": "Finish the current private CRM/mail acceptance checkpoint, return sanitized per-item dispositions and updated receipts. No whole research merge or server recreation."
+  "next_action": "VPS preparation is complete; public mail remains pending actual server/domain/acceptance. Continue independent existing CLOUD tasks from their exact accepted checkpoint.",
+  "updated_at": "2026-09-18T18:39:09Z",
+  "private_source_head": "54d80452d36080ded3d141fbac56a2c22506f16c",
+  "current_checkpoint": {
+    "at": "2026-09-18T18:39:09Z",
+    "source_commit": "54d80452d36080ded3d141fbac56a2c22506f16c",
+    "we_gc_checkpoint": "d472b7462de1a3f50eb571ca756580c1fe3ba2fa",
+    "scope": "PRIVATE_LOCAL_LAB_NOT_HOSTED_PUBLIC_MAIL",
+    "counts": {
+      "agency_research": 78,
+      "agency_identity_holds": 2,
+      "developer_research": 87,
+      "developer_taxonomy_holds": 19,
+      "developer_domain_holds": 2,
+      "synthetic": 2,
+      "total_native_accounts": 167,
+      "inactive_templates": 20
+    },
+    "acceptance": {
+      "python": 47,
+      "php_invariants": 36,
+      "native_mail_groups": 9,
+      "non_admin_acl": "PASS",
+      "unattended_native_smtp_imap_task": "PASS",
+      "desktop_mobile_refresh": "PASS",
+      "encrypted_isolated_database_restore": "PASS",
+      "external_messages": 0,
+      "public_mail": "NOT_RUN"
+    },
+    "backup": {
+      "sha256": "48945a6b0ebee8d52bb9b4b32198119cdd78afb55a4578e6a62778de93a25140",
+      "cipher": "AES-256-GCM",
+      "offsite": false
+    },
+    "owner_decision": "Own mail server integrated with existing CRM. No VPS exists; prepare option only, purchase not authorized. This supersedes required Brevo choice, not outreach/document release gates.",
+    "vps_candidate": "Timeweb Cloud MSK80 4vCPU/8GB/80GB + separate IPv4; verify monthly all-in price, SMTP25, PTR and IP reputation before order. No purchase/DNS changes.",
+    "remaining": [
+      "Public VPS/mail domain/TLS/identity and controlled external deliverability",
+      "Automatic authenticated DSN/complaint ingestion (manual stop is implemented only)",
+      "Real staff/MFA, approved documents and actual sender footer",
+      "Offsite retention/load/recovery operation",
+      "Complete60-city canonical contact reconciliation",
+      "Newer CLOUD client flow and live model/channel connection",
+      "Media/contract evidence and physical QR/Russia-noVPN/liveadmin403"
+    ],
+    "all_done": false
+  },
+  "items": {
+    "T01": {
+      "status": "partial",
+      "owner": "LOCAL",
+      "result": "Previous 43-test profile/native Task candidate preserved; contact changes increase local suite to47. New e0f7e40 client flow53 and real approved model/HTTPS provider not accepted.",
+      "next": "Selective integration preserving assignedUserId; actual profile/message/handoff/replay acceptance."
+    },
+    "T02": {
+      "status": "partial",
+      "owner": "LOCAL",
+      "result": "Existing CRM isolated SMTP/IMAP reply bridge accepted; website/model/TG/WA/MAX live adapters remain NOT_RUN.",
+      "next": "Use actual approved endpoints/accounts; do not invent access or duplicate bots."
+    },
+    "T03": {
+      "status": "partial_public_runtime_pending",
+      "owner": "LOCAL + owner",
+      "result": "Own mail server integrated with existing CRM. No VPS exists; prepare option only, purchase not authorized. This supersedes required Brevo choice, not outreach/document release gates.",
+      "next": "Review VPS plan then controlled provision/migration/public mail acceptance; no purchase yet."
+    },
+    "T04": {
+      "status": "partial",
+      "owner": "LOCAL",
+      "result": "36 invariant checks including actual200/201 journal boundary, uncertain sends, reply/unsubscribe/manual complaint/bounce stops; actual local SMTP/IMAP/reply/docs/unsubscribe/tracking and native scheduling PASS.",
+      "next": "Public sender footer/identity, external delivery, authenticated automatic DSN/FBL/complaint ingestion and external acceptance still pending."
+    },
+    "T05": {
+      "status": "partial",
+      "owner": "LOCAL",
+      "result": "Native non-admin denial tests, encrypted backup and isolated MariaDB restore PASS (167 Accounts/6 Emails/3 Tasks). Same VM/volumes retained.",
+      "next": "Hosted runtime, real staff/MFA, offsite retention/restore, load and scoped production bridge acceptance."
+    },
+    "T06": {
+      "status": "partial",
+      "owner": "CLOUD + LOCAL",
+      "result": "80 supplied source agencies reconcile to78 native review Accounts and2 identity/domain holds. Existing canonical345 candidate research count is NOT added to private count or asserted clean legal entities.55sites checked/25held;32RU cities, not60.",
+      "next": "Source-ID/alias reconciliation with CLOUD latest canonical registry and staged selective import. Existing private dispositions retained."
+    },
+    "T07": {
+      "status": "cloud_in_progress_not_duplicated",
+      "owner": "CLOUD",
+      "result": "MIRA-AGENCIES-20260919-01 preserved; CLOUD batch current in QUEUE. No competing scraper/night scheduler created.",
+      "next": "CLOUD research; LOCAL selective reconcile/import after supplied batch."
+    },
+    "T08": {
+      "status": "blocked_external_evidence",
+      "owner": "owner / authorized developer evidence",
+      "result": "Existing private VIVI dossier and media register preserved. New approved project media0; covers remain labelled covers.",
+      "next": "Actual current contractual/inventory/media scope evidence, not generated assumptions."
+    },
+    "T09": {
+      "status": "not_run",
+      "owner": "LOCAL + actual target-network tester",
+      "result": "Earlier technical applicant decision/refresh/logout/fresh OTP PASSED and not repeated. PhysicalQR, actual Russia-noVPN and direct liveadminAPI403 remain separate.",
+      "next": "Target-network/physical testing and authorized direct server observation."
+    },
+    "T10": {
+      "status": "partial_disposition_recorded",
+      "owner": "LOCAL",
+      "result": "Admin74aae636 worker/API/identity tests match current; pilot wizard supersedes oldUI. Cloud1006360 core extended in current; read-only access preflight and notice files retained on original branch, not imported. Russiab4ca3c1 25-record note superseded by current100-record note. All branches retained.",
+      "next": "Selective review/use of old cloud preflight when target-network test becomes available. No whole merge/reset/delete. Shallow history prohibits reliable global ahead/behind assertion."
+    },
+    "T11": {
+      "status": "checkpoint_manifest_returned",
+      "owner": "LOCAL",
+      "result": "Four WEGC worktrees retained; only Python caches untracked, stash empty. New private source54d8045 clean. Runtime/config/mail/contact data and evidence private; no whole-branch upload.",
+      "next": "Use manifest; legacy Documents/GitHub checkout unchanged/outside this run."
+    },
+    "T12": {
+      "status": "checkpoint_report_returned_not_all_done",
+      "owner": "LOCAL + CLOUD",
+      "result": "ACK preserved; this per-item receipt, MKT update, shared journals/MASTER/QUEUE update in progress during same return batch.",
+      "next": "CLOUD reconcile latest result without promoting partial items to done."
+    },
+    "T13": {
+      "status": "deferred",
+      "owner": "CLOUD / LOCAL by original task",
+      "result": "HF/Instagram/Postiz/X02+/multiple client-case routing/generative dynamic inventory remain backlog; no fake completion or unsolicited release.",
+      "next": "Resume separately after current accepted mail checkpoint."
+    },
+    "T14": {
+      "status": "prepared_not_migrated",
+      "owner": "LOCAL + owner",
+      "result": "Private code/runtime manifest, pinned images, disabled config, native counts, secret names only, encrypted archive and restore proof prepared. No VPS purchased; no Mac shutdown or switch.",
+      "next": "Approve concrete VPS order/access after price/SMTP/PTR verification, restore same data, accept HTTPS/TLS/mail and then switch."
+    }
+  },
+  "manifest": {
+    "active_worktree": "WEGC-admin-release / codex/mira-cloud-inbox-20260918",
+    "private_source": "mira-omni-private / codex/mira-omni-native-20260918",
+    "runtime": "mira-crm-runtime, existing Lima VM mira-crm, loopback18080 only",
+    "private_archive": "mira-crm-runtime/backups/crm-mail-20260918T182626Z/checkpoint.aesgcm; key kept separately; no cloud copy",
+    "native_schema": "Existing Espo Accounts/Emails/Tasks/Teams/Roles/Documents plus additive review fields and private SQLite outbox/inbound/events/audit journal",
+    "secret_names_only": [
+      "crm_admin",
+      "db_password",
+      "CRM encryption key",
+      "smtp-password",
+      "IMAP password",
+      "backup recovery key",
+      "future DKIM and public TLS keys"
+    ]
+  }
 }
