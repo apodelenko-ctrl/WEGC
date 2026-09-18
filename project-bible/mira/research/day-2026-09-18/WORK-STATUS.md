@@ -1,5 +1,15 @@
 # MIRA cloud lane — 18 September 2026
 
+## 09:00 checkpoint — C02/C03 completed
+
+C02 Waterpoint: current Nam Long/Waterpoint first-party sources strengthen the project identity and normalize the current location label to **Ben Luc, Tay Ninh**, while preserving older Long An references as historical source context. A targeted fresh search did not establish a concrete Russian-language/Russian-speaking agency publication for the exact Waterpoint project. Waterpoint therefore remains `partial_for_validation`; `agencyPublisherCount=0` should remain until real evidence exists. Result: `results/C02-waterpoint-vietnam-closure.md`.
+
+C03 Montenegro: **Heights** now has current exact Luštica Bay first-party coverage plus independent exact-project observations, so the research recommendation is `complete_for_discovery_after_validation`. Use a conservative location label: Luštica Bay hillside between Centrale/town centre and the golf course; current first-party navigation is not perfectly consistent, so do not hard-code Heights as The Peaks. **Merit Starlit** current hotel/project identity is strengthened but old 2023 completion, residence-permit and return copy is quarantined; no sufficient current independent exact agency observation was found, so it remains partial. **Porto Budva** current English/Russian investor/developer route is confirmed, but the Russian page is not independent brokerage evidence and its investment-return claims are not MIRA facts; keep partial until independent exact-project observation is found. Result: `results/C03-montenegro-heights-merit-porto-budva.md`.
+
+Measured research count after this evidence update: **25 complete-for-discovery / 5 partial** across the 30 Vietnam+Montenegro records. This is a research-quality count only; the already-delivered transfer ZIP remains unchanged and must not be described as rebuilt by this checkpoint. New publication-approved media remains **0**. No outreach, production write, deployment, seller/inventory/commission/residency conclusion or buyer registration was performed.
+
+Next independent block: C04 (Poljana / Kotor Bayview) unless another run already marked it in progress.
+
 ## Current checkpoint
 
 Owner asked to transfer collected research to local Codex, reassess the project, produce a dated roadmap, and continue without additional confirmation in logical 30-minute blocks. The cloud lane has completed the handoff package and created repository issue **#14**: https://github.com/apodelenko-ctrl/WEGC/issues/14 . Receipt by the actual Mac agent has NOT been confirmed; the owner is given one archive plus a short copyable instruction.
@@ -21,7 +31,7 @@ Source export: run35294630054/artifact10527386378, source ZIP SHA256 `5de4497f32
 
 The tool confirmed creation/enabling at2026-09-18T01:35:24Z of **Дневная смена МИРА**: first launch09:00Asia/Bangkok on18September, recurrenceHOURLY, COUNT10, last launch18:00. Logical task size is30minutes; this is not an unsupported30-minute trigger or a claim of continuously running agents. Each launch reads PLAN/RESUME and takes up to2pending independent blocks within its actual runtime. The final launch summarizes real results; no automatic continuation beyond this day was created.
 
-C01 completed. C02–C16 pending at this checkpoint. Continue from RESUME-STATE.json. No repeated owner approval for ordinary research/content work. Permissions for external sends, forms, purchases, production changes and buyer registration remain absent.
+C01 completed. C02 and C03 completed in the 09:00 checkpoint. C04–C16 remain pending unless a later checkpoint says otherwise. Continue from RESUME-STATE.json. No repeated owner approval for ordinary research/content work. Permissions for external sends, forms, purchases, production changes and buyer registration remain absent.
 
 ## Coordination boundaries
 
