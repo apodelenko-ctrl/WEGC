@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-09-18T19:11:22Z",
+  "status": "blocked",
+  "population": null,
+  "unit": "city_proper",
+  "attempts": [
+    {
+      "url": "https://64.rosstat.gov.ru/population",
+      "outcome": "not_accessible"
+    },
+    {
+      "url": "https://64.rosstat.gov.ru/folder/27590",
+      "outcome": "internal_error"
+    },
+    {
+      "url": "https://rosstat.gov.ru/compendium/document/13282",
+      "outcome": "internal_error"
+    },
+    {
+      "url": "https://srtv.gks.ru/population",
+      "outcome": "internal_error"
+    }
+  ],
+  "note": "No fresh official figure obtained; do not reuse city-district/agglomeration or set current population from secondary snippets."
+}

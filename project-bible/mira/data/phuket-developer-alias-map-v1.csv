@@ -32,3 +32,4 @@ Anchan Villas / Pearl Island Property,Anchan Villas,developer master,high,partia
 Anchan Villas / Pearl Island Property,"Pearl Island Property Co., Ltd.",developer master legal-name field,high,resolved_group_signal,Legal-name signal; confirm exact seller on each project.
 AssetWise PCL,AssetWise,build-phuket-index recognized group + direct Modeva row,high,partially_resolved,The Modeva direct row maps to AssetWise in current generator.
 Naturale,Naturale,build-phuket-index recognized group,medium,needs_entity_resolution,Commercial group signal only; legal entity pending.
+The Zero Phuket / Zero Developments,The Zero Phuket,https://thezerophuket.com/ and master PHK-011,high,group_verified_seller_unresolved,"Fix exact master alias only; no project seller or agreement inferred."

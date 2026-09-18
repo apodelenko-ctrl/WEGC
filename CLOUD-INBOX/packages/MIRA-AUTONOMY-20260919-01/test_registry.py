@@ -40,6 +40,37 @@ class RegistryTest(unittest.TestCase):
     def test_unknown_operational_counts_are_not_zero(self):
         for k in ['signed_contracts_total','projects_covered_by_active_contract','emails_sent_total','developer_replies_total']:
             self.assertIsNone(self.result['metrics'][k])
+    def test_primary_observation_does_not_grant_seller_or_contract(self):
+        obs=copy.deepcopy(self.obs)
+        obs['project_observations'][0].update(legal_seller_verified=True,contract_covered=True,commercially_enabled=True)
+        row=next(p for p in build(ROOT,obs)['project_links'] if p['project_id']==obs['project_observations'][0]['project_id'])
+        self.assertFalse(row['legal_seller_verified']);self.assertIsNone(row['contract_covered']);self.assertFalse(row['commercially_enabled'])
+    def test_unknown_observed_project_rejected(self):
+        obs=copy.deepcopy(self.obs);obs['project_observations'][0]['project_id']='missing-project'
+        with self.assertRaises(ValueError):build(ROOT,obs)
+    def test_duplicate_observed_project_rejected(self):
+        obs=copy.deepcopy(self.obs);obs['project_observations'].append(obs['project_observations'][0])
+        with self.assertRaises(ValueError):build(ROOT,obs)
+    def test_private_project_observation_rejected(self):
+        obs=copy.deepcopy(self.obs);obs['project_observations'][0]['visibility']='private_mail'
+        with self.assertRaises(ValueError):build(ROOT,obs)
+    def test_project_observation_requires_source(self):
+        obs=copy.deepcopy(self.obs);del obs['project_observations'][0]['source_url']
+        with self.assertRaises(ValueError):build(ROOT,obs)
+    def test_unknown_observed_developer_rejected(self):
+        obs=copy.deepcopy(self.obs);obs['project_observations'][0]['developer_id']='PHK-MISSING'
+        with self.assertRaises(ValueError):build(ROOT,obs)
+    def test_no_blanket_naturale_alias(self):
+        links={p['project_id']:p for p in self.result['project_links']}
+        self.assertEqual(links['naturale-cherngtalei']['developer_id'],'PHK-041')
+        self.assertIsNone(links['naturale-kamala']['developer_id'])
+    def test_nonresidential_record_preserved_but_held(self):
+        p=next(p for p in self.result['project_links'] if p['project_id']=='andamanda-phuket')
+        self.assertEqual(p['mapping_status'],'excluded_non_residential');self.assertIsNone(p['developer_id'])
+    def test_new_developer_field_evidence_required(self):
+        obs=copy.deepcopy(self.obs)
+        row=next(r for r in obs['records'] if r.get('field_evidence'));del row['field_evidence'][0]['source_url']
+        with self.assertRaises(ValueError):build(ROOT,obs)
 
 class InquiryTest(unittest.TestCase):
     def setUp(self):

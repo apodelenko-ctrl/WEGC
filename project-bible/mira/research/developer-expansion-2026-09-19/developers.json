@@ -35,6 +35,8 @@
       "path": "project-bible/mira/data/phuket-developer-master.csv",
       "checked_at": "2026-09-15"
     },
+    "field_evidence": [],
+    "missing_fields": {},
     "fresh_contact_verified": true,
     "project_candidate_count": 28
   },
@@ -100,6 +102,8 @@
       "path": "project-bible/mira/data/phuket-developer-master.csv",
       "checked_at": "2026-09-15"
     },
+    "field_evidence": [],
+    "missing_fields": {},
     "fresh_contact_verified": true,
     "project_candidate_count": 34
   },
@@ -351,6 +355,8 @@
       "path": "project-bible/mira/data/phuket-developer-master.csv",
       "checked_at": "2026-09-15"
     },
+    "field_evidence": [],
+    "missing_fields": {},
     "fresh_contact_verified": true,
     "project_candidate_count": 5
   },
@@ -361,7 +367,28 @@
     "legal_name_candidate": "Zero Developments Co., Ltd.",
     "legal_entity_status": "requires_project_specific_verification",
     "website": "https://thezerophuket.com/",
-    "contacts": [],
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "info@thezerophuket.com",
+        "source_url": "https://thezerophuket.com/contact/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "general",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 9 5651 6795",
+        "source_url": "https://thezerophuket.com/contact/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "general",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      }
+    ],
     "relationship_stage": "crm_reconciliation_required",
     "agreement_status": "unknown",
     "agreement_evidence": null,
@@ -370,8 +397,46 @@
       "path": "project-bible/mira/data/phuket-developer-master.csv",
       "checked_at": "2026-09-15"
     },
-    "fresh_contact_verified": false,
-    "project_candidate_count": 0
+    "field_evidence": [
+      {
+        "field": "founder",
+        "value": "Robert Hodge",
+        "source_url": "https://thezerophuket.com/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "note": "Not asserted to be agency-relations recipient."
+      }
+    ],
+    "missing_fields": {
+      "named_sales_person": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://thezerophuket.com/contact/"
+      },
+      "direct_public_work_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://thezerophuket.com/contact/"
+      },
+      "whatsapp_url": {
+        "verification_status": "blocked",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://thezerophuket.com/contact/"
+      },
+      "telegram_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://thezerophuket.com/contact/"
+      },
+      "agency_relations_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://thezerophuket.com/contact/"
+      }
+    },
+    "research_note": "Official Silhouette page has WhatsApp pickup link but target URL not extracted. No inferred wa.me from phone.",
+    "fresh_contact_verified": true,
+    "project_candidate_count": 5
   },
   {
     "developer_id": "PHK-012",
@@ -493,6 +558,36 @@
         "verification_status": "inherited_not_rechecked",
         "purpose": "unclassified",
         "direct_dialogue_verified": false
+      },
+      {
+        "kind": "email",
+        "value": "sales@phuket9.com",
+        "source_url": "https://phuket9.com/b2b",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "sales",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "phone",
+        "value": "+66 8210 77 912",
+        "source_url": "https://phuket9.com/b2b",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "sales",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "broker_portal",
+        "value": "https://phuket9.com/b2b",
+        "source_url": "https://phuket9.com/b2b",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "agency_relations",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
       }
     ],
     "relationship_stage": "crm_reconciliation_required",
@@ -503,7 +598,39 @@
       "path": "project-bible/mira/data/phuket-developer-master.csv",
       "checked_at": "2026-09-15"
     },
-    "fresh_contact_verified": false,
+    "field_evidence": [
+      {
+        "field": "legal_name_candidate",
+        "value": "Phuket9 Real Estate Development CO., LTD",
+        "source_url": "https://phuket9.com/b2b",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "first_party_claim_not_registry_verified"
+      }
+    ],
+    "missing_fields": {
+      "named_sales_person": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://phuket9.com/b2b"
+      },
+      "direct_public_work_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://phuket9.com/b2b"
+      },
+      "whatsapp_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://phuket9.com/b2b"
+      },
+      "telegram_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://phuket9.com/b2b"
+      }
+    },
+    "research_note": "Updated published phone differs from inherited master number; retain both with distinct freshness. Commercial terms not copied.",
+    "fresh_contact_verified": true,
     "project_candidate_count": 0
   },
   {
@@ -980,5 +1107,128 @@
     },
     "fresh_contact_verified": false,
     "project_candidate_count": 0
+  },
+  {
+    "developer_id": "PHK-041",
+    "name": "AAG Development / Naturale Cherng Talay",
+    "entity_type": "developer_group",
+    "legal_name_candidate": "unknown",
+    "legal_entity_status": "requires_project_specific_verification",
+    "website": "https://www.naturalephuket.com/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "contact@naturalephuket.com",
+        "source_url": "https://www.naturalephuket.com/",
+        "checked_at": "2026-09-18",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "phone",
+        "value": "+6680 959 7979; +6685 569 9797",
+        "source_url": "https://www.naturalephuket.com/",
+        "checked_at": "2026-09-18",
+        "verification_status": "inherited_not_rechecked",
+        "purpose": "unclassified",
+        "direct_dialogue_verified": false
+      },
+      {
+        "kind": "email",
+        "value": "contact@naturalephuket.com",
+        "source_url": "https://www.naturalephuket.com/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "general",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "phone",
+        "value": "+6680 959 7979",
+        "source_url": "https://www.naturalephuket.com/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "general",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "phone",
+        "value": "+6685 569 9797",
+        "source_url": "https://www.naturalephuket.com/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "general",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      },
+      {
+        "kind": "whatsapp",
+        "value": "https://wa.me/+66809597979",
+        "source_url": "https://www.naturalephuket.com/2155/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "purpose": "sales",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
+      }
+    ],
+    "relationship_stage": "crm_reconciliation_required",
+    "agreement_status": "unknown",
+    "agreement_evidence": null,
+    "outreach_status": "unknown_pending_mail_crm_reconciliation",
+    "source": {
+      "path": "project-bible/mira/data/phuket-developer-master.csv",
+      "checked_at": "2026-09-18"
+    },
+    "field_evidence": [
+      {
+        "field": "developer_group",
+        "value": "AAG Development",
+        "source_url": "https://www.naturalephuket.com/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source"
+      },
+      {
+        "field": "broker_intake_form",
+        "value": "https://www.naturalephuket.com/",
+        "source_url": "https://www.naturalephuket.com/",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "verification_status": "verified_public_source",
+        "note": "Form asks whether visitor is broker. Not submitted; not proof of approved agency agreement."
+      }
+    ],
+    "missing_fields": {
+      "legal_name": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://www.naturalephuket.com/"
+      },
+      "named_sales_person": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://www.naturalephuket.com/"
+      },
+      "direct_public_work_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://www.naturalephuket.com/"
+      },
+      "telegram_url": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://www.naturalephuket.com/"
+      },
+      "agency_relations_email": {
+        "verification_status": "not_found",
+        "checked_at": "2026-09-18T19:11:22Z",
+        "source_url": "https://www.naturalephuket.com/"
+      }
+    },
+    "research_note": "Cherng Talay project only; no automatic mapping of Naturale Kamala.",
+    "fresh_contact_verified": true,
+    "project_candidate_count": 1
   }
 ]

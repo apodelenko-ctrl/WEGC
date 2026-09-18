@@ -1,20 +1,307 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
-  "checked_at": "2026-09-18T18:28:30Z",
+  "checked_at": "2026-09-18T19:11:22Z",
   "records": [
-    {"developer_id":"PHK-001","visibility":"public_business","contacts":[
-      {"kind":"email","value":"sales@rhombho.co.th","purpose":"sales","source_url":"https://thetitleresidence.com/condominium/serenity-naiyang/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","verification_method":"official domain search excerpt and project page","direct_dialogue_verified":false},
-      {"kind":"phone","value":"+66 (0)63-642-8111","purpose":"sales","source_url":"https://thetitleresidence.com/condominium/serenity-naiyang/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false}
-    ]},
-    {"developer_id":"PHK-002","visibility":"public_business","contacts":[
-      {"kind":"email","value":"info@botanicaluxuryvilla.com","purpose":"agency_relations","source_url":"https://www.botanicaluxuryvilla.com/agent_club/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
-      {"kind":"phone","value":"+66 (0)9 8394 7097","purpose":"general","source_url":"https://www.botanicaluxuryvilla.com/agent_club/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
-      {"kind":"line","value":"@botanicaluxury","purpose":"general","source_url":"https://www.botanicaluxuryvilla.com/agent_club/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false}
-    ]},
-    {"developer_id":"PHK-010","visibility":"public_business","contacts":[
-      {"kind":"email","value":"sales@theozonegroupphuket.com","purpose":"sales","source_url":"https://www.ozonephuket.com/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
-      {"kind":"phone","value":"+66(0)62 426 4197","name":"SOM O","language":"TH","purpose":"sales","source_url":"https://www.ozonephuket.com/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false},
-      {"kind":"phone","value":"+66(0)62 426 3928","name":"ANIL","language":"EN/CN/RU","purpose":"sales","source_url":"https://www.ozonephuket.com/","checked_at":"2026-09-18T18:28:30Z","verification_status":"verified_public_source","direct_dialogue_verified":false}
-    ]}
+    {
+      "developer_id": "PHK-001",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "sales@rhombho.co.th",
+          "purpose": "sales",
+          "source_url": "https://thetitleresidence.com/condominium/serenity-naiyang/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "verification_method": "official domain search excerpt and project page",
+          "direct_dialogue_verified": false
+        },
+        {
+          "kind": "phone",
+          "value": "+66 (0)63-642-8111",
+          "purpose": "sales",
+          "source_url": "https://thetitleresidence.com/condominium/serenity-naiyang/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "direct_dialogue_verified": false
+        }
+      ]
+    },
+    {
+      "developer_id": "PHK-002",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "info@botanicaluxuryvilla.com",
+          "purpose": "agency_relations",
+          "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "direct_dialogue_verified": false
+        },
+        {
+          "kind": "phone",
+          "value": "+66 (0)9 8394 7097",
+          "purpose": "general",
+          "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "direct_dialogue_verified": false
+        },
+        {
+          "kind": "line",
+          "value": "@botanicaluxury",
+          "purpose": "general",
+          "source_url": "https://www.botanicaluxuryvilla.com/agent_club/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "direct_dialogue_verified": false
+        }
+      ]
+    },
+    {
+      "developer_id": "PHK-010",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "sales@theozonegroupphuket.com",
+          "purpose": "sales",
+          "source_url": "https://www.ozonephuket.com/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "direct_dialogue_verified": false
+        },
+        {
+          "kind": "phone",
+          "value": "+66(0)62 426 4197",
+          "name": "SOM O",
+          "language": "TH",
+          "purpose": "sales",
+          "source_url": "https://www.ozonephuket.com/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "direct_dialogue_verified": false
+        },
+        {
+          "kind": "phone",
+          "value": "+66(0)62 426 3928",
+          "name": "ANIL",
+          "language": "EN/CN/RU",
+          "purpose": "sales",
+          "source_url": "https://www.ozonephuket.com/",
+          "checked_at": "2026-09-18T18:28:30Z",
+          "verification_status": "verified_public_source",
+          "direct_dialogue_verified": false
+        }
+      ]
+    },
+    {
+      "developer_id": "PHK-011",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "info@thezerophuket.com",
+          "source_url": "https://thezerophuket.com/contact/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "phone",
+          "value": "+66 9 5651 6795",
+          "source_url": "https://thezerophuket.com/contact/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        }
+      ],
+      "field_evidence": [
+        {
+          "field": "founder",
+          "value": "Robert Hodge",
+          "source_url": "https://thezerophuket.com/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "note": "Not asserted to be agency-relations recipient."
+        }
+      ],
+      "missing_fields": {
+        "named_sales_person": "not_found",
+        "direct_public_work_email": "not_found",
+        "whatsapp_url": "blocked",
+        "telegram_url": "not_found",
+        "agency_relations_email": "not_found"
+      },
+      "note": "Official Silhouette page has WhatsApp pickup link but target URL not extracted. No inferred wa.me from phone."
+    },
+    {
+      "developer_id": "PHK-041",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "contact@naturalephuket.com",
+          "source_url": "https://www.naturalephuket.com/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "phone",
+          "value": "+6680 959 7979",
+          "source_url": "https://www.naturalephuket.com/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "phone",
+          "value": "+6685 569 9797",
+          "source_url": "https://www.naturalephuket.com/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "general",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "whatsapp",
+          "value": "https://wa.me/+66809597979",
+          "source_url": "https://www.naturalephuket.com/2155/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "sales",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        }
+      ],
+      "field_evidence": [
+        {
+          "field": "developer_group",
+          "value": "AAG Development",
+          "source_url": "https://www.naturalephuket.com/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source"
+        },
+        {
+          "field": "broker_intake_form",
+          "value": "https://www.naturalephuket.com/",
+          "source_url": "https://www.naturalephuket.com/",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "note": "Form asks whether visitor is broker. Not submitted; not proof of approved agency agreement."
+        }
+      ],
+      "missing_fields": {
+        "legal_name": "not_found",
+        "named_sales_person": "not_found",
+        "direct_public_work_email": "not_found",
+        "telegram_url": "not_found",
+        "agency_relations_email": "not_found"
+      },
+      "note": "Cherng Talay project only; no automatic mapping of Naturale Kamala."
+    },
+    {
+      "developer_id": "PHK-016",
+      "visibility": "public_business",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "sales@phuket9.com",
+          "source_url": "https://phuket9.com/b2b",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "sales",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "phone",
+          "value": "+66 8210 77 912",
+          "source_url": "https://phuket9.com/b2b",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "sales",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        },
+        {
+          "kind": "broker_portal",
+          "value": "https://phuket9.com/b2b",
+          "source_url": "https://phuket9.com/b2b",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "verified_public_source",
+          "purpose": "agency_relations",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
+        }
+      ],
+      "field_evidence": [
+        {
+          "field": "legal_name_candidate",
+          "value": "Phuket9 Real Estate Development CO., LTD",
+          "source_url": "https://phuket9.com/b2b",
+          "checked_at": "2026-09-18T19:11:22Z",
+          "verification_status": "first_party_claim_not_registry_verified"
+        }
+      ],
+      "missing_fields": {
+        "named_sales_person": "not_found",
+        "direct_public_work_email": "not_found",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found"
+      },
+      "note": "Updated published phone differs from inherited master number; retain both with distinct freshness. Commercial terms not copied."
+    }
+  ],
+  "project_observations": [
+    {
+      "project_id": "the-zero-bang-tao",
+      "developer_id": "PHK-011",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://thezerophuket.com/bang-tao/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Exact English project name on developer's own website; legal seller not verified."
+    },
+    {
+      "project_id": "silhouette-by-the-zero",
+      "developer_id": "PHK-011",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://thezerophuket.com/silhouette-nai-yang/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Official Silhouette project page identifies Zero Developments; English catalogue ID retained. Older Nai Yang labels may refer to same project but not merged."
+    },
+    {
+      "project_id": "naturale-cherngtalei",
+      "developer_id": "PHK-041",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.naturalephuket.com/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Official Naturale Cherng Talay page names AAG Development. Russian catalogue title transliteration matched; Naturale Kamala deliberately remains unresolved."
+    },
+    {
+      "project_id": "andamanda-phuket",
+      "developer_id": null,
+      "mapping_status": "excluded_non_residential",
+      "visibility": "public_business",
+      "source_url": "https://www.andamandaphuket.com/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Retrieved official homepage search content describes a water park, not a residential project. Direct open failed. Hold out of residential supplier target, retain catalogue ID and request LOCAL taxonomy correction.",
+      "evidence_capture": "official_search_result_content; direct_open_blocked"
+    }
   ]
 }

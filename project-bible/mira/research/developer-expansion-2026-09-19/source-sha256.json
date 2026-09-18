@@ -1,6 +1,7 @@
 {
-  "project-bible/mira/data/phuket-developer-master.csv": "af776f4be60ec81020a3fc2ce20ef3ba58e90d273c5f7cdace9f5d428fe57aeb",
-  "project-bible/mira/data/phuket-developer-alias-map-v1.csv": "9dbc756d61cf2fdba6bbedff5c88f4b9cd934a60b4146b9cd924b1d63a657669",
-  "mira/catalog/data.json": "15cf7013aed95625592154f00039f3e540cb825340619d522b50ec2a98977e66",
-  "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json": "c3eb3fc7f0a0376d93e42df55434f64e1db8d2ee4d6b72b4799f0f7d84b9ece2"
+  "project-bible/mira/data/phuket-developer-master.csv": "1a08fd81125a05bd423b8bbed64c12ac489c2338298b797ccdc49911d4cae238",
+  "project-bible/mira/data/phuket-developer-alias-map-v1.csv": "1cea893dde95480a376c730d9fe71ac94b6aab7a31de42ab9b3eacad94d9bc26",
+  "mira/catalog/data.json": "f3366c36c683e27e9f79d8db96a7f2985272395eba1906f751ebe019ac6b1bf4",
+  "public_observations_canonical_json": "2d571aa3d3f577b21e07fb2f5bac2783ec9c33d0791e96d9743b0ff5d2396d59",
+  "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json": "3307e20723e5e1bba4a5db73936fd6c7f875d32c36f8175173aa2d963998ed60"
 }

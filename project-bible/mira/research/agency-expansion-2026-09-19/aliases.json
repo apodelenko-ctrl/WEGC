@@ -2614,5 +2614,20 @@
       "checked_at": "2026-09-18T18:10:52Z",
       "reason": "First-party and RGR say Saratov; preserve historical ID."
     }
+  ],
+  "research_alias_candidates": [
+    {
+      "agency_id": "RU-RGR-4220",
+      "field": "legacy_brand_candidate",
+      "value": "Новострой-Инвест",
+      "source_url": "https://realtfin.com/saratov/agentstva-nedvizhimosti/1795-novostroj-invest.html",
+      "verification_status": "secondary_corroboration_alias_candidate",
+      "reason": "Directory explicitly names ИП Пухова В.В.; shared published company phone +79378180106 matches existing RU-RGR-4220. Do not count as a new independent agency; no legal merger asserted.",
+      "secondary_email": "v681610@mail.ru",
+      "secondary_company_phone": "+79378181610",
+      "possible_alias_only": true,
+      "checked_at": "2026-09-18T19:11:22Z",
+      "count_as_new_agency": false
+    }
   ]
 }

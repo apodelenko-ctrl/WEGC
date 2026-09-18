@@ -1,28 +1,42 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
   "status": "in_progress",
-  "source_commit": "4a84228daf04f928bcbe995a33263bbddb7cb019",
-  "checkpoint_at": "2026-09-18T18:36:48.626807Z",
+  "source_commit": "6bdc7cccf753df3ad886b14e137f489d70d8a3e3",
+  "checkpoint_at": "2026-09-18T19:19:34Z",
   "completed": [
     "existing_source_inventory",
     "exact_alias_projection_618_phuket",
     "public_contacts_title_botanica_ozone",
-    "draft_inquiry_planner_14_tests"
+    "draft_inquiry_planner_14_tests",
+    "B002_three_group_contacts",
+    "B002_Zero_master_alias_and_three_primary_links",
+    "B002_Andamanda_nonresidential_hold",
+    "B002_registry23tests"
   ],
   "next_actions": [
-    "Obtain sanitized LOCAL external-ID crosswalk for native87 developer Accounts versus public master40; do not sum these",
-    "reconcile pilot31/TOP60/stage8 with master40, preserve conflicts",
-    "resolve unmatched family15 and ambiguous5 before remaining no-family507",
-    "verify missing developer contacts using primary sources",
-    "LOCAL reconcile existing Botanica/The Title mail and contracts privately",
-    "extend to other60 published market records",
-    "dry-run native CRM mapping after schema handoff"
+    "Private native87 ↔ public master41 crosswalk; no total addition",
+    "Aileen6, Unique1, Naturale Kamala1, Banyan ambiguity5",
+    "Review possible Zero Bang Tao / Nai Yang / Silhouette duplicate catalogue labels without deleting IDs",
+    "Missing family507; then other60 published market records",
+    "Named agency-relations and missing messenger fields",
+    "Private Botanica/The Title reconciliation; do not send first-contact again"
   ],
-  "developer_cursor": "unresolved_family_not_in_master",
+  "developer_cursor": "Aileen_6_then_Unique_1_then_Naturale_Kamala_1_and_Banyan_5",
   "crm_imported": false,
   "external_sends": 0,
   "final_report_required": true,
   "stop_by": "2026-09-19T08:00:00+07:00",
   "latest_native_crm_source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
-  "native_developer_research_count": 87
+  "native_developer_research_count": 87,
+  "latest_checkpoint_event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json",
+  "counts": {
+    "developer_master_rows": 41,
+    "fresh_public_contacts": 6,
+    "primary_project_group_links": 3,
+    "unmatched_family": 8,
+    "ambiguous": 5,
+    "no_family": 507,
+    "excluded_non_residential": 1
+  },
+  "remaining": "Aileen six and Unique one require primary developer identity; Naturale Kamala not assumed AAG; Banyan five ambiguous. Other507 missing family and60 other-market records unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending."
 }

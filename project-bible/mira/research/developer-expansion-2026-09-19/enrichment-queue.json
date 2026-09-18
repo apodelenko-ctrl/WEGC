@@ -92,7 +92,7 @@
     "project_id": "andamanda-phuket",
     "developer_id": null,
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "excluded_non_residential",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -250,9 +250,9 @@
   {
     "task_key": "project-developer:silhouette-by-the-zero",
     "project_id": "silhouette-by-the-zero",
-    "developer_id": null,
+    "developer_id": "PHK-011",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -354,17 +354,17 @@
   {
     "task_key": "project-developer:the-zero-bang-tao",
     "project_id": "the-zero-bang-tao",
-    "developer_id": null,
+    "developer_id": "PHK-011",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:the-zero-nai-yang",
     "project_id": "the-zero-nai-yang",
-    "developer_id": null,
+    "developer_id": "PHK-011",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "inherited_group_match_needs_verification",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -738,17 +738,17 @@
   {
     "task_key": "project-developer:zero-bangtao",
     "project_id": "zero-bangtao",
-    "developer_id": null,
+    "developer_id": "PHK-011",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "inherited_group_match_needs_verification",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
     "task_key": "project-developer:zero-naiyang",
     "project_id": "zero-naiyang",
-    "developer_id": null,
+    "developer_id": "PHK-011",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "inherited_group_match_needs_verification",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -778,9 +778,9 @@
   {
     "task_key": "project-developer:naturale-cherngtalei",
     "project_id": "naturale-cherngtalei",
-    "developer_id": null,
+    "developer_id": "PHK-041",
     "status": "queued",
-    "reason": "unresolved_family_not_in_master",
+    "reason": "verified_primary_source",
     "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
   },
   {
@@ -5016,7 +5016,7 @@
   {
     "task_key": "developer-contact:PHK-011",
     "developer_id": "PHK-011",
-    "status": "queued",
+    "status": "partial",
     "reason": "contract_and_crm_state_not_imported",
     "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
   },
@@ -5051,7 +5051,7 @@
   {
     "task_key": "developer-contact:PHK-016",
     "developer_id": "PHK-016",
-    "status": "queued",
+    "status": "partial",
     "reason": "contract_and_crm_state_not_imported",
     "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
   },
@@ -5220,6 +5220,13 @@
     "task_key": "developer-contact:PHK-040",
     "developer_id": "PHK-040",
     "status": "queued",
+    "reason": "contract_and_crm_state_not_imported",
+    "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
+  },
+  {
+    "task_key": "developer-contact:PHK-041",
+    "developer_id": "PHK-041",
+    "status": "partial",
     "reason": "contract_and_crm_state_not_imported",
     "next_action": "Reconcile existing CRM/mail, legal entity, named partner contact, project coverage and agreement evidence; do not restart existing conversation"
   }

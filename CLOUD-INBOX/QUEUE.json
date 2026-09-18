@@ -257,17 +257,18 @@
       "id": "MIRA-AGENCIES-20260919-01",
       "owner": "CLOUD",
       "localRole": "private_count_reconciliation_and_selective_import",
-      "status": "in_progress_saratov_4_of_10",
+      "status": "in_progress_saratov_7_of_10",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-AGENCIES-20260919-01.md",
       "resumePath": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
       "automationId": "6aad78bf2b988191b6ca5c921d60fd12",
-      "latestBatch": "project-bible/mira/research/agency-expansion-2026-09-19/batch-001-saratov.json",
-      "lastCheckpointAt": "2026-09-18T18:10:52Z",
+      "latestBatch": "project-bible/mira/research/agency-expansion-2026-09-19/batch-002-saratov-observations.json",
+      "lastCheckpointAt": "2026-09-18T19:19:34Z",
       "researchCounts": {
-        "canonicalCandidates": 345,
-        "RU": 203,
-        "newCandidates": 8,
-        "firstWaveSuitableReviewed": 4,
+        "canonicalCandidates": 348,
+        "RU": 206,
+        "newCandidatesThisBlock": 3,
+        "newCandidatesThisTask": 11,
+        "firstWaveSuitableReviewed": 7,
         "crmImportsThisTask": 0
       }
     },
@@ -304,13 +305,23 @@
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-DEVELOPERS-20260919-01.md",
       "resumePath": "project-bible/mira/research/developer-expansion-2026-09-19/RESUME.json",
       "createdAt": "2026-09-18T18:36:48.626807Z",
-      "nextAction": "First reconcile private CRM87 developer records with public master40 and remaining source layers by IDs; continue source enrichment and project mapping",
+      "nextAction": "Resolve Aileen6/Unique1/Naturale Kamala1 and Banyan ambiguity5; private native87 ↔ master41 crosswalk; then missing family507 and other market60",
       "acceptance": [
         "Each catalog project has verified developer/legal seller or explicit unresolved task",
         "Existing source IDs preserved; all source layers reconciled",
         "CRM stages and active agreements supported by private evidence",
         "Replay-safe CRM import reported separately from research counts"
-      ]
+      ],
+      "lastCheckpointAt": "2026-09-18T19:19:34Z",
+      "latestBatch": "project-bible/mira/research/developer-expansion-2026-09-19/CHECKPOINT-002.md",
+      "researchCounts": {
+        "developerMasterRows": 41,
+        "newRowsThisBlock": 1,
+        "freshPublicContactGroups": 6,
+        "primaryProjectGroupLinks": 3,
+        "projects618Preserved": true,
+        "crmImportsThisTask": 0
+      }
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
@@ -370,5 +381,12 @@
   "currentOwnerFollowup": {
     "at": "2026-09-18 18:44:24 UTC",
     "scope": "Read Botanica document request, inventory Singapore company files, create owner-only document vault and project-bible index; no sending/signing or public document upload."
+  },
+  "latestCloudResearchCheckpoint": {
+    "event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json",
+    "at": "2026-09-18T19:19:34Z",
+    "sourceCommit": "6bdc7cccf753df3ad886b14e137f489d70d8a3e3",
+    "sourceHeadRechecked": "73ca08fe1d0fdfbdb30d4c18f005cfff6f1e1ed3",
+    "privateTransferConfirmed": false
   }
 }

@@ -85,6 +85,32 @@ def build(root, observations):
                 continue
             seen.add(signature)
             by_id[did]['contacts'].append(dict(c))
+        for field in row.get('field_evidence', []):
+            if not all(known(field.get(k)) for k in ('field', 'value', 'source_url', 'checked_at', 'verification_status')) or not field['source_url'].startswith('https://'):
+                raise ValueError('developer field missing public evidence')
+        by_id[did].setdefault('field_evidence', []).extend(row.get('field_evidence', []))
+        by_id[did]['missing_fields'] = {name: {'verification_status': status, 'checked_at': observations.get('checked_at'), 'source_url': row['contacts'][0]['source_url'] if row['contacts'] else None} for name, status in row.get('missing_fields', {}).items()}
+        if row.get('note'):
+            by_id[did]['research_note'] = row['note']
+    project_ids = {p['id'] for p in projects}
+    verified_links = {}
+    for row in observations.get('project_observations', []):
+        pid = row.get('project_id')
+        if pid not in project_ids or pid in verified_links:
+            raise ValueError('unknown or duplicate observed project ID')
+        if row.get('visibility') != 'public_business':
+            raise ValueError('private project observation')
+        if not all(known(row.get(k)) for k in ('source_url', 'checked_at', 'basis')):
+            raise ValueError('project observation lacks evidence')
+        if not row['source_url'].startswith('https://'):
+            raise ValueError('non-web project source')
+        if row.get('mapping_status') not in {'verified_primary_source', 'excluded_non_residential'}:
+            raise ValueError('unsupported project observation status')
+        if row['mapping_status'] == 'verified_primary_source' and row.get('developer_id') not in by_id:
+            raise ValueError('unknown observed developer ID')
+        if row['mapping_status'] == 'excluded_non_residential' and row.get('developer_id') is not None:
+            raise ValueError('excluded taxonomy must not silently assign a developer')
+        verified_links[pid] = row
     links = []
     queue = []
     for p in projects:
@@ -102,6 +128,16 @@ def build(root, observations):
                     'family_basis': p.get('familyBasis'), 'alias_path': str(alias_path)},
                 'legal_seller_verified': False, 'contract_covered': None,
                 'commercially_enabled': False}
+        observation = verified_links.get(p['id'])
+        if observation:
+            link['inherited_mapping_status'] = status
+            link['inherited_candidate_developer_ids'] = candidates
+            link['mapping_status'] = observation['mapping_status']
+            link['developer_id'] = observation.get('developer_id')
+            link['candidate_developer_ids'] = ([link['developer_id']] if link['developer_id'] else [])
+            link['primary_evidence'] = dict(observation)
+            # This overlay can never set seller, contract or commercial gates.
+            status = link['mapping_status']
         links.append(link)
         queue.append({'task_key': 'project-developer:' + p['id'], 'project_id': p['id'],
                       'developer_id': link['developer_id'], 'status': 'queued',
@@ -121,6 +157,9 @@ def build(root, observations):
         'projects_with_inherited_family': sum(bool(p['family']) for p in links),
         'project_mapping_counts': dict(counts),
         'developers_with_fresh_public_contacts': sum(d['fresh_contact_verified'] for d in developers),
+        'projects_excluded_non_residential': counts.get('excluded_non_residential', 0),
+        'projects_with_primary_developer_group': counts.get('verified_primary_source', 0),
+        'fresh_contact_coverage_by_kind': {kind: sum(any(c.get('kind') == kind and c.get('verification_status') == 'verified_public_source' for c in d['contacts']) for d in developers) for kind in ('email', 'phone', 'whatsapp', 'telegram', 'line', 'broker_portal')},
         'signed_contracts_total': None, 'projects_covered_by_active_contract': None,
         'emails_sent_total': None, 'developer_replies_total': None,
         'unknown_metric_reason': 'Private CRM, mail history and agreements have not been imported. Unknown is not zero.',
@@ -128,6 +167,7 @@ def build(root, observations):
     }
     manifest = {str(p): hashlib.sha256((root/p).read_bytes()).hexdigest()
                 for p in (master_path, alias_path, catalog_path)}
+    manifest['public_observations_canonical_json'] = hashlib.sha256(json.dumps(observations, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     receipt_path = Path('CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json')
     if (root/receipt_path).exists():
         receipt = read_json(root, receipt_path)

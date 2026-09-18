@@ -226,7 +226,7 @@
     "family": "Andamanda",
     "developer_id": null,
     "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "mapping_status": "excluded_non_residential",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 42,
@@ -235,7 +235,19 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "andamanda-phuket",
+      "developer_id": null,
+      "mapping_status": "excluded_non_residential",
+      "visibility": "public_business",
+      "source_url": "https://www.andamandaphuket.com/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Retrieved official homepage search content describes a water park, not a residential project. Direct open failed. Hold out of residential supplier target, retain catalogue ID and request LOCAL taxonomy correction.",
+      "evidence_capture": "official_search_result_content; direct_open_blocked"
+    }
   },
   {
     "project_id": "angsana-oceanview-residences",
@@ -627,9 +639,11 @@
     "name": "Silhouette by The Zero",
     "market": "phuket",
     "family": "The Zero Phuket / Zero Developments",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-011",
+    "candidate_developer_ids": [
+      "PHK-011"
+    ],
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 45,
@@ -638,7 +652,20 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "inherited_group_match_needs_verification",
+    "inherited_candidate_developer_ids": [
+      "PHK-011"
+    ],
+    "primary_evidence": {
+      "project_id": "silhouette-by-the-zero",
+      "developer_id": "PHK-011",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://thezerophuket.com/silhouette-nai-yang/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Official Silhouette project page identifies Zero Developments; English catalogue ID retained. Older Nai Yang labels may refer to same project but not merged."
+    }
   },
   {
     "project_id": "so-origin-kata",
@@ -885,9 +912,11 @@
     "name": "The Zero Bang Tao",
     "market": "phuket",
     "family": "The Zero Phuket / Zero Developments",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-011",
+    "candidate_developer_ids": [
+      "PHK-011"
+    ],
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 43,
@@ -896,16 +925,31 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "inherited_group_match_needs_verification",
+    "inherited_candidate_developer_ids": [
+      "PHK-011"
+    ],
+    "primary_evidence": {
+      "project_id": "the-zero-bang-tao",
+      "developer_id": "PHK-011",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://thezerophuket.com/bang-tao/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Exact English project name on developer's own website; legal seller not verified."
+    }
   },
   {
     "project_id": "the-zero-nai-yang",
     "name": "The Zero Nai Yang",
     "market": "phuket",
     "family": "The Zero Phuket / Zero Developments",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-011",
+    "candidate_developer_ids": [
+      "PHK-011"
+    ],
+    "mapping_status": "inherited_group_match_needs_verification",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 44,
@@ -1829,9 +1873,11 @@
     "name": "Зеро Бангтао",
     "market": "phuket",
     "family": "The Zero Phuket / Zero Developments",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-011",
+    "candidate_developer_ids": [
+      "PHK-011"
+    ],
+    "mapping_status": "inherited_group_match_needs_verification",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 275,
@@ -1847,9 +1893,11 @@
     "name": "Зеро Найянг",
     "market": "phuket",
     "family": "The Zero Phuket / Zero Developments",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-011",
+    "candidate_developer_ids": [
+      "PHK-011"
+    ],
+    "mapping_status": "inherited_group_match_needs_verification",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 276,
@@ -1923,9 +1971,11 @@
     "name": "Натурале Чернгталей",
     "market": "phuket",
     "family": "Naturale",
-    "developer_id": null,
-    "candidate_developer_ids": [],
-    "mapping_status": "unresolved_family_not_in_master",
+    "developer_id": "PHK-041",
+    "candidate_developer_ids": [
+      "PHK-041"
+    ],
+    "mapping_status": "verified_primary_source",
     "mapping_evidence": {
       "path": "mira/catalog/data.json",
       "source_row": 413,
@@ -1934,7 +1984,18 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "inherited_mapping_status": "unresolved_family_not_in_master",
+    "inherited_candidate_developer_ids": [],
+    "primary_evidence": {
+      "project_id": "naturale-cherngtalei",
+      "developer_id": "PHK-041",
+      "mapping_status": "verified_primary_source",
+      "visibility": "public_business",
+      "source_url": "https://www.naturalephuket.com/",
+      "checked_at": "2026-09-18T19:11:22Z",
+      "basis": "Official Naturale Cherng Talay page names AAG Development. Russian catalogue title transliteration matched; Naturale Kamala deliberately remains unresolved."
+    }
   },
   {
     "project_id": "ozon-villas",

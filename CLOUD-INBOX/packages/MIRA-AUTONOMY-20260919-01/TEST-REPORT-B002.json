@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-09-18T19:19:34Z",
+  "command": "python -m unittest discover -s CLOUD-INBOX/packages/MIRA-AUTONOMY-20260919-01 -p test_registry.py -v",
+  "passed": 23,
+  "failed": 0,
+  "scope": "local standard-library unit tests; no live CRM/cloud/provider acceptance"
+}

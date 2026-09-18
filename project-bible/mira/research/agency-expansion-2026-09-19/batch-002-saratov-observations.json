@@ -1,0 +1,192 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "batch_id": "B002",
+  "checked_at": "2026-09-18T19:11:22Z",
+  "source_commit": "6bdc7cccf753df3ad886b14e137f489d70d8a3e3",
+  "city_id": "RU-CITY-001",
+  "records": [
+    {
+      "agency_id": "RU-NIGHT-B-004",
+      "domain": "an64.ru",
+      "source_url": "https://an64.ru/kontakty/",
+      "fields": {
+        "brand": "Империя",
+        "city": "Саратов",
+        "canonical_domain": "an64.ru",
+        "contact_page": "https://an64.ru/kontakty/",
+        "company_phone": "+7 (8452) 377-888",
+        "general_email": "info@an64.ru"
+      },
+      "segment": "local_newbuild",
+      "fit": true,
+      "reason": "Own Saratov central office and residential/new-build services, active dated listings. No federal network signal in reviewed source; independence not state-registry audited. Overseas status unknown. Unrelated postcard Telegram links in footer are NOT business contacts.",
+      "person": {
+        "source_url": "https://an64.ru/kompanija/sotrudniki/19163/",
+        "contact_first_name": "Екатерина",
+        "contact_last_name": "Цымбалова",
+        "contact_role": "Менеджер (страница сотрудника с объектами менеджера)",
+        "direct_business_phone": "+79198276607",
+        "direct_public_work_email": "zea230586@mail.ru"
+      },
+      "gaps": {
+        "legal_name": "not_found",
+        "parent_brand": "not_found",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      }
+    },
+    {
+      "agency_id": "RU-WEB-MIONI",
+      "domain": "mioni.ru",
+      "source_url": "https://mioni.ru/agentstvo-nedvizhimosti/kontakty",
+      "fields": {
+        "brand": "Mioni Consulting / Миони",
+        "city": "Саратов",
+        "canonical_domain": "mioni.ru",
+        "contact_page": "https://mioni.ru/agentstvo-nedvizhimosti/kontakty",
+        "company_phone": "+7 (8452) 322-622",
+        "general_email": "322622@bk.ru"
+      },
+      "segment": "local_greenfield_candidate",
+      "fit": true,
+      "reason": "Own Saratov brokerage offers residential and commercial transactions and invites developers/agents to cooperate. Commercial/investment focus: lower-priority residential-fit candidate, not pure newbuild specialist. Email literally published as 322622ATbkDOTru; decoded notation, not guessed. Overseas and ownership status unknown.",
+      "additional_contacts": [
+        {
+          "field": "company_phone",
+          "value": "+7 (962) 622-26-22",
+          "source_url": "https://mioni.ru/agentstvo-nedvizhimosti/kontakty",
+          "channel_kind": "public_company_phone",
+          "direct_dialogue_verified": false
+        }
+      ],
+      "gaps": {
+        "legal_name": "not_found",
+        "parent_brand": "not_found",
+        "direct_business_phone": "not_found",
+        "contact_first_name": "not_checked",
+        "contact_last_name": "not_checked",
+        "contact_role": "not_checked",
+        "direct_public_work_email": "not_found",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "notes": "WhatsApp label observed, but no target URL extracted; do not manufacture a wa.me link. Name Сергей Бакулин appears elsewhere on site; no exact partner-contact role checked."
+    },
+    {
+      "agency_id": "RU-WEB-SZ-SARATOV",
+      "domain": "sz-saratov.ru",
+      "source_url": "https://sz-saratov.ru/",
+      "fields": {
+        "brand": "Союз застройщиков Саратова и Энгельса",
+        "city": "Саратов",
+        "canonical_domain": "sz-saratov.ru",
+        "contact_page": "https://sz-saratov.ru/",
+        "legal_name": "ООО «Союз Застройщиков»",
+        "company_phone": "+7 8452 25-68-68"
+      },
+      "segment": "local_newbuild",
+      "fit": true,
+      "reason": "Own site identifies local brokerage/new-build sales function and Saratov office. Three offices (Saratov/Engels/St Petersburg) counted as ONE organization, not three independent agencies; national franchise not evidenced. Legal name is first-party claim, registry not checked. Overseas unknown.",
+      "gaps": {
+        "parent_brand": "not_found",
+        "direct_business_phone": "not_found",
+        "contact_first_name": "not_found",
+        "contact_last_name": "not_found",
+        "contact_role": "not_found",
+        "general_email": "not_found",
+        "direct_public_work_email": "not_found",
+        "whatsapp_url": "not_found",
+        "telegram_url": "not_found",
+        "telegram_kind": "not_found",
+        "vk_url": "not_found",
+        "other_social_url": "not_found"
+      },
+      "notes": "Names in client reviews were not promoted to verified staff/partner contacts."
+    },
+    {
+      "agency_id": "RU-WEB-ARKAIR",
+      "domain": "arkair.ru",
+      "source_url": "https://yandex.com/maps/194/saratov/category/real_estate_agency/184107503/filter/has_url/",
+      "evidence_status": "secondary_search_result_only",
+      "fields": {
+        "brand": "Аркаир",
+        "city": "Саратов",
+        "canonical_domain": "arkair.ru",
+        "contact_page": "https://arkair.ru/"
+      },
+      "segment": "hold_entity",
+      "fit": "hold",
+      "reason": "Independent discovery from public directories; official domain returned HTTP403. Current legal operator, specialization and contacts not verified. No directory phone promoted to verified business route.",
+      "gaps": {
+        "legal_name": "blocked",
+        "parent_brand": "blocked",
+        "direct_business_phone": "blocked",
+        "contact_first_name": "blocked",
+        "contact_last_name": "blocked",
+        "contact_role": "blocked",
+        "general_email": "blocked",
+        "company_phone": "blocked",
+        "direct_public_work_email": "blocked",
+        "whatsapp_url": "blocked",
+        "telegram_url": "blocked",
+        "telegram_kind": "blocked",
+        "vk_url": "blocked",
+        "other_social_url": "blocked"
+      },
+      "blocked_url": "https://arkair.ru/"
+    }
+  ],
+  "related_observations": [
+    {
+      "agency_id": "RU-RGR-4220",
+      "field": "legacy_brand_candidate",
+      "value": "Новострой-Инвест",
+      "source_url": "https://realtfin.com/saratov/agentstva-nedvizhimosti/1795-novostroj-invest.html",
+      "verification_status": "secondary_corroboration_alias_candidate",
+      "reason": "Directory explicitly names ИП Пухова В.В.; shared published company phone +79378180106 matches existing RU-RGR-4220. Do not count as a new independent agency; no legal merger asserted.",
+      "secondary_email": "v681610@mail.ru",
+      "secondary_company_phone": "+79378181610",
+      "possible_alias_only": true
+    },
+    {
+      "agency_id": "RU-RGR-438",
+      "field": "alternate_domain_candidate",
+      "value": "www.rost-rielt.ru",
+      "source_url": "https://realtfin.com/saratov/agentstva-nedvizhimosti/1410-rost-rielt.html",
+      "verification_status": "secondary_corroboration",
+      "reason": "Alternate website listed in directory; direct fetch timed out. Existing hold/network question remains; canonical domain unchanged."
+    }
+  ],
+  "population_check": {
+    "status": "blocked",
+    "population": null,
+    "unit": "city_proper",
+    "attempts": [
+      {
+        "url": "https://64.rosstat.gov.ru/population",
+        "outcome": "not_accessible"
+      },
+      {
+        "url": "https://64.rosstat.gov.ru/folder/27590",
+        "outcome": "internal_error"
+      },
+      {
+        "url": "https://rosstat.gov.ru/compendium/document/13282",
+        "outcome": "internal_error"
+      },
+      {
+        "url": "https://srtv.gks.ru/population",
+        "outcome": "internal_error"
+      }
+    ],
+    "note": "No fresh official figure obtained; do not reuse city-district/agglomeration or set current population from secondary snippets."
+  },
+  "new_crm_imports": 0,
+  "external_sends": 0
+}

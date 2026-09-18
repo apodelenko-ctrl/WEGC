@@ -1723,12 +1723,6 @@
       "reason": "Historical discovery only; independent entity and business fit not freshly established"
     },
     {
-      "agency_id": "RU-NIGHT-B-004",
-      "segment": "local_greenfield_candidate",
-      "first_wave_fit": "not_checked",
-      "reason": "Historical discovery only; independent entity and business fit not freshly established"
-    },
-    {
       "agency_id": "RU-NIGHT-B-005",
       "segment": "existing_overseas",
       "first_wave_fit": false,
@@ -2045,6 +2039,12 @@
       "segment": "hold_entity",
       "first_wave_fit": "hold",
       "reason": "Listed in Saratov city directory, but published office address explicitly says Engels. Do not count toward Saratov city-proper target; resolve city."
+    },
+    {
+      "agency_id": "RU-WEB-ARKAIR",
+      "segment": "hold_entity",
+      "first_wave_fit": "hold",
+      "reason": "Independent discovery from public directories; official domain returned HTTP403. Current legal operator, specialization and contacts not verified. No directory phone promoted to verified business route."
     }
   ],
   "source_rows_deleted": 0

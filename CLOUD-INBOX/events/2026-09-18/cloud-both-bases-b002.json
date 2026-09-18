@@ -1,0 +1,63 @@
+{
+  "event_id": "cloud-both-bases-b002",
+  "task_ids": [
+    "MIRA-AGENCIES-20260919-01",
+    "MIRA-DEVELOPERS-20260919-01",
+    "MIRA-AUTONOMY-20260919-01"
+  ],
+  "at_utc": "2026-09-18T19:19:34Z",
+  "at_ict": "2026-09-19T02:19:34+07:00",
+  "source_sha": "6bdc7cccf753df3ad886b14e137f489d70d8a3e3",
+  "pre_write_head": "73ca08fe1d0fdfbdb30d4c18f005cfff6f1e1ed3",
+  "result_sha": null,
+  "result_sha_note": "Exact result SHA recorded in commit receipt after publication; this event is contained in that commit.",
+  "pushed_branch": "mira/research-night-20260918",
+  "agency": {
+    "before": 345,
+    "after": 348,
+    "new_candidates": 3,
+    "existing_records_enriched": 3,
+    "existing_rows_deleted": 0,
+    "duplicate_candidate_prevented": 1,
+    "fit_before": 4,
+    "fit_after": 7,
+    "city_cursor": "RU-CITY-001",
+    "remaining_to_10": 3
+  },
+  "developer": {
+    "before": 40,
+    "after": 41,
+    "new_group_id": "PHK-041",
+    "contact_groups_before": 3,
+    "contact_groups_after": 6,
+    "project_ids_preserved": 618,
+    "primary_project_group_links": 3,
+    "ambiguous": 5,
+    "unmatched_family": 8,
+    "no_family": 507,
+    "nonresidential": 1
+  },
+  "tests": {
+    "registry_passed": 23,
+    "agency_id_preservation": true,
+    "agency_unique_ids": true
+  },
+  "crm_imports": 0,
+  "external_sends": 0,
+  "publication": "research_only_not_deployed",
+  "local": {
+    "closeout_received": true,
+    "manifest_received": true,
+    "T14": "prepared_not_migrated",
+    "private_backup_cloud": false,
+    "crosswalk_complete": false,
+    "company_vault_receipt_at": "2026-09-18 19:02:44 UTC",
+    "cloud_restore": false
+  },
+  "remaining": {
+    "agencies": "Saratov3 more; official population blocked; field gaps; other cities pending",
+    "developers": "Aileen six and Unique one require primary developer identity; Naturale Kamala not assumed AAG; Banyan five ambiguous. Other507 missing family and60 other-market records unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
+    "AUT04": "Private source/restore package and encrypted backup/key references plus access to actual cloud runtime absent"
+  },
+  "stop_by": "2026-09-19T08:00:00+07:00"
+}

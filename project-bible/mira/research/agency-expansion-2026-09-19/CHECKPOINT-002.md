@@ -1,15 +1,4 @@
-# Agency expansion change log
-
-## Canonical reconstruction — 2026-09-18
-
-Source d19b6fc09e0f6823de706ac868457139f12f596a. All 32 cached source file Git blob SHAs match current branch. Baseline 332 groups → 337 provisional candidates: split one Realting.uz directory-host group into nine named candidates (+8); collapse same-country Etagi subdomain groups (-3: two RU, one BY). Net +5 is identity correction, NOT newly discovered agencies. RU 197→195, BY 60→59, other 75→83. All 332 baseline keys and existing source IDs retained in aliases/lineage. 12 historical C10 imports remain separately confirmed by LOCAL; imports this task 0. No external sends, no deployment.
-
-Saratov current-source research started; source observations will be saved in the next checkpoint. Official population recheck attempted: Rosstat page timeout; 2025 XLSX 502; regional page inaccessible. No new official population value claimed.
-
-## Saratov B001
-
-Canonical baseline commit e31f94559265f7417f5f03240d6087197e4f9faa. Added8 candidates, enriched2 existing; total345/RU203. Fresh channels and holds: CHECKPOINT-001.md, COUNTS.json, batch-001-saratov.json. RSS city correction retains ID; no source rows deleted. Cursor remains Saratov,4/10; next6 required. Imports/sends0.
-
+# Саратов B002 — проверяемый checkpoint
 
 ## Обе базы B002 — 2026-09-18T19:19:34Z
 
@@ -24,3 +13,7 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 - LOCAL closeout по-прежнему 18:39:09UTC: T11/T12 получены, T14 prepared_not_migrated. Новый vault receipt19:02:44UTC: 13 корпоративных PDF сохранены приватно, это НЕ backup CRM или cloud runtime. Private crosswalk78/87 ↔ research348/master41 и фактическая передача кода+encrypted backup+отдельного ключа не подтверждены. Cloud restore/live acceptance pending; native counts не складываются с research.
 
 Детали: [agency COUNTS](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/agency-expansion-2026-09-19/COUNTS.json), [developer metrics](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/project-bible/mira/research/developer-expansion-2026-09-19/metrics.json), [event](https://github.com/apodelenko-ctrl/WEGC/blob/mira/research-night-20260918/CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b002.json). Next: Саратов ещё3 подходящих, затем Тюмень; Aileen6/Unique1/Naturale Kamala1 и Banyan ambiguity5; private crosswalk и AUT-04 restore prerequisites. Исходная ограниченная серия до08:00 ICT не продлена.
+
+Поканальные счётчики в COUNTS относятся ко всем13 рассмотренным записям Саратова, включая holds и overseas: общий телефон11, общий email9, прямой рабочий телефон6, рабочий email человека2, WhatsApp URL1, Telegram direct2/channel2, VK1. Полностью заполненных0. Для всего canonical348 новые полные verified counters не заявляются.
+
+Источники: https://an64.ru/kontakty/ ; https://an64.ru/kompanija/sotrudniki/19163/ ; https://mioni.ru/agentstvo-nedvizhimosti/kontakty ; https://sz-saratov.ru/ ; https://realtfin.com/saratov/agentstva-nedvizhimosti/1795-novostroj-invest.html ; https://realtfin.com/saratov/agentstva-nedvizhimosti/1410-rost-rielt.html . Field-level observation dates in batch-002-saratov-observations.json.
