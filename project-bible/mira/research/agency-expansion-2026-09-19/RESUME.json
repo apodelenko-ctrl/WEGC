@@ -21,7 +21,7 @@
   "externalSends": 0,
   "requiredFinalReport": "NIGHT-REPORT.md",
   "mandatoryFinalReportOnLastRun": true,
-  "latestResultCommit": "cc1dc0876e8ac5c1793c52750136c7aa11df2db7",
+  "latestResultCommit": "1a9aaa28eb2dc3c684babedeb16398076b6b9825",
   "remaining": "Tyumen minimum met at 10/10 research-fit candidates. Panorama and Metrika are retained outside the local-first wave due to published overseas activity. Legal and direct-channel gaps remain; official city-proper population is blocked.",
   "canonicalCandidateGroups": 356,
   "canonicalRussiaGroups": 214,
@@ -31,7 +31,7 @@
   "latestCheckpointEvent": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b004.json",
   "newAgencyCountMeaning": "19 cumulative new candidate records including holds and separate overseas/network segments; not 19 verified suitable agencies",
   "freshFirstWaveSuitableCandidates": 10,
-  "latestResultCommitNote": "B004 data/code commit will be recorded by the following receipt-only commit.",
+  "latestResultCommitNote": "Published B004 data/code checkpoint; a following receipt-only commit stores this pointer.",
   "latestBatch": "batch-004-tyumen-observations.json",
   "lastCheckpointAt": "2026-09-18T21:20:00Z"
 }

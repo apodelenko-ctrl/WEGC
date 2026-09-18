@@ -1,0 +1,17 @@
+{
+  "checkpoint_id":"cloud-both-bases-b004",
+  "published_data_commit":"1a9aaa28eb2dc3c684babedeb16398076b6b9825",
+  "branch":"mira/research-night-20260918",
+  "source_commit":"07527a6b9b90a5063553c64188c1f5ef5ddd318e",
+  "sources": {
+    "agencies":["https://www.ndv72.ru/","https://newflat72.ru/","https://newgorod.ru/","https://www.ecn72.ru/","https://formula-agency.ru/","https://deptmn.ru/o-kompanii/komanda","https://novostroika72.ru/","https://100kvadratov.com/","https://metrika.com/"],
+    "developers":["https://www.aileenvillas.com/","https://www.fazwaz.com/property-developers/trinity-property-co-ltd-d2698","https://propertyscout.co.th/en/phuket/townhouse/aileen-residence-bangtao-1-townhouse/"],
+    "population":"Official current city-proper figure not verified; no urban-district or agglomeration substitute."
+  },
+  "agency":{"before":350,"after":356,"new":6,"existing_updated":6,"deleted":0,"reviewed":12,"first_wave_suitable":10,"separate_overseas_or_network":2,"next_city":"RU-CITY-003"},
+  "developer":{"before":42,"after":43,"fresh_contacts_before":7,"fresh_contacts_after":8,"project_ids_preserved":618,"primary_group_links":5,"verified_public_group_links":10,"unresolved_family":1,"ambiguous":5,"no_family":507},
+  "tests":{"registry":26,"agency_unique_ids":true,"agency_ids_preserved":true},
+  "crm_imports":0,"external_sends":0,"production_deploy":false,"cloud_restore":false,
+  "local_transition":{"full_closeout_and_manifest_received":true,"local_evidence_accepted":true,"private_archive_in_cloud":false,"external_id_crosswalk_complete":false,"actual_cloud_restore_accepted":false},
+  "scope_note":"Public research only. LOCAL native Accounts78/87 are not added to public research totals. No outreach, CRM import or deployment."
+}

@@ -46,6 +46,6 @@
     "excluded_non_residential": 1
   },
   "remaining": "Five remaining Aileen-labelled records now have exact current public-source links to Trinity Property, while Phase1 remains mapped to Unique Group from its primary project page. These five links are not primary-source grade and are deliberately not sendable. Naturale Kamala is not assumed AAG; Banyan five remain ambiguous. Other507 missing-family and60 other-market records are unprocessed. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
-  "latest_result_commit": "cc1dc0876e8ac5c1793c52750136c7aa11df2db7",
-  "latest_result_commit_note": "B004 data/code commit will be recorded by the following receipt-only commit."
+  "latest_result_commit": "1a9aaa28eb2dc3c684babedeb16398076b6b9825",
+  "latest_result_commit_note": "Published B004 data/code checkpoint; a following receipt-only commit stores this pointer."
 }

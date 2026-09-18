@@ -1,6 +1,6 @@
 # МИРА — общий реестр задач, хвостов и истории
 
-**Единая текущая сводка для CLOUD и LOCAL.** Срез:18.09.2026 20:07 UTC /19.09.2026 03:07 Asia/Bangkok. Операционный день18.09; даты исходных событий не переименовывать. Task: MIRA-CLOSEOUT-20260918-01. Владелец исполнения интеграции:LOCAL; research: CLOUD. Статус: **IN PROGRESS — полный LOCAL closeout/manifest получен; private transfer, crosswalk и cloud restore остаются**.
+**Единая текущая сводка для CLOUD и LOCAL.** Срез:18.09.2026 21:20 UTC /19.09.2026 04:20 Asia/Bangkok. Операционный день18.09; даты исходных событий не переименовывать. Task: MIRA-CLOSEOUT-20260918-01. Владелец исполнения интеграции:LOCAL; research: CLOUD. Статус: **IN PROGRESS — полный LOCAL closeout/manifest получен; private transfer, crosswalk и cloud restore остаются**.
 
 ## Что проверено и что означает этот файл
 
@@ -156,3 +156,9 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 - Agency canonical **348 → 350** (RU208/BY59/other83). Саратов **10/10 minimum met**: +Гамма-Риэлт, +Ваш Риэлтор, Ратмир hold→fit по собственному сайту. Каналы15 reviewed: phone13, general email11, direct phone7, direct email2, WA1, TG direct2/channel2, VK1, fully-enriched0. Population city-proper всё ещё blocked; следующий cursor Тюмень.
 - Developer master **41 → 42** (+Unique Group Thailand); fresh contact groups7, exact primary project links **3 → 5**. Aileen Villas Phase1 и Unique Eco Viva связаны по первичным страницам. Пять остальных Aileen-labelled записей не объединены; exact legal seller неизвестен. Все618 IDs сохранены.
 - 25/25 tests PASS; CRM imports0, external sends0, deploy0. LOCAL native78/87 остаются отдельным приватным snapshot: crosswalk к research350/42 отсутствует. Private archive всё ещё не подтверждён в cloud; AUT-04 restore/live acceptance pending.
+
+## Обе базы B004 — 2026-09-18T21:20:00Z
+
+- Agency canonical **350 → 356** (RU214/BY59/other83). Тюмень:12 reviewed, **10/10** local-first suitable. «Панорама» и «Метрика» — отдельный зарубежный/network сегмент, не входят в десять. +6 кандидатов,6 existing enriched, удалений0. Каналы: phone11, general email3, direct phone4, direct email3, WA1, TG channel1, fully-enriched0. Official city-proper population blocked; next cursor `RU-CITY-003`.
+- Developer master **42 → 43** (+Trinity Property / Aileen Villas); fresh contact groups **7 → 8**. Primary links остаются5; primary-or-exact-current-public links **5 → 10**. Пять Aileen links имеют `verified_public_sources` и не проходят send gate. Unmatched family6→1; ambiguous5/no-family507; все618 IDs сохранены.
+- 26/26 tests PASS; CRM imports0, external sends0, deploy0. LOCAL native78/87 не складываются с research356/43. Private code/archive transfer, encrypted backup, separate key reference, crosswalk и actual cloud restore всё ещё pending.

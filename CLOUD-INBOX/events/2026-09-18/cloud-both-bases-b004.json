@@ -1,0 +1,29 @@
+{
+  "event_id": "cloud-both-bases-b004",
+  "task_ids": ["MIRA-AGENCIES-20260919-01", "MIRA-DEVELOPERS-20260919-01", "MIRA-AUTONOMY-20260919-01"],
+  "at_utc": "2026-09-18T21:20:00Z",
+  "at_ict": "2026-09-19T04:20:00+07:00",
+  "source_sha": "07527a6b9b90a5063553c64188c1f5ef5ddd318e",
+  "pre_write_head": "07527a6b9b90a5063553c64188c1f5ef5ddd318e",
+  "result_sha": "1a9aaa28eb2dc3c684babedeb16398076b6b9825",
+  "pushed_branch": "mira/research-night-20260918",
+  "agency": {
+    "before": 350, "after": 356, "new_candidates": 6, "existing_records_enriched": 6, "existing_rows_deleted": 0,
+    "city_completed": "RU-CITY-002", "next_city_cursor": "RU-CITY-003", "reviewed": 12, "first_wave_suitable": 10,
+    "separate_overseas_or_network": 2,
+    "channel_coverage": {"phone":11,"general_email":3,"direct_business_phone":4,"direct_public_work_email":3,"whatsapp":1,"telegram_direct":0,"telegram_channel":1,"vk":0,"fully_enriched":0}
+  },
+  "developer": {
+    "before":42,"after":43,"new_group_id":"PHK-043","contact_groups_before":7,"contact_groups_after":8,
+    "project_ids_preserved":618,"primary_project_group_links":5,"verified_public_project_group_links":10,
+    "unresolved_family_after":1,"ambiguous":5,"no_family":507,
+    "exact_new_public_links":["ailin-villas-6-faza","ailin-villas-vtoraya-faza","ailin-villas-ravaii","ailin-rezidens-bangtao","ailin-rezidens-lagun"],
+    "send_gate_opened":false
+  },
+  "tests": {"registry_passed":26,"agency_id_preservation":true,"agency_unique_ids":true},
+  "crm_imports":0,"external_sends":0,"publication":"research_only_not_deployed",
+  "local": {"closeout_received":true,"manifest_received":true,"T14":"prepared_not_migrated","private_backup_cloud":false,"crosswalk_complete":false,"cloud_restore":false},
+  "remaining": {"agencies":"RU-CITY-003 next; official population and field gaps remain","developers":"Naturale Kamala, Banyan ambiguity5,507 no-family,60 other-market, legal seller/contract and native87 crosswalk","AUT04":"Private package, encrypted backup, separate key and actual cloud runtime access absent"},
+  "stop_by":"2026-09-19T08:00:00+07:00",
+  "commit_receipt":"CLOUD-INBOX/receipts/CLOUD-BOTH-BASES-B004.json"
+}
