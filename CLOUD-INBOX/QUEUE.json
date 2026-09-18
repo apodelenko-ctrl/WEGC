@@ -1,10 +1,13 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "date": "2026-09-18",
   "timezone": "Asia/Bangkok",
   "repository": "apodelenko-ctrl/WEGC",
   "sourceBranch": "mira/research-night-20260918",
   "scope": "owner_requested_shared_accounting_and_local_preparation",
+  "entryPoint": "CLOUD-INBOX/START-HERE.md",
+  "nextTaskForLocal": "MIRA-LOCAL-20260918-02",
+  "routingNote": "Preserve the currently running checkpoint. Read the current entry point before the next independent block; skip any newer locally completed steps. Existing mail/CRM and coordination tasks are retained, not restarted.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": false,
   "localReceiptConfirmed": false,
@@ -15,6 +18,19 @@
   "purchasesAuthorized": false,
   "newAutomationCreated": false,
   "handoffIssue": 14,
+  "latestOwnerReportedState": {
+    "source": "Owner message in the current conversation, 18 September 2026; not an independent CLOUD live test",
+    "invitedApplicantLogin": "reported_passed",
+    "technicalApplicationSubmitted": "reported_passed",
+    "durableReceipt": "reported_passed",
+    "applicationSurvivesRefresh": "reported_passed",
+    "operatorDecision": "pending",
+    "applicantSeesDecision": "pending",
+    "applicantLogoutAndNewLogin": "pending",
+    "buyerRegistration": "disabled",
+    "russiaWithoutVpn": "unverified",
+    "personalIdentityPublished": false
+  },
   "sharedRecords": {
     "findings": "CLOUD-INBOX/Находки.md",
     "decisions": "CLOUD-INBOX/Решения.md",
@@ -23,6 +39,34 @@
     "writePolicy": "Read current SHA, preserve other agents, append dated evidence with IDs; never replace history with plans"
   },
   "tasks": [
+    {
+      "id": "MIRA-LOCAL-20260918-02",
+      "priority": "P0-live-decision-then-data-integration",
+      "status": "ready_for_local_review",
+      "owner": "LOCAL",
+      "title": "Finish the existing applicant decision/relogin and integrate CLOUD data through the shared folder",
+      "sourceCommit": "5e496952acee67154af963f6d95df329e870b543",
+      "sourcePaths": [
+        "CLOUD-INBOX/START-HERE.md",
+        "CLOUD-INBOX/tasks/MIRA-LOCAL-20260918-02.md",
+        "CLOUD-INBOX/DATA-HANDOFF-20260918.md",
+        "CLOUD-INBOX/project-taxonomy-20260918.json",
+        "CLOUD-INBOX/receipts/README.md"
+      ],
+      "acceptance": [
+        "Accepted receipt references exact read source commit and actual local worktree/HEAD",
+        "Already passed applicant login/application/refresh are not needlessly repeated",
+        "Operator decision, applicant-visible result and relogin have factual live evidence or explicit blockers",
+        "Vietnam/Montenegro import uses stable IDs, explicit taxonomy and daily source corrections; current 648 routes remain intact",
+        "Russia/Belarus candidates are strictly deduplicated with latest local state; damaged historical Belarus CSV is not imported",
+        "Funnel remains Phuket-only; buyer operations and external sends remain closed",
+        "Source content contradictions and dashboard are reconciled without invented activation or business counts",
+        "New code/data acceptance and publication are reported separately; no research branch wholesale merge",
+        "The next result and media gaps are written back through the receipts protocol"
+      ],
+      "receiptPath": "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json",
+      "receipt": null
+    },
     {
       "id": "MIRA-COORD-20260918-01",
       "priority": "P0-coordination",
@@ -99,5 +143,5 @@
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
-  "note": "Routine choice/preparation authority is now explicit. No account credentials, cold-list permission, production deployment, real recipient send or local receipt is inferred. C04-C16 are not marked done by this work. Local remains sole integrator/deployer."
+  "note": "Latest owner-reported applicant submission supersedes older pending-login notes only. It is not a local receipt for the inbox, commercial activation or permission for mass intake/sends. Prior tasks and decision history are preserved. Local remains sole integrator/deployer."
 }
