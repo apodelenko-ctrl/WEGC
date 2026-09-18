@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "cloud-1157-C08",
+  "runStartLocal": "2026-09-18T11:57:37+07:00",
+  "timeSemantics": "run start supplied by automation runtime; completion minute not guessed",
+  "author": "CLOUD",
+  "block": "C08",
+  "status": "completed",
+  "artifact": "project-bible/mira/research/day-2026-09-18/results/C08-russia-six-review-candidates.md",
+  "artifactCommit": "1c6e0b25de308e71f0d173fbbb233799b03e7c8b",
+  "scope": "Six existing owner_review=yes Russian candidates only",
+  "facts": {
+    "candidatesRechecked": 6,
+    "currentCorporateRoutesRechecked": 6,
+    "exactDomainMainSearchNoHits": 6,
+    "externalMessagesSent": 0,
+    "commercialActivations": 0
+  },
+  "materialFindings": [
+    "AFLAT current site still exposes Thailand as a service: direct international-market signal retained",
+    "Welcome current site supports new-build/developer-sales B2B adjacency",
+    "HOUSE GROUP public request feed contains a 2025 Spain enquiry; kept as demand signal only, not a foreign desk",
+    "RIEL-MAX, BSN and Formula have current new-build/full-service corporate routes without a verified overseas desk",
+    "Current main exact-domain search returned zero hits for all six; this is not legal/rebrand/unpublished-CRM dedupe"
+  ],
+  "remainingHolds": [
+    "Unpublished LOCAL CRM dedupe",
+    "Legal-entity/rebrand uniqueness",
+    "Exact partnership decision-makers",
+    "Recipient eligibility and send approval",
+    "No current foreign desk proven for five of six; HOUSE GROUP remains demand-signal only"
+  ],
+  "externalActions": []
+}
