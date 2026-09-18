@@ -44,6 +44,6 @@ Pages: https://github.com/apodelenko-ctrl/WEGC/actions/runs/35327093244
 
 Existing LOCAL tasks remain the implementation route: `MIRA-LOCAL-20260918-02`, `MIRA-INTEGRATE-20260918-01` supplement and `MIRA-MKT-20260918-01`. No new LOCAL task, external send, purchase or production action is created by this brief.
 
-Detailed C16: `results/C16-end-of-day-status.md`. Shared board: `../../../..//../../CLOUD-INBOX/КОНТРОЛЬ-БОРД.md` (repository root `CLOUD-INBOX/КОНТРОЛЬ-БОРД.md`).
+Detailed C16: `results/C16-end-of-day-status.md`. Shared board: repository root `CLOUD-INBOX/КОНТРОЛЬ-БОРД.md`.
 
 The separate owner-requested X01 screen for Albania/northern Italy and other future assortment candidates is preserved as a distinct research result; it does not extend this bounded C01–C16 lane automatically.
