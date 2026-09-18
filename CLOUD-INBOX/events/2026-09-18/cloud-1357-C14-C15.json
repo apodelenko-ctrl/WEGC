@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "eventId": "cloud-1357-C14-C15",
+  "runId": "cloud-1357-C14-C15",
+  "author": "CLOUD",
+  "startedAt": "2026-09-18T13:57:30+07:00",
+  "timezone": "Asia/Bangkok",
+  "completedBlocks": ["C14", "C15"],
+  "results": [
+    {
+      "path": "project-bible/mira/research/day-2026-09-18/results/C14-dashboard-evidence-source-reconciliation.md",
+      "commit": "7994591de968e200a8dcbff6cfae3f5b3a66e690",
+      "scope": "Source-level reconciliation proposal for canonical launch dashboard; no main/generated/product edit"
+    },
+    {
+      "path": "project-bible/mira/research/day-2026-09-18/results/C15-final-handoff-validation-and-holds.md",
+      "commit": "ca4553da432010817494c3263b81b86a7713ad7b",
+      "scope": "Final handoff proof-boundary validation; prior machine QA retained, no import/live acceptance claimed"
+    }
+  ],
+  "c14": {
+    "mainCommitRead": "1b5e6cc053bd4b20a47c3f4231c56bb1f05d850b",
+    "staleGeneratedDashboardFound": true,
+    "staleSourceLocations": [
+      "scripts/mira-launch-operations.py",
+      "scripts/mira-launch-source.py",
+      "project-bible/mira/operations/LAUNCH-DASHBOARD.md",
+      "project-bible/mira/operations/launch-dashboard.json"
+    ],
+    "recommendedStateDimensions": ["implementation", "deployment", "live_acceptance", "commercial_gate"],
+    "ownerReportedApplicantReceiptPreservedAsOwnerReported": true,
+    "operatorDecisionSharedEvidencePending": true,
+    "buyerRegistrationClosed": true,
+    "crmIntegrationConfirmed": false
+  },
+  "c15": {
+    "nightSource": "beb9707c8561c138c896b122c6776a217ee4b3f0",
+    "priorMachineQaPreserved": true,
+    "exportedHashesPreviouslyChecked": 230,
+    "russiaCandidates": 50,
+    "belarusCandidates": 30,
+    "combinedCandidateIdsPreviouslyVerifiedUnique": 80,
+    "taxonomyMappingsObserved": 30,
+    "commerciallyEnabled": false,
+    "imagePublicationApproved": false,
+    "damagedBelarusCsvImportAllowed": false,
+    "newPublicationApprovedMedia": 0,
+    "cloudShellPackageRerun": "NOT_RUN_DNS_TO_GITHUB_FAILED",
+    "githubConnectorRead": true
+  },
+  "externalMessagesSent": 0,
+  "externalFormsSubmitted": 0,
+  "crmImportsPerformed": 0,
+  "productionWrites": 0,
+  "automationChanges": 0,
+  "localReceiptConfirmed": false,
+  "remainingBlocks": ["C16"],
+  "nextAction": "C16 final day report only after fresh RESUME; do not repeat completed C01-C15. LOCAL continues task MIRA-LOCAL-20260918-02 and existing CRM task with receipts."
+}
