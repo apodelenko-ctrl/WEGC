@@ -98,3 +98,10 @@ Canonical dashboard: `operations/LAUNCH-DASHBOARD.md` and JSON/HTML beside it. F
 
 Continue: resolve evidence gaps, complete acquisition assets, implement/deploy protected pilot. Generated coverage is not business launch readiness.
 <!-- MIRA-LAUNCH-AUTO:END -->
+
+
+## LOCAL return — 2026-09-19 — private corporate document vault
+
+Owner-requested archive work: 13 original Singapore-company PDFs collected into owner-only Google Drive, all 13 downloaded again with matching SHA-256. Root/three folders/all PDF and support-file access verified owner-only. Private correspondence and full gap checklist remain outside Git. See [COMPANY-DOCUMENTS.md](./COMPANY-DOCUMENTS.md) and [MIRA-COMPANY-VAULT-20260919-OWNER receipt](../../CLOUD-INBOX/receipts/MIRA-COMPANY-VAULT-20260919-OWNER.json).
+
+Local source checkpoint `03e0aecdd974f7eb9a9e9720ba42c3658f6c6f87`; remote safe index `c769cbe3c3337e6f5a48060d72f052e5871689f6`, receipt `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`. Archive collection complete for located materials; signed agreement and recipient acceptance of documentary equivalents remain pending. No signature, external message, site deployment, Worker/Access/D1/DNS change or VPS purchase. Previous native-mail checkpoint `54d8045` remains a local isolated acceptance, not public hosted mail. All historical entries preserved.
