@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "cloud-1102-C06",
+  "recordedAt": "2026-09-18T11:09:00+07:00",
+  "actor": "CLOUD",
+  "taskId": "C06",
+  "status": "completed",
+  "artifact": "project-bible/mira/research/day-2026-09-18/results/C06-dubai-media-rights-routes.md",
+  "artifactCommit": "13f2f6320cb127a81ab77feffa2fd666c2a90a58",
+  "facts": [
+    "Mapped current exact project/rightsholder/partner/permission routes for all 15 Dubai research records",
+    "Recovered current explicit usage gates for Emaar, Ellington, Dubai Holding, OMNIYAT, Dubai Properties and Imtiaz, plus Nakheel copyright ownership/limited-site-use terms",
+    "Kept DAMAC Riverside quarantined from Riverside Views imagery",
+    "Danube and SAMANA have official asset hubs, but a project-specific BAYZ 102 / Barari Views public asset bundle was not confirmed in the rendered lists",
+    "Azizi Venice current first-party gallery route recovered; KONE remains independent evidence, not the project-image rightsholder route",
+    "New publication-approved images remain zero and no media bytes were committed"
+  ],
+  "externalActionsPerformed": [],
+  "remainingHolds": [
+    "Exact approved asset packs and written use scope for MIRA/downstream agencies",
+    "Visual QA of any newly supplied asset before publication",
+    "Brand/licensor layer for Six Senses and Dorchester-branded assets where applicable"
+  ]
+}
