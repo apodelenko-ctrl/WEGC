@@ -1,0 +1,32 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "checkpoint": "canonical_reconstruction",
+  "source_sha": "d19b6fc09e0f6823de706ac868457139f12f596a",
+  "result_sha": null,
+  "result_sha_resolution": "Commit containing this event; exact SHA in next checkpoint and Git history",
+  "observed_at_utc": "2026-09-18 18:05:58 UTC",
+  "pushed_branch": "mira/research-night-20260918",
+  "status": "partial",
+  "counts_before": {
+    "provisional_groups": 332,
+    "RU": 197,
+    "BY": 60,
+    "other": 75
+  },
+  "counts_after": {
+    "provisional_groups": 337,
+    "RU": 195,
+    "BY": 59,
+    "other": 83,
+    "new_discoveries": 0,
+    "crm_imports_this_task": 0
+  },
+  "dedupe": {
+    "network_groups_removed": 3,
+    "directory_split_increase": 8,
+    "source_rows_deleted": 0
+  },
+  "next_cursor": "RU-CITY-001",
+  "remaining": "Fresh Saratov enrichment; official population; remaining cities; private CRM reconciliation",
+  "publication": "not_deployed"
+}

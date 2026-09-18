@@ -1,0 +1,2607 @@
+{
+  "baseline_crosswalk": [
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:svrealestate",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:domio",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:rnbestate",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:squarelabinnovativepropertysolutions",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:единыйцентрновостроек",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:human2human",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:yunusabadresidence",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:luxeconstructiongroup",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Узбекистан|realting.uz",
+      "new_key": "Узбекистан|name:realtinguz",
+      "reason": "directory_domain_not_agency_identity"
+    },
+    {
+      "old_key": "Кыргызстан|bishkek.etagi.com",
+      "new_key": "Кыргызстан|etagi.com",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Кыргызстан|ned.kg",
+      "new_key": "Кыргызстан|ned.kg",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Кыргызстан|an.kg",
+      "new_key": "Кыргызстан|an.kg",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Кыргызстан|diplomat.kg",
+      "new_key": "Кыргызстан|diplomat.kg",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Кыргызстан|anavg.kg",
+      "new_key": "Кыргызстан|anavg.kg",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Грузия|makler.ge",
+      "new_key": "Грузия|makler.ge",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Грузия|tbilisihome.ge",
+      "new_key": "Грузия|tbilisihome.ge",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Грузия|mbg.ge",
+      "new_key": "Грузия|mbg.ge",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Грузия|bdgroup.ge",
+      "new_key": "Грузия|bdgroup.ge",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Грузия|pbproperty.ge",
+      "new_key": "Грузия|pbproperty.ge",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Грузия|ri.ge",
+      "new_key": "Грузия|ri.ge",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Грузия|tbilisi-property.com",
+      "new_key": "Грузия|tbilisi-property.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Таджикистан|aura.tj",
+      "new_key": "Таджикистан|aura.tj",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Таджикистан|paradisewall.tj",
+      "new_key": "Таджикистан|paradisewall.tj",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Таджикистан|agentstva.tj",
+      "new_key": "Таджикистан|agentstva.tj",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Азербайджан|azeriamlak.az",
+      "new_key": "Азербайджан|azeriamlak.az",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Азербайджан|rns.az",
+      "new_key": "Азербайджан|rns.az",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|shoprealty.by",
+      "new_key": "Belarus|shoprealty.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|myrealtor.by",
+      "new_key": "Belarus|myrealtor.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|nedvizhka.kz",
+      "new_key": "Казахстан|nedvizhka.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|gorod-ok.kz",
+      "new_key": "Казахстан|gorod-ok.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|t-s.by",
+      "new_key": "Belarus|t-s.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|minsk.etagi.com",
+      "new_key": "Belarus|etagi.com",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|m2.by",
+      "new_key": "Belarus|m2.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|centr7a.by",
+      "new_key": "Belarus|centr7a.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|anpartner.by",
+      "new_key": "Belarus|anpartner.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|an7.by",
+      "new_key": "Belarus|an7.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|yghome.by",
+      "new_key": "Belarus|yghome.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|avangard-n.by",
+      "new_key": "Belarus|avangard-n.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|garantiruem.by",
+      "new_key": "Belarus|garantiruem.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|tmaentak.by",
+      "new_key": "Belarus|tmaentak.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|molnar.by",
+      "new_key": "Belarus|molnar.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|marielt.by",
+      "new_key": "Belarus|marielt.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|fattoria.by",
+      "new_key": "Belarus|fattoria.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|asrealt.by",
+      "new_key": "Belarus|asrealt.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|alkor-realty.by",
+      "new_key": "Belarus|alkor-realty.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|wtgroup.international",
+      "new_key": "Казахстан|wtgroup.international",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|gec.kz",
+      "new_key": "Казахстан|gec.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|rialight.kz",
+      "new_key": "Казахстан|rialight.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|hayatestate.com",
+      "new_key": "Казахстан|hayatestate.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|almaty.etagi.com",
+      "new_key": "Казахстан|etagi.com",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Армения|real-estate.am",
+      "new_key": "Армения|real-estate.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|besthouse.am",
+      "new_key": "Армения|besthouse.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|alfarealty.by",
+      "new_key": "Belarus|alfarealty.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|novaya.by",
+      "new_key": "Belarus|novaya.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|an-realt.by",
+      "new_key": "Belarus|an-realt.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|rieltcity.by",
+      "new_key": "Belarus|rieltcity.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|alfarielt.by",
+      "new_key": "Belarus|alfarielt.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|homeinvest.kz",
+      "new_key": "Казахстан|homeinvest.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|adalestate.kz",
+      "new_key": "Казахстан|adalestate.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|eurasia01.kz",
+      "new_key": "Казахстан|eurasia01.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|almadom.kz",
+      "new_key": "Казахстан|almadom.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|hata.kz",
+      "new_key": "Казахстан|hata.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|century21.kz",
+      "new_key": "Казахстан|century21.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|bi.group",
+      "new_key": "Казахстан|bi.group",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|wse.am",
+      "new_key": "Армения|wse.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|sievn.am",
+      "new_key": "Армения|sievn.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|yerevanrealty.am",
+      "new_key": "Армения|yerevanrealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|estate.am",
+      "new_key": "Армения|estate.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|primerealty.am",
+      "new_key": "Армения|primerealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|tuntun.am",
+      "new_key": "Армения|tuntun.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|agreement.uz",
+      "new_key": "Узбекистан|agreement.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|klyuchi.uz",
+      "new_key": "Узбекистан|klyuchi.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|tencorp.uz",
+      "new_key": "Узбекистан|tencorp.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|uybor.uz",
+      "new_key": "Узбекистан|uybor.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|imorat.uz",
+      "new_key": "Узбекистан|imorat.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|guzal.uz",
+      "new_key": "Узбекистан|guzal.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|centralrealty.uz",
+      "new_key": "Узбекистан|centralrealty.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|ararat-realty.am",
+      "new_key": "Армения|ararat-realty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|tatevrealty.am",
+      "new_key": "Армения|tatevrealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|royalestate.kz",
+      "new_key": "Казахстан|royalestate.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|stilnydom.by",
+      "new_key": "Belarus|stilnydom.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|vivat-realt.by",
+      "new_key": "Belarus|vivat-realt.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|kluchi01.kz",
+      "new_key": "Казахстан|kluchi01.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|decostagroup.kz",
+      "new_key": "Казахстан|decostagroup.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|elate.am",
+      "new_key": "Армения|elate.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|alex-r.am",
+      "new_key": "Армения|alex-r.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|cascaderealty.am",
+      "new_key": "Армения|cascaderealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|myrealty.am",
+      "new_key": "Армения|myrealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|shahar.uz",
+      "new_key": "Узбекистан|shahar.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|krisha.kz",
+      "new_key": "Казахстан|krisha.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|homsters.kz",
+      "new_key": "Казахстан|homsters.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|sothebysrealty.kz",
+      "new_key": "Казахстан|sothebysrealty.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|firstrealty.kz",
+      "new_key": "Казахстан|firstrealty.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|atameken-realty.kz",
+      "new_key": "Казахстан|atameken-realty.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|nikaestate.kz",
+      "new_key": "Казахстан|nikaestate.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|aviator-realty.kz",
+      "new_key": "Казахстан|aviator-realty.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|qazaqstanrealty.kz",
+      "new_key": "Казахстан|qazaqstanrealty.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|a-realty.kz",
+      "new_key": "Казахстан|a-realty.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Казахстан|zhilfond.kz",
+      "new_key": "Казахстан|zhilfond.kz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|eliterealty.am",
+      "new_key": "Армения|eliterealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|capitalrealty.am",
+      "new_key": "Армения|capitalrealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|avangard-realty.am",
+      "new_key": "Армения|avangard-realty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|smartrealty.am",
+      "new_key": "Армения|smartrealty.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Армения|imot.am",
+      "new_key": "Армения|imot.am",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|domtut.uz",
+      "new_key": "Узбекистан|domtut.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|uyjoy.uz",
+      "new_key": "Узбекистан|uyjoy.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Узбекистан|newhouse.uz",
+      "new_key": "Узбекистан|newhouse.uz",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|megapolis.by",
+      "new_key": "Belarus|megapolis.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|rieltcafe.by",
+      "new_key": "Belarus|rieltcafe.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|brest.etagi.com",
+      "new_key": "Belarus|etagi.com",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|atlantm.by",
+      "new_key": "Belarus|atlantm.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|vashrieltor.by",
+      "new_key": "Belarus|vashrieltor.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|realtyshop.by",
+      "new_key": "Belarus|realtyshop.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|miel.ru",
+      "new_key": "Russia|miel.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|incom.ru",
+      "new_key": "Russia|incom.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|best-realty.ru",
+      "new_key": "Russia|best-realty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|metrium.ru",
+      "new_key": "Russia|metrium.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bonton.ru",
+      "new_key": "Russia|bonton.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ndv.ru",
+      "new_key": "Russia|ndv.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|azbuka.ru",
+      "new_key": "Russia|azbuka.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|intermark.ru",
+      "new_key": "Russia|intermark.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kalinka-realty.ru",
+      "new_key": "Russia|kalinka-realty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|whitewill.ru",
+      "new_key": "Russia|whitewill.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|pointestate.ru",
+      "new_key": "Russia|pointestate.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|tranio.ru",
+      "new_key": "Russia|tranio.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|spb.etagi.com",
+      "new_key": "Russia|etagi.com",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Russia|advecs.com",
+      "new_key": "Russia|advecs.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|pn.ru",
+      "new_key": "Russia|pn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bekar.ru",
+      "new_key": "Russia|bekar.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an-3.ru",
+      "new_key": "Russia|an-3.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|novosel.ru",
+      "new_key": "Russia|novosel.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|jilfond.ru",
+      "new_key": "Russia|jilfond.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|perspektiva24.com",
+      "new_key": "Russia|perspektiva24.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|flatestate.ru",
+      "new_key": "Russia|flatestate.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|аякс-рф.рф",
+      "new_key": "Russia|xn----7sb4azadu6e.xn--p1ai",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Russia|landlord.ru",
+      "new_key": "Russia|landlord.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|samoletplus.ru",
+      "new_key": "Russia|samoletplus.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|rks-realty.ru",
+      "new_key": "Russia|rks-realty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|nahodka.ru",
+      "new_key": "Russia|nahodka.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|neworientir.ru",
+      "new_key": "Russia|neworientir.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bn1.ru",
+      "new_key": "Russia|bn1.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|domnedv.ru",
+      "new_key": "Russia|domnedv.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bk-n.ru",
+      "new_key": "Russia|bk-n.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|centralnoe.ru",
+      "new_key": "Russia|centralnoe.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|granovit.ru",
+      "new_key": "Russia|granovit.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|goroda.pro",
+      "new_key": "Russia|goroda.pro",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bigcity-nsk.ru",
+      "new_key": "Russia|bigcity-nsk.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vladis.ru",
+      "new_key": "Russia|vladis.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|monolit-nn.ru",
+      "new_key": "Russia|monolit-nn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|goldkeynn.ru",
+      "new_key": "Russia|goldkeynn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vzt.ru",
+      "new_key": "Russia|vzt.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|megapolis-samara.ru",
+      "new_key": "Russia|megapolis-samara.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|rio-lux.ru",
+      "new_key": "Russia|rio-lux.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvartirny-vopros.ru",
+      "new_key": "Russia|kvartirny-vopros.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|chfc.ru",
+      "new_key": "Russia|chfc.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|grc-sochi.ru",
+      "new_key": "Russia|grc-sochi.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|rost-sochi.ru",
+      "new_key": "Russia|rost-sochi.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|donmt.ru",
+      "new_key": "Russia|donmt.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|newrostov.ru",
+      "new_key": "Russia|newrostov.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|atlas-rnd.ru",
+      "new_key": "Russia|atlas-rnd.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ayax.ru",
+      "new_key": "Russia|ayax.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|krasava-realty.ru",
+      "new_key": "Russia|krasava-realty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|askom.io",
+      "new_key": "Russia|askom.io",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvartirant.plus",
+      "new_key": "Russia|kvartirant.plus",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vershina-dv.ru",
+      "new_key": "Russia|vershina-dv.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|arevera.ru",
+      "new_key": "Russia|arevera.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|granta24.ru",
+      "new_key": "Russia|granta24.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|krsk.jilfond.ru",
+      "new_key": "Russia|krsk.jilfond.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an-rakurs.ru",
+      "new_key": "Russia|an-rakurs.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|noviedoma24.ru",
+      "new_key": "Russia|noviedoma24.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an-good.ru",
+      "new_key": "Russia|an-good.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ledon.ru",
+      "new_key": "Russia|ledon.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|avestaomsk.ru",
+      "new_key": "Russia|avestaomsk.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvartservice.ru",
+      "new_key": "Russia|kvartservice.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|doverie-omsk.ru",
+      "new_key": "Russia|doverie-omsk.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|stan-ufa.ru",
+      "new_key": "Russia|stan-ufa.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|adresat.pro",
+      "new_key": "Russia|adresat.pro",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|jivem-doma.ru",
+      "new_key": "Russia|jivem-doma.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|rcn38.ru",
+      "new_key": "Russia|rcn38.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ndv72.ru",
+      "new_key": "Russia|ndv72.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|nov-adres.ru",
+      "new_key": "Russia|nov-adres.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|snsota.ru",
+      "new_key": "Russia|snsota.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|krainov-vrn.ru",
+      "new_key": "Russia|krainov-vrn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|rss-rielt.ru",
+      "new_key": "Russia|rss-rielt.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|orbita72.com",
+      "new_key": "Russia|orbita72.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|newflat72.ru",
+      "new_key": "Russia|newflat72.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|newgorod.ru",
+      "new_key": "Russia|newgorod.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vbnvrn.ru",
+      "new_key": "Russia|vbnvrn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|pomestye.com",
+      "new_key": "Russia|pomestye.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an4k.ru",
+      "new_key": "Russia|an4k.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|citadel-a.ru",
+      "new_key": "Russia|citadel-a.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vektor.life",
+      "new_key": "Russia|vektor.life",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vysotsky.estate",
+      "new_key": "Russia|vysotsky.estate",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|novostrojki-orenburga.ru",
+      "new_key": "Russia|novostrojki-orenburga.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|1gbn.ru",
+      "new_key": "Russia|1gbn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|rusned.ru",
+      "new_key": "Russia|rusned.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|hlgrad43.ru",
+      "new_key": "Russia|hlgrad43.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|regburokirov.ru",
+      "new_key": "Russia|regburokirov.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|business-pravo.ru",
+      "new_key": "Russia|business-pravo.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|lyudipro.ru",
+      "new_key": "Russia|lyudipro.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|globus43.ru",
+      "new_key": "Russia|globus43.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bonus43.ru",
+      "new_key": "Russia|bonus43.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|centerplus43.ru",
+      "new_key": "Russia|centerplus43.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|prospekt-nedvizhimost.ru",
+      "new_key": "Russia|prospekt-nedvizhimost.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ogni-samara.ru",
+      "new_key": "Russia|ogni-samara.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|afina-center.ru",
+      "new_key": "Russia|afina-center.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|domnaladoni.ru",
+      "new_key": "Russia|domnaladoni.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|amrita63.ru",
+      "new_key": "Russia|amrita63.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an5zvezd.ru",
+      "new_key": "Russia|an5zvezd.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|anpartnery.ru",
+      "new_key": "Russia|anpartnery.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|xn--63-6kch5asvnds6d4c.xn--p1ai",
+      "new_key": "Russia|xn--63-6kch5asvnds6d4c.xn--p1ai",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|newhouseufa.ru",
+      "new_key": "Russia|newhouseufa.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an-stolica.ru",
+      "new_key": "Russia|an-stolica.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|arkada-realty.ru",
+      "new_key": "Russia|arkada-realty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|megapolisufa.ru",
+      "new_key": "Russia|megapolisufa.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|alternativa-ufa.ru",
+      "new_key": "Russia|alternativa-ufa.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ufa.etagi.com",
+      "new_key": "Russia|etagi.com",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Russia|schastliviyadres.ru",
+      "new_key": "Russia|schastliviyadres.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|newdom96.ru",
+      "new_key": "Russia|newdom96.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|atlasrealty.ru",
+      "new_key": "Russia|atlasrealty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|dobrodel.ru",
+      "new_key": "Russia|dobrodel.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|korifei.ru",
+      "new_key": "Russia|korifei.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvadratny-metr.ru",
+      "new_key": "Russia|kvadratny-metr.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an-klyuch.ru",
+      "new_key": "Russia|an-klyuch.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|premier-realty.ru",
+      "new_key": "Russia|premier-realty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|domino-kazan.ru",
+      "new_key": "Russia|domino-kazan.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|svoi-dom74.ru",
+      "new_key": "Russia|svoi-dom74.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kluchi74.ru",
+      "new_key": "Russia|kluchi74.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|alfareal.ru",
+      "new_key": "Russia|alfareal.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|etagi.com",
+      "new_key": "Russia|etagi.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|avito.ru",
+      "new_key": "Russia|avito.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|advecs.ru",
+      "new_key": "Russia|advecs.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|spbrealty.ru",
+      "new_key": "Russia|spbrealty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|yugstroyinvest.ru",
+      "new_key": "Russia|yugstroyinvest.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvsspb.ru",
+      "new_key": "Russia|kvsspb.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ask-realestate.ru",
+      "new_key": "Russia|ask-realestate.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|m16.ru",
+      "new_key": "Russia|m16.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|cn.ru",
+      "new_key": "Russia|cn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kayan.ru",
+      "new_key": "Russia|kayan.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|riolux.ru",
+      "new_key": "Russia|riolux.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|deltainvest-ufa.ru",
+      "new_key": "Russia|deltainvest-ufa.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|rieltconsult.ru",
+      "new_key": "Russia|rieltconsult.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|dial93.ru",
+      "new_key": "Russia|dial93.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|realtitul.ru",
+      "new_key": "Russia|realtitul.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|nlre.ru",
+      "new_key": "Russia|nlre.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|giperdom.net",
+      "new_key": "Russia|giperdom.net",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|centroom.ru",
+      "new_key": "Russia|centroom.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bsfc.com",
+      "new_key": "Russia|bsfc.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|nayug24.ru",
+      "new_key": "Russia|nayug24.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|continent-realty.com",
+      "new_key": "Russia|continent-realty.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|almeriy.ru",
+      "new_key": "Russia|almeriy.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|anteinn.ru",
+      "new_key": "Russia|anteinn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|donreal.ru",
+      "new_key": "Russia|donreal.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|restann.ru",
+      "new_key": "Russia|restann.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an-hl.ru",
+      "new_key": "Russia|an-hl.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vivatnn.ru",
+      "new_key": "Russia|vivatnn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|tvoydom59.ru",
+      "new_key": "Russia|tvoydom59.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|omskrs.ru",
+      "new_key": "Russia|omskrs.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bogdanov-rielt.ru",
+      "new_key": "Russia|bogdanov-rielt.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ecn72.ru",
+      "new_key": "Russia|ecn72.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vdome-estate.ru",
+      "new_key": "Russia|vdome-estate.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|severvn.ru",
+      "new_key": "Russia|severvn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kurskmonolit.ru",
+      "new_key": "Russia|kurskmonolit.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|grant-dom.ru",
+      "new_key": "Russia|grant-dom.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|aflat.online",
+      "new_key": "Russia|aflat.online",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|aurum70.ru",
+      "new_key": "Russia|aurum70.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|izh-grand.ru",
+      "new_key": "Russia|izh-grand.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvartal53.ru",
+      "new_key": "Russia|kvartal53.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kirsh58.ru",
+      "new_key": "Russia|kirsh58.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|proestate.global",
+      "new_key": "Russia|proestate.global",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|garant53.ru",
+      "new_key": "Russia|garant53.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|grand-rzn.ru",
+      "new_key": "Russia|grand-rzn.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|premier-vl.ru",
+      "new_key": "Russia|premier-vl.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|proestate60.ru",
+      "new_key": "Russia|proestate60.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|victory62.org",
+      "new_key": "Russia|victory62.org",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|sever-estate.ru",
+      "new_key": "Russia|sever-estate.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|miard.ru",
+      "new_key": "Russia|miard.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|progressdom.ru",
+      "new_key": "Russia|progressdom.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an-olimp.com",
+      "new_key": "Russia|an-olimp.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|expert-an.com",
+      "new_key": "Russia|expert-an.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|lgorod.com",
+      "new_key": "Russia|lgorod.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|morskoy-slon.ru",
+      "new_key": "Russia|morskoy-slon.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|arkada-style.ru",
+      "new_key": "Russia|arkada-style.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|realtor-omsk.com",
+      "new_key": "Russia|realtor-omsk.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|tvoimetry.com",
+      "new_key": "Russia|tvoimetry.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|961-961.ru",
+      "new_key": "Russia|961-961.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvadratdom.com",
+      "new_key": "Russia|kvadratdom.com",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|fregat.online",
+      "new_key": "Russia|fregat.online",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|goodhouse51.ru",
+      "new_key": "Russia|goodhouse51.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|city-g.ru",
+      "new_key": "Russia|city-g.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|domtver.org",
+      "new_key": "Russia|domtver.org",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|welcome26.ru",
+      "new_key": "Russia|welcome26.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|an64.ru",
+      "new_key": "Russia|an64.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|housegroup21.ru",
+      "new_key": "Russia|housegroup21.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|antitan.ru",
+      "new_key": "Russia|antitan.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|avega56.ru",
+      "new_key": "Russia|avega56.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|vibx.ru",
+      "new_key": "Russia|vibx.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|riel-max.ru",
+      "new_key": "Russia|riel-max.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|kvartal68.ru",
+      "new_key": "Russia|kvartal68.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|bsnnedvizhimost.ru",
+      "new_key": "Russia|bsnnedvizhimost.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|formula-agency.ru",
+      "new_key": "Russia|formula-agency.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|adastra-kmv.ru",
+      "new_key": "Russia|adastra-kmv.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|horstrealty.ru",
+      "new_key": "Russia|horstrealty.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|pro-house.su",
+      "new_key": "Russia|pro-house.su",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|novoselov.net",
+      "new_key": "Russia|novoselov.net",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|ervincom.ru",
+      "new_key": "Russia|ervincom.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|partners65.ru",
+      "new_key": "Russia|partners65.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|600088.ru",
+      "new_key": "Russia|600088.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|unsakh.ru",
+      "new_key": "Russia|unsakh.ru",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Russia|новыйдомтула.рф",
+      "new_key": "Russia|xn--80adgtlfdid5bl4g.xn--p1ai",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|часпик",
+      "new_key": "Belarus|name:часпик",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|лигаправанедвижимость",
+      "new_key": "Belarus|name:лигаправанедвижимость",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|central-borisov.by",
+      "new_key": "Belarus|central-borisov.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|агентствомирнедвижимости",
+      "new_key": "Belarus|name:агентствомирнедвижимости",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|bugrealt.by",
+      "new_key": "Belarus|bugrealt.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|королевскоежилье",
+      "new_key": "Belarus|name:королевскоежилье",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|osnova.by",
+      "new_key": "Belarus|osnova.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|aan.by",
+      "new_key": "Belarus|aan.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|риэлтдомгрупп",
+      "new_key": "Belarus|name:риэлтдомгрупп",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|rieltor-bobr.by",
+      "new_key": "Belarus|rieltor-bobr.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|артельнедвижимость",
+      "new_key": "Belarus|name:артельнедвижимость",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|экореал",
+      "new_key": "Belarus|name:экореал",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|собственнаякрышаэстейт",
+      "new_key": "Belarus|name:собственнаякрышаэстейт",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|агентствонедвижимостиметриум",
+      "new_key": "Belarus|name:агентствонедвижимостиметриум",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|группакомпанийэксклюзив",
+      "new_key": "Belarus|name:группакомпанийэксклюзив",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|rcs-agency.by",
+      "new_key": "Belarus|rcs-agency.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|мираваль",
+      "new_key": "Belarus|name:мираваль",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|дианэст",
+      "new_key": "Belarus|name:дианэст",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|kv-st.by",
+      "new_key": "Belarus|kv-st.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|prospekt-rielt.by",
+      "new_key": "Belarus|prospekt-rielt.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|агентствонедвижимостиметражи",
+      "new_key": "Belarus|name:агентствонедвижимостиметражи",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|variant-zvd.pro",
+      "new_key": "Belarus|variant-zvd.pro",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|garantus.by",
+      "new_key": "Belarus|garantus.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|айкьюпропертигрупп",
+      "new_key": "Belarus|name:айкьюпропертигрупп",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|пирмас",
+      "new_key": "Belarus|name:пирмас",
+      "reason": "network_country_rollup_not_independent_branches"
+    },
+    {
+      "old_key": "Belarus|n-v.by",
+      "new_key": "Belarus|n-v.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|g-k.by",
+      "new_key": "Belarus|g-k.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|alef.by",
+      "new_key": "Belarus|alef.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|pakodangrodno.by",
+      "new_key": "Belarus|pakodangrodno.by",
+      "reason": "preserved_domain_or_name_group"
+    },
+    {
+      "old_key": "Belarus|realtelite.by",
+      "new_key": "Belarus|realtelite.by",
+      "reason": "preserved_domain_or_name_group"
+    }
+  ],
+  "legacy_id_mappings": [
+    {
+      "legacy_id": "RU-A-43952470a8d3",
+      "agency_id": "RU-A-43952470a8d3",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-560e47ac1729",
+      "agency_id": "RU-A-560e47ac1729",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-fedffa1b712e",
+      "agency_id": "RU-A-fedffa1b712e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-e8cfb0401241",
+      "agency_id": "RU-A-e8cfb0401241",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-a8fc0c159e6e",
+      "agency_id": "RU-A-a8fc0c159e6e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-b1ab758f4435",
+      "agency_id": "RU-A-b1ab758f4435",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-946aa65f8e4f",
+      "agency_id": "RU-A-946aa65f8e4f",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-ce285f816869",
+      "agency_id": "RU-A-ce285f816869",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-09c9c39454ec",
+      "agency_id": "RU-A-09c9c39454ec",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-c7ba174a35f9",
+      "agency_id": "RU-A-c7ba174a35f9",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-3ba6f99764a6",
+      "agency_id": "RU-A-3ba6f99764a6",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-30f963ae0706",
+      "agency_id": "RU-A-30f963ae0706",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-d77872810e28",
+      "agency_id": "RU-A-d77872810e28",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-4252c4f42f3e",
+      "agency_id": "RU-A-4252c4f42f3e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-37f72bc894f6",
+      "agency_id": "RU-A-37f72bc894f6",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0a4d1de4398c",
+      "agency_id": "RU-A-0a4d1de4398c",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-3809cc97d045",
+      "agency_id": "RU-A-3809cc97d045",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-d03fc5552472",
+      "agency_id": "RU-A-d03fc5552472",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-4302465f5ba7",
+      "agency_id": "RU-A-4302465f5ba7",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-abeb2d7d1f05",
+      "agency_id": "RU-A-abeb2d7d1f05",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-63e76aea06f1",
+      "agency_id": "RU-A-63e76aea06f1",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0c3796711582",
+      "agency_id": "RU-A-0c3796711582",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-e1c8a06773b2",
+      "agency_id": "RU-A-e1c8a06773b2",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-42c99a809585",
+      "agency_id": "RU-A-42c99a809585",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-86044881b134",
+      "agency_id": "RU-A-86044881b134",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-743e45f966ce",
+      "agency_id": "RU-A-743e45f966ce",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-dcce47dda803",
+      "agency_id": "RU-A-dcce47dda803",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-c61a631baad3",
+      "agency_id": "RU-A-c61a631baad3",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-a0f41dee1c43",
+      "agency_id": "RU-A-a0f41dee1c43",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-2c2703003bf3",
+      "agency_id": "RU-A-2c2703003bf3",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-bf36fb6b69f4",
+      "agency_id": "RU-A-bf36fb6b69f4",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-07f24cffb8d1",
+      "agency_id": "RU-A-07f24cffb8d1",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-1ac938703194",
+      "agency_id": "RU-A-1ac938703194",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-b9ac3732b42c",
+      "agency_id": "RU-A-b9ac3732b42c",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-32ee13f2ffcd",
+      "agency_id": "RU-A-32ee13f2ffcd",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-07b223eee30f",
+      "agency_id": "RU-A-07b223eee30f",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-3c5b3bb2f056",
+      "agency_id": "RU-A-3c5b3bb2f056",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-2569e1ed85ca",
+      "agency_id": "RU-A-2569e1ed85ca",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-8ec9bc73a06f",
+      "agency_id": "RU-A-8ec9bc73a06f",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-8bd8a2cb4562",
+      "agency_id": "RU-A-8bd8a2cb4562",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-9674420476d8",
+      "agency_id": "RU-A-9674420476d8",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-5f83a33e27eb",
+      "agency_id": "RU-A-5f83a33e27eb",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-38dad368c4d5",
+      "agency_id": "RU-A-38dad368c4d5",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0e6139c38866",
+      "agency_id": "RU-A-0e6139c38866",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0be18904cf45",
+      "agency_id": "RU-A-0be18904cf45",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-d7c20f33b65c",
+      "agency_id": "RU-A-d7c20f33b65c",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0dbe28bd6475",
+      "agency_id": "RU-A-0dbe28bd6475",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-accadf5e0348",
+      "agency_id": "RU-A-accadf5e0348",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-73f90d9edc1e",
+      "agency_id": "RU-A-73f90d9edc1e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-a7617c6d4a52",
+      "agency_id": "RU-A-a7617c6d4a52",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-bb2974123b23",
+      "agency_id": "RU-A-bb2974123b23",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0078bdff6edc",
+      "agency_id": "RU-A-0078bdff6edc",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-444cfe8c6a2f",
+      "agency_id": "RU-A-444cfe8c6a2f",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-f4628c74a7e8",
+      "agency_id": "RU-A-f4628c74a7e8",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-d373db3fe4d2",
+      "agency_id": "RU-A-d373db3fe4d2",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-842cad72e9cb",
+      "agency_id": "RU-A-842cad72e9cb",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0a4b7d7094c1",
+      "agency_id": "RU-A-0a4b7d7094c1",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-88b929ad9fb4",
+      "agency_id": "RU-A-88b929ad9fb4",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-f5fc1e01e222",
+      "agency_id": "RU-A-f5fc1e01e222",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-82c11fc56582",
+      "agency_id": "RU-A-82c11fc56582",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-4c2c80ad2662",
+      "agency_id": "RU-A-4c2c80ad2662",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-7c1efc75304e",
+      "agency_id": "RU-A-7c1efc75304e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-d152f8424f26",
+      "agency_id": "RU-A-d152f8424f26",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-c7a421e8963e",
+      "agency_id": "RU-A-c7a421e8963e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0d80958b170c",
+      "agency_id": "RU-A-0d80958b170c",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-cff531c8f482",
+      "agency_id": "RU-A-cff531c8f482",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-77eb0da77a65",
+      "agency_id": "RU-A-77eb0da77a65",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-d06d131320e1",
+      "agency_id": "RU-A-d06d131320e1",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-102cc6796c0e",
+      "agency_id": "RU-A-102cc6796c0e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-9b77a71972eb",
+      "agency_id": "RU-A-9b77a71972eb",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-7a8099f0e11e",
+      "agency_id": "RU-A-7a8099f0e11e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-65d4509dbf99",
+      "agency_id": "RU-A-65d4509dbf99",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-3dc0a90b30ef",
+      "agency_id": "RU-A-3dc0a90b30ef",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-62c76c2d9856",
+      "agency_id": "RU-A-62c76c2d9856",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-539b310b4356",
+      "agency_id": "RU-A-539b310b4356",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-5d3c255998e4",
+      "agency_id": "RU-A-5d3c255998e4",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-484a9e681ef7",
+      "agency_id": "RU-A-484a9e681ef7",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-35cf745d9d3b",
+      "agency_id": "RU-A-35cf745d9d3b",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-ba8f04412e79",
+      "agency_id": "RU-A-ba8f04412e79",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-4c2ce41eb11c",
+      "agency_id": "RU-A-4c2ce41eb11c",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-f2da8a28ca52",
+      "agency_id": "RU-A-f2da8a28ca52",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-494ebb7ff855",
+      "agency_id": "RU-A-494ebb7ff855",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-8d9163f144fd",
+      "agency_id": "RU-A-8d9163f144fd",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-6c3a7d8c696c",
+      "agency_id": "RU-A-6c3a7d8c696c",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-efc31c40c428",
+      "agency_id": "RU-A-efc31c40c428",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-b526159442fc",
+      "agency_id": "RU-A-b526159442fc",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-6e1974a8b1cd",
+      "agency_id": "RU-A-6e1974a8b1cd",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-b4e57b295244",
+      "agency_id": "RU-A-b4e57b295244",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-3266af5bca8e",
+      "agency_id": "RU-A-3266af5bca8e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-7a00f962f3c2",
+      "agency_id": "RU-A-7a00f962f3c2",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-237a09b2ff49",
+      "agency_id": "RU-A-237a09b2ff49",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-e03f51c04249",
+      "agency_id": "RU-A-e03f51c04249",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-b30f6438c8e2",
+      "agency_id": "RU-A-b30f6438c8e2",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-33f54cd2630e",
+      "agency_id": "RU-A-33f54cd2630e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-cd875194c2c9",
+      "agency_id": "RU-A-cd875194c2c9",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-b3f013504a52",
+      "agency_id": "RU-A-b3f013504a52",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-8288b19d2aed",
+      "agency_id": "RU-A-8288b19d2aed",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-0048d30d5e2b",
+      "agency_id": "RU-A-0048d30d5e2b",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-289c050f745e",
+      "agency_id": "RU-A-289c050f745e",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-A-4f2ac8e675bc",
+      "agency_id": "RU-A-4f2ac8e675bc",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-001",
+      "agency_id": "RU-NIGHT-A-001",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-002",
+      "agency_id": "RU-NIGHT-A-002",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-003",
+      "agency_id": "RU-NIGHT-A-003",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-004",
+      "agency_id": "RU-NIGHT-A-004",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-005",
+      "agency_id": "RU-NIGHT-A-005",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-006",
+      "agency_id": "RU-NIGHT-A-006",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-007",
+      "agency_id": "RU-NIGHT-A-007",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-008",
+      "agency_id": "RU-NIGHT-A-008",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-009",
+      "agency_id": "RU-NIGHT-A-009",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-010",
+      "agency_id": "RU-NIGHT-A-010",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-011",
+      "agency_id": "RU-NIGHT-A-011",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-012",
+      "agency_id": "RU-NIGHT-A-012",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-013",
+      "agency_id": "RU-NIGHT-A-013",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-014",
+      "agency_id": "RU-NIGHT-A-014",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-015",
+      "agency_id": "RU-NIGHT-A-015",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-016",
+      "agency_id": "RU-NIGHT-A-016",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-017",
+      "agency_id": "RU-NIGHT-A-017",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-018",
+      "agency_id": "RU-NIGHT-A-018",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-019",
+      "agency_id": "RU-NIGHT-A-019",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-020",
+      "agency_id": "RU-NIGHT-A-020",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-021",
+      "agency_id": "RU-NIGHT-A-021",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-022",
+      "agency_id": "RU-NIGHT-A-022",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-023",
+      "agency_id": "RU-NIGHT-A-023",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-024",
+      "agency_id": "RU-NIGHT-A-024",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-025",
+      "agency_id": "RU-NIGHT-A-025",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-026",
+      "agency_id": "RU-NIGHT-A-026",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-027",
+      "agency_id": "RU-NIGHT-A-027",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-028",
+      "agency_id": "RU-NIGHT-A-028",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-A-029",
+      "agency_id": "RU-NIGHT-A-029",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-001",
+      "agency_id": "RU-NIGHT-B-001",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-002",
+      "agency_id": "RU-NIGHT-B-002",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-003",
+      "agency_id": "RU-NIGHT-B-003",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-004",
+      "agency_id": "RU-NIGHT-B-004",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-005",
+      "agency_id": "RU-NIGHT-B-005",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-006",
+      "agency_id": "RU-NIGHT-B-006",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-007",
+      "agency_id": "RU-NIGHT-B-007",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-008",
+      "agency_id": "RU-NIGHT-B-008",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-009",
+      "agency_id": "RU-NIGHT-B-009",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-010",
+      "agency_id": "RU-NIGHT-B-010",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-011",
+      "agency_id": "RU-NIGHT-B-011",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-012",
+      "agency_id": "RU-NIGHT-B-012",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-013",
+      "agency_id": "RU-NIGHT-B-013",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-014",
+      "agency_id": "RU-NIGHT-B-014",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-015",
+      "agency_id": "RU-NIGHT-B-015",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-016",
+      "agency_id": "RU-NIGHT-B-016",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-017",
+      "agency_id": "RU-NIGHT-B-017",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-018",
+      "agency_id": "RU-NIGHT-B-018",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-019",
+      "agency_id": "RU-NIGHT-B-019",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-020",
+      "agency_id": "RU-NIGHT-B-020",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "RU-NIGHT-B-021",
+      "agency_id": "RU-NIGHT-B-021",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-chas-pik",
+      "agency_id": "by-chas-pik",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-liga-prava-nedvizhimost",
+      "agency_id": "by-liga-prava-nedvizhimost",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-centr-nedvizhimosti-24-na-7",
+      "agency_id": "by-centr-nedvizhimosti-24-na-7",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-mir-nedvizhimosti",
+      "agency_id": "by-mir-nedvizhimosti",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-bugrealt",
+      "agency_id": "by-bugrealt",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-korolevskoe-zhilie",
+      "agency_id": "by-korolevskoe-zhilie",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-osnova",
+      "agency_id": "by-osnova",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-absolut-nedvizhimost",
+      "agency_id": "by-absolut-nedvizhimost",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-rielt-dom-grupp",
+      "agency_id": "by-rielt-dom-grupp",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-assistance-health-realt",
+      "agency_id": "by-assistance-health-realt",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-artel-nedvizhimost",
+      "agency_id": "by-artel-nedvizhimost",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-ekoreal",
+      "agency_id": "by-ekoreal",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-sobstvennaya-krysha-estate",
+      "agency_id": "by-sobstvennaya-krysha-estate",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-metrium",
+      "agency_id": "by-metrium",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-eksklyuziv-group",
+      "agency_id": "by-eksklyuziv-group",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-rielt-center-stolicy",
+      "agency_id": "by-rielt-center-stolicy",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-miraval",
+      "agency_id": "by-miraval",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-dianest",
+      "agency_id": "by-dianest",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-kvartiry-stolicy",
+      "agency_id": "by-kvartiry-stolicy",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-prospekt-rielt",
+      "agency_id": "by-prospekt-rielt",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-metrazhi",
+      "agency_id": "by-metrazhi",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-variant",
+      "agency_id": "by-variant",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-garant-uspeha",
+      "agency_id": "by-garant-uspeha",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-iq-property-group",
+      "agency_id": "by-iq-property-group",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-pirmas",
+      "agency_id": "by-pirmas",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-uyut-i-k",
+      "agency_id": "by-uyut-i-k",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-zolotoy-klyuch",
+      "agency_id": "by-zolotoy-klyuch",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-alef-life",
+      "agency_id": "by-alef-life",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-pakodan-estate",
+      "agency_id": "by-pakodan-estate",
+      "reason": "preserved_source_identity"
+    },
+    {
+      "legacy_id": "by-realtelite",
+      "agency_id": "by-realtelite",
+      "reason": "preserved_source_identity"
+    }
+  ],
+  "policy": "Never merge names merely because they share a directory host. Network offices do not count as independent agencies; legal franchise identity unresolved."
+}

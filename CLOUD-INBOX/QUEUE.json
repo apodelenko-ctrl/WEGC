@@ -212,7 +212,7 @@
       "id": "MIRA-AGENCIES-20260919-01",
       "owner": "CLOUD",
       "localRole": "private_count_reconciliation_and_selective_import",
-      "status": "scheduled",
+      "status": "in_progress_canonical_rebuilt_saratov_research",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-AGENCIES-20260919-01.md",
       "resumePath": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
       "automationId": "6aad78bf2b988191b6ca5c921d60fd12"

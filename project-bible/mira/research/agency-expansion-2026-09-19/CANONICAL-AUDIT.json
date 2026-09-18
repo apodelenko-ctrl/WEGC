@@ -1,0 +1,40 @@
+{
+  "canonical_candidate_groups": 337,
+  "country_counts": {
+    "Узбекистан": 20,
+    "Кыргызстан": 5,
+    "Грузия": 7,
+    "Таджикистан": 3,
+    "Азербайджан": 2,
+    "Belarus": 59,
+    "Казахстан": 27,
+    "Армения": 19,
+    "Russia": 195
+  },
+  "fresh_verified_entities": 0,
+  "fresh_first_wave_fit": 0,
+  "legacy_crm_imports_confirmed": 12,
+  "crm_imports_this_task": 0,
+  "baseline_groups": 332,
+  "baseline_identity_keys_preserved": 332,
+  "baseline_network_groups_collapsed": 23,
+  "directory_groups_split": 9,
+  "legacy_rows_mapped": 1844,
+  "fully_enriched": 0,
+  "network_group_reduction": 3,
+  "directory_group_increase": 8,
+  "source_sha": "d19b6fc09e0f6823de706ac868457139f12f596a",
+  "checked_at": "2026-09-18T18:03:00Z",
+  "tests": {
+    "legacy_ids_preserved": true,
+    "unique_canonical_ids": true,
+    "all_baseline_keys_preserved": true,
+    "no_automatic_direct_contact_promotion": true
+  },
+  "limitations": [
+    "All identity groups remain provisional pending legal/alias checks",
+    "Net +5 from identity corrections is NOT new discovery",
+    "Historical contact values are not freshly verified",
+    "Current official population not established"
+  ]
+}

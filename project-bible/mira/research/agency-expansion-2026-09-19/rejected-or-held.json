@@ -1,0 +1,2027 @@
+{
+  "records": [
+    {
+      "agency_id": "MIRA-A-cfe7fc6f7397",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-469634fa654f",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-a2a7f47480e1",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c04ecbf98762",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-fdfae883c75c",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-1be5f66556b4",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-bb5a24f1c160",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-a78e8aaa5cb2",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-9dcb8615497c",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-792e9f19c3fb",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-ac2bbe4b0969",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-6dddc305ff59",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-fad7b78274fc",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f21387eec107",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-eb8df7eae441",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-cf8eb0139481",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-24ef102a4087",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-e2d911e66c45",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-dbed6261c1c1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c14a2f940c57",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-66fa3c92d8e1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-b42a43001d93",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-93b48cc9e8fb",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f081a0c33a4f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-0370e1cd13a2",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-5c46bef2b3b2",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-ec1fdb161ee4",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-0977091b89ab",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-1cc7e45fea7f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2ebedd3fe082",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-461490dc52ea",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-74dcf3d1aa8b",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-2192e7f9e865",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-a251a17e260b",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-1e0946b21d6d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-e231db0ecf43",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c1197a65328a",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-6549f3aaf3e7",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f14755c862b3",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-5c4f057d2218",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-5232639d5402",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-134ce1a16d80",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-5d57f6655245",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-ecad241670ac",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2c07bdf2007a",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-d5c58220c879",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-913a420333ef",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-0a042dcb999d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-9c8d28c4f584",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-4cfff8306d09",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-bf400a85a764",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-64405aedc085",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-e96d941b6cd5",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f215e0a94d57",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-7f2a642420d1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-d66d36d76561",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-a3d614457fbe",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-747567e0a6ce",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c508f64537e5",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2022623fc833",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-30fa7c3c036d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2ed58db5ee6e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-9d6af7795dc0",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2f89892032f4",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-77cef3242be1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f8a29d7db59b",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-7ba1b9b7545e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-5c5f627010e5",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-9d793a7e8c4d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-a2a772713a93",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-55c238db8ed1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-fef859bbf85f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-7c5f4f46ffff",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-1d27b1a45969",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-63a09d737e22",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-461ff19b9e98",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-4cc2389ee317",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-3cbf62a2d6d3",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-1f2f667593db",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-b9da34d18cac",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-3028b44ded1d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c73b98f493be",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-3b3c1fcc39a9",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-bbf66a7b4bb1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-7b7d5cbfbb88",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-d1eefbb6abc4",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2cf6e45b1919",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-b62410d286e8",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f729fcf8dc5c",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-e5161b79b4b1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2ef627442d94",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c601d5bf2cdd",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-0d62d2f8ecba",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-1f05b0c42bbd",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-42fd1f059df2",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-87124883990f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2f7b9f126810",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-cb852a0e889d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-fe9021d40ccf",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-67651638284b",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-acdd5c2304c3",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-349648ae9e9c",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2b708b361688",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-ddd4c922c2f7",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f5d0ac9e9bc9",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c9a776b86114",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-aceede22ae28",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-28195937366b",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-5a9d3b3c3d98",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-08964069a515",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2ed7a1d5765d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-82313e44cce1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-43952470a8d3",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-560e47ac1729",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-fedffa1b712e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-e8cfb0401241",
+      "segment": "premium_local",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-a8fc0c159e6e",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-b1ab758f4435",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-946aa65f8e4f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f135cadcf3c1",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-56b716da4ca8",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-7120649666b7",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-ce285f816869",
+      "segment": "premium_local",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-545bf7a2bae9",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-0bb1935b5a53",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-09c9c39454ec",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-c7ba174a35f9",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-b5f5f3fac400",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f3e2ec72ad19",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-3ba6f99764a6",
+      "segment": "hold_entity",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-30f963ae0706",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-736678c93f32",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-09b358395a03",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-aa0e55f18f7a",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-89544193d2e7",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-d77872810e28",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "MIRA-A-54ef18b413e8",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-e62bf5cfec30",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-0789bfd01c33",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-4252c4f42f3e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-37f72bc894f6",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-0a4d1de4398c",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-3809cc97d045",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-d03fc5552472",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-4302465f5ba7",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-abeb2d7d1f05",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-63e76aea06f1",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-0c3796711582",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-e1c8a06773b2",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-42c99a809585",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-86044881b134",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-743e45f966ce",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-dcce47dda803",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-68be9e13e459",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-c61a631baad3",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-a0f41dee1c43",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-2c2703003bf3",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-bf36fb6b69f4",
+      "segment": "premium_local",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-07f24cffb8d1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-1ac938703194",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-b9ac3732b42c",
+      "segment": "premium_local",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-32ee13f2ffcd",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-07b223eee30f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-3c5b3bb2f056",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-2569e1ed85ca",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-8ec9bc73a06f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-88e701912688",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-8bd8a2cb4562",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-9674420476d8",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-5f83a33e27eb",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-38dad368c4d5",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-0e6139c38866",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-0be18904cf45",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-d7c20f33b65c",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-0dbe28bd6475",
+      "segment": "hold_entity",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-accadf5e0348",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-73f90d9edc1e",
+      "segment": "hold_entity",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-a7617c6d4a52",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-bb2974123b23",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-0078bdff6edc",
+      "segment": "hold_entity",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-444cfe8c6a2f",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-f4628c74a7e8",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-d373db3fe4d2",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-842cad72e9cb",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-0a4b7d7094c1",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-88b929ad9fb4",
+      "segment": "premium_local",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-f5fc1e01e222",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-82c11fc56582",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-4c2c80ad2662",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-7c1efc75304e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-d152f8424f26",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-c7a421e8963e",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-0d80958b170c",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-cff531c8f482",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-77eb0da77a65",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-d06d131320e1",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-102cc6796c0e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-9b77a71972eb",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-7a8099f0e11e",
+      "segment": "network_or_franchise",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-A-65d4509dbf99",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-3dc0a90b30ef",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-62c76c2d9856",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-539b310b4356",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-5d3c255998e4",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-484a9e681ef7",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-35cf745d9d3b",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-ba8f04412e79",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-4c2ce41eb11c",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-d44cad905b12",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-fdbc8078f2c6",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-f2da8a28ca52",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-7bbce1a9bc77",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-494ebb7ff855",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-9c158d840049",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f88ad61b9ee4",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-8d9163f144fd",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-31b50b32500d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-8ab8b60d459f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-692537dde936",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-6c3a7d8c696c",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-b667fc63c204",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-efc31c40c428",
+      "segment": "premium_local",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-b526159442fc",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-d7967562e38b",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-8bae9051fbba",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-d8c6bf007bcf",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f550abbd8de2",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-b4266b267627",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-c0a020b57184",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-4092ad317cdc",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-fdc36624589c",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-b3e383bc218f",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-dbdf9c187908",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-1d5d3d45676a",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-caf397fdc72d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-f97788f67e3d",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-5ca42d5cbb3a",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-9aec26ceb871",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-6e1974a8b1cd",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-b4e57b295244",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-3266af5bca8e",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-7a00f962f3c2",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-237a09b2ff49",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-e03f51c04249",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-b30f6438c8e2",
+      "segment": "premium_local",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-33f54cd2630e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-cd875194c2c9",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-b3f013504a52",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-8288b19d2aed",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-0048d30d5e2b",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-54ff1b9c9067",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-8376e35a9eae",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-0c9aac8505e7",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-289c050f745e",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-A-4f2ac8e675bc",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-2d1ff2dfb6a6",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "MIRA-A-97117f879f88",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-001",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-002",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-003",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-004",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-005",
+      "segment": "existing_thailand",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-006",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-007",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-008",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-009",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-010",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-011",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-012",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-013",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-014",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-015",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-016",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-017",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-018",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-019",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-020",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-021",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-022",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-023",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-024",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-025",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-026",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-027",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-028",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-A-029",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-001",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-002",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-003",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-004",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-005",
+      "segment": "existing_overseas",
+      "first_wave_fit": false,
+      "reason": "Separate segment outside first priority; inherited evidence retained"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-006",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-007",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-008",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-009",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-010",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-011",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-012",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-013",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-014",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-015",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-016",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-017",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-018",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-019",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-020",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "RU-NIGHT-B-021",
+      "segment": "local_newbuild",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-chas-pik",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-liga-prava-nedvizhimost",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-centr-nedvizhimosti-24-na-7",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-mir-nedvizhimosti",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-bugrealt",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-korolevskoe-zhilie",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-osnova",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-absolut-nedvizhimost",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-rielt-dom-grupp",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-assistance-health-realt",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-artel-nedvizhimost",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-ekoreal",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-sobstvennaya-krysha-estate",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-metrium",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-eksklyuziv-group",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-rielt-center-stolicy",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-miraval",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-dianest",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-kvartiry-stolicy",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-prospekt-rielt",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-metrazhi",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-variant",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-garant-uspeha",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-iq-property-group",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-pirmas",
+      "segment": "unknown",
+      "first_wave_fit": "hold",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-uyut-i-k",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-zolotoy-klyuch",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-alef-life",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-pakodan-estate",
+      "segment": "unknown",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    },
+    {
+      "agency_id": "by-realtelite",
+      "segment": "local_greenfield_candidate",
+      "first_wave_fit": "not_checked",
+      "reason": "Historical discovery only; independent entity and business fit not freshly established"
+    }
+  ],
+  "source_rows_deleted": 0
+}
