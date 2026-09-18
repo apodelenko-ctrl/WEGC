@@ -30,8 +30,8 @@
     {"id":"C05","status":"completed","output":"results/C05-bali-media-rights-routes.md","note":"Mapped exact current source/rightsholder or permission routes for all 15 Bali records. Magnum has an official terms-gated media kit; Mirah/BREIG have explicit written-permission restrictions; Nuanu/LOYO expose partner routes; other projects have precise corporate permission routes. New publication-approved media remains zero."},
     {"id":"C06","status":"completed","output":"results/C06-dubai-media-rights-routes.md","note":"Mapped current exact source/media/rightsholder/permission routes for all 15 Dubai records. Current explicit usage gates found for Emaar, Ellington, Dubai Holding, OMNIYAT, Dubai Properties and Imtiaz; official partner/asset routes mapped for remaining records. DAMAC Riverside remains quarantined from Riverside Views. New publication-approved media remains zero."},
     {"id":"C07","status":"completed","output":"results/C07-permission-matrix-phuket-field-photo-brief.md","note":"Prepared 30-project Bali/Dubai permission-request matrix, reusable unsent request draft and Phuket own-content field-photography brief with rights/privacy/safety/drone gates. No requests, shoots, flights or new approved images occurred."},
-    {"id":"C08","status":"pending","topic":"Six Russian review-candidates: route/segment quality"},
-    {"id":"C09","status":"pending","topic":"Six Belarus review-candidates: route and current evidence"},
+    {"id":"C08","status":"completed","output":"results/C08-russia-six-review-candidates.md","note":"Rechecked all six existing RU owner-review candidates on current first-party routes. AFLAT retains direct Thailand signal; HOUSE GROUP retains demand-signal-only Spain enquiry; Welcome/RIEL-MAX/BSN/Formula remain new-build B2B-fit. Six exact domains had zero current-main search hits, not legal/unpublished-CRM dedupe. No outreach."},
+    {"id":"C09","status":"completed","output":"results/C09-belarus-six-review-candidates.md","note":"Rechecked six corrected BY owner-review candidates and current regulatory context. Corporate/self-published licence/Chamber presence is not promoted to current organisation licence clearance; independently verified current organisation licences in this run=0. Six exact domains had zero current-main search hits; no outreach."},
     {"id":"C10","status":"pending","topic":"12 candidate owner-review pack, unapproved drafts"},
     {"id":"C11","status":"pending","topic":"Current-product demo and one-pager adaptation"},
     {"id":"C12","status":"pending","topic":"One-project Phuket commercial evidence gap list"},
@@ -40,28 +40,30 @@
     {"id":"C15","status":"pending","topic":"Validate changed handoff data and actual remaining holds"},
     {"id":"C16","status":"pending","topic":"Final day report and bounded continuation handoff"}
   ],
-  "nextAction":"Continue C08 unless already in progress. Do not repeat Bali/Dubai broad image search; C05/C06 mapped rights routes and C07 consolidated unsent requests. New publication-approved media remains zero.",
+  "nextAction":"Continue C10 unless already in progress. Build the 12-candidate owner-review package from C08/C09 without changing send approval. Belarus current licence status remains unverified at organisation level unless authoritative regulator evidence is attached. Do not repeat broad RU/BY collection.",
   "dataCounts":{"vietnam":15,"montenegro":15,"completeForDiscovery":27,"partialForValidation":3,"russiaCandidates":50,"belarusCandidates":30,"newApprovedMedia":0},
-  "countsScope":"Current research-quality recommendation after C04 plus C05/C06 rights-route mapping and C07 request/field-content preparation. The already-delivered transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance, media licence, shoot completion or ordinary-applicant acceptance.",
+  "countsScope":"Current research-quality recommendation after C04, rights-route mapping C05/C06, permission/field-content preparation C07, and six-plus-six agency review C08/C09. The transfer ZIP remains unchanged; counts are not local integration, live release, current inventory, legal entity clearance, regulator licensing clearance, media licence, shoot completion or ordinary-applicant acceptance.",
   "latestCheckpoint": {
-    "recordedAt": "2026-09-18T11:09:00+07:00",
-    "completed": ["C06", "C07"],
+    "runStartRecordedAt": "2026-09-18T11:57:37+07:00",
+    "timeSemantics": "automation run start; completion minute not guessed",
+    "completed": ["C08", "C09"],
     "resultCommits": {
-      "C06": "13f2f6320cb127a81ab77feffa2fd666c2a90a58",
-      "C07": "67557401e2491f3e61dc92f14921cae0bbaf3d80"
+      "C08": "1c6e0b25de308e71f0d173fbbb233799b03e7c8b",
+      "C09": "f8cf95738f0b94e783a5b98e654f9a25b5453599"
     },
     "events": [
-      "CLOUD-INBOX/events/2026-09-18/cloud-1102-C06.json",
-      "CLOUD-INBOX/events/2026-09-18/cloud-1109-C07.json"
+      "CLOUD-INBOX/events/2026-09-18/cloud-1157-C08.json",
+      "CLOUD-INBOX/events/2026-09-18/cloud-1157-C09.json"
     ],
     "sharedAccountingUpdated": true,
-    "newApprovedMedia": 0,
-    "newAssetBytesCommitted": 0,
-    "permissionRequestsSent": 0,
-    "phuketShoots": 0,
-    "droneFlights": 0,
+    "ruOwnerReviewCandidatesRechecked": 6,
+    "byOwnerReviewCandidatesRechecked": 6,
+    "exactDomainMainSearchNoHits": {"russia":6,"belarus":6},
+    "belarusCurrentOrganisationLicencesIndependentlyVerified": 0,
+    "externalMessagesSent": 0,
+    "commercialActivations": 0,
     "localReceiptConfirmed": false,
-    "nextIndependentBlock": "C08"
+    "nextIndependentBlock": "C10"
   },
   "ownerRequestedMarketingExtension": {
     "checkpointLocal": "2026-09-18T09:26:26+07:00",
