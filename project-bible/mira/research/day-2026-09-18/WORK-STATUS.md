@@ -1,5 +1,19 @@
 # MIRA cloud lane — 18 September 2026
 
+## Latest owner extension — shared accounting, free email and tested preparation
+
+Created shared `CLOUD-INBOX/Находки.md`, `Решения.md` and `КОНТРОЛЬ-БОРД.md`, with source dates, decision reasons, separate implementation status and a retrospective index to existing history. Updated root README/QUEUE so CLOUD and LOCAL read the common records at startup and append factual checkpoints. Historical decisions and existing Cxx results are preserved, not re-created.
+
+Owner now explicitly delegates ordinary software choice and safe local preparation/installation without repeated choice approval. LOCAL remains sole integrator/deployer; missing actual account login/OTP/verified corporate facts are specific dependencies, not a request to select software again. Main, product code, live resources, permissions, existing buyer-registration gates and external recipients were untouched.
+
+**Chosen free path:** Brevo Free Campaigns/Marketing Automation plus EspoCRM or an existing suitable CRM. Official daily free allowance 300; MIRA target cap200 is a proposal, not already configured. Mailjet Free 200/day and6000/month was considered; 31 full days at200 exceed that monthly cap. M01's SES comparison is retained historically, no longer a required first transport. Provider rules exclude automatic import of the collected research base as subscribers. SMTP transactional settings are not a marketing-policy bypass. Details: `results/M05-free-email-and-governance.md`.
+
+**Actual code/test result:** `results/M06-prepare-crm-lab.py` generates an isolated EspoCRM10+ Docker configuration with correct separate persistent mounts, local secret files outside Git, loopback-only UI, internal network and explicit start. At2026-09-18T09:48:18+07:00, all12 generator unit tests passed. Runtime check found Docker CLI/Compose/engine unavailable. Image pull, Compose validation, application installation, browser checks and mail delivery are NOT_RUN. The14 M04 live scenarios remain unexecuted. Test report saved; repository blob matches tested source bytes: SHA256 `64079f1dcc6b1ba0ed22d938f254ecc9da8dc742d0313cf6efdd209453d6997b`, Git blob `43eb9ed53573f7886fb22793ace5b1397da2e231`.
+
+At09:53:46Bangkok, the existing bounded daily automation's PROMPT was updated to read/write common journals at real checkpoints. Its original hourly COUNT10 schedule09:00–18:00 is unchanged; no new automation or continuation beyond the day was created. Local receipt/startup-rule integration and real provider configuration remain unconfirmed. Research counts and C04–C16 statuses were not changed by this direct owner extension. Next CLOUD research task remains the next independent pending Cxx, not another SMTP comparison.
+
+Snapshot for shared records and prepared code: `94efc3a833dd0b2171601ffd15fc15a64f2afe18`; appended RESUME checkpoint `226cc2dcbef799ba34cb0351b47864838af220b1`. Use latest root QUEUE for LOCAL work. All previous checkpoints below are preserved with their original scope/time.
+
 ## 09:26 Bangkok — owner-requested SMTP/CRM/marketing extension
 
 Completed four separate research/content artifacts, not software installation or live marketing:
