@@ -1,6 +1,6 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
-  "status": "in_progress",
+  "status": "bounded_window_closed_partial",
   "source_commit": "921dbb633db4402c05b2fe84c31a0f40929873fb",
   "checkpoint_at": "2026-09-19T00:09:13Z",
   "completed": [
@@ -30,6 +30,7 @@
     "B007_Zero_public_consultation_booking_route"
   ],
   "next_actions": [
+    "No automatic continuation after 08:00 ICT; resume only under a new explicit bounded authorization.",
     "Obtain explicit developer confirmation for The Zero Nai Yang ↔ Silhouette; preserve both IDs until then",
     "Private native87 ↔ public master43 crosswalk; no total addition",
     "Missing family507; then other60 published market records",
@@ -58,5 +59,8 @@
   },
   "remaining": "Two generated Zero catalogue aliases are resolved to canonical IDs without deleting any of 618 project IDs. The Zero Nai Yang versus Silhouette remains an explicit hold because the current first-party site is internally mixed and contains no rename statement. Other 507 missing-family and 60 other-market records remain; legal seller/contract counts and native CRM87 crosswalk remain pending.",
   "latest_result_commit": "1d259d237444faacbce5de44cd5af6fd21d09706",
-  "latest_result_commit_note": "Published B007 data/code checkpoint and bounded NIGHT-REPORT; a following receipt-only commit stores this pointer."
+  "latest_result_commit_note": "Published B007 data/code checkpoint and bounded NIGHT-REPORT; a following receipt-only commit stores this pointer.",
+  "closed_at": "2026-09-19T09:14:00+07:00",
+  "closeout_path": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md",
+  "future_cursor": "missing_family_507_exact_name_primary_source_pass"
 }
