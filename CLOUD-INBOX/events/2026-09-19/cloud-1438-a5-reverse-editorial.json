@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "eventId": "cloud-1438-a5-reverse-editorial",
+  "recordedAt": "2026-09-19T14:38:28+07:00",
+  "timeSemantics": "working-session time check; not completion time",
+  "author": "CLOUD",
+  "task": "Adapt the owner's supplied MIRA introduction into the reverse of the A5 agency exhibition flyer",
+  "status": "copy_and_visual_brief_prepared_image_mockup_to_follow",
+  "source": "Owner supplied the full introduction in the current conversation, after requesting a second side and ruble/cash/crypto payout wording",
+  "finding": {
+    "id": "F-20260919-FLYER-BACK-1438",
+    "fact": "The owner supplies the expansion Международная инфраструктура риэлторских агентств, preservation of agency client/brand and a 10 percent MIRA fee deducted from developer-paid commission",
+    "boundary": "This is owner-provided product copy, not independent evidence of universal commercial readiness, media permission or availability of every payout method"
+  },
+  "decision": {
+    "id": "D-20260919-FLYER-BACK-1438",
+    "status": "editorial_proposal_for_visual_review",
+    "reason": "A5 reverse must explain the model in a few readable blocks rather than reproduce a speech. Express 100 percent less a 10 percent fee as 90/10 with a clear denominator; avoid guaranteed growth/speed/cost and blanket payment-legality claims",
+    "style": "White, deep navy, coral; original restrained Cyrillic wordmark; strong typography; no copied brand lettering; no second map, destination photo collage or large QR",
+    "printFormat": "A5 portrait, reverse side; visual mockup only, not press-ready PDF",
+    "logoFinalApproved": false,
+    "newOperationalPolicy": false
+  },
+  "displayCopy": {
+    "brand": "МИРА",
+    "expansion": "Международная инфраструктура риэлторских агентств",
+    "headline": "Ваш клиент.\nВаш бренд.\nНовые рынки.",
+    "intro": "Вы знаете свой город и своих клиентов. Когда их интересы выходят за привычные границы, МИРА помогает предложить зарубежную недвижимость — без создания собственной команды за границей.",
+    "definition": "Цифровой B2B-маркетплейс для агентств России, Беларуси и других стран региона.",
+    "servicesHeading": "Вы ведёте клиента. МИРА помогает с остальным.",
+    "services": ["Каталог проектов и аналитика", "Координация с застройщиком", "Сопровождение сделки", "Организация платежей"],
+    "contractCopy": "Покупатель заключает договор напрямую с застройщиком или продавцом объекта. Комиссию платит застройщик.",
+    "economicsHeading": "МОДЕЛЬ МИРА",
+    "agencyShare": "90% — вашему агентству",
+    "miraShare": "10% — сервисный сбор МИРА",
+    "economicsBasis": "От фактически полученной комиссии застройщика. Условия фиксируются в договоре.",
+    "payoutHeading": "Выплата комиссии",
+    "payoutMethods": "Рублями на счёт, наличными или в криптовалюте",
+    "closing": "Международное направление — внутри вашего агентства.",
+    "qualification": "Доступность проектов, услуг и способов выплат согласуется по конкретной сделке."
+  },
+  "control": {
+    "copyPrepared": true,
+    "imageGeneratedAtThisCheckpoint": false,
+    "pressPdfCreated": false,
+    "qrOrPrintProofTested": false,
+    "publicWebsiteChanged": false,
+    "externalMessagesSent": 0,
+    "newAutomationCreated": false,
+    "localTaskPrioritiesChanged": false,
+    "remainingHolds": ["Visual approval of reverse and final wordmark", "Commercial copy approval against actual release and agreements before print", "Final vector typography, bleed, colour profile and physical proof in a separate prepress step", "Validate actual non-generated QR on the front before printing"]
+  },
+  "freshSharedStateRead": {
+    "source": "CLOUD-INBOX/MASTER-STATUS.md and current QUEUE.json",
+    "note": "Newer shared receipts already confirm technical intake and native CRM. This design event does not repeat or regress those tasks, and does not declare pending mail/payment integrations complete."
+  }
+}
