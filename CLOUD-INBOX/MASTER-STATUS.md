@@ -196,3 +196,16 @@ Fresh receipts and issue #14 were reconciled before this update.
 - Existing encrypted LOCAL backup SHA-256 expected from closeout receipt: `48945a6b0ebee8d52bb9b4b32198119cdd78afb55a4578e6a62778de93a25140`. Cloud transfer is not PASS until the uploaded ciphertext is read back and hashes identically.
 - Current transition state: **private destination prepared; archive/code transfer pending; cloud restore NOT_RUN**. Mac must remain available until an actual persistent-runtime restore, restart/replay and rollback acceptance passes.
 - No external sends/forms, purchases, buyer enablement or public deployment were made by this checkpoint.
+
+
+## 19.09.2026 — VIVI / Rhom Bho continuity evidence narrowed
+
+Sanitized delta: `project-bible/mira/research/2026-09-19-VIVI-CONTINUITY-DELTA.md`.
+
+Private Gmail/Drive reconciliation confirms:
+- agency renewal evidence for 2025–2026;
+- additional recent-project agreements delivered in June 2026;
+- ongoing corporate partner communications through August 2026;
+- historical VIVI VBA312 transaction/commission evidence.
+
+Therefore the relationship-continuity hold is narrowed. Remaining T08 blockers are project-specific **current** inventory/pricing/payment plan, lead/duplicate rules, downstream partner scope and media permission. A corporate IP cease-and-desist notice means partner status must not be converted into presumed media/publication rights. `commerciallyEnabled=false` remains correct. No external message was sent.
