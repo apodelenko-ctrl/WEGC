@@ -1,0 +1,30 @@
+{
+  "batch_id": "D001-IZHEVSK",
+  "checked_at": "2026-09-19T09:44:53+07:00",
+  "before_count": 386,
+  "after_count": 395,
+  "net_new": 9,
+  "izhevsk_city_records": 10,
+  "izhevsk_first_wave_fit": 10,
+  "unique_ids": true,
+  "network_duplicates_added": 0,
+  "expected_existing_updated": [
+    "RU-NIGHT-A-007"
+  ],
+  "expected_new_ids": [
+    "RU-WEB-ALFA-IZH",
+    "RU-WEB-NOVOSEL18-IZH",
+    "RU-WEB-SAVADA-IZH",
+    "RU-WEB-RESIDENT18-IZH",
+    "RU-WEB-NR18-IZH",
+    "RU-WEB-FLATHOUSE-IZH",
+    "RU-WEB-SMENIKVARTI-IZH",
+    "RU-DOMCLICK-MITRA-IZH",
+    "RU-WEB-LENCOM18-IZH"
+  ],
+  "russia_count_after": 253,
+  "crm_imports_performed": 0,
+  "external_messages_sent": 0,
+  "outreach_authorized": false,
+  "result": "PASS"
+}
