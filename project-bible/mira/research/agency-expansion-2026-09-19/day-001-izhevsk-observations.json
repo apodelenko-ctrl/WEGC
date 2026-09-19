@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "continuation_kind": "daytime_explicit_owner_continue",
+  "batch_id": "D001-IZHEVSK",
+  "city_id": "RU-CITY-006",
+  "city": "Ижевск",
+  "checked_at": "2026-09-19T09:44:53+07:00",
+  "counting_rule": "One canonical organisation/network counts once; branches of an already-known network are not new candidate groups.",
+  "records": [
+    {
+      "agency_id": "RU-NIGHT-A-007",
+      "action": "update_existing",
+      "brand": "Гранд",
+      "domain": "izh-grand.ru",
+      "source_url": "https://izh-grand.ru/",
+      "company_phone": "+7 (3412) 47-75-34",
+      "general_email": "Izh-grand@mail.ru",
+      "segment": "local_newbuild",
+      "fit": true,
+      "reason": "Current first-party site identifies an Izhevsk agency, 15+ years in market, direct new-build work and developer relationships; suitable for first-wave B2B research."
+    },
+    {
+      "agency_id": "RU-WEB-ALFA-IZH",
+      "action": "add_candidate",
+      "brand": "ЦН Альфа",
+      "domain": "alfa-izhevsk.ru",
+      "source_url": "https://alfa-izhevsk.ru/kontakty/",
+      "company_phone": "+7 (3412) 57-08-48",
+      "general_email": null,
+      "segment": "regional_multicity_candidate",
+      "fit": true,
+      "reason": "Current first-party contact page lists Izhevsk and several regional offices; first-party site offers new-build selection and mortgage services."
+    },
+    {
+      "agency_id": "RU-WEB-NOVOSEL18-IZH",
+      "action": "add_candidate",
+      "brand": "Новосел / Новостройки Ижевска",
+      "domain": "novosel18.ru",
+      "source_url": "https://www.novosel18.ru/",
+      "company_phone": "+7 (3412) 311-811",
+      "general_email": "info@novosel18.ru",
+      "segment": "local_newbuild_specialist",
+      "fit": true,
+      "reason": "Current first-party catalogue is dedicated to Izhevsk new builds and publishes a corporate office, phone and general email."
+    },
+    {
+      "agency_id": "RU-WEB-SAVADA-IZH",
+      "action": "add_candidate",
+      "brand": "Savada Estate",
+      "domain": "savadaestate.ru",
+      "source_url": "https://savadaestate.ru/",
+      "company_phone": "+7 (3412) 77-00-99",
+      "general_email": "info@zenes.ru",
+      "segment": "local_newbuild_specialist",
+      "fit": true,
+      "reason": "Current first-party site identifies an Izhevsk new-build agency with a large residential catalogue and corporate contact route; legal proprietor name is intentionally not reproduced in the public research row."
+    },
+    {
+      "agency_id": "RU-WEB-RESIDENT18-IZH",
+      "action": "add_candidate",
+      "brand": "Резидент Недвижимость",
+      "domain": "resident18.com",
+      "source_url": "https://resident18.com/new-tverskaya",
+      "company_phone": "+7 (3412) 477-322",
+      "general_email": null,
+      "segment": "local_newbuild_specialist",
+      "fit": true,
+      "reason": "Current first-party project pages identify Resident Real Estate, an Izhevsk office and broad new-build catalogue."
+    },
+    {
+      "agency_id": "RU-WEB-NR18-IZH",
+      "action": "add_candidate",
+      "brand": "Народный Риэлтор",
+      "domain": "nr18.ru",
+      "source_url": "https://nr18.ru/",
+      "company_phone": "+7 (3412) 22-00-20",
+      "general_email": "office@nr18.ru",
+      "segment": "local_newbuild_specialist",
+      "fit": true,
+      "reason": "Current first-party site publishes legal corporate identity, Izhevsk office, general channels and an 80-project new-build portfolio."
+    },
+    {
+      "agency_id": "RU-WEB-FLATHOUSE-IZH",
+      "action": "add_candidate",
+      "brand": "FLЭTHOUSE",
+      "domain": "dom-na-more.com",
+      "source_url": "https://dom-na-more.com/company/",
+      "company_phone": "+7 (3412) 310-530",
+      "general_email": "centr_181@mail.ru",
+      "segment": "local_overseas_specialist",
+      "fit": true,
+      "reason": "Current first-party site links an Izhevsk office with an Antalya office and explicitly positions the company for Turkey overseas-property transactions."
+    },
+    {
+      "agency_id": "RU-WEB-SMENIKVARTI-IZH",
+      "action": "add_candidate",
+      "brand": "СмениКварти.Ру",
+      "domain": "smenikvarti.ru",
+      "source_url": "https://2gis.ru/izhevsk/firm/70000001076111956",
+      "company_phone": "+7 (3412) 24-37-65",
+      "general_email": null,
+      "segment": "federal_multicity_candidate",
+      "fit": true,
+      "reason": "Current business-directory and marketplace evidence identifies an active Izhevsk office in a multi-city agency network; current Cian profile includes overseas-property specialization. Counted once as one network organisation."
+    },
+    {
+      "agency_id": "RU-DOMCLICK-MITRA-IZH",
+      "action": "add_candidate",
+      "brand": "Митра-Информ",
+      "domain": null,
+      "source_url": "https://agencies.domclick.ru/agent/6365062",
+      "company_phone": "+7 (3412) 56-48-87",
+      "general_email": null,
+      "segment": "local_established_candidate",
+      "fit": true,
+      "reason": "Current Domclick company evidence identifies ООО «МИТРА - ИНФОРМ», INN 1841040050, Izhevsk and active recent transaction/listing activity; current map source confirms the business phone and office."
+    },
+    {
+      "agency_id": "RU-WEB-LENCOM18-IZH",
+      "action": "add_candidate",
+      "brand": "LENком",
+      "domain": "lenkom18.ru",
+      "source_url": "https://lenkom18.ru/",
+      "company_phone": "+7 (909) 059-31-53",
+      "general_email": "info@lencom18.ru",
+      "segment": "local_fullservice_candidate",
+      "fit": true,
+      "reason": "Current first-party site identifies the Izhevsk office, general phone/email, new-build/developer work and remote service capability."
+    }
+  ],
+  "excluded_network_duplicates": [
+    {
+      "brand": "Этажи",
+      "domain": "etagi.com",
+      "reason": "Network already represented in canonical master; Izhevsk office is city coverage, not a new organisation."
+    },
+    {
+      "brand": "Самолет Плюс",
+      "domain": "samoletplus.ru",
+      "reason": "Network already represented in canonical master; do not inflate by branch."
+    },
+    {
+      "brand": "Владис",
+      "domain": "vladis.ru",
+      "reason": "Network already represented in canonical master; do not inflate by branch."
+    }
+  ],
+  "holds": [
+    {
+      "brand": "Полезные Люди",
+      "domain": "helpfulpeople.ru",
+      "reason": "First-party terms state the platform company itself does not provide realtor services; not counted as a direct agency legal entity."
+    },
+    {
+      "brand": "White House",
+      "domain": "whitehouse18.ru",
+      "reason": "Current first-party site exists, but third-party sources conflict on operating status/address; excluded from the 10 until reconciled."
+    },
+    {
+      "brand": "Фаворит",
+      "domain": null,
+      "reason": "Current agency identity can be found, but recent operating evidence is weaker and name/legal-entity ambiguity remains."
+    }
+  ],
+  "external_messages_sent": 0,
+  "crm_imports_performed": 0,
+  "outreach_authorized": false
+}
