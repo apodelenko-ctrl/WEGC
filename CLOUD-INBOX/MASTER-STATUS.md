@@ -182,3 +182,17 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 - Developer master43/fresh contact groups10 unchanged. Two Zero generator aliases resolved with IDs preserved; The Zero Nai Yang/Silhouette remains an explicit not-merged hold. All618 IDs preserved; primary links9, verified public links16, no-family507.
 - **31/31 tests PASS**; CRM imports0, external sends0, deploy0. Data/report SHA `1d259d237444faacbce5de44cd5af6fd21d09706`. Final bounded report: `project-bible/mira/research/agency-expansion-2026-09-19/NIGHT-REPORT.md`.
 - LOCAL native78/87 remain separate. Private package, encrypted backup/key, external-ID crosswalk, actual cloud restore and live acceptance remain pending.
+
+
+## 19.09.2026 09:14 ICT — daytime closeout / cloud handoff prepared
+
+Fresh receipts and issue #14 were reconciled before this update.
+
+- Bounded agency/developer night research window is closed as **partial**, not left falsely `in_progress`. Saved closeout: `project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md`.
+- Agency saved result remains 386 canonical candidate groups (244 RU / 59 BY / 83 other), 54 net new over reconstructed 332 baseline, 5 city minimums complete, CRM imports 0.
+- Developer saved result remains master43, 10 fresh public contact groups, 16 verified public project-group links, all 618 Phuket IDs preserved; 507 no-family and private native87↔master43 crosswalk remain open.
+- CLOUD created an **owner-only Google Drive destination** named `MIRA CLOUD HANDOFF — PRIVATE — 2026-09-19` with separate folders for encrypted runtime backup, code/restore package, manifests/crosswalk and acceptance receipts. The private Drive URL/IDs are deliberately not written to this public repository.
+- New concrete continuation: `CLOUD-INBOX/tasks/MIRA-CLOUD-CUTOVER-20260919-01.md`. It reuses the accepted LOCAL runtime and existing autonomy task; it does not create a new CRM, buy a VPS, modify DNS, send mail or cut production over.
+- Existing encrypted LOCAL backup SHA-256 expected from closeout receipt: `48945a6b0ebee8d52bb9b4b32198119cdd78afb55a4578e6a62778de93a25140`. Cloud transfer is not PASS until the uploaded ciphertext is read back and hashes identically.
+- Current transition state: **private destination prepared; archive/code transfer pending; cloud restore NOT_RUN**. Mac must remain available until an actual persistent-runtime restore, restart/replay and rollback acceptance passes.
+- No external sends/forms, purchases, buyer enablement or public deployment were made by this checkpoint.
