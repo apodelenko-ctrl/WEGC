@@ -82,7 +82,8 @@
       "segment": "core_300k_to_1m",
       "target_min_agencies": 10,
       "official_recheck": "pending",
-      "research_status": "queued"
+      "research_status": "minimum_met_fields_incomplete",
+      "research_checked_at": "2026-09-19T09:44:53+07:00"
     },
     {
       "city_id": "RU-CITY-007",
