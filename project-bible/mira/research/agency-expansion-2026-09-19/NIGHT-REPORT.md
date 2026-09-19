@@ -1,6 +1,6 @@
 # МИРА — NIGHT REPORT: обе базы
 
-Cutoff report prepared 2026-09-19T00:14:33Z / 07:14:33 Asia/Bangkok. Branch: `mira/research-night-20260918`. Starting reconstructed source: `d19b6fc09e0f6823de706ac868457139f12f596a`; B007 source HEAD: `921dbb633db4402c05b2fe84c31a0f40929873fb`. Publication SHA is recorded in the B007 receipt after push.
+Cutoff report prepared 2026-09-19T00:14:33Z / 07:14:33 Asia/Bangkok. Branch: `mira/research-night-20260918`. Starting reconstructed source: `d19b6fc09e0f6823de706ac868457139f12f596a`; B007 source HEAD: `921dbb633db4402c05b2fe84c31a0f40929873fb`; published data/report commit: `1d259d237444faacbce5de44cd5af6fd21d09706`.
 
 ## 1. Агентства
 

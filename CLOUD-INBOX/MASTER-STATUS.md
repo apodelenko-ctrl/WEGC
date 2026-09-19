@@ -175,3 +175,10 @@ CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед пуб�
 - Developer master stays43; fresh public-contact groups **9 → 10**. `naturale-kamala` и `laguna-lakeside` получили exact current public mappings; primary links остаются9, primary-or-current-public links **14 → 16**. Оба новых mapping имеют `verified_public_sources`, не открывают send gate и не доказывают legal seller/active agreement. Ambiguous0/unmatched family0/no-family507; all618 IDs preserved.
 - **29/29 tests PASS**; CRM imports0, external sends0, deploy0. Published data SHA `9a3db807f13c09439fd1793de2beb669b68f2eeb`, verified tree `8bf4179e3d058f12d090b644c7a0eb64d301b871` equals the local checkpoint.
 - LOCAL full closeout/manifest остаются принятыми только как local evidence. Native78/87 не складываются с research376/43. Private package, encrypted backup/key, external-ID crosswalk и actual cloud restore/live acceptance всё ещё отсутствуют.
+
+## Обе базы B007 и NIGHT-REPORT — 2026-09-19T00:09:13Z
+
+- Agency canonical **376 → 386** (RU244/BY59/other83). Барнаул закрыт10/10; пять городов закрыты по минимуму. Блок: phone10, email10, full named role10, direct phone2, WhatsApp1, fully enriched0. Следующий cursor `RU-CITY-006` Ижевск; official city-proper population remains blocked.
+- Developer master43/fresh contact groups10 unchanged. Two Zero generator aliases resolved with IDs preserved; The Zero Nai Yang/Silhouette remains an explicit not-merged hold. All618 IDs preserved; primary links9, verified public links16, no-family507.
+- **31/31 tests PASS**; CRM imports0, external sends0, deploy0. Data/report SHA `1d259d237444faacbce5de44cd5af6fd21d09706`. Final bounded report: `project-bible/mira/research/agency-expansion-2026-09-19/NIGHT-REPORT.md`.
+- LOCAL native78/87 remain separate. Private package, encrypted backup/key, external-ID crosswalk, actual cloud restore and live acceptance remain pending.

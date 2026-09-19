@@ -57,6 +57,6 @@
     "possible_rebrands_held_not_merged": 1
   },
   "remaining": "Two generated Zero catalogue aliases are resolved to canonical IDs without deleting any of 618 project IDs. The Zero Nai Yang versus Silhouette remains an explicit hold because the current first-party site is internally mixed and contains no rename statement. Other 507 missing-family and 60 other-market records remain; legal seller/contract counts and native CRM87 crosswalk remain pending.",
-  "latest_result_commit": null,
-  "latest_result_commit_note": "B007 working tree; commit recorded after publication."
+  "latest_result_commit": "1d259d237444faacbce5de44cd5af6fd21d09706",
+  "latest_result_commit_note": "Published B007 data/code checkpoint and bounded NIGHT-REPORT; a following receipt-only commit stores this pointer."
 }

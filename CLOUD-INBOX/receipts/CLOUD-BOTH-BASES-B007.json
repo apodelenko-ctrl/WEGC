@@ -1,0 +1,14 @@
+{
+  "checkpoint_id": "cloud-both-bases-b007",
+  "published_data_commit": "1d259d237444faacbce5de44cd5af6fd21d09706",
+  "branch": "mira/research-night-20260918",
+  "source_commit": "921dbb633db4402c05b2fe84c31a0f40929873fb",
+  "verified_tree_sha": "1848bc476cf466760151344caf038816d545c974",
+  "agency": {"before":376,"after":386,"new":10,"existing_updated":0,"deleted":0,"reviewed":10,"first_wave_suitable":10,"next_city":"RU-CITY-006"},
+  "developer": {"before":43,"after":43,"fresh_contacts_before":10,"fresh_contacts_after":10,"project_ids_preserved":618,"primary_group_links":9,"verified_public_group_links":16,"no_family":507,"aliases_resolved_ids_preserved":2,"possible_rebrands_held_not_merged":1},
+  "tests": {"registry":31,"agency_unique_ids":true,"agency_ids_preserved":true},
+  "crm_imports":0,"external_sends":0,"production_deploy":false,"cloud_restore":false,
+  "local_transition": {"full_closeout_and_manifest_received":true,"local_evidence_accepted":true,"private_archive_in_cloud":false,"external_id_crosswalk_complete":false,"actual_cloud_restore_accepted":false},
+  "night_report": "project-bible/mira/research/agency-expansion-2026-09-19/NIGHT-REPORT.md",
+  "scope_note": "Public research only. LOCAL native Accounts78/87 are not added to public research totals. No outreach, CRM import or deployment. The bounded night schedule is not extended."
+}

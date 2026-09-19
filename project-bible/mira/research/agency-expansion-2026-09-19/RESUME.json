@@ -24,7 +24,7 @@
   "externalSends": 0,
   "requiredFinalReport": "NIGHT-REPORT.md",
   "mandatoryFinalReportOnLastRun": true,
-  "latestResultCommit": "9a3db807f13c09439fd1793de2beb669b68f2eeb",
+  "latestResultCommit": "1d259d237444faacbce5de44cd5af6fd21d09706",
   "remaining": "Barnaul minimum met at 10/10 research-fit public business identities; nine legal identities are current RGR registry entries and one is a first-party public business identity. Overseas activity and many direct/social channels remain unknown; official city-proper population is blocked.",
   "canonicalCandidateGroups": 386,
   "canonicalRussiaGroups": 244,
@@ -34,7 +34,7 @@
   "latestCheckpointEvent": "CLOUD-INBOX/events/2026-09-19/cloud-both-bases-b007.json",
   "newAgencyCountMeaning": "54 net new canonical candidate records above the reconstructed 332-group baseline; this includes holds and distinct segments and is not a count of verified legal entities",
   "freshFirstWaveSuitableCandidates": 10,
-  "latestResultCommitNote": "Published B006 data/code checkpoint; a following receipt-only commit stores this pointer.",
+  "latestResultCommitNote": "Published B007 data/code checkpoint and bounded NIGHT-REPORT; a following receipt-only commit stores this pointer.",
   "latestBatch": "batch-007-barnaul-observations.json",
   "lastCheckpointAt": "2026-09-19T00:09:13Z"
 }
