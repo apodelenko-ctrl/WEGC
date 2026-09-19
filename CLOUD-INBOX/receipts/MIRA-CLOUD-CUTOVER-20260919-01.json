@@ -1,0 +1,43 @@
+{
+  "task_id": "MIRA-CLOUD-CUTOVER-20260919-01",
+  "status": "prepared_private_destination_only",
+  "observed_at": "2026-09-19T09:14:00+07:00",
+  "actor": "CLOUD",
+  "source_branch": "mira/research-night-20260918",
+  "private_destination": {
+    "provider": "Google Drive",
+    "name": "MIRA CLOUD HANDOFF — PRIVATE — 2026-09-19",
+    "shared_publicly": false,
+    "public_url_or_id_committed": false,
+    "subfolders": [
+      "01 — encrypted runtime backup",
+      "02 — code and restore package",
+      "03 — manifests and crosswalk",
+      "04 — acceptance receipts"
+    ]
+  },
+  "expected_existing_local_backup": {
+    "sha256": "48945a6b0ebee8d52bb9b4b32198119cdd78afb55a4578e6a62778de93a25140",
+    "cipher": "AES-256-GCM",
+    "source": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json"
+  },
+  "backup_uploaded": false,
+  "backup_sha256_verified": false,
+  "code_package_uploaded": false,
+  "sanitized_manifest_uploaded": false,
+  "crosswalk_status": "pending_private_transfer",
+  "cloud_runtime_selected": false,
+  "cloud_restore_status": "NOT_RUN",
+  "purchases": 0,
+  "dns_changes": 0,
+  "external_messages": 0,
+  "production_cutover": false,
+  "all_done": false,
+  "remaining_holds": [
+    "LOCAL must place the existing encrypted backup and private restore package into the owner-only destination",
+    "Ciphertext SHA-256 readback must match before restore",
+    "No persistent cloud runtime has been selected or provisioned",
+    "Actual cloud restore/restart/replay/rollback acceptance remains NOT_RUN",
+    "Recovery key must be transferred separately and never committed to GitHub"
+  ]
+}
