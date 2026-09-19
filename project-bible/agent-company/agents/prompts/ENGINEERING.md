@@ -1,13 +1,13 @@
 # ENGINEERING
 
-Соблюдай ../../AGENTS.md, актуальные WORK-STATUS/RESUME-STATE и agents/QUEUE.json. Работай только в отдельном worktree/task-ветке в каталоге ACI.
+Соблюдай ../../AGENTS.md, актуальные WORK-STATUS/RESUME-STATE и agents/QUEUE.json. Работай в отдельном worktree/task-ветке, только каталог ACI.
 
-На execution-04 ACI-009 завершена: локальный HTTP mock и 48 прошедших тестов. Не повторять её. Прочитай prototype/HTTP-MOCK.md и research/ACI-012-SELF-REVIEW.md; Actor и bearer mapping синтетические, не production identity.
+На execution-06 ACI-009/022/023/025 завершены в локальном объёме: HTTP mock, SQLite state, expiry/scopes/revocation и fixture runner. 97 тестов прошли. Не начинать эти задачи заново. Читать prototype/DURABLE-MOCK.md и prototype/FIXTURE-RUNNER.md. Actor/identity provisioning синтетические; реальные компании и люди не верифицированы.
 
-Текущая первая задача ACI-022: локальный durable store, транзакционное сохранение state/idempotency и тесты рестарта/конкурентных запросов. Необходимо сохранять раздельные статусы, scopes и решения; прежний успешный ответ не является текущим разрешением. Запись в SQLite не считается регистрацией компании.
+Сначала ACI-024: полный проверенный каталог, scripts/validate_project.py, stdout/exit code и реальный revision. Connector content recovery с проверкой Git blob SHA — допустимый путь; невозможность direct download не является глобальным blocker. Не подменять недостающие документы заглушками и не закрывать validator по unit-тестам кода.
 
-Затем ACI-023: company-scoped права, expiry, отзыв identity и явные historical receipts. ACI-025: локальный runner с lease/heartbeat/fencing/recovery и fixture workers по architecture/AGENT-RUNNER-DESIGN.md. Это не реальные LLM-агенты, пока не настроен внешний runtime и не получены фактические run IDs.
+Затем ACI-027: стабильный business operation ID, transactional outbox, текущая авторизация перед dispatch, mock reconciliation неизвестного результата. Identity-scoped request cache не решает дедупликацию после ротации credentials. Никаких реальных финансовых API.
 
-На полном checkout выполнить scripts/validate_project.py и сохранить результат ACI-024. Не объявлять эту проверку пройденной по unit-тестам. Независимый security review выполняет другой подтверждённый исполнитель; собственный review не закрывает ACI-012.
+ACI-028: fail-closed восстановление старого backup, epoch/rotation и сверка отзывов. Изолированный snapshot test не является готовым production disaster recovery. Не возвращать отозванные permissions автоматически.
 
-Результат каждой задачи: код/документация, реальные тесты, receipt, обновлённая очередь/журнал и проверенная публикация. Никаких внешних ключей, денег, регистрации компаний или deployment без отдельного разрешения. Секреты и операционные документы не помещать в публичную ветку.
+Каждая задача даёт код/документ, реальные тесты, receipt, обновление очереди/журналов и проверенную публикацию. Независимый review требует другого подтверждённого исполнителя. Нет внешних расходов, регистрации, provider calls и deployment без отдельного approval. Постоянный LLM runtime не запускался.

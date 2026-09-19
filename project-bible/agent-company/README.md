@@ -10,7 +10,7 @@ API-first инфраструктура для бизнеса, выполняем
 
 ## Актуальный checkpoint
 
-execution-04: локальный HTTP mock реализован, 48 тестов прошли; добавлены критическая проверка гипотезы, покупатель, варианты экономических прав, самопроверка и runner-design. 26 задач: 13 done, 4 ready, 9 blocked. Это счётчик задач, не процент готовности бизнеса. Постоянные специализированные агенты не запущены.
+**execution-06:** durable SQLite API и local fixture runner реализованы; всего **97 тестов прошли**. В этой сессии завершены ACI-022, ACI-023, ACI-025. Очередь: 28 задач, 16 done, 3 ready, 9 blocked. Это счётчик артефактов и задач, не процент готовности бизнеса. Постоянные специализированные LLM-агенты не запущены.
 
 ## Начать чтение
 
@@ -19,7 +19,7 @@ execution-04: локальный HTTP mock реализован, 48 тестов
 | [Концепция](CONCEPT.md) | Исходный замысел и модель продукта |
 | [Решения](Решения.md) | Решения владельца, предложения, открытые вопросы и исправления |
 | [Находки](Находки.md) и [исходные источники](SOURCES.md) | Результаты первого исследования |
-| [Почему ещё не стало обычным сервисом](research/WHY-NOW-AND-FAILURE-TESTS.md) | Новая проверка конкурентов, правил и причин пересмотра гипотезы; ссылки на первичные источники |
+| [Почему ещё не стало обычным сервисом](research/WHY-NOW-AND-FAILURE-TESTS.md) | Конкуренты, правила и критерии пересмотра гипотезы |
 | [Покупатель и спрос](research/ACI-010-CUSTOMER-HYPOTHESES.md) | Гипотезы сегментов и неотправленный интервью-гайд |
 | [Капитал, прибыль и IP](research/ACI-011-ECONOMIC-RIGHTS.md) | Варианты прав сторон для дальнейшей проверки |
 | [Правовой вопросник](research/LEGAL-DILIGENCE.md) | Что выяснить до пилота |
@@ -27,9 +27,11 @@ execution-04: локальный HTTP mock реализован, 48 тестов
 | [Roadmap](ROADMAP.md) | Этапы и актуальная последовательность |
 | [Партнёрские черновики](partners/DRAFT-REQUESTS.md) | Подготовлены, не отправлены |
 | [Проект API](architecture/API-CONTRACT.md) | Целевой контракт, не весь реализован |
-| [Прототип](prototype/README.md) и [HTTP mock](prototype/HTTP-MOCK.md) | Выполняемый локальный код, тесты и пределы реализации |
-| [Самопроверка](research/ACI-012-SELF-REVIEW.md) | Не независимый аудит; реальные технические пробелы |
-| [Runner-design](architecture/AGENT-RUNNER-DESIGN.md) | Как запускать исполнителей с проверяемыми результатами |
+| [Исходный прототип](prototype/README.md) и [HTTP mock](prototype/HTTP-MOCK.md) | Сохранённый baseline |
+| [Durable API](prototype/DURABLE-MOCK.md) | SQLite, версии, expiry/scopes/revocation и исторические квитанции |
+| [Fixture runner](prototype/FIXTURE-RUNNER.md) | Реальный локальный код lease/fencing/recovery, не модельные агенты |
+| [Самопроверка](research/ACI-012-SELF-REVIEW.md) | Исторический авторский review, не независимый аудит |
+| [Runner-design](architecture/AGENT-RUNNER-DESIGN.md) | Целевая среда исполнения; реализован пока fixture subset |
 | [Правила](AGENTS.md), [роли](agents/ROLES.json), [вход исполнителя](agents/START-HERE.md) | Область работы и handoff без вмешательства в МИРА |
 | [Очередь](agents/QUEUE.json) | Зависимости, evidence, следующие задачи и блокеры |
 | [Статус](WORK-STATUS.md), [возобновление](RESUME-STATE.md), [Контроль-борд](Контроль-борд.md) | Фактическая работа и история |
@@ -39,8 +41,9 @@ execution-04: локальный HTTP mock реализован, 48 тестов
 ```bash
 python project-bible/agent-company/scripts/validate_project.py
 python -m unittest discover -s project-bible/agent-company/prototype -p 'test_*.py' -v
+python project-bible/agent-company/prototype/fixture_runner.py
 ```
 
-Первый полный checkout validator ещё не выполнен в текущем контейнере; это отдельная ACI-024. Unit/HTTP tests выполнены: [receipt](agents/receipts/http-mock-tests.json).
+Полный checkout validator ACI-024 ещё не выполнен: полный каталог не восстановлен локально. Через connector уже восстановлены и проверены по SHA исходные файлы кода; это рабочий путь, не глобальный блокер. Нельзя заменять отсутствующие документы заглушками. Unit/HTTP/SQLite/runner тесты выполнены: [97 tests receipt](agents/receipts/runner-tests.json). Demo завершился: [fixture receipts](agents/receipts/fixture-runner-smoke.json).
 
-Дальше **ACI-022: durable state и идемпотентность после рестарта**. Затем expiry/scopes/identity revoke и локальный runner. Доступ к production, письма, формы, регистрации и расходы требуют отдельного owner approval. Публикация провайдера не равна нашему испытанию; simulated не равно formed; подготовленный prompt не равен работающему агенту.
+Следом ACI-024 — полный проверенный snapshot и валидатор; ACI-027 — stable business operation IDs и outbox; ACI-028 — безопасная процедура восстановления с учётом отзывов credentials. Внешние провайдеры, письма, формы, регистрации и расходы требуют отдельного owner approval. Simulated не равно formed; fixture worker не равен постоянно работающему LLM-агенту.

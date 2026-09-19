@@ -1,0 +1,9 @@
+{
+  "simulation": true,
+  "llm_workers_started": false,
+  "input_revision_note": "All-zero input_revision is an explicit fixture marker, not an actual GitHub commit.",
+  "receipts": [
+    {"id":"a47ce8b9-c563-4d5b-90fa-dac6ab6db112","task_id":"fixture-first","attempt_id":"bee58570-3ab7-45ba-82a5-ababfd3f879c","worker_id":"fixture-worker","fencing_token":1,"input_revision":"0000000000000000000000000000000000000000","result_hash":"716fb900faeda545d6b0b55f296866a4f59cafb21a706a428bdedd0b9ebd0727","result":{"fixture":true,"simulation":true,"external_actions":[],"data":{"text":"SIMULATION"}},"completed_at":1789828490.5589294,"fixture_only":true,"validated_by":"deterministic_fixture_checker","independent_review":false},
+    {"id":"ca1e8a5c-38ec-421d-ba06-df3633a4500b","task_id":"fixture-second","attempt_id":"e8a02972-b673-49ca-a28a-58076a46e424","worker_id":"fixture-worker","fencing_token":1,"input_revision":"0000000000000000000000000000000000000000","result_hash":"7bf3d38e1c6d7e6033c683f0f6790ae7b84927ff192a5cf46469e0dc51ab7516","result":{"fixture":true,"simulation":true,"external_actions":[],"data":{"item_count":1}},"completed_at":1789828490.5598154,"fixture_only":true,"validated_by":"deterministic_fixture_checker","independent_review":false}
+  ]
+}

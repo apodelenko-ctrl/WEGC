@@ -1,8 +1,6 @@
 # ACI — вход для координатора и локального исполнителя
 
-Обновлено execution-04, 2026-09-19. Это отдельный проект, не задание МИРА. Ветка `agent-company/bootstrap-20260919`; область записи `project-bible/agent-company/`.
-
-## Получение актуального состояния
+Обновлено execution-06, 2026-09-19. Отдельный проект, не МИРА. Ветка `agent-company/bootstrap-20260919`; область записи `project-bible/agent-company/`.
 
 ```bash
 git fetch origin agent-company/bootstrap-20260919
@@ -10,36 +8,34 @@ git show origin/agent-company/bootstrap-20260919:project-bible/agent-company/REA
 git show origin/agent-company/bootstrap-20260919:project-bible/agent-company/agents/QUEUE.json
 ```
 
-Работать в отдельном worktree и task-ветке. Не переключать занятую директорию МИРА. Пример только для новой ACI-022; проверить, что имена не заняты:
+Использовать отдельный worktree/task-ветку; не переключать занятую директорию МИРА. Пример для ACI-024, предварительно проверить свободные имена:
 
 ```bash
-git worktree add -b agent-company/local-ACI-022 ../aci-ACI-022 origin/agent-company/bootstrap-20260919
-cd ../aci-ACI-022
+git worktree add -b agent-company/local-ACI-024 ../aci-ACI-024 origin/agent-company/bootstrap-20260919
+cd ../aci-ACI-024
 ```
 
-## Порядок чтения
+## Читать
 
-AGENTS.md → Решения.md → WORK-STATUS.md → RESUME-STATE.md → agents/QUEUE.json → prompt роли. Затем prototype/HTTP-MOCK.md и research/ACI-012-SELF-REVIEW.md. Актуальная очередь важнее устаревших ссылок в историческом журнале.
+AGENTS → Решения → WORK-STATUS → RESUME-STATE → QUEUE → prompt роли. Затем prototype/DURABLE-MOCK.md и prototype/FIXTURE-RUNNER.md. Актуальная очередь важнее исторических поручений.
 
-## Уже сделано
+## Не повторять
 
-ACI-009 HTTP mock завершена: 48 тестов всего, включая 33 новых. Не делать её заново. ACI-010/011/013/021 завершены как документы, не как внешние согласования. Всё выполняла ASTRA; отдельные постоянные workers пока не запускались.
+ACI-009, ACI-022, ACI-023, ACI-025 завершены в локальном объёме. 97 тестов прошли. Состояние, права и runner реализованы; настоящие provider/LLM integrations не подключены. Подготовленные исследовательские документы не равны внешним согласованиям.
 
-## Первая проверка
-
-На полном checkout выполнить:
+## Первая задача — ACI-024
 
 ```bash
 python project-bible/agent-company/scripts/validate_project.py
 python -m unittest discover -s project-bible/agent-company/prototype -p 'test_*.py' -v
 ```
 
-Первый полный валидатор ещё не выполнен в текущей среде; сохранить реальный stdout/exit code для ACI-024. Не заменять отсутствующие файлы заглушками ради pass. Unit/HTTP tests уже выполнялись, но их надо перепроверить в новой среде.
+Нужен полный каталог настоящих файлов. В текущем контейнере из connector восстановлен и проверен кодовый subset; полная библиотека не восстановлена. Полный validator pass ещё не заявлен. Сохранить фактические stdout, exit code и revision. Доступен connector recovery с побайтовой проверкой SHA; прямой download не единственный путь. Заглушки недопустимы.
 
-## Следующая реализация
+## Следующие задачи
 
-ACI-022: durable state и идемпотентность после рестарта. Дальше ACI-023: scopes/expiry/identity revoke. ACI-025: SQLite runner с fixture workers. Не подключать настоящие провайдеры и не выдавать фиктивные события за регистрацию компании.
+ACI-027 — stable business operation IDs и atomic outbox с mock/reconciliation. ACI-028 — fail-closed restore/credential epoch, чтобы старый backup не возвращал отозванные права. ACI-012 — независимый review отдельным подтверждённым исполнителем.
 
 ## Передача результата
 
-Сохранить receipt в agents/receipts/, обновить очередь и журналы, выполнить тесты, commit в task-ветку. Указать фактический SHA после публикации. Согласовывать только изменения каталога ACI; не merge чужую историю в main. Наличие задания не равно подтверждённому dispatch, а prompt не равен работающему агенту.
+Receipt → очередь/журналы → тесты → commit → remote verification. Указать фактический SHA после получения. Не merge чужую историю в main. Prompt не является работающим агентом; fixture runner не является постоянным LLM runtime. Не выполнять внешние обязательства без отдельного approval и не хранить секреты в public GitHub.

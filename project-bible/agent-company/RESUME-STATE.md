@@ -1,25 +1,31 @@
 # RESUME-STATE
 
-2026-09-19 · execution-05 · ACI. Рабочая ветка `agent-company/bootstrap-20260919`, каталог `project-bible/agent-company/` в `apodelenko-ctrl/WEGC`. Перед продолжением читать фактический HEAD. Начальная база этой сессии: `6f5740942a9aa65395930989967baf392d85385b`.
+2026-09-19 · execution-06 · ACI. Ветка `agent-company/bootstrap-20260919` в `apodelenko-ctrl/WEGC`. Область записи — только `project-bible/agent-company/`.
 
-## Не потерять замысел
+## Сначала
 
-Реальный owner/operator со стороны сервиса предоставляет компанию агентскому бизнесу. Не подменять основной режим обычным client-owned formation. Коммерческая нужность такого владения и юридическая пригодность остаются проверяемыми гипотезами; Wyoming/doola — кандидаты, не окончательные решения.
+Fetch фактический HEAD; читать README, Решения, WORK-STATUS, Контроль-борд и agents/QUEUE.json. Начальная база этой сессии `6f5740942a9aa65395930989967baf392d85385b`; checkpoint durable API опубликован `e014c92911f019a4ae1af36a812da013299faa1f`. Текущий последний SHA смотреть в Git, не угадывать.
 
-## Сделано
+## Не повторять
 
-ACI-022/023 реализованы и проверены: durable SQLite state, версии, идемпотентность после рестарта, атомарные state/receipt/audit, expiry и scopes, identity revoke и all-key agent revoke внутри ACI, маркировка исторического replay. 78 тестов прошли; receipt `agents/receipts/durable-tests.json`. Базовые четыре Python-файла не менялись.
+ACI-022 и ACI-023 завершены в заявленном локальном объёме: SQLite state/idempotency/versions, expiry/scopes, identity/all-agent-key revoke, historical receipts. ACI-025 завершена как fixture runner с lease/fencing/heartbeat/recovery. Всего 97 тестов прошли; demo выполнил две связанные fixture задачи. См. prototype/DURABLE-MOCK.md, prototype/FIXTURE-RUNNER.md и agents/receipts/runner-tests.json.
 
-## Следом
+Девять Python-файлов кода/тестов доступны локально в этой сессии; четыре исходных восстановлены из connector и совпадают по Git blob SHA. Полный каталог библиотеки локально ещё НЕ собран. Не выдавать это за полный checkout.
 
-ACI-025: реализовать локальный fixture runner на существующем sqlite_store.py; dispatch, lease, heartbeat, fencing, bounded execution, receipt и восстановление. Это не разрешение запуска внешнего LLM runtime или платных ресурсов. Перед работой читать architecture/AGENT-RUNNER-DESIGN.md и agents/QUEUE.json.
+## Следующая последовательность
 
-ACI-024 требует полный каталог с настоящими файлами и запуск scripts/validate_project.py; статус не закрывать по тестам одного прототипа. DNS raw download снова не работает, GitHub connector работает. Возможен дальнейший побайтовый recovery файлов с проверкой Git blob SHA; заглушки вместо недостающих документов недопустимы.
+1. **ACI-024:** восстановить весь каталог через доступный GitHub connector, сверяя Git blob SHA каждого настоящего файла, либо получить полноценный checkout в рабочей среде. Выполнить scripts/validate_project.py, сохранить stdout/exit code и проверяемый revision. Не считать DNS единственным возможным путём и не закрывать задачу на подставных документах.
+2. **ACI-027:** стабильный business operation ID и atomic outbox на mock. Неизвестный результат доставки не должен автоматически означать повторное внешнее действие. Проверить изменение credential identity и повторные попытки после restart.
+3. **ACI-028:** спроектировать и проверить восстановление старого snapshot без возврата отозванных полномочий; fail-closed startup, key epoch/rotation и сверка состояния. Не путать backup existence и безопасное возобновление production.
 
-## Технические пределы
+## Важные границы
 
-Durable API слушает только loopback; CLI хранит базу/credentials вне репозитория. Mandate expires_at обязателен в новой версии. Квитанция replay историческая, GET — текущий статус. Identity-based idempotency ещё не дедуплицирует одну бизнес-операцию между разными credential identities. Backup не является production disaster recovery. SQLite audit не защищён от администратора. Нет настоящих provider events, outbox, KYC/EIN, финансовых операций и независимого review.
+Fixture runner исполняет только allowlisted функции echo/count, не shell и не модели. Input_revision фиксируется, но не выполняет remote checkout. Все нулевые SHA в demo помечены как fixture, не существующие коммиты. Постоянные специализированные агенты не запущены, LOCAL dispatch не подтверждён.
 
-## Режим исполнения
+Durable API — только loopback. Identity mapping синтетический, не KYC. Отзыв действует в ACI, не отменяет уже исполненное и не выключает внешние системы. Idempotency пока scoped к identity/route, не к внешней бизнес-операции; исправление ACI-027. SQLite audit не immutable относительно администратора.
 
-ASTRA работает интерактивно. Подготовленные специализированные роли не являются запущенными постоянными агентами; LOCAL dispatch не подтверждён. Сохранять код, тесты, receipt, очередь и журналы после результата. Не менять main, МИРА, сайт и workflows; не публиковать персональные данные и секреты; не выполнять внешние обязательства без отдельного approval.
+Исходный замысел сохранён: реальный owner/operator со стороны сервиса предоставляет компанию агентскому бизнесу. Operator-owned нужность и допустимость ещё проверяются; Wyoming/doola — кандидаты. Не заменять модель client-owned без решения владельца.
+
+## Исполнение
+
+Результат → тесты → receipt → очередь/журналы → commit → remote verification. Не менять main/МИРА/сайт/workflows, не публиковать KYC/секреты, не делать внешние обязательства и deployment без отдельного approval. Следующую независимую работу выполнять в активной сессии, не обещать фоновое продолжение без реального runtime.
