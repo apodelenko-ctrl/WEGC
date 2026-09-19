@@ -1,6 +1,6 @@
 {
   "task_id": "MIRA-CLOUD-CUTOVER-20260919-01",
-  "status": "accepted",
+  "status": "partial_transfer_verified_restore_not_run",
   "observed_at": "2026-09-19T09:14:00+07:00",
   "actor": "LOCAL",
   "source_branch": "mira/research-night-20260918",
@@ -21,11 +21,11 @@
     "cipher": "AES-256-GCM",
     "source": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json"
   },
-  "backup_uploaded": false,
-  "backup_sha256_verified": false,
-  "code_package_uploaded": false,
-  "sanitized_manifest_uploaded": false,
-  "crosswalk_status": "pending_private_transfer",
+  "backup_uploaded": true,
+  "backup_sha256_verified": true,
+  "code_package_uploaded": true,
+  "sanitized_manifest_uploaded": true,
+  "crosswalk_status": "165_of_165_native_research_ids_resolved_to_source; no CRM writes",
   "cloud_runtime_selected": false,
   "cloud_restore_status": "NOT_RUN",
   "purchases": 0,
@@ -34,21 +34,93 @@
   "production_cutover": false,
   "all_done": false,
   "remaining_holds": [
-    "LOCAL must place the existing encrypted backup and private restore package into the owner-only destination",
-    "Ciphertext SHA-256 readback must match before restore",
-    "No persistent cloud runtime has been selected or provisioned",
-    "Actual cloud restore/restart/replay/rollback acceptance remains NOT_RUN",
-    "Recovery key must be transferred separately and never committed to GitHub"
+    "No approved persistent cloud runtime selected or provisioned",
+    "Recovery key remains separate; secure delivery required for future restore",
+    "Actual cloud DB integrity/counts, ACL, CRM login/restart, isolated mail, OMNI replay, latest client-flow integration and second restore remain NOT_RUN",
+    "Real staff/MFA, public mail/DNS/deliverability/automatic complaint feedback, live model/channels, media/VIVI and QR/Russia network remain separate unfinished work"
   ],
   "history": [
     {
       "status": "prepared_private_destination_only",
       "actor": "CLOUD",
       "observed_at": "2026-09-19T09:14:00+07:00"
+    },
+    {
+      "status": "accepted",
+      "actor": "LOCAL",
+      "accepted_at": "2026-09-19 08:08:08 UTC",
+      "local_documentation_checkpoint": "9c0099a"
     }
   ],
   "accepted_at": "2026-09-19 08:08:08 UTC",
   "read_source_sha": "9efd7547d36fd3298df5014d549be2bbcdd1fddc",
   "local_documentation_checkpoint": "9c0099a",
-  "local_private_source": "54d80452d36080ded3d141fbac56a2c22506f16c"
+  "local_private_source": "54d80452d36080ded3d141fbac56a2c22506f16c",
+  "updated_at": "2026-09-19T16:30:00Z",
+  "source_commit_read": "3279c98dd669cbc90ca8e6307b1a62809afc60ce",
+  "startup_inbox_rule_verified": "cloudflare-worker/mira/SERVER-START.md:76; existing rule preserved",
+  "main_inbox_status": "START-HERE absent from main; research branch source verified",
+  "acceptance_receipts_uploaded": true,
+  "transfer_scope_complete": true,
+  "message_count_scope": "This transfer task only. Prior owner-authorized Botanica delivery is recorded separately.",
+  "backup": {
+    "filename": "crm-mail-20260918T182626Z-checkpoint.aesgcm",
+    "bytes": 2621483,
+    "sha256": "48945a6b0ebee8d52bb9b4b32198119cdd78afb55a4578e6a62778de93a25140",
+    "cipher": "AES-256-GCM",
+    "created_at": "2026-09-18T18:26:26Z",
+    "key_location_label": "Separate owner-controlled MIRA CRM recovery key; not uploaded"
+  },
+  "artifacts": [
+    {
+      "kind": "code_restore",
+      "bytes": 97054,
+      "sha256": "71b847707e1ed638a623410d601d5941a61968fbfbc9ac1735297340dde77615"
+    },
+    {
+      "kind": "crosswalk",
+      "bytes": 113854,
+      "sha256": "401080bfbabb832213d19641ba9411e9a23a0aae5c89f8a4db2a7d067b237824"
+    },
+    {
+      "kind": "historical_acceptance_receipts",
+      "bytes": 8947,
+      "sha256": "7a0a7ac8e0d85c516f6262135af4a132fe53406781db4afdde473666ccfb46c4"
+    },
+    {
+      "kind": "sanitized_manifest",
+      "bytes": 4490,
+      "sha256": "6419868934fe26eef8f8779580fee398974fe11749083b17af4a42895e038606"
+    }
+  ],
+  "crosswalk_counts": {
+    "native_accounts": 167,
+    "agency_exact_stable_or_legacy_id": 78,
+    "developer_exact_native_source_hash_id": 87,
+    "synthetic_excluded": 2,
+    "canonical_agency_snapshot": 405,
+    "phuket_developer_registry": 43,
+    "native_rows_unresolved": 0
+  },
+  "crosswalk_limit": "Developer lineage resolves to the four original market CSVs; domain candidates against newer Phuket registry require entity review. No extra canonical candidates imported or approved.",
+  "tests": {
+    "local": [
+      "Ciphertext size/SHA256 and authenticated AES-GCM decryption PASS; no extraction or runtime mutation",
+      "SQL Account schema and SQLite mail journal presence PASS",
+      "60 package file hashes and two upstream knowledge hashes PASS",
+      "165 unique external IDs and CRM IDs; 78 agency +87 developer; all real records suppressed PASS",
+      "Known runtime secrets/private-key markers/caches excluded from code kit PASS"
+    ],
+    "cloud_storage": [
+      "All five raw file SHA256 readbacks match local bytes PASS",
+      "Root, subfolder and file ACL: owner only PASS"
+    ],
+    "cloud_runtime": [
+      "NOT_RUN: no host, login, ACL, restart/replay, client-flow integration or second restore on cloud"
+    ],
+    "browser": [
+      "No changed web UI or new deploy in this task; native browser fallback blocked by locked Mac before connector upload recovered"
+    ]
+  },
+  "next_action": "CLOUD may read owner-only handoff by its known folder name. Do not switch off Mac or call migration done. No VPS purchase/DNS/public mail/cutover authorized by this task."
 }
