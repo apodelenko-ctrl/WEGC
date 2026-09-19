@@ -1,8 +1,8 @@
 {
   "task_id": "MIRA-CLOUD-CUTOVER-20260919-01",
-  "status": "prepared_private_destination_only",
+  "status": "accepted",
   "observed_at": "2026-09-19T09:14:00+07:00",
-  "actor": "CLOUD",
+  "actor": "LOCAL",
   "source_branch": "mira/research-night-20260918",
   "private_destination": {
     "provider": "Google Drive",
@@ -39,5 +39,16 @@
     "No persistent cloud runtime has been selected or provisioned",
     "Actual cloud restore/restart/replay/rollback acceptance remains NOT_RUN",
     "Recovery key must be transferred separately and never committed to GitHub"
-  ]
+  ],
+  "history": [
+    {
+      "status": "prepared_private_destination_only",
+      "actor": "CLOUD",
+      "observed_at": "2026-09-19T09:14:00+07:00"
+    }
+  ],
+  "accepted_at": "2026-09-19 08:08:08 UTC",
+  "read_source_sha": "9efd7547d36fd3298df5014d549be2bbcdd1fddc",
+  "local_documentation_checkpoint": "9c0099a",
+  "local_private_source": "54d80452d36080ded3d141fbac56a2c22506f16c"
 }
