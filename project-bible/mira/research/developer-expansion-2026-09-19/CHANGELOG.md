@@ -1,5 +1,13 @@
 # Developer research changes
 
+## B007 — 2026-09-19T00:09:13Z
+
+- Preserved all618 project IDs and all43 developer rows.
+- Resolved two generator aliases without deleting IDs: `zero-bangtao` → `the-zero-bang-tao`; `zero-naiyang` → `the-zero-nai-yang`.
+- Kept `the-zero-nai-yang` ↔ `silhouette-by-the-zero` as `hold_not_merged_current_primary_site_conflict`: the official site contains both current Silhouette and legacy The Zero Nai Yang material but no explicit rename statement.
+- Added exact public consultation booking URL for The Zero. It is not an agency-relations recipient, legal-seller proof or contract evidence.
+- Primary links9; all verified public links16; no-family507. 31/31 tests PASS; imports/sends/deploy0.
+
 ## Обе базы B002 — 2026-09-18T19:19:34Z
 
 CLOUD source HEAD `6bdc7cccf753df3ad886b14e137f489d70d8a3e3`; перед публикацией прочитан `73ca08fe1d0fdfbdb30d4c18f005cfff6f1e1ed3`. Новые WORK-STATUS/RESUME-STATE LOCAL сохранены, не перезаписаны.

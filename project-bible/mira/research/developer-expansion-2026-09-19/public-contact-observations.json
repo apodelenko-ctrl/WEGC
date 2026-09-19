@@ -1,6 +1,6 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
-  "checked_at": "2026-09-18T23:11:27Z",
+  "checked_at": "2026-09-19T00:09:13Z",
   "records": [
     {
       "developer_id": "PHK-001",
@@ -120,6 +120,16 @@
           "purpose": "general",
           "direct_dialogue_verified": false,
           "deliverability_tested": false
+        },
+        {
+          "kind": "consultation_booking",
+          "value": "https://zerodevelopments.youcanbook.me/",
+          "purpose": "project_consultation",
+          "source_url": "https://thezerophuket.com/silhouette-nai-yang/",
+          "checked_at": "2026-09-19T00:09:13Z",
+          "verification_status": "verified_published_link",
+          "direct_dialogue_verified": false,
+          "deliverability_tested": false
         }
       ],
       "field_evidence": [
@@ -139,7 +149,7 @@
         "telegram_url": "not_found",
         "agency_relations_email": "not_found"
       },
-      "note": "Official Silhouette page has WhatsApp pickup link but target URL not extracted. No inferred wa.me from phone."
+      "note": "Official site now presents Bang Tao and Silhouette as current projects and publishes a consultation-booking route. Legacy The Zero Nai Yang text remains on the homepage without an explicit rename statement; IDs were not merged. WhatsApp target remains unextracted and was not inferred."
     },
     {
       "developer_id": "PHK-041",
@@ -612,6 +622,29 @@
       "secondary_source_url": "https://www.fazwaz.com/projects/thailand/phuket/thalang/choeng-thale/laguna-lakeside",
       "checked_at": "2026-09-18T23:11:27Z",
       "basis": "Official Laguna Phuket property page states the residential portfolio is offered by Banyan Group Residences, while current exact project sources identify Laguna Lakeside as a Laguna Property development. PHK-007 is retained as the public Laguna sales-channel entity, but the canonical project developer-group link is PHK-006. Legal seller and contract coverage remain unverified."
+    }
+  ],
+  "duplicate_observations": [
+    {
+      "project_id": "zero-bangtao",
+      "canonical_project_id": "the-zero-bang-tao",
+      "status": "confirmed_catalog_alias_preserve_id",
+      "source_url": "https://thezerophuket.com/bang-tao/",
+      "checked_at": "2026-09-19T00:09:13Z"
+    },
+    {
+      "project_id": "zero-naiyang",
+      "canonical_project_id": "the-zero-nai-yang",
+      "status": "confirmed_catalog_alias_preserve_id",
+      "source_url": "https://thezerophuket.com/",
+      "checked_at": "2026-09-19T00:09:13Z"
+    },
+    {
+      "project_id": "the-zero-nai-yang",
+      "candidate_project_id": "silhouette-by-the-zero",
+      "status": "hold_not_merged_current_primary_site_conflict",
+      "source_url": "https://thezerophuket.com/",
+      "checked_at": "2026-09-19T00:09:13Z"
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "id_preserved": true,
+  "unique_ids": true,
+  "before_at_source_commit": 376,
+  "after": 386,
+  "added_this_checkpoint": 10,
+  "replay_actual_additions": 10,
+  "existing_enriched": 0,
+  "barnaul_reviewed": 10,
+  "barnaul_suitable": 10,
+  "regional_multicity_counted_once": 1,
+  "crm_imports": 0,
+  "external_sends": 0
+}

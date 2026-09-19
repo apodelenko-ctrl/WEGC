@@ -363,9 +363,10 @@
     "task_key": "project-developer:the-zero-nai-yang",
     "project_id": "the-zero-nai-yang",
     "developer_id": "PHK-011",
-    "status": "queued",
-    "reason": "inherited_group_match_needs_verification",
-    "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
+    "status": "hold_possible_rebrand_not_merged",
+    "reason": "current_primary_site_inconclusive",
+    "next_action": "Obtain explicit developer confirmation whether The Zero Nai Yang was renamed to Silhouette; preserve both IDs meanwhile",
+    "checked_at": "2026-09-19T00:09:13Z"
   },
   {
     "task_key": "project-developer:ailin-villas",
@@ -739,17 +740,19 @@
     "task_key": "project-developer:zero-bangtao",
     "project_id": "zero-bangtao",
     "developer_id": "PHK-011",
-    "status": "queued",
-    "reason": "inherited_group_match_needs_verification",
-    "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
+    "status": "completed_alias_resolved_id_preserved",
+    "reason": "catalog_alias_confirmed",
+    "next_action": "Route catalogue display to the-zero-bang-tao; verify legal seller, inventory and contract separately",
+    "checked_at": "2026-09-19T00:09:13Z"
   },
   {
     "task_key": "project-developer:zero-naiyang",
     "project_id": "zero-naiyang",
     "developer_id": "PHK-011",
-    "status": "queued",
-    "reason": "inherited_group_match_needs_verification",
-    "next_action": "Find primary project source, verify developer and project legal seller; preserve all candidate IDs"
+    "status": "completed_alias_resolved_id_preserved",
+    "reason": "catalog_alias_confirmed",
+    "next_action": "Route catalogue display to the-zero-nai-yang; verify legal seller, inventory and contract separately",
+    "checked_at": "2026-09-19T00:09:13Z"
   },
   {
     "task_key": "project-developer:kata-ozon",

@@ -1024,7 +1024,16 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "possible_rebrand_of": "silhouette-by-the-zero",
+    "duplicate_resolution_status": "hold_not_merged_current_primary_site_conflict",
+    "duplicate_review": {
+      "source_url": "https://thezerophuket.com/",
+      "secondary_source_url": "https://thezerophuket.com/silhouette-nai-yang/",
+      "checked_at": "2026-09-19T00:09:13Z",
+      "verification_status": "reviewed_primary_source_inconclusive",
+      "basis": "The current official site presents Silhouette as the Nai Yang project but also retains legacy The Zero Nai Yang text in duplicated/stale homepage content. No explicit first-party rename statement was found, so the two canonical IDs are not merged."
+    }
   },
   {
     "project_id": "ailin-villas",
@@ -2030,7 +2039,15 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "catalog_alias_of": "the-zero-bang-tao",
+    "alias_resolution_status": "confirmed_catalog_alias_preserve_id",
+    "alias_evidence": {
+      "source_url": "https://thezerophuket.com/bang-tao/",
+      "checked_at": "2026-09-19T00:09:13Z",
+      "verification_status": "verified_primary_source_plus_catalog_provenance",
+      "basis": "The preserved Russian generator row has the same group, district and official source as the exact English master row. ID is retained and routed to the canonical project; no inventory, seller or agreement is inferred."
+    }
   },
   {
     "project_id": "zero-naiyang",
@@ -2050,7 +2067,15 @@
     },
     "legal_seller_verified": false,
     "contract_covered": null,
-    "commercially_enabled": false
+    "commercially_enabled": false,
+    "catalog_alias_of": "the-zero-nai-yang",
+    "alias_resolution_status": "confirmed_catalog_alias_preserve_id",
+    "alias_evidence": {
+      "source_url": "https://thezerophuket.com/",
+      "checked_at": "2026-09-19T00:09:13Z",
+      "verification_status": "verified_primary_source_plus_catalog_provenance",
+      "basis": "The preserved Russian generator row is a transliterated duplicate of the English The Zero Nai Yang seed with the same group, district and official source. Both IDs remain; current relationship to Silhouette is unresolved."
+    }
   },
   {
     "project_id": "kata-ozon",

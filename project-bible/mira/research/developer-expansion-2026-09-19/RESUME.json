@@ -1,8 +1,8 @@
 {
   "task_id": "MIRA-DEVELOPERS-20260919-01",
   "status": "in_progress",
-  "source_commit": "a703c6d3815bcda12fdd19b5d96286500b60463f",
-  "checkpoint_at": "2026-09-18T23:11:27Z",
+  "source_commit": "921dbb633db4402c05b2fe84c31a0f40929873fb",
+  "checkpoint_at": "2026-09-19T00:09:13Z",
   "completed": [
     "existing_source_inventory",
     "exact_alias_projection_618_phuket",
@@ -24,23 +24,26 @@
     "B006_Naturale_Kamala_secondary_group_mapping",
     "B006_Laguna_Lakeside_secondary_group_mapping",
     "B006_Laguna_Phuket_fresh_general_contacts",
-    "B006_registry29tests_secondary_links_remain_unsendable"
+    "B006_registry29tests_secondary_links_remain_unsendable",
+    "B007_two_Zero_generator_aliases_resolved_ids_preserved",
+    "B007_The_Zero_Nai_Yang_vs_Silhouette_held_not_merged",
+    "B007_Zero_public_consultation_booking_route"
   ],
   "next_actions": [
+    "Obtain explicit developer confirmation for The Zero Nai Yang ↔ Silhouette; preserve both IDs until then",
     "Private native87 ↔ public master43 crosswalk; no total addition",
-    "Review possible Zero Bang Tao / Nai Yang / Silhouette duplicate catalogue labels without deleting IDs",
     "Missing family507; then other60 published market records",
     "Named agency-relations and missing messenger fields",
     "Private Botanica/The Title reconciliation; do not send first-contact again"
   ],
-  "developer_cursor": "zero_duplicate_labels_then_missing_family_507",
+  "developer_cursor": "missing_family_507_exact_name_primary_source_pass",
   "crm_imported": false,
   "external_sends": 0,
   "final_report_required": true,
   "stop_by": "2026-09-19T08:00:00+07:00",
   "latest_native_crm_source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
   "native_developer_research_count": 87,
-  "latest_checkpoint_event": "CLOUD-INBOX/events/2026-09-18/cloud-both-bases-b006.json",
+  "latest_checkpoint_event": "CLOUD-INBOX/events/2026-09-19/cloud-both-bases-b007.json",
   "counts": {
     "developer_master_rows": 43,
     "fresh_public_contacts": 10,
@@ -49,9 +52,11 @@
     "unmatched_family": 0,
     "ambiguous": 0,
     "no_family": 507,
-    "excluded_non_residential": 1
+    "excluded_non_residential": 1,
+    "catalog_aliases_confirmed_preserving_ids": 2,
+    "possible_rebrands_held_not_merged": 1
   },
-  "remaining": "Naturale Kamala and Laguna Lakeside now have exact current public group mappings, retained as secondary-source and non-sendable. Other507 missing-family and60 other-market records are unprocessed. Zero duplicate labels require review. Legal seller/contract counts unknown; native CRM87 crosswalk pending.",
-  "latest_result_commit": "9a3db807f13c09439fd1793de2beb669b68f2eeb",
-  "latest_result_commit_note": "Published B006 data/code checkpoint; a following receipt-only commit stores this pointer."
+  "remaining": "Two generated Zero catalogue aliases are resolved to canonical IDs without deleting any of 618 project IDs. The Zero Nai Yang versus Silhouette remains an explicit hold because the current first-party site is internally mixed and contains no rename statement. Other 507 missing-family and 60 other-market records remain; legal seller/contract counts and native CRM87 crosswalk remain pending.",
+  "latest_result_commit": null,
+  "latest_result_commit_note": "B007 working tree; commit recorded after publication."
 }

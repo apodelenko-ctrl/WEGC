@@ -1,5 +1,11 @@
 # Agency expansion change log
 
+## Обе базы B007 — 2026-09-19T00:09:13Z
+
+- Agency canonical **376 → 386** (RU244/BY59/other83). Барнаул:10 reviewed, **10/10** suitable; +10 candidates, enriched existing0, deleted0. Fresh channels: full named role10, phone10, general email10, direct business phone2, WhatsApp1, direct email/Telegram/VK0, fully enriched0. Nine current RGR legal identities plus one first-party business identity; one regional multi-city organisation counted once. Official city-proper population remains blocked; next cursor `RU-CITY-006`.
+- Developer master stays43; fresh contact groups stay10. Two Zero generator aliases resolved with all618 IDs preserved. The Zero Nai Yang versus Silhouette remains a first-party-inconclusive hold and was not merged. Exact public consultation-booking route added; no send gate opened. Primary links9, primary-or-current-public links16, no-family507.
+- 31/31 tests PASS; CRM imports0, external sends0, deploy0. LOCAL native78/87 remain separate; private transfer/crosswalk/cloud restore pending.
+
 ## Canonical reconstruction — 2026-09-18
 
 Source d19b6fc09e0f6823de706ac868457139f12f596a. All 32 cached source file Git blob SHAs match current branch. Baseline 332 groups → 337 provisional candidates: split one Realting.uz directory-host group into nine named candidates (+8); collapse same-country Etagi subdomain groups (-3: two RU, one BY). Net +5 is identity correction, NOT newly discovered agencies. RU 197→195, BY 60→59, other 75→83. All 332 baseline keys and existing source IDs retained in aliases/lineage. 12 historical C10 imports remain separately confirmed by LOCAL; imports this task 0. No external sends, no deployment.

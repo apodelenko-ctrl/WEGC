@@ -517,6 +517,16 @@
         "purpose": "general",
         "direct_dialogue_verified": false,
         "deliverability_tested": false
+      },
+      {
+        "kind": "consultation_booking",
+        "value": "https://zerodevelopments.youcanbook.me/",
+        "purpose": "project_consultation",
+        "source_url": "https://thezerophuket.com/silhouette-nai-yang/",
+        "checked_at": "2026-09-19T00:09:13Z",
+        "verification_status": "verified_published_link",
+        "direct_dialogue_verified": false,
+        "deliverability_tested": false
       }
     ],
     "relationship_stage": "crm_reconciliation_required",
@@ -540,8 +550,8 @@
     "missing_fields": {
       "named_sales_person": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T23:11:27Z",
-        "source_url": "https://thezerophuket.com/contact/"
+        "checked_at": "2026-09-19T00:09:13Z",
+        "source_url": "https://thezerophuket.com/silhouette-nai-yang/"
       },
       "direct_public_work_email": {
         "verification_status": "not_found",
@@ -560,11 +570,11 @@
       },
       "agency_relations_email": {
         "verification_status": "not_found",
-        "checked_at": "2026-09-18T23:11:27Z",
+        "checked_at": "2026-09-19T00:09:13Z",
         "source_url": "https://thezerophuket.com/contact/"
       }
     },
-    "research_note": "Official Silhouette page has WhatsApp pickup link but target URL not extracted. No inferred wa.me from phone.",
+    "research_note": "Official site now presents Bang Tao and Silhouette as current projects and publishes a consultation-booking route. Legacy The Zero Nai Yang text remains on the homepage without an explicit rename statement; IDs were not merged. WhatsApp target remains unextracted and was not inferred.",
     "fresh_contact_verified": true,
     "project_candidate_count": 5
   },

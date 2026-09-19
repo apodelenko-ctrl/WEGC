@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-09-19T00:09:13Z",
+  "city": "Барнаул",
+  "status": "blocked_official_source",
+  "official_value": null,
+  "reason": "A fresh city-proper value could not be retrieved from accessible Rosstat/Altaykraistat results. The existing rounded secondary estimate is retained only for queue ordering; the urban district and agglomeration were not substituted.",
+  "attempted_sources": [
+    "https://22.rosstat.gov.ru/",
+    "https://rosstat.gov.ru/",
+    "https://barnaul.org/"
+  ]
+}

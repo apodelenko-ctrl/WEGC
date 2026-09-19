@@ -20,7 +20,8 @@
     "whatsapp": 2,
     "telegram": 0,
     "line": 1,
-    "broker_portal": 2
+    "broker_portal": 2,
+    "consultation_booking": 1
   },
   "signed_contracts_total": null,
   "projects_covered_by_active_contract": null,
@@ -45,5 +46,8 @@
     "scope": "PRIVATE_LOCAL_LAB_NOT_HOSTED_PUBLIC_MAIL",
     "source": "LOCAL_receipt_not_independent_cloud_live_test",
     "crosswalk_to_research_master": "pending; do not add these counts together"
-  }
+  },
+  "catalog_aliases_confirmed_preserving_ids": 2,
+  "possible_rebrands_held_not_merged": 1,
+  "zero_duplicate_review_checked_at": "2026-09-19T00:09:13Z"
 }

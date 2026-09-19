@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-09-19T00:09:13Z",
+  "source_commit": "921dbb633db4402c05b2fe84c31a0f40929873fb",
+  "project_ids_preserved": true,
+  "projects_total": 618,
+  "unique_project_ids": true,
+  "catalog_aliases_confirmed_preserving_ids": 2,
+  "possible_rebrands_held_not_merged": 1,
+  "developer_rows_before": 43,
+  "developer_rows_after": 43,
+  "new_public_booking_routes": 1,
+  "crm_imports": 0,
+  "external_sends": 0
+}

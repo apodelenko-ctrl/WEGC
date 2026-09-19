@@ -125,6 +125,22 @@ class RegistryTest(unittest.TestCase):
         self.assertIn('project_developer_not_verified',planned['blockers'])
         self.assertFalse(planned['send_authorized'])
 
+    def test_b007_zero_catalog_aliases_preserve_all_ids(self):
+        stored=json.loads((ROOT/OUT/'project-links.json').read_text())
+        links={p['project_id']:p for p in stored}
+        self.assertEqual(len(stored),618)
+        self.assertEqual(len(links),618)
+        self.assertEqual(links['zero-bangtao']['catalog_alias_of'],'the-zero-bang-tao')
+        self.assertEqual(links['zero-naiyang']['catalog_alias_of'],'the-zero-nai-yang')
+
+    def test_b007_possible_zero_rebrand_remains_unmerged(self):
+        stored=json.loads((ROOT/OUT/'project-links.json').read_text())
+        links={p['project_id']:p for p in stored}
+        row=links['the-zero-nai-yang']
+        self.assertEqual(row['possible_rebrand_of'],'silhouette-by-the-zero')
+        self.assertEqual(row['duplicate_resolution_status'],'hold_not_merged_current_primary_site_conflict')
+        self.assertIn('silhouette-by-the-zero',links)
+
 class InquiryTest(unittest.TestCase):
     def setUp(self):
         self.case={'case_id':'case-test','agency_id':'agency-test','project_id':'project-test',

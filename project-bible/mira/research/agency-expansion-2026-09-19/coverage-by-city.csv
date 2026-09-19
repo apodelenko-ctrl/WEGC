@@ -3,7 +3,7 @@ city_id,city,segment,target_min_agencies,canonical_candidates,verified_suitable,
 "RU-CITY-002","Тюмень","core_300k_to_1m","10","12","10","0","blocked_official_source","minimum_met_fields_incomplete_two_separate_overseas"
 "RU-CITY-003","Тольятти","core_300k_to_1m","10","10","10","0","blocked_official_source","minimum_met_fields_incomplete"
 "RU-CITY-004","Махачкала","core_300k_to_1m","10","10","10","0","blocked_official_source","minimum_met_fields_incomplete"
-"RU-CITY-005","Барнаул","core_300k_to_1m","10","1","0","10","pending","queued"
+"RU-CITY-005","Барнаул","core_300k_to_1m","10","10","10","0","blocked_official_source","minimum_met_fields_incomplete"
 "RU-CITY-006","Ижевск","core_300k_to_1m","10","1","0","10","pending","queued"
 "RU-CITY-007","Хабаровск","core_300k_to_1m","10","0","0","10","pending","queued"
 "RU-CITY-008","Ульяновск","core_300k_to_1m","10","0","0","10","pending","queued"

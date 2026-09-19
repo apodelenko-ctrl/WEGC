@@ -1,0 +1,98 @@
+{
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "batch_id": "B007-BARNAUL",
+  "city_id": "RU-CITY-005",
+  "checked_at": "2026-09-19T00:09:13Z",
+  "source_commit": "921dbb633db4402c05b2fe84c31a0f40929873fb",
+  "population_check": {
+    "city": "Барнаул",
+    "status": "blocked_official_source",
+    "official_value": null,
+    "reason": "A fresh city-proper value could not be retrieved from accessible Rosstat/Altaykraistat results. The existing rounded secondary estimate is retained only for queue ordering; the urban district and agglomeration were not substituted.",
+    "attempted_sources": ["https://22.rosstat.gov.ru/", "https://rosstat.gov.ru/", "https://barnaul.org/"]
+  },
+  "records": [
+    {
+      "agency_id": "RU-RGR-2618", "record_action": "add_candidate", "domain": "an-pro.ru",
+      "source_url": "https://reestr.rgr.ru/agentstvo-prospekt-nedvizhimost-2618/",
+      "fields": {"brand":"Проспект-Недвижимость","city":"Барнаул","legal_name":"ООО \"Проспект-Недвижимость\"","canonical_domain":"an-pro.ru","company_phone":"+7 3852 282-117","general_email":"vip.prospekt@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-prospekt-nedvizhimost-2618/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-prospekt-nedvizhimost-2618/","contact_first_name":"Евгений","contact_last_name":"Ракин","contact_role":"Директор"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul legal entity, certified agency, public phone/email and director. Overseas activity remains unknown.",
+      "gaps":{"parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-14558", "record_action": "add_candidate", "domain": null,
+      "source_url": "https://reestr.rgr.ru/agentstvo-evsyukov-a-yu-an-zima-leto-14558/",
+      "fields": {"brand":"Зима-Лето","city":"Барнаул","legal_name":"ИП Евсюков А.Ю.","company_phone":"+7 963 527-00-21","general_email":"Zimaleto-realty@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-evsyukov-a-yu-an-zima-leto-14558/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-evsyukov-a-yu-an-zima-leto-14558/","contact_first_name":"Алексей","contact_last_name":"Евсюков","contact_role":"Директор"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul sole proprietor agency, public phone/email and director. Overseas activity remains unknown.",
+      "gaps":{"parent_brand":"not_found","canonical_domain":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-5254", "record_action": "add_candidate", "domain": null,
+      "source_url": "https://reestr.rgr.ru/agentstvo-insayt-investbroker-5254/",
+      "fields": {"brand":"Инсайт ИнвестБрокер","city":"Барнаул","legal_name":"ООО «Инсайт ИнвестБрокер»","company_phone":"+7 3852 69-01-06","general_email":"barnaul.lib@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-insayt-investbroker-5254/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-insayt-investbroker-5254/","contact_first_name":"Павел","contact_last_name":"Прядко","contact_role":"Руководитель"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul legal entity, certified agency, public phone/email and head. Overseas activity remains unknown.",
+      "gaps":{"parent_brand":"not_found","canonical_domain":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-4978", "record_action": "add_candidate", "domain": "zinchenko.agency",
+      "source_url": "https://reestr.rgr.ru/agentstvo-zinchenko-t-a-agentstvo-nedvizhimosti-tatyany-zinchenko-4978/",
+      "fields": {"brand":"Агентство недвижимости Татьяны Зинченко","city":"Барнаул","legal_name":"ИП Зинченко Т.А.","canonical_domain":"zinchenko.agency","company_phone":"+7 3852 529-229","direct_business_phone":"+7 964 603-92-29","general_email":"zinchenko_tanya@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-zinchenko-t-a-agentstvo-nedvizhimosti-tatyany-zinchenko-4978/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-zinchenko-t-a-agentstvo-nedvizhimosti-tatyany-zinchenko-4978/","contact_first_name":"Татьяна","contact_last_name":"Зинченко","contact_role":"Директор"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul proprietor, own site, two public work phones, email and director. The mobile is published for the agency but direct-dialogue use has not been tested.",
+      "gaps":{"parent_brand":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-6655", "record_action": "add_candidate", "domain": null,
+      "source_url": "https://reestr.rgr.ru/agentstvo-agentstvo-nedvizhimosti-irbis-6655/",
+      "fields": {"brand":"Ирбис","city":"Барнаул","legal_name":"ООО Агентство недвижимости \"Ирбис\"","company_phone":"+7 3852 55-68-01","direct_business_phone":"+7 963 572-74-91","general_email":"irbis2272@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-agentstvo-nedvizhimosti-irbis-6655/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-agentstvo-nedvizhimosti-irbis-6655/","contact_first_name":"Елена","contact_last_name":"Болгова","contact_role":"Генеральный директор"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul legal entity, public office/mobile phones, email and general director. The mobile is not treated as proof of WhatsApp.",
+      "gaps":{"parent_brand":"not_found","canonical_domain":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-2172", "record_action": "add_candidate", "domain": "city-trade.pro",
+      "source_url": "https://reestr.rgr.ru/agentstvo-siti-treyd-2172/",
+      "fields": {"brand":"Сити Трейд","city":"Барнаул","legal_name":"ООО \"Сити Трейд\"","canonical_domain":"city-trade.pro","company_phone":"+7 3852 99-66-77","general_email":"city-trade2006@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-siti-treyd-2172/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-siti-treyd-2172/","contact_first_name":"Юлия","contact_last_name":"Мордовина","contact_role":"Генеральный директор"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul legal entity, own site, public phone/email and general director. Overseas activity remains unknown.",
+      "gaps":{"parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-5475", "record_action": "add_candidate", "domain": null,
+      "source_url": "https://reestr.rgr.ru/agentstvo-svetlyy-dom-5475/",
+      "fields": {"brand":"Светлый дом","city":"Барнаул","legal_name":"ООО \"Светлый дом\"","company_phone":"+7 913 093-41-33","general_email":"svetlydom22@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-svetlyy-dom-5475/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-svetlyy-dom-5475/","contact_first_name":"Александр","contact_last_name":"Васильев","contact_role":"Директор"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul legal entity, certified agency, public phone/email and director. Overseas activity remains unknown.",
+      "gaps":{"parent_brand":"not_found","canonical_domain":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-18159", "record_action": "add_candidate", "domain": null,
+      "source_url": "https://reestr.rgr.ru/agentstvo-alfa-nedvizhimost-18159/",
+      "fields": {"brand":"Альфа – Недвижимость","city":"Барнаул","legal_name":"ООО «Альфа – Недвижимость»","company_phone":"+7 960 965-73-01","general_email":"miller.y@mail.ru","contact_page":"https://reestr.rgr.ru/agentstvo-alfa-nedvizhimost-18159/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-alfa-nedvizhimost-18159/","contact_first_name":"Юлия","contact_last_name":"Миллер","contact_role":"Директор"},
+      "segment":"local_certified_candidate","fit":true,"reason":"Current RGR registry identifies the Barnaul legal entity, certified agency, public phone/email and director. Overseas activity remains unknown.",
+      "gaps":{"parent_brand":"not_found","canonical_domain":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-WEB-GNEZDO-BARNAUL", "record_action": "add_candidate", "domain": "xn--b1abddkigivdkbba3apr.xn--p1ai",
+      "source_url": "https://xn--b1abddkigivdkbba3apr.xn--p1ai/",
+      "fields": {"brand":"Гнездо","city":"Барнаул","canonical_domain":"xn--b1abddkigivdkbba3apr.xn--p1ai","company_phone":"+7 3852 53-41-25","general_email":"angnezdo@yandex.ru","whatsapp_url":"https://api.whatsapp.com/send?phone=79069602030","contact_page":"https://xn--b1abddkigivdkbba3apr.xn--p1ai/"},
+      "person": {"source_url":"https://xn--b1abddkigivdkbba3apr.xn--p1ai/","contact_first_name":"Ольга","contact_last_name":"Гросс","contact_role":"Директор"},
+      "segment":"local_greenfield_candidate","fit":true,"reason":"The agency's current first-party site publishes its Barnaul office, phone, email, team leadership and exact WhatsApp route. Legal entity and overseas activity remain unverified.",
+      "gaps":{"legal_name":"not_found","parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    },
+    {
+      "agency_id": "RU-RGR-5192", "record_action": "add_candidate", "domain": "xn--24-6kcpub7a7aj5k.xn--p1ai",
+      "source_url": "https://reestr.rgr.ru/agentstvo-an-dinastiya-24-5192/",
+      "fields": {"brand":"Династия 24","city":"Барнаул","legal_name":"ООО АН «Династия 24»","canonical_domain":"xn--24-6kcpub7a7aj5k.xn--p1ai","company_phone":"+7 3852 590-570","general_email":"barnaul@dynasty-24.com","contact_page":"https://xn--24-6kcpub7a7aj5k.xn--p1ai/"},
+      "person": {"source_url":"https://reestr.rgr.ru/agentstvo-an-dinastiya-24-5192/","contact_first_name":"Дмитрий","contact_last_name":"Дворядкин","contact_role":"Директор"},
+      "segment":"regional_multicity_candidate","fit":true,"reason":"Current RGR and first-party sources identify one regional multi-city organisation with a Barnaul legal entity, office route, public phone/email and director. All branches count once; overseas activity remains unknown.",
+      "gaps":{"parent_brand":"not_found","direct_business_phone":"not_found","direct_public_work_email":"not_found","whatsapp_url":"not_found","telegram_url":"not_found","telegram_kind":"not_found","vk_url":"not_found","other_social_url":"not_found"}
+    }
+  ],
+  "new_crm_imports": 0,
+  "external_sends": 0
+}
