@@ -1,0 +1,19 @@
+{
+  "event_id": "cloud-20260919-0914-cutover-prepared",
+  "task_id": "MIRA-CLOUD-CUTOVER-20260919-01",
+  "at_ict": "2026-09-19T09:14:00+07:00",
+  "actor": "CLOUD",
+  "action": "prepared_owner_only_cloud_destination_and_closed_bounded_night_window",
+  "outputs": [
+    "CLOUD-INBOX/tasks/MIRA-CLOUD-CUTOVER-20260919-01.md",
+    "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md",
+    "CLOUD-INBOX/receipts/MIRA-CLOUD-CUTOVER-20260919-01.json"
+  ],
+  "private_destination_name": "MIRA CLOUD HANDOFF — PRIVATE — 2026-09-19",
+  "private_destination_url_committed": false,
+  "night_tasks_status": "bounded_window_closed_partial",
+  "production_changes": 0,
+  "external_sends": 0,
+  "purchases": 0,
+  "next_action": "LOCAL private transfer -> checksum readback -> approved persistent-runtime restore"
+}
