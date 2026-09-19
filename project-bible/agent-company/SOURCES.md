@@ -1,6 +1,6 @@
 # Источники и пределы проверки
 
-Проверка страниц: 2026-09-19. Статус `official_observed` означает прочитанную страницу государственного органа; `vendor_statement` — собственное описание провайдера, не независимый аудит. Полные тексты страниц не копируются.
+Проверка страниц: 2026-09-19. Статус `official_observed` означает прочитанную страницу государственного органа; `vendor_statement` — собственное описание провайдера, не независимый аудит. Полные тексты страниц не копируются. В реестре 21 первичный источник; это не 21 независимое подтверждение всей бизнес-модели.
 
 ## S01
 [doola Formation API](https://www.doola.com/formation-api/) · `vendor_statement`. Оформление, интеграции, sandbox, партнёрское соглашение. Наши условия, production-доступ и цены не получены.
@@ -54,11 +54,17 @@
 [Companies House fees](https://www.gov.uk/government/publications/companies-house-fees/companies-house-fees) · `official_observed`. Online incorporation и confirmation statement. Не полный годовой бюджет.
 
 ## S18
-[ACRA / Registering a local company via Bizfile](https://www.acra.gov.sg/register/business/registering-different-business-structures/local-company/registering-via-bizfile/) · `partial`. Сюда перенаправилась прежняя общая ссылка. Нужны отдельные источники о directors и CSP. Открытая задача, а не полная верификация сингапурского сравнения.
+[ACRA / Registering a local company via Bizfile](https://www.acra.gov.sg/register/business/registering-different-business-structures/local-company/registering-via-bizfile/) · `official_observed`. В последующей проверке раздела position holders подтверждены Singapore registered office и минимум один директор, отвечающий local residency rules. Эта запись уточняет первоначальную отметку partial в F012; история сохранена в [Singapore followup](research/SINGAPORE-FOLLOWUP.md). Применимость CSP к нашей конкретной модели не определяется одной этой страницей.
 
 ## S19
 [Wise US Acceptable Use Policy](https://wise.com/us/legal/acceptable-use-policy) · `official_provider_policy`. Сфера corporate-service restrictions. Не получено индивидуальное согласование нашей деятельности.
 
+## S20
+[ACRA / Requirements and eligibility](https://www.acra.gov.sg/register/business/requirements-eligibility/) · `official_observed`. Требования к иностранцам и местному резиденту. Не подтверждение пригодности конкретного лица или нашей структуры.
+
+## S21
+[ACRA / Corporate Service Providers overview](https://www.acra.gov.sg/manage/corporate-service-providers/overview/) · `official_observed`. ACRA указывает действие CSP Act 2024 с 9 июня 2025 и текущие обязанности корпоративных провайдеров. Применимость к фактическому operator-owned режиму требует отдельного анализа.
+
 ## Правила пополнения
 
-Новая запись: URL, владелец источника, дата проверки, точный поддерживаемый тезис, статус доказательства и ограничение. Не сохранять search snippets как проверенный полный документ. Не переносить неизвестные сроки и цены в финансовые прогнозы. При изменении страницы обновлять Находки и добавлять запись в Контроль-борд.
+Новая запись: URL, владелец источника, дата проверки, точный поддерживаемый тезис, статус доказательства и ограничение. Не сохранять search snippets как проверенный полный документ. Не переносить неизвестные сроки и цены в финансовые прогнозы. При изменении страницы обновлять Находки либо явно связанное уточнение и добавлять запись в Контроль-борд.

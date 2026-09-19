@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-09-19T13:33:34.475504+00:00",
+  "tested_commit": "a9d73ec460ab59b3b974ebc9629bb5bdffe5037e",
+  "executor": "ASTRA",
+  "runtime": "synchronous local container",
+  "result": "prototype_tests_and_remote_code_identity_passed",
+  "return_code": 0,
+  "tests_run": 15,
+  "remote_code_identity": [
+    {"path":"prototype/lifecycle.py","remote_blob_sha":"2b9901916ebeccf4117e713f4312673fd0880d68","local_blob_sha":"2b9901916ebeccf4117e713f4312673fd0880d68","match":true,"sha256":"906f9c1961a93d466b7e829f15d7ff05a8e7a769fc3056a46b96816e73ebefdb"},
+    {"path":"prototype/test_lifecycle.py","remote_blob_sha":"0a4f049b544db88ec76a13b9c914e202aced09c5","local_blob_sha":"0a4f049b544db88ec76a13b9c914e202aced09c5","match":true,"sha256":"8742983973be431a228a9def76e941d2f515dee4f08ea7c59ad53698cdfa78ce"}
+  ],
+  "github_diff_check": {
+    "base": "4972b4bca407d6944ca39dfacc810dc16147efbb",
+    "head": "a9d73ec460ab59b3b974ebc9629bb5bdffe5037e",
+    "files_added": 28,
+    "files_modified": 0,
+    "files_removed": 0,
+    "all_paths_under": "project-bible/agent-company/",
+    "evidence": "GitHub.compare_commits tool response"
+  },
+  "complete_checkout_validator": {
+    "status": "not_executed_on_complete_checkout",
+    "reason": "Direct raw.githubusercontent.com download failed DNS; GitHub connector reads and writes remain functional."
+  },
+  "external_provider_actions": [],
+  "persistent_agents_started": false,
+  "limitations": ["Simulation only", "No production authentication or persistence", "Not legal or security sign-off"]
+}
