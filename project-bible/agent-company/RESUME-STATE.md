@@ -1,39 +1,25 @@
 # RESUME-STATE
 
-2026-09-19 · execution-04 · ACI. Технический код, не утверждённый бренд.
+2026-09-19 · execution-05 · ACI. Рабочая ветка `agent-company/bootstrap-20260919`, каталог `project-bible/agent-company/` в `apodelenko-ctrl/WEGC`. Перед продолжением читать фактический HEAD. Начальная база этой сессии: `6f5740942a9aa65395930989967baf392d85385b`.
 
-## Суть
+## Не потерять замысел
 
-Агент запрашивает через API инфраструктуру бизнеса; действительный owner/operator со стороны сервиса предоставляет компанию. Не подменять основную модель обычным client-owned formation. Но проверить, нужен ли покупателю именно наш собственник, а не оформление на себя. Конкуренты агентского оформления уже существуют; уникальность не доказана.
+Реальный owner/operator со стороны сервиса предоставляет компанию агентскому бизнесу. Не подменять основной режим обычным client-owned formation. Коммерческая нужность такого владения и юридическая пригодность остаются проверяемыми гипотезами; Wyoming/doola — кандидаты, не окончательные решения.
 
-## Ветка и изоляция
+## Сделано
 
-`apodelenko-ctrl/WEGC`, `agent-company/bootstrap-20260919`, только `project-bible/agent-company/`. База текущего продолжения: `6dc2f48277bc336f507563454e7c36cff1c3dd6f`. Сначала fetch фактический HEAD. Main, МИРА, сайт и workflows не трогать. Публичная ветка не подходит для секретов и операционных документов.
+ACI-022/023 реализованы и проверены: durable SQLite state, версии, идемпотентность после рестарта, атомарные state/receipt/audit, expiry и scopes, identity revoke и all-key agent revoke внутри ACI, маркировка исторического replay. 78 тестов прошли; receipt `agents/receipts/durable-tests.json`. Базовые четыре Python-файла не менялись.
 
-## Что не повторять
+## Следом
 
-ACI-001…ACI-011 и ACI-013/ACI-021 завершены в объёме своих acceptance criteria. Локальный HTTP mock реализован, baseline-код неизменён, 48 тестов прошли. Клиентские интервью, партнёрские ответы, юридический sign-off и настоящий бизнес не выполнены.
+ACI-025: реализовать локальный fixture runner на существующем sqlite_store.py; dispatch, lease, heartbeat, fencing, bounded execution, receipt и восстановление. Это не разрешение запуска внешнего LLM runtime или платных ресурсов. Перед работой читать architecture/AGENT-RUNNER-DESIGN.md и agents/QUEUE.json.
 
-## Прочитать
+ACI-024 требует полный каталог с настоящими файлами и запуск scripts/validate_project.py; статус не закрывать по тестам одного прототипа. DNS raw download снова не работает, GitHub connector работает. Возможен дальнейший побайтовый recovery файлов с проверкой Git blob SHA; заглушки вместо недостающих документов недопустимы.
 
-README → Решения → WORK-STATUS → Контроль-борд → QUEUE. Затем research/WHY-NOW-AND-FAILURE-TESTS.md, prototype/HTTP-MOCK.md и research/ACI-012-SELF-REVIEW.md.
+## Технические пределы
 
-## Следующая работа
+Durable API слушает только loopback; CLI хранит базу/credentials вне репозитория. Mandate expires_at обязателен в новой версии. Квитанция replay историческая, GET — текущий статус. Identity-based idempotency ещё не дедуплицирует одну бизнес-операцию между разными credential identities. Backup не является production disaster recovery. SQLite audit не защищён от администратора. Нет настоящих provider events, outbox, KYC/EIN, финансовых операций и независимого review.
 
-ACI-022: заменить внутрипроцессное состояние и idempotency cache на локальный durable store с проверкой рестарта. Не добавлять настоящих финансовых вызовов. Следом ACI-023: expiry, company-scoped полномочия, revoke identity и явные historical receipts. ACI-025 — локальная симуляция runner с lease/fencing/recovery, не настоящий агентский runtime.
+## Режим исполнения
 
-На полном checkout сначала выполнить scripts/validate_project.py и unittest из README; сохранить фактический stdout/exit code. Полный checkout validator в текущей сессии не выполнен из-за DNS при прямом скачивании; не закрывать ACI-024 по одним unit-тестам. Код и данные из connector можно восстановить с проверкой blob SHA, но недостающие документы нельзя заменять заглушками.
-
-## Важные оговорки
-
-ACI-012 blocked до независимого review. Самопроверка автора уже сохранена и выявляет конкретные следующие работы. HTTP mock слушает только loopback; bearer→Actor mapping синтетический; нет TLS, persistence, expiry, настоящего KYC/EIN/provider integration. Revocation в модели блокирует операции мандата, а не все действия identity во всех системах.
-
-Все успешные результаты симуляции помечены simulation. /simulate-* — действия тестового оператора, не реальные события провайдера. Replay возвращает исторический snapshot; актуальный статус читать GET.
-
-## Уточнения бизнес-плана
-
-Wyoming/doola остаются гипотезами. Delaware §12A-114 не использовать как разрешение LLC formation: corporate-law scope исключён §12A-103(b)(4). Изменение юрисдикции не считать автоматическим устранением требований провайдеров и фактических прав сторон. Предварительный бюджет ACI-018 — до пилота, фактическая экономика ACI-026 — после него.
-
-## Протокол
-
-Результат → тесты/evidence → receipt → queue/status/history → commit и remote verification. Дальше следующая независимая задача в активной сессии. Нет запущенного постоянного runtime и нет подтверждённого dispatch локальному агенту. Никаких внешних обязательств без отдельного approval.
+ASTRA работает интерактивно. Подготовленные специализированные роли не являются запущенными постоянными агентами; LOCAL dispatch не подтверждён. Сохранять код, тесты, receipt, очередь и журналы после результата. Не менять main, МИРА, сайт и workflows; не публиковать персональные данные и секреты; не выполнять внешние обязательства без отдельного approval.

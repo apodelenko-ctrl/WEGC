@@ -1,0 +1,25 @@
+{
+  "checkpoint": "execution-05",
+  "task_ids": ["ACI-022", "ACI-023"],
+  "executor": "ASTRA",
+  "runtime": "synchronous container; local subprocess and loopback tests",
+  "recorded_at": "2026-09-19T14:26:48.265901+00:00",
+  "source_base_commit": "6f5740942a9aa65395930989967baf392d85385b",
+  "tests_run": 78,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "simulation_only": true,
+  "code_identity": {
+    "prototype/durable_api.py": {"sha256":"4fa2c74bd279f92d433d4bbfded7f2988d64e1a2371751bc180d9adc4d92f238","git_blob_sha":"b5e41015fe425ab51b10451b66d2c01b6d9d2614"},
+    "prototype/lifecycle.py": {"sha256":"906f9c1961a93d466b7e829f15d7ff05a8e7a769fc3056a46b96816e73ebefdb","git_blob_sha":"2b9901916ebeccf4117e713f4312673fd0880d68"},
+    "prototype/mock_http.py": {"sha256":"6a276d409f73e743f445ce8560e98b0ac648668ddc25a0be6ed6e2028b857bc4","git_blob_sha":"20787694ef69551f3967e1b272d79daf62a1ab44"},
+    "prototype/sqlite_store.py": {"sha256":"bd9053dbd18b18ae4f0f05675d45a57cc37a99f68e0181c5c43c1c6e477cf250","git_blob_sha":"cb04bb01b420d49235ac32f22c5e9f1bf7a8333d"},
+    "prototype/test_durable_api.py": {"sha256":"3543354fa6fa1815375fa902888222e354108f7c088dc5d558fbd0875537fd69","git_blob_sha":"121e6c62e12cb2e2e541d6902ce7cee0619fdd46"},
+    "prototype/test_lifecycle.py": {"sha256":"8742983973be431a228a9def76e941d2f515dee4f08ea7c59ad53698cdfa78ce","git_blob_sha":"0a4f049b544db88ec76a13b9c914e202aced09c5"},
+    "prototype/test_mock_http.py": {"sha256":"69bd2faeacb26b19612a10b350b39651fe003a8237d95f3247d1172e9bb4c4ec","git_blob_sha":"9445ae0ef90b99552cd70ffca6b5661d128c9795"}
+  },
+  "external_provider_actions": [],
+  "persistent_llm_workers_started": false,
+  "limitations": ["Not production authentication, KYC or independent security approval", "Backup restore is an isolated snapshot test, not live disaster-recovery certification", "Complete project-library checkout validation is separate"]
+}
