@@ -1,0 +1,16 @@
+{
+  "batch_id": "D002-KHABAROVSK",
+  "checked_at": "2026-09-19T09:50:13+07:00",
+  "before_count": 395,
+  "after_count": 405,
+  "net_new": 10,
+  "khabarovsk_city_records": 11,
+  "khabarovsk_first_wave_fit": 10,
+  "unique_ids": true,
+  "network_duplicates_added": 0,
+  "russia_count_after": 263,
+  "crm_imports_performed": 0,
+  "external_messages_sent": 0,
+  "outreach_authorized": false,
+  "result": "PASS"
+}
