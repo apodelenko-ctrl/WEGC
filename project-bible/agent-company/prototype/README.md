@@ -1,22 +1,26 @@
-# Локальный симулятор жизненного цикла
+# Локальные прототипы ACI
 
-Это начало технической работы, не запущенный сервис. Python 3.10+, только стандартная библиотека; секреты, платежи, реестр компаний и сетевые запросы не используются.
+2026-09-19 · execution-04. Python 3.10+, стандартная библиотека. Никаких настоящих компаний, KYC, счетов, документов, платежей или LLM workers.
+
+## Исходная модель
+
+lifecycle.py и test_lifecycle.py — неизменённые файлы bootstrap с 15 unit-тестами. Actor — синтетический контекст, не механизм установления личности. Бизнес-состояния существуют только в памяти.
+
+## Новый HTTP mock
+
+mock_http.py и test_mock_http.py добавляют локальный HTTP adapter, серверное отображение синтетических bearer-токенов на роли, проверку payload, идемпотентность внутри процесса и 33 новых contract/HTTP теста. [Инструкция и точные ограничения](HTTP-MOCK.md).
 
 Из корня репозитория:
 
 ```bash
 python -m unittest discover -s project-bible/agent-company/prototype -p 'test_*.py' -v
-python project-bible/agent-company/scripts/validate_project.py
+python project-bible/agent-company/prototype/mock_http.py --credentials-file /tmp/aci-session.json
 ```
 
-## Реализовано и проверено
-
-15 unit-тестов: идемпотентное создание и конфликт payload; обязательный principal; разделение tenant/principal; запрет самосогласования агентом; порядок подачи; submitted не равно formed; необходимость simulation evidence; раздельное банковское одобрение; scopes; привязка мандата к агенту; отзыв и неизменяемость возвращаемой записи.
+Общий результат текущего прогона: **48 tests, OK**. Тестовые credentials создаются новым файлом вне клона; не использовать их для внешних сервисов и не публиковать.
 
 ## Не реализовано
 
-HTTP API, криптографическая authentication/authorization, проверка настоящих provider webhooks, хранение/шифрование документов, persistence, одновременные операции, бухгалтерия, EIN-процесс, real bank account, LLM worker и production-интеграции. Actor и provider_fixture — синтетические входные данные теста. Передача произвольного Actor внешним клиентом небезопасна и не допускается архитектурой будущего API.
+Durable state, expiry и глобальный revoke identity, production auth/TLS, неизменяемый журнал, реальные provider webhooks и финансовые функции, EIN, документы и постоянные агенты. HTTP server нельзя публиковать наружу. [Самопроверка](../research/ACI-012-SELF-REVIEW.md) не заменяет независимый review.
 
-Все статусы и evidence внутри этого модуля помечены simulation. Это проверка логики, а не юридическое или security-одобрение.
-
-Следующая задача: ACI-009 — HTTP mock-adapter. ACI-012 — отдельная критическая проверка модели и её недостающих границ.
+Следующие задачи: ACI-022 → durable state; ACI-023 → scopes/expiry/revoke; ACI-025 → локальный fixture runner. Все результаты simulation, не юридическое или production security approval.

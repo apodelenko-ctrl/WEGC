@@ -1,0 +1,25 @@
+{
+  "checkpoint": "execution-04",
+  "date": "2026-09-19",
+  "base_commit": "6dc2f48277bc336f507563454e7c36cff1c3dd6f",
+  "executor": "ASTRA",
+  "runtime": "current interactive session and synchronous local container tests",
+  "external_agent_run_id": null,
+  "completed": [
+    {"task_id":"ACI-009","result":"local HTTP mock implemented and tested","evidence_paths":["prototype/mock_http.py","prototype/test_mock_http.py","prototype/HTTP-MOCK.md","agents/receipts/http-mock-tests.json"]},
+    {"task_id":"ACI-010","result":"customer hypotheses and unsent interview guide","evidence_paths":["research/ACI-010-CUSTOMER-HYPOTHESES.md"]},
+    {"task_id":"ACI-011","result":"economic rights scenarios, not approved contracts","evidence_paths":["research/ACI-011-ECONOMIC-RIGHTS.md"]},
+    {"task_id":"ACI-013","result":"runner architecture, not a deployed runtime","evidence_paths":["architecture/AGENT-RUNNER-DESIGN.md"]},
+    {"task_id":"ACI-021","result":"targeted competitor/legal research and falsification criteria, not exhaustive legal clearance","evidence_paths":["research/WHY-NOW-AND-FAILURE-TESTS.md"]}
+  ],
+  "incomplete": [
+    {"task_id":"ACI-012","reason":"author self-review is not independent review"},
+    {"task_id":"ACI-024","reason":"complete checkout validator not executed in this environment"}
+  ],
+  "next_independent_task": "ACI-022",
+  "persistent_workers_started": false,
+  "test_server_stopped": true,
+  "provider_actions": [],
+  "financial_actions": [],
+  "outreach_messages": []
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "ACI-009",
+  "executor": "ASTRA",
+  "runtime": "synchronous local container; loopback HTTP server started for tests and stopped afterwards",
+  "recorded_at": "2026-09-19T13:52:55.459939+00:00",
+  "base_commit": "6dc2f48277bc336f507563454e7c36cff1c3dd6f",
+  "status": "local_mock_tests_passed",
+  "simulation_only": true,
+  "command": "python -m unittest discover -s prototype -p 'test_*.py' -v",
+  "tests_run": 48,
+  "baseline_tests": 15,
+  "new_tests": 33,
+  "failures": 0,
+  "errors": 0,
+  "return_code": 0,
+  "test_summary": "Ran 48 tests; OK",
+  "files": [
+    {"path":"prototype/lifecycle.py","git_blob_sha":"2b9901916ebeccf4117e713f4312673fd0880d68","sha256":"906f9c1961a93d466b7e829f15d7ff05a8e7a769fc3056a46b96816e73ebefdb"},
+    {"path":"prototype/test_lifecycle.py","git_blob_sha":"0a4f049b544db88ec76a13b9c914e202aced09c5","sha256":"8742983973be431a228a9def76e941d2f515dee4f08ea7c59ad53698cdfa78ce"},
+    {"path":"prototype/mock_http.py","git_blob_sha":"20787694ef69551f3967e1b272d79daf62a1ab44","sha256":"6a276d409f73e743f445ce8560e98b0ac648668ddc25a0be6ed6e2028b857bc4"},
+    {"path":"prototype/test_mock_http.py","git_blob_sha":"9445ae0ef90b99552cd70ffca6b5661d128c9795","sha256":"69bd2faeacb26b19612a10b350b39651fe003a8237d95f3247d1172e9bb4c4ec"}
+  ],
+  "provider_requests": [],
+  "persistent_agents_started": false,
+  "not_verified": ["complete repository checkout validator", "independent security review", "production auth and durability", "legal and provider acceptance"]
+}
