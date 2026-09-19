@@ -1,10 +1,10 @@
 {
   "taskId": "MIRA-AGENCIES-20260919-01",
-  "status": "in_progress",
+  "status": "bounded_window_closed_partial",
   "timezone": "Asia/Bangkok",
   "automationId": "6aad78bf2b988191b6ca5c921d60fd12",
   "stopBy": "2026-09-19T08:00:00+07:00",
-  "nextStep": "continue_city_cursor_RU-CITY-006_Izhevsk; official population still requires primary verification",
+  "nextStep": "No automatic continuation after 08:00 ICT. Resume only under a new explicit bounded authorization from saved cursor RU-CITY-006.",
   "nextCityId": "RU-CITY-006",
   "completedCityIds": [
     "RU-CITY-001",
@@ -36,5 +36,8 @@
   "freshFirstWaveSuitableCandidates": 10,
   "latestResultCommitNote": "Published B007 data/code checkpoint and bounded NIGHT-REPORT; a following receipt-only commit stores this pointer.",
   "latestBatch": "batch-007-barnaul-observations.json",
-  "lastCheckpointAt": "2026-09-19T00:09:13Z"
+  "lastCheckpointAt": "2026-09-19T00:09:13Z",
+  "closedAt": "2026-09-19T09:14:00+07:00",
+  "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md",
+  "futureCursor": "continue_city_cursor_RU-CITY-006_Izhevsk; official population still requires primary verification"
 }
