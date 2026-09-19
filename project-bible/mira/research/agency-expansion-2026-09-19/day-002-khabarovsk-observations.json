@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "task_id": "MIRA-AGENCIES-20260919-01",
+  "continuation_kind": "daytime_explicit_owner_continue",
+  "batch_id": "D002-KHABAROVSK",
+  "city_id": "RU-CITY-007",
+  "city": "Хабаровск",
+  "checked_at": "2026-09-19T09:50:13+07:00",
+  "counting_rule": "One canonical organisation/network counts once; existing network branches are not new canonical groups.",
+  "records": [
+    {
+      "agency_id": "RU-WEB-REALTYCENTERKHV",
+      "brand": "Центр недвижимости Хабаровска",
+      "domain": "realtycenterkhv.ru",
+      "source_url": "https://realtycenterkhv.ru/",
+      "company_phone": "+7 (4212) 608-602",
+      "general_email": null,
+      "segment": "local_newbuild",
+      "overseas": false,
+      "fit": true,
+      "reason": "Current first-party site identifies a Habarovsk agency specializing in new-build selection and purchase with corporate office/phones."
+    },
+    {
+      "agency_id": "RU-WEB-PRIMEHOME-KHV",
+      "brand": "Prime Home",
+      "domain": "ph-estate.ru",
+      "source_url": "https://ph-estate.ru/",
+      "company_phone": "+7 (924) 409-49-80",
+      "general_email": "primehomekhv@yandex.ru",
+      "segment": "local_newbuild",
+      "overseas": false,
+      "fit": true,
+      "reason": "First-party Habarovsk new-build centre with 70+ new-build catalogue, remote-deal capability and corporate contact route."
+    },
+    {
+      "agency_id": "RU-WEB-ALPHADOM-KHV",
+      "brand": "Альфа-Дом",
+      "domain": "alphadv.ru",
+      "source_url": "https://alphadv.ru/",
+      "company_phone": "+7 (4212) 62-70-01",
+      "general_email": null,
+      "segment": "local_overseas_specialist",
+      "overseas": true,
+      "fit": true,
+      "reason": "First-party Habarovsk agency covers primary/secondary property and has an explicit overseas-property section."
+    },
+    {
+      "agency_id": "RU-WEB-RESHU-DV-KHV",
+      "brand": "РЕШУ",
+      "domain": "reshu-dv.ru",
+      "source_url": "https://reshu-dv.ru/",
+      "company_phone": "+7 (4212) 77-13-25",
+      "general_email": "reshu.khv@mail.ru",
+      "segment": "local_fullservice_candidate",
+      "overseas": false,
+      "fit": true,
+      "reason": "Current first-party Habarovsk agency site has new-build catalogue, mortgage/legal services and corporate phone/email."
+    },
+    {
+      "agency_id": "RU-WEB-NEWATLANT-KHV",
+      "brand": "Новый Атлант",
+      "domain": "newatlant.ru",
+      "source_url": "https://www.newatlant.ru/",
+      "company_phone": "+7 (4212) 74-94-84",
+      "general_email": "newatlant88@mail.ru",
+      "segment": "regional_overseas_candidate",
+      "overseas": true,
+      "fit": true,
+      "reason": "Current first-party company has Habarovsk new-build service and explicitly states presence across regions in Russia and abroad."
+    },
+    {
+      "agency_id": "RU-WEB-QUALITYLIFE-KHV",
+      "brand": "Качество жизни",
+      "domain": "nedvizhimost27.ru",
+      "source_url": "https://nedvizhimost27.ru/",
+      "company_phone": "+7 (4212) 46-61-35",
+      "general_email": "rieltor_khv@bk.ru",
+      "segment": "local_newbuild",
+      "overseas": false,
+      "fit": true,
+      "reason": "First-party Habarovsk agency states 15+ years in market and direct new-build selection with corporate channels."
+    },
+    {
+      "agency_id": "RU-WEB-DSDGROUP-KHV",
+      "brand": "DSD GROUP",
+      "domain": "dsd.group",
+      "source_url": "https://dsd.group/contacts/",
+      "company_phone": "+7 (4212) 71-90-90",
+      "general_email": "mail@dsd.group",
+      "segment": "local_large_agency",
+      "overseas": false,
+      "fit": true,
+      "reason": "Current first-party Habarovsk agency publishes a staffed multi-department operation, large active property/client base and corporate contact channels."
+    },
+    {
+      "agency_id": "RU-WEB-MIRA-DFO-KHV",
+      "brand": "МИРА",
+      "domain": "miradfo.ru",
+      "source_url": "https://miradfo.ru/",
+      "company_phone": "+7 (900) 33-67-444",
+      "general_email": null,
+      "segment": "local_newbuild",
+      "overseas": false,
+      "fit": true,
+      "reason": "Current first-party Habarovsk company specializes in new builds and mortgage-assisted purchase with published corporate identity and office."
+    },
+    {
+      "agency_id": "RU-WEB-KVARUM27-KHV",
+      "brand": "КВАРУМ",
+      "domain": "kvarum27.ru",
+      "source_url": "https://kvarum27.ru/",
+      "company_phone": "+7 914 544-00-56",
+      "general_email": "kvarum27@mail.ru",
+      "segment": "local_newbuild",
+      "overseas": true,
+      "fit": true,
+      "reason": "Current first-party Habarovsk agency/coworking centre provides new-build selection; current marketplace evidence also describes relocation transactions across Russia and abroad."
+    },
+    {
+      "agency_id": "RU-DIR-VARIANTDV-KHV",
+      "brand": "Вариант ДВ",
+      "domain": "expert-invest27.ru",
+      "source_url": "https://www.dvhab.ru/variant-dv",
+      "company_phone": "+7 (4212) 65-23-55",
+      "general_email": "box@variant-dv.ru",
+      "segment": "local_fullservice_candidate",
+      "overseas": false,
+      "fit": true,
+      "reason": "Current Habarovsk business-directory evidence identifies an active two-branch real-estate agency with new-build selection, legal support and corporate channels."
+    }
+  ],
+  "excluded_network_duplicates": [
+    {
+      "brand": "Этажи",
+      "domain": "etagi.com",
+      "reason": "Already represented in canonical master; Habarovsk is a branch/city presence, not a new organisation."
+    },
+    {
+      "brand": "Метрика Недвижимость",
+      "domain": "metrika.com",
+      "reason": "Already represented in canonical master; do not add Habarovsk branch as new group."
+    },
+    {
+      "brand": "Высоцкий Эстейт",
+      "domain": "vysotsky.estate",
+      "reason": "Existing Habarovsk master row already classified network_or_franchise and not first-wave local candidate."
+    }
+  ],
+  "holds": [
+    {
+      "brand": "Полезные Люди Хабаровск",
+      "domain": "полезныелюди-хаб.рф",
+      "reason": "Ecosystem/franchise identity requires legal/canonical reconciliation with the platform structure before counting a distinct organisation."
+    },
+    {
+      "brand": "Одалиум",
+      "domain": null,
+      "reason": "Current directory-backed business exists, but no sufficiently strong independent first-party corporate route established in this pass."
+    }
+  ],
+  "external_messages_sent": 0,
+  "crm_imports_performed": 0,
+  "outreach_authorized": false
+}
