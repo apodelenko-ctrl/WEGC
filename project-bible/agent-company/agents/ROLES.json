@@ -1,0 +1,14 @@
+{
+  "project": "ACI",
+  "updated_at": "2026-09-19",
+  "execution_model": "interactive_coordinator_with_prepared_worker_roles",
+  "persistent_runtime": "not_provisioned",
+  "roles": [
+    {"id": "ASTRA", "kind": "coordinator", "status": "interactive_session", "responsibilities": ["decisions", "queue", "evidence_review", "checkpoints"], "prompt": "AGENTS.md"},
+    {"id": "LEGAL-RESEARCH", "kind": "specialist", "status": "configured_not_started", "responsibilities": ["jurisdictions", "ownership", "tax_questions", "corporate_service_scope"], "prompt": "agents/prompts/LEGAL-RESEARCH.md"},
+    {"id": "PROVIDER-RESEARCH", "kind": "specialist", "status": "configured_not_started", "responsibilities": ["formation", "payment_eligibility", "api_evidence", "partner_questions"], "prompt": "agents/prompts/PROVIDER-RESEARCH.md"},
+    {"id": "PRODUCT", "kind": "specialist", "status": "configured_not_started", "responsibilities": ["customer_hypotheses", "journey", "pricing_inputs", "pilot_acceptance"], "prompt": "agents/prompts/PRODUCT.md"},
+    {"id": "ENGINEERING", "kind": "specialist", "status": "configured_not_started", "responsibilities": ["api", "adapters", "state_machine", "runtime_plan"], "prompt": "agents/prompts/ENGINEERING.md"},
+    {"id": "SECURITY-QA", "kind": "specialist", "status": "configured_not_started", "responsibilities": ["authorization", "tenant_isolation", "negative_tests", "evidence_integrity"], "prompt": "agents/prompts/SECURITY-QA.md"}
+  ]
+}

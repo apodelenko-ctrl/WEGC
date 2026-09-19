@@ -1,0 +1,15 @@
+{
+  "template_only": true,
+  "task_id": null,
+  "executor": null,
+  "runtime": null,
+  "external_run_id": null,
+  "started_at": null,
+  "completed_at": null,
+  "status": "not_started",
+  "evidence_paths": [],
+  "tests": [],
+  "external_actions": [],
+  "blockers": [],
+  "next_task_id": null
+}
