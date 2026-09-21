@@ -1,0 +1,30 @@
+{
+  "task_id": "MIRA-EXPO-20260921-01",
+  "checked_at": "2026-09-21T16:24:28.443197+00:00",
+  "owner_authorization": "2026-09-21 current conversation: execute cloud restore",
+  "status": "artifacts_verified_runtime_and_key_blocked",
+  "artifact_sha256": {
+    "backup.aesgcm": "48945a6b0ebee8d52bb9b4b32198119cdd78afb55a4578e6a62778de93a25140",
+    "code.tar.gz": "71b847707e1ed638a623410d601d5941a61968fbfbc9ac1735297340dde77615",
+    "manifest.json": "6419868934fe26eef8f8779580fee398974fe11749083b17af4a42895e038606",
+    "crosswalk.json": "401080bfbabb832213d19641ba9411e9a23a0aae5c89f8a4db2a7d067b237824",
+    "receipts.tar.gz": "7a0a7ac8e0d85c516f6262135af4a132fe53406781db4afdde473666ccfb46c4"
+  },
+  "artifacts_downloaded": 5,
+  "artifact_checksums_matched": 5,
+  "package_entries_verified": 60,
+  "package_mismatches": 0,
+  "backup_header_valid": true,
+  "authenticated_decryption": "NOT_RUN_KEY_NOT_AVAILABLE",
+  "database_restore": "NOT_RUN_TARGET_NOT_AVAILABLE",
+  "persistent_runtime_available": false,
+  "recovery_key_available": false,
+  "private_payloads_published": false,
+  "external_sends": 0,
+  "production_changed": false,
+  "exact_missing": [
+    "Persistent Linux/Docker target with authorized access; no SSH target/key or host access found",
+    "Separately delivered32-byte MIRA CRM recovery key; runbook explicitly excludes it from kit/Drive"
+  ],
+  "next_action": "Connect authorized persistent host and deliver recovery key via separate secret path; run authenticated verify, isolated restore,167Account/6Email/3Task counts and native ACL/restart acceptance. Keep dispatch disabled and Mac intact until cutover accepted."
+}

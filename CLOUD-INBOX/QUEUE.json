@@ -6,8 +6,8 @@
   "sourceBranch": "mira/research-night-20260918",
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
-  "nextTaskForLocal": "MIRA-CLOUD-CUTOVER-20260919-01",
-  "routingNote": "Preserve current private CRM/mail checkpoint. Next concrete LOCAL action is private transfer/cutover preparation; do not repeat completed applicant flow, CRM install, public catalogue work or bounded night research.",
+  "nextTaskForLocal": "MIRA-EXPO-20260921-01",
+  "routingNote": "Priority: exhibition onboarding and live readiness by24Sep; read MIRA-EXPO-20260921-01 after current safe checkpoint. Private transfer is already accepted; do not repeat old audits or install CRM again.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": true,
   "localReceiptConfirmed": true,
@@ -104,7 +104,7 @@
       "priority": "P1-owner-request",
       "status": "local_own_mail_accepted_public_vps_pending",
       "owner": "LOCAL",
-      "title": "Use Brevo Free marketing path and prepare EspoCRM lab without repeated software-choice approval",
+      "title": "Continue existing EspoCRM and owner-approved own mail; public runtime remains pending",
       "sourceCommit": "ba46adab04af7d9e259d122384efd811d23392e7",
       "previousSourceCommit": "2d5b7ca138a5905e2dc9bcf8baef4cec05d520c0",
       "sourcePaths": [
@@ -193,7 +193,8 @@
         }
       ],
       "ownerDecision": "Own mail server integrated with existing CRM. No VPS exists; prepare option only, purchase not authorized. This supersedes required Brevo choice, not outreach/document release gates.",
-      "dailyCapAcceptanceScope": "Isolated native journal200/201; public acceptance NOT_RUN"
+      "dailyCapAcceptanceScope": "Isolated native journal200/201; public acceptance NOT_RUN",
+      "historicalTitle": "Use Brevo Free marketing path and prepare EspoCRM lab without repeated software-choice approval"
     },
     {
       "id": "MIRA-OMNI-20260918-01",
@@ -257,13 +258,22 @@
       "id": "MIRA-AGENCIES-20260919-01",
       "owner": "CLOUD",
       "localRole": "private_count_reconciliation_and_selective_import",
-      "status": "bounded_window_closed_partial",
+      "status": "cursor_preserved_exhibition_P0_prioritized",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-AGENCIES-20260919-01.md",
       "resumePath": "project-bible/mira/research/agency-expansion-2026-09-19/RESUME.json",
       "automationId": "6aad78bf2b988191b6ca5c921d60fd12",
-      "latestBatch": "project-bible/mira/research/agency-expansion-2026-09-19/batch-007-barnaul-observations.json",
-      "lastCheckpointAt": "2026-09-19T00:09:13Z",
+      "latestBatch": "project-bible/mira/research/agency-expansion-2026-09-19/day-002-khabarovsk-observations.json",
+      "lastCheckpointAt": "2026-09-19T09:50:13+07:00",
       "researchCounts": {
+        "canonicalCandidates": 405,
+        "RU": 263,
+        "BY": 59,
+        "other": 83,
+        "citiesMinimumMet": 7,
+        "firstWaveSuitableInCompletedCities": 70,
+        "crmImportsThisTask": 0
+      },
+      "previousResearchCounts": {
         "canonicalCandidates": 386,
         "RU": 244,
         "newCandidatesThisBlock": 10,
@@ -271,7 +281,8 @@
         "firstWaveSuitableReviewed": 10,
         "citiesMinimumMet": 5,
         "crmImportsThisTask": 0
-      }
+      },
+      "nextCityId": "RU-CITY-008"
     },
     {
       "id": "MIRA-AUTONOMY-20260919-01",
@@ -285,7 +296,7 @@
       ],
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-AUTONOMY-20260919-01.json",
       "createdAt": "2026-09-18T18:36:48.626807Z",
-      "nextAction": "Continue both datasets; private code/archive transfer and ID crosswalk after returned LOCAL manifest, then actual cloud restore",
+      "nextAction": "Exhibition launch P0 through supplemental task; AUT-03 scoped transfer accepted, prepare AUT-04 actual restore when runtime/access available.",
       "acceptance": [
         "AUT-00–AUT-10 tracked with evidence",
         "No Mac dependency after actual cloud restore and cutover",
@@ -334,7 +345,7 @@
       "id": "MIRA-CLOUD-CUTOVER-20260919-01",
       "priority": "P0-owner-request-cloud-transition",
       "owner": "LOCAL private transfer; CLOUD coordination",
-      "status": "private_destination_prepared_transfer_pending",
+      "status": "private_transfer_verified_restore_not_run",
       "title": "Transfer accepted private runtime artifacts to owner-only cloud storage and prepare restore",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-CLOUD-CUTOVER-20260919-01.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-CLOUD-CUTOVER-20260919-01.json",
@@ -342,7 +353,18 @@
       "privateDestinationPublicLinkStored": false,
       "purchasesAuthorized": false,
       "productionCutoverAuthorized": false,
-      "nextAction": "Upload existing encrypted backup unchanged, private code/restore package, sanitized manifest/crosswalk and receipts to the owner-only Drive destination; verify backup checksum before selecting/restoring on persistent runtime."
+      "nextAction": "2026-09-23"
+    },
+    {
+      "id": "MIRA-EXPO-20260921-01",
+      "priority": "P0-exhibition-deadline",
+      "owner": "CLOUD preparation; LOCAL product integration until accepted handoff",
+      "status": "prepared_pending_local_integration",
+      "sourcePath": "CLOUD-INBOX/tasks/MIRA-EXPO-20260921-01.md",
+      "planPath": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
+      "receiptPath": "CLOUD-INBOX/receipts/MIRA-EXPO-20260921-01.json",
+      "deadline": "2026-09-24T20:00:00+07:00",
+      "automationId": "6ab158bf4b848191a4c612c68d25c5b3"
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
@@ -381,16 +403,25 @@
     "localMailCheckpoint": "54d80452d36080ded3d141fbac56a2c22506f16c"
   },
   "cloudTransition": {
-    "status": "private_destination_prepared_transfer_pending",
+    "status": "private_transfer_verified_restore_not_run",
     "roadmapTask": "MIRA-AUTONOMY-20260919-01",
     "localReceipt": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
     "ackAt": "2026-09-18T18:23:20Z",
     "cloudRestoreConfirmed": false,
     "localReportUpdatedAt": "2026-09-18T18:39:09Z",
-    "privateArchiveInCloud": false,
+    "privateArchiveInCloud": true,
     "privateDestinationPrepared": true,
     "privateDestinationName": "MIRA CLOUD HANDOFF — PRIVATE — 2026-09-19",
-    "privateDestinationPublicLinkStored": false
+    "privateDestinationPublicLinkStored": false,
+    "transferReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUD-CUTOVER-20260919-01.json",
+    "sourceLineageCrosswalkResolved": 165,
+    "restoreAuthorizedByOwner": true,
+    "cloudArtifactChecksumReadback": "five_of_five_verified",
+    "latestRestoreReceipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
+    "exactMissingInputs": [
+      "Persistent Linux/Docker target with authorized access; no SSH target/key or host access found",
+      "Separately delivered32-byte MIRA CRM recovery key; runbook explicitly excludes it from kit/Drive"
+    ]
   },
   "latestNativeCrmSnapshot": {
     "source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
@@ -400,11 +431,14 @@
     "synthetic": 2,
     "totalAccounts": 167,
     "scope": "PRIVATE_LOCAL_LAB_NOT_HOSTED_PUBLIC_MAIL",
-    "canonicalCrosswalkComplete": false
+    "canonicalCrosswalkComplete": false,
+    "sourceLineageCrosswalkComplete": true,
+    "sourceLineageRows": 165,
+    "canonicalCrosswalkNote": "Native source lineage complete; current developer master43 legal/entity reconciliation remains separate."
   },
   "currentOwnerFollowup": {
-    "at": "2026-09-18 18:44:24 UTC",
-    "scope": "Read Botanica document request, inventory Singapore company files, create owner-only document vault and project-bible index; no sending/signing or public document upload."
+    "at": "2026-09-21T16:20:37.632553+00:00",
+    "scope": "Finish exhibition preparation; roadmap with bounded daily actual work, preserve existing permissions and receipts"
   },
   "latestCloudResearchCheckpoint": {
     "event": "CLOUD-INBOX/events/2026-09-19/cloud-both-bases-b007.json",
@@ -416,5 +450,39 @@
     "privateTransferConfirmed": false,
     "boundedWindowClosed": true,
     "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md"
+  },
+  "previousNextTaskForLocal": "MIRA-CLOUD-CUTOVER-20260919-01",
+  "updatedAt": "2026-09-21T16:20:37.632553+00:00",
+  "latestLaunchCheckpoint": {
+    "event": "CLOUD-INBOX/events/2026-09-21/cloud-expo-readiness-20260921.json",
+    "at": "2026-09-21T16:20:37.632553+00:00",
+    "plan": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
+    "counts": {
+      "agency_candidates": 405,
+      "agency_RU": 263,
+      "agency_BY": 59,
+      "agency_other": 83,
+      "cities_minimum_met": 7,
+      "first_wave_research_fit_in_completed_cities": 70,
+      "developer_groups": 43,
+      "developer_fresh_contact_groups": 10,
+      "phuket_project_ids": 618,
+      "all_market_research_records": 678,
+      "native_agency_research": 78,
+      "native_developer_research": 87,
+      "native_synthetic": 2,
+      "native_accounts": 167,
+      "native_research_source_lineage_resolved": 165,
+      "new_research_records_this_block": 0,
+      "crm_imports_this_block": 0,
+      "external_sends_this_block": 0
+    },
+    "ready": false,
+    "gatesAccepted": 3,
+    "gatesTotal": 12
+  },
+  "currentOwnerFollowupHistorical": {
+    "at": "2026-09-18 18:44:24 UTC",
+    "scope": "Read Botanica document request, inventory Singapore company files, create owner-only document vault and project-bible index; no sending/signing or public document upload."
   }
 }

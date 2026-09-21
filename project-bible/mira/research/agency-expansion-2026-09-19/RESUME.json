@@ -34,7 +34,7 @@
   "canonicalOtherGroups": 83,
   "canonicalizationComplete": true,
   "latestCheckpointEvent": "CLOUD-INBOX/events/2026-09-19/cloud-both-bases-b007.json",
-  "newAgencyCountMeaning": "54 net new canonical candidate records above the reconstructed 332-group baseline; this includes holds and distinct segments and is not a count of verified legal entities",
+  "newAgencyCountMeaning": "73 net canonical candidate records above332 baseline, including canonical reconstruction changes; not73 newly researched or verified legal entities.",
   "freshFirstWaveSuitableCandidates": 10,
   "latestResultCommitNote": "Published B007 data/code checkpoint and bounded NIGHT-REPORT; a following receipt-only commit stores this pointer.",
   "latestBatch": "day-002-khabarovsk-observations.json",
@@ -43,5 +43,7 @@
   "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md",
   "futureCursor": "continue_city_cursor_RU-CITY-008_Ulyanovsk",
   "daytimeResumedAt": "2026-09-19T09:44:53+07:00",
-  "daytimeAuthorization": "owner explicit request to finish work in current daytime session"
+  "daytimeAuthorization": "owner explicit request to finish work in current daytime session",
+  "currentPriority": "MIRA-EXPO-20260921-01; research cursor and historical night window preserved",
+  "currentCountsReconciledAt": "2026-09-21T16:20:37.632553+00:00"
 }

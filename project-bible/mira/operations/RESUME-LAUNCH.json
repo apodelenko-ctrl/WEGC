@@ -1,0 +1,63 @@
+{
+  "task_id": "MIRA-EXPO-20260921-01",
+  "status": "active_preparation_not_ready",
+  "updated_at": "2026-09-21T16:20:37.632553+00:00",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
+  "next_gate": "EXPO-03",
+  "next_action": "2026-09-22",
+  "parallel_available_action": "Prepare restore acceptance against transferred package when runtime access becomes available; otherwise complete current-flow integration package review",
+  "deadline": "2026-09-24T20:00:00+07:00",
+  "exhibition_window": [
+    "2026-09-25",
+    "2026-09-27"
+  ],
+  "plan_path": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
+  "evidence_path": "project-bible/mira/operations/LAUNCH-EVIDENCE.json",
+  "event_path": "CLOUD-INBOX/events/2026-09-21/cloud-expo-readiness-20260921.json",
+  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260921-01.json",
+  "counts": {
+    "agency_candidates": 405,
+    "agency_RU": 263,
+    "agency_BY": 59,
+    "agency_other": 83,
+    "cities_minimum_met": 7,
+    "first_wave_research_fit_in_completed_cities": 70,
+    "developer_groups": 43,
+    "developer_fresh_contact_groups": 10,
+    "phuket_project_ids": 618,
+    "all_market_research_records": 678,
+    "native_agency_research": 78,
+    "native_developer_research": 87,
+    "native_synthetic": 2,
+    "native_accounts": 167,
+    "native_research_source_lineage_resolved": 165,
+    "new_research_records_this_block": 0,
+    "crm_imports_this_block": 0,
+    "external_sends_this_block": 0
+  },
+  "agency_cursor": "RU-CITY-008 Ульяновск",
+  "developer_cursor": "507 no-family gaps; preserve existing RESUME",
+  "daily_work": {
+    "automation_id": "6ab158bf4b848191a4c612c68d25c5b3",
+    "timezone": "Asia/Bangkok",
+    "start": "2026-09-22",
+    "last_day": "2026-09-27",
+    "runs": 6,
+    "timing": "morning flexible",
+    "old_night_automations_reactivated": false
+  },
+  "blocked": [
+    "Permanent runtime/access not established; recovery key separately held",
+    "Product integration remains LOCAL until accepted handoff",
+    "Actual physical QR/Russia mobile and verified supplier dossier require their respective evidence"
+  ],
+  "all_done": false,
+  "restore_authorized": true,
+  "restore_preflight_receipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
+  "restore_blockers": [
+    "Persistent Linux/Docker target with authorized access; no SSH target/key or host access found",
+    "Separately delivered32-byte MIRA CRM recovery key; runbook explicitly excludes it from kit/Drive"
+  ],
+  "immediate_owner_priority": "EXPO-06 cloud restore; while target/key unavailable continue EXPO-03"
+}

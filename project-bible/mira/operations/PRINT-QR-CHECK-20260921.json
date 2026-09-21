@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-21T16:20:37.632553+00:00",
+  "method": "zxing-cpp on PDF-rendered raster; PDF annotation matches",
+  "documents": [
+    {
+      "filename": "MIRA_A5_print_3mm.pdf",
+      "sha256": "17af5e35eb6a9ff9a8a0767bef929e8f76d7cfc235474658fdc8c04dfb1820ca",
+      "decoded_qr": "https://wegc.fund/mira/start/"
+    },
+    {
+      "filename": "MIRA_A5.pdf",
+      "sha256": "f868d72b4bd99949584831c690c30469b0e297420c540b34270bb93aeca4abaf",
+      "decoded_qr": "https://wegc.fund/mira/start/"
+    }
+  ],
+  "physical_print_scan": "NOT_RUN"
+}

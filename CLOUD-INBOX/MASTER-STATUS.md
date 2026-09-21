@@ -1,3 +1,15 @@
+## Актуальный приоритет — 21 сентября 2026: выставка
+
+Прочитать `CLOUD-INBOX/tasks/MIRA-EXPO-20260921-01.md` и `project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md`. Рабочий дедлайн 24.09, 20:00 ICT / 16:00 MSK; выставка начинается 25.09 по сообщению владельца.
+
+Фактический срез: agency405 (RU263/BY59/прочие83), 7 городов по10 research-fit; developer43, fresh contacts10; native78/87+2=167 отдельно. Приватные пять файлов переданы и проверены LOCAL; CLOUD подтвердил их metadata21.09. Actual cloud restore NOT_RUN: постоянный runtime/доступ не установлен. Старые заявления «archive только на Mac» ниже — история, superseded cutover receipt19.09. Botanica signed/stamped-and-sent19.09; не повторять первое письмо.
+
+QR обоих печатных PDF ведёт на https://wegc.fund/mira/start/; цифровой переход и поиск/shortlist618 проверены. Подготовлен избирательный CTA patch с7/7 control tests, без deploy. Новый посетитель ещё не имеет принятого полного пути запроса приглашения; это первый P0. Дальше — durable queue, постоянный runtime, live assistant и минимум1 проверенный проект. LOCAL сохраняет product integration; не merge всю research-ветку.
+
+LAUNCH-EVIDENCE/RESUME-LAUNCH — текущие критерии и cursor. Приняты3 из12 обязательных gates; это не процент готовности продукта. Ежедневные рабочие блоки22–27.09, итоговая репетиция24.09; прежняя ночная серия не продлена. Исторические записи ниже сохраняются.
+
+---
+
 # МИРА — общий реестр задач, хвостов и истории
 
 **Единая текущая сводка для CLOUD и LOCAL.** Срез:18.09.2026 21:20 UTC /19.09.2026 04:20 Asia/Bangkok. Операционный день18.09; даты исходных событий не переименовывать. Task: MIRA-CLOSEOUT-20260918-01. Владелец исполнения интеграции:LOCAL; research: CLOUD. Статус: **IN PROGRESS — полный LOCAL closeout/manifest получен; private transfer, crosswalk и cloud restore остаются**.
@@ -209,3 +221,11 @@ Private Gmail/Drive reconciliation confirms:
 - historical VIVI VBA312 transaction/commission evidence.
 
 Therefore the relationship-continuity hold is narrowed. Remaining T08 blockers are project-specific **current** inventory/pricing/payment plan, lead/duplicate rules, downstream partner scope and media permission. A corporate IP cease-and-desist notice means partner status must not be converted into presumed media/publication rights. `commerciallyEnabled=false` remains correct. No external message was sent.
+
+
+
+### Дополнение: прямое поручение выполнить restore,21 сентября
+
+Владелец прямо разрешил выполнение облачного восстановления. CLOUD скачал все5 приватных файлов через raw inline Drive fetch; прежний403 streamed URL обойдён штатным методом. SHA256 всех5 совпали с LOCAL,60/60 файлов code package совпали с PACKAGE-MANIFEST, header ciphertext корректен. Приватные payload/URL/ключи в Git не помещались. Теперь это свежая CLOUD checksum verification, а не только LOCAL receipt/metadata.
+
+Runbook требует постоянный Linux/Docker target и отдельный32-byte `MIRA CRM recovery key`, которого намеренно нет в kit/Drive. Доступного target/SSH и отдельного ключа в текущем сеансе/найденной истории нет. Decrypt, DB restore, native login/restart — NOT_RUN по конкретным недостающим inputs. Получение архива не равно восстановлению. Restore разрешён владельцем; прежнее ограничение LOCAL не используется как причина отказа. Production cutover/DNS/mail и покупки отдельно не выполнены. Следующий шаг — подключить target и отдельный secret, затем authenticated verify → isolated restore →167Accounts/6Email/3Task → ACL/restart и second restore. Receipt: `CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json`.

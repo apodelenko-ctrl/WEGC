@@ -1,0 +1,9 @@
+{
+  "event_id": "cloud-restore-preflight-20260921",
+  "at": "2026-09-21T16:24:28.443197+00:00",
+  "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
+  "status": "artifacts_verified_runtime_and_key_blocked",
+  "five_checksums_verified": true,
+  "private_data_published": false
+}

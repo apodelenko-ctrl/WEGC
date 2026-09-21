@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "task_id": "MIRA-EXPO-20260921-01",
+  "checked_at": "2026-09-21T16:20:37.632553+00:00",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
+  "deadline": "2026-09-24T20:00:00+07:00",
+  "gates": [
+    {
+      "id": "EXPO-01",
+      "title": "Digital QR route",
+      "status": "passed_live",
+      "owner": "CLOUD",
+      "evidence": [
+        "Decoded both printed PDF QR payloads; live start/access/login navigation. Physical test excluded."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Maintain printed URL; inspect after selective release.",
+      "due_date": "2026-09-21"
+    },
+    {
+      "id": "EXPO-02",
+      "title": "Physical QR and Russia mobile",
+      "status": "not_run",
+      "owner": "LOCAL / exhibition representative",
+      "evidence": [
+        "No physical print or Russia mobile network evidence."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Scan actual print on iOS/Android and Russia mobile without VPN; record result.",
+      "due_date": "2026-09-24"
+    },
+    {
+      "id": "EXPO-03",
+      "title": "New visitor onboarding",
+      "status": "prepared",
+      "owner": "LOCAL integration; CLOUD patch",
+      "evidence": [
+        "CTA patch implemented and tested; current access requires prior invitation."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Apply selective patch and accept public request channel or server intake with receipt.",
+      "due_date": "2026-09-22"
+    },
+    {
+      "id": "EXPO-04",
+      "title": "Invited technical intake",
+      "status": "accepted_receipt",
+      "owner": "LOCAL",
+      "evidence": [
+        "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json; closeout received 2026-09-18T18:39:09Z."
+      ],
+      "checked_at": "2026-09-18T18:39:09Z",
+      "next_action": "Preserve accepted decision/relogin; targeted regression only if backend changes.",
+      "due_date": "2026-09-18"
+    },
+    {
+      "id": "EXPO-05",
+      "title": "Durable request queue",
+      "status": "partial",
+      "owner": "LOCAL",
+      "evidence": [
+        "Previous technical receipt is accepted; current end-to-end assignment/notification/replay not newly accepted."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Exercise one controlled incoming request through assigned operator and durable response.",
+      "due_date": "2026-09-23"
+    },
+    {
+      "id": "EXPO-06",
+      "title": "Permanent runtime",
+      "status": "blocked",
+      "owner": "CLOUD restore / LOCAL current operation",
+      "evidence": [
+        "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json"
+      ],
+      "checked_at": "2026-09-21T16:24:28.443197+00:00",
+      "next_action": "Connect authorized persistent host and deliver recovery key via separate secret path; run authenticated verify, isolated restore,167Account/6Email/3Task counts and native ACL/restart acceptance. Keep dispatch disabled and Mac intact until cutover accepted.",
+      "due_date": "2026-09-23"
+    },
+    {
+      "id": "EXPO-07",
+      "title": "Live assistant channel",
+      "status": "partial",
+      "owner": "LOCAL integration / CLOUD preparation",
+      "evidence": [
+        "Existing OMNI code53 tests; newest flow/model/channel lacks live acceptance."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Connect current flow to one real channel and verify profile, CRM write, pause/replay.",
+      "due_date": "2026-09-23"
+    },
+    {
+      "id": "EXPO-08",
+      "title": "Verified project package",
+      "status": "blocked",
+      "owner": "LOCAL / owner / supplier",
+      "evidence": [
+        "Research data and Botanica signed-and-sent do not establish countersignature/current commercial conditions."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Complete minimum one verified project dossier with existing correspondence and seller terms.",
+      "due_date": "2026-09-23"
+    },
+    {
+      "id": "EXPO-09",
+      "title": "Agency documents and contact",
+      "status": "partial",
+      "owner": "LOCAL",
+      "evidence": [
+        "Existing document drafts do not prove final acceptance or working public onboarding contact."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Confirm final agency terms/privacy, working contact, and precise activation scope.",
+      "due_date": "2026-09-23"
+    },
+    {
+      "id": "EXPO-10",
+      "title": "Operations and recovery",
+      "status": "partial",
+      "owner": "LOCAL / CLOUD",
+      "evidence": [
+        "Local encrypted restore/ACL accepted; production role/monitoring/backup drill still open."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Verify production roles, queue health, restart/backup and named exhibition operator.",
+      "due_date": "2026-09-24"
+    },
+    {
+      "id": "EXPO-11",
+      "title": "Current shared accounting",
+      "status": "passed_artifact",
+      "owner": "CLOUD",
+      "evidence": [
+        "Agency RESUME/D002405, developer43, cutover receipt and current QUEUE reconciliation."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Refresh shared counters only from fresh source evidence; preserve source lineage separation.",
+      "due_date": "2026-09-21"
+    },
+    {
+      "id": "EXPO-12",
+      "title": "Final rehearsal and GO/NO-GO",
+      "status": "not_run",
+      "owner": "LOCAL live / CLOUD review",
+      "evidence": [
+        "No accepted full exhibition rehearsal."
+      ],
+      "checked_at": "2026-09-21T16:20:37.632553+00:00",
+      "next_action": "Run full new-agent/project-response/mobile case; record release SHA and explicit decision by deadline.",
+      "due_date": "2026-09-24"
+    }
+  ],
+  "counts": {
+    "agency_candidates": 405,
+    "agency_RU": 263,
+    "agency_BY": 59,
+    "agency_other": 83,
+    "cities_minimum_met": 7,
+    "first_wave_research_fit_in_completed_cities": 70,
+    "developer_groups": 43,
+    "developer_fresh_contact_groups": 10,
+    "phuket_project_ids": 618,
+    "all_market_research_records": 678,
+    "native_agency_research": 78,
+    "native_developer_research": 87,
+    "native_synthetic": 2,
+    "native_accounts": 167,
+    "native_research_source_lineage_resolved": 165,
+    "new_research_records_this_block": 0,
+    "crm_imports_this_block": 0,
+    "external_sends_this_block": 0
+  },
+  "limitations": [
+    "Digital browser only; no physical QR/Russia mobile test",
+    "Prepared UI patch not deployed; no modified-UI browser acceptance",
+    "Native crosswalk source lineage is not legal entity reconciliation of all405/master43",
+    "Five artifact hashes and60 package entries verified by CLOUD; decrypt/restore still NOT_RUN without key/target"
+  ],
+  "updated_at": "2026-09-21T16:24:28.443197+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "base_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "files": [
+    {
+      "path": "scripts/mira-build-launch.py",
+      "before_sha256": "0f5ccb6abe1bf4b0c5e6286b6f510321074d60cd389fd8cecd3d3518321bfe40",
+      "after_sha256": "6ab1a343c4e9da51933c74d5001692df1c6abf397a34c3baf5e4614e5e04f734"
+    },
+    {
+      "path": "mira/launch/launch.mjs",
+      "before_sha256": "277f1c3877931ce1d57f93a0d558277a75e451624148bf66743b885c24573063",
+      "after_sha256": "2c915ae0c8e82536906bee1791ed773e4ee4a38465ce0c10866b8166d5751ec3"
+    }
+  ]
+}

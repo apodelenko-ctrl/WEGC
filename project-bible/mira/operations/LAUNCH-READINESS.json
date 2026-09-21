@@ -1,0 +1,115 @@
+{
+  "assessed_at": "2026-09-21T16:24:28.565835+00:00",
+  "ready": false,
+  "accepted_gates": 3,
+  "total_gates": 12,
+  "open_gates": [
+    "EXPO-02",
+    "EXPO-03",
+    "EXPO-05",
+    "EXPO-06",
+    "EXPO-07",
+    "EXPO-08",
+    "EXPO-09",
+    "EXPO-10",
+    "EXPO-12"
+  ],
+  "gates": [
+    {
+      "id": "EXPO-01",
+      "accepted": true,
+      "status": "passed_live",
+      "reason": "",
+      "owner": "CLOUD",
+      "next_action": "Maintain printed URL; inspect after selective release."
+    },
+    {
+      "id": "EXPO-02",
+      "accepted": false,
+      "status": "not_run",
+      "reason": "",
+      "owner": "LOCAL / exhibition representative",
+      "next_action": "Scan actual print on iOS/Android and Russia mobile without VPN; record result."
+    },
+    {
+      "id": "EXPO-03",
+      "accepted": false,
+      "status": "prepared",
+      "reason": "",
+      "owner": "LOCAL integration; CLOUD patch",
+      "next_action": "Apply selective patch and accept public request channel or server intake with receipt."
+    },
+    {
+      "id": "EXPO-04",
+      "accepted": true,
+      "status": "accepted_receipt",
+      "reason": "",
+      "owner": "LOCAL",
+      "next_action": "Preserve accepted decision/relogin; targeted regression only if backend changes."
+    },
+    {
+      "id": "EXPO-05",
+      "accepted": false,
+      "status": "partial",
+      "reason": "",
+      "owner": "LOCAL",
+      "next_action": "Exercise one controlled incoming request through assigned operator and durable response."
+    },
+    {
+      "id": "EXPO-06",
+      "accepted": false,
+      "status": "blocked",
+      "reason": "",
+      "owner": "CLOUD restore / LOCAL current operation",
+      "next_action": "Connect authorized persistent host and deliver recovery key via separate secret path; run authenticated verify, isolated restore,167Account/6Email/3Task counts and native ACL/restart acceptance. Keep dispatch disabled and Mac intact until cutover accepted."
+    },
+    {
+      "id": "EXPO-07",
+      "accepted": false,
+      "status": "partial",
+      "reason": "",
+      "owner": "LOCAL integration / CLOUD preparation",
+      "next_action": "Connect current flow to one real channel and verify profile, CRM write, pause/replay."
+    },
+    {
+      "id": "EXPO-08",
+      "accepted": false,
+      "status": "blocked",
+      "reason": "",
+      "owner": "LOCAL / owner / supplier",
+      "next_action": "Complete minimum one verified project dossier with existing correspondence and seller terms."
+    },
+    {
+      "id": "EXPO-09",
+      "accepted": false,
+      "status": "partial",
+      "reason": "",
+      "owner": "LOCAL",
+      "next_action": "Confirm final agency terms/privacy, working contact, and precise activation scope."
+    },
+    {
+      "id": "EXPO-10",
+      "accepted": false,
+      "status": "partial",
+      "reason": "",
+      "owner": "LOCAL / CLOUD",
+      "next_action": "Verify production roles, queue health, restart/backup and named exhibition operator."
+    },
+    {
+      "id": "EXPO-11",
+      "accepted": true,
+      "status": "passed_artifact",
+      "reason": "",
+      "owner": "CLOUD",
+      "next_action": "Refresh shared counters only from fresh source evidence; preserve source lineage separation."
+    },
+    {
+      "id": "EXPO-12",
+      "accepted": false,
+      "status": "not_run",
+      "reason": "",
+      "owner": "LOCAL live / CLOUD review",
+      "next_action": "Run full new-agent/project-response/mobile case; record release SHA and explicit decision by deadline."
+    }
+  ]
+}

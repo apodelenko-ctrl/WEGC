@@ -1,0 +1,39 @@
+{
+  "event_id": "cloud-expo-readiness-20260921",
+  "task_id": "MIRA-EXPO-20260921-01",
+  "at": "2026-09-21T16:20:37.632553+00:00",
+  "actor": "CLOUD",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
+  "action": "Reviewed current evidence, corrected shared state, implemented selective CTA patch and evidence gate checker, scheduled bounded daily execution",
+  "result": "prepared_not_deployed_not_launch_ready",
+  "counts": {
+    "agency_candidates": 405,
+    "agency_RU": 263,
+    "agency_BY": 59,
+    "agency_other": 83,
+    "cities_minimum_met": 7,
+    "first_wave_research_fit_in_completed_cities": 70,
+    "developer_groups": 43,
+    "developer_fresh_contact_groups": 10,
+    "phuket_project_ids": 618,
+    "all_market_research_records": 678,
+    "native_agency_research": 78,
+    "native_developer_research": 87,
+    "native_synthetic": 2,
+    "native_accounts": 167,
+    "native_research_source_lineage_resolved": 165,
+    "new_research_records_this_block": 0,
+    "crm_imports_this_block": 0,
+    "external_sends_this_block": 0
+  },
+  "files": [
+    "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
+    "CLOUD-INBOX/receipts/MIRA-EXPO-20260921-01.json",
+    "CLOUD-INBOX/packages/MIRA-EXPO-20260921-01/README.md",
+    "project-bible/mira/operations/LAUNCH-EVIDENCE.json",
+    "project-bible/mira/operations/RESUME-LAUNCH.json"
+  ],
+  "automation_id": "6ab158bf4b848191a4c612c68d25c5b3",
+  "production_changes": 0
+}

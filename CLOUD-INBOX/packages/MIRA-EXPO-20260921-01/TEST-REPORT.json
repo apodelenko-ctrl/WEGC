@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-09-21T16:15:00Z",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "patch_preflight": "PASS",
+  "control_unit_tests": 7,
+  "control_unit_tests_passed": 7,
+  "generator_real_source_records": 618,
+  "unique_ids_preserved": 618,
+  "project_pages_preserved": 618,
+  "catalogue_data_byte_identical": true,
+  "access_page_byte_identical": true,
+  "generated_changed_routes": [
+    "/mira/start/",
+    "/mira/growth/",
+    "/mira/business/"
+  ],
+  "js_syntax": "PASS",
+  "modified_ui_browser": "NOT_RUN_LOCAL_INTEGRATION_REQUIRED",
+  "broader_existing_suite": "6/8 pass in reduced checkout; two checks require absent legacy demo catalog and image files; not a complete regression PASS",
+  "production_deployed": false,
+  "external_messages": 0
+}
