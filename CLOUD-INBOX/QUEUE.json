@@ -7,7 +7,7 @@
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
   "nextTaskForLocal": "MIRA-EXPO-20260921-01",
-  "routingNote": "Priority: exhibition onboarding and live readiness by24Sep; read MIRA-EXPO-20260921-01 after current safe checkpoint. Private transfer is already accepted; do not repeat old audits or install CRM again.",
+  "routingNote": "Continue MIRA Cloudflare path; VPS is not required for launch. Read architecture correction and current EXPO task. Preserve accepted LOCAL evidence and current D1.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": true,
   "localReceiptConfirmed": true,
@@ -403,7 +403,7 @@
     "localMailCheckpoint": "54d80452d36080ded3d141fbac56a2c22506f16c"
   },
   "cloudTransition": {
-    "status": "private_transfer_verified_restore_not_run",
+    "status": "private_kit_verified_cloudflare_migration_pending",
     "roadmapTask": "MIRA-AUTONOMY-20260919-01",
     "localReceipt": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
     "ackAt": "2026-09-18T18:23:20Z",
@@ -419,9 +419,12 @@
     "cloudArtifactChecksumReadback": "five_of_five_verified",
     "latestRestoreReceipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
     "exactMissingInputs": [
-      "Persistent Linux/Docker target with authorized access; no SSH target/key or host access found",
-      "Separately delivered32-byte MIRA CRM recovery key; runbook explicitly excludes it from kit/Drive"
-    ]
+      "Authorized Cloudflare account/resources access not confirmed",
+      "Separate recovery key or authorized portable native export needed for encrypted private data"
+    ],
+    "targetArchitecture": "Existing MIRA Cloudflare Workers+D1; nativeCRM migration separately verified",
+    "dedicatedServerRequiredForLaunch": false,
+    "architectureCorrection": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md"
   },
   "latestNativeCrmSnapshot": {
     "source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
@@ -452,7 +455,7 @@
     "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md"
   },
   "previousNextTaskForLocal": "MIRA-CLOUD-CUTOVER-20260919-01",
-  "updatedAt": "2026-09-21T16:20:37.632553+00:00",
+  "updatedAt": "2026-09-21T16:30:17.602Z",
   "latestLaunchCheckpoint": {
     "event": "CLOUD-INBOX/events/2026-09-21/cloud-expo-readiness-20260921.json",
     "at": "2026-09-21T16:20:37.632553+00:00",

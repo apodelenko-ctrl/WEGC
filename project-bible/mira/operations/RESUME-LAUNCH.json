@@ -1,12 +1,12 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
   "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-21T16:20:37.632553+00:00",
+  "updated_at": "2026-09-21T16:30:17.602Z",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
   "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
   "next_gate": "EXPO-03",
-  "next_action": "2026-09-22",
-  "parallel_available_action": "Prepare restore acceptance against transferred package when runtime access becomes available; otherwise complete current-flow integration package review",
+  "next_action": "Inspect authorized existing MIRA Cloudflare resources; prepare additive D1/nativeCRM mapping while closing EXPO-03",
+  "parallel_available_action": "Review existing public MIRA D1 schema and prepare preserving migration/import; no VPS dependency",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
     "2026-09-25",
@@ -48,16 +48,16 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
-    "Permanent runtime/access not established; recovery key separately held",
-    "Product integration remains LOCAL until accepted handoff",
-    "Actual physical QR/Russia mobile and verified supplier dossier require their respective evidence"
+    "Authorized Cloudflare account/resources access not confirmed",
+    "Separate recovery key or authorized portable native export needed for encrypted private data"
   ],
   "all_done": false,
   "restore_authorized": true,
   "restore_preflight_receipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
   "restore_blockers": [
-    "Persistent Linux/Docker target with authorized access; no SSH target/key or host access found",
-    "Separately delivered32-byte MIRA CRM recovery key; runbook explicitly excludes it from kit/Drive"
+    "Authorized Cloudflare account/resources access not confirmed",
+    "Separate recovery key or authorized portable native export needed for encrypted private data"
   ],
-  "immediate_owner_priority": "EXPO-06 cloud restore; while target/key unavailable continue EXPO-03"
+  "immediate_owner_priority": "Cloudflare Worker+D1 continuation and native-data migration; no mandatory VPS",
+  "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md"
 }

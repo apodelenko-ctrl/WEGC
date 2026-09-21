@@ -1,3 +1,5 @@
+> **Исправление21.09 — Cloudflare, без обязательного VPS.** Владелец уточнил целевой путь: существующие MIRA Worker + D1. Linux/Docker нужен только для восстановления EspoCRM целиком; отсутствие VPS не блокирует подготовку Cloudflare-варианта. Данные/функции native CRM требуют отдельной миграции и сверки, не загрузки Docker backup в D1. Текущий план: `project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md`. Нижние указания обязательного VPS для запуска superseded этим уточнением.
+
 ## Актуальный приоритет — 21 сентября 2026: выставка
 
 Прочитать `CLOUD-INBOX/tasks/MIRA-EXPO-20260921-01.md` и `project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md`. Рабочий дедлайн 24.09, 20:00 ICT / 16:00 MSK; выставка начинается 25.09 по сообщению владельца.

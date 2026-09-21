@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-21T16:30:17.602Z",
+  "source_head": "5813ff5ddfccf2004e43f6f5cb7d2e7309af88ca",
+  "event": "owner_target_clarification",
+  "path": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
+  "production_changed": false,
+  "cloudflare_inventory_confirmed": false,
+  "native_data_migrated": false
+}
