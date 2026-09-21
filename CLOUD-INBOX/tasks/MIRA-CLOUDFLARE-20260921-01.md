@@ -11,3 +11,10 @@
 Затем operator-only view выбранного completed snapshot в существующей authboundary; native Email/Task/journal/suppression/history/agreements отдельно по реальному private export. Developer candidates87 не считать совпавшими юридическими лицами. Existing78 nativeagency references разрешены точно поID. Ниотправок, ниактивации исследований этим импортом не производится.
 
 Вернуть receipt с фактическими source/target SHA, snapshotID, counts до/после, replay, схематическим diff и статусом deployed/live accepted. Общий аудит и повторный ACK не нужны. EXPO-03 путь нового посетителя остаётся параллельным P0. Receipt CLOUD: `CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json`.
+
+
+## CF004 — live baseline принят 2026-09-21T17:06:24.516Z
+
+Owner export `export (1).csv` подтвердил counts всех13 operational tables,25 индексов/10 триггеров и applied migrations0001–0003. Совпадение с main полное; сравнение сохранено в `CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01/LIVE-BASELINE-20260921.json`. Исходные ненулевые counts: applications1, memberships1, events3, rate_limits1. Содержание записей и их synthetic/real статус неизвестны; сохранять все. Остальные9 таблиц0. Старые задания повторно собирать inventory выше выполнены.
+
+Следующий шаг: в Console существующей `mira-pilot` выполнить служебную read-only команду `/bookmark` и сохранить возвращённую точку восстановления перед импортом. Это не SQL для Studio и не команда restore. Bookmark имеет ограниченный срок хранения, поэтому долгосрочный backup отдельно через штатный экспорт при доступном авторизованном исполнителе. После получения backup/recovery point перейти к уже подготовленному additive import/replay, а не новому общему аудиту. В этом checkpoint D1 writes0, full native CRM restore не выполнен. Приватный backup не публиковать.

@@ -7,7 +7,7 @@
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
   "nextTaskForLocal": "MIRA-CLOUDFLARE-20260921-01",
-  "routingNote": "Use corrected preimport-check.sql: one SELECT, no UNION; expect one CSV row with13 counts and2 JSON metadata columns. Earlier UNION query failed live; do not repeat.",
+  "routingNote": "Obtain current mira-pilot recovery bookmark in D1 Console (/bookmark) and retain pre-import backup through authorized account access; then execute controlled additive research import and replay. CF004 accepted table schema, indexes/triggers, migrations and counts; do not repeat inventory.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": true,
   "localReceiptConfirmed": true,
@@ -370,12 +370,14 @@
       "id": "MIRA-CLOUDFLARE-20260921-01",
       "priority": "P0-cloudflare-migration",
       "owner": "CLOUD preparation; authorized LOCAL/CLOUD inventory and integration",
-      "status": "live_table_definitions_verified_auxiliary_schema_and_counts_pending",
+      "status": "live_baseline_verified_recovery_point_and_remote_import_pending",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-CLOUDFLARE-20260921-01.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
       "package": "CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01",
       "preservesExpoTask": true,
-      "latestSchemaReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json"
+      "latestSchemaReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
+      "latestBaselineReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json",
+      "nextAction": "Obtain current mira-pilot recovery bookmark in D1 Console (/bookmark) and retain pre-import backup through authorized account access; then execute controlled additive research import and replay. CF004 accepted table schema, indexes/triggers, migrations and counts; do not repeat inventory."
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",

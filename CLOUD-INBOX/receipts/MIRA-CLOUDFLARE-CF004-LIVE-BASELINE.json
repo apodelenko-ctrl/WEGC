@@ -1,0 +1,75 @@
+{
+  "checkpoint": "CF004",
+  "task_id": "MIRA-CLOUDFLARE-20260921-01",
+  "checked_at": "2026-09-21T17:06:24.516Z",
+  "source_research_sha": "00accee1bfa20b286f741a74ae7ddcd1d66daa91",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "evidence_type": "owner_supplied_live_D1_Studio_CSV_export",
+  "source_filename": "export (1).csv",
+  "source_sha256": "01c893302b3b2274c466e9d8bbc1898ade1ce256262cb89874d8c5ce7ed92e99",
+  "query": "CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01/preimport-check.sql",
+  "query_status": "live_succeeded_owner_export_received",
+  "database_name": "mira-pilot",
+  "baseline": {
+    "source_sha256": "01c893302b3b2274c466e9d8bbc1898ade1ce256262cb89874d8c5ce7ed92e99",
+    "counts": {
+      "mira_agencies": 0,
+      "mira_agency_projects": 0,
+      "mira_applications": 1,
+      "mira_deal_events": 0,
+      "mira_events": 3,
+      "mira_evidence": 0,
+      "mira_leads": 0,
+      "mira_material_access": 0,
+      "mira_materials": 0,
+      "mira_memberships": 1,
+      "mira_payment_requests": 0,
+      "mira_projects": 0,
+      "mira_rate_limits": 1
+    },
+    "migrations": [
+      {
+        "name": "0001_mira.sql",
+        "applied_at": "2026-09-17 13:07:50"
+      },
+      {
+        "name": "0002_operations.sql",
+        "applied_at": "2026-09-17 13:07:50"
+      },
+      {
+        "name": "0003_materials.sql",
+        "applied_at": "2026-09-17 13:07:50"
+      }
+    ],
+    "schema_objects_count": 35,
+    "schema_objects_by_type": {
+      "index": 25,
+      "trigger": 10
+    },
+    "missing": [],
+    "extra": [],
+    "different": []
+  },
+  "verification": {
+    "operational_table_definitions": 13,
+    "table_schema_receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
+    "auxiliary_schema": "35/35 names, types and whitespace-normalized DDL match main migrations 0001-0003",
+    "applied_migrations": "0001-0003 present; timestamps are exactly as returned, timezone unspecified",
+    "counts_scope": "13 operational tables at owner query time, not record contents or a consistent point-in-time backup",
+    "existing_rows_classification": "Unknown; do not label synthetic, accepted or activated from counts alone"
+  },
+  "mutations": {
+    "remote_D1_writes": 0,
+    "CRM_imports": 0,
+    "deployed": false,
+    "external_sends": 0
+  },
+  "cloud_restore_complete": false,
+  "next_action": "Obtain current mira-pilot recovery bookmark in D1 Console (/bookmark) and retain pre-import backup through authorized account access; then execute controlled additive research import and replay. CF004 accepted table schema, indexes/triggers, migrations and counts; do not repeat inventory.",
+  "remaining": [
+    "Current pre-import recovery bookmark / backup",
+    "Authorized D1 execution channel; no Cloudflare connector available to CLOUD in this session",
+    "Actual remote import, replay, preservation and operator-view acceptance",
+    "Separate recovery key or portable private export for full native CRM/history"
+  ]
+}

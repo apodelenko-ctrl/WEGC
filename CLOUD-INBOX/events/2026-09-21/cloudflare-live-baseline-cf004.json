@@ -1,0 +1,25 @@
+{
+  "id": "MIRA-CF004-LIVE-BASELINE-20260921",
+  "at": "2026-09-21T17:06:24.516Z",
+  "source_sha": "00accee1bfa20b286f741a74ae7ddcd1d66daa91",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json",
+  "status": "live_baseline_accepted_remote_import_pending",
+  "counts_before": {
+    "mira_agencies": 0,
+    "mira_agency_projects": 0,
+    "mira_applications": 1,
+    "mira_deal_events": 0,
+    "mira_events": 3,
+    "mira_evidence": 0,
+    "mira_leads": 0,
+    "mira_material_access": 0,
+    "mira_materials": 0,
+    "mira_memberships": 1,
+    "mira_payment_requests": 0,
+    "mira_projects": 0,
+    "mira_rate_limits": 1
+  },
+  "counts_after": null,
+  "writes": 0,
+  "next_action": "Obtain current mira-pilot recovery bookmark in D1 Console (/bookmark) and retain pre-import backup through authorized account access; then execute controlled additive research import and replay. CF004 accepted table schema, indexes/triggers, migrations and counts; do not repeat inventory."
+}
