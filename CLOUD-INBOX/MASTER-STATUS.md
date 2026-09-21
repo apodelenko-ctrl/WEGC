@@ -1,3 +1,5 @@
+> **CF001 —21сентября:** существующие `mira-pilot-api / pilot.wegc.fund / MIRA_DB → mira-pilot` подтверждены скриншотом владельца; `MIRA_ASSETS` — static Assets. Пакет `CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01` реализован и прошёл16 тестов +2 полных local import/replay:405agency/43developer/618project links, optional165native lineage;13операционных таблиц сохранены. В Cloudflare пока0 импортов: текущая схема/UUID требуют авторизованного чтения. Следующий шаг: `CLOUD-INBOX/tasks/MIRA-CLOUDFLARE-20260921-01.md` и read-only `live-inventory.sql`; VPS не нужен. Private payload в Git не публикуется.
+
 > **Исправление21.09 — Cloudflare, без обязательного VPS.** Владелец уточнил целевой путь: существующие MIRA Worker + D1. Linux/Docker нужен только для восстановления EspoCRM целиком; отсутствие VPS не блокирует подготовку Cloudflare-варианта. Данные/функции native CRM требуют отдельной миграции и сверки, не загрузки Docker backup в D1. Текущий план: `project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md`. Нижние указания обязательного VPS для запуска superseded этим уточнением.
 
 ## Актуальный приоритет — 21 сентября 2026: выставка

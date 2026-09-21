@@ -1,12 +1,12 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
   "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-21T16:30:17.602Z",
+  "updated_at": "2026-09-21T16:45:39.521Z",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
-  "next_gate": "EXPO-03",
-  "next_action": "Inspect authorized existing MIRA Cloudflare resources; prepare additive D1/nativeCRM mapping while closing EXPO-03",
-  "parallel_available_action": "Review existing public MIRA D1 schema and prepare preserving migration/import; no VPS dependency",
+  "source_research_sha": "a2248f860580107dad82c94e5f864646c4538ecc",
+  "next_gate": "EXPO-06",
+  "next_action": "Read existing mira-pilot schema and counts via authorized D1 Console/API using package/live-inventory.sql, compare with source, then isolated D1 acceptance and controlled additive import; continue operator integration. No VPS requirement.",
+  "parallel_available_action": "Selective QR intake patch and operator-only research view integration; preserve all current application records",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
     "2026-09-25",
@@ -48,8 +48,8 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
-    "Authorized Cloudflare account/resources access not confirmed",
-    "Separate recovery key or authorized portable native export needed for encrypted private data"
+    "Cloudflare resources exist per screenshot; authorized database read/write access not available in this session",
+    "Encrypted native database/history still require separate key or authorized portable export"
   ],
   "all_done": false,
   "restore_authorized": true,
@@ -58,6 +58,7 @@
     "Authorized Cloudflare account/resources access not confirmed",
     "Separate recovery key or authorized portable native export needed for encrypted private data"
   ],
-  "immediate_owner_priority": "Cloudflare Worker+D1 continuation and native-data migration; no mandatory VPS",
-  "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md"
+  "immediate_owner_priority": "Existing Cloudflare D1 controlled import after live schema inventory; continue EXPO-03",
+  "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
+  "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json"
 }

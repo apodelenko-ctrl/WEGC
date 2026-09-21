@@ -1,3 +1,5 @@
+> **CF001 —21сентября:** существующие `mira-pilot-api / pilot.wegc.fund / MIRA_DB → mira-pilot` подтверждены скриншотом владельца; `MIRA_ASSETS` — static Assets. Пакет `CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01` реализован и прошёл16 тестов +2 полных local import/replay:405agency/43developer/618project links, optional165native lineage;13операционных таблиц сохранены. В Cloudflare пока0 импортов: текущая схема/UUID требуют авторизованного чтения. Следующий шаг: `CLOUD-INBOX/tasks/MIRA-CLOUDFLARE-20260921-01.md` и read-only `live-inventory.sql`; VPS не нужен. Private payload в Git не публикуется.
+
 > Дополнение21.09: выставка25.09, deadline24.09. Текущий критический путь и ежедневное исполнение: `project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md`. AUT-03 приватная передача принята в своём объёме; AUT-04 cloud restore не выполнен. История ниже сохраняется.
 
 # МИРА — roadmap автономной операционной системы

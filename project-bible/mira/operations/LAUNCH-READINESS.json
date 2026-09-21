@@ -1,5 +1,5 @@
 {
-  "assessed_at": "2026-09-21T16:24:28.565835+00:00",
+  "assessed_at": "2026-09-21T16:45:39.521Z",
   "ready": false,
   "accepted_gates": 3,
   "total_gates": 12,
@@ -58,10 +58,10 @@
     {
       "id": "EXPO-06",
       "accepted": false,
-      "status": "blocked",
+      "status": "partial",
       "reason": "",
       "owner": "CLOUD restore / LOCAL current operation",
-      "next_action": "Connect authorized persistent host and deliver recovery key via separate secret path; run authenticated verify, isolated restore,167Account/6Email/3Task counts and native ACL/restart acceptance. Keep dispatch disabled and Mac intact until cutover accepted."
+      "next_action": "Read existing mira-pilot schema and counts via authorized D1 Console/API using package/live-inventory.sql, compare with source, then isolated D1 acceptance and controlled additive import; continue operator integration. No VPS requirement."
     },
     {
       "id": "EXPO-07",

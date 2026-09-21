@@ -1,0 +1,149 @@
+{
+  "checked_at": "2026-09-21T16:41:17.243112+00:00",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "a2248f860580107dad82c94e5f864646c4538ecc",
+  "tests_passed": 16,
+  "tests_total": 16,
+  "actual_source_runs": [
+    {
+      "scope": "public",
+      "summary": {
+        "snapshot_id": "MIRA-IMPORT-53edde4c3d2afad582b289ff554e8b97cac5098ef3ae0b523ee283e45cf7239e",
+        "source_commit": "a2248f860580107dad82c94e5f864646c4538ecc",
+        "expected": {
+          "entities": 448,
+          "aliases": 448,
+          "fields": 7742,
+          "project_links": 618,
+          "native_lineage": 0
+        },
+        "agency_candidates": 405,
+        "developer_groups": 43,
+        "native_agency_links_resolved": 0,
+        "native_developer_entity_links_resolved": 0,
+        "native_developer_lineage_held": 0,
+        "contains_private": false,
+        "sql_sha256": "86041ff3dbb233407355dacc6d6860503cb712d6928ab3330ee0046427498d7f",
+        "max_statement_bytes": 19919,
+        "commercial_activations": 0,
+        "operational_table_writes": 0,
+        "remote_imports": 0,
+        "source_hash_semantics": "SHA256 of canonical JSON, not original file byte hash"
+      },
+      "first_import": {
+        "snapshot_id": "MIRA-IMPORT-53edde4c3d2afad582b289ff554e8b97cac5098ef3ae0b523ee283e45cf7239e",
+        "counts": {
+          "entities": 448,
+          "aliases": 448,
+          "fields": 7742,
+          "project_links": 618,
+          "native_lineage": 0
+        },
+        "committed": true,
+        "counts_match": true,
+        "payload_hash_mismatches": 0,
+        "foreign_key_errors": 0,
+        "remote": false,
+        "passed": true
+      },
+      "replay": {
+        "snapshot_id": "MIRA-IMPORT-53edde4c3d2afad582b289ff554e8b97cac5098ef3ae0b523ee283e45cf7239e",
+        "counts": {
+          "entities": 448,
+          "aliases": 448,
+          "fields": 7742,
+          "project_links": 618,
+          "native_lineage": 0
+        },
+        "committed": true,
+        "counts_match": true,
+        "payload_hash_mismatches": 0,
+        "foreign_key_errors": 0,
+        "remote": false,
+        "passed": true
+      },
+      "exact_agency_records_preserved": 405,
+      "exact_developer_records_preserved": 43,
+      "exact_project_records_preserved": 618,
+      "developer_contact_observations_preserved": 47,
+      "native_lineage_roundtrip": null,
+      "existing_operational_tables_unchanged": true,
+      "synthetic_sentinel_excluded_from_business_counts": true,
+      "existing_operational_table_count": 13,
+      "database_engine": "Python sqlite3 using exact main MIRA migrations; not Cloudflare remote or workerd",
+      "private_payloads_published": false
+    },
+    {
+      "scope": "private_lineage",
+      "summary": {
+        "snapshot_id": "MIRA-IMPORT-d56ae3ec66fc240f1b337344c31e75f46464c8e76ac6b9cdf6cd5908b98ddab6",
+        "source_commit": "a2248f860580107dad82c94e5f864646c4538ecc",
+        "expected": {
+          "entities": 448,
+          "aliases": 448,
+          "fields": 7742,
+          "project_links": 618,
+          "native_lineage": 165
+        },
+        "agency_candidates": 405,
+        "developer_groups": 43,
+        "native_agency_links_resolved": 78,
+        "native_developer_entity_links_resolved": 0,
+        "native_developer_lineage_held": 87,
+        "contains_private": true,
+        "sql_sha256": "9b869282f06b2b48d6096d4210d629eb18d09af7d048786beb2ed1d4440b8636",
+        "max_statement_bytes": 19919,
+        "commercial_activations": 0,
+        "operational_table_writes": 0,
+        "remote_imports": 0,
+        "source_hash_semantics": "SHA256 of canonical JSON, not original file byte hash"
+      },
+      "first_import": {
+        "snapshot_id": "MIRA-IMPORT-d56ae3ec66fc240f1b337344c31e75f46464c8e76ac6b9cdf6cd5908b98ddab6",
+        "counts": {
+          "entities": 448,
+          "aliases": 448,
+          "fields": 7742,
+          "project_links": 618,
+          "native_lineage": 165
+        },
+        "committed": true,
+        "counts_match": true,
+        "payload_hash_mismatches": 0,
+        "foreign_key_errors": 0,
+        "remote": false,
+        "passed": true
+      },
+      "replay": {
+        "snapshot_id": "MIRA-IMPORT-d56ae3ec66fc240f1b337344c31e75f46464c8e76ac6b9cdf6cd5908b98ddab6",
+        "counts": {
+          "entities": 448,
+          "aliases": 448,
+          "fields": 7742,
+          "project_links": 618,
+          "native_lineage": 165
+        },
+        "committed": true,
+        "counts_match": true,
+        "payload_hash_mismatches": 0,
+        "foreign_key_errors": 0,
+        "remote": false,
+        "passed": true
+      },
+      "exact_agency_records_preserved": 405,
+      "exact_developer_records_preserved": 43,
+      "exact_project_records_preserved": 618,
+      "developer_contact_observations_preserved": 47,
+      "native_lineage_roundtrip": true,
+      "existing_operational_tables_unchanged": true,
+      "synthetic_sentinel_excluded_from_business_counts": true,
+      "existing_operational_table_count": 13,
+      "database_engine": "Python sqlite3 using exact main MIRA migrations; not Cloudflare remote or workerd",
+      "private_payloads_published": false
+    }
+  ],
+  "remote_d1_import": "NOT_RUN_NO_AUTHORIZED_CLOUDFLARE_TOOL",
+  "native_full_crm_restore": "NOT_RUN_CROSSWALK_ONLY_PRIVATE_DB_ENCRYPTED",
+  "worker_deployed": false,
+  "external_sends": 0
+}

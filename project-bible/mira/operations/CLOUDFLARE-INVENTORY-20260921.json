@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-09-21T16:45:39.521Z",
+  "evidence_type": "owner_supplied_dashboard_screenshot",
+  "screenshot_local_label": "2026-09-21 23.40.48",
+  "worker": "mira-pilot-api",
+  "domain": "pilot.wegc.fund",
+  "d1_binding": "MIRA_DB",
+  "database_name": "mira-pilot",
+  "database_uuid": null,
+  "static_assets_binding": "MIRA_ASSETS",
+  "worker_logs_enabled": false,
+  "worker_traces_enabled": false,
+  "queue_bindings_visible": 0,
+  "api_inventory_performed": false,
+  "remote_schema_read": false,
+  "remote_data_read": false,
+  "notes": [
+    "Screenshot confirms existing resources; never create replacement production database",
+    "Assets binding is not evidence of R2",
+    "Dashboard counters do not establish live acceptance",
+    "Account identifiers and screenshot image not republished"
+  ]
+}
