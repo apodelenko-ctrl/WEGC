@@ -1,0 +1,17 @@
+{
+  "task_id": "MIRA-EXPO-20260921-01",
+  "data_commit": "54424137bbb323672fb45171143239f4c1728285",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
+  "published_tree": "9c283507c01f0ef4726fe08cd3aa9b213f275b57",
+  "remote_file_blobs_verified": 30,
+  "mismatches": 0,
+  "tests_passed": 7,
+  "prepared_ui_deployed": false,
+  "restore": "artifacts_verified_runtime_and_key_blocked",
+  "private_artifact_hashes_matched": 5,
+  "private_package_entries_verified": 60,
+  "crm_imports": 0,
+  "external_sends": 0,
+  "ready": false
+}
