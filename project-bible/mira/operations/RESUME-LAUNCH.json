@@ -1,11 +1,11 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
   "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-21T16:55:19.660Z",
+  "updated_at": "2026-09-21T16:58:21.112Z",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
   "source_research_sha": "a2248f860580107dad82c94e5f864646c4538ecc",
   "next_gate": "EXPO-06",
-  "next_action": "Receive consolidated preimport-check.sql export: existing indexes/triggers, migration rows and counts for all13 operational tables. Table DDL already matched13/13; do not repeat table-only query.",
+  "next_action": "Use corrected preimport-check.sql: one SELECT, no UNION; expect one CSV row with13 counts and2 JSON metadata columns. Earlier UNION query failed live; do not repeat.",
   "parallel_available_action": "Selective QR intake patch and operator-only research view integration; preserve all current application records",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
@@ -62,5 +62,6 @@
   "immediate_owner_priority": "Existing Cloudflare D1 controlled import after live schema inventory; continue EXPO-03",
   "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
   "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
-  "latest_cloudflare_schema_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json"
+  "latest_cloudflare_schema_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
+  "latest_cloudflare_query_fix": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF003-QUERY-FIX.json"
 }

@@ -1,0 +1,14 @@
+{
+  "checkpoint": "CF003",
+  "task_id": "MIRA-CLOUDFLARE-20260921-01",
+  "at": "2026-09-21T16:58:21.112Z",
+  "source_head": "c647530b0338cdd073baf5cf5068e4630870f825",
+  "observed_error": "too many terms in compound SELECT: SQLITE_ERROR",
+  "evidence": "Owner screenshot2026-09-21 23:56:23",
+  "cause": "Generated15-term UNION ALL was accepted by local SQLite but rejected by live D1",
+  "fix": "One SELECT with scalar subqueries,13 count columns and2 JSON metadata columns; zero UNION terms",
+  "local_verification": "PASS with SQLITE_LIMIT_COMPOUND_SELECT set to1;15columns/1row using owner-exported schema",
+  "live_verification": "PENDING_USER_EXECUTION",
+  "remote_mutations": 0,
+  "next_query": "CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01/preimport-check.sql"
+}

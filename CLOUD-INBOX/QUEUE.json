@@ -7,7 +7,7 @@
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
   "nextTaskForLocal": "MIRA-CLOUDFLARE-20260921-01",
-  "routingNote": "Receive consolidated preimport-check.sql export: existing indexes/triggers, migration rows and counts for all13 operational tables. Table DDL already matched13/13; do not repeat table-only query.",
+  "routingNote": "Use corrected preimport-check.sql: one SELECT, no UNION; expect one CSV row with13 counts and2 JSON metadata columns. Earlier UNION query failed live; do not repeat.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": true,
   "localReceiptConfirmed": true,
@@ -462,7 +462,8 @@
       ]
     },
     "latestSchemaReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
-    "liveTableSchemaMatched": 13
+    "liveTableSchemaMatched": 13,
+    "latestQueryFixReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF003-QUERY-FIX.json"
   },
   "latestNativeCrmSnapshot": {
     "source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
@@ -493,7 +494,7 @@
     "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md"
   },
   "previousNextTaskForLocal": "MIRA-EXPO-20260921-01",
-  "updatedAt": "2026-09-21T16:55:19.660Z",
+  "updatedAt": "2026-09-21T16:58:21.112Z",
   "latestLaunchCheckpoint": {
     "event": "CLOUD-INBOX/events/2026-09-21/cloud-expo-readiness-20260921.json",
     "at": "2026-09-21T16:20:37.632553+00:00",
