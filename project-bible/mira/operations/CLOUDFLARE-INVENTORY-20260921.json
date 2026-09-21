@@ -19,5 +19,10 @@
     "Assets binding is not evidence of R2",
     "Dashboard counters do not establish live acceptance",
     "Account identifiers and screenshot image not republished"
-  ]
+  ],
+  "updated_at": "2026-09-21T16:55:19.660Z",
+  "remote_table_schema_received_via_owner_export": true,
+  "operational_table_definitions_matched": 13,
+  "table_schema_receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
+  "next_read_only_query": "CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01/preimport-check.sql"
 }

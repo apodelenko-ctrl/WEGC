@@ -1,0 +1,61 @@
+{
+  "source_export_sha256": "a79b2f6120045b4cb6e926e85ebc3abacb4ae28df277c5b53d296b73080b9c32",
+  "tables": [
+    {
+      "name": "d1_migrations",
+      "sql": "CREATE TABLE \"d1_migrations\"(\n\t\tid         INTEGER PRIMARY KEY AUTOINCREMENT,\n\t\tname       TEXT UNIQUE,\n\t\tapplied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n)"
+    },
+    {
+      "name": "mira_agencies",
+      "sql": "CREATE TABLE mira_agencies (\n id TEXT PRIMARY KEY, name TEXT NOT NULL, city TEXT NOT NULL,\n status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('pending','active','suspended')),\n agreement_ref TEXT, created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "mira_agency_projects",
+      "sql": "CREATE TABLE mira_agency_projects (\n agency_id TEXT NOT NULL REFERENCES mira_agencies(id),project_id TEXT NOT NULL REFERENCES mira_projects(id),\n PRIMARY KEY(agency_id,project_id)\n)"
+    },
+    {
+      "name": "mira_applications",
+      "sql": "CREATE TABLE mira_applications (\n id TEXT PRIMARY KEY,subject TEXT NOT NULL,email TEXT NOT NULL,company TEXT NOT NULL,city TEXT NOT NULL,\n name TEXT NOT NULL,format TEXT NOT NULL,demand TEXT NOT NULL,markets_json TEXT NOT NULL,\n consent_version TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'received',created_at TEXT NOT NULL,\n idempotency_key TEXT NOT NULL,request_hash TEXT NOT NULL, version INTEGER NOT NULL DEFAULT 0, agency_id TEXT REFERENCES mira_agencies(id), updated_at TEXT, last_event_id TEXT,UNIQUE(subject,idempotency_key)\n)"
+    },
+    {
+      "name": "mira_deal_events",
+      "sql": "CREATE TABLE mira_deal_events (\n id TEXT PRIMARY KEY,lead_id TEXT NOT NULL REFERENCES mira_leads(id),agency_id TEXT NOT NULL REFERENCES mira_agencies(id),\n sequence INTEGER NOT NULL,stage TEXT NOT NULL,evidence_ref TEXT NOT NULL,\n amount_decimal TEXT,currency TEXT,actor TEXT NOT NULL,created_at TEXT NOT NULL,\n UNIQUE(lead_id,sequence),UNIQUE(lead_id,stage),\n CHECK((amount_decimal IS NULL AND currency IS NULL) OR (amount_decimal IS NOT NULL AND currency IS NOT NULL))\n)"
+    },
+    {
+      "name": "mira_events",
+      "sql": "CREATE TABLE mira_events (\n id TEXT PRIMARY KEY,entity_type TEXT NOT NULL,entity_id TEXT NOT NULL,agency_id TEXT,\n actor TEXT NOT NULL,status TEXT NOT NULL,version INTEGER NOT NULL,evidence_ref TEXT,reason TEXT NOT NULL,\n created_at TEXT NOT NULL, owner_approval_ref TEXT,UNIQUE(entity_type,entity_id,version)\n)"
+    },
+    {
+      "name": "mira_evidence",
+      "sql": "CREATE TABLE mira_evidence (\n id TEXT PRIMARY KEY,kind TEXT NOT NULL,project_id TEXT REFERENCES mira_projects(id),\n agency_id TEXT REFERENCES mira_agencies(id),entity_id TEXT,storage_ref TEXT NOT NULL,\n facts_json TEXT NOT NULL DEFAULT '{}',\n verified INTEGER NOT NULL DEFAULT 0 CHECK(verified IN (0,1)),\n verified_by TEXT NOT NULL,verified_at TEXT NOT NULL,expires_at TEXT,revoked_at TEXT,\n CHECK(expires_at IS NULL OR expires_at>verified_at)\n)"
+    },
+    {
+      "name": "mira_leads",
+      "sql": "CREATE TABLE mira_leads (\n id TEXT PRIMARY KEY,agency_id TEXT NOT NULL REFERENCES mira_agencies(id),\n project_id TEXT NOT NULL REFERENCES mira_projects(id),client_ref TEXT NOT NULL,consent_ref TEXT NOT NULL,\n created_by TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL,\n status TEXT NOT NULL DEFAULT 'submitted' CHECK(status IN ('submitted','review','needs_information','developer_submitted','developer_confirmed','duplicate','conflict','rejected','expired','closed')),\n version INTEGER NOT NULL DEFAULT 0,protection_ref TEXT,protection_until TEXT,last_event_id TEXT NOT NULL, idempotency_key TEXT, request_hash TEXT,\n UNIQUE(agency_id,project_id,client_ref)\n)"
+    },
+    {
+      "name": "mira_material_access",
+      "sql": "CREATE TABLE mira_material_access (\n  id TEXT PRIMARY KEY,\n  material_id TEXT NOT NULL REFERENCES mira_materials(id),\n  agency_id TEXT REFERENCES mira_agencies(id),\n  actor TEXT NOT NULL,\n  sha256 TEXT NOT NULL,\n  served_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "mira_materials",
+      "sql": "CREATE TABLE mira_materials (\n  id TEXT PRIMARY KEY,\n  project_id TEXT NOT NULL REFERENCES mira_projects(id),\n  title TEXT NOT NULL,\n  kind TEXT NOT NULL CHECK (kind IN ('brochure','floor_plan','field_report','training')),\n  language TEXT NOT NULL CHECK (language IN ('ru','en','th')),\n  mime_type TEXT NOT NULL CHECK (mime_type IN ('application/pdf','image/png','image/jpeg','image/webp')),\n  size_bytes INTEGER NOT NULL CHECK (size_bytes > 0 AND size_bytes <= 8388608),\n  sha256 TEXT NOT NULL CHECK (length(sha256)=64),\n  rights_ref TEXT NOT NULL REFERENCES mira_evidence(id),\n  release_ref TEXT NOT NULL REFERENCES mira_evidence(id),\n  expires_at TEXT NOT NULL,\n  created_by TEXT NOT NULL,\n  created_at TEXT NOT NULL,\n  revoked_at TEXT\n)"
+    },
+    {
+      "name": "mira_memberships",
+      "sql": "CREATE TABLE mira_memberships (\n subject TEXT PRIMARY KEY, agency_id TEXT REFERENCES mira_agencies(id),\n role TEXT NOT NULL CHECK(role IN ('agency_owner','broker','operator')),\n active INTEGER NOT NULL DEFAULT 1 CHECK(active IN (0,1)),\n CHECK((role='operator' AND agency_id IS NULL) OR (role!='operator' AND agency_id IS NOT NULL))\n)"
+    },
+    {
+      "name": "mira_payment_requests",
+      "sql": "CREATE TABLE mira_payment_requests (\n id TEXT PRIMARY KEY,lead_id TEXT NOT NULL REFERENCES mira_leads(id),agency_id TEXT NOT NULL REFERENCES mira_agencies(id),\n created_by TEXT NOT NULL,created_at TEXT NOT NULL,invoice_currency TEXT NOT NULL,\n consent_ref TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'package_review',version INTEGER NOT NULL DEFAULT 0,\n UNIQUE(lead_id)\n)"
+    },
+    {
+      "name": "mira_projects",
+      "sql": "CREATE TABLE mira_projects (\n id TEXT PRIMARY KEY,name TEXT NOT NULL,market TEXT NOT NULL,developer_family TEXT,\n legal_seller TEXT,enabled INTEGER NOT NULL DEFAULT 0 CHECK(enabled IN (0,1)),\n agreement_ref TEXT,inventory_ref TEXT,registration_rules_ref TEXT,commission_schedule_ref TEXT,\n materials_rights_ref TEXT,updated_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "mira_rate_limits",
+      "sql": "CREATE TABLE mira_rate_limits (subject TEXT NOT NULL,bucket INTEGER NOT NULL,uses INTEGER NOT NULL,PRIMARY KEY(subject,bucket))"
+    }
+  ]
+}

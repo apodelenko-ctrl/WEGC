@@ -1,11 +1,11 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
   "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-21T16:45:39.521Z",
+  "updated_at": "2026-09-21T16:55:19.660Z",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
   "source_research_sha": "a2248f860580107dad82c94e5f864646c4538ecc",
   "next_gate": "EXPO-06",
-  "next_action": "Read existing mira-pilot schema and counts via authorized D1 Console/API using package/live-inventory.sql, compare with source, then isolated D1 acceptance and controlled additive import; continue operator integration. No VPS requirement.",
+  "next_action": "Receive consolidated preimport-check.sql export: existing indexes/triggers, migration rows and counts for all13 operational tables. Table DDL already matched13/13; do not repeat table-only query.",
   "parallel_available_action": "Selective QR intake patch and operator-only research view integration; preserve all current application records",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
@@ -48,8 +48,9 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
-    "Cloudflare resources exist per screenshot; authorized database read/write access not available in this session",
-    "Encrypted native database/history still require separate key or authorized portable export"
+    "Cloudflare API access unavailable in this session; owner is providing live Console exports",
+    "Remote indexes/triggers, applied migration rows, current record counts and pre-import backup/bookmark pending",
+    "Full encrypted native CRM/history still requires separate key or portable export"
   ],
   "all_done": false,
   "restore_authorized": true,
@@ -60,5 +61,6 @@
   ],
   "immediate_owner_priority": "Existing Cloudflare D1 controlled import after live schema inventory; continue EXPO-03",
   "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
-  "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json"
+  "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
+  "latest_cloudflare_schema_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json"
 }
