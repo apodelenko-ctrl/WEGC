@@ -1,10 +1,10 @@
 {
   "task_id": "MIRA-CLOUDFLARE-20260921-01",
   "checkpoint": "CF006",
-  "at": "2026-09-22T08:20:38.476Z",
-  "status": "CF005_remote_import_accepted_research_operator_view_prepared_not_deployed",
+  "at": "2026-09-22T09:04:17.108Z",
+  "status": "deployed_live_role_acceptance_pending",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+  "source_research_sha": "9e431de244875804716a48e957b07d1bc9aae7e0",
   "package": "CLOUD-INBOX/packages/MIRA-RESEARCH-VIEW-20260922-01",
   "accepted_remote_import": {
     "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
@@ -32,57 +32,165 @@
     "Accepted CF005 remote D1 result; closed obsolete import/bookmark/execution blockers in shared state.",
     "Implemented operator-only public completed-snapshot search/detail/project-link viewer using existing signed Access JWT and active operator membership.",
     "Verified 83 tests and local public-source smoke across 448 entity records and 7742 field rows including missing values.",
-    "Prepared selective integration instructions; retained source receipt and foreign changes."
+    "Prepared selective integration instructions; retained source receipt and foreign changes.",
+    "Selectively integrated CF006 on fresh main; original auth and runtime files unchanged except router and operator navigation.",
+    "Committed and pushed reviewed source; deployed to existing Worker without D1 migration/import.",
+    "Protected new HTML/client path through the existing Access application without weakening its rules.",
+    "Passed rendered synthetic browser roles/search/cards/mobile/reload and full public-source read smoke."
   ],
   "tests": {
-    "checkpoint": "CF006",
-    "at": "2026-09-22T08:20:38.476Z",
-    "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-    "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
-    "tests": {
-      "total": 83,
-      "passed": 83,
-      "existing_api_site": 43,
-      "previous_intake": 29,
-      "new_research_view": 11,
-      "command": "node --test tests/mira-api.test.mjs tests/mira-site.test.mjs tests/mira-public-intake.test.mjs tests/mira-intake-client.test.mjs tests/mira-research-view.test.mjs",
-      "scope": "isolated current-main integration with EXPO22-A; SQLite/HTTP tests, no rendered browser"
+    "local_unit": {
+      "passed": 54,
+      "failed": 0,
+      "scope": "43 existing API/site + 11 CF006"
     },
-    "full_public_source_smoke": {
-      "status": "PASS",
-      "agency_records": 405,
-      "developer_records": 43,
-      "field_rows_read": 7742,
-      "field_rows_include_missing": true,
-      "project_links_in_summary": 618,
-      "source_commit": "a2248f860580107dad82c94e5f864646c4538ecc",
-      "scope": "local generated public SQLite fixture, not remote CF005 export",
-      "source_database_modified": false,
-      "api_select_only": true
+    "public_source_smoke": {
+      "agencies": 405,
+      "developers": 43,
+      "fields_including_missing": 7742,
+      "project_links": 618,
+      "source_commit": "10555d89e90141f9eb843a9c27447b35cc59a1a0",
+      "private_export_used": false
     },
-    "not_run": [
-      "rendered_browser_mobile",
-      "Cloudflare_deploy",
-      "live_Access_role_acceptance",
-      "public_intake_release"
-    ],
-    "new_remote_imports": 0,
-    "new_external_sends": 0
+    "browser": {
+      "scope": "isolated real Chrome, actual Worker and RSA auth, public source with ephemeral synthetic roles",
+      "anonymous_http": 401,
+      "active_ordinary_member_http": 403,
+      "operator_counts": [
+        405,
+        43,
+        618
+      ],
+      "search_pagination_sources_project_links_reload": true,
+      "desktop_mobile": true,
+      "mobile_overflow_fixed": true
+    },
+    "live": {
+      "deployment_readback": "PASS",
+      "binding_preservation": "PASS",
+      "anonymous_browser": "Access login; research data not rendered",
+      "operator_browser": "PENDING real sign-in",
+      "ordinary_member_browser": "PENDING real sign-in",
+      "operator_counts_observed_live": false
+    }
   },
   "new_research_candidates": 0,
   "remote_d1_imports_this_block": 0,
-  "worker_deployed": false,
-  "access_changed": false,
+  "worker_deployed": true,
+  "access_changed": true,
   "external_sends": 0,
   "private_payloads_published": false,
   "native_full_crm_restore": false,
   "remaining": [
-    "LOCAL selective release and live role/browser acceptance of CF006",
-    "EXPO22-A public intake integration plus operator request screen/notification and live end-to-end receipt/response",
-    "Public privacy/erasure configuration, actual operator and Turnstile/narrow Access acceptance",
-    "Minimum one verified project dossier/current supplier response and final exhibition rehearsal",
-    "Native encrypted CRM history recovery remains separate"
+    "Complete live operator and ordinary-user browser acceptance after real sign-in.",
+    "EXPO22-A operator UI and synthetic flow implemented separately; public migration/enablement remains gated.",
+    "Privacy/retention, actual Turnstile, narrow public route acceptance and real public submission/response remain release conditions.",
+    "Native CRM/mail restore and contractual/project dossier readiness remain separate."
   ],
-  "next_action": "LOCAL selectively integrate CF006 research-view modules against current main, configure the exact accepted public snapshot, preserve Access and EXPO22-A, and return deployed SHA plus live anonymous/member/operator acceptance. No repeat CF005 import or backup audit. Public intake/operator request UI and notifications remain a separate launch step.",
-  "all_done": false
+  "next_action": "Finish CF006 live role acceptance in the existing browser session. Do not repeat CF005. EXPO22-A operator source is a separate reviewed branch and is not deployed or publicly enabled.",
+  "all_done": false,
+  "history": [
+    {
+      "task_id": "MIRA-CLOUDFLARE-20260921-01",
+      "checkpoint": "CF006",
+      "at": "2026-09-22T08:20:38.476Z",
+      "status": "CF005_remote_import_accepted_research_operator_view_prepared_not_deployed",
+      "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+      "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+      "package": "CLOUD-INBOX/packages/MIRA-RESEARCH-VIEW-20260922-01",
+      "accepted_remote_import": {
+        "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
+        "receipt_commit": "c7e5704902f4b0515a8462026199088c1fef8f94",
+        "evidence_type": "accepted_LOCAL_actual_remote_execution_receipt_not_CLOUD_reexecution",
+        "at": "2026-09-22T07:45:09.781072+00:00",
+        "snapshot_id": "MIRA-IMPORT-3c75b4a1a591a9bedbadc5840ea0b5640e1e6c9c2090066f22898d57e6537c7d",
+        "counts": {
+          "agencies": 405,
+          "developer_groups": 43,
+          "project_links": 618,
+          "aliases": 448,
+          "indexed_fields": 7742,
+          "field_rows_include_missing_values": true,
+          "native_lineage": 0
+        },
+        "remote_imports": 1,
+        "remote_replays": 1,
+        "completed_snapshots": 1,
+        "original_tables_preserved": 13,
+        "original_schema_objects_preserved": 48,
+        "native_full_crm_restore": false
+      },
+      "completed": [
+        "Accepted CF005 remote D1 result; closed obsolete import/bookmark/execution blockers in shared state.",
+        "Implemented operator-only public completed-snapshot search/detail/project-link viewer using existing signed Access JWT and active operator membership.",
+        "Verified 83 tests and local public-source smoke across 448 entity records and 7742 field rows including missing values.",
+        "Prepared selective integration instructions; retained source receipt and foreign changes."
+      ],
+      "tests": {
+        "checkpoint": "CF006",
+        "at": "2026-09-22T08:20:38.476Z",
+        "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+        "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+        "tests": {
+          "total": 83,
+          "passed": 83,
+          "existing_api_site": 43,
+          "previous_intake": 29,
+          "new_research_view": 11,
+          "command": "node --test tests/mira-api.test.mjs tests/mira-site.test.mjs tests/mira-public-intake.test.mjs tests/mira-intake-client.test.mjs tests/mira-research-view.test.mjs",
+          "scope": "isolated current-main integration with EXPO22-A; SQLite/HTTP tests, no rendered browser"
+        },
+        "full_public_source_smoke": {
+          "status": "PASS",
+          "agency_records": 405,
+          "developer_records": 43,
+          "field_rows_read": 7742,
+          "field_rows_include_missing": true,
+          "project_links_in_summary": 618,
+          "source_commit": "a2248f860580107dad82c94e5f864646c4538ecc",
+          "scope": "local generated public SQLite fixture, not remote CF005 export",
+          "source_database_modified": false,
+          "api_select_only": true
+        },
+        "not_run": [
+          "rendered_browser_mobile",
+          "Cloudflare_deploy",
+          "live_Access_role_acceptance",
+          "public_intake_release"
+        ],
+        "new_remote_imports": 0,
+        "new_external_sends": 0
+      },
+      "new_research_candidates": 0,
+      "remote_d1_imports_this_block": 0,
+      "worker_deployed": false,
+      "access_changed": false,
+      "external_sends": 0,
+      "private_payloads_published": false,
+      "native_full_crm_restore": false,
+      "remaining": [
+        "LOCAL selective release and live role/browser acceptance of CF006",
+        "EXPO22-A public intake integration plus operator request screen/notification and live end-to-end receipt/response",
+        "Public privacy/erasure configuration, actual operator and Turnstile/narrow Access acceptance",
+        "Minimum one verified project dossier/current supplier response and final exhibition rehearsal",
+        "Native encrypted CRM history recovery remains separate"
+      ],
+      "next_action": "LOCAL selectively integrate CF006 research-view modules against current main, configure the exact accepted public snapshot, preserve Access and EXPO22-A, and return deployed SHA plus live anonymous/member/operator acceptance. No repeat CF005 import or backup audit. Public intake/operator request UI and notifications remain a separate launch step.",
+      "all_done": false
+    }
+  ],
+  "local_source_sha": "7ac08e78efe7c2774b629e8c74562cff77bb1abd",
+  "local_branch": "codex/mira-cf006-release-20260922",
+  "access_change": "Added only /mira/research/* to the existing application. Readback confirmed identical audience, reusable policy, allowed IdPs and session duration; no new users or bypass.",
+  "deployment": {
+    "worker": "mira-pilot-api",
+    "id": "bee5464b-8807-4392-a72e-c0de151d0d09",
+    "version_id": "09782ef9-f0a0-445a-b3ea-2d173af2c0eb",
+    "percentage": 100,
+    "source_sha": "7ac08e78efe7c2774b629e8c74562cff77bb1abd",
+    "previous_version_id": "38fd1679-40cf-44d6-a572-b760431555f9",
+    "existing_bindings_preserved": true,
+    "new_var": "MIRA_RESEARCH_SNAPSHOT",
+    "snapshot_id": "MIRA-IMPORT-3c75b4a1a591a9bedbadc5840ea0b5640e1e6c9c2090066f22898d57e6537c7d"
+  }
 }
