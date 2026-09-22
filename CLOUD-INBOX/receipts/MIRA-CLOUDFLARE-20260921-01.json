@@ -1,56 +1,216 @@
 {
   "task_id": "MIRA-CLOUDFLARE-20260921-01",
-  "checkpoint": "CF001",
-  "at": "2026-09-21T16:45:39.521Z",
+  "checkpoint": "CF005",
+  "at": "2026-09-22T07:45:09.781072+00:00",
+  "status": "remote_research_import_verified_operator_view_pending",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "a2248f860580107dad82c94e5f864646c4538ecc",
-  "status": "implemented_local_actual_data_verified_remote_pending",
+  "source_research_sha": "10555d89e90141f9eb843a9c27447b35cc59a1a0",
+  "local_branch": "codex/mira-cloud-inbox-20260918",
+  "local_checkpoint": "662b1d527b9f679deb835f6d9c5657a4452818a4",
   "package": "CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01",
-  "tests_passed": 16,
-  "tests_total": 16,
-  "actual_source_runs": 2,
-  "local_research_agencies": 405,
-  "local_research_developer_groups": 43,
-  "local_project_ids": 618,
-  "indexed_field_rows": 7742,
-  "field_rows_include_missing_values": true,
-  "developer_contact_observations": 47,
-  "local_native_lineage_rows": 165,
-  "native_agency_links_resolved": 78,
-  "native_developer_entity_links_resolved": 0,
-  "native_developer_lineage_held": 87,
-  "original_operational_tables_unchanged": 13,
-  "replay_without_duplicates": true,
-  "remote_d1_imports": 0,
-  "native_full_crm_restore": false,
-  "worker_deployed": false,
-  "external_sends": 0,
-  "new_research_candidates": 0,
-  "private_payloads_published": false,
-  "inventory": {
-    "observed_at": "2026-09-21T16:45:39.521Z",
-    "evidence_type": "owner_supplied_dashboard_screenshot",
-    "screenshot_local_label": "2026-09-21 23.40.48",
+  "target": {
     "worker": "mira-pilot-api",
-    "domain": "pilot.wegc.fund",
-    "d1_binding": "MIRA_DB",
     "database_name": "mira-pilot",
-    "database_uuid": null,
-    "static_assets_binding": "MIRA_ASSETS",
-    "worker_logs_enabled": false,
-    "worker_traces_enabled": false,
-    "queue_bindings_visible": 0,
-    "api_inventory_performed": false,
-    "remote_schema_read": false,
-    "remote_data_read": false,
-    "notes": [
-      "Screenshot confirms existing resources; never create replacement production database",
-      "Assets binding is not evidence of R2",
-      "Dashboard counters do not establish live acceptance",
-      "Account identifiers and screenshot image not republished"
-    ]
+    "binding": "MIRA_DB",
+    "existing_resource": true,
+    "replacement_created": false
   },
-  "next_action": "Read existing mira-pilot schema and counts via authorized D1 Console/API using package/live-inventory.sql, compare with source, then isolated D1 acceptance and controlled additive import; continue operator integration. No VPS requirement.",
-  "blocker": "No Cloudflare callable connector or API credential in this session; database UUID/current schema not supplied by screenshot.",
-  "all_done": false
+  "bookmark_reference": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json",
+  "private_exports": {
+    "preimport_sha256": "97dc07558e6acc4e543972a36fc1cbf138ae906724aba058571a74d57afb9f34",
+    "postimport_sha256": "0020f92a6681721b495031bcad6cee1aefe7cf3a0811712059b53f554c8f5e79",
+    "stored_outside_git": true,
+    "raw_data_published": false
+  },
+  "snapshot_id": "MIRA-IMPORT-3c75b4a1a591a9bedbadc5840ea0b5640e1e6c9c2090066f22898d57e6537c7d",
+  "remote_d1_imports": 1,
+  "remote_replays": 1,
+  "completed_snapshots": 1,
+  "research_counts": {
+    "agencies": 405,
+    "developer_groups": 43,
+    "project_links": 618,
+    "aliases": 448,
+    "indexed_fields": 7742,
+    "field_rows_include_missing_values": true,
+    "native_lineage": 0
+  },
+  "tests": {
+    "package_unit_passed": 16,
+    "isolated_d1_import_and_replay": "PASS",
+    "remote_import_and_replay": "PASS",
+    "remote_export_payload_hashes": "PASS",
+    "remote_export_fk_errors": 0,
+    "original_13_tables_exact_rows_preserved": true,
+    "original_schema_objects_preserved": 48,
+    "all_imported_rows_equal_isolated_run": true
+  },
+  "operational_table_counts": [
+    {
+      "table": "mira_agencies",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_memberships",
+      "before": 1,
+      "after": 1,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_projects",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_agency_projects",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_evidence",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_applications",
+      "before": 1,
+      "after": 1,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_leads",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_events",
+      "before": 3,
+      "after": 3,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_payment_requests",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_deal_events",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_rate_limits",
+      "before": 1,
+      "after": 1,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_materials",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    },
+    {
+      "table": "mira_material_access",
+      "before": 0,
+      "after": 0,
+      "rows_identical": true
+    }
+  ],
+  "migrations": {
+    "previous_preserved": [
+      "0001_mira.sql",
+      "0002_operations.sql",
+      "0003_materials.sql"
+    ],
+    "added": [
+      "0004_research_import.sql"
+    ],
+    "conflicts": 0
+  },
+  "worker_deployed": false,
+  "access_changed": false,
+  "public_intake_enabled": false,
+  "external_sends": 0,
+  "commercial_activations": 0,
+  "buyer_registration_enabled": false,
+  "native_full_crm_restore": false,
+  "private_payloads_published": false,
+  "completed": [
+    "Private export checksum/readability verified.",
+    "Prepared exact source package, tested isolated D1, applied additive remote migration/import and replay.",
+    "Fresh remote export compared with baseline and isolated import: old rows/schema unchanged, one completed research snapshot."
+  ],
+  "next_action": "Operator-only view of this completed snapshot in existing auth boundary; separately EXPO22-A selective local integration/acceptance. Current data acceptance does not enable public intake or restore native CRM/mail.",
+  "blockers": [
+    "Operator research view not yet implemented/deployed.",
+    "EXPO public-intake privacy/erasure, operator UI, actual Turnstile and narrow Access/live acceptance remain separate."
+  ],
+  "all_done": false,
+  "history": [
+    {
+      "task_id": "MIRA-CLOUDFLARE-20260921-01",
+      "checkpoint": "CF001",
+      "at": "2026-09-21T16:45:39.521Z",
+      "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+      "source_research_sha": "a2248f860580107dad82c94e5f864646c4538ecc",
+      "status": "implemented_local_actual_data_verified_remote_pending",
+      "package": "CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01",
+      "tests_passed": 16,
+      "tests_total": 16,
+      "actual_source_runs": 2,
+      "local_research_agencies": 405,
+      "local_research_developer_groups": 43,
+      "local_project_ids": 618,
+      "indexed_field_rows": 7742,
+      "field_rows_include_missing_values": true,
+      "developer_contact_observations": 47,
+      "local_native_lineage_rows": 165,
+      "native_agency_links_resolved": 78,
+      "native_developer_entity_links_resolved": 0,
+      "native_developer_lineage_held": 87,
+      "original_operational_tables_unchanged": 13,
+      "replay_without_duplicates": true,
+      "remote_d1_imports": 0,
+      "native_full_crm_restore": false,
+      "worker_deployed": false,
+      "external_sends": 0,
+      "new_research_candidates": 0,
+      "private_payloads_published": false,
+      "inventory": {
+        "observed_at": "2026-09-21T16:45:39.521Z",
+        "evidence_type": "owner_supplied_dashboard_screenshot",
+        "screenshot_local_label": "2026-09-21 23.40.48",
+        "worker": "mira-pilot-api",
+        "domain": "pilot.wegc.fund",
+        "d1_binding": "MIRA_DB",
+        "database_name": "mira-pilot",
+        "database_uuid": null,
+        "static_assets_binding": "MIRA_ASSETS",
+        "worker_logs_enabled": false,
+        "worker_traces_enabled": false,
+        "queue_bindings_visible": 0,
+        "api_inventory_performed": false,
+        "remote_schema_read": false,
+        "remote_data_read": false,
+        "notes": [
+          "Screenshot confirms existing resources; never create replacement production database",
+          "Assets binding is not evidence of R2",
+          "Dashboard counters do not establish live acceptance",
+          "Account identifiers and screenshot image not republished"
+        ]
+      },
+      "next_action": "Read existing mira-pilot schema and counts via authorized D1 Console/API using package/live-inventory.sql, compare with source, then isolated D1 acceptance and controlled additive import; continue operator integration. No VPS requirement.",
+      "blocker": "No Cloudflare callable connector or API credential in this session; database UUID/current schema not supplied by screenshot.",
+      "all_done": false
+    }
+  ]
 }
