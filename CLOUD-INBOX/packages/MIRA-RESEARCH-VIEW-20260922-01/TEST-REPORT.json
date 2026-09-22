@@ -1,0 +1,35 @@
+{
+  "checkpoint": "CF006",
+  "at": "2026-09-22T08:20:38.476Z",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+  "tests": {
+    "total": 83,
+    "passed": 83,
+    "existing_api_site": 43,
+    "previous_intake": 29,
+    "new_research_view": 11,
+    "command": "node --test tests/mira-api.test.mjs tests/mira-site.test.mjs tests/mira-public-intake.test.mjs tests/mira-intake-client.test.mjs tests/mira-research-view.test.mjs",
+    "scope": "isolated current-main integration with EXPO22-A; SQLite/HTTP tests, no rendered browser"
+  },
+  "full_public_source_smoke": {
+    "status": "PASS",
+    "agency_records": 405,
+    "developer_records": 43,
+    "field_rows_read": 7742,
+    "field_rows_include_missing": true,
+    "project_links_in_summary": 618,
+    "source_commit": "a2248f860580107dad82c94e5f864646c4538ecc",
+    "scope": "local generated public SQLite fixture, not remote CF005 export",
+    "source_database_modified": false,
+    "api_select_only": true
+  },
+  "not_run": [
+    "rendered_browser_mobile",
+    "Cloudflare_deploy",
+    "live_Access_role_acceptance",
+    "public_intake_release"
+  ],
+  "new_remote_imports": 0,
+  "new_external_sends": 0
+}

@@ -7,7 +7,7 @@
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
   "nextTaskForLocal": "MIRA-CLOUDFLARE-20260921-01",
-  "routingNote": "Authorized LOCAL executor: use existing Wrangler account, export mira-pilot privately, run controlled research import package on an isolated D1 target, then additive import/replay into existing mira-pilot after acceptance; return sanitized count/hash receipt. Do not request /bookmark again or execute /restore for inspection. Preserve EXPO22-A and existing operator UI task.",
+  "routingNote": "LOCAL selectively integrate CF006 research-view modules against current main, configure the exact accepted public snapshot, preserve Access and EXPO22-A, and return deployed SHA plus live anonymous/member/operator acceptance. No repeat CF005 import or backup audit. Public intake/operator request UI and notifications remain a separate launch step.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": true,
   "localReceiptConfirmed": true,
@@ -373,15 +373,39 @@
       "id": "MIRA-CLOUDFLARE-20260921-01",
       "priority": "P0-cloudflare-migration",
       "owner": "CLOUD preparation; authorized LOCAL/CLOUD inventory and integration",
-      "status": "recovery_bookmark_received_authorized_execution_pending",
+      "status": "remote_import_accepted_operator_view_prepared",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-CLOUDFLARE-20260921-01.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
       "package": "CLOUD-INBOX/packages/MIRA-CLOUDFLARE-20260921-01",
       "preservesExpoTask": true,
       "latestSchemaReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
       "latestBaselineReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json",
-      "nextAction": "Authorized LOCAL executor: use existing Wrangler account, export mira-pilot privately, run controlled research import package on an isolated D1 target, then additive import/replay into existing mira-pilot after acceptance; return sanitized count/hash receipt. Do not request /bookmark again or execute /restore for inspection.",
-      "latestRecoveryReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json"
+      "nextAction": "LOCAL selectively integrate CF006 research-view modules against current main, configure the exact accepted public snapshot, preserve Access and EXPO22-A, and return deployed SHA plus live anonymous/member/operator acceptance. No repeat CF005 import or backup audit. Public intake/operator request UI and notifications remain a separate launch step.",
+      "latestRecoveryReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json",
+      "latestCheckpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json",
+      "operatorViewPackage": "CLOUD-INBOX/packages/MIRA-RESEARCH-VIEW-20260922-01",
+      "acceptedImport": {
+        "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
+        "receipt_commit": "c7e5704902f4b0515a8462026199088c1fef8f94",
+        "evidence_type": "accepted_LOCAL_actual_remote_execution_receipt_not_CLOUD_reexecution",
+        "at": "2026-09-22T07:45:09.781072+00:00",
+        "snapshot_id": "MIRA-IMPORT-3c75b4a1a591a9bedbadc5840ea0b5640e1e6c9c2090066f22898d57e6537c7d",
+        "counts": {
+          "agencies": 405,
+          "developer_groups": 43,
+          "project_links": 618,
+          "aliases": 448,
+          "indexed_fields": 7742,
+          "field_rows_include_missing_values": true,
+          "native_lineage": 0
+        },
+        "remote_imports": 1,
+        "remote_replays": 1,
+        "completed_snapshots": 1,
+        "original_tables_preserved": 13,
+        "original_schema_objects_preserved": 48,
+        "native_full_crm_restore": false
+      }
     }
   ],
   "separateResearchQueue": "project-bible/mira/research/day-2026-09-18/RESUME-STATE.json",
@@ -420,7 +444,7 @@
     "localMailCheckpoint": "54d80452d36080ded3d141fbac56a2c22506f16c"
   },
   "cloudTransition": {
-    "status": "live_table_definitions_verified_auxiliary_schema_and_counts_pending",
+    "status": "public_research_import_accepted_operator_view_release_pending",
     "roadmapTask": "MIRA-AUTONOMY-20260919-01",
     "localReceipt": "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
     "ackAt": "2026-09-18T18:23:20Z",
@@ -436,9 +460,8 @@
     "cloudArtifactChecksumReadback": "five_of_five_verified",
     "latestRestoreReceipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
     "exactMissingInputs": [
-      "Cloudflare API access unavailable in this session; owner is providing live Console exports",
-      "Remote indexes/triggers, applied migration rows, current record counts and pre-import backup/bookmark pending",
-      "Full encrypted native CRM/history still requires separate key or portable export"
+      "Selective Worker release and live operator-view acceptance",
+      "Separate recovery key or portable private export for encrypted native CRM/history only"
     ],
     "targetArchitecture": "Existing MIRA Cloudflare Workers+D1; nativeCRM migration separately verified",
     "dedicatedServerRequiredForLaunch": false,
@@ -469,7 +492,12 @@
     },
     "latestSchemaReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
     "liveTableSchemaMatched": 13,
-    "latestQueryFixReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF003-QUERY-FIX.json"
+    "latestQueryFixReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF003-QUERY-FIX.json",
+    "publicResearchImportConfirmed": true,
+    "cloudRestoreScope": "Full native CRM/history and live application acceptance remain incomplete; public research D1 import is separately accepted.",
+    "latestImportReceiptCommit": "c7e5704902f4b0515a8462026199088c1fef8f94",
+    "latestOperatorViewReceipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json",
+    "authorizedExecutor": "LOCAL: CF005 remote D1 import/replay completed"
   },
   "latestNativeCrmSnapshot": {
     "source": "CLOUD-INBOX/receipts/MIRA-MKT-20260918-01.json",
@@ -500,7 +528,7 @@
     "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md"
   },
   "previousNextTaskForLocal": "MIRA-EXPO-20260921-01",
-  "updatedAt": "2026-09-21T16:58:21.112Z",
+  "updatedAt": "2026-09-22T08:20:38.476Z",
   "latestLaunchCheckpoint": {
     "event": "CLOUD-INBOX/events/2026-09-21/cloud-expo-readiness-20260921.json",
     "at": "2026-09-21T16:20:37.632553+00:00",
@@ -534,9 +562,9 @@
     "scope": "Read Botanica document request, inventory Singapore company files, create owner-only document vault and project-bible index; no sending/signing or public document upload."
   },
   "latestCloudflareCheckpoint": {
-    "event": "CLOUD-INBOX/events/2026-09-21/cloudflare-import-cf001.json",
-    "at": "2026-09-21T16:45:39.521Z",
-    "sourceCommit": "a2248f860580107dad82c94e5f864646c4538ecc",
-    "receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json"
+    "event": "CLOUD-INBOX/events/2026-09-22/cloudflare-research-view-cf006.json",
+    "at": "2026-09-22T08:20:38.476Z",
+    "sourceCommit": "c7e5704902f4b0515a8462026199088c1fef8f94",
+    "receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json"
   }
 }

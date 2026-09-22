@@ -3,7 +3,7 @@
   "task_id": "MIRA-EXPO-20260921-01",
   "checked_at": "2026-09-21T16:20:37.632553+00:00",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
+  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
   "deadline": "2026-09-24T20:00:00+07:00",
   "gates": [
     {
@@ -76,10 +76,12 @@
       "evidence": [
         "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
         "project-bible/mira/operations/CLOUDFLARE-INVENTORY-20260921.json",
-        "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json"
+        "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json",
+        "CF005 actual remote import/replay accepted from LOCAL receipt at c7e5704902f4b0515a8462026199088c1fef8f94:405 agencies,43 groups,618 links; original13 operational tables preserved.",
+        "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json"
       ],
-      "checked_at": "2026-09-21T16:45:39.521Z",
-      "next_action": "Live schema/counts already accepted. Obtain current recovery point and authorized D1 execution; isolated acceptance then controlled additive import/migration. No VPS requirement.",
+      "checked_at": "2026-09-22T08:20:38.476Z",
+      "next_action": "LOCAL selectively publish CF006 and verify live operator access. Complete required native history/operations scope separately; public research import is already complete. No VPS requirement.",
       "due_date": "2026-09-23"
     },
     {
@@ -179,8 +181,32 @@
     "Digital browser only; no physical QR/Russia mobile test",
     "Prepared UI patch not deployed; no modified-UI browser acceptance",
     "Native crosswalk source lineage is not legal entity reconciliation of all405/master43",
-    "Five artifact hashes and60 package entries verified by CLOUD; decrypt/restore still NOT_RUN without key/target",
-    "EXPO22-A: server + DOM harness only; no rendered browser, Turnstile, remote D1 or release acceptance."
+    "Five artifact hashes and60 package entries verified by CLOUD; full encrypted native CRM recovery remains separate. Public research D1 import accepted from LOCAL CF005.",
+    "EXPO22-A: server + DOM harness only; no rendered browser, Turnstile, remote D1 or release acceptance.",
+    "CF006:83 local tests and public fixture smoke; rendered browser/deploy/live role tests not yet run."
   ],
-  "updated_at": "2026-09-22T02:09:54.508Z"
+  "updated_at": "2026-09-22T08:20:38.476Z",
+  "accepted_public_research_import": {
+    "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
+    "receipt_commit": "c7e5704902f4b0515a8462026199088c1fef8f94",
+    "evidence_type": "accepted_LOCAL_actual_remote_execution_receipt_not_CLOUD_reexecution",
+    "at": "2026-09-22T07:45:09.781072+00:00",
+    "snapshot_id": "MIRA-IMPORT-3c75b4a1a591a9bedbadc5840ea0b5640e1e6c9c2090066f22898d57e6537c7d",
+    "counts": {
+      "agencies": 405,
+      "developer_groups": 43,
+      "project_links": 618,
+      "aliases": 448,
+      "indexed_fields": 7742,
+      "field_rows_include_missing_values": true,
+      "native_lineage": 0
+    },
+    "remote_imports": 1,
+    "remote_replays": 1,
+    "completed_snapshots": 1,
+    "original_tables_preserved": 13,
+    "original_schema_objects_preserved": 48,
+    "native_full_crm_restore": false
+  },
+  "operator_research_view_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json"
 }

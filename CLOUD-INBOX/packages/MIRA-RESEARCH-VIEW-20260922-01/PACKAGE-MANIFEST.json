@@ -1,0 +1,29 @@
+{
+  "checkpoint": "CF006",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+  "files": [
+    {
+      "path": "research-view.mjs",
+      "sha256": "201ebe722ef2d03b547d508903a88df00e71c963d172f5c855f90ac89fa8e623"
+    },
+    {
+      "path": "research-ui.mjs",
+      "sha256": "2cb81757da968631be7594eb9f2b27683b167a14eba62df56b8c50140c47e4c5"
+    },
+    {
+      "path": "mira-research-view.test.mjs",
+      "sha256": "bcfc2e91afaa3e249e52ee1b01692fbe5c382945e242f0c8de02df19799ef3d1"
+    },
+    {
+      "path": "smoke-public-db.mjs",
+      "sha256": "05698f7266b7464e612db67736236cd2c10056db6cc96954dff897e4eccb97c1"
+    },
+    {
+      "path": "README.md",
+      "sha256": "30bc254fa2a1ce9b604ace7a4ea317e1d04c312ce369988ec480132c1ac5225a"
+    }
+  ],
+  "auth_dependency": "Use existing auth.mjs from current main; not replaced",
+  "worker_integration": "Selective router edit per README; not a full site-worker replacement"
+}

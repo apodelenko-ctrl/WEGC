@@ -1,3 +1,13 @@
+## CF006 — 22 сентября 2026: импорт принят, операторский просмотр подготовлен
+
+**Актуальный статус:** CF005 выполнен LOCAL в рабочей `mira-pilot`, receipt commit `c7e5704902f4b0515a8462026199088c1fef8f94`:405 агентств,43 группы застройщиков,618 связей,1 completed snapshot; replay без дублей, исходные13 таблиц/48 schema objects сохранены. Прежние требования повторить bookmark, export/import или общий аудит ниже — исторические и закрыты. Полный private native CRM/mail restore этим не подтверждён.
+
+В `CLOUD-INBOX/packages/MIRA-RESEARCH-VIEW-20260922-01` реализован закрытый экран `/mira/research/`: поиск, страницы agency/developer, значения контактов с источниками/датами/status/conversation_scope и связи проектов. Доступ только active operator через существующий signed Access JWT; только public completed snapshot из конфигурации. **83/83 локальных теста**, full-source smoke448 записей/7742 поля (включая пропуски). Это не live acceptance и не7742 проверенных контакта.
+
+LOCAL: выборочно интегрировать пакет по README на актуальный main, сохранить EXPO22-A и Access, установить точный snapshot из CF005, вернуть deploy SHA и live role/browser receipt. Новая D1 миграция этому экрану не нужна. Операторский экран заявок, уведомления, public intake и полная репетиция остаются отдельными этапами. Новых записей/import/deploy/отправок в этом CLOUD блоке0. Botanica signed/stamped-and-sent сохранён. До GO/NO-GO запуск не объявляется готовым.
+
+Receipt: `CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json`; event: `CLOUD-INBOX/events/2026-09-22/cloudflare-research-view-cf006.json`. Источник main `9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137`.
+
 # MIRA-CLOUDFLARE-20260921-01 — существующая Cloudflare D1, checkpoint CF001
 
 Поручение владельца «действуй» и screenshot21Sep23:40 подтверждают существующие ресурсы: `mira-pilot-api`, `pilot.wegc.fund`, `MIRA_DB → mira-pilot`, `MIRA_ASSETS`. Не создавать вторую productionбазу и не возвращать обязательный VPS.

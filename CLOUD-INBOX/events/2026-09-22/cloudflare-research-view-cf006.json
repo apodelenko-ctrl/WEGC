@@ -1,0 +1,15 @@
+{
+  "id": "cloudflare-research-view-cf006",
+  "at": "2026-09-22T08:20:38.476Z",
+  "actor": "CLOUD",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json",
+  "package": "CLOUD-INBOX/packages/MIRA-RESEARCH-VIEW-20260922-01",
+  "accepted_local_receipt_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+  "result": "operator research viewer implemented; remote import accepted from LOCAL receipt; live release pending",
+  "new_research_records": 0,
+  "new_remote_imports": 0,
+  "tests_passed": 83,
+  "external_sends": 0
+}

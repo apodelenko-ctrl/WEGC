@@ -1,9 +1,9 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
   "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-22T06:53:11.304Z",
+  "updated_at": "2026-09-22T08:20:38.476Z",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
+  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
   "next_gate": "EXPO-03",
   "next_action": "LOCAL selectively integrate package against current main, add operator UI/notification and complete controlled D1/Access/Turnstile acceptance. Link existing access CTA only after intake works. CLOUD can continue operator UI and operational controls without waiting for private CRM key.",
   "parallel_available_action": "Implement operator UI for prepared queue + explicit response publication; keep existing Access auth. Actual public release still gated.",
@@ -48,7 +48,6 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
-    "Authorized Cloudflare executor missing from this session",
     "Actual public-intake privacy/retention approval, operator subject/shift, Turnstile config",
     "Narrow public route Access policy acceptance; do not expose existing API",
     "Separate recovery key or portable private export for full native data only"
@@ -57,10 +56,9 @@
   "restore_authorized": true,
   "restore_preflight_receipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
   "restore_blockers": [
-    "Existing resources/schema and owner-supplied recovery bookmark confirmed; authorized Cloudflare execution channel unavailable in CLOUD session",
-    "Separate recovery key or authorized portable native export needed for encrypted private data"
+    "Full encrypted native CRM/history only: separate recovery key or authorized portable native export. Public research import completed via LOCAL CF005."
   ],
-  "immediate_owner_priority": "Execute controlled Cloudflare import through authorized LOCAL; recovery bookmark supplied, no repeat request.",
+  "immediate_owner_priority": "Publish protected operator research view and continue public request/receipt/operator/response flow; CF005 public research import accepted.",
   "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
   "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
   "latest_cloudflare_schema_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
@@ -83,5 +81,28 @@
   },
   "latest_intake_checkpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
   "latest_cloudflare_recovery_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json",
-  "cloudflare_next_action": "Authorized LOCAL executor: use existing Wrangler account, export mira-pilot privately, run controlled research import package on an isolated D1 target, then additive import/replay into existing mira-pilot after acceptance; return sanitized count/hash receipt. Do not request /bookmark again or execute /restore for inspection."
+  "cloudflare_next_action": "LOCAL selectively integrate CF006 research-view modules against current main, configure the exact accepted public snapshot, preserve Access and EXPO22-A, and return deployed SHA plus live anonymous/member/operator acceptance. No repeat CF005 import or backup audit. Public intake/operator request UI and notifications remain a separate launch step.",
+  "latest_operator_research_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json",
+  "accepted_public_research_import": {
+    "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
+    "receipt_commit": "c7e5704902f4b0515a8462026199088c1fef8f94",
+    "evidence_type": "accepted_LOCAL_actual_remote_execution_receipt_not_CLOUD_reexecution",
+    "at": "2026-09-22T07:45:09.781072+00:00",
+    "snapshot_id": "MIRA-IMPORT-3c75b4a1a591a9bedbadc5840ea0b5640e1e6c9c2090066f22898d57e6537c7d",
+    "counts": {
+      "agencies": 405,
+      "developer_groups": 43,
+      "project_links": 618,
+      "aliases": 448,
+      "indexed_fields": 7742,
+      "field_rows_include_missing_values": true,
+      "native_lineage": 0
+    },
+    "remote_imports": 1,
+    "remote_replays": 1,
+    "completed_snapshots": 1,
+    "original_tables_preserved": 13,
+    "original_schema_objects_preserved": 48,
+    "native_full_crm_restore": false
+  }
 }
