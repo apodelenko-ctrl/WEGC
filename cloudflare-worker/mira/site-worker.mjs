@@ -1,5 +1,6 @@
 /** Dedicated MIRA hostname. The public website is never proxied through this Worker. */
 import api from './worker.mjs';
+import {researchView} from './research-view.mjs';
 import {ApiError, verifyAccess} from './auth.mjs';
 
 const pages = new Set(['/mira/pilot.html', '/mira/library.html']);
@@ -19,6 +20,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (!env.APP_ORIGIN || url.origin !== env.APP_ORIGIN) return failure(421, 'unexpected_origin');
+    if (url.pathname.startsWith('/mira/research/') || url.pathname === '/mira/api/admin/research' || url.pathname.startsWith('/mira/api/admin/research/')) return researchView(request, env);
     if (url.pathname.startsWith('/mira/api/')) return api.fetch(request, env);
     if (!['GET', 'HEAD'].includes(request.method)) return failure(405, 'method_not_allowed');
     if (url.pathname === '/') return redirect('/mira/pilot.html');
