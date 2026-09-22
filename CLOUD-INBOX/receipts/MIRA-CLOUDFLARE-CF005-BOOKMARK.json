@@ -1,0 +1,24 @@
+{
+  "checkpoint": "CF005",
+  "task_id": "MIRA-CLOUDFLARE-20260921-01",
+  "source_sha": "285f60314d91754f89eb3a40688a563d40159778",
+  "received_at": "2026-09-22T06:53:11.304Z",
+  "evidence_type": "owner_pasted_Cloudflare_Console_result",
+  "database": "mira-pilot",
+  "bookmark": "00000018-00000000-000050ed-4d1a218ff149c1d124392effed0d360c",
+  "bookmark_issued_at": null,
+  "bookmark_restorability_tested": false,
+  "backup_export_completed": false,
+  "restore_executed": false,
+  "remote_writes": 0,
+  "meaning": "Recovery reference received. This is not an exported backup, a restore, or authorization credentials.",
+  "missing_execution_capability": {
+    "cloudflare_connector": false,
+    "cloudflare_api_token_environment": false
+  },
+  "next_action": "Authorized LOCAL executor: use existing Wrangler account, export mira-pilot privately, run controlled research import package on an isolated D1 target, then additive import/replay into existing mira-pilot after acceptance; return sanitized count/hash receipt. Do not request /bookmark again or execute /restore for inspection.",
+  "source_docs": [
+    "https://developers.cloudflare.com/d1/reference/time-travel/",
+    "https://developers.cloudflare.com/d1/best-practices/import-export-data/"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
   "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-22T02:09:54.508Z",
+  "updated_at": "2026-09-22T06:53:11.304Z",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
   "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
   "next_gate": "EXPO-03",
@@ -48,7 +48,6 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
-    "Current backup/bookmark not received; last /bookmark screenshot was Studio without returned bookmark",
     "Authorized Cloudflare executor missing from this session",
     "Actual public-intake privacy/retention approval, operator subject/shift, Turnstile config",
     "Narrow public route Access policy acceptance; do not expose existing API",
@@ -58,10 +57,10 @@
   "restore_authorized": true,
   "restore_preflight_receipt": "CLOUD-INBOX/receipts/MIRA-RESTORE-20260921-01.json",
   "restore_blockers": [
-    "Authorized Cloudflare account/resources access not confirmed",
+    "Existing resources/schema and owner-supplied recovery bookmark confirmed; authorized Cloudflare execution channel unavailable in CLOUD session",
     "Separate recovery key or authorized portable native export needed for encrypted private data"
   ],
-  "immediate_owner_priority": "Existing Cloudflare D1 controlled import after live schema inventory; continue EXPO-03",
+  "immediate_owner_priority": "Execute controlled Cloudflare import through authorized LOCAL; recovery bookmark supplied, no repeat request.",
   "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
   "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
   "latest_cloudflare_schema_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
@@ -82,5 +81,7 @@
     "mira_projects": 0,
     "mira_rate_limits": 1
   },
-  "latest_intake_checkpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json"
+  "latest_intake_checkpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
+  "latest_cloudflare_recovery_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json",
+  "cloudflare_next_action": "Authorized LOCAL executor: use existing Wrangler account, export mira-pilot privately, run controlled research import package on an isolated D1 target, then additive import/replay into existing mira-pilot after acceptance; return sanitized count/hash receipt. Do not request /bookmark again or execute /restore for inspection."
 }

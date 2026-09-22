@@ -20,7 +20,7 @@
     "Dashboard counters do not establish live acceptance",
     "Account identifiers and screenshot image not republished"
   ],
-  "updated_at": "2026-09-21T17:06:24.516Z",
+  "updated_at": "2026-09-22T06:53:11.304Z",
   "remote_table_schema_received_via_owner_export": true,
   "operational_table_definitions_matched": 13,
   "table_schema_receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
@@ -62,5 +62,7 @@
   },
   "auxiliary_schema_matches_main": true,
   "live_baseline_receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json",
-  "next_action": "Obtain current mira-pilot recovery bookmark in D1 Console (/bookmark) and retain pre-import backup through authorized account access; then execute controlled additive research import and replay. CF004 accepted table schema, indexes/triggers, migrations and counts; do not repeat inventory."
+  "next_action": "Authorized LOCAL executor: use existing Wrangler account, export mira-pilot privately, run controlled research import package on an isolated D1 target, then additive import/replay into existing mira-pilot after acceptance; return sanitized count/hash receipt. Do not request /bookmark again or execute /restore for inspection.",
+  "recovery_bookmark_received": true,
+  "recovery_receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json"
 }

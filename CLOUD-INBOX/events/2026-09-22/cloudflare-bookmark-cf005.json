@@ -1,0 +1,8 @@
+{
+  "id": "MIRA-CF005-BOOKMARK-20260922",
+  "at": "2026-09-22T06:53:11.304Z",
+  "source_sha": "285f60314d91754f89eb3a40688a563d40159778",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json",
+  "status": "recovery_reference_received_execution_pending",
+  "remote_writes": 0
+}
