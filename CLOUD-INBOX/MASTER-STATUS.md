@@ -1,3 +1,13 @@
+## EXPO22-A — 22 сентября 2026: код публичного запроса и очереди
+
+Подготовлен CLOUD-INBOX/packages/MIRA-INTAKE-20260922-01 на точном main 9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137. Форма запроса подключения, серверная квитанция, assigned operator, идемпотентность, закрытый по секрету статус и operator-only ответ. Три аддитивные таблицы; существующие13 operational tables не изменены. Email остаётся непроверенным; ни доступа, ни договора, ни активации запись не создаёт.
+
+**72/72 локальных теста**:43 прежних API/Access,23 новых серверных SQL,6 DOM-harness. Реальная SQLite-транзакция, ошибка с rollback, concurrent replay/CAS и restart с диска проверены. Отдельно dry-run/apply/replay/hash-conflict пакета PASS; совместимость0004/0005 и сохранение13 таблиц/29 именованных MIRA schema objects PASS. Это не browser/remote D1 acceptance.
+
+CF004 baseline уже принят; не повторять inventory. Recovery bookmark пока не возвращён: последний screenshot показывал /bookmark в Studio, без ID. Cloudflare connector/исполнитель недоступен в этой сессии. LOCAL receipts не изменились. Нужны актуальная backup-точка, авторизованный selective release, public-intake privacy/retention, actual operator/Turnstile, узкое правило публичного доступа и live-проверка. В пакет не входят operator UI и уведомления; это следующий доступный кодовый блок. Никто не получил реальные письма/заявки, production writes0, deploy0. Full native CRM restore pending; ключ не нужен для этого кода. VPS не требуется.
+
+Receipt: CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json; event: CLOUD-INBOX/events/2026-09-22/cloud-expo-intake-a.json. Research405/43 и native78/87+2 отдельно, новых research/import0. Botanica sent сохранён. Gates остаются3/12 принятыми, запуск ещё не готов.
+
 > **CF004 — live D1 baseline принят:** исправленный запрос успешно выполнен владельцем. `mira-pilot`: applications1, memberships1, events3, rate_limits1; остальные9 operational tables0, включая agencies/projects/leads. Все25 индексов и10 триггеров совпали с main; миграции0001–0003 применены17.09.2026 13:07:50 (timezone не указан). Содержание/назначение этих записей по counts не выводится. Remote import0; следующий шаг — текущий recovery bookmark/backup и контролируемый additive import. Повторять inventory не нужно. Receipt: `CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json`.
 
 > **CF003 — исправлен запрос чтения D1:** live отклонил предыдущую цепочку UNION ALL. В `preimport-check.sql` теперь один SELECT без UNION:13счётчиков и2JSON-поля. Проверен локально с compound-select limit1; live исполнение ожидается. Никаких изменений D1 не было. Не повторять старый UNION-запрос.

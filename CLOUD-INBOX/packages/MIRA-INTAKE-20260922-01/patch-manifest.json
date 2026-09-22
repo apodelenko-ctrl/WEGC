@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "path": "cloudflare-worker/mira/intake-ui.mjs",
+      "sha256_before": null,
+      "sha256_after": "682c8678dbb8ed6e08b77ed47cee229ddad69adec48f7f56c2392a2ba100f217"
+    },
+    {
+      "path": "cloudflare-worker/mira/migrations/0005_public_intake.sql",
+      "sha256_before": null,
+      "sha256_after": "49c5e74649d9b8422d587723c347de0dfe71a4fb4ddbfd07e303abf5d3a4b864"
+    },
+    {
+      "path": "cloudflare-worker/mira/public-intake.mjs",
+      "sha256_before": null,
+      "sha256_after": "8c5e9ab1a3197006bcd796676bc318bdb8bbdb2e91368ce0c8ff2f7e851be862"
+    },
+    {
+      "path": "cloudflare-worker/mira/site-worker.mjs",
+      "sha256_before": "e03658569353345ec13c4d657b1be3e6fd01e5b1854bb007d2859e1be24a5b08",
+      "sha256_after": "78e716756c2e8f245f2fc375fedbcf988aa9d1eceff27b3739878f415ea1d4a0"
+    },
+    {
+      "path": "cloudflare-worker/mira/worker.mjs",
+      "sha256_before": "cff47126c689b3d84c228f7e3a60ca3cab3239f3f75e330ef958c44df2d3d4ac",
+      "sha256_after": "196891df4e35fb18a1d2887634a39385a6cc0a0c9fc3487e3fcf840067e8ca59"
+    },
+    {
+      "path": "tests/mira-intake-client.test.mjs",
+      "sha256_before": null,
+      "sha256_after": "efdadca6e1c70a4ac81a962b761a5954b1849c193f61300f73ef73160a8d39da"
+    },
+    {
+      "path": "tests/mira-public-intake.test.mjs",
+      "sha256_before": null,
+      "sha256_after": "2676423b476a77ae96cf0ce3f9c224d2407eedb00566f73fa7e991f9d064aaff"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "cloudflare-worker/mira/admin-audit.mjs",
+      "sha256": "21e9803d3870dc6b3c5ef87408ea3ba680889706974751d328088ad11530c3e0"
+    },
+    {
+      "path": "cloudflare-worker/mira/auth.mjs",
+      "sha256": "e6ec67c339e53a097f7c5149cd4d91e8bc6df846bbf870cf0d8d56b9e838bc25"
+    },
+    {
+      "path": "cloudflare-worker/mira/experience.mjs",
+      "sha256": "18577134604bd29470df97b0137bdaa9ee2fd2b1ced18bbd2f80b0ea0aea6dac"
+    },
+    {
+      "path": "cloudflare-worker/mira/materials.mjs",
+      "sha256": "648f88d09ff2c8adb90ff94d14e0bd2ecf677d8943fdfbdbc6520d24d8575ce1"
+    },
+    {
+      "path": "cloudflare-worker/mira/migrations/0001_mira.sql",
+      "sha256": "9afe711de379bbaea95916e04ebf386dcec481511a5428861dbc4c0cb0175bb3"
+    },
+    {
+      "path": "cloudflare-worker/mira/migrations/0002_operations.sql",
+      "sha256": "9e965605d09de7765c900f05a89aff756840a2e4569e8f3498100ecb7ebf8eae"
+    },
+    {
+      "path": "cloudflare-worker/mira/migrations/0003_materials.sql",
+      "sha256": "00f11779822af1ae2ea951acb15f9485ec5a7fe0c1f1cc5b8047d9499d9c1708"
+    },
+    {
+      "path": "cloudflare-worker/mira/rules.mjs",
+      "sha256": "e2acb8658d9f39f29483b94845d887f07bdf3d4361d913c8f25907dc564b0da0"
+    },
+    {
+      "path": "tests/mira-api.test.mjs",
+      "sha256": "46407665026d82a152c1859f4b6dbe7a62be3866bb8c3302200f6c65e2581f89"
+    },
+    {
+      "path": "tests/mira-site.test.mjs",
+      "sha256": "b37c3f83bc838922e119ef863151885f48e2e95c893c50cd6f091d986232aab7"
+    }
+  ],
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137"
+}

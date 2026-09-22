@@ -6,8 +6,8 @@
   "sourceBranch": "mira/research-night-20260918",
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
-  "nextTaskForLocal": "MIRA-CLOUDFLARE-20260921-01",
-  "routingNote": "Obtain current mira-pilot recovery bookmark in D1 Console (/bookmark) and retain pre-import backup through authorized account access; then execute controlled additive research import and replay. CF004 accepted table schema, indexes/triggers, migrations and counts; do not repeat inventory.",
+  "nextTaskForLocal": "MIRA-EXPO-20260921-01",
+  "routingNote": "LOCAL selectively integrate package against current main, add operator UI/notification and complete controlled D1/Access/Turnstile acceptance. Link existing access CTA only after intake works. CLOUD can continue operator UI and operational controls without waiting for private CRM key.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": true,
   "localReceiptConfirmed": true,
@@ -359,12 +359,15 @@
       "id": "MIRA-EXPO-20260921-01",
       "priority": "P0-exhibition-deadline",
       "owner": "CLOUD preparation; LOCAL product integration until accepted handoff",
-      "status": "prepared_pending_local_integration",
+      "status": "public_intake_package_verified_local_integration_pending",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-EXPO-20260921-01.md",
       "planPath": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-EXPO-20260921-01.json",
       "deadline": "2026-09-24T20:00:00+07:00",
-      "automationId": "6ab158bf4b848191a4c612c68d25c5b3"
+      "automationId": "6ab158bf4b848191a4c612c68d25c5b3",
+      "latestCheckpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
+      "intakePackage": "CLOUD-INBOX/packages/MIRA-INTAKE-20260922-01",
+      "nextAction": "LOCAL selectively integrate package against current main, add operator UI/notification and complete controlled D1/Access/Turnstile acceptance. Link existing access CTA only after intake works. CLOUD can continue operator UI and operational controls without waiting for private CRM key."
     },
     {
       "id": "MIRA-CLOUDFLARE-20260921-01",

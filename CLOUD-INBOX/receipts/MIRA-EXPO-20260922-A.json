@@ -1,0 +1,70 @@
+{
+  "task_id": "MIRA-EXPO-20260921-01",
+  "checkpoint": "EXPO22-A",
+  "status": "implemented_local_verified_not_deployed",
+  "checked_at": "2026-09-22T02:09:54.508Z",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
+  "package": "CLOUD-INBOX/packages/MIRA-INTAKE-20260922-01",
+  "test_report": "CLOUD-INBOX/packages/MIRA-INTAKE-20260922-01/TEST-REPORT.json",
+  "read_LOCAL_receipts": [
+    "CLOUD-INBOX/receipts/MIRA-LOCAL-20260918-02.json",
+    "CLOUD-INBOX/receipts/MIRA-CLOSEOUT-20260918-01.json",
+    "CLOUD-INBOX/receipts/MIRA-CLOUD-CUTOVER-20260919-01.json"
+  ],
+  "new_LOCAL_receipt_since_CF004": false,
+  "delivered": [
+    "Public connection-request HTML and client, opt-in disabled by default",
+    "Three additive D1 tables with atomic request/event and bounded hashed rate quotas",
+    "Exact idempotent replay, current operator assignment, receipt-secret status access",
+    "Operator-only queue and optimistic versioned response API",
+    "Hash-guarded selective main integration package"
+  ],
+  "tests": {
+    "passed": 72,
+    "failed": 0,
+    "existing_regression": 43,
+    "new_server_sql_tests": 23,
+    "new_client_DOM_harness_tests": 6
+  },
+  "counts": {
+    "research_agencies_before": 405,
+    "research_agencies_after": 405,
+    "research_developers_before": 43,
+    "research_developers_after": 43,
+    "native_accounts_snapshot": 167,
+    "native_source_lineage": 165,
+    "new_research_records": 0,
+    "CRM_imports": 0,
+    "real_requests_created": 0,
+    "external_messages": 0,
+    "remote_D1_writes": 0
+  },
+  "live_baseline": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json",
+  "live_deployed": false,
+  "live_accepted": false,
+  "cloud_restore_complete": false,
+  "blockers": [
+    "Cloudflare D1 migration, import or replay",
+    "Real Turnstile and Access policy",
+    "Rendered browser/mobile/Russia acceptance",
+    "Operator screen and notification delivery",
+    "Real user submission/response",
+    "Private CRM decryption and cloud restore"
+  ],
+  "additional_release_inputs": [
+    "Current backup/bookmark not received; last /bookmark screenshot was Studio without returned bookmark",
+    "Authorized Cloudflare executor missing from this session",
+    "Actual public-intake privacy/retention approval, operator subject/shift, Turnstile config",
+    "Narrow public route Access policy acceptance; do not expose existing API",
+    "Separate recovery key or portable private export for full native data only"
+  ],
+  "next_action": "LOCAL selectively integrate package against current main, add operator UI/notification and complete controlled D1/Access/Turnstile acceptance. Link existing access CTA only after intake works. CLOUD can continue operator UI and operational controls without waiting for private CRM key.",
+  "preserved": [
+    "Existing invited technical intake and main Worker operator directory",
+    "Printed QR URL",
+    "Native167 separate from canonical405/master43",
+    "Botanica signed/stamped-and-sent; no first-contact resend",
+    "No whole research merge, no VPS purchase, no production mutation"
+  ]
+}

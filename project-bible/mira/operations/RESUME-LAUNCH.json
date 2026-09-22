@@ -1,12 +1,12 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
   "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-21T17:06:24.516Z",
+  "updated_at": "2026-09-22T02:09:54.508Z",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "a2248f860580107dad82c94e5f864646c4538ecc",
-  "next_gate": "EXPO-06",
-  "next_action": "Obtain current mira-pilot recovery bookmark in D1 Console (/bookmark) and retain pre-import backup through authorized account access; then execute controlled additive research import and replay. CF004 accepted table schema, indexes/triggers, migrations and counts; do not repeat inventory.",
-  "parallel_available_action": "Selective QR intake patch and operator-only research view integration; preserve all current application records",
+  "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
+  "next_gate": "EXPO-03",
+  "next_action": "LOCAL selectively integrate package against current main, add operator UI/notification and complete controlled D1/Access/Turnstile acceptance. Link existing access CTA only after intake works. CLOUD can continue operator UI and operational controls without waiting for private CRM key.",
+  "parallel_available_action": "Implement operator UI for prepared queue + explicit response publication; keep existing Access auth. Actual public release still gated.",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
     "2026-09-25",
@@ -14,8 +14,8 @@
   ],
   "plan_path": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
   "evidence_path": "project-bible/mira/operations/LAUNCH-EVIDENCE.json",
-  "event_path": "CLOUD-INBOX/events/2026-09-21/cloud-expo-readiness-20260921.json",
-  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260921-01.json",
+  "event_path": "CLOUD-INBOX/events/2026-09-22/cloud-expo-intake-a.json",
+  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
   "counts": {
     "agency_candidates": 405,
     "agency_RU": 263,
@@ -48,10 +48,11 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
-    "Current pre-import recovery bookmark / backup",
-    "Authorized D1 execution channel; no Cloudflare connector available to CLOUD in this session",
-    "Actual remote import, replay, preservation and operator-view acceptance",
-    "Separate recovery key or portable private export for full native CRM/history"
+    "Current backup/bookmark not received; last /bookmark screenshot was Studio without returned bookmark",
+    "Authorized Cloudflare executor missing from this session",
+    "Actual public-intake privacy/retention approval, operator subject/shift, Turnstile config",
+    "Narrow public route Access policy acceptance; do not expose existing API",
+    "Separate recovery key or portable private export for full native data only"
   ],
   "all_done": false,
   "restore_authorized": true,
@@ -80,5 +81,6 @@
     "mira_payment_requests": 0,
     "mira_projects": 0,
     "mira_rate_limits": 1
-  }
+  },
+  "latest_intake_checkpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json"
 }

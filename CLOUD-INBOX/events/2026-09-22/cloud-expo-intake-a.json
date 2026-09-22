@@ -1,0 +1,13 @@
+{
+  "id": "MIRA-EXPO22-A-INTAKE-20260922",
+  "at": "2026-09-22T02:09:54.508Z",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
+  "package": "CLOUD-INBOX/packages/MIRA-INTAKE-20260922-01",
+  "status": "prepared_local_tests_passed_not_deployed",
+  "node_tests_passed": 72,
+  "real_requests": 0,
+  "remote_writes": 0,
+  "next": "LOCAL selectively integrate package against current main, add operator UI/notification and complete controlled D1/Access/Turnstile acceptance. Link existing access CTA only after intake works. CLOUD can continue operator UI and operational controls without waiting for private CRM key."
+}

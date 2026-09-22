@@ -1,5 +1,5 @@
 {
-  "assessed_at": "2026-09-21T16:45:39.521Z",
+  "assessed_at": "2026-09-22T02:09:56.154640+00:00",
   "ready": false,
   "accepted_gates": 3,
   "total_gates": 12,
@@ -37,7 +37,7 @@
       "status": "prepared",
       "reason": "",
       "owner": "LOCAL integration; CLOUD patch",
-      "next_action": "Apply selective patch and accept public request channel or server intake with receipt."
+      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS."
     },
     {
       "id": "EXPO-04",
@@ -53,15 +53,15 @@
       "status": "partial",
       "reason": "",
       "owner": "LOCAL",
-      "next_action": "Exercise one controlled incoming request through assigned operator and durable response."
+      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS."
     },
     {
       "id": "EXPO-06",
       "accepted": false,
       "status": "partial",
       "reason": "",
-      "owner": "CLOUD restore / LOCAL current operation",
-      "next_action": "Read existing mira-pilot schema and counts via authorized D1 Console/API using package/live-inventory.sql, compare with source, then isolated D1 acceptance and controlled additive import; continue operator integration. No VPS requirement."
+      "owner": "CLOUD preparation; authorized Cloudflare integration",
+      "next_action": "Live schema/counts already accepted. Obtain current recovery point and authorized D1 execution; isolated acceptance then controlled additive import/migration. No VPS requirement."
     },
     {
       "id": "EXPO-07",

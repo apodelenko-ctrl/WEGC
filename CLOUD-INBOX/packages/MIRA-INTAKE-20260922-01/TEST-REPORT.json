@@ -1,0 +1,39 @@
+{
+  "checkpoint": "EXPO22-A",
+  "tested_at": "2026-09-22T02:09:54.508Z",
+  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
+  "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
+  "node_version": "v24.19.0",
+  "node_tests": {
+    "passed": 72,
+    "failed": 0,
+    "existing_regression": 43,
+    "new_server_sql_tests": 23,
+    "new_client_DOM_harness_tests": 6
+  },
+  "package_checks": {
+    "dry_run": "PASS 7 pending, 0 writes",
+    "apply": "PASS 7 files applied to isolated main",
+    "replay": "PASS 0 pending, 0 writes",
+    "changed_source": "PASS refuses modified input without overwriting"
+  },
+  "migration_preservation": {
+    "original_operational_tables": 13,
+    "original_named_mira_schema_objects": 29,
+    "rows_and_DDL_unchanged": true,
+    "coexists_with_research_0004": true,
+    "foreign_key_check": "PASS",
+    "scope": "local SQLite and synthetic sentinel, not live D1"
+  },
+  "not_run": [
+    "Cloudflare D1 migration, import or replay",
+    "Real Turnstile and Access policy",
+    "Rendered browser/mobile/Russia acceptance",
+    "Operator screen and notification delivery",
+    "Real user submission/response",
+    "Private CRM decryption and cloud restore"
+  ],
+  "real_external_calls_in_tests": 0,
+  "production_writes": 0,
+  "deployed": false
+}

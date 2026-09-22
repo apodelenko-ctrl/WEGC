@@ -3,7 +3,7 @@
   "task_id": "MIRA-EXPO-20260921-01",
   "checked_at": "2026-09-21T16:20:37.632553+00:00",
   "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "e7a798ce40021c21618e2def6d076139344c0ee9",
+  "source_research_sha": "8a76199e7a54bc6a3e01f3763004892edc7e19d5",
   "deadline": "2026-09-24T20:00:00+07:00",
   "gates": [
     {
@@ -36,10 +36,11 @@
       "status": "prepared",
       "owner": "LOCAL integration; CLOUD patch",
       "evidence": [
-        "CTA patch implemented and tested; current access requires prior invitation."
+        "CTA patch implemented and tested; current access requires prior invitation.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Apply selective patch and accept public request channel or server intake with receipt.",
+      "checked_at": "2026-09-22T02:09:54.508Z",
+      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS.",
       "due_date": "2026-09-22"
     },
     {
@@ -60,10 +61,11 @@
       "status": "partial",
       "owner": "LOCAL",
       "evidence": [
-        "Previous technical receipt is accepted; current end-to-end assignment/notification/replay not newly accepted."
+        "Previous technical receipt is accepted; current end-to-end assignment/notification/replay not newly accepted.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Exercise one controlled incoming request through assigned operator and durable response.",
+      "checked_at": "2026-09-22T02:09:54.508Z",
+      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS.",
       "due_date": "2026-09-23"
     },
     {
@@ -73,10 +75,11 @@
       "owner": "CLOUD preparation; authorized Cloudflare integration",
       "evidence": [
         "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
-        "project-bible/mira/operations/CLOUDFLARE-INVENTORY-20260921.json"
+        "project-bible/mira/operations/CLOUDFLARE-INVENTORY-20260921.json",
+        "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json"
       ],
       "checked_at": "2026-09-21T16:45:39.521Z",
-      "next_action": "Read existing mira-pilot schema and counts via authorized D1 Console/API using package/live-inventory.sql, compare with source, then isolated D1 acceptance and controlled additive import; continue operator integration. No VPS requirement.",
+      "next_action": "Live schema/counts already accepted. Obtain current recovery point and authorized D1 execution; isolated acceptance then controlled additive import/migration. No VPS requirement.",
       "due_date": "2026-09-23"
     },
     {
@@ -176,7 +179,8 @@
     "Digital browser only; no physical QR/Russia mobile test",
     "Prepared UI patch not deployed; no modified-UI browser acceptance",
     "Native crosswalk source lineage is not legal entity reconciliation of all405/master43",
-    "Five artifact hashes and60 package entries verified by CLOUD; decrypt/restore still NOT_RUN without key/target"
+    "Five artifact hashes and60 package entries verified by CLOUD; decrypt/restore still NOT_RUN without key/target",
+    "EXPO22-A: server + DOM harness only; no rendered browser, Turnstile, remote D1 or release acceptance."
   ],
-  "updated_at": "2026-09-21T16:45:39.521Z"
+  "updated_at": "2026-09-22T02:09:54.508Z"
 }
