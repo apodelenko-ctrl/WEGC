@@ -36,7 +36,7 @@ export function validateDiscovery(d){
   if(p.commerciallyEnabled!==false||p.legalSeller!==null||p.commercialStatus!=='research_only'||p.availabilityStatus!=='on_request')throw Error('Unverified discovery sale activation');
   for(const k of ['price','roi','availableUnits','bookingEnabled','commission','priceFrom'])if(own(p,k))throw Error('Unsupported commercial field');
   const u=new URL(p.sourceURL);if(u.protocol!=='https:'||u.username||u.password)throw Error('Invalid discovery source');
-  if(p.image!==null)throw Error('Discovery media not approved');
+  if(p.image!==null&&(!new RegExp(`^/images/mira-markets/${p.market}/[a-z0-9-]+\\.webp$`).test(p.image)||p.imageStatus!=='reviewed_project_media'))throw Error('Discovery media not approved');
  }
  if(counts.vietnam!==15||counts.montenegro!==15)throw Error('Invalid discovery counts');return d;
 }

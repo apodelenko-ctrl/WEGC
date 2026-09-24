@@ -9,10 +9,10 @@ def transform(source):
     source=source.replace('Оставьте рабочий контакт и задачу —','Оставьте рабочий контакт —')
     if PUBLIC_MARKER in source:return source
     if MARKER in source:
-        replacement=PUBLIC_MARKER+'<div class="pilot-entry"><p>Публичный приём заявок агентств открыт. Оставьте рабочий контакт — команда МИРА ответит в вашей квитанции.</p><p><a class="btn" href="https://pilot.wegc.fund/mira/request/">Подать заявку агентства</a></p><p class="fine">Приглашение не требуется. Данные покупателей не нужны. Договор и условия работы согласуются отдельно.</p><p><a href="./pilot.html">Вход по уже выданному приглашению</a></p></div>'
+        replacement=PUBLIC_MARKER+'<div class="pilot-entry"><p>Публичный приём заявок агентств открыт. Оставьте рабочий контакт — команда МИРА ответит на рабочий email.</p><p><a class="btn" href="https://pilot.wegc.fund/mira/request/">Подать заявку агентства</a></p><p class="fine">Приглашение не требуется. Данные покупателей не нужны. Договор и условия работы согласуются отдельно.</p><p><a href="./pilot.html">Вход по уже выданному приглашению</a></p></div>'
         source,n=re.subn(re.escape(MARKER)+r'<div class="pilot-entry">.*?</div>',lambda _:replacement,source,count=1,flags=re.S)
         if n!=1:raise ValueError('Expected one existing pilot entry')
-        source=source.replace('Рабочая заявка принимается только через защищённый доступ и подтверждается серверным номером.','Отправьте публичную заявку и сохраните личную квитанцию со статусом и ответом.')
+        source=source.replace('Рабочая заявка принимается только через защищённый доступ и подтверждается серверным номером.','Оставьте заявку — мы свяжемся с вами по рабочему email.')
         return source
     button='<a class="btn" href="#join">Запросить демонстрацию</a>'
     if source.count(button)!=1 or source.count('<form onsubmit="sendLead(event)">')!=1:

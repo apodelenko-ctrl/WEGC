@@ -25,8 +25,8 @@ test('operator text displayed literally; refresh uses secret-bearing POST',async
 test('reload restores only receipt metadata without resubmitting',()=>{
  const stored={key:crypto.randomUUID(),token:'a'.repeat(64),id:'saved-test-id'},h=harness({stored});assert.equal(h.request.hidden,true);assert.equal(h.refresh.hidden,false);assert.match(h.message.textContent,/saved-test-id/);assert.equal(h.requests.length,0);
 });
-test('storage denied still permits current-tab receipt and gives warning',async()=>{
- const h=harness({storageFails:true});await h.submit();assert.equal(h.request.hidden,true);assert.match(h.message.textContent,/Хранилище браузера недоступно/);
+test('storage denied retains current-tab status and email contact path',async()=>{
+ const h=harness({storageFails:true});await h.submit();assert.equal(h.request.hidden,true);assert.match(h.message.textContent,/email/);assert.doesNotMatch(h.message.textContent,/Хранилище|секретн/);await h.refreshStatus();assert.equal(h.requests.length,2);
 });
 test('missing challenge and invalid form never call the API',async()=>{
  const h=harness();h.fields['cf-turnstile-response']='';await h.submit();assert.equal(h.requests.length,0);h.fields['cf-turnstile-response']='test';h.request.reportValidity=()=>false;await h.submit();assert.equal(h.requests.length,0);

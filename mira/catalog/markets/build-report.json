@@ -10,15 +10,15 @@
   "baselineExpansionProjects": 30,
   "discoveryExpansionProjects": 30,
   "combinedProjects": 678,
-  "reviewedProjectImages": 0,
+  "reviewedProjectImages": 60,
   "typographicCovers": 0,
-  "licensedDirectionPhotos": 60,
+  "licensedDirectionPhotos": 0,
   "newDetailPages": 60,
   "newMarketIndexPages": 8,
-  "existingHTMLIntegrated": 680,
+  "existingHTMLIntegrated": 60,
   "commerciallyEnabled": 0,
   "deployed": false,
   "phuketDataSHA256": "f3366c36c683e27e9f79d8db96a7f2985272395eba1906f751ebe019ac6b1bf4",
   "researchSHA256": "abfda5bda609619d4f71b2e84c58f4087d22939dd7cfab4429e2b66856ed14bf",
-  "requiresMediaCompletion": true
+  "requiresMediaCompletion": false
 }

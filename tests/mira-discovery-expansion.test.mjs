@@ -41,3 +41,9 @@ test('daily corrections keep precisely 3 partials and no verified seller',()=>{
  assert.equal(fresh.projects.find(p=>p.id==='vn-lumi-hanoi').developerGroup,'CapitaLand Group');
  assert.ok(fresh.projects.every(p=>p.legalSeller===null));
 });
+test('reviewed discovery media stays within its market and cannot traverse paths',()=>{
+ for(const image of ['/images/mira-markets/dubai/example.webp','/images/mira-markets/vietnam/../example.webp','//example.com/x.webp']){
+  const d=structuredClone(fresh);d.projects[0].image=image;assert.throws(()=>validateDiscovery(d));
+ }
+ const d=structuredClone(fresh);d.projects[0].imageStatus='unreviewed';assert.throws(()=>validateDiscovery(d));
+});

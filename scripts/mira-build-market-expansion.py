@@ -67,9 +67,9 @@ def approved_image(root,p,approvals):
  return expected
 def public_record(root,p,approvals):
  image=approved_image(root,p,approvals)
- return {'id':p['id'],'name':p['name'],'market':p['market'],'countryCode':p['countryCode'],'district':p['district'],'kind':p.get('kind') or ('villa' if set(p['propertyTypes'])<= {'villa','townhouse'} else 'condo'),'propertyTypes':p['propertyTypes'],'typeLabel':p.get('typeLabel') or ' / '.join(TYPES[t] for t in p['propertyTypes']),'family':p['developerBrand'],'summary':p['summary'],'amenities':p['amenities'],'sourceURL':p['projectSource']['url'],'sourceRole':p['projectSource']['role'],'researchReviewedAt':p['reviewedAt'],'verifiedAt':None,'image':image,'imageStatus':'reviewed_project_media' if image else 'licensed_direction_photo','imageCaption':('Материал проекта · '+p['developerBrand']) if image else None,'commerciallyEnabled':False,'availabilityStatus':'on_request','legalSeller':None,'metadataStatus':p.get('validationStatus','source_linked_project_description'),**({k:p[k] for k in ['developerGroup','commercialStatus','locationNote'] if k in p} if p['market'] in ['vietnam','montenegro'] else {})}
+ return {'id':p['id'],'name':p['name'],'market':p['market'],'countryCode':p['countryCode'],'district':p['district'],'kind':p.get('kind') or ('villa' if set(p['propertyTypes'])<= {'villa','townhouse'} else 'condo'),'propertyTypes':p['propertyTypes'],'typeLabel':p.get('typeLabel') or ' / '.join(TYPES[t] for t in p['propertyTypes']),'family':p['developerBrand'],'summary':p['summary'],'amenities':p['amenities'],'sourceURL':p['projectSource']['url'],'sourceRole':p['projectSource']['role'],'researchReviewedAt':p['reviewedAt'],'verifiedAt':None,'image':image,'imageStatus':'reviewed_project_media' if image else 'licensed_direction_photo','imageCaption':approvals.get(p['id'],{}).get('caption','Изображение проекта') if image else None,'commerciallyEnabled':False,'availabilityStatus':'on_request','legalSeller':None,'metadataStatus':p.get('validationStatus','source_linked_project_description'),**({k:p[k] for k in ['developerGroup','commercialStatus','locationNote'] if k in p} if p['market'] in ['vietnam','montenegro'] else {})}
 def cover(p,detail=False):
- return '<figure class="market-visual direction-photo '+E(p['market'])+'"><img src="/images/mira-directions/'+E(p['market'])+'.jpg" alt="'+MARKETS[p['market']][0]+' — фото направления" width="1280" height="800" '+('fetchpriority="high"' if detail else 'loading="lazy"')+' decoding="async"><figcaption>'+MARKETS[p['market']][0]+' · фото направления, не проекта</figcaption></figure>'
+ return '<figure class="market-visual project-image-unavailable"><span>'+E(p['name'])+'</span></figure>'
 
 def visual(p,detail=False):
  if not p['image']:return cover(p,detail)
@@ -92,6 +92,12 @@ def build(root=ROOT,require_images=False,integrate=True):
  if discovery:
   (out/'discovery.json').write_text(json.dumps({'schemaVersion':1,'mode':'public_research','source':{'recordCount':30,'commerciallyEnabled':0,'sourceSHA256':hashlib.sha256(discovery_file.read_bytes()).hexdigest()},'projects':[p for p in rows if p['market'] in ['vietnam','montenegro']]},ensure_ascii=False,separators=(',',':'))+'\n')
  def head(title,m,desc):return integrate_text(old.header(title,desc),m)
+ # Record exact project sources outside the sales cards.
+ credits=root/'mira/catalog/photo-credits/index.html'
+ credits.parent.mkdir(parents=True,exist_ok=True)
+ links=''.join('<li><a href="'+E(approvals[p['id']]['sourcePage'])+'" target="_blank" rel="noopener noreferrer">'+E(p['name'])+'</a></li>' for p in rows if p['id'] in approvals)
+ credits.write_text(head('Источники изображений','phuket','Материалы проектов в каталоге МИРА.')+'<main id="main" class="detail"><h1>Источники изображений</h1><p>Фотографии и визуализации из публичных материалов проектов. Визуализация может отличаться от готового объекта.</p><ul>'+links+'</ul></main>'+old.footer())
+
  for market in ['bali','dubai']+(['vietnam','montenegro'] if discovery else []):
   selected=[p for p in rows if p['market']==market];name=MARKETS[market][0];dest=root/MARKETS[market][2].lstrip('/');dest.mkdir(parents=True,exist_ok=True)
   intro='<main id="main"><section class="catalog-hero"><div><p class="eyebrow">МИРА / '+name.upper()+'</p><h1>Новая география.<br>Тот же ваш клиент.</h1><p>Знакомьтесь с проектами, сравнивайте форматы и собирайте предварительную подборку.</p></div><div class="catalog-total"><strong>15</strong><span>проектов в коллекции<br>'+name+'</span></div></section><p class="catalog-note">Подбор по запросу. Условия работы по выбранному проекту согласуются отдельно.</p>'
