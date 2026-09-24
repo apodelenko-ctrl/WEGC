@@ -1,0 +1,60 @@
+{
+  "bali": {
+    "path": "/images/mira-directions/bali.jpg",
+    "caption": "Бали · рисовые террасы Тегаллаланг",
+    "author": "Vyacheslav Argenberg",
+    "source": "https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg",
+    "license": "CC BY 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0",
+    "sha256": "491d995e4798838213abd280819bf215a508856a7eb7e555d2c7d19db46d6212",
+    "downloadURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_terraces%2C_Bali.jpg/1280px-Rice_terraces%2C_Bali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "checkedAt": "2026-09-24",
+    "visualReviewed": true,
+    "usage": "direction_photo_not_project_image",
+    "changes": "Wikimedia thumbnail; CSS crop to fit card. No other edits.",
+    "attribution": "© Vyacheslav Argenberg / https://www.vascoplanet.com/",
+    "authorURL": "https://www.vascoplanet.com/"
+  },
+  "dubai": {
+    "path": "/images/mira-directions/dubai.jpg",
+    "caption": "Дубай · пустынный заповедник",
+    "author": "Mlewis114",
+    "source": "https://commons.wikimedia.org/wiki/File:Dunes_in_the_Dubai_Desert_Conservation.jpg",
+    "license": "CC0",
+    "licenseURL": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sha256": "11d7692b702c464cbacb208900caf0fa5f35c45e850777d76ec5c49e34950304",
+    "downloadURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Dunes_in_the_Dubai_Desert_Conservation.jpg/1280px-Dunes_in_the_Dubai_Desert_Conservation.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "checkedAt": "2026-09-24",
+    "visualReviewed": true,
+    "usage": "direction_photo_not_project_image",
+    "changes": "Wikimedia thumbnail; CSS crop to fit card. No other edits."
+  },
+  "montenegro": {
+    "path": "/images/mira-directions/montenegro.jpg",
+    "caption": "Черногория · Которский залив",
+    "author": "Jaakko Luttinen",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Kotor_bay_and_old_town.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "ce21ec2a7b39a8f784f932991b5eab61e660234f38b69630ccdca45514bf52e3",
+    "downloadURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/View_of_Kotor_bay_and_old_town.jpg/1280px-View_of_Kotor_bay_and_old_town.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "checkedAt": "2026-09-24",
+    "visualReviewed": true,
+    "usage": "direction_photo_not_project_image",
+    "changes": "Wikimedia thumbnail; CSS crop to fit card. No other edits."
+  },
+  "vietnam": {
+    "path": "/images/mira-directions/vietnam.jpg",
+    "caption": "Вьетнам · пляж Нячанга",
+    "author": "The Erica Chang",
+    "source": "https://commons.wikimedia.org/wiki/File:Beach_in_Nha_Trang,_Vietnam_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
+    "sha256": "b92365c143ac00519a40a43d5163e25a83c7bb5bbd1f04cce598b4133570ace1",
+    "downloadURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Beach_in_Nha_Trang%2C_Vietnam_-_panoramio.jpg/1280px-Beach_in_Nha_Trang%2C_Vietnam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "checkedAt": "2026-09-24",
+    "visualReviewed": true,
+    "usage": "direction_photo_not_project_image",
+    "changes": "Wikimedia thumbnail; CSS crop to fit card. No other edits."
+  }
+}

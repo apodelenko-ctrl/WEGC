@@ -10,7 +10,7 @@ const KIND={villa:'Виллы / дома',condo:'Кондоминиумы / ап
 function readSaved(){for(const storage of [()=>sessionStorage,()=>localStorage])try{const raw=storage().getItem(KEY);if(raw){const value=JSON.parse(raw);return Array.isArray(value)?value:[];}}catch{}return [];}
 function saveSelection(){const combined=[...selection,...pendingSelection].slice(0,MAX_SELECTION);try{localStorage.setItem(KEY,JSON.stringify(combined));try{sessionStorage.removeItem(KEY);}catch{}return;}catch{}try{sessionStorage.setItem(KEY,JSON.stringify(combined));}catch{toast('Сохранение браузера недоступно. Скачайте подборку перед закрытием страницы.');}}
 function toast(msg){const e=$('toast');if(e){e.textContent=msg;e.hidden=false;e.classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>{e.hidden=true;e.classList.remove('visible');},3000);}}
-function cover(p){const meta=MARKETS[p.market]||MARKETS.phuket;return `<figure class="market-cover ${esc(p.market)}"><span class="cover-brand">МИРА / НОВОЕ НАПРАВЛЕНИЕ</span><span class="cover-market">${meta.name}</span><span class="cover-type">${esc(p.typeLabel||KIND[p.kind]||'Недвижимость')}</span><figcaption>Обложка направления · не изображение проекта</figcaption></figure>`;}
+function cover(p){const meta=MARKETS[p.market]||MARKETS.phuket;return `<figure class="market-visual direction-photo ${esc(p.market)}"><img src="/images/mira-directions/${esc(p.market)}.jpg" alt="${meta.name} — фото направления" width="1280" height="800" loading="lazy" decoding="async"><figcaption>${meta.name} · фото направления, не проекта</figcaption></figure>`;}
 function phuketCover(p){return '/images/hero/hero-phuket-'+(p.kind==='villa'?'aerial-sunset':'bay-karst')+'-m.jpg';}
 function visual(p){
  if(p.market!=='phuket')return p.image?`<figure class="market-visual"><img src="${esc(p.image)}" alt="${esc(p.name)} — материал проекта" loading="lazy" decoding="async" width="1400" height="875"><figcaption>${esc(p.imageCaption)}</figcaption></figure><template class="image-recovery">${cover(p)}</template>`:cover(p);
@@ -18,6 +18,7 @@ function visual(p){
 }
 function card(p){const href='/mira/catalog/projects/'+p.id+'/',selected=selection.includes(p.id);return `<article class="project-card" data-market="${esc(p.market)}"><a class="visual-link" href="${href}" aria-label="Подробнее: ${esc(p.name)}">${visual(p)}</a><div class="card-body"><p class="tag">${esc(p.district||MARKETS[p.market].name)} · ${esc(p.typeLabel||KIND[p.kind]||'Недвижимость')}</p><h2><a href="${href}">${esc(p.name)}</a></h2><p class="family">${esc(p.family||'Коллекция проектов Пхукета')}</p>${p.summary?`<p class="market-card-summary">${esc(p.summary)}</p>`:''}<p class="availability">Наличие и условия — по запросу</p><div class="card-actions"><a href="${href}">Подробнее ↗</a><button class="add secondary" data-add="${esc(p.id)}" type="button" aria-pressed="${selected}">${selected?'В подборке ✓':'В подборку +'}</button></div></div></article>`;}
 function recoverImage(img){
+ if(img.closest('.direction-photo')){img.hidden=true;return;}
  const tpl=img.closest('a, .detail-grid > div')?.querySelector('template.image-recovery');
  if(tpl){img.closest('figure')?.replaceWith(tpl.content.cloneNode(true));tpl.remove();return;}
  if(!img.dataset.fallback)return;

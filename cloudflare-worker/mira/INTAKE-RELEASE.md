@@ -33,3 +33,8 @@ The owner explicitly directed this task to enable public collection and continue
 Migration 0008 adds atomic erasure of a request and all its replies/history. An operator must confirm the version and explicit erasure action; ordinary members cannot call it. A 31-day tombstone prevents receipt replay/recreation and backup resurrection. Existing immutable-event protections still reject unaudited deletes. Hourly retention removes cases inactive for two calendar years; the same erasure path is bounded at 1,000 records per run.
 
 Before restoring any backup: keep public submissions paused; export the current erasure ledger separately, restore the selected backup, reapply all unexpired tombstones, run the erasure sweep and integrity checks, then restore service. Never restore a database while discarding the current tombstone ledger. Operational SQL exports containing public requests expire after 30 days and must be removed from the private backup store; earlier checkpoint exports in this task contain zero public request rows. Turnstile, Access and invitation settings must survive every deployment.
+
+
+## Production activation, 2026-09-24
+
+Explicit owner instruction to enable public intake was executed. Source f7e2a07, Worker version b5345fe9-ca05-479d-94f7-2f2bfd6498a8; migrations 0001–0008; public intake enabled and not paused, notice version mira-public-2026-09-24-v1; hourly retention enabled. A synthetic example.test enquiry passed the real managed Turnstile, was persisted and assigned to the existing operator, and received an operator reply visible in its private receipt. Reload and refresh preserved access. No real customer or buyer record was created. The operator and research routes remain protected.
