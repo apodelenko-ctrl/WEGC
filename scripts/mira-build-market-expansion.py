@@ -54,6 +54,7 @@ def integrate_text(text,market):
  else:text=text.replace('</header>','</header>'+nav(market),1)
  if '/mira/catalog/markets/markets.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/mira/catalog/markets/markets.css"></head>',1)
  text=text.replace('src="/mira/catalog/catalog.mjs"','src="/mira/catalog/markets/controller.mjs"')
+ text=text.replace('src="/mira/catalog/markets/controller.mjs"','src="/mira/catalog/markets/controller.mjs?v=20260925-media1"').replace('href="/mira/catalog/markets/markets.css"','href="/mira/catalog/markets/markets.css?v=20260925-media1"')
  # A static back link still restores filters if detail-page JavaScript never loads.
  for path in [v[2] for v in MARKETS.values()]:
   text=text.replace('data-catalog-back href="'+path+'"','data-catalog-back href="'+path+'?restore=1"')
