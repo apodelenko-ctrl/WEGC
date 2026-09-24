@@ -9,10 +9,10 @@ function val(id){return id}
 function sendLead(e){ location.href='mailto:post@wegc.fund'; }
 </script></html>'''
 class WireTests(unittest.TestCase):
-    def test_preserves_accepted_sections_and_links_actual_demo(self):
+    def test_preserves_accepted_sections_and_links_public_catalogue(self):
         out=m.transform(FIXTURE)
         self.assertIn('ACCEPTED HERO',out);self.assertIn('ACCEPTED FOOTER',out)
-        self.assertIn('./marketplace.html',out);self.assertIn('./pilot.html',out)
+        self.assertIn('/mira/catalog/',out);self.assertNotIn('./marketplace.html',out);self.assertIn('./pilot.html',out)
         self.assertIn('https://pilot.wegc.fund/mira/request/',out)
         self.assertNotIn('принимается только через защищённый доступ',out)
         self.assertNotIn('mailto:',out);self.assertNotIn('sendLead',out)
