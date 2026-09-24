@@ -13,6 +13,8 @@ class WireTests(unittest.TestCase):
         out=m.transform(FIXTURE)
         self.assertIn('ACCEPTED HERO',out);self.assertIn('ACCEPTED FOOTER',out)
         self.assertIn('./marketplace.html',out);self.assertIn('./pilot.html',out)
+        self.assertIn('https://pilot.wegc.fund/mira/request/',out)
+        self.assertNotIn('принимается только через защищённый доступ',out)
         self.assertNotIn('mailto:',out);self.assertNotIn('sendLead',out)
     def test_idempotent(self):
         out=m.transform(FIXTURE);self.assertEqual(m.transform(out),out)

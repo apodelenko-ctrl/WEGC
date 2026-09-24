@@ -1,4 +1,5 @@
 import {auditedMutation,administrativeHistory} from './admin-audit.mjs';
+import {routeIntakeAdmin} from './public-intake.mjs';
 import {routeSupply,materialReleaseFacts} from './materials.mjs';
 import {projectDetail,agencyProfile,applicationDetail,reviewApplication} from './experience.mjs';
 import {ApiError,verifyAccess} from './auth.mjs';
@@ -209,6 +210,7 @@ async function handle(request,env,identityVerifier) {
    return json({subject:identity.subject,email:identity.email,membership:m,applications_enabled:env.APPLICATIONS_ENABLED==='true',privacy_version:env.PRIVACY_VERSION||null,privacy_notice_url:env.PRIVACY_NOTICE_URL||null});
  }
  const m=await membership(env,identity);
+ const intake=await routeIntakeAdmin(request,env,m,identity);if(intake)return intake;
  const supply=await routeSupply(request,env,m,identity,{bodyOf,json});if(supply)return supply;
  if(path===API+'/profile'&&request.method==='GET')return json(await agencyProfile(env,m));
  const project=path.match(/^\/mira\/api\/projects\/([A-Za-z0-9_-]+)$/);

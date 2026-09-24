@@ -1,0 +1,100 @@
+{
+  "verified_at": "2026-09-24T15:52:00Z",
+  "source_commit": "6305604",
+  "worker": "mira-pilot-api",
+  "url": "https://pilot.wegc.fund/mira/api/admin/intake/view",
+  "version": "74857851-4bcd-4ea5-9741-551b23defac6",
+  "deployment": "33f4a41d-7e07-4e7a-a693-eca36e993b09",
+  "tests": {
+    "passed": 95,
+    "failed": 0
+  },
+  "existing_schema_preserved": true,
+  "existing_table_counts_preserved": true,
+  "existing_bindings_preserved": true,
+  "public_flags": [
+    {
+      "name": "PUBLIC_INTAKE_ENABLED",
+      "value": "false"
+    },
+    {
+      "name": "PUBLIC_INTAKE_PRIVACY_APPROVED",
+      "value": "false"
+    },
+    {
+      "name": "PUBLIC_INTAKE_SUBMISSIONS_PAUSED",
+      "value": "true"
+    }
+  ],
+  "secret_bindings": [
+    "INTAKE_RATE_SECRET",
+    "TURNSTILE_SECRET_KEY"
+  ],
+  "operator_configured": true,
+  "intake_counts": [
+    {
+      "name": "mira_intake_events",
+      "count": 0
+    },
+    {
+      "name": "mira_intake_limits",
+      "count": 0
+    },
+    {
+      "name": "mira_intake_requests",
+      "count": 0
+    }
+  ],
+  "live_operator_login": true,
+  "live_research_search": true,
+  "live_inbox_empty_state": true,
+  "public_live_submission": false,
+  "ordinary_member_live_test": false,
+  "turnstile_widget_configured": true,
+  "turnstile_live_challenge_test": false,
+  "local_d1_acceptance": {
+    "local_d1_restore": true,
+    "migrations": [
+      "0001_mira.sql",
+      "0002_operations.sql",
+      "0003_materials.sql",
+      "0004_research_import.sql",
+      "0005_public_intake.sql",
+      "0006_intake_operator.sql",
+      "0007_intake_queue_order.sql"
+    ],
+    "existing_tables_verified_unchanged": 20,
+    "existing_schema_objects_unchanged": 88,
+    "new_intake_rows": 0,
+    "foreign_keys": "pass",
+    "integrity": "pass",
+    "backup_sha256": "0020f92a6681721b495031bcad6cee1aefe7cf3a0811712059b53f554c8f5e79"
+  },
+  "http_checks": [
+    {
+      "path": "/mira/request/",
+      "status": 503,
+      "redirect_host": null,
+      "cache": "no-store, private",
+      "body": "{\"error\":\"intake_disabled\"}"
+    },
+    {
+      "path": "/mira/api/admin/intake/view",
+      "status": 302,
+      "redirect_host": "odd-grass-bbc8.cloudflareaccess.com",
+      "cache": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+    },
+    {
+      "path": "/mira/research/",
+      "status": 302,
+      "redirect_host": "odd-grass-bbc8.cloudflareaccess.com",
+      "cache": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+    },
+    {
+      "path": "/mira/agency-privacy.html",
+      "status": 200,
+      "redirect_host": null,
+      "cache": "no-store, private"
+    }
+  ]
+}
