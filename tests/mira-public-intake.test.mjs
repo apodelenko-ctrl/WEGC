@@ -194,3 +194,38 @@ test('form uses explicit consent, separate route and no untrusted HTML insertion
  const s=setup(),page=await s.handler(new Request(origin+'/mira/request/'),s.env);assert.equal(page.status,200);const html=await page.text();assert.match(html,/type="checkbox" required/);assert.match(html,/data-action="mira_intake"/);assert.match(page.headers.get('Content-Security-Policy'),/frame-ancestors 'none'/);assert.ok(!intakeClient.includes('innerHTML'));assert.match(intakeClient,/textContent/);assert.match(intakeClient,/sessionStorage/);assert.match(intakeClient,/credentials:'omit'/);
  assert.ok(!intakePage({...s.env,PUBLIC_INTAKE_PRIVACY_VERSION:'\"><script>alert(1)</script>'}).includes('<script>alert(1)</script>'));
 });
+
+test('confirmed operator erasure removes contacts and every reply; receipt/replay become 410',async()=>{
+ const s=setup(),r=await s.call(),id=r.body.id;await s.review(id,{version:0,status:'responded',response:'SYNTHETIC personal reply'});
+ const body={version:1,confirmation:'erase_contact_and_history'};
+ assert.equal((await adminCall(s,'/'+id+'/erase',body,'uninvited')).status,403);
+ assert.equal((await adminCall(s,'/'+id+'/erase',{...body,confirmation:'no'})).status,400);
+ assert.equal((await adminCall(s,'/'+id+'/erase',{...body,version:0})).status,409);assert.equal(n(s,'mira_intake_events'),2);
+ assert.equal((await adminCall(s,'/'+id+'/erase',body)).status,200);assert.equal(n(s,'mira_intake_requests'),0);assert.equal(n(s,'mira_intake_events'),0);
+ assert.equal((await s.call('status',{id})).status,410);assert.equal((await s.call()).status,410);assert.equal(s.calls,1);
+ assert.equal((await s.call('status',{id},{Authorization:'Bearer '+'b'.repeat(64)})).status,404);
+ const ledger=JSON.stringify(s.db.db.prepare('SELECT * FROM mira_intake_erasure').all());for(const sensitive of [data.email,data.company,data.name,'SYNTHETIC personal reply'])assert.ok(!ledger.includes(sensitive));
+ assert.equal(n(s,'mira_memberships'),1);
+});
+test('erasure is atomic when reply deletion fails',async()=>{
+ const s=setup(),r=await s.call();s.db.db.exec("CREATE TRIGGER synthetic_erase_failure BEFORE DELETE ON mira_intake_events BEGIN SELECT RAISE(ABORT,'synthetic'); END;");
+ assert.equal((await adminCall(s,'/'+r.body.id+'/erase',{version:0,confirmation:'erase_contact_and_history'})).status,500);
+ assert.equal(n(s,'mira_intake_requests'),1);assert.equal(n(s,'mira_intake_events'),1);assert.equal(n(s,'mira_intake_erasure'),0);
+});
+test('a concurrent in-flight submission cannot resurrect an erased idempotency key',async()=>{
+ const s=setup(),handler=createPublicIntake(async()=>{const first=await s.call();await adminCall(s,'/'+first.body.id+'/erase',{version:0,confirmation:'erase_contact_and_history'});return Response.json({success:true,hostname:'pilot.example.test',action:'mira_intake'});});
+ const result=await handler(s.request('submit',data),s.env);assert.equal(result.status,500);assert.equal(n(s,'mira_intake_requests'),0);assert.equal(n(s,'mira_intake_erasure'),1);
+});
+test('retention removes expired contact/history but preserves recent requests and short-lived tombstones',async()=>{
+ const {expireIntakes}=await import('../cloudflare-worker/mira/intake-retention.mjs');const s=setup(),current=await s.call(),oldId=crypto.randomUUID();
+ const old=new Date();old.setUTCFullYear(old.getUTCFullYear()-3);const time=old.toISOString();
+ s.db.db.prepare(`INSERT INTO mira_intake_requests(id,idempotency_key,request_hash,token_hash,company,city,name,email,consent_version,assigned_subject,created_at,updated_at,last_event_id) VALUES (?,?,'test','test','TEST','TEST','TEST','synthetic@example.test','test-v1','operator-test',?,?,?)`).run(oldId,crypto.randomUUID(),time,time,oldId);
+ s.db.db.prepare(`INSERT INTO mira_intake_events(id,request_id,actor,status,version,created_at) VALUES (?,?,'public_request','received',0,?)`).run(oldId,oldId,time);
+ assert.equal((await expireIntakes(s.env)).enabled,false);assert.equal(n(s,'mira_intake_requests'),2);
+ s.env.INTAKE_RETENTION_ENABLED='true';assert.equal((await expireIntakes(s.env)).erased,1);assert.equal(n(s,'mira_intake_requests'),1);assert.equal(n(s,'mira_intake_events'),1);
+ assert.equal((await s.call('status',{id:current.body.id})).status,200);assert.equal(n(s,'mira_intake_erasure'),1);
+ assert.equal((await expireIntakes(s.env)).erased,0);assert.equal(n(s,'mira_intake_erasure'),1);
+});
+test('public privacy notice is accessible before activation and describes the separate unverified request',async()=>{
+ const s=setup();delete s.env.PUBLIC_INTAKE_ENABLED;const r=await s.handler(new Request(origin+'/mira/request/privacy'),s.env);assert.equal(r.status,200);const html=await r.text();assert.match(html,/mira-public-2026-09-24-v1/);assert.match(html,/Email в этой форме не подтверждается/);assert.match(r.headers.get('Cache-Control'),/no-store/);
+});

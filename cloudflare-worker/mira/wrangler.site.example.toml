@@ -31,6 +31,7 @@ PUBLIC_INTAKE_SUBMISSIONS_PAUSED = "true"
 PUBLIC_INTAKE_PRIVACY_APPROVED = "false"
 PUBLIC_INTAKE_PRIVACY_VERSION = ""
 PUBLIC_INTAKE_PRIVACY_NOTICE_URL = ""
+INTAKE_RETENTION_ENABLED = "false"
 # INTAKE_RATE_SECRET and TURNSTILE_SECRET_KEY must be Worker secrets.
 
 [[d1_databases]]
@@ -38,3 +39,7 @@ binding = "MIRA_DB"
 database_name = "mira-pilot"
 database_id = "REPLACE_WITH_VERIFIED_MIRA_DATABASE_ID"
 migrations_dir = "migrations"
+
+# Enable the retention binding when deploying public intake.
+[triggers]
+crons = ["17 * * * *"]

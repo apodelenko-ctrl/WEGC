@@ -1,4 +1,5 @@
 /** Dedicated MIRA hostname. The public website is never proxied through this Worker. */
+import {expireIntakes} from './intake-retention.mjs';
 import api from './worker.mjs';
 import {publicIntake} from './public-intake.mjs';
 import {researchView} from './research-view.mjs';
@@ -18,6 +19,7 @@ const failure = (status, error) => Response.json({error}, {status, headers});
 const redirect = target => new Response(null, {status: 302, headers: {...headers, Location: target}});
 
 export default {
+  async scheduled(controller,env){await expireIntakes(env,controller.scheduledTime);},
   async fetch(request, env) {
     const url = new URL(request.url);
     if (!env.APP_ORIGIN || url.origin !== env.APP_ORIGIN) return failure(421, 'unexpected_origin');

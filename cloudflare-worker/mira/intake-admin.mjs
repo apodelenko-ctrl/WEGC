@@ -1,4 +1,5 @@
 /** Existing signed Access identity + active operator only. No provisioning/sending. */
+import {eraseIntake} from './intake-retention.mjs';
 import {ApiError} from './auth.mjs';
 import {intakeAdminHTML,intakeAdminClient} from './intake-admin-ui.mjs';
 const ROOT='/mira/api/admin/intake';
@@ -44,7 +45,7 @@ export async function routeIntakeAdmin(request,env,m,identity){
   const last=rows[limit-1];
   return json({records:rows.slice(0,limit),next_cursor:rows.length>limit?last.created_at+'|'+last.id:null,scope:'Unverified requests. No email sending, memberships or agency activation.'});
  }
- const match=path.match(/^\/mira\/api\/admin\/intake\/([0-9a-f-]+)(?:\/(history|assign|review))?$/i);check(match,404,'not_found');
+ const match=path.match(/^\/mira\/api\/admin\/intake\/([0-9a-f-]+)(?:\/(history|assign|review|erase))?$/i);check(match,404,'not_found');
  const id=uuid(match[1]),action=match[2];
  const row=await one(env,`SELECT ${fields} FROM mira_intake_requests WHERE id=?`,id);check(row,404,'receipt_not_found');
  if(request.method==='GET'&&!action)return json(row);
@@ -53,6 +54,11 @@ export async function routeIntakeAdmin(request,env,m,identity){
   check(Number.isSafeInteger(after)&&after>=-1&&Number.isSafeInteger(limit)&&limit>=1&&limit<=100,400,'invalid_history_page');
   const rows=await all(env,'SELECT actor,status,version,public_response,created_at,event_kind,assigned_subject,response_published FROM mira_intake_events WHERE request_id=? AND version>? ORDER BY version LIMIT ?',id,after,limit+1);
   return json({records:rows.slice(0,limit),next_after_version:rows.length>limit?rows[limit-1].version:null});
+ }
+ if(request.method==='POST'&&action==='erase'){
+  check(request.headers.get('Origin')===env.APP_ORIGIN,403,'origin_rejected');const b=await body(request);keys(b,['version','confirmation']);
+  check(Number.isSafeInteger(b.version)&&b.version>=0&&b.confirmation==='erase_contact_and_history',400,'erasure_confirmation_required');
+  check(await eraseIntake(env,id,b.version,identity.subject),409,'stale_version');return json({id,erased:true,external_send:false});
  }
  check(request.method==='POST'&&['assign','review'].includes(action),404,'not_found');
  check(request.headers.get('Origin')===env.APP_ORIGIN,403,'origin_rejected');

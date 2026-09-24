@@ -1,6 +1,6 @@
 /** Public requests are unverified enquiries, never memberships or verified contacts. */
 import {ApiError} from './auth.mjs';
-import {intakePage, intakeClient} from './intake-ui.mjs';
+import {intakePage, intakeClient, intakePrivacyPage} from './intake-ui.mjs';
 const ROOT='/mira/request';
 const fixedHeaders={'Cache-Control':'no-store, private','Referrer-Policy':'no-referrer','X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow, noarchive'};
 const json=(b,status=200)=>Response.json(b,{status,headers:{...fixedHeaders,'Content-Security-Policy':"default-src 'none'; frame-ancestors 'none'"}});
@@ -58,6 +58,8 @@ async function submit(request,env,fetcher){
  const idempotency=uuid(request.headers.get('Idempotency-Key')),tokenHash=await sha(token(request)),hash=await sha(JSON.stringify(data));
  await rate(request,env,'submit');
  const replay=async()=>{
+  const erased=await one(env,'SELECT token_hash FROM mira_intake_erasure WHERE idempotency_key=?',idempotency);
+  if(erased){check(erased.token_hash===tokenHash,409,'idempotency_payload_mismatch');throw new ApiError(410,'receipt_erased');}
   const row=await one(env,'SELECT * FROM mira_intake_requests WHERE idempotency_key=?',idempotency);
   if(!row)return null;
   check(row.token_hash===tokenHash&&row.request_hash===hash,409,'idempotency_payload_mismatch');return row;
@@ -77,7 +79,8 @@ async function submit(request,env,fetcher){
 export function createPublicIntake(fetcher=(...args)=>fetch(...args)){
  return async(request,env)=>{try{
   const url=new URL(request.url);check(url.origin===env.APP_ORIGIN,421,'unexpected_origin');
-  check([ROOT+'/',ROOT+'/client.mjs',ROOT+'/submit',ROOT+'/status'].includes(url.pathname),404,'not_found');
+  check([ROOT+'/',ROOT+'/client.mjs',ROOT+'/submit',ROOT+'/status',ROOT+'/privacy'].includes(url.pathname),404,'not_found');
+  if(request.method==='GET'&&url.pathname===ROOT+'/privacy')return new Response(intakePrivacyPage,{headers:{...fixedHeaders,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'"}});
   config(env);
   if(request.method==='GET'&&url.pathname===ROOT+'/client.mjs')return new Response(intakeClient,{headers:{...fixedHeaders,'Content-Type':'text/javascript; charset=utf-8'}});
   if(request.method==='GET'&&url.pathname===ROOT+'/'){
@@ -88,7 +91,9 @@ export function createPublicIntake(fetcher=(...args)=>fetch(...args)){
   check(request.headers.get('Origin')===env.APP_ORIGIN,403,'origin_rejected');
   if(url.pathname===ROOT+'/submit')return await submit(request,env,fetcher);
   const b=await body(request);keys(b,['id']);const id=uuid(b.id),hash=await sha(token(request));await rate(request,env,'status');
-  const row=await one(env,'SELECT * FROM mira_intake_requests WHERE id=? AND token_hash=?',id,hash);check(row,404,'receipt_not_found');
+  const row=await one(env,'SELECT * FROM mira_intake_requests WHERE id=? AND token_hash=?',id,hash);
+  if(!row&&await one(env,'SELECT request_id FROM mira_intake_erasure WHERE request_id=? AND token_hash=?',id,hash))throw new ApiError(410,'receipt_erased');
+  check(row,404,'receipt_not_found');
   return json(receipt(row));
  }catch(e){return json({error:e instanceof ApiError?e.code:'internal_error'},e instanceof ApiError?e.status:500);}};
 }

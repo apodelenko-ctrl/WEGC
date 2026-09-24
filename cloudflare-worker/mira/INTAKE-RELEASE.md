@@ -25,3 +25,11 @@ Previous live Worker version: `09782ef9-f0a0-445a-b3ea-2d173af2c0eb`. A Worker r
 ## Outstanding public launch evidence
 
 Public intake cannot be called ready until there is an approved notice specifically covering unverified contact data, a retention/deletion procedure covering immutable events and backups, real Turnstile acceptance, an actual operator response rehearsal, and the printed QR/mobile test. Current immutable event triggers intentionally reject deletion and are not a finished erasure workflow. No retention period, deletion policy, availability, commission, media rights, lead protection or operator SLA is invented by this release.
+
+## Public activation continuation — 24 September 2026
+
+The owner explicitly directed this task to enable public collection and continue the roadmap without repeated reports or questions. The public notice uses the already recorded controller/contact and 24-month contact retention, describes the actual unverified fields, and links to the separate public route. This supersedes the earlier pending activation instruction; it is not a claim of independent legal certification.
+
+Migration 0008 adds atomic erasure of a request and all its replies/history. An operator must confirm the version and explicit erasure action; ordinary members cannot call it. A 31-day tombstone prevents receipt replay/recreation and backup resurrection. Existing immutable-event protections still reject unaudited deletes. Hourly retention removes cases inactive for two calendar years; the same erasure path is bounded at 1,000 records per run.
+
+Before restoring any backup: keep public submissions paused; export the current erasure ledger separately, restore the selected backup, reapply all unexpired tombstones, run the erasure sweep and integrity checks, then restore service. Never restore a database while discarding the current tombstone ledger. Operational SQL exports containing public requests expire after 30 days and must be removed from the private backup store; earlier checkpoint exports in this task contain zero public request rows. Turnstile, Access and invitation settings must survive every deployment.
