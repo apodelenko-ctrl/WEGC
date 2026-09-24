@@ -3,9 +3,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {intakeClient} from '../cloudflare-worker/mira/intake-ui.mjs';
-function harness({stored=null,storageFails=false,responses=[]}={}){
+function harness({stored=null,storageFails=false,responses=[],paused=false}={}){
  const el=()=>({hidden:false,disabled:false,textContent:'',events:{},addEventListener(name,fn){this.events[name]=fn;}});
- const form={...el(),dataset:{consent:'test-v1'},reportValidity:()=>true},message=el(),send=el(),refresh=el();
+ const form={...el(),dataset:{consent:'test-v1',paused:String(paused)},reportValidity:()=>true},message=el(),send=el(),refresh=el();
  const fields={company:'TEST',city:'TEST',name:'TEST',email:'synthetic@example.test','cf-turnstile-response':'synthetic-challenge'};
  const nodes={request:form,message,send,refresh},requests=[];let reset=0;
  const storage={value:stored?JSON.stringify(stored):null,getItem(){return this.value;},setItem(k,v){if(storageFails)throw Error('disabled');this.value=v;}};
@@ -30,4 +30,9 @@ test('storage denied still permits current-tab receipt and gives warning',async(
 });
 test('missing challenge and invalid form never call the API',async()=>{
  const h=harness();h.fields['cf-turnstile-response']='';await h.submit();assert.equal(h.requests.length,0);h.fields['cf-turnstile-response']='test';h.request.reportValidity=()=>false;await h.submit();assert.equal(h.requests.length,0);
+});
+test('paused client blocks a new submission but restores and refreshes a receipt',async()=>{
+ const h=harness({paused:true,stored:{key:crypto.randomUUID(),token:'a'.repeat(64),id:'saved-test-id'},responses:[{status:200,body:{id:'saved-test-id',status:'responded',response:'TEST reply'}}]});
+ await h.submit();assert.equal(h.requests.length,0);assert.match(h.message.textContent,/приостановлен/);
+ await h.refreshStatus();assert.equal(h.requests.length,1);assert.match(h.message.textContent,/TEST reply/);
 });

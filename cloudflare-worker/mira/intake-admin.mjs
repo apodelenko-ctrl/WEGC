@@ -28,11 +28,21 @@ export async function routeIntakeAdmin(request,env,m,identity){
   const rows=await all(env,"SELECT subject FROM mira_memberships WHERE role='operator' AND active=1 ORDER BY subject LIMIT 101");
   check(rows.length<=100,409,'operator_directory_limit');return json({records:rows,current_subject:identity.subject});
  }
+ if(request.method==='GET'&&path===ROOT+'/summary'){
+  const rows=await all(env,'SELECT status,COUNT(*) AS count,MIN(created_at) AS oldest_at FROM mira_intake_requests GROUP BY status');
+  return json({records:rows,submissions_paused:env.PUBLIC_INTAKE_SUBMISSIONS_PAUSED==='true',public_intake_enabled:env.PUBLIC_INTAKE_ENABLED==='true'});
+ }
  if(request.method==='GET'&&path===ROOT){
-  const cursor=url.searchParams.get('cursor')||'',limit=Number(url.searchParams.get('limit')||25);if(cursor)uuid(cursor);
+  const cursor=url.searchParams.get('cursor')||'',limit=Number(url.searchParams.get('limit')||25);
   check(Number.isSafeInteger(limit)&&limit>=1&&limit<=100,400,'invalid_limit');
-  const rows=await all(env,`SELECT ${fields} FROM mira_intake_requests WHERE id>? ORDER BY id LIMIT ?`,cursor,limit+1);
-  return json({records:rows.slice(0,limit),next_cursor:rows.length>limit?rows[limit-1].id:null,scope:'Unverified requests. No email sending, memberships or agency activation.'});
+  let rows;
+  if(cursor){
+   const parts=cursor.split('|');check(parts.length===2&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(parts[0]),400,'invalid_cursor');
+   const id=uuid(parts[1]),time=parts[0];
+   rows=await all(env,`SELECT ${fields} FROM mira_intake_requests WHERE created_at<? OR (created_at=? AND id<?) ORDER BY created_at DESC,id DESC LIMIT ?`,time,time,id,limit+1);
+  }else rows=await all(env,`SELECT ${fields} FROM mira_intake_requests ORDER BY created_at DESC,id DESC LIMIT ?`,limit+1);
+  const last=rows[limit-1];
+  return json({records:rows.slice(0,limit),next_cursor:rows.length>limit?last.created_at+'|'+last.id:null,scope:'Unverified requests. No email sending, memberships or agency activation.'});
  }
  const match=path.match(/^\/mira\/api\/admin\/intake\/([0-9a-f-]+)(?:\/(history|assign|review))?$/i);check(match,404,'not_found');
  const id=uuid(match[1]),action=match[2];

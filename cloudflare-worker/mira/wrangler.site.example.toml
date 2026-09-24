@@ -25,6 +25,14 @@ APPLICATION_RATE_LIMIT = "5"
 PRIVACY_VERSION = ""
 PRIVACY_NOTICE_URL = ""
 
+# Public unverified requests have separate consent and release switches.
+PUBLIC_INTAKE_ENABLED = "false"
+PUBLIC_INTAKE_SUBMISSIONS_PAUSED = "true"
+PUBLIC_INTAKE_PRIVACY_APPROVED = "false"
+PUBLIC_INTAKE_PRIVACY_VERSION = ""
+PUBLIC_INTAKE_PRIVACY_NOTICE_URL = ""
+# INTAKE_RATE_SECRET and TURNSTILE_SECRET_KEY must be Worker secrets.
+
 [[d1_databases]]
 binding = "MIRA_DB"
 database_name = "mira-pilot"

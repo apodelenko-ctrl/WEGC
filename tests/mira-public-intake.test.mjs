@@ -20,7 +20,7 @@ class D1{
 const data={company:'SYNTHETIC Agency',city:'TEST City',name:'TEST Operator',email:'synthetic@example.test',consent_version:'test-v1',challenge:'synthetic-challenge'};
 function setup(path){
  const db=new D1(path);db.db.exec("INSERT INTO mira_memberships VALUES ('operator-test',NULL,'operator',1)");
- const env={MIRA_DB:db,APP_ORIGIN:origin,PUBLIC_INTAKE_ENABLED:'true',PUBLIC_INTAKE_PRIVACY_APPROVED:'true',PRIVACY_VERSION:'test-v1',PRIVACY_NOTICE_URL:origin+'/mira/agency-privacy.html',INTAKE_OPERATOR_SUBJECT:'operator-test',INTAKE_RATE_SECRET:'synthetic-secret-not-production-00000000000000',TURNSTILE_SITE_KEY:'synthetic-site-key',TURNSTILE_SECRET_KEY:'synthetic-secret'};
+ const env={MIRA_DB:db,APP_ORIGIN:origin,PUBLIC_INTAKE_ENABLED:'true',PUBLIC_INTAKE_PRIVACY_APPROVED:'true',PUBLIC_INTAKE_PRIVACY_VERSION:'test-v1',PUBLIC_INTAKE_PRIVACY_NOTICE_URL:origin+'/mira/agency-privacy.html',INTAKE_OPERATOR_SUBJECT:'operator-test',INTAKE_RATE_SECRET:'synthetic-secret-not-production-00000000000000',TURNSTILE_SITE_KEY:'synthetic-site-key',TURNSTILE_SECRET_KEY:'synthetic-secret'};
  let calls=0,validation={success:true,hostname:'pilot.example.test',action:'mira_intake'};
  const handler=createPublicIntake(async(url,opts)=>{calls++;assert.equal(url,'https://challenges.cloudflare.com/turnstile/v0/siteverify');assert.equal(opts.redirect,'manual');return Response.json(validation);});
  const key=crypto.randomUUID(),token='a'.repeat(64);
@@ -31,6 +31,41 @@ function setup(path){
  return{db,env,handler,call,request,review,admin,key,token,get calls(){return calls;},set validation(v){validation=v;}};
 }
 const n=(s,t)=>s.db.db.prepare(`SELECT COUNT(*) AS n FROM ${t}`).get().n;
+test('submission pause preserves replay, private receipt and page when operator goes offline',async()=>{
+ const s=setup(),first=await s.call();
+ s.env.PUBLIC_INTAKE_SUBMISSIONS_PAUSED='true';s.db.db.exec('UPDATE mira_memberships SET active=0');
+ const replay=await s.call();assert.equal(replay.status,200);assert.equal(replay.body.id,first.body.id);
+ assert.equal((await s.call('submit',data,{'Idempotency-Key':crypto.randomUUID()})).body.error,'intake_submissions_paused');
+ assert.equal((await s.call('status',{id:first.body.id})).status,200);
+ const page=await s.handler(new Request(origin+'/mira/request/'),s.env);assert.equal(page.status,200);assert.match(await page.text(),/data-paused="true"/);
+ assert.equal(n(s,'mira_intake_requests'),1);assert.equal(s.calls,1);
+ s.env.PUBLIC_INTAKE_SUBMISSIONS_PAUSED='false';s.db.db.exec('UPDATE mira_memberships SET active=1');
+ assert.equal((await s.call('submit',data,{'Idempotency-Key':crypto.randomUUID()})).status,201);
+});
+test('public consent cannot fall back to the invitation policy or change invitation settings',async()=>{
+ const s=setup();s.env.PRIVACY_VERSION='invitation-v1';s.env.PRIVACY_NOTICE_URL=origin+'/invitation.html';
+ assert.equal((await s.call('submit',{...data,consent_version:'invitation-v1'})).status,400);
+ assert.equal((await s.call()).status,201);assert.equal(s.env.PRIVACY_VERSION,'invitation-v1');
+ delete s.env.PUBLIC_INTAKE_PRIVACY_VERSION;
+ assert.equal((await s.call()).body.error,'intake_privacy_not_approved');
+});
+test('newest queue pagination is stable for timestamp ties and arrivals between pages',async()=>{
+ const s=setup(),ids=['00000000-0000-4000-8000-000000000001','00000000-0000-4000-8000-000000000002','ffffffff-ffff-4fff-8fff-ffffffffffff'];
+ const insert=s.db.db.prepare(`INSERT INTO mira_intake_requests(id,idempotency_key,request_hash,token_hash,company,city,name,email,consent_version,assigned_subject,created_at,updated_at,last_event_id) VALUES (?,?,'test','test','TEST','TEST','TEST','synthetic@example.test','test-v1','operator-test',?,?,?)`);
+ for(const [i,id] of ids.entries()){const time=i===2?'2026-09-23T01:00:00.000Z':'2026-09-24T01:00:00.000Z';insert.run(id,crypto.randomUUID(),time,time,id);}
+ const a=(await adminCall(s,'?limit=1')).body;assert.equal(a.records[0].id,ids[1]);
+ const newId=crypto.randomUUID();insert.run(newId,crypto.randomUUID(),'2026-09-25T01:00:00.000Z','2026-09-25T01:00:00.000Z',newId);
+ const b=(await adminCall(s,'?'+new URLSearchParams({limit:'2',cursor:a.next_cursor}))).body;
+ assert.deepEqual(b.records.map(r=>r.id),[ids[0],ids[2]]);assert.equal(b.next_cursor,null);
+ assert.equal((await adminCall(s,'?limit=1')).body.records[0].id,newId);
+ assert.equal((await adminCall(s,'?cursor=broken')).status,400);
+});
+test('operator summary works while public intake is disabled and never exposes contacts',async()=>{
+ const s=setup(),r=await s.call();delete s.env.PUBLIC_INTAKE_ENABLED;
+ const b=(await adminCall(s,'/summary')).body;assert.equal(b.public_intake_enabled,false);assert.equal(b.records[0].count,1);
+ assert.equal(b.records[0].status,'received');assert.equal(b.records[0].oldest_at,r.body.received_at);
+ assert.ok(!JSON.stringify(b).includes(data.email));assert.equal((await adminCall(s,'/summary',undefined,'uninvited')).status,403);
+});
 async function adminCall(s,path='',body,subject='operator-test'){
  const r=await s.admin(new Request(origin+'/mira/api/admin/intake'+path,{method:body?'POST':'GET',headers:{Origin:origin,'Content-Type':'application/json','Test-Subject':subject},...(body?{body:JSON.stringify(body)}:{})}),s.env);
  return{status:r.status,body:await r.json()};
@@ -83,7 +118,7 @@ test('public receipt never reveals operator identity or internal history',async(
  assert.ok(!JSON.stringify(b).includes('operator-test'));
 });
 test('disabled by default and consent/security/operator configuration fail closed',async()=>{
- for(const [k,v] of [['PUBLIC_INTAKE_ENABLED',undefined],['PUBLIC_INTAKE_PRIVACY_APPROVED','false'],['PRIVACY_VERSION',''],['PRIVACY_NOTICE_URL','https://evil.test/x'],['INTAKE_RATE_SECRET','short'],['TURNSTILE_SITE_KEY',''],['INTAKE_OPERATOR_SUBJECT','']]){const s=setup();s.env[k]=v;assert.equal((await s.call()).status,503,k);assert.equal(n(s,'mira_intake_requests'),0);}
+ for(const [k,v] of [['PUBLIC_INTAKE_ENABLED',undefined],['PUBLIC_INTAKE_PRIVACY_APPROVED','false'],['PUBLIC_INTAKE_PRIVACY_VERSION',''],['PUBLIC_INTAKE_PRIVACY_NOTICE_URL','https://evil.test/x'],['INTAKE_RATE_SECRET','short'],['TURNSTILE_SITE_KEY',''],['INTAKE_OPERATOR_SUBJECT','']]){const s=setup();s.env[k]=v;assert.equal((await s.call()).status,503,k);assert.equal(n(s,'mira_intake_requests'),0);}
 });
 test('durable receipt has unverified email and operator assignment, never activation',async()=>{
  const s=setup(),r=await s.call();assert.equal(r.status,201);assert.equal(r.body.status,'received');const row=s.db.db.prepare('SELECT * FROM mira_intake_requests').get();assert.equal(row.assigned_subject,'operator-test');assert.equal(row.email_verified,0);assert.notEqual(row.token_hash,s.token);assert.equal(n(s,'mira_intake_events'),1);
@@ -157,5 +192,5 @@ test('disk-backed restart preserves receipt and operator response',async()=>{
 });
 test('form uses explicit consent, separate route and no untrusted HTML insertion',async()=>{
  const s=setup(),page=await s.handler(new Request(origin+'/mira/request/'),s.env);assert.equal(page.status,200);const html=await page.text();assert.match(html,/type="checkbox" required/);assert.match(html,/data-action="mira_intake"/);assert.match(page.headers.get('Content-Security-Policy'),/frame-ancestors 'none'/);assert.ok(!intakeClient.includes('innerHTML'));assert.match(intakeClient,/textContent/);assert.match(intakeClient,/sessionStorage/);assert.match(intakeClient,/credentials:'omit'/);
- assert.ok(!intakePage({...s.env,PRIVACY_VERSION:'\"><script>alert(1)</script>'}).includes('<script>alert(1)</script>'));
+ assert.ok(!intakePage({...s.env,PUBLIC_INTAKE_PRIVACY_VERSION:'\"><script>alert(1)</script>'}).includes('<script>alert(1)</script>'));
 });

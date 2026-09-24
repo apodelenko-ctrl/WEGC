@@ -22,8 +22,8 @@ async function body(request){
 }
 function config(env){
  check(env.PUBLIC_INTAKE_ENABLED==='true'&&env.MIRA_DB&&/^https:\/\/[^/]+$/.test(env.APP_ORIGIN||''),503,'intake_disabled');
- check(env.PUBLIC_INTAKE_PRIVACY_APPROVED==='true'&&typeof env.PRIVACY_VERSION==='string'&&env.PRIVACY_VERSION.length>0&&env.PRIVACY_VERSION.length<=100,503,'intake_privacy_not_approved');
- let notice;try{notice=new URL(env.PRIVACY_NOTICE_URL);}catch{throw new ApiError(503,'intake_privacy_not_approved');}
+ check(env.PUBLIC_INTAKE_PRIVACY_APPROVED==='true'&&typeof env.PUBLIC_INTAKE_PRIVACY_VERSION==='string'&&env.PUBLIC_INTAKE_PRIVACY_VERSION.length>0&&env.PUBLIC_INTAKE_PRIVACY_VERSION.length<=100,503,'intake_privacy_not_approved');
+ let notice;try{notice=new URL(env.PUBLIC_INTAKE_PRIVACY_NOTICE_URL);}catch{throw new ApiError(503,'intake_privacy_not_approved');}
  check(notice.origin===env.APP_ORIGIN&&!notice.username&&!notice.password&&!notice.search&&!notice.hash,503,'intake_privacy_not_approved');
  check(typeof env.INTAKE_OPERATOR_SUBJECT==='string'&&env.INTAKE_OPERATOR_SUBJECT.length>0&&env.INTAKE_OPERATOR_SUBJECT.length<=200,503,'intake_operator_not_configured');
  check(typeof env.INTAKE_RATE_SECRET==='string'&&env.INTAKE_RATE_SECRET.length>=32&&env.TURNSTILE_SECRET_KEY&&/^[A-Za-z0-9_-]{3,100}$/.test(env.TURNSTILE_SITE_KEY||''),503,'intake_security_not_configured');
@@ -54,7 +54,7 @@ async function submit(request,env,fetcher){
  const b=await body(request);keys(b,['company','city','name','email','consent_version','challenge']);
  const data={company:text(b.company,2,160),city:text(b.city,2,120),name:text(b.name,2,120),email:text(b.email,3,254).toLowerCase(),consent_version:b.consent_version};
  check(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email),400,'invalid_email');
- check(data.consent_version===env.PRIVACY_VERSION,400,'current_consent_required');
+ check(data.consent_version===env.PUBLIC_INTAKE_PRIVACY_VERSION,400,'current_consent_required');
  const idempotency=uuid(request.headers.get('Idempotency-Key')),tokenHash=await sha(token(request)),hash=await sha(JSON.stringify(data));
  await rate(request,env,'submit');
  const replay=async()=>{
@@ -63,6 +63,7 @@ async function submit(request,env,fetcher){
   check(row.token_hash===tokenHash&&row.request_hash===hash,409,'idempotency_payload_mismatch');return row;
  };
  const prior=await replay();if(prior)return json(receipt(prior));
+ check(env.PUBLIC_INTAKE_SUBMISSIONS_PAUSED!=='true',503,'intake_submissions_paused');
  await operatorReady(env);await challenge(request,env,b.challenge,fetcher);
  const id=crypto.randomUUID(),now=new Date().toISOString();
  await env.MIRA_DB.batch([
@@ -80,7 +81,7 @@ export function createPublicIntake(fetcher=(...args)=>fetch(...args)){
   config(env);
   if(request.method==='GET'&&url.pathname===ROOT+'/client.mjs')return new Response(intakeClient,{headers:{...fixedHeaders,'Content-Type':'text/javascript; charset=utf-8'}});
   if(request.method==='GET'&&url.pathname===ROOT+'/'){
-   await operatorReady(env);
+   if(env.PUBLIC_INTAKE_SUBMISSIONS_PAUSED!=='true')await operatorReady(env);
    return new Response(intakePage(env),{headers:{...fixedHeaders,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"}});
   }
   check(request.method==='POST'&&[ROOT+'/submit',ROOT+'/status'].includes(url.pathname),405,'method_not_allowed');
