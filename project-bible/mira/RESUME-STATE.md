@@ -1,5 +1,9 @@
 # MIRA RESUME-STATE
 
+## Актуальное продолжение — 24 сентября 2026
+
+[Выпуск кабинета входящих и следующие шаги](operations/release-intake-2026-09-24.md). Worker source `6305604`, live version `74857851-4bcd-4ea5-9741-551b23defac6`; D1 0005–0007 применены, 95/95 тестов PASS. Реальный вход оператора в research и inbox проверен. Публичный приём пока выключен: следующие шаги — удаление/retention, отдельное уведомление, живой запрос/ответ и QR. VIVI — наличие по запросу; реальные сделки ещё NO-GO. Продолжать с ветки `codex/mira-expo22-operator-20260922`. Ниже сохранена историческая запись.
+
 ## 2026-09-18 — final QA follow-up: static back navigation and portable browser reports
 
 PR #10 merged as `ce5153714cab8e83dd0a4243b123c627482bd006`; Pages run 35250067420 succeeded, snapshot `1129ee8014c5a022d418bcad7684982a6d0742cf`. A fresh real owner browser session confirmed the deployed operator dashboard and agency administration screen without creating production records.
