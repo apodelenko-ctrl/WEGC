@@ -1,11 +1,10 @@
 {
-  "assessed_at": "2026-09-22T02:09:56.154640+00:00",
+  "assessed_at": "2026-09-25T01:14:24.067570+00:00",
   "ready": false,
-  "accepted_gates": 3,
+  "accepted_gates": 4,
   "total_gates": 12,
   "open_gates": [
     "EXPO-02",
-    "EXPO-03",
     "EXPO-05",
     "EXPO-06",
     "EXPO-07",
@@ -21,7 +20,7 @@
       "status": "passed_live",
       "reason": "",
       "owner": "CLOUD",
-      "next_action": "Maintain printed URL; inspect after selective release."
+      "next_action": "Maintain printed QR URL; GET checked today, physical/Russia verification stays EXPO-02."
     },
     {
       "id": "EXPO-02",
@@ -33,11 +32,11 @@
     },
     {
       "id": "EXPO-03",
-      "accepted": false,
-      "status": "prepared",
+      "accepted": true,
+      "status": "accepted_receipt",
       "reason": "",
       "owner": "LOCAL integration; CLOUD patch",
-      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS."
+      "next_action": "Preserve live public request and LOCAL24Sep synthetic E2E acceptance; monitor form without new unauthorized submissions."
     },
     {
       "id": "EXPO-04",
@@ -53,7 +52,7 @@
       "status": "partial",
       "reason": "",
       "owner": "LOCAL",
-      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS."
+      "next_action": "Queue/assigned operator/response/notifications implemented and LOCAL E2E accepted. Confirm actual shift and timely manual email response; authenticated real metrics not read."
     },
     {
       "id": "EXPO-06",
@@ -61,7 +60,7 @@
       "status": "partial",
       "reason": "",
       "owner": "CLOUD preparation; authorized Cloudflare integration",
-      "next_action": "Live schema/counts already accepted. Obtain current recovery point and authorized D1 execution; isolated acceptance then controlled additive import/migration. No VPS requirement."
+      "next_action": "Cloudflare public intake/research live, no VPS blocker. Full encrypted native history separate; document minimum migrated operations scope without claiming full Espo restore."
     },
     {
       "id": "EXPO-07",
@@ -85,7 +84,7 @@
       "status": "partial",
       "reason": "",
       "owner": "LOCAL",
-      "next_action": "Confirm final agency terms/privacy, working contact, and precise activation scope."
+      "next_action": "Public intake notice/consent/retention accepted from LOCAL release; commercial agency/project terms remain unverified."
     },
     {
       "id": "EXPO-10",
@@ -93,7 +92,7 @@
       "status": "partial",
       "reason": "",
       "owner": "LOCAL / CLOUD",
-      "next_action": "Verify production roles, queue health, restart/backup and named exhibition operator."
+      "next_action": "Existing backup/role/operator acceptance preserved. Finish ordinary-member live denial, actual shift, queue metrics and operational fallback."
     },
     {
       "id": "EXPO-11",
@@ -101,15 +100,15 @@
       "status": "passed_artifact",
       "reason": "",
       "owner": "CLOUD",
-      "next_action": "Refresh shared counters only from fresh source evidence; preserve source lineage separation."
+      "next_action": "Research queue/resume reconciled today; fix older generated launch-dashboard from its source/generator, retain distinct counts."
     },
     {
       "id": "EXPO-12",
       "accepted": false,
-      "status": "not_run",
+      "status": "partial",
       "reason": "",
       "owner": "LOCAL live / CLOUD review",
-      "next_action": "Run full new-agent/project-response/mobile case; record release SHA and explicit decision by deadline."
+      "next_action": "Technical synthetic intake E2E accepted24Sep, new GET smoke25Sep. Physical/Russia and supplier commercial scenario remain open; no backdated full GO."
     }
   ]
 }

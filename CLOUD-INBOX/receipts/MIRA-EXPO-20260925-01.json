@@ -1,0 +1,83 @@
+{
+  "task_id": "MIRA-EXPO-20260921-01",
+  "checkpoint": "EXPO25-SUPPORT-01",
+  "at": "2026-09-25T01:14:24.067570+00:00",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "fc22b5a34369a668bca44e89df34a7d55b94fd41",
+  "status": "live_intake_reconciled_get_support_verified_commercial_hold",
+  "sources": [
+    "https://github.com/apodelenko-ctrl/WEGC/blob/4735a2e53260d307db872710cfcf9506b11e23ca/project-bible/mira/WORK-STATUS.md",
+    "https://github.com/apodelenko-ctrl/WEGC/blob/4735a2e53260d307db872710cfcf9506b11e23ca/project-bible/mira/operations/release-project-media-email-2026-09-25.md",
+    "https://github.com/apodelenko-ctrl/WEGC/blob/4735a2e53260d307db872710cfcf9506b11e23ca/project-bible/mira/operations/release-intake-2026-09-24.json"
+  ],
+  "accepted_local_evidence": {
+    "scope": "Repository LOCAL release evidence, not fresh CLOUD authenticated reexecution",
+    "cf006_deployment_source": "7ac08e78efe7c2774b629e8c74562cff77bb1abd",
+    "intake_test_at": "2026-09-24T16:07:19Z",
+    "synthetic_not_real_lead": true,
+    "latest_worker_version_reported": "b8390a9a-6780-4143-9c16-7444857384de",
+    "public_intake_enabled": true,
+    "operator_research_login": true,
+    "operator_inbox_login": true,
+    "ordinary_member_live_denial": false,
+    "email_preview": true,
+    "automatic_email_transport": false
+  },
+  "current_state": {
+    "public_presentation": "available_live_GET",
+    "public_intake": "enabled_LOCAL_end_to_end_receipt_accepted_current_GET_passed",
+    "research_view": "deployed_LOCAL_operator_login_accepted",
+    "operator_inbox": "deployed_LOCAL_login_accepted_current_anonymous_boundary_passed",
+    "email": "manual_owner_approved_draft_only_no_automatic_transport",
+    "commercial_transactions": "NO_GO_current_project_terms_unverified",
+    "full_autonomy": "NOT_ACCEPTED",
+    "business_counts": {
+      "real_agency_requests": null,
+      "real_responses": null,
+      "overdue_requests": null
+    },
+    "counts_note": "No authenticated business telemetry read; unknown is not zero. LOCAL service-test request excluded from leads.",
+    "full_native_crm_restore": false
+  },
+  "completed": [
+    "Reconciled stale research queue/resume/evidence against newer main LOCAL release records.",
+    "Implemented allowlisted GET-only route smoke with no login, redirects, cookie use, submissions or emails.",
+    "11 synthetic unit tests passed; nine live GET route checks passed.",
+    "Recorded Russian exhibition support decision with unknown operational counts left null."
+  ],
+  "tests": {
+    "unit_passed": 11,
+    "unit_failed": 0,
+    "live_GET_routes_passed": 9,
+    "live_GET_report": "CLOUD-INBOX/packages/MIRA-EXPO-SUPPORT-20260925-01/LIVE-GET-CHECK.json"
+  },
+  "package": "CLOUD-INBOX/packages/MIRA-EXPO-SUPPORT-20260925-01",
+  "production_changed": false,
+  "external_sends": 0,
+  "forms_submitted": 0,
+  "new_research_candidates": 0,
+  "crm_imports": 0,
+  "non_runs": [
+    "Turnstile challenge",
+    "durable submission",
+    "authenticated roles",
+    "mail delivery",
+    "physical QR",
+    "Russia mobile network"
+  ],
+  "limitations": [
+    "GET checks verify form/notice/challenge presence, not successful new submissions.",
+    "Local release-intake JSON at 15:52 on24Sep is earlier than the16:07 public flow acceptance and25Sep email release.",
+    "Generated launch-dashboard.json still contains historical source counts/state; do not hand-edit around generator protection.",
+    "No contemporaneous full GO/NO-GO evidence by24Sep20:00ICT found; do not backdate acceptance."
+  ],
+  "next_action": "LOCAL: operate the already-live intake, check authenticated queue/notifications and actual operator coverage, prepare each email for explicit owner approval; do not resend/import/redeploy completed CF005/CF006/EXPO22-A. Complete ordinary-member denial and physical QR/Russia checks; verify VIVI availability and commercial terms from supplier response. CLOUD: GET-only support checks and source-based dashboard reconciliation, no external sends.",
+  "all_done": false,
+  "readiness": {
+    "ready": false,
+    "accepted_gates": 4,
+    "total_gates": 12,
+    "scope": "strict complete exhibition criteria; not a readiness percentage",
+    "generator": "CLOUD-INBOX/packages/MIRA-EXPO-20260921-01/readiness.py"
+  }
+}

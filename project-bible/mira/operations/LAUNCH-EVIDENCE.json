@@ -2,8 +2,8 @@
   "schema_version": 1,
   "task_id": "MIRA-EXPO-20260921-01",
   "checked_at": "2026-09-21T16:20:37.632553+00:00",
-  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "fc22b5a34369a668bca44e89df34a7d55b94fd41",
   "deadline": "2026-09-24T20:00:00+07:00",
   "gates": [
     {
@@ -12,10 +12,11 @@
       "status": "passed_live",
       "owner": "CLOUD",
       "evidence": [
-        "Decoded both printed PDF QR payloads; live start/access/login navigation. Physical test excluded."
+        "Decoded both printed PDF QR payloads; live start/access/login navigation. Physical test excluded.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Maintain printed URL; inspect after selective release.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Maintain printed QR URL; GET checked today, physical/Russia verification stays EXPO-02.",
       "due_date": "2026-09-21"
     },
     {
@@ -33,14 +34,15 @@
     {
       "id": "EXPO-03",
       "title": "New visitor onboarding",
-      "status": "prepared",
+      "status": "accepted_receipt",
       "owner": "LOCAL integration; CLOUD patch",
       "evidence": [
         "CTA patch implemented and tested; current access requires prior invitation.",
-        "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json"
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-22T02:09:54.508Z",
-      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Preserve live public request and LOCAL24Sep synthetic E2E acceptance; monitor form without new unauthorized submissions.",
       "due_date": "2026-09-22"
     },
     {
@@ -62,10 +64,11 @@
       "owner": "LOCAL",
       "evidence": [
         "Previous technical receipt is accepted; current end-to-end assignment/notification/replay not newly accepted.",
-        "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json"
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-22T02:09:54.508Z",
-      "next_action": "Integrate opt-in public intake package, operator UI/notification and live acceptance; code tests alone are not PASS.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Queue/assigned operator/response/notifications implemented and LOCAL E2E accepted. Confirm actual shift and timely manual email response; authenticated real metrics not read.",
       "due_date": "2026-09-23"
     },
     {
@@ -78,10 +81,11 @@
         "project-bible/mira/operations/CLOUDFLARE-INVENTORY-20260921.json",
         "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF004-LIVE-BASELINE.json",
         "CF005 actual remote import/replay accepted from LOCAL receipt at c7e5704902f4b0515a8462026199088c1fef8f94:405 agencies,43 groups,618 links; original13 operational tables preserved.",
-        "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json"
+        "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-22T08:20:38.476Z",
-      "next_action": "LOCAL selectively publish CF006 and verify live operator access. Complete required native history/operations scope separately; public research import is already complete. No VPS requirement.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Cloudflare public intake/research live, no VPS blocker. Full encrypted native history separate; document minimum migrated operations scope without claiming full Espo restore.",
       "due_date": "2026-09-23"
     },
     {
@@ -114,10 +118,11 @@
       "status": "partial",
       "owner": "LOCAL",
       "evidence": [
-        "Existing document drafts do not prove final acceptance or working public onboarding contact."
+        "Existing document drafts do not prove final acceptance or working public onboarding contact.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Confirm final agency terms/privacy, working contact, and precise activation scope.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Public intake notice/consent/retention accepted from LOCAL release; commercial agency/project terms remain unverified.",
       "due_date": "2026-09-23"
     },
     {
@@ -126,10 +131,11 @@
       "status": "partial",
       "owner": "LOCAL / CLOUD",
       "evidence": [
-        "Local encrypted restore/ACL accepted; production role/monitoring/backup drill still open."
+        "Local encrypted restore/ACL accepted; production role/monitoring/backup drill still open.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Verify production roles, queue health, restart/backup and named exhibition operator.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Existing backup/role/operator acceptance preserved. Finish ordinary-member live denial, actual shift, queue metrics and operational fallback.",
       "due_date": "2026-09-24"
     },
     {
@@ -138,22 +144,24 @@
       "status": "passed_artifact",
       "owner": "CLOUD",
       "evidence": [
-        "Agency RESUME/D002405, developer43, cutover receipt and current QUEUE reconciliation."
+        "Agency RESUME/D002405, developer43, cutover receipt and current QUEUE reconciliation.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Refresh shared counters only from fresh source evidence; preserve source lineage separation.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Research queue/resume reconciled today; fix older generated launch-dashboard from its source/generator, retain distinct counts.",
       "due_date": "2026-09-21"
     },
     {
       "id": "EXPO-12",
       "title": "Final rehearsal and GO/NO-GO",
-      "status": "not_run",
+      "status": "partial",
       "owner": "LOCAL live / CLOUD review",
       "evidence": [
-        "No accepted full exhibition rehearsal."
+        "No accepted full exhibition rehearsal.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Run full new-agent/project-response/mobile case; record release SHA and explicit decision by deadline.",
+      "checked_at": "2026-09-25T01:14:24.067570+00:00",
+      "next_action": "Technical synthetic intake E2E accepted24Sep, new GET smoke25Sep. Physical/Russia and supplier commercial scenario remain open; no backdated full GO.",
       "due_date": "2026-09-24"
     }
   ],
@@ -178,14 +186,15 @@
     "external_sends_this_block": 0
   },
   "limitations": [
-    "Digital browser only; no physical QR/Russia mobile test",
-    "Prepared UI patch not deployed; no modified-UI browser acceptance",
-    "Native crosswalk source lineage is not legal entity reconciliation of all405/master43",
-    "Five artifact hashes and60 package entries verified by CLOUD; full encrypted native CRM recovery remains separate. Public research D1 import accepted from LOCAL CF005.",
-    "EXPO22-A: server + DOM harness only; no rendered browser, Turnstile, remote D1 or release acceptance.",
-    "CF006:83 local tests and public fixture smoke; rendered browser/deploy/live role tests not yet run."
+    "Today's CLOUD checks are GET-only; no authenticated forms, new Turnstile challenge, email send or production write.",
+    "LOCAL main WORK-STATUS and25Sep release supersede22Sep research pending-deploy notes and early24Sep disabled-intake JSON.",
+    "No physical QR/Russia mobile or fresh ordinary-member live acceptance.",
+    "Real operational counts remain null; service-test application is not a lead.",
+    "Full native CRM recovery and legal identity reconciliation separate from public405/43/618 research import.",
+    "Automatic email transport absent; owner approval required for each concrete email.",
+    "Current generated launch-dashboard reflects older source; not overwritten outside generator."
   ],
-  "updated_at": "2026-09-22T08:20:38.476Z",
+  "updated_at": "2026-09-25T01:14:24.067570+00:00",
   "accepted_public_research_import": {
     "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
     "receipt_commit": "c7e5704902f4b0515a8462026199088c1fef8f94",
@@ -208,5 +217,22 @@
     "original_schema_objects_preserved": 48,
     "native_full_crm_restore": false
   },
-  "operator_research_view_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json"
+  "operator_research_view_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json",
+  "current_live_state": {
+    "public_presentation": "available_live_GET",
+    "public_intake": "enabled_LOCAL_end_to_end_receipt_accepted_current_GET_passed",
+    "research_view": "deployed_LOCAL_operator_login_accepted",
+    "operator_inbox": "deployed_LOCAL_login_accepted_current_anonymous_boundary_passed",
+    "email": "manual_owner_approved_draft_only_no_automatic_transport",
+    "commercial_transactions": "NO_GO_current_project_terms_unverified",
+    "full_autonomy": "NOT_ACCEPTED",
+    "business_counts": {
+      "real_agency_requests": null,
+      "real_responses": null,
+      "overdue_requests": null
+    },
+    "counts_note": "No authenticated business telemetry read; unknown is not zero. LOCAL service-test request excluded from leads.",
+    "full_native_crm_restore": false
+  },
+  "latest_support_receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
 }

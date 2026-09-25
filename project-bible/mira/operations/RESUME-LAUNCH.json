@@ -1,12 +1,12 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
-  "status": "active_preparation_not_ready",
-  "updated_at": "2026-09-22T08:20:38.476Z",
-  "source_main_sha": "9a5f4c89168aa9e7995ceebf6db8dbaaf9a61137",
-  "source_research_sha": "c7e5704902f4b0515a8462026199088c1fef8f94",
-  "next_gate": "EXPO-03",
-  "next_action": "LOCAL selectively integrate package against current main, add operator UI/notification and complete controlled D1/Access/Turnstile acceptance. Link existing access CTA only after intake works. CLOUD can continue operator UI and operational controls without waiting for private CRM key.",
-  "parallel_available_action": "Implement operator UI for prepared queue + explicit response publication; keep existing Access auth. Actual public release still gated.",
+  "status": "exhibition_support_public_intake_live_commercial_hold",
+  "updated_at": "2026-09-25T01:14:24.067570+00:00",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "fc22b5a34369a668bca44e89df34a7d55b94fd41",
+  "next_gate": "EXPO-08",
+  "next_action": "LOCAL: operate the already-live intake, check authenticated queue/notifications and actual operator coverage, prepare each email for explicit owner approval; do not resend/import/redeploy completed CF005/CF006/EXPO22-A. Complete ordinary-member denial and physical QR/Russia checks; verify VIVI availability and commercial terms from supplier response. CLOUD: GET-only support checks and source-based dashboard reconciliation, no external sends.",
+  "parallel_available_action": "Run GET-only support smoke; reconcile canonical dashboard via source/generator without overwriting historical evidence.",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
     "2026-09-25",
@@ -14,8 +14,8 @@
   ],
   "plan_path": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
   "evidence_path": "project-bible/mira/operations/LAUNCH-EVIDENCE.json",
-  "event_path": "CLOUD-INBOX/events/2026-09-22/cloud-expo-intake-a.json",
-  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
+  "event_path": "CLOUD-INBOX/events/2026-09-25/cloud-expo-support-01.json",
+  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
   "counts": {
     "agency_candidates": 405,
     "agency_RU": 263,
@@ -48,9 +48,10 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
-    "Actual public-intake privacy/retention approval, operator subject/shift, Turnstile config",
-    "Narrow public route Access policy acceptance; do not expose existing API",
-    "Separate recovery key or portable private export for full native data only"
+    "No fresh physical QR/Russia-mobile evidence.",
+    "No fresh ordinary-member authenticated denial acceptance.",
+    "Named operational shift, current private queue counts and actual email delivery not independently read.",
+    "Current VIVI/project commercial conditions unverified; no automatic mail/AI acceptance."
   ],
   "all_done": false,
   "restore_authorized": true,
@@ -58,7 +59,7 @@
   "restore_blockers": [
     "Full encrypted native CRM/history only: separate recovery key or authorized portable native export. Public research import completed via LOCAL CF005."
   ],
-  "immediate_owner_priority": "Publish protected operator research view and continue public request/receipt/operator/response flow; CF005 public research import accepted.",
+  "immediate_owner_priority": "Operate live intake; manual approved email responses; current VIVI supply verification.",
   "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
   "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
   "latest_cloudflare_schema_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
@@ -79,9 +80,9 @@
     "mira_projects": 0,
     "mira_rate_limits": 1
   },
-  "latest_intake_checkpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260922-A.json",
+  "latest_intake_checkpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
   "latest_cloudflare_recovery_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF005-BOOKMARK.json",
-  "cloudflare_next_action": "LOCAL selectively integrate CF006 research-view modules against current main, configure the exact accepted public snapshot, preserve Access and EXPO22-A, and return deployed SHA plus live anonymous/member/operator acceptance. No repeat CF005 import or backup audit. Public intake/operator request UI and notifications remain a separate launch step.",
+  "cloudflare_next_action": "Preserve live research/intake; no import/redeploy repetition.",
   "latest_operator_research_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-CF006-RESEARCH-VIEW.json",
   "accepted_public_research_import": {
     "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
@@ -104,5 +105,22 @@
     "original_tables_preserved": 13,
     "original_schema_objects_preserved": 48,
     "native_full_crm_restore": false
-  }
+  },
+  "current_live_state": {
+    "public_presentation": "available_live_GET",
+    "public_intake": "enabled_LOCAL_end_to_end_receipt_accepted_current_GET_passed",
+    "research_view": "deployed_LOCAL_operator_login_accepted",
+    "operator_inbox": "deployed_LOCAL_login_accepted_current_anonymous_boundary_passed",
+    "email": "manual_owner_approved_draft_only_no_automatic_transport",
+    "commercial_transactions": "NO_GO_current_project_terms_unverified",
+    "full_autonomy": "NOT_ACCEPTED",
+    "business_counts": {
+      "real_agency_requests": null,
+      "real_responses": null,
+      "overdue_requests": null
+    },
+    "counts_note": "No authenticated business telemetry read; unknown is not zero. LOCAL service-test request excluded from leads.",
+    "full_native_crm_restore": false
+  },
+  "live_D1_operational_counts_note": "Historical CF004/CF005 counts only. Subsequent service-test intake exists per LOCAL; current real request counts not read."
 }

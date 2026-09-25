@@ -1,0 +1,144 @@
+{
+  "checked_at": "2026-09-25T01:14:24.067570+00:00",
+  "scope": "GET-only availability and anonymous boundary; no form submission or login",
+  "status": "PASS",
+  "routes": [
+    {
+      "name": "qr_start",
+      "url": "https://wegc.fund/mira/start/",
+      "http_status": 200,
+      "status": "PASS",
+      "checks": {
+        "http_200": true,
+        "content_type": true,
+        "russian_document": true
+      },
+      "body_sha256": "906ab19baa52a1cadbc033ff6652a4bb40dfca94c844cfebf426b5d32ad90282",
+      "body_bytes": 12707
+    },
+    {
+      "name": "agency_access",
+      "url": "https://wegc.fund/mira/access/",
+      "http_status": 200,
+      "status": "PASS",
+      "checks": {
+        "http_200": true,
+        "content_type": true,
+        "russian_document": true,
+        "intake_link": true
+      },
+      "body_sha256": "c0552b694d5fa5510616db647df78fa8c15bedcd67a0fec10f8b6203f2df8286",
+      "body_bytes": 3501
+    },
+    {
+      "name": "guided_start",
+      "url": "https://wegc.fund/mira/go/",
+      "http_status": 200,
+      "status": "PASS",
+      "checks": {
+        "http_200": true,
+        "content_type": true,
+        "russian_document": true
+      },
+      "body_sha256": "62fa10cf15a6f01cf27c555d00561591ed88359cac5546cc652af013011e0bf8",
+      "body_bytes": 13726
+    },
+    {
+      "name": "catalogue",
+      "url": "https://wegc.fund/mira/catalog/",
+      "http_status": 200,
+      "status": "PASS",
+      "checks": {
+        "http_200": true,
+        "content_type": true,
+        "russian_document": true
+      },
+      "body_sha256": "cf1bd4f88a6694383c1b99a1d1c61107db3a45cbf70c59729367ee146ca878cc",
+      "body_bytes": 31371
+    },
+    {
+      "name": "intake",
+      "url": "https://pilot.wegc.fund/mira/request/",
+      "http_status": 200,
+      "status": "PASS",
+      "checks": {
+        "http_200": true,
+        "content_type": true,
+        "russian_document": true,
+        "unpaused_form": true,
+        "versioned_consent": true,
+        "consent_unchecked_required": true,
+        "turnstile_present": true,
+        "privacy_link": true,
+        "no_store": true,
+        "nosniff": true
+      },
+      "body_sha256": "bb453ac7b54bde3d17355149e1bb92727485117477744e2a6237e98bc0cd6e6f",
+      "body_bytes": 2703
+    },
+    {
+      "name": "intake_client",
+      "url": "https://pilot.wegc.fund/mira/request/client.mjs",
+      "http_status": 200,
+      "status": "PASS",
+      "checks": {
+        "http_200": true,
+        "content_type": true,
+        "receipt_ui": true,
+        "no_store": true,
+        "nosniff": true
+      },
+      "body_sha256": "88561fb2d48be74dbbde22683b972c4ff7b12f5b49995bcb3f237bf3aedd2ee9",
+      "body_bytes": 3928
+    },
+    {
+      "name": "privacy",
+      "url": "https://pilot.wegc.fund/mira/request/privacy",
+      "http_status": 200,
+      "status": "PASS",
+      "checks": {
+        "http_200": true,
+        "content_type": true,
+        "russian_document": true,
+        "published_notice": true,
+        "no_store": true,
+        "nosniff": true
+      },
+      "body_sha256": "e4d5bea4d5cdd15d14cf1412468b2d53378f21e230c6d77dcd9bdfea072207e7",
+      "body_bytes": 6420
+    },
+    {
+      "name": "research",
+      "url": "https://pilot.wegc.fund/mira/research/",
+      "http_status": 302,
+      "status": "PASS",
+      "checks": {
+        "anonymous_access_denied": true
+      },
+      "body_sha256": "12755429beb15d5eb57eafa45b8dba326343dd099bf0552038694c3856e8860e",
+      "body_bytes": 143
+    },
+    {
+      "name": "operator_inbox",
+      "url": "https://pilot.wegc.fund/mira/api/admin/intake/view",
+      "http_status": 302,
+      "status": "PASS",
+      "checks": {
+        "anonymous_access_denied": true
+      },
+      "body_sha256": "12755429beb15d5eb57eafa45b8dba326343dd099bf0552038694c3856e8860e",
+      "body_bytes": 143
+    }
+  ],
+  "new_requests_created": 0,
+  "emails_sent": 0,
+  "commercial_readiness": "NOT_ASSESSED",
+  "not_tested": [
+    "Turnstile challenge",
+    "durable submission",
+    "authenticated roles",
+    "mail delivery",
+    "physical QR",
+    "Russia mobile network"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "cloud-expo-support-01",
+  "at": "2026-09-25T01:14:24.067570+00:00",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "fc22b5a34369a668bca44e89df34a7d55b94fd41",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
+  "unit_tests_passed": 11,
+  "live_get_checks_passed": 9,
+  "forms_submitted": 0,
+  "external_sends": 0,
+  "production_changed": false
+}
