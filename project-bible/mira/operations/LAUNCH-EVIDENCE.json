@@ -3,7 +3,7 @@
   "task_id": "MIRA-EXPO-20260921-01",
   "checked_at": "2026-09-21T16:20:37.632553+00:00",
   "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
-  "source_research_sha": "fc22b5a34369a668bca44e89df34a7d55b94fd41",
+  "source_research_sha": "9d5e71262eb865f7cd059edb541b1292311be725",
   "deadline": "2026-09-24T20:00:00+07:00",
   "gates": [
     {
@@ -13,10 +13,11 @@
       "owner": "CLOUD",
       "evidence": [
         "Decoded both printed PDF QR payloads; live start/access/login navigation. Physical test excluded.",
-        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json"
       ],
-      "checked_at": "2026-09-25T01:14:24.067570+00:00",
-      "next_action": "Maintain printed QR URL; GET checked today, physical/Russia verification stays EXPO-02.",
+      "checked_at": "2026-09-26T01:14:47Z",
+      "next_action": "Maintain printed QR URL; GET checked26Sep, physical/Russia verification stays EXPO-02.",
       "due_date": "2026-09-21"
     },
     {
@@ -103,13 +104,15 @@
     {
       "id": "EXPO-08",
       "title": "Verified project package",
-      "status": "blocked",
+      "status": "partial",
       "owner": "LOCAL / owner / supplier",
       "evidence": [
-        "Research data and Botanica signed-and-sent do not establish countersignature/current commercial conditions."
+        "Research data and Botanica signed-and-sent do not establish countersignature/current commercial conditions.",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
+        "project-bible/mira/operations/VIVI-LIVE-SUPPLY-GATE-2026-09-26.md"
       ],
-      "checked_at": "2026-09-21T16:20:37.632553+00:00",
-      "next_action": "Complete minimum one verified project dossier with existing correspondence and seller terms.",
+      "checked_at": "2026-09-26T01:14:47Z",
+      "next_action": "Monitor existing The Title thread. Run private VIVI gate on direct exact-request response; accept only current quote/inventory and all seven commercial controls.",
       "due_date": "2026-09-23"
     },
     {
@@ -145,10 +148,11 @@
       "owner": "CLOUD",
       "evidence": [
         "Agency RESUME/D002405, developer43, cutover receipt and current QUEUE reconciliation.",
-        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json"
       ],
-      "checked_at": "2026-09-25T01:14:24.067570+00:00",
-      "next_action": "Research queue/resume reconciled today; fix older generated launch-dashboard from its source/generator, retain distinct counts.",
+      "checked_at": "2026-09-26T01:14:47Z",
+      "next_action": "Shared state reconciled26Sep; keep current business counts null unless authenticated evidence appears.",
       "due_date": "2026-09-21"
     },
     {
@@ -158,10 +162,11 @@
       "owner": "LOCAL live / CLOUD review",
       "evidence": [
         "No accepted full exhibition rehearsal.",
-        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
+        "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json"
       ],
-      "checked_at": "2026-09-25T01:14:24.067570+00:00",
-      "next_action": "Technical synthetic intake E2E accepted24Sep, new GET smoke25Sep. Physical/Russia and supplier commercial scenario remain open; no backdated full GO.",
+      "checked_at": "2026-09-26T01:14:47Z",
+      "next_action": "GET support passes26Sep; exact VIVI gate is HOLD. Complete physical/Russia and direct supplier-response scenario; no backdated full GO.",
       "due_date": "2026-09-24"
     }
   ],
@@ -186,15 +191,16 @@
     "external_sends_this_block": 0
   },
   "limitations": [
-    "Today's CLOUD checks are GET-only; no authenticated forms, new Turnstile challenge, email send or production write.",
     "LOCAL main WORK-STATUS and25Sep release supersede22Sep research pending-deploy notes and early24Sep disabled-intake JSON.",
     "No physical QR/Russia mobile or fresh ordinary-member live acceptance.",
     "Real operational counts remain null; service-test application is not a lead.",
     "Full native CRM recovery and legal identity reconciliation separate from public405/43/618 research import.",
     "Automatic email transport absent; owner approval required for each concrete email.",
-    "Current generated launch-dashboard reflects older source; not overwritten outside generator."
+    "Current generated launch-dashboard reflects older source; not overwritten outside generator.",
+    "26Sep CLOUD checks are GET-only; no authenticated form, Turnstile submission, email send or production write.",
+    "VIVI official discovery labels/progress are not current units or a quote; direct exact-request reply pending."
   ],
-  "updated_at": "2026-09-25T01:14:24.067570+00:00",
+  "updated_at": "2026-09-26T01:14:47Z",
   "accepted_public_research_import": {
     "receipt_path": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
     "receipt_commit": "c7e5704902f4b0515a8462026199088c1fef8f94",
@@ -234,5 +240,11 @@
     "counts_note": "No authenticated business telemetry read; unknown is not zero. LOCAL service-test request excluded from leads.",
     "full_native_crm_restore": false
   },
-  "latest_support_receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json"
+  "latest_support_receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
+  "vivi_gate": {
+    "package": "CLOUD-INBOX/packages/MIRA-VIVI-LIVE-GATE-20260926-01",
+    "response_ready": false,
+    "commercially_enabled": false,
+    "customer_registration_enabled": false
+  }
 }

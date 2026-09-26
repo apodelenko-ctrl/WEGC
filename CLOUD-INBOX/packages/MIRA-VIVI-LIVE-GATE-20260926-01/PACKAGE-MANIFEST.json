@@ -1,0 +1,16 @@
+{
+  "checkpoint": "EXPO26-VIVI-GATE-01",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "9d5e71262eb865f7cd059edb541b1292311be725",
+  "files": [
+    "README.md",
+    "vivi-gate.json",
+    "vivi_gate.py",
+    "test_vivi_gate.py",
+    "VIVI-GATE-RESULT.json",
+    "LIVE-GET-CHECK-20260926.json",
+    "TEST-REPORT.json"
+  ],
+  "private_data": false,
+  "external_sends": 0
+}

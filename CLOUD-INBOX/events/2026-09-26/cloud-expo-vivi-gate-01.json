@@ -1,0 +1,14 @@
+{
+  "id": "cloud-expo-vivi-gate-01",
+  "at": "2026-09-26T01:14:47Z",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "9d5e71262eb865f7cd059edb541b1292311be725",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
+  "package": "CLOUD-INBOX/packages/MIRA-VIVI-LIVE-GATE-20260926-01",
+  "vivi_tests_passed": 10,
+  "monitor_tests_passed": 11,
+  "live_get_routes_passed": 9,
+  "forms_submitted": 0,
+  "external_sends": 0,
+  "production_changed": false
+}

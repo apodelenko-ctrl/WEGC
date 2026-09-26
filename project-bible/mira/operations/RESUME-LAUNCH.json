@@ -1,12 +1,12 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
-  "status": "exhibition_support_public_intake_live_commercial_hold",
-  "updated_at": "2026-09-25T01:14:24.067570+00:00",
+  "status": "exhibition_support_live_vivi_response_pending",
+  "updated_at": "2026-09-26T01:14:47Z",
   "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
-  "source_research_sha": "fc22b5a34369a668bca44e89df34a7d55b94fd41",
+  "source_research_sha": "9d5e71262eb865f7cd059edb541b1292311be725",
   "next_gate": "EXPO-08",
-  "next_action": "LOCAL: operate the already-live intake, check authenticated queue/notifications and actual operator coverage, prepare each email for explicit owner approval; do not resend/import/redeploy completed CF005/CF006/EXPO22-A. Complete ordinary-member denial and physical QR/Russia checks; verify VIVI availability and commercial terms from supplier response. CLOUD: GET-only support checks and source-based dashboard reconciliation, no external sends.",
-  "parallel_available_action": "Run GET-only support smoke; reconcile canonical dashboard via source/generator without overwriting historical evidence.",
+  "next_action": "LOCAL: do not resend first contact. Monitor the existing The Title thread from 24 September; when a direct reply arrives, fill a private VIVI case, run the gate, present exact quote/materials to Artem, and only then reply to the agency. Continue actual queue coverage and owner-approved manual emails. Exhibition representative: physical QR and Russia-mobile check. CLOUD: GET-only monitoring and final27Sep closeout.",
+  "parallel_available_action": "Monitor current public routes GET-only; no duplicate forms. Prepare final27Sep closeout from receipts.",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
     "2026-09-25",
@@ -14,8 +14,8 @@
   ],
   "plan_path": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
   "evidence_path": "project-bible/mira/operations/LAUNCH-EVIDENCE.json",
-  "event_path": "CLOUD-INBOX/events/2026-09-25/cloud-expo-support-01.json",
-  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
+  "event_path": "CLOUD-INBOX/events/2026-09-26/cloud-expo-vivi-gate-01.json",
+  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
   "counts": {
     "agency_candidates": 405,
     "agency_RU": 263,
@@ -48,10 +48,11 @@
     "old_night_automations_reactivated": false
   },
   "blocked": [
+    "Direct The Title response to existing24Sep request not evidenced in current public repository.",
+    "Seven current VIVI commercial controls remain private/unverified for this case.",
     "No fresh physical QR/Russia-mobile evidence.",
-    "No fresh ordinary-member authenticated denial acceptance.",
-    "Named operational shift, current private queue counts and actual email delivery not independently read.",
-    "Current VIVI/project commercial conditions unverified; no automatic mail/AI acceptance."
+    "Named operational shift, current private queue counts and actual manual email delivery not independently read.",
+    "Fresh live assistant channel acceptance remains open."
   ],
   "all_done": false,
   "restore_authorized": true,
@@ -59,7 +60,7 @@
   "restore_blockers": [
     "Full encrypted native CRM/history only: separate recovery key or authorized portable native export. Public research import completed via LOCAL CF005."
   ],
-  "immediate_owner_priority": "Operate live intake; manual approved email responses; current VIVI supply verification.",
+  "immediate_owner_priority": "Process live intake and exact VIVI response when received; every availability query is fresh.",
   "architecture_correction": "project-bible/mira/operations/CLOUDFLARE-TARGET-20260921.md",
   "latest_cloudflare_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-20260921-01.json",
   "latest_cloudflare_schema_checkpoint": "CLOUD-INBOX/receipts/MIRA-CLOUDFLARE-SCHEMA-20260921-02.json",
@@ -122,5 +123,6 @@
     "counts_note": "No authenticated business telemetry read; unknown is not zero. LOCAL service-test request excluded from leads.",
     "full_native_crm_restore": false
   },
-  "live_D1_operational_counts_note": "Historical CF004/CF005 counts only. Subsequent service-test intake exists per LOCAL; current real request counts not read."
+  "live_D1_operational_counts_note": "Historical CF004/CF005 counts only. Subsequent service-test intake exists per LOCAL; current real request counts not read.",
+  "latest_vivi_gate": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json"
 }

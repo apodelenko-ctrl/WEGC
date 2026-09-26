@@ -7,7 +7,7 @@
   "scope": "owner_requested_shared_accounting_and_local_preparation",
   "entryPoint": "CLOUD-INBOX/START-HERE.md",
   "nextTaskForLocal": "MIRA-EXPO-20260921-01",
-  "routingNote": "LOCAL: operate the already-live intake, check authenticated queue/notifications and actual operator coverage, prepare each email for explicit owner approval; do not resend/import/redeploy completed CF005/CF006/EXPO22-A. Complete ordinary-member denial and physical QR/Russia checks; verify VIVI availability and commercial terms from supplier response. CLOUD: GET-only support checks and source-based dashboard reconciliation, no external sends.",
+  "routingNote": "LOCAL: do not resend first contact. Monitor the existing The Title thread from 24 September; when a direct reply arrives, fill a private VIVI case, run the gate, present exact quote/materials to Artem, and only then reply to the agency. Continue actual queue coverage and owner-approved manual emails. Exhibition representative: physical QR and Russia-mobile check. CLOUD: GET-only monitoring and final27Sep closeout.",
   "mainIntegrationConfirmed": false,
   "localStartupRuleInstalled": true,
   "localReceiptConfirmed": true,
@@ -359,15 +359,16 @@
       "id": "MIRA-EXPO-20260921-01",
       "priority": "P0-exhibition-deadline",
       "owner": "CLOUD preparation; LOCAL product integration until accepted handoff",
-      "status": "public_intake_live_exhibition_support_commercial_hold",
+      "status": "exhibition_support_live_vivi_response_pending",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-EXPO-20260921-01.md",
       "planPath": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-EXPO-20260921-01.json",
       "deadline": "2026-09-24T20:00:00+07:00",
       "automationId": "6ab158bf4b848191a4c612c68d25c5b3",
-      "latestCheckpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
+      "latestCheckpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
       "intakePackage": "CLOUD-INBOX/packages/MIRA-INTAKE-20260922-01",
-      "nextAction": "LOCAL: operate the already-live intake, check authenticated queue/notifications and actual operator coverage, prepare each email for explicit owner approval; do not resend/import/redeploy completed CF005/CF006/EXPO22-A. Complete ordinary-member denial and physical QR/Russia checks; verify VIVI availability and commercial terms from supplier response. CLOUD: GET-only support checks and source-based dashboard reconciliation, no external sends."
+      "nextAction": "LOCAL: do not resend first contact. Monitor the existing The Title thread from 24 September; when a direct reply arrives, fill a private VIVI case, run the gate, present exact quote/materials to Artem, and only then reply to the agency. Continue actual queue coverage and owner-approved manual emails. Exhibition representative: physical QR and Russia-mobile check. CLOUD: GET-only monitoring and final27Sep closeout.",
+      "viviGatePackage": "CLOUD-INBOX/packages/MIRA-VIVI-LIVE-GATE-20260926-01"
     },
     {
       "id": "MIRA-CLOUDFLARE-20260921-01",
@@ -528,29 +529,14 @@
     "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md"
   },
   "previousNextTaskForLocal": "MIRA-EXPO-20260921-01",
-  "updatedAt": "2026-09-25T01:14:24.067570+00:00",
+  "updatedAt": "2026-09-26T01:14:47Z",
   "latestLaunchCheckpoint": {
-    "event": "CLOUD-INBOX/events/2026-09-25/cloud-expo-support-01.json",
-    "at": "2026-09-25T01:14:24.067570+00:00",
-    "sourceCommit": "fc22b5a34369a668bca44e89df34a7d55b94fd41",
+    "event": "CLOUD-INBOX/events/2026-09-26/cloud-expo-vivi-gate-01.json",
+    "at": "2026-09-26T01:14:47Z",
+    "sourceCommit": "9d5e71262eb865f7cd059edb541b1292311be725",
     "sourceMain": "4735a2e53260d307db872710cfcf9506b11e23ca",
-    "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260925-01.json",
-    "status": {
-      "public_presentation": "available_live_GET",
-      "public_intake": "enabled_LOCAL_end_to_end_receipt_accepted_current_GET_passed",
-      "research_view": "deployed_LOCAL_operator_login_accepted",
-      "operator_inbox": "deployed_LOCAL_login_accepted_current_anonymous_boundary_passed",
-      "email": "manual_owner_approved_draft_only_no_automatic_transport",
-      "commercial_transactions": "NO_GO_current_project_terms_unverified",
-      "full_autonomy": "NOT_ACCEPTED",
-      "business_counts": {
-        "real_agency_requests": null,
-        "real_responses": null,
-        "overdue_requests": null
-      },
-      "counts_note": "No authenticated business telemetry read; unknown is not zero. LOCAL service-test request excluded from leads.",
-      "full_native_crm_restore": false
-    }
+    "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
+    "status": "intake live; VIVI exact-request gate prepared; direct response pending"
   },
   "currentOwnerFollowupHistorical": {
     "at": "2026-09-18 18:44:24 UTC",

@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-09-26T01:14:47Z",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "9d5e71262eb865f7cd059edb541b1292311be725",
+  "tests": {
+    "vivi_gate": {
+      "passed": 10,
+      "failed": 0
+    },
+    "route_monitor": {
+      "passed": 11,
+      "failed": 0
+    },
+    "live_get": {
+      "routes_passed": 9,
+      "routes_failed": 0
+    }
+  },
+  "vivi_result": {
+    "response_ready": false,
+    "commercially_enabled": false,
+    "customer_registration_enabled": false,
+    "missing_commercial_controls": [
+      "agreement_coverage",
+      "contracting_seller",
+      "commission_schedule",
+      "lead_registration",
+      "lead_protection",
+      "downstream_partner_right",
+      "media_use_scope"
+    ],
+    "errors": []
+  },
+  "live_scope": "GET only; no login, Turnstile submission, forms or email",
+  "production_writes": 0,
+  "external_sends": 0
+}

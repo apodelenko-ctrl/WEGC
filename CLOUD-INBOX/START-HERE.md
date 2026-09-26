@@ -1,3 +1,15 @@
+## EXPO26 — 26 сентября: VIVI live-supply gate
+
+Fresh main `4735a2e53260d307db872710cfcf9506b11e23ca`, research `9d5e71262eb865f7cd059edb541b1292311be725`; новых commits LOCAL после25.09 не обнаружено. Публичный маршрут проверен повторно: **9/9 GET PASS**, monitor tests **11/11 PASS**, новых заявок/писем/writes0.
+
+VIVI оформлен как первый exact-request supply path в `CLOUD-INBOX/packages/MIRA-VIVI-LIVE-GATE-20260926-01`. Официальная страница26.09 подтверждает проект, gallery/floor plan/progress; официальный home помечает VIVI как New Project. Эти сигналы не считаются остатками или котировкой. Санитарная private-evidence continuity и реальная VIVI transaction history сохранены, но секретные terms не публикуются. LOCAL уже записал запрос The Title24.09 через существующий тред; first-contact не повторять. Прямой ответ в публичном repo пока не evidenced.
+
+Validator требует связь agency request → developer request → direct developer response, timestamp после запроса, inventory_as_of и либо полный unit quote, либо none_available. Отдельно нужны7 current private controls. **10/10 tests PASS**. Текущий результат корректно закрыт: response_ready=false, commercially_enabled=false, customer_registration_enabled=false, errors0. EXPO-08 переведён из общего blocked в partial exact hold; accepted gates остаются4/12.
+
+Следующий шаг: LOCAL наблюдает существующий The Title thread; при ответе заполняет private case, запускает validator, показывает Артёму точные quote/materials и только затем отвечает агентству. Публичные страницы, CF005/CF006/import/intake не переделывать. Физический QR/Россия, actual queue/shift и живой assistant channel остаются открыты.
+
+Receipt `CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json`; event `CLOUD-INBOX/events/2026-09-26/cloud-expo-vivi-gate-01.json`. Botanica signed/stamped/sent и follow-up24.09 сохранены, повторных отправок0.
+
 ## EXPO25 — 25 сентября: действующий приём и сопровождение
 
 Сверка по main `4735a2e53260d307db872710cfcf9506b11e23ca` и research `fc22b5a34369a668bca44e89df34a7d55b94fd41`. Более свежие LOCAL WORK-STATUS/RESUME-STATE и release-project-media-email-2026-09-25.md supersede старые указания «экран не опубликован / public intake выключен». CF006 опубликован; вход оператора в research/inbox принят LOCAL. 24.09 в16:07:19Z LOCAL проверил служебную заявку: Turnstile → сохранение → оператор → ответ. Это не реальный лид. Актуальная Worker version по отчёту LOCAL: `b8390a9a-6780-4143-9c16-7444857384de`.

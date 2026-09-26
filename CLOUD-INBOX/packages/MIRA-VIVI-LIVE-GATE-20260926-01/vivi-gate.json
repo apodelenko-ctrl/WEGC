@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "project_id": "title-vivi",
+  "project_name": "The Title VIVI",
+  "developer_group": "Rhom Bho Property / THE TITLE",
+  "checked_at": "2026-09-26T01:14:47Z",
+  "public_discovery": {
+    "official_url": "https://thetitleresidence.com/condominium/vivi/",
+    "official_home_status": "New Project",
+    "official_observation_checked_at": "2026-09-26",
+    "mira_url": "https://wegc.fund/mira/catalog/projects/title-vivi/",
+    "mira_disposition": "availability_price_and_terms_by_request",
+    "notes": "Official marketing status and project progress are discovery evidence, not unit inventory or a quotation."
+  },
+  "relationship_evidence": {
+    "status": "private_relationship_and_transaction_history_evidenced",
+    "public_sanitized_sources": [
+      "project-bible/mira/research/2026-09-19-VIVI-CONTINUITY-DELTA.md",
+      "project-bible/mira/research/day-2026-09-18/results/C12-phuket-vivi-commercial-evidence-gap.md"
+    ],
+    "confidential_terms_published": false
+  },
+  "latest_contact": {
+    "request_sent_at": "2026-09-24",
+    "route": "existing_private_thread",
+    "response_status": "not_evidenced_in_public_repository",
+    "source": "project-bible/mira/operations/developer-outreach-2026-09-24.md",
+    "repeat_first_contact": false
+  },
+  "agency_request": null,
+  "developer_request": null,
+  "developer_response": null,
+  "commercial_controls": {
+    "agreement_coverage": null,
+    "contracting_seller": null,
+    "commission_schedule": null,
+    "lead_registration": null,
+    "lead_protection": null,
+    "downstream_partner_right": null,
+    "media_use_scope": null
+  },
+  "response_ready": false,
+  "commercially_enabled": false,
+  "customer_registration_enabled": false,
+  "external_sends_this_checkpoint": 0
+}
