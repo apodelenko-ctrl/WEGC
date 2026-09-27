@@ -16,8 +16,9 @@ Use Web Analytics for wegc.fund; filter paths /mira/start/ and /mira/go/,
 then compare /mira/catalog/ views by day/hour. Visits and pageviews are not
 unique people. Own checks count too: append ?mira_analytics=off to suppress
 the manual collector during owner QA. Ad blockers can cause undercounting.
-Cloudflare's existing automatic setting excludes EU traffic; the new manual
-public-page snippet follows Cloudflare's manual installation behavior.
+Cloudflare is set to manual installation for the DNS-only hostname. Public
+pages use strict-origin-when-cross-origin: the collector requires a Referer,
+but only the site origin is sent externally, without page paths or queries.
 
 The baseline query on 2026-09-27 before deployment returned only two pageviews
 for / and no MIRA rows. Missing historical telemetry is not proof of no visits.
