@@ -1,0 +1,18 @@
+{
+  "id": "cloud-expo-final-closeout-01",
+  "at": "2026-09-27T01:17:15Z",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "3a0595619e09df64b196947570b8d3d8b37724c3",
+  "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260927-FINAL.json",
+  "package": "CLOUD-INBOX/packages/MIRA-EXPO-FINAL-20260927-01",
+  "live_get_routes_passed": 9,
+  "tests_passed": 28,
+  "accepted_gates": 4,
+  "public_intake": "GO",
+  "commercial_transaction": "NO_GO",
+  "autonomous_operation": "NO_GO",
+  "full_launch": "NO_GO",
+  "external_sends": 0,
+  "production_changed": false,
+  "automatic_continuation": false
+}

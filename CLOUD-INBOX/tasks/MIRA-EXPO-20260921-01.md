@@ -1,3 +1,11 @@
+## EXPO27 — финальный closeout 27 сентября
+
+Публичный путь МИРА повторно проверен: **9/9 GET PASS**, анонимный доступ к research/operator inbox закрыт. Пройдено **28/28 тестов**: monitor11, VIVI10, closeout7. Итог разделён по контурам: public discovery/intake **GO**; commercial transaction, autonomous operation и full exhibition launch **NO-GO**. Принято4/12 gates.
+
+Свежих commits/receipts LOCAL после26.09 нет. Реальные requests/responses/overdues остаются null, не0. VIVI остаётся HOLD: прямого ответа The Title на запрос24.09 и семи current controls нет. Повторный first-contact не отправлялся. Forms/emails/imports/deploy/production writes0.
+
+Отчёт: `project-bible/mira/operations/EXHIBITION-CLOSEOUT-2026-09-27.md`; receipt `CLOUD-INBOX/receipts/MIRA-EXPO-20260927-FINAL.json`; package `CLOUD-INBOX/packages/MIRA-EXPO-FINAL-20260927-01`. Выставочная серия завершена и автоматически не продлевается.
+
 ## EXPO26 — 26 сентября: VIVI live-supply gate
 
 Fresh main `4735a2e53260d307db872710cfcf9506b11e23ca`, research `9d5e71262eb865f7cd059edb541b1292311be725`; новых commits LOCAL после25.09 не обнаружено. Публичный маршрут проверен повторно: **9/9 GET PASS**, monitor tests **11/11 PASS**, новых заявок/писем/writes0.

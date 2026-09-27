@@ -1,0 +1,64 @@
+{
+  "task_id": "MIRA-EXPO-20260921-01",
+  "checkpoint": "EXPO27-FINAL-CLOSEOUT-01",
+  "at": "2026-09-27T01:17:15Z",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "3a0595619e09df64b196947570b8d3d8b37724c3",
+  "status": "exhibition_series_closed_public_intake_go_commercial_no_go",
+  "package": "CLOUD-INBOX/packages/MIRA-EXPO-FINAL-20260927-01",
+  "report": "project-bible/mira/operations/EXHIBITION-CLOSEOUT-2026-09-27.md",
+  "tests": {
+    "passed": 28,
+    "failed": 0,
+    "route_monitor": 11,
+    "vivi_gate": 10,
+    "closeout": 7
+  },
+  "live_get": {
+    "status": "PASS",
+    "passed": 9,
+    "total": 9,
+    "checked_at": "2026-09-27T01:16:47.641238+00:00"
+  },
+  "readiness": {
+    "accepted_gates": 4,
+    "total_gates": 12,
+    "public_discovery_and_intake": "GO",
+    "commercial_transaction": "NO_GO",
+    "autonomous_operation": "NO_GO",
+    "full_exhibition_launch": "NO_GO"
+  },
+  "counts": {
+    "agency_candidates": 405,
+    "developer_groups": 43,
+    "phuket_project_ids": 618,
+    "native_accounts_separate": 167,
+    "real_agency_requests": null,
+    "real_operator_responses": null,
+    "overdue_requests": null
+  },
+  "preserved": [
+    "Cloudflare Worker + D1 target; no required VPS",
+    "CF005 import and CF006 live views",
+    "Botanica signed/stamped-and-sent",
+    "Existing The Title request from24Sep; no repeat first contact"
+  ],
+  "remaining": [
+    "Physical printed QR and Russia-mobile evidence",
+    "Authenticated real request/response/overdue metrics and named shift",
+    "Direct current The Title VIVI response and seven commercial controls",
+    "Fresh live assistant-channel acceptance",
+    "Ordinary-member denial and operational fallback live acceptance"
+  ],
+  "side_effects": {
+    "forms_submitted": 0,
+    "emails_sent": 0,
+    "production_writes": 0,
+    "deploys": 0,
+    "crm_imports": 0
+  },
+  "private_payloads_published": false,
+  "exhibition_series_done": true,
+  "automatic_continuation": false,
+  "all_done": false
+}

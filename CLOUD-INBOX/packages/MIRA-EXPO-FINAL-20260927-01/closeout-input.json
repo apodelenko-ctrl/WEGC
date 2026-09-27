@@ -1,0 +1,44 @@
+{
+  "assessed_at": "2026-09-27T01:17:15Z",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "3a0595619e09df64b196947570b8d3d8b37724c3",
+  "route_check": {
+    "checked_at": "2026-09-27T01:16:47.641238+00:00",
+    "status": "PASS",
+    "passed": 9,
+    "total": 9,
+    "new_requests_created": 0,
+    "emails_sent": 0
+  },
+  "gates": [
+    {"id": "EXPO-01", "status": "passed_live"},
+    {"id": "EXPO-02", "status": "not_run"},
+    {"id": "EXPO-03", "status": "accepted_receipt"},
+    {"id": "EXPO-04", "status": "accepted_receipt"},
+    {"id": "EXPO-05", "status": "partial"},
+    {"id": "EXPO-06", "status": "partial"},
+    {"id": "EXPO-07", "status": "partial"},
+    {"id": "EXPO-08", "status": "partial"},
+    {"id": "EXPO-09", "status": "partial"},
+    {"id": "EXPO-10", "status": "partial"},
+    {"id": "EXPO-11", "status": "passed_artifact"},
+    {"id": "EXPO-12", "status": "partial"}
+  ],
+  "counts": {
+    "agency_candidates": 405,
+    "developer_groups": 43,
+    "phuket_project_ids": 618,
+    "native_accounts_separate": 167,
+    "real_agency_requests": null,
+    "real_operator_responses": null,
+    "overdue_requests": null
+  },
+  "limitations": [
+    "No newer LOCAL/main/research receipt after the 26 September checkpoint.",
+    "No physical printed-QR/Russia-mobile evidence.",
+    "No authenticated operational metrics; unknown is not zero.",
+    "No direct The Title response to the existing 24 September VIVI request.",
+    "Seven current VIVI commercial controls remain unverified for this case.",
+    "No fresh live assistant-channel acceptance or confirmed exhibition operator shift."
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "assessed_at": "2026-09-26T01:14:47Z",
+  "assessed_at": "2026-09-27T01:17:15Z",
   "ready": false,
   "accepted_gates": 4,
   "total_gates": 12,
@@ -20,7 +20,7 @@
       "status": "passed_live",
       "reason": "",
       "owner": "CLOUD",
-      "next_action": "Maintain printed QR URL; GET checked26Sep, physical/Russia verification stays EXPO-02."
+      "next_action": "Digital routes passed9/9 on27Sep; physical/Russia evidence remains EXPO-02."
     },
     {
       "id": "EXPO-02",
@@ -76,7 +76,7 @@
       "status": "partial",
       "reason": "",
       "owner": "LOCAL / owner / supplier",
-      "next_action": "Monitor existing The Title thread. Run private VIVI gate on direct exact-request response; accept only current quote/inventory and all seven commercial controls."
+      "next_action": "No direct reply evidenced at final closeout. Keep VIVI HOLD and require the exact-request private gate."
     },
     {
       "id": "EXPO-09",
@@ -100,7 +100,7 @@
       "status": "passed_artifact",
       "reason": "",
       "owner": "CLOUD",
-      "next_action": "Shared state reconciled26Sep; keep current business counts null unless authenticated evidence appears."
+      "next_action": "Final27 accounting reconciled; authenticated operational metrics remain null."
     },
     {
       "id": "EXPO-12",
@@ -108,7 +108,15 @@
       "status": "partial",
       "reason": "",
       "owner": "LOCAL live / CLOUD review",
-      "next_action": "GET support passes26Sep; exact VIVI gate is HOLD. Complete physical/Russia and direct supplier-response scenario; no backdated full GO."
+      "next_action": "Public discovery/intake GO only; commercial/autonomy/full launch NO-GO. Do not backdate or auto-extend."
     }
-  ]
+  ],
+  "verdicts": {
+    "public_discovery_and_intake": "GO",
+    "commercial_transaction": "NO_GO",
+    "autonomous_operation": "NO_GO",
+    "full_exhibition_launch": "NO_GO"
+  },
+  "series_complete": true,
+  "automatic_continuation": false
 }

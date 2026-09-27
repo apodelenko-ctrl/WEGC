@@ -1,12 +1,12 @@
 {
   "task_id": "MIRA-EXPO-20260921-01",
-  "status": "exhibition_support_live_vivi_response_pending",
-  "updated_at": "2026-09-26T01:14:47Z",
+  "status": "exhibition_closeout_public_intake_go_commercial_no_go",
+  "updated_at": "2026-09-27T01:17:15Z",
   "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
-  "source_research_sha": "9d5e71262eb865f7cd059edb541b1292311be725",
+  "source_research_sha": "3a0595619e09df64b196947570b8d3d8b37724c3",
   "next_gate": "EXPO-08",
-  "next_action": "LOCAL: do not resend first contact. Monitor the existing The Title thread from 24 September; when a direct reply arrives, fill a private VIVI case, run the gate, present exact quote/materials to Artem, and only then reply to the agency. Continue actual queue coverage and owner-approved manual emails. Exhibition representative: physical QR and Russia-mobile check. CLOUD: GET-only monitoring and final27Sep closeout.",
-  "parallel_available_action": "Monitor current public routes GET-only; no duplicate forms. Prepare final27Sep closeout from receipts.",
+  "next_action": "LOCAL/owner after the exhibition: keep live intake monitored, do not resend The Title first contact, process any direct VIVI reply through the private exact-request gate, and record real queue/response evidence. CLOUD exhibition series closes27Sep and must not auto-extend.",
+  "parallel_available_action": "None for the closed exhibition series. Resume only by an explicit new task or a new LOCAL/supplier receipt.",
   "deadline": "2026-09-24T20:00:00+07:00",
   "exhibition_window": [
     "2026-09-25",
@@ -14,8 +14,8 @@
   ],
   "plan_path": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
   "evidence_path": "project-bible/mira/operations/LAUNCH-EVIDENCE.json",
-  "event_path": "CLOUD-INBOX/events/2026-09-26/cloud-expo-vivi-gate-01.json",
-  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
+  "event_path": "CLOUD-INBOX/events/2026-09-27/cloud-expo-final-closeout-01.json",
+  "receipt_path": "CLOUD-INBOX/receipts/MIRA-EXPO-20260927-FINAL.json",
   "counts": {
     "agency_candidates": 405,
     "agency_RU": 263,
@@ -124,5 +124,18 @@
     "full_native_crm_restore": false
   },
   "live_D1_operational_counts_note": "Historical CF004/CF005 counts only. Subsequent service-test intake exists per LOCAL; current real request counts not read.",
-  "latest_vivi_gate": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json"
+  "latest_vivi_gate": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
+  "exhibition_series_done": true,
+  "automatic_continuation": false,
+  "latest_support_receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260927-FINAL.json",
+  "final_closeout": {
+    "accepted_gates": 4,
+    "total_gates": 12,
+    "public_discovery_and_intake": "GO",
+    "commercial_transaction": "NO_GO",
+    "autonomous_operation": "NO_GO",
+    "full_exhibition_launch": "NO_GO",
+    "route_check": "9/9 PASS",
+    "tests": "28/28 PASS"
+  }
 }

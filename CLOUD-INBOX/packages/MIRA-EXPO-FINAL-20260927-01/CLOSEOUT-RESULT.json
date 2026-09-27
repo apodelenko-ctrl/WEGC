@@ -1,0 +1,52 @@
+{
+  "assessed_at": "2026-09-27T01:17:15Z",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "3a0595619e09df64b196947570b8d3d8b37724c3",
+  "accepted_gates": 4,
+  "total_gates": 12,
+  "accepted_gate_ids": [
+    "EXPO-01",
+    "EXPO-03",
+    "EXPO-04",
+    "EXPO-11"
+  ],
+  "open_gate_ids": [
+    "EXPO-02",
+    "EXPO-05",
+    "EXPO-06",
+    "EXPO-07",
+    "EXPO-08",
+    "EXPO-09",
+    "EXPO-10",
+    "EXPO-12"
+  ],
+  "verdicts": {
+    "public_discovery_and_intake": "GO",
+    "commercial_transaction": "NO_GO",
+    "autonomous_operation": "NO_GO",
+    "full_exhibition_launch": "NO_GO"
+  },
+  "route_check": {
+    "status": "PASS",
+    "passed": 9,
+    "total": 9,
+    "safe_get_only": true
+  },
+  "counts": {
+    "agency_candidates": 405,
+    "developer_groups": 43,
+    "phuket_project_ids": 618,
+    "native_accounts_separate": 167,
+    "real_agency_requests": null,
+    "real_operator_responses": null,
+    "overdue_requests": null
+  },
+  "limitations": [
+    "No newer LOCAL/main/research receipt after the 26 September checkpoint.",
+    "No physical printed-QR/Russia-mobile evidence.",
+    "No authenticated operational metrics; unknown is not zero.",
+    "No direct The Title response to the existing 24 September VIVI request.",
+    "Seven current VIVI commercial controls remain unverified for this case.",
+    "No fresh live assistant-channel acceptance or confirmed exhibition operator shift."
+  ]
+}

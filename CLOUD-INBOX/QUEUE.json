@@ -359,16 +359,19 @@
       "id": "MIRA-EXPO-20260921-01",
       "priority": "P0-exhibition-deadline",
       "owner": "CLOUD preparation; LOCAL product integration until accepted handoff",
-      "status": "exhibition_support_live_vivi_response_pending",
+      "status": "exhibition_closeout_public_intake_go_commercial_no_go",
       "sourcePath": "CLOUD-INBOX/tasks/MIRA-EXPO-20260921-01.md",
       "planPath": "project-bible/mira/operations/EXHIBITION-LAUNCH-2026-09-25.md",
       "receiptPath": "CLOUD-INBOX/receipts/MIRA-EXPO-20260921-01.json",
       "deadline": "2026-09-24T20:00:00+07:00",
       "automationId": "6ab158bf4b848191a4c612c68d25c5b3",
-      "latestCheckpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
+      "latestCheckpoint": "CLOUD-INBOX/receipts/MIRA-EXPO-20260927-FINAL.json",
       "intakePackage": "CLOUD-INBOX/packages/MIRA-INTAKE-20260922-01",
-      "nextAction": "LOCAL: do not resend first contact. Monitor the existing The Title thread from 24 September; when a direct reply arrives, fill a private VIVI case, run the gate, present exact quote/materials to Artem, and only then reply to the agency. Continue actual queue coverage and owner-approved manual emails. Exhibition representative: physical QR and Russia-mobile check. CLOUD: GET-only monitoring and final27Sep closeout.",
-      "viviGatePackage": "CLOUD-INBOX/packages/MIRA-VIVI-LIVE-GATE-20260926-01"
+      "nextAction": "LOCAL/owner: monitor live intake and the existing The Title thread; no repeat first contact. Process a direct reply through the VIVI private gate and record real queue/response evidence. CLOUD exhibition series ended27Sep; no automatic extension.",
+      "viviGatePackage": "CLOUD-INBOX/packages/MIRA-VIVI-LIVE-GATE-20260926-01",
+      "finalCloseout": "CLOUD-INBOX/packages/MIRA-EXPO-FINAL-20260927-01",
+      "exhibitionSeriesDone": true,
+      "automaticContinuation": false
     },
     {
       "id": "MIRA-CLOUDFLARE-20260921-01",
@@ -529,14 +532,14 @@
     "closeoutPath": "project-bible/mira/research/2026-09-19-DAY-CLOSEOUT.md"
   },
   "previousNextTaskForLocal": "MIRA-EXPO-20260921-01",
-  "updatedAt": "2026-09-26T01:14:47Z",
+  "updatedAt": "2026-09-27T01:17:15Z",
   "latestLaunchCheckpoint": {
-    "event": "CLOUD-INBOX/events/2026-09-26/cloud-expo-vivi-gate-01.json",
-    "at": "2026-09-26T01:14:47Z",
-    "sourceCommit": "9d5e71262eb865f7cd059edb541b1292311be725",
+    "event": "CLOUD-INBOX/events/2026-09-27/cloud-expo-final-closeout-01.json",
+    "at": "2026-09-27T01:17:15Z",
+    "sourceCommit": "3a0595619e09df64b196947570b8d3d8b37724c3",
     "sourceMain": "4735a2e53260d307db872710cfcf9506b11e23ca",
-    "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260926-01.json",
-    "status": "intake live; VIVI exact-request gate prepared; direct response pending"
+    "receipt": "CLOUD-INBOX/receipts/MIRA-EXPO-20260927-FINAL.json",
+    "status": "public discovery/intake GO; commercial/autonomy/full launch NO-GO; series closed"
   },
   "currentOwnerFollowupHistorical": {
     "at": "2026-09-18 18:44:24 UTC",

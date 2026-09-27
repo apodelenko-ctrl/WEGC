@@ -1,0 +1,18 @@
+{
+  "project_id": "title-vivi",
+  "response_ready": false,
+  "commercially_enabled": false,
+  "customer_registration_enabled": false,
+  "missing_commercial_controls": [
+    "agreement_coverage",
+    "contracting_seller",
+    "commission_schedule",
+    "lead_registration",
+    "lead_protection",
+    "downstream_partner_right",
+    "media_use_scope"
+  ],
+  "errors": [],
+  "safe_to_reply_with_live_availability": false,
+  "safe_to_register_customer": false
+}

@@ -1,0 +1,18 @@
+{
+  "checkpoint": "EXPO27-FINAL-CLOSEOUT-01",
+  "source_main_sha": "4735a2e53260d307db872710cfcf9506b11e23ca",
+  "source_research_sha": "3a0595619e09df64b196947570b8d3d8b37724c3",
+  "files": [
+    "README.md",
+    "closeout.py",
+    "test_closeout.py",
+    "closeout-input.json",
+    "CLOSEOUT-RESULT.json",
+    "LIVE-GET-CHECK-20260927.json",
+    "VIVI-GATE-RESULT-20260927.json",
+    "TEST-REPORT.json"
+  ],
+  "private_data": false,
+  "external_sends": 0,
+  "production_changed": false
+}

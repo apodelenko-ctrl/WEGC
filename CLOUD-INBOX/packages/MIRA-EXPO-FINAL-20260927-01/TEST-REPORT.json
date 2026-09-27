@@ -1,0 +1,33 @@
+{
+  "at": "2026-09-27T01:17:15Z",
+  "status": "PASS",
+  "total_tests": 28,
+  "suites": [
+    {
+      "name": "final closeout",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "name": "GET route monitor",
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "name": "VIVI exact-request gate",
+      "passed": 10,
+      "failed": 0
+    }
+  ],
+  "live_get_routes": {
+    "passed": 9,
+    "total": 9,
+    "status": "PASS"
+  },
+  "side_effects": {
+    "forms_submitted": 0,
+    "emails_sent": 0,
+    "production_writes": 0,
+    "deploys": 0
+  }
+}
