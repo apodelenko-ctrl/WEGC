@@ -13,6 +13,10 @@ DIRECTORIES = ('start', 'go', 'growth', 'business', 'practical', 'corporate', 'c
 
 
 def wire(text):
+    # The vendor collector requires Referer. Send only the site origin to
+    # external services, never the current page path or query string.
+    text = text.replace('<meta name="referrer" content="no-referrer">',
+                        '<meta name="referrer" content="strict-origin-when-cross-origin">')
     if '/mira/analytics.mjs' in text:
         return text
     # Keep the existing restrictions; permit only the vendor script and collector.
