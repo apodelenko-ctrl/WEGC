@@ -145,7 +145,7 @@ Prior publicGETsmoke, syntheticAPI100retries/1000reads,5000catalogueoperations a
 <!-- MIRA-LAUNCH-AUTO:START -->
 ## Generated source checkpoint
 
-Source commit: `261888ab38d744314ffa09972f0318abc942a9be`.
+Source commit: `a5673efed6592247b597271e09d6088432dfb511`.
 
 Phuket: **618 / 618** source rows covered; **45** seed mappings preserved; **66** generator family candidates; **507** family-unresolved rows. **0 project legal sellers verified / 0 registration-enabled projects in this generated layer.**
 
