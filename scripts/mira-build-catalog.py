@@ -33,6 +33,14 @@ def load(root):
         masters={r['source_slug']:r for r in csv.DictReader(stream)}
     if set(masters)!={r['slug'] for r in rows}: raise ValueError('Master and raw catalogue differ; reconcile first')
     projects=[]
+    botanica_file=root/'mira/catalog/botanica/projects.json'
+    botanica=json.loads(botanica_file.read_text())['projects'] if botanica_file.exists() else []
+    enriched={key:p for p in botanica for key in [p['id'],*p['aliases']]}
+    for p in botanica:
+        for asset in p['gallery']:
+            file=root/asset['path'].lstrip('/')
+            if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=asset['sha256']:
+                raise ValueError('Botanica media missing or changed: '+asset['path'])
     for r in rows:
         slug=r['slug']; m=masters[slug]
         if not re.fullmatch(r'[a-z0-9-]{1,180}',slug): raise ValueError('Unsafe project slug')
@@ -44,6 +52,14 @@ def load(root):
           'metadataStatus':'inherited_research_not_reverified','sourceRow':int(m['source_row']),
           'image':image,'imageStatus':'archived_visualization' if image else 'not_reviewed',
           'commerciallyEnabled':False,'verifiedAt':None})
+    for p in projects:
+        if p['id'] in enriched:
+            b=enriched[p['id']]
+            p.update(name=b['name'],district=b['district'],kind=b['kind'],
+              summary=b['summary'],gallery=b['gallery'],features=b['features'],sourceURL=b['sourcePage'],
+              researchReviewedAt=b['reviewedAt'],image=b['gallery'][0]['path'],
+              imageCaption='Botanica · '+b['gallery'][0]['caption'],imageStatus='reviewed_project_media',
+              metadataStatus='source_linked_project_description')
     projects.sort(key=lambda p:(not bool(p['image']),-sum(bool(p[k]) for k in ('district','kind','family')),p['name'].casefold(),p['id']))
     return {'schemaVersion':1,'mode':'public_research','source':{'path':SOURCE,
       'sha256':hashlib.sha256(raw).hexdigest(),'recordCount':len(rows),
@@ -62,14 +78,22 @@ def cover(p):
 
 def visual(p, detail=False):
     src=p['image'] or cover(p)
-    label='Визуализация проекта' if p['image'] else 'МИРА / Пхукет · обложка каталога'
+    label=esc(p.get('imageCaption') or ('Визуализация проекта' if p['image'] else 'МИРА / Пхукет · обложка каталога'))
     return '<figure class="'+('detail-image' if detail else 'card-image')+'"><img src="'+esc(src)+'" data-fallback="'+cover(p)+'" alt="'+esc(('Визуализация '+p['name']) if p['image'] else 'Иллюстрация МИРА — Пхукет')+'" width="1200" height="750" '+('fetchpriority="high"' if detail else 'loading="lazy"')+' decoding="async"><figcaption>'+label+'</figcaption></figure>'
 
 def card(p):
     url='/mira/catalog/projects/'+esc(p['id'])+'/'
-    return '<article class="project-card"><a class="visual-link" href="'+url+'" aria-label="Подробнее: '+esc(p['name'])+'">'+visual(p)+'</a><div class="card-body"><p class="tag">'+esc(p['district'] or 'Пхукет')+' · '+esc(KIND.get(p['kind'],'Недвижимость'))+'</p><h2><a href="'+url+'">'+esc(p['name'])+'</a></h2><p class="family">'+esc(p['family'] or 'Коллекция проектов Пхукета')+'</p><p class="availability">Наличие и условия — по запросу</p><div class="card-actions"><a href="'+url+'">Подробнее ↗</a><button class="add secondary" data-add="'+esc(p['id'])+'" aria-pressed="false" type="button" disabled>В подборку +</button></div></div></article>'
+    return '<article class="project-card"><a class="visual-link" href="'+url+'" aria-label="Подробнее: '+esc(p['name'])+'">'+visual(p)+'</a><div class="card-body"><p class="tag">'+esc(p['district'] or 'Пхукет')+' · '+esc(KIND.get(p['kind'],'Недвижимость'))+'</p><h2><a href="'+url+'">'+esc(p['name'])+'</a></h2><p class="family">'+esc((p['family'] or 'Коллекция проектов Пхукета').replace(' / AAP',''))+'</p>'+('<p class="market-card-summary">'+esc(p['summary'])+'</p>' if p.get('summary') else '')+'<p class="availability">Наличие и условия — по запросу</p><div class="card-actions"><a href="'+url+'">Подробнее ↗</a><button class="add secondary" data-add="'+esc(p['id'])+'" aria-pressed="false" type="button" disabled>В подборку +</button></div></div></article>'
+
+def botanica_detail(p):
+    top=header(p['name'],p['summary']).replace('<body>','<body class="botanica-page">').replace('</head>','<link rel="stylesheet" href="/mira/catalog/botanica/botanica.css?v=20260927"></head>')
+    gallery='<div class="botanica-gallery">'+''.join('<figure><a href="'+esc(a['path'])+'" target="_blank" rel="noopener"><img src="'+esc(a['path'])+'" alt="'+esc(a['alt'])+'" loading="lazy" decoding="async" width="1600" height="880"></a><figcaption>'+esc(a['caption'])+'</figcaption></figure>' for a in p['gallery'][1:])+'</div>'
+    facts=[('Район',p['district']),('Формат',KIND[p['kind']]),('Застройщик','Botanica Luxury Villas')]
+    return top+'<main id="main" class="detail botanica-detail"><a class="back" href="/mira/catalog/botanica/">← Все проекты Botanica</a><p class="eyebrow">BOTANICA / ПХУКЕТ</p><h1>'+esc(p['name'])+'</h1><p class="botanica-intro">'+esc(p['summary'])+'</p><div class="detail-grid"><div>'+visual(p,True)+gallery+'<dl>'+''.join('<div><dt>'+esc(k)+'</dt><dd>'+esc(v)+'</dd></div>' for k,v in facts)+'</dl></div><aside class="next-step"><p class="eyebrow">ПОД ВАШ ЗАПРОС</p><h2>Выберите свой формат.</h2><ul>'+''.join('<li>'+esc(f)+'</li>' for f in p['features'])+'</ul><p>Запросим доступные варианты и планировки, уточним цены и организуем просмотр.</p><a class="button" href="https://pilot.wegc.fund/mira/request/">Запросить предложение</a><button class="secondary" data-add="'+esc(p['id'])+'" aria-pressed="false" disabled type="button">В подборку +</button><p class="fine">На публичной странице данные покупателей не принимаются.</p></aside></div><details class="provenance"><summary>Материалы проекта</summary><p>Изображения и визуализации: Botanica Luxury Villas. Описание сверено '+esc(p['researchReviewedAt'])+'. Наличие, цены и комплектация уточняются при запросе.</p><a href="'+esc(p['sourceURL'])+'" target="_blank" rel="noopener noreferrer">Официальная страница проекта ↗</a></details></main>'+footer()
 
 def detail(p):
+    if p.get('gallery'):
+        return botanica_detail(p)
     facts=[('Район',p['district'] or 'Пхукет'),('Тип недвижимости',KIND.get(p['kind'],'По запросу')),('Группа / бренд',p['family'] or 'По запросу'),('Наличие и условия','По запросу'),('Цена','Предоставляется после подтверждения интереса'),('Комиссия и регистрация','По согласованным правилам проекта')]
     return header(p['name'])+'<main id="main" class="detail"><a class="back" data-catalog-back href="/mira/catalog/">← Весь каталог Пхукета</a><p class="eyebrow">МИРА / ПХУКЕТ</p><h1>'+esc(p['name'])+'</h1><div class="detail-grid"><div>'+visual(p,True)+'<dl>'+''.join('<div><dt>'+esc(k)+'</dt><dd>'+esc(v)+'</dd></div>' for k,v in facts)+'</dl></div><aside class="next-step"><p class="eyebrow">ВАША ПОДБОРКА</p><h2>Начните с проекта.</h2><p>Сохраните его в подборку и сравните с другими вариантами. Наличие, цены и условия работы подтверждаются по запросу.</p><button data-add="'+esc(p['id'])+'" aria-pressed="false" type="button" disabled>В подборку +</button><a class="button secondary" href="/mira/go/#start">Как работать с МИРА</a><p id="registration-gate" class="fine">Регистрация покупателя — после согласования проекта и условий сотрудничества. На этой странице данные покупателей не принимаются.</p><a href="/mira/documents/project-rules.html">Порядок работы с клиентом ↗</a></aside></div><details class="provenance"><summary>О проекте и источниках</summary><p>Описание составлено по материалам каталога WEGC. Актуальные характеристики и условия уточняются при подборе.</p><p>Изображения проекта предоставлены из архива WEGC. Наличие, цены и сроки подтверждаются по запросу.</p></details></main>'+footer()
 
@@ -87,6 +111,10 @@ def build(root=ROOT):
     report={'source_records':len(rows),'public_cards':len(rows),'exact_image_associations':sum(bool(p['image']) for p in rows),'source_sha256':data['source']['sha256'],'commercially_enabled':0,'mode':'public_research'}
     (out/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(report))
+    if (root/'mira/catalog/botanica/projects.json').exists():
+        spec=importlib.util.spec_from_file_location('botanica_builder',root/'scripts/mira-build-botanica.py')
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        module.build(root, data, header, footer, card)
     # Optional isolated public-market expansion; no funnel or auth changes.
     expansion_file = root / 'scripts/mira-build-market-expansion.py'
     if expansion_file.is_file():

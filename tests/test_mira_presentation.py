@@ -12,16 +12,17 @@ class Tags(HTMLParser):
 class PresentationTests(unittest.TestCase):
  def test_every_card_and_detail_has_distinct_labelled_visual(self):
   for p in build.load(ROOT)['projects']:
-   for markup in (build.card(p),build.detail(p)):
+   for markup,expected in ((build.card(p),1),(build.detail(p),len(p.get('gallery',[])) or 1)):
     tags=Tags(markup).tags;images=[a for t,a in tags if t=='img']
-    self.assertEqual(len(images),1);self.assertTrue((ROOT/images[0]['src'].lstrip('/')).is_file())
+    self.assertEqual(len(images),expected)
+    self.assertTrue(all((ROOT/a['src'].lstrip('/')).is_file() and a.get('alt') for a in images))
     self.assertTrue((ROOT/images[0]['data-fallback'].lstrip('/')).is_file())
     self.assertNotIn('Изображение не проверено',markup)
     if not p['image']: self.assertIn('обложка каталога',markup)
  def test_image_priority_and_metadata_ranking(self):
-  projects=build.load(ROOT)['projects'];self.assertTrue(all(p['image'] for p in projects[:11]))
-  self.assertTrue(all(not p['image'] for p in projects[11:]))
-  ranks=[sum(bool(p[k]) for k in ('district','kind','family')) for p in projects[11:]]
+  projects=build.load(ROOT)['projects'];self.assertTrue(all(p['image'] for p in projects[:20]))
+  self.assertTrue(all(not p['image'] for p in projects[20:]))
+  ranks=[sum(bool(p[k]) for k in ('district','kind','family')) for p in projects[20:]]
   self.assertEqual(ranks,sorted(ranks,reverse=True))
  def test_all_public_links_images_and_fragments_resolve(self):
   pages=[ROOT/'mira/go/index.html',ROOT/'mira/catalog/index.html',ROOT/'mira/catalog/list.html',*sorted((ROOT/'mira/catalog/projects').glob('*/index.html'))]
