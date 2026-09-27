@@ -1,8 +1,4 @@
-/** Optional motion and fixed-choice local qualification only. No remote submissions. */
-const reduced=matchMedia('(prefers-reduced-motion: reduce)'), body=document.body;
-const toggle=document.querySelector('#motion-toggle');let paused=false;
-function motion(){const allowed=!reduced.matches&&!navigator.connection?.saveData&&!document.hidden&&!paused;body.classList.toggle('animate',allowed);body.dataset.reduced=String(reduced.matches);if(toggle){toggle.hidden=reduced.matches||!!navigator.connection?.saveData;toggle.textContent=paused?'Включить движение':'Остановить движение';toggle.setAttribute('aria-pressed',String(paused));}}
-toggle?.addEventListener('click',()=>{paused=!paused;motion();});reduced.addEventListener?.('change',motion);document.addEventListener('visibilitychange',motion);motion();
+/** Fixed-choice local qualification. No remote submissions. */
 const form=document.querySelector('#brief-form'),plan=document.querySelector('#brief-result');
 const choices={experience:['new','existing','thailand'],demand:['learning','current','team'],market:['phuket','bali']};
 if(form){

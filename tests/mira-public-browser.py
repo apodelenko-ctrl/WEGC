@@ -65,9 +65,9 @@ def run(base,out):
    response=context.request.get(base+path);assert response.ok and response.body().startswith(magic),(path,response.status)
   goto('/mira/documents/agency-agreement.html');assert'Приложение 5' in page.locator('main').inner_text();mark('nine_documents_and_downloads')
   goto('/mira/variants/');assert page.locator('.variant-card').count()==3;goto('/mira/expo/');assert page.locator('.expo-preview').evaluate('(e)=>e.complete&&e.naturalWidth>0');mark('variants_and_banner')
-  # Optional motion respects reduced-motion and explicit pause.
-  page.emulate_media(reduced_motion='no-preference');goto('/mira/start/');assert page.locator('body').evaluate('(e)=>e.classList.contains("animate")')
-  page.locator('#motion-toggle').click();assert not page.locator('body').evaluate('(e)=>e.classList.contains("animate")');page.emulate_media(reduced_motion='reduce');assert not page.locator('body').evaluate('(e)=>e.classList.contains("animate")');mark('motion_pause_and_reduced')
+  # Launch hero is static and has no motion-control UI.
+  goto('/mira/start/');assert page.locator('#motion-toggle').count()==0
+  assert not page.locator('body').evaluate('(e)=>e.classList.contains("animate")');mark('static_hero_without_motion_control')
   assert not errors,errors;assert not csp,csp;assert not blocked,blocked
   browser.close()
  report={'base':base,'scope':'real HTTP/CSP public pages; negative catalogue fixtures; no real registration or third-party submission','checks':checks,'page_errors':errors,'csp_errors':csp,'blocked_requests':blocked,'live_registration_tested':False}
