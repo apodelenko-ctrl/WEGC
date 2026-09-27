@@ -1,4 +1,7 @@
-/** Fixed-choice local qualification. No remote submissions. */
+/** Optional decorative motion and local qualification. No remote submissions. */
+const reduced=matchMedia('(prefers-reduced-motion: reduce)'), body=document.body;
+function motion(){body.classList.toggle('animate',!reduced.matches&&!navigator.connection?.saveData&&!document.hidden);body.dataset.reduced=String(reduced.matches);}
+reduced.addEventListener?.('change',motion);document.addEventListener('visibilitychange',motion);motion();
 const form=document.querySelector('#brief-form'),plan=document.querySelector('#brief-result');
 const choices={experience:['new','existing','thailand'],demand:['learning','current','team'],market:['phuket','bali']};
 if(form){
