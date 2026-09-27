@@ -50,12 +50,8 @@ async def main():
         await page.locator('#build-plan').click()
         assert 'Сначала определите ответственного' in await page.locator('#plan-steps li').first.inner_text()
         results.append('changing_answer_invalidates_previous_result')
-        async with page.expect_download() as info:
-            await page.locator('#download-brief').click()
-        download=await info.value
-        await download.save_as(str(OUT/'synthetic-brief.txt'))
-        assert 'Локальный черновик. Не отправлен.' in (OUT/'synthetic-brief.txt').read_text(encoding='utf-8-sig')
-        results.append('download_is_local_draft')
+        assert await page.locator('#plan-apply').get_attribute('href')=='https://pilot.wegc.fund/mira/request/'
+        results.append('plan_has_public_application_link')
         await page.evaluate("document.querySelector('#model').add(new Option('<script>BAD</script>', '__proto__'))")
         await page.select_option('#model','__proto__')
         await page.locator('#build-plan').click()

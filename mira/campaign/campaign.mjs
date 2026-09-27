@@ -1,4 +1,4 @@
-import {createPlan,briefText} from '../agency/qualification.mjs';
+import {createPlan} from '../agency/qualification.mjs';
 const form=document.querySelector('#campaign-form');
 let current=null;
 if(form){
@@ -7,10 +7,9 @@ if(form){
  current=Object.fromEntries(new FormData(form));const p=createPlan(current);
  document.querySelector('#plan-title').textContent=p.title;document.querySelector('#plan-description').textContent=p.description;
  document.querySelector('#plan-steps').replaceChildren(...p.steps.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));
- document.querySelector('#plan-boundary').textContent=p.boundary;result.hidden=false;msg.textContent='План готов. Ничего не отправлено.';document.querySelector('#plan-title').focus();
+ document.querySelector('#plan-boundary').textContent=p.boundary;result.hidden=false;msg.textContent='План готов. Подайте заявку, чтобы обсудить его с командой МИРА.';document.querySelector('#plan-title').focus();
  }catch{current=null;result.hidden=true;msg.textContent='Выберите ответы из предложенных вариантов.';}});
  form.addEventListener('change',()=>{current=null;result.hidden=true;msg.textContent='';});
- document.querySelector('#download').addEventListener('click',()=>{if(!current)return;const text=briefText(current);const u=URL.createObjectURL(new Blob(['\uFEFF',text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='mira-agency-brief.txt';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);msg.textContent='Бриф подготовлен. Он не отправлялся в МИРА.';});
  form.querySelector('fieldset').disabled=false;
 }
 const reduced=matchMedia('(prefers-reduced-motion: reduce)'),button=document.querySelector('#motion-toggle');

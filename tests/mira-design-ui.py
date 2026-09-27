@@ -79,9 +79,8 @@ def run(out):
         assert page.locator('#plan-title').evaluate('(e)=>document.activeElement===e')
         page.locator('#goal').select_option('explore');assert page.locator('#plan').is_hidden()
         page.locator('#build-plan').click()
-        with page.expect_download() as download: page.locator('#download-brief').click()
-        assert download.value.suggested_filename=='mira-agency-brief.txt'
-        cases.append('segment shortcut, validated qualification, focus, invalidation and local download')
+        assert page.locator('#plan-apply').get_attribute('href')=='https://pilot.wegc.fund/mira/request/'
+        cases.append('segment shortcut, validated qualification, focus, invalidation and public application link')
         page.locator('.faq summary').first.click();assert page.locator('.faq details').first.get_attribute('open') is not None
         cases.append('native FAQ interaction')
         # Normal motion, user pause/resume, reduced-motion preference change.

@@ -60,10 +60,7 @@ def browser_check():
             page.select_option('#owner','assigned_manager')
             page.locator('#build-plan').click()
             assert 'Дополнить зарубежный' in page.locator('#plan-title').inner_text()
-            with page.expect_download() as info:
-                page.locator('#download-brief').click()
-            info.value.save_as(str(OUT/'synthetic-brief.txt'))
-            assert 'Не отправлен' in (OUT/'synthetic-brief.txt').read_text(encoding='utf-8-sig')
+            assert page.locator('#plan-apply').get_attribute('href')=='https://pilot.wegc.fund/mira/request/'
             page.select_option('#owner','not_assigned')
             assert page.locator('#plan').is_hidden()
             page.locator('#build-plan').click()

@@ -4,8 +4,26 @@ const toggle=document.querySelector('#motion-toggle');let paused=false;
 function motion(){const allowed=!reduced.matches&&!navigator.connection?.saveData&&!document.hidden&&!paused;body.classList.toggle('animate',allowed);body.dataset.reduced=String(reduced.matches);if(toggle){toggle.hidden=reduced.matches||!!navigator.connection?.saveData;toggle.textContent=paused?'Включить движение':'Остановить движение';toggle.setAttribute('aria-pressed',String(paused));}}
 toggle?.addEventListener('click',()=>{paused=!paused;motion();});reduced.addEventListener?.('change',motion);document.addEventListener('visibilitychange',motion);motion();
 const form=document.querySelector('#brief-form'),plan=document.querySelector('#brief-result');
-const labels={new:'Открываем зарубежное направление',existing:'Уже продаём за рубежом',thailand:'Уже работаем с Таиландом',learning:'Изучаем возможность',current:'Есть клиентский запрос',team:'Готовим команду',phuket:'Пхукет',bali:'Бали — сбор интереса, не действующее предложение'};
-let brief='';
-if(form){form.querySelector('fieldset').disabled=false;form.addEventListener('submit',event=>{event.preventDefault();const fields=new FormData(form),experience=fields.get('experience'),demand=fields.get('demand'),market=fields.get('market');if(![experience,demand,market].every(v=>Object.hasOwn(labels,v)))return;const next=market==='bali'?'По Бали пока собираем интерес. Действующего каталога и подключения этого рынка здесь нет. Начните с изучения модели и документов.':demand==='current'?'Начните с подбора проекта на Пхукете. До передачи клиента согласуем наличие, правила регистрации и комиссию по конкретному проекту.':experience==='thailand'?'Выберите конкретную задачу: новый проект, материалы или порядок регистрации. МИРА дополняет вашу работу, а не заменяет отдел.':'Откройте каталог и выберите проект для обсуждения. Затем изучите договор и подготовьте команду к первому запросу.';plan.querySelector('p').textContent=next;plan.hidden=false;brief=['МИРА / План знакомства','Статус: локальный бриф, не отправленная заявка и не договор.',labels[experience],labels[demand],labels[market],'',next,'','Каталог: https://wegc.fund/mira/phuket/','Документы: https://wegc.fund/mira/documents/','Не добавляйте персональные данные покупателей.'].join('\n');plan.focus();});document.querySelector('#download-brief')?.addEventListener('click',()=>{if(!brief)return;const url=URL.createObjectURL(new Blob([brief],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='MIRA-план-подключения.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});}
+const choices={experience:['new','existing','thailand'],demand:['learning','current','team'],market:['phuket','bali']};
+if(form){
+ form.querySelector('fieldset').disabled=false;
+ form.addEventListener('change',()=>{plan.hidden=true;});
+ form.addEventListener('submit',event=>{
+  event.preventDefault();
+  const fields=new FormData(form),experience=fields.get('experience'),demand=fields.get('demand'),market=fields.get('market');
+  if(!Object.entries(choices).every(([key,values])=>values.includes(fields.get(key))))return;
+  const destination=market==='bali'?'Бали':'Пхукете';
+  const next=demand==='current'
+   ?`Выберите подходящие проекты на ${destination} и подайте заявку агентства. Команда МИРА свяжется с вами по email, уточнит задачу и согласует актуальное предложение, регистрацию клиента и комиссию.`
+   :demand==='team'
+    ?'Подайте заявку агентства. Обсудим задачи вашей команды, познакомим с проектами и согласуем условия сотрудничества.'
+    :experience==='thailand'
+     ?'Выберите проекты или этап сделки, с которым нужна помощь. Подайте заявку агентства — обсудим вашу задачу и порядок совместной работы.'
+     :'Посмотрите проекты и условия сотрудничества. Подайте заявку агентства — команда МИРА поможет выбрать первый шаг для вашего зарубежного направления.';
+  plan.querySelector('p').textContent=next;
+  plan.querySelector('#plan-catalogue').href=market==='bali'?'/mira/catalog/bali/':'/mira/catalog/';
+  plan.hidden=false;plan.focus();
+ });
+}
 const sticky=document.querySelector('.sticky-action'),hero=document.querySelector('.hero'),start=document.querySelector('#start');
 if(sticky&&hero&&'IntersectionObserver'in window){let heroOn=true,startOn=false;const obs=new IntersectionObserver(entries=>{for(const e of entries){if(e.target===hero)heroOn=e.isIntersecting;if(e.target===start)startOn=e.isIntersecting;}sticky.hidden=heroOn||startOn;});obs.observe(hero);if(start)obs.observe(start);}

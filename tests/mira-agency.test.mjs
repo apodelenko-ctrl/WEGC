@@ -56,7 +56,7 @@ test('HTML offers a real demo and no active public intake endpoint', () => {
   assert.match(html, /<fieldset id="qualification-fields" disabled>/);
   assert.match(html, /type="button" id="build-plan"/);
   assert.match(html, /<noscript>/);
-  assert.match(html, /Приём заявок сейчас закрыт/);
+  assert.match(html, /Публичный приём заявок агентств открыт/);
   assert.doesNotMatch(html, /<input|<textarea|<iframe|mailto:|forms\.gle|action="https?:/i);
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
 });
