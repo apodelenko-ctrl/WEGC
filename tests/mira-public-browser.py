@@ -31,10 +31,10 @@ def run(base,out):
     page.set_viewport_size({'width':width,'height':1000});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(route,width)
    page.screenshot(path=str(out/f'{route}-desktop.png'))
    page.locator('#brief-form button[type=submit]').click();page.locator('#brief-result').wait_for(state='visible')
-   with page.expect_download()as info:page.locator('#download-brief').click()
-   download=info.value;content=Path(download.path()).read_text();assert'не отправленная заявка'in content
-   page.locator('select[name=market]').select_option('bali');page.locator('#brief-form button[type=submit]').click();assert'Действующего каталога' in page.locator('#brief-result p').inner_text()
-   mark('funnel_'+route,{'widths':[320,360,390,768,1024,1440],'local_brief':True,'bali_not_live':True})
+   assert page.locator('#plan-apply').get_attribute('href')=='https://pilot.wegc.fund/mira/request/'
+   assert page.locator('#download-brief').count()==0
+   page.locator('select[name=market]').select_option('bali');assert page.locator('#brief-result').is_hidden();page.locator('#brief-form button[type=submit]').click();assert page.locator('#plan-catalogue').get_attribute('href')=='/mira/catalog/bali/'
+   mark('funnel_'+route,{'widths':[320,360,390,768,1024,1440],'inline_plan':True,'public_application_cta':True})
   page.set_viewport_size({'width':1440,'height':1000});goto('/mira/phuket/');page.wait_for_selector('.project-card')
   assert page.locator('#total').inner_text()=='618';assert page.locator('.project-card').count()==24
   slugs=set();loops=0

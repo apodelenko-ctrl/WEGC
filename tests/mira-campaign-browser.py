@@ -67,12 +67,11 @@ def run(base,out):
                     page.locator('select[name='+name+']').select_option(value)
                 page.locator('#prepare').click();page.locator('#plan').wait_for(state='visible')
                 assert page.locator('#plan-title').evaluate('(el)=>document.activeElement===el')
-                with page.expect_download() as d:page.locator('#download').click()
-                text=Path(d.value.path()).read_text(encoding='utf-8-sig');assert 'МИРА' in text
-                assert 'Не отправлен.' in text
+                assert page.locator('#plan-apply').get_attribute('href')=='https://pilot.wegc.fund/mira/request/'
+                assert page.locator('#download').count()==0
                 page.locator('select[name=goal]').select_option('explore');assert page.locator('#plan').is_hidden()
                 assert page.locator('input').count()==0
-                mark('funnel_'+route,widths=WIDTHS,required_choices=True,brief_download=True,change_invalidates=True)
+                mark('funnel_'+route,widths=WIDTHS,required_choices=True,inline_plan=True,change_invalidates=True)
             page.set_viewport_size({'width':1440,'height':1000});goto('/mira/catalog/')
             page.wait_for_function("document.querySelector('#search').disabled===false")
             assert '618' in page.locator('#result-count').inner_text()

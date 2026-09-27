@@ -70,9 +70,7 @@ def run(base, out):
                 page.locator('select[name=' + name + ']').select_option(value)
             page.locator('#build-plan').click()
             page.locator('#plan').wait_for(state='visible')
-            with page.expect_download() as result:
-                page.locator('#download-brief').click()
-            assert 'МИРА' in Path(result.value.path()).read_text(encoding='utf-8-sig')
+            assert page.locator('#plan-apply').get_attribute('href')=='https://pilot.wegc.fund/mira/request/'
             destination = page.locator('#plan-demo').get_attribute('href')
             assert '/mira/marketplace-design.html' in destination, destination
             page.locator('#plan-demo').click()

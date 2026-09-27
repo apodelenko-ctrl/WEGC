@@ -51,7 +51,7 @@ class DesignPreviewTests(unittest.TestCase):
         self.assertIn('Весь каталог',js)
     def test_uses_original_engine_and_qualification(self):
         self.assertIn('src="./marketplace.mjs"',self.market)
-        self.assertIn('src="../agency/agency.mjs"',self.landing)
+        self.assertIn('src="../agency/agency.mjs?v=20260927-plan"',self.landing)
         self.assertTrue((ROOT/'mira/agency/qualification.mjs').is_file())
     def test_motion_is_optional(self):
         js=(ROOT/'mira/design/motion.mjs').read_text()
@@ -63,12 +63,13 @@ class DesignPreviewTests(unittest.TestCase):
             for tag,a in Tags(text).items:
                 if tag!='a':continue
                 href=a.get('href','');path=urlsplit(href).path
+                if href == 'https://pilot.wegc.fund/mira/request/':continue
                 if not path:continue
                 target=ROOT/path.lstrip('/') if path.startswith('/') else (ROOT/file).parent/path
                 if href.split('?')[0].split('#')[0].endswith('/'):target=target/'index.html'
                 self.assertTrue(target.is_file(),f'{file} -> {href}')
     def test_no_backend_or_commercial_enabling(self):
-        self.assertIn('Приём заявок сейчас закрыт',self.landing)
+        self.assertIn('Публичный приём заявок агентств открыт',self.landing)
         self.assertIn('не конкретный объект',self.landing.lower())
         self.assertIn('только локальные демо-черновики',self.market)
         css=(ROOT/'mira/design/design.css').read_text()
