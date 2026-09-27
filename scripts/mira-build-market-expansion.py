@@ -54,7 +54,7 @@ def integrate_text(text,market):
  else:text=text.replace('</header>','</header>'+nav(market),1)
  if '/mira/catalog/markets/markets.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/mira/catalog/markets/markets.css"></head>',1)
  text=text.replace('src="/mira/catalog/catalog.mjs"','src="/mira/catalog/markets/controller.mjs"')
- text=text.replace('src="/mira/catalog/markets/controller.mjs"','src="/mira/catalog/markets/controller.mjs?v=20260925-media1"').replace('href="/mira/catalog/markets/markets.css"','href="/mira/catalog/markets/markets.css?v=20260925-media1"')
+ text=text.replace('src="/mira/catalog/markets/controller.mjs"','src="/mira/catalog/markets/controller.mjs?v=20260927-botanica"').replace('href="/mira/catalog/markets/markets.css"','href="/mira/catalog/markets/markets.css?v=20260927-botanica"')
  # A static back link still restores filters if detail-page JavaScript never loads.
  for path in [v[2] for v in MARKETS.values()]:
   text=text.replace('data-catalog-back href="'+path+'"','data-catalog-back href="'+path+'?restore=1"')
@@ -97,6 +97,7 @@ def build(root=ROOT,require_images=False,integrate=True):
  credits=root/'mira/catalog/photo-credits/index.html'
  credits.parent.mkdir(parents=True,exist_ok=True)
  links=''.join('<li><a href="'+E(approvals[p['id']]['sourcePage'])+'" target="_blank" rel="noopener noreferrer">'+E(p['name'])+'</a></li>' for p in rows if p['id'] in approvals)
+ links+=''.join('<li><a href="'+E(url)+'" target="_blank" rel="noopener noreferrer">'+E(name)+' · Botanica Luxury Villas</a></li>' for url,name in sorted({(p['sourceURL'],p['name']) for p in phuket['projects'] if p.get('gallery')}))
  credits.write_text(head('Источники изображений','phuket','Материалы проектов в каталоге МИРА.')+'<main id="main" class="detail"><h1>Источники изображений</h1><p>Фотографии и визуализации из публичных материалов проектов. Визуализация может отличаться от готового объекта.</p><ul>'+links+'</ul></main>'+old.footer())
 
  for market in ['bali','dubai']+(['vietnam','montenegro'] if discovery else []):

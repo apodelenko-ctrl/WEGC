@@ -15,10 +15,10 @@
   "licensedDirectionPhotos": 0,
   "newDetailPages": 60,
   "newMarketIndexPages": 8,
-  "existingHTMLIntegrated": 680,
+  "existingHTMLIntegrated": 681,
   "commerciallyEnabled": 0,
   "deployed": false,
-  "phuketDataSHA256": "f3366c36c683e27e9f79d8db96a7f2985272395eba1906f751ebe019ac6b1bf4",
+  "phuketDataSHA256": "69d0e2b0b027bae87d4501876c6ea7b490d1fd3602e9e1aca586c169d993089e",
   "researchSHA256": "abfda5bda609619d4f71b2e84c58f4087d22939dd7cfab4429e2b66856ed14bf",
   "requiresMediaCompletion": false
 }

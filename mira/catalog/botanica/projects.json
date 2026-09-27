@@ -1,0 +1,212 @@
+{
+  "projects": [
+    {
+      "key": "grand-avenue",
+      "id": "botanica-grand-avenue",
+      "aliases": [
+        "botanika-grand-avenyu"
+      ],
+      "name": "Botanica Grand Avenue",
+      "district": "Чернг Талай",
+      "kind": "villa",
+      "collection": "Zone C1",
+      "sourcePage": "https://www.botanicaluxuryvilla.com/projects/botanica-grand-avenuezone-c/",
+      "summary": "Виллы с собственными бассейнами в Чернг Талае. В галерее представлена зона C1: современная двухэтажная архитектура, четыре спальни и просторные террасы.",
+      "features": [
+        "Виллы с бассейном",
+        "Zone C1 · 4 спальни",
+        "Два этажа"
+      ],
+      "reviewedAt": "2026-09-27",
+      "gallery": [
+        {
+          "path": "/images/projects/botanica/grand-avenue-3.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/Botanica-Grand-Avenue-c-3.jpg",
+          "sha256": "f24b9a543519e1ba96599fcc431fa04bf1511bb3af38c9fcebc822986832e0d6",
+          "caption": "Zone C1 · фасад",
+          "alt": "Botanica Grand Avenue — Zone C1 · фасад"
+        },
+        {
+          "path": "/images/projects/botanica/grand-avenue-1.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/Botanica-Grand-Avenue-c-1.jpg",
+          "sha256": "90fddba930a0892ecc0b336f180192f527fd56b04388bfec76c30ec3c708ac93",
+          "caption": "Zone C1 · терраса",
+          "alt": "Botanica Grand Avenue — Zone C1 · терраса"
+        },
+        {
+          "path": "/images/projects/botanica/grand-avenue-2.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/Botanica-Grand-Avenue-c-2.jpg",
+          "sha256": "299443c0d9512197cb0ece9c2170a172e8ec5a561f338fda9d70caa7d8d5f7dd",
+          "caption": "Zone C1 · гостиная",
+          "alt": "Botanica Grand Avenue — Zone C1 · гостиная"
+        }
+      ]
+    },
+    {
+      "key": "hythe",
+      "id": "botanica-hythe",
+      "aliases": [
+        "botanika-hait"
+      ],
+      "name": "Hythe by Botanica",
+      "district": "Чернг Талай",
+      "kind": "condo",
+      "collection": "Hythe",
+      "sourcePage": "https://www.botanicaluxuryvilla.com/projects/hythe-by-botanica/",
+      "summary": "Кондоминиум в составе Botanica Grand Avenue. Апартаменты с одной–тремя спальнями, общие бассейны, клубное пространство и фитнес-центр — для тех, кому близок формат резиденции с инфраструктурой.",
+      "features": [
+        "Апартаменты · 1–3 спальни",
+        "Бассейны и клубное пространство",
+        "Фитнес-центр"
+      ],
+      "reviewedAt": "2026-09-27",
+      "gallery": [
+        {
+          "path": "/images/projects/botanica/hythe-1.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/hythe-by-botanica_Aerial-Perspective.jpg",
+          "sha256": "a852121d329b5039c655aa1b5352b94b0cabca2ab4db08f6014510a22ebd24f3",
+          "caption": "Общий вид комплекса",
+          "alt": "Hythe by Botanica — Общий вид комплекса"
+        },
+        {
+          "path": "/images/projects/botanica/hythe-2.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/hythe-by-botanica_Clubhouse-Garden.jpg",
+          "sha256": "d40a87a4313482242cf0d101d6cb008e1aa2425070e00aa320d32147bab9a666",
+          "caption": "Клубное пространство",
+          "alt": "Hythe by Botanica — Клубное пространство"
+        },
+        {
+          "path": "/images/projects/botanica/hythe-3.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/hythe-by-botanica_Interior-Living-Space.jpg",
+          "sha256": "3a517669cc95d65010c961905bdfe8c3bb4396f051474ca478d46caf54a4f987",
+          "caption": "Интерьер резиденции",
+          "alt": "Hythe by Botanica — Интерьер резиденции"
+        }
+      ]
+    },
+    {
+      "key": "montazure",
+      "id": "botanica-montazure",
+      "aliases": [
+        "botanika-montazur"
+      ],
+      "name": "Botanica MontAzure",
+      "district": "Камала",
+      "kind": "villa",
+      "collection": "MontAzure",
+      "sourcePage": "https://www.botanicaluxuryvilla.com/projects/botanica-montazure/",
+      "summary": "Виллы с бассейнами в Камале, среди зелёных холмов. В проекте представлены варианты с тремя–пятью спальнями; команда МИРА поможет запросить планировку под состав семьи и пожелания клиента.",
+      "features": [
+        "Виллы · 3–5 спален",
+        "Собственные бассейны",
+        "Камала"
+      ],
+      "reviewedAt": "2026-09-27",
+      "gallery": [
+        {
+          "path": "/images/projects/botanica/montazure-1.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/03-Type4C_01.jpg",
+          "sha256": "b873ef68d06973b4f99ff71d56b527ba012f1f9b1fc72485c1e24cb5db75cb82",
+          "caption": "Вилла Type 4C",
+          "alt": "Botanica MontAzure — Вилла Type 4C"
+        },
+        {
+          "path": "/images/projects/botanica/montazure-2.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/Type-5C_EXT_Pool-2_01.jpg",
+          "sha256": "4e1a5a02d14b3824cf22729d56702125c679286d93559ab7b17c9f2d76a1c221",
+          "caption": "Бассейн виллы Type 5C",
+          "alt": "Botanica MontAzure — Бассейн виллы Type 5C"
+        },
+        {
+          "path": "/images/projects/botanica/montazure-3.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/Type-5C_INT_Living_01.jpg",
+          "sha256": "a5c3dbf35deac93636fa08909047e63f04c9bfcc63e4af4b93cd64a045679699",
+          "caption": "Гостиная виллы Type 5C",
+          "alt": "Botanica MontAzure — Гостиная виллы Type 5C"
+        }
+      ]
+    },
+    {
+      "key": "four-seasons",
+      "id": "botanica-four-seasons",
+      "aliases": [
+        "botanika-chetyre-sezona"
+      ],
+      "name": "Botanica Four Seasons",
+      "district": "Пру Джампа",
+      "kind": "villa",
+      "collection": "Spring · Summer · Autumn",
+      "sourcePage": "https://www.botanicaluxuryvilla.com/projects/botanica-four-seasons/",
+      "summary": "Виллы с бассейнами в Пру Джампа. Три архитектурные коллекции — Spring, Summer и Autumn — позволяют сравнить разные стили: Modern Zen, Tropical Balinese и Modern Loft.",
+      "features": [
+        "Виллы с бассейном",
+        "Три архитектурные коллекции",
+        "Пру Джампа"
+      ],
+      "reviewedAt": "2026-09-27",
+      "gallery": [
+        {
+          "path": "/images/projects/botanica/four-seasons-1.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/botanica-four-seasons-summer-1.jpg",
+          "sha256": "9142d0e7d0cdfc58ae410118117ca9b9042c71788222890e4c291bad6013bb8d",
+          "caption": "Summer · бассейн и терраса",
+          "alt": "Botanica Four Seasons — Summer · бассейн и терраса"
+        },
+        {
+          "path": "/images/projects/botanica/four-seasons-2.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/botanica-four-seasons-spring-2.jpg",
+          "sha256": "86394035735031e61c91b84421fa098f318050a71407f5b7d108373da9977078",
+          "caption": "Spring · общий вид",
+          "alt": "Botanica Four Seasons — Spring · общий вид"
+        },
+        {
+          "path": "/images/projects/botanica/four-seasons-3.jpg",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/botanica-four-seasons-autumn-1.jpg",
+          "sha256": "36d48e42c0bd4432eff7b12489ab9e0924951ff1ac9e59978162a0eb7bc6e1a7",
+          "caption": "Autumn · интерьер",
+          "alt": "Botanica Four Seasons — Autumn · интерьер"
+        }
+      ]
+    },
+    {
+      "key": "foresta-ii",
+      "id": "botanika-foresta-2",
+      "aliases": [],
+      "name": "Botanica Foresta II",
+      "district": "Лаян",
+      "kind": "villa",
+      "collection": "Foresta II",
+      "sourcePage": "https://www.botanicaluxuryvilla.com/projects/botanica-foresta-ii/",
+      "summary": "Виллы с бассейнами и тремя–четырьмя спальнями в районе Лаян. Современная архитектура соединяет жилые пространства с террасами, садом и зоной отдыха у воды.",
+      "features": [
+        "Виллы · 3–4 спальни",
+        "Собственные бассейны",
+        "Лаян"
+      ],
+      "reviewedAt": "2026-09-27",
+      "gallery": [
+        {
+          "path": "/images/projects/botanica/foresta-ii-1.webp",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/mainslide-botanica-foresta-ii-1.webp",
+          "sha256": "cd43ce2f2fc2eee800e828b42aabeda8dffccf38dca14b18b324152ccb635d01",
+          "caption": "Фасад и бассейн",
+          "alt": "Botanica Foresta II — Фасад и бассейн"
+        },
+        {
+          "path": "/images/projects/botanica/foresta-ii-2.webp",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/botanica-foresta-ii-6.webp",
+          "sha256": "9f063c9489a8198253b5989a0b8fe64b6da61127b860e959cb50cd3f63edc5b6",
+          "caption": "Терраса у бассейна",
+          "alt": "Botanica Foresta II — Терраса у бассейна"
+        },
+        {
+          "path": "/images/projects/botanica/foresta-ii-3.webp",
+          "sourceURL": "https://www.botanicaluxuryvilla.com/wp-content/uploads/2025/03/botanica-foresta-ii-4.webp",
+          "sha256": "550d0a3fffcbecd3ff938861ee8f89e1e65520c884ff45cd03a491400a31d170",
+          "caption": "Вилла со стороны бассейна",
+          "alt": "Botanica Foresta II — Вилла со стороны бассейна"
+        }
+      ]
+    }
+  ]
+}
