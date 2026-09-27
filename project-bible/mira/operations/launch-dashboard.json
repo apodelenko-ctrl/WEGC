@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "source_commit": "c3f8bc445ac69539fe568c1f9cf37c11b385eeab",
+  "source_commit": "261888ab38d744314ffa09972f0318abc942a9be",
   "source_sha256": {
     "ru/wegc-catalog-data.js": "d4c003fb24b1bd11a3c9432109a4620d47a63c206e250f15969aea8ae9ee5e93",
     "project-bible/mira/data/phuket-project-master-seed-45.csv": "662223e7badc34f523297e8591b7d1b76450aab041b1b21530bdb196d2f4832b",
@@ -157,7 +157,7 @@
       "capability": "public_landing",
       "implementation": "implemented_code",
       "source_path": "mira/agency/index.html",
-      "source_sha256": "e58ec430059775ad1a63af4748ad2ece0a04895e7512660485017fac6b3fe0bc",
+      "source_sha256": "e66196ac72c187caca7a75a862637a80f6a7d2477b94c8ccded84606d9f2d9de",
       "deployment": "not_verified",
       "note": "Dedicated agency funnel: four entry segments, local brief and real demo links. General /mira/ landing retained; live intake remains closed."
     },
