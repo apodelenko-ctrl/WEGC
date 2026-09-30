@@ -63,3 +63,39 @@ should resolve to this note.
 ## Source material
 
 Contract file in the user's file library: **VIVI_VBA312_Contract_3_Payments_Unsigned.pdf**. Relevant provision: Clause 4.7 (assignment of purchaser rights).
+
+## Voice-chat continuation — operational recovery point
+
+**Recorded:** 2026-09-30, Asia/Bangkok
+
+This section is the recovery point for the continued voice discussion about Charter Capital / Thailand / VIVI assignment.
+
+### What was agreed in the discussion
+
+- Do not send the developer a theoretical advance question asking whether an unlimited A→B→C→D chain is permitted merely to test the concept.
+- Instead, first establish the actual developer procedure for one real assignment and follow the contractual/formal process for that transaction.
+- Each leg must be a genuine sequential transfer: after A assigns to B and B is recognized as Purchaser, any later assignment must be made by B as the then-current holder of the contractual position.
+- Do not mix identities, documents or payment trails between different legs.
+- Clause 4.7, as previously reviewed, provides the assignment mechanism, written notice to Seller, transfer of Purchaser rights/obligations and THB 100,000 administration fee per contract. The text reviewed did not expressly state a one-assignment limit.
+- A practical checkpoint after the first assignment is whether Rhom Bho records/recognizes B as the new Purchaser and what documentary confirmation/forms it issues. Then assess whether B, as Purchaser, can use the same contractual assignment mechanism for a later genuine transfer.
+- The chain should not depend on hiding its purpose or underlying transactions from a bank. If banking/AML/SoF/SoW review becomes relevant, the structure should be supportable on the complete documentary facts.
+
+### Next unresolved step
+
+Retrieve and review the source contract **VIVI_VBA312_Contract_3_Payments_Unsigned.pdf**, especially Clause 4.7 and any linked provisions, and determine from the actual contract/forms:
+1. who must sign an assignment;
+2. when Seller treats substitution of Purchaser as effective;
+3. KYC/documents required for the incoming Purchaser;
+4. what confirmation establishes that the assignee is now the Purchaser;
+5. any conditions involving outstanding installments, timing, refusal rights, fees or taxes.
+
+### Retrieval phrases for another/local agent
+
+The following user phrases should resolve to this file and this section:
+- “поищи наш последний разговор в голосовом чате про переуступку”
+- “последний разговор Charter Capital VIVI”
+- “переуступка VIVI A B C”
+- “оборотный юнит VBA312”
+- “продолжи голосовой разговор про assignment в Таиланде”
+
+When retrieved, continue from **Next unresolved step** rather than restarting the conceptual discussion.
