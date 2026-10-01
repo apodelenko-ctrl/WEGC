@@ -1,0 +1,9 @@
+# English developer enquiries — 1 October 2026
+
+English landing `/mira/en/` positions MIRA as a marketplace connecting international project supply with demand through local agencies and independent agents in Russia and other CIS markets. Personal name, personal Gmail, WEGC links and corporate naming were removed from the marketing page. Controller identification remains in the separate English privacy notice.
+
+Market evidence: REIC 2025 condominium transfer report, p. 5: Russian nationals acquired 1,172 units (up 8.6%), THB 4.773 billion (up 30.3%). Dubai Department of Finance 12 January 2026 release: 2025 market transactions AED 917 billion, up 20%; explicitly whole-market/all nationalities. These are market figures, not MIRA audience or sales claims. Source links are on the landing.
+
+Form: `https://pilot.wegc.fund/mira/request/partners/`, embedded only by `https://wegc.fund`. Four fields: company, project country/city, name, business email. Same existing D1 intake queue, operator assignment, retention, Turnstile, same-origin POST and idempotency protections. No database migration. Developer enquiries distinguishable by consent version `mira-partners-2026-10-01-v1`. Existing Russian route and policy remain unchanged. Public receipts do not verify email or activate an agency. Replies remain a team email action, not an automatic confirmation email service.
+
+Worker version: `609c38ce-c496-4d94-8db3-dd58433d1d4d`. Existing vars/secrets and private assets retained. 55 targeted tests passed. Responsive checks at 320, 390, 768 and 1440 pixels passed. Live browser submission using ordinary Turnstile succeeded and D1 confirmed one clearly labelled SERVICE TEST row with status received; do not count it as commercial demand. Browser showed the English confirmation and reference. Static publication is via the normal Pages workflow; verify the final deployed iframe after merge.

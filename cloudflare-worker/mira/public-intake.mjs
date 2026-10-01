@@ -1,6 +1,7 @@
 /** Public requests are unverified enquiries, never memberships or verified contacts. */
 import {ApiError} from './auth.mjs';
 import {intakePage, intakeClient, intakePrivacyPage} from './intake-ui.mjs';
+import {partnerIntakePage,partnerIntakeClient,partnerIntakePrivacy,PARTNER_CONSENT} from './partner-intake-ui.mjs';
 const ROOT='/mira/request';
 const fixedHeaders={'Cache-Control':'no-store, private','Referrer-Policy':'no-referrer','X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow, noarchive'};
 const json=(b,status=200)=>Response.json(b,{status,headers:{...fixedHeaders,'Content-Security-Policy':"default-src 'none'; frame-ancestors 'none'"}});
@@ -50,11 +51,11 @@ async function challenge(request,env,value,fetcher){
  check(r.success===true&&r.hostname===new URL(env.APP_ORIGIN).hostname&&r.action==='mira_intake',400,'challenge_rejected');
 }
 const receipt=r=>({id:r.id,status:r.status,version:r.version,received_at:r.created_at,updated_at:r.updated_at,response:r.public_response||null,meaning:'Запрос сохранён. Это не активация агентства и не подтверждение email.'});
-async function submit(request,env,fetcher){
+async function submit(request,env,fetcher,consentVersion=env.PUBLIC_INTAKE_PRIVACY_VERSION){
  const b=await body(request);keys(b,['company','city','name','email','consent_version','challenge']);
  const data={company:text(b.company,2,160),city:text(b.city,2,120),name:text(b.name,2,120),email:text(b.email,3,254).toLowerCase(),consent_version:b.consent_version};
  check(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email),400,'invalid_email');
- check(data.consent_version===env.PUBLIC_INTAKE_PRIVACY_VERSION,400,'current_consent_required');
+ check(data.consent_version===consentVersion,400,'current_consent_required');
  const idempotency=uuid(request.headers.get('Idempotency-Key')),tokenHash=await sha(token(request)),hash=await sha(JSON.stringify(data));
  await rate(request,env,'submit');
  const replay=async()=>{
@@ -79,17 +80,19 @@ async function submit(request,env,fetcher){
 export function createPublicIntake(fetcher=(...args)=>fetch(...args)){
  return async(request,env)=>{try{
   const url=new URL(request.url);check(url.origin===env.APP_ORIGIN,421,'unexpected_origin');
-  check([ROOT+'/',ROOT+'/client.mjs',ROOT+'/submit',ROOT+'/status',ROOT+'/privacy'].includes(url.pathname),404,'not_found');
-  if(request.method==='GET'&&url.pathname===ROOT+'/privacy')return new Response(intakePrivacyPage,{headers:{...fixedHeaders,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'"}});
+  check([ROOT+'/',ROOT+'/client.mjs',ROOT+'/submit',ROOT+'/status',ROOT+'/privacy',ROOT+'/partners/',ROOT+'/partners/client.mjs',ROOT+'/partners/submit',ROOT+'/partners/privacy'].includes(url.pathname),404,'not_found');
+  if(request.method==='GET'&&[ROOT+'/privacy',ROOT+'/partners/privacy'].includes(url.pathname))return new Response(url.pathname===ROOT+'/privacy'?intakePrivacyPage:partnerIntakePrivacy,{headers:{...fixedHeaders,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'"}});
   config(env);
-  if(request.method==='GET'&&url.pathname===ROOT+'/client.mjs')return new Response(intakeClient,{headers:{...fixedHeaders,'Content-Type':'text/javascript; charset=utf-8'}});
-  if(request.method==='GET'&&url.pathname===ROOT+'/'){
+  if(request.method==='GET'&&[ROOT+'/client.mjs',ROOT+'/partners/client.mjs'].includes(url.pathname))return new Response(url.pathname===ROOT+'/client.mjs'?intakeClient:partnerIntakeClient,{headers:{...fixedHeaders,'Content-Type':'text/javascript; charset=utf-8'}});
+  if(request.method==='GET'&&[ROOT+'/',ROOT+'/partners/'].includes(url.pathname)){
+   const partner=url.pathname===ROOT+'/partners/';
    if(env.PUBLIC_INTAKE_SUBMISSIONS_PAUSED!=='true')await operatorReady(env);
-   return new Response(intakePage(env),{headers:{...fixedHeaders,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"}});
+   return new Response(partner?partnerIntakePage(env):intakePage(env),{headers:{...fixedHeaders,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors "+(partner?"https://wegc.fund":"'none'")}});
   }
-  check(request.method==='POST'&&[ROOT+'/submit',ROOT+'/status'].includes(url.pathname),405,'method_not_allowed');
+  check(request.method==='POST'&&[ROOT+'/submit',ROOT+'/partners/submit',ROOT+'/status'].includes(url.pathname),405,'method_not_allowed');
   check(request.headers.get('Origin')===env.APP_ORIGIN,403,'origin_rejected');
   if(url.pathname===ROOT+'/submit')return await submit(request,env,fetcher);
+  if(url.pathname===ROOT+'/partners/submit')return await submit(request,env,fetcher,PARTNER_CONSENT);
   const b=await body(request);keys(b,['id']);const id=uuid(b.id),hash=await sha(token(request));await rate(request,env,'status');
   const row=await one(env,'SELECT * FROM mira_intake_requests WHERE id=? AND token_hash=?',id,hash);
   if(!row&&await one(env,'SELECT request_id FROM mira_intake_erasure WHERE request_id=? AND token_hash=?',id,hash))throw new ApiError(410,'receipt_erased');
