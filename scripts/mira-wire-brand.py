@@ -9,7 +9,7 @@ LOCKUP = '<b class="mira-lockup">МИРА<i aria-hidden="true">↗</i></b>'
 CSS = '<link rel="stylesheet" href="/mira/brand.css?v=20261001">'
 ANCHOR = re.compile(r'(<a\b[^>]*class="([^"]*)"[^>]*>)(.*?)(</a>)', re.S)
 
-def wire(text):
+def wire(text, relative=False):
     count = 0
     def replace(m):
         nonlocal count
@@ -22,14 +22,15 @@ def wire(text):
         count += 1
         return m[1] + LOCKUP + rest + m[4]
     text = ANCHOR.sub(replace, text)
-    if 'mira-lockup' in text and '/mira/brand.css' not in text:
-        text = text.replace('</head>', CSS + '</head>', 1)
+    if 'mira-lockup' in text and not re.search(r'href="(?:/mira/|\./)brand\.css', text):
+        stylesheet = '<link rel="stylesheet" href="./brand.css">' if relative else CSS
+        text = text.replace('</head>', stylesheet + '</head>', 1)
     return text
 
 def build():
     changed = 0
     for path in sorted((ROOT/'mira').rglob('*.html')):
-        before = path.read_text(encoding='utf-8'); after = wire(before)
+        before = path.read_text(encoding='utf-8'); after = wire(before, relative=path == ROOT/'mira/library.html')
         if before != after:
             path.write_text(after, encoding='utf-8'); changed += 1
     print(f'MIRA shared wordmark: {changed} pages updated')

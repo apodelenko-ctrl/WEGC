@@ -15,6 +15,11 @@ class BrandTests(unittest.TestCase):
             self.assertIn('aria-label="МИРА — каталог"',out)
             if 'Кабинет' in body: self.assertIn('<span>Кабинет агентства</span>',out)
             self.assertEqual(out,brand.wire(out))
+    def test_private_library_relative_stylesheet(self):
+        text='<head></head><a class="brand" href="./pilot.html">МИРА</a>'
+        out=brand.wire(text, relative=True)
+        self.assertIn('href="./brand.css"',out)
+        self.assertEqual(out,brand.wire(out,relative=True))
     def test_unrelated_brand_is_untouched(self):
         text='<head></head><a class="brand" href="/">WEGC</a><p>МИРА</p>'
         self.assertEqual(text,brand.wire(text))
