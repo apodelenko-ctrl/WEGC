@@ -1,5 +1,4 @@
 /* Go retains the existing layout, door animation and red/white palette. */
-.go-income-teaser{color:var(--accent);font-size:14px;font-weight:700;line-height:1.5;text-decoration:none}
 .go-income{background:var(--accent);color:#fff;scroll-margin-top:24px}
 .go-income .wrap{gap:48px}
 .go-income-copy{max-width:720px}
@@ -7,6 +6,12 @@
 .go-income h2{margin:0;font-size:clamp(28px,3.4vw,46px);line-height:1.12}
 .go-income-note{max-width:510px;margin:20px 0 0;font-size:13px;line-height:1.55}
 .go-income-number{flex-shrink:0;text-align:right}
-.go-income-number strong{display:block;font-size:clamp(78px,8.4vw,128px);font-weight:800;line-height:1;letter-spacing:-.065em;white-space:nowrap}
-.go-income-number span{display:block;margin-top:14px;font-size:14px;line-height:1.4}
-@media(max-width:760px){.go-income .wrap{flex-direction:column;align-items:flex-start;gap:28px}.go-income-number{text-align:left}.go-income-number strong{font-size:clamp(76px,20vw,110px)}.go-income-note{font-size:12px}.go-income-teaser{font-size:13px}}
+.go-income-number .go-income-value{display:flex;align-items:center;justify-content:flex-end;gap:.045em;font-size:clamp(112px,13vw,192px);font-family:Arial,Helvetica,sans-serif;font-weight:900;line-height:1;letter-spacing:-.07em;white-space:nowrap}
+.go-income-value .go-stencil{display:block;margin:0;font:inherit;line-height:1;letter-spacing:inherit;color:#fff}
+.go-income-value .go-percent{font-size:.76em;margin-left:.045em}
+.go-income-value .go-rate-divider{display:block;flex:0 0 .16em;width:.16em;height:.065em;background:#fff;margin:.08em .015em 0 .035em}
+@supports(-webkit-background-clip:text){.go-income-value .go-stencil{background:linear-gradient(to bottom,#fff 0 48%,transparent 48% 50%,#fff 50% 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}}
+.go-income-number>.go-income-caption{display:block;margin-top:14px;font-size:14px;line-height:1.4}
+@media(max-width:760px){.go-income .wrap{flex-direction:column;align-items:flex-start;gap:28px}.go-income-number{text-align:left}.go-income-number .go-income-value{font-size:clamp(88px,28vw,128px);justify-content:flex-start}.go-income-note{font-size:12px}}
+
+body.direct .project-picture>a{display:block}body.direct .project-picture img{object-position:center 60%}
