@@ -56,8 +56,10 @@ jobs:
           python scripts/mira-build-catalog.py
           node --test tests/mira-*.test.mjs
           python -m unittest discover -s tests -p 'test_mira*.py' -v
-      - name: Preserve analytics in generated public checkpoint
-        run: python scripts/mira-wire-analytics.py
+      - name: Preserve analytics and shared branding in generated public checkpoint
+        run: |
+          python scripts/mira-wire-analytics.py
+          python scripts/mira-wire-brand.py
       - name: Save bounded generated public checkpoint
         run: |
           git config user.name 'github-actions[bot]'
