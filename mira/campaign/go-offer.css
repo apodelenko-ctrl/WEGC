@@ -1,0 +1,12 @@
+/* Go retains the existing layout, door animation and red/white palette. */
+.go-income-teaser{color:var(--accent);font-size:14px;font-weight:700;line-height:1.5;text-decoration:none}
+.go-income{background:var(--accent);color:#fff;scroll-margin-top:24px}
+.go-income .wrap{gap:48px}
+.go-income-copy{max-width:720px}
+.go-income-label{margin:0 0 18px;font-size:11px;font-weight:700;letter-spacing:.09em}
+.go-income h2{margin:0;font-size:clamp(28px,3.4vw,46px);line-height:1.12}
+.go-income-note{max-width:510px;margin:20px 0 0;font-size:13px;line-height:1.55}
+.go-income-number{flex-shrink:0;text-align:right}
+.go-income-number strong{display:block;font-size:clamp(78px,8.4vw,128px);font-weight:800;line-height:1;letter-spacing:-.065em;white-space:nowrap}
+.go-income-number span{display:block;margin-top:14px;font-size:14px;line-height:1.4}
+@media(max-width:760px){.go-income .wrap{flex-direction:column;align-items:flex-start;gap:28px}.go-income-number{text-align:left}.go-income-number strong{font-size:clamp(76px,20vw,110px)}.go-income-note{font-size:12px}.go-income-teaser{font-size:13px}}

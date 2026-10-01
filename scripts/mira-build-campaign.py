@@ -16,6 +16,43 @@ VARIANTS = {'go': layout.VARIANTS['go'], 'practical': layout.VARIANTS['business'
 layout.VARIANTS = VARIANTS
 build_page = layout.build_page
 
+def apply_go_offer(text):
+    """Refresh only the Go offer; keep the existing layout and motion hooks."""
+    if 'id="income"' in text:
+        return text
+    replacements = [
+        ('Не отдавайте зарубежный запрос другому брокеру. Добавьте Пхукет в предложение своего агентства — клиент и ваш бренд остаются с вами.',
+         'Откройте зарубежное направление в вашем агентстве. Проекты, работа с застройщиками, документы и помощь с оплатой — с поддержкой МИРА. Ваш клиент и ваш бренд остаются с вами.'),
+        ('>Проекты Пхукета</a>', '>Маркетплейс</a>'),
+        ('<div class="destination">ПХУКЕТ <span>↗</span></div>', '<div class="destination">МИР ОТКРЫТ <span>↗</span></div>'),
+        ('<a class="button" href="/mira/catalog/">Посмотреть проекты ↗</a><a class="text-link" href="https://pilot.wegc.fund/mira/request/">Подать заявку →</a>',
+         '<a class="button" href="#start">Начать работу с МИРА ↗</a><a class="text-link" href="/mira/catalog/">Объекты в маркетплейсе →</a>'),
+        ('<p class="hero-fine">Выберите проекты. Сохраните подборку. Обсудите следующий шаг.</p>',
+         '<p class="hero-fine"><a class="go-income-teaser" href="#income">Комиссия застройщика 5–12% — ваш доход ↗</a></p>'),
+        ('Клиент спросил о Пхукете.<br>У вас есть следующий шаг.', 'От первого запроса<br>до зарубежной сделки.'),
+        ('Изучите каталог Пхукета, отберите подходящие направления и сформируйте предварительную подборку.',
+         'Посмотрите проекты по разным направлениям. Мы поможем уточнить наличие, цены и условия застройщика под запрос вашего клиента.'),
+        ('<h3>Подготовьте подключение</h3><p>Определите задачу команды. Согласуйте договор, проект, правила регистрации и комиссию до рабочего запроса.</p>',
+         '<h3>Подключите агентство</h3><p>Оставьте рабочие контакты. Обсудим задачу вашей команды, порядок работы, регистрацию клиента и условия вознаграждения.</p>'),
+        ('<h2>Начните с места.<br>Не с нового офиса.</h2>', '<h2>Начните<br>с Пхукета.</h2>'),
+        ('Виллы и кондоминиумы, районы и группы девелоперов — в одном каталоге. Выбирайте проекты и собирайте свою подборку.',
+         'Познакомьтесь с виллами и кондоминиумами Пхукета, выберите подходящие объекты и обсудите первый клиентский запрос с нашей командой.'),
+        ('<a class="button" href="/mira/catalog/">Найти проект ↗</a>', '<a class="button" href="https://pilot.wegc.fund/mira/request/">Подключить Пхукет ↗</a>'),
+        ('<summary>Платёжное сопровождение</summary><p>Отдельный запрос и проверка конкретной сделки. Средства покупателя и агентское вознаграждение не смешиваются.</p>',
+         '<summary>Документы и оплата</summary><p>Поможем согласовать прямой договор покупателя с застройщиком, организовать подписание и получение оригиналов. По запросу — сопровождение оплаты и консультация местного юриста.</p>'),
+    ]
+    for before, after in replacements:
+        if before not in text:
+            raise ValueError(f'Go offer source changed: {before[:70]}')
+        text = text.replace(before, after)
+    opening = '<section class="impact"><div class="wrap"><h2>Клиент остаётся вашим.<br><span>География — меняется.</span></h2><a href="#how" class="round-arrow" aria-label="Как это работает">↓</a></div></section>'
+    income = '''<section class="impact go-income" id="income" aria-labelledby="income-title"><div class="wrap"><div class="go-income-copy"><p class="go-income-label">ВАШ КЛИЕНТ. ВАШ БРЕНД. ВАШ ДОХОД.</p><h2 id="income-title">Комиссия застройщика&nbsp;—<br>ваш доход.</h2><p class="go-income-note">Размер комиссии зависит от проекта. Условия вознаграждения и выплаты согласуем до сделки.</p></div><div class="go-income-number"><strong>5–12%</strong><span>комиссия от стоимости объекта</span></div></div></section>'''
+    if opening not in text:
+        raise ValueError('Missing Go impact section')
+    text = text.replace(opening, income)
+    text = text.replace('</head>', '<link rel="stylesheet" href="/mira/campaign/go-offer.css?v=20261001"></head>', 1)
+    return text
+
 def build(root=ROOT):
     result = layout.build(root)
     hub = Path(root) / 'mira/launch/index.html'
@@ -30,6 +67,8 @@ def build(root=ROOT):
         if text.count(marker) != 1:
             raise ValueError('Unexpected campaign stylesheet boundary')
         text = text.replace(marker, marker + '<link rel="stylesheet" href="/mira/campaign/accessibility.css">')
+        if route == 'go':
+            text = apply_go_offer(text)
         target.write_text(text, encoding='utf-8')
     return result
 
