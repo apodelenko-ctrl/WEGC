@@ -27,13 +27,19 @@ def wire(text, relative=False):
         text = text.replace('</head>', stylesheet + '</head>', 1)
     return text
 
+def wire_go(text):
+    def header(m):
+        block=m[0].replace('<span>Ваш клиент. Ваш бренд.</span>', '<span class="mira-descriptor">B2B Marketplace<br>зарубежной недвижимости</span>', 1)
+        return block.replace('class="brand" href="/mira/go/"', 'class="brand mira-marketplace-brand" href="/mira/go/"', 1)
+    text=re.sub(r'<header\b[^>]*>.*?</header>',header,text,count=1,flags=re.S)
+    return re.sub(r'<footer\b[^>]*>.*?</footer>',lambda m:m[0].replace('class="brand mira-marketplace-brand"','class="brand"'),text,flags=re.S)
+
 def build():
     changed = 0
     for path in sorted((ROOT/'mira').rglob('*.html')):
         before = path.read_text(encoding='utf-8'); after = wire(before, relative=path == ROOT/'mira/library.html')
         if path == ROOT/'mira/go/index.html':
-            after = after.replace('<span>Ваш клиент. Ваш бренд.</span>', '<span class="mira-descriptor">B2B Marketplace<br>зарубежной недвижимости</span>', 1)
-            after = after.replace('class="brand" href="/mira/go/"', 'class="brand mira-marketplace-brand" href="/mira/go/"', 1)
+            after = wire_go(after)
         if before != after:
             path.write_text(after, encoding='utf-8'); changed += 1
     print(f'MIRA shared wordmark: {changed} pages updated')
