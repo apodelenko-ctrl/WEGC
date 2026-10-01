@@ -36,9 +36,12 @@ jobs:
         if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
         run: |
           result=0
+          find mira -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/mira-before-tests.sha256
           node scripts/audit-site.js mira > /tmp/mira-site-audit.log 2>&1 || result=1
           node --test tests/mira-*.test.mjs > /tmp/mira-node.tap || result=1
           python -m unittest discover -s tests -p 'test_mira*.py' -v > /tmp/mira-python.txt 2>&1 || result=1
+          find mira -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/mira-after-tests.sha256
+          cmp /tmp/mira-before-tests.sha256 /tmp/mira-after-tests.sha256 || result=1
           exit "$result"
       - name: Real local HTTP and CSP acceptance
         if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}

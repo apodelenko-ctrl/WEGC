@@ -7,6 +7,7 @@ import re
 import subprocess
 import sys
 import unittest
+import tempfile, shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT/'mira/documents'
@@ -14,9 +15,14 @@ DOCS = ROOT/'mira/documents'
 class DocumentPackageTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        subprocess.run([sys.executable, str(ROOT/'scripts/mira-build-documents.py')], check=True, capture_output=True)
-        cls.manifest = json.loads((DOCS/'manifest.json').read_text())
-        cls.agreement = (DOCS/'source/agency-agreement.md').read_text()
+        cls.tmp=tempfile.TemporaryDirectory();cls.addClassCleanup(cls.tmp.cleanup);root=Path(cls.tmp.name)
+        cls.docs=root/'mira/documents'
+        shutil.copytree(DOCS/'source',cls.docs/'source')
+        for name in ['scripts/mira-build-documents.py','project-bible/mira/legal/RF-LEGAL-BASIS-2026-09-17.md']:
+            dest=root/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/name,dest)
+        subprocess.run([sys.executable, str(root/'scripts/mira-build-documents.py')], check=True, capture_output=True)
+        cls.manifest = json.loads((cls.docs/'manifest.json').read_text())
+        cls.agreement = (cls.docs/'source/agency-agreement.md').read_text()
 
     def test_nine_documents_not_an_active_offer(self):
         self.assertEqual(len(self.manifest['documents']), 9)
@@ -25,7 +31,7 @@ class DocumentPackageTests(unittest.TestCase):
         self.assertTrue(all(not d['effective'] for d in self.manifest['documents']))
 
     def test_framework_parts_are_complete(self):
-        parts = sorted((DOCS/'source/agreement-parts').glob('*.md'))
+        parts = sorted((self.docs/'source/agreement-parts').glob('*.md'))
         self.assertEqual(len(parts), 4)
         self.assertEqual(self.agreement, ''.join(p.read_text() for p in parts))
         self.assertGreater(len(self.agreement.split()), 5000)
@@ -35,9 +41,9 @@ class DocumentPackageTests(unittest.TestCase):
     def test_sources_are_hashed_and_each_html_exists(self):
         for d in self.manifest['documents']:
             with self.subTest(d=d['id']):
-                raw = (DOCS/d['source']).read_bytes()
+                raw = (self.docs/d['source']).read_bytes()
                 self.assertEqual(hashlib.sha256(raw).hexdigest(),d['source_sha256'])
-                text=(DOCS/d['html']).read_text()
+                text=(self.docs/d['html']).read_text()
                 self.assertIn('Content-Security-Policy',text)
                 self.assertNotIn('<form',text)
                 self.assertIn(d['pdf'],text)
@@ -54,14 +60,14 @@ class DocumentPackageTests(unittest.TestCase):
         self.assertIn('Согласие на передачу не считается',self.agreement)
         self.assertIn('Согласие оформляется отдельно',self.agreement)
         self.assertIn('не объявляется обезличенным',self.agreement)
-        privacy=(DOCS/'source/privacy.md').read_text()
+        privacy=(self.docs/'source/privacy.md').read_text()
         self.assertIn('IP-адресов',privacy)
         self.assertIn('первичный',privacy.lower())
-        marketing=(DOCS/'source/marketing-consent.md').read_text()
+        marketing=(self.docs/'source/marketing-consent.md').read_text()
         self.assertIn('не условие сотрудничества',marketing)
 
     def test_sources_page_preserves_primary_law_links(self):
-        text=(DOCS/'sources.html').read_text()
+        text=(self.docs/'sources.html').read_text()
         self.assertIn('https://npd.nalog.ru/faq/',text)
         self.assertIn('cons_doc_LAW_61801',text)
         self.assertIn('полный скачиваемый документ',text)
