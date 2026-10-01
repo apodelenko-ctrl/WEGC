@@ -13,12 +13,28 @@ export function validateCatalogue(data) {
     ids.add(p.id);
   }
   if (data.source?.recordCount !== ids.size || data.source.commerciallyEnabled !== 0) throw new Error('Не совпадает число исходных записей.');
+  const byId = new Map(data.projects.map(p=>[p.id,p]));
+  const aliases = new Set();
+  for (const p of data.projects) {
+    if (p.canonicalId && (!byId.has(p.canonicalId) || byId.get(p.canonicalId).canonicalId || !byId.get(p.canonicalId).aliases?.includes(p.id))) throw new Error('Некорректная ссылка на проект.');
+    if (p.aliases !== undefined && !Array.isArray(p.aliases)) throw new Error('Некорректные альтернативные ID.');
+    for (const id of p.aliases || []) {
+      if (aliases.has(id) || !byId.has(id) || byId.get(id).canonicalId !== p.id) throw new Error('Конфликт альтернативных ID.');
+      aliases.add(id);
+    }
+  }
   return data;
+}
+export const canonicalProjects = projects => projects.filter(p=>!p.canonicalId);
+export function canonicalSelectionId(id, projects) {
+  if (typeof id !== 'string') return null;
+  const project=projects.find(p=>p.id===id || p.aliases?.includes(id));
+  return project ? (project.canonicalId || project.id) : null;
 }
 export function selectProjects(projects, filters = {}) {
   const query = normalize(filters.q).slice(0,120);
   const words = query.split(/\s+/).filter(Boolean);
-  return projects.filter(p => (!filters.district || p.district === filters.district)
+  return canonicalProjects(projects).filter(p => (!filters.district || p.district === filters.district)
     && (!filters.kind || p.kind === filters.kind) && (!filters.family || p.family === filters.family)
     && words.every(word => normalize([p.name,p.district,p.family].join(' ')).includes(word)));
 }
@@ -29,12 +45,12 @@ export function paginate(rows, requested = 1) {
 }
 export function safeSelection(ids, projects) {
   if (!Array.isArray(ids)) return [];
-  const valid=new Set(projects.map(p=>p.id));
-  return [...new Set(ids.filter(id=>typeof id==='string' && valid.has(id)))].slice(0,MAX_SELECTION);
+  return [...new Set(ids.map(id=>canonicalSelectionId(id,projects)).filter(Boolean))].slice(0,MAX_SELECTION);
 }
 export function toggleSelection(ids,id,projects) {
   const current=safeSelection(ids,projects);
-  if (!projects.some(p=>p.id===id)) throw new Error('Проект не найден.');
+  id=canonicalSelectionId(id,projects);
+  if (!id) throw new Error('Проект не найден.');
   if (current.includes(id)) return current.filter(x=>x!==id);
   if(current.length>=MAX_SELECTION) throw new Error('В подборке может быть до 12 проектов. Удалите лишний.');
   return [...current,id];

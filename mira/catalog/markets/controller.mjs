@@ -1,4 +1,4 @@
-import {validateCatalogue} from '../catalog-core.mjs';
+import {validateCatalogue,canonicalProjects} from '../catalog-core.mjs';
 /** Country-aware public catalogue. Read-only public JSON, local shortlist only. */
 import {MARKETS,PROPERTY_TYPES,PAGE_SIZE,MAX_SELECTION,normalize,marketFromPath,isCatalogueIndex,safeReturnPath,validateExpansion,validateDiscovery,combineProjects,marketProjects,filterProjects,paginate,safeSelection,toggleSelection} from './market-core.mjs';
 const $=id=>document.getElementById(id),KEY='mira-research-selection-v1',RETURN='mira-catalog-return';
@@ -44,7 +44,7 @@ async function load(){
   let extra=null;try{if(extraResult.status==='fulfilled')extra=validateExpansion(extraResult.value);}catch{}
   let discovery=null;try{if(discoveryResult.status==='fulfilled')discovery=validateDiscovery(discoveryResult.value);}catch{}
   if((!extra&&['bali','dubai'].includes(market))||(!discovery&&['vietnam','montenegro'].includes(market)))throw Error('New market feed unavailable');
-  all=extra?combineProjects(base.projects,extra,discovery):[...base.projects.map(p=>({...p,market:'phuket'})),...(discovery?.projects||[])];rows=marketProjects(all,market);
+  all=extra?combineProjects(base.projects,extra,discovery):[...canonicalProjects(base.projects).map(p=>({...p,market:'phuket'})),...(discovery?.projects||[])];rows=marketProjects(all,market);
   const raw=readSaved();selection=safeSelection(raw,all);pendingSelection=raw.filter(id=>typeof id==='string'&&!all.some(p=>p.id===id)&&((!extra&&/^(bali|dubai)-[a-z0-9-]+$/.test(id))||(!discovery&&/^(vn|me)-[a-z0-9-]+$/.test(id)))).slice(0,MAX_SELECTION-selection.length);
   options('district',rows.map(p=>p.district));options('family',rows.map(p=>p.family));options('kind',rows.flatMap(p=>['vietnam','montenegro'].includes(p.market)?[p.kind]:(p.propertyTypes||[p.kind])),['phuket','vietnam','montenegro'].includes(market)?KIND:PROPERTY_TYPES);
   readState();restoreControls();loaded=true;for(const id of controls)if($(id))$(id).disabled=false;if($('load-error'))$('load-error').hidden=true;render(false);syncSelection();bindImages();

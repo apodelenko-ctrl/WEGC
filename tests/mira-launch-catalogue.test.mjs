@@ -1,7 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
 import {validate,filter,paginate,brief,PAGE_SIZE} from '../mira/phuket/catalogue.mjs';
-import {execFileSync} from 'node:child_process';
-execFileSync('python',['scripts/mira-build-launch.py'],{cwd:new URL('../',import.meta.url)});
+// Validate the built artifact; generator coverage runs in isolated Python fixtures.
 const data=JSON.parse(readFileSync(new URL('../mira/data/phuket.json',import.meta.url),'utf8'));
 test('full source catalogue validates: no current inventory claims',()=>{assert.equal(validate(data).records.length,618);assert.equal(data.count,618);assert.ok(data.records.every(r=>r.verifiedAt===null&&r.registrationEnabled===false));});
 test('every record is accessible exactly once by pagination',()=>{let ids=[];for(let i=1;i<=Math.ceil(data.count/PAGE_SIZE);i++)ids.push(...paginate(data.records,i).records.map(r=>r.id));assert.equal(new Set(ids).size,618);assert.deepEqual(ids,data.records.map(r=>r.id));});

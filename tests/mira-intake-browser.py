@@ -9,7 +9,7 @@ server = subprocess.Popen(['node','tests/mira-intake-browser-server.mjs'], cwd=r
 try:
     origin=server.stdout.readline().strip().split('=',1)[1]
     with sync_playwright() as p:
-        browser=p.chromium.launch(channel='chrome')
+        browser=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH') or None,args=['--no-sandbox'])
         applicant=browser.new_context(viewport={'width':390,'height':844})
         # No network challenge, real company data, or external mail in this fixture.
         applicant.route('https://challenges.cloudflare.com/**',lambda route:route.fulfill(content_type='text/javascript',body="const f=document.querySelector('#request');const n=document.createElement('input');n.type='hidden';n.name='cf-turnstile-response';n.value='SYNTHETIC-NOT-LIVE';f.append(n);window.turnstile={reset(){}};"))
@@ -33,7 +33,7 @@ try:
         receipt=replay.json()['id']
         assert receipt in before
         page.reload()
-        page.get_by_role('button',name='Проверить ответ',exact=True).click()
+        page.get_by_role('button',name='Проверить статус',exact=True).click()
         page.locator('#message').filter(has_text='Статус: Получен').wait_for()
         assert receipt in page.locator('#message').inner_text()
         page.screenshot(path=str(out/'intake-receipt-mobile.png'),full_page=True)
@@ -56,7 +56,7 @@ try:
         op.locator('#review textarea').fill('SYNTHETIC response: request received and reviewed.')
         op.get_by_role('button',name='Сохранить решение',exact=True).click()
         op.locator('#status').filter(has_text='Подтверди публикацию').wait_for()
-        page.get_by_role('button',name='Проверить ответ',exact=True).click()
+        page.get_by_role('button',name='Проверить статус',exact=True).click()
         page.locator('#message').filter(has_text='Статус: На рассмотрении').wait_for()
         assert 'SYNTHETIC response' not in page.locator('#message').inner_text()
         op.locator('#review [name=publish]').check()
@@ -72,7 +72,7 @@ try:
         assert op.evaluate('document.documentElement.scrollWidth<=innerWidth')
         op.screenshot(path=str(out/'intake-operator-mobile.png'),full_page=True)
         page.reload()
-        page.get_by_role('button',name='Проверить ответ',exact=True).click()
+        page.get_by_role('button',name='Проверить статус',exact=True).click()
         page.locator('#message').filter(has_text='SYNTHETIC response').wait_for()
         assert receipt in page.locator('#message').inner_text()
         page.screenshot(path=str(out/'intake-response-mobile.png'),full_page=True)

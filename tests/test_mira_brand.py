@@ -20,6 +20,13 @@ class BrandTests(unittest.TestCase):
         out=brand.wire(text, relative=True)
         self.assertIn('href="./brand.css"',out)
         self.assertEqual(out,brand.wire(out,relative=True))
+    def test_go_header_is_idempotent_and_does_not_restyle_footer(self):
+        link='<a class="brand" href="/mira/go/">МИРА<span>Ваш клиент. Ваш бренд.</span></a>'
+        page='<header>'+link+'</header><footer>'+link+'</footer>'
+        out=brand.wire_go(brand.wire(page))
+        self.assertEqual(out,brand.wire_go(brand.wire(out)))
+        self.assertEqual(out.count('mira-marketplace-brand'),1)
+        self.assertNotIn('mira-marketplace-brand',out.split('<footer>')[1])
     def test_unrelated_brand_is_untouched(self):
         text='<head></head><a class="brand" href="/">WEGC</a><p>МИРА</p>'
         self.assertEqual(text,brand.wire(text))

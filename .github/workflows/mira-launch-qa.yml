@@ -37,12 +37,7 @@ jobs:
         run: python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3'
       - name: Build every additive public surface before regression
         run: |
-          python scripts/mira-build-documents.py --downloads
-          python scripts/mira-build-catalog.py
-          python scripts/mira-build-launch.py
-          python scripts/mira-build-expo.py
-          python scripts/mira-build-campaign.py
-          python scripts/mira-build-exhibition.py --downloads
+          python scripts/mira-build-public.py
       - name: Domain, API and normalization regression tests
         run: |
           node --test tests/mira-*.test.mjs
@@ -53,7 +48,7 @@ jobs:
           python scripts/mira-wire-landing.py
           python scripts/mira-build-demo.py
           python scripts/mira-launch-build.py
-          python scripts/mira-build-catalog.py
+          python scripts/mira-build-public.py
           node --test tests/mira-*.test.mjs
           python -m unittest discover -s tests -p 'test_mira*.py' -v
       - name: Preserve analytics and shared branding in generated public checkpoint
