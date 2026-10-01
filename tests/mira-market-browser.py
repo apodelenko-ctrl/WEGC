@@ -2,6 +2,7 @@
 """Read-only actual-HTTP acceptance for the market addon. Run locally after integration.
 Never sends user data; never tests or changes Access/Worker/admin functionality.
 """
+from mira_browser_network import fixture_analytics
 from pathlib import Path
 from urllib.parse import urlsplit
 import argparse,json,os
@@ -14,9 +15,12 @@ def run(base,out):
  def ok(name,**extra):report['checks'].append({'name':name,'passed':True,**extra})
  with sync_playwright() as pw:
   browser=pw.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH') or None,args=['--no-sandbox'])
+  feed=pw.request.new_context().get(base+'/mira/catalog/data.json').json()
+  phuket_count=sum(not p.get('canonicalId') for p in feed['projects'])
   ctx=browser.new_context(viewport={'width':1440,'height':1000},accept_downloads=True,reduced_motion='reduce')
   def guard(route):
    req=route.request
+   if fixture_analytics(route):return
    if req.method not in ['GET','HEAD'] or urlsplit(req.url).netloc!=urlsplit(base).netloc or '/mira/api/' in req.url:
     report['unexpectedRequests'].append({'method':req.method,'url':req.url.split('?')[0]});route.abort()
    else:route.continue_()
@@ -37,7 +41,7 @@ def run(base,out):
     inspect_page();page.screenshot(path=str(out/(market+'-desktop.png')),full_page=True)
     page.set_viewport_size({'width':390,'height':844});page.screenshot(path=str(out/(market+'-mobile.png')))
     page.locator('#cards [data-add]').first.click();page.locator('#shortlist-open').click();expect(page.locator('#shortlist')).to_be_visible();page.keyboard.press('Escape');expect(page.locator('#shortlist')).not_to_be_visible()
-    page.locator('.market-switch a[href="/mira/catalog/"]').click();expect(page.locator('#result-count')).to_contain_text('618');page.locator('.market-switch a[href="/mira/catalog/'+market+'/"]').click();expect(page.locator('#cards .project-card')).to_have_count(15)
+    page.locator('.market-switch a[href="/mira/catalog/"]').click();expect(page.locator('#result-count')).to_contain_text(str(phuket_count));page.locator('.market-switch a[href="/mira/catalog/'+market+'/"]').click();expect(page.locator('#cards .project-card')).to_have_count(15)
     for field,prop in [('district','district'),('family','family')]:
      value=page.locator('#'+field+' option').nth(1).get_attribute('value');page.locator('#'+field).select_option(value);expect(page.locator('#cards .project-card').first).to_be_visible();assert value in page.locator('#cards').inner_text();page.locator('#filters-reset').click()
     ok(market+'_cards_navigation_selection',records=15)
@@ -51,7 +55,7 @@ def run(base,out):
    ctx.route('**/mira/catalog/markets/controller.mjs*',lambda route:route.abort());page.locator('#cards h2 a').click()
    expect(page.locator('[data-catalog-back]')).to_have_attribute('href','/mira/catalog/bali/?restore=1')
    ctx.unroute('**/mira/catalog/markets/controller.mjs*');page.locator('[data-catalog-back]').click();expect(page.locator('#search')).to_have_value('INDARI');ok('detail_back_without_detail_javascript')
-   goto('/mira/catalog/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('#result-count')).to_contain_text('618');page.locator('#cards [data-add]').first.click();page.locator('#shortlist-open').click();expect(page.locator('#shortlist-items')).to_contain_text('Бали');expect(page.locator('#shortlist-items')).to_contain_text('Дубай')
+   goto('/mira/catalog/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('#result-count')).to_contain_text(str(phuket_count));page.locator('#cards [data-add]').first.click();page.locator('#shortlist-open').click();expect(page.locator('#shortlist-items')).to_contain_text('Бали');expect(page.locator('#shortlist-items')).to_contain_text('Дубай')
    with page.expect_download() as event:page.locator('#shortlist-download').click()
    body=Path(event.value.path()).read_text('utf-8-sig');assert all(name in body for name in ['Пхукет','Бали','Дубай','Вьетнам','Черногория','Не отправлена'])
    page.locator('#shortlist-items [data-remove]').first.click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(4);page.reload(wait_until='networkidle');page.locator('#shortlist-open').click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(4);page.locator('#shortlist-clear').click();expect(page.locator('#shortlist-items [data-remove]')).to_have_count(0);ok('mixed_country_shortlist_and_download')
@@ -78,7 +82,7 @@ def run(base,out):
    goto('/mira/catalog/bali/');expect(page.locator('#search')).to_be_enabled();page.locator('#cards [data-add]').first.click();saved=page.evaluate("localStorage.getItem('mira-research-selection-v1')")
    for status,body in [(503,'unavailable'),(200,'{}')]:
     ctx.route('**/mira/catalog/markets/data.json',lambda route,_request=None,status=status,body=body:route.fulfill(status=status,content_type='application/json',body=body))
-    goto('/mira/catalog/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('#result-count')).to_contain_text('618');page.locator('#cards [data-add]').first.click();assert json.loads(saved)[0] in json.loads(page.evaluate("localStorage.getItem('mira-research-selection-v1')"))
+    goto('/mira/catalog/');expect(page.locator('#search')).to_be_enabled();expect(page.locator('#result-count')).to_contain_text(str(phuket_count));page.locator('#cards [data-add]').first.click();assert json.loads(saved)[0] in json.loads(page.evaluate("localStorage.getItem('mira-research-selection-v1')"))
     goto('/mira/catalog/bali/');expect(page.locator('#search')).to_be_disabled();expect(page.locator('#load-error')).to_be_visible();ctx.unroute('**/mira/catalog/markets/data.json')
    ok('expansion_outage_preserves_phuket_and_selection')
    fallback=browser.new_context();fallback.route('**/*',guard);fallback.add_init_script("const original=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(this===localStorage)throw new DOMException('blocked','QuotaExceededError');return original.call(this,k,v);};");p3=fallback.new_page();p3.goto(base+'/mira/catalog/bali/',wait_until='networkidle');expect(p3.locator('#search')).to_be_enabled();p3.locator('#cards [data-add]').first.click();p3.goto(base+'/mira/catalog/dubai/',wait_until='networkidle');expect(p3.locator('#shortlist-open')).to_be_visible();p3.locator('#shortlist-open').click();expect(p3.locator('#shortlist-items')).to_contain_text('Бали');fallback.close();ok('session_storage_fallback_across_markets')

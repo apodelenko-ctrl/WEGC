@@ -9,7 +9,7 @@ from urllib.parse import urlsplit,urljoin
 from urllib.request import Request,urlopen
 from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
-import argparse,hashlib,json,os,statistics,time,datetime
+import argparse,hashlib,json,os,statistics,time,datetime,subprocess
 ROOT=Path(__file__).resolve().parents[1]
 OWNERS={'wegc.fund','localhost','127.0.0.1'}
 PAGES=['mira/go/index.html','mira/practical/index.html','mira/corporate/index.html',
@@ -41,7 +41,7 @@ def run(base,out,local_stress=False):
     if host not in OWNERS:raise ValueError('Only owner domain or loopback allowed')
     if local_stress and host not in {'localhost','127.0.0.1'}:raise ValueError('Stress requires loopback')
     report={'base':base,'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
-       'source_commit':os.environ.get('GITHUB_SHA','local-uncommitted'),'passed':False,
+       'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'passed':False,
        'files':[],'links':[],'documents':[],'qr':[],'actual_registration_tested':False,
        'scope':'bounded own-site GET/HEAD audit; optional loopback stress; not maximum capacity'}
     try:

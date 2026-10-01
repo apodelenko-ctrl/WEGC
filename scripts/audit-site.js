@@ -97,21 +97,22 @@ function extractIds(htmlContent) {
  * Check if URL should be ignored (external, mailto, tel, etc.)
  */
 function shouldIgnore(url) {
-  return /^(https?|mailto|tel|javascript|data):/i.test(url);
+  return /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(url);
 }
 
 /**
  * Resolve relative path
  */
-function resolvePath(url, htmlFilePath) {
-  if (url.startsWith('/')) {
-    // Absolute from project root
-    return path.join(PROJECT_ROOT, url.substring(1));
-  } else {
-    // Relative to HTML file
-    return path.resolve(path.dirname(htmlFilePath), url);
-  }
+function resolveReference(url, htmlFilePath) {
+  const base = 'https://audit.invalid/' + path.relative(PROJECT_ROOT, htmlFilePath).split(path.sep).join('/');
+  const parsed = new URL(url.replace(/&amp;/g, '&'), base);
+  const pathname = decodeURIComponent(parsed.pathname);
+  const filePath = path.resolve(PROJECT_ROOT, '.' + pathname);
+  if (!filePath.startsWith(PROJECT_ROOT + path.sep) && filePath !== PROJECT_ROOT) throw new Error('Reference escapes project root');
+  const target = fs.existsSync(filePath) && fs.statSync(filePath).isDirectory() ? path.join(filePath, 'index.html') : filePath;
+  return {path: target, anchor: decodeURIComponent(parsed.hash.slice(1))};
 }
+function resolvePath(url, htmlFilePath) { return resolveReference(url, htmlFilePath).path; }
 
 /**
  * Check HTML structure validity
@@ -172,32 +173,13 @@ function auditFile(filePath) {
       continue;
     }
     
-    // Handle anchors
-    if (url.startsWith('#') || url.includes('#')) {
-      const anchorMatch = url.match(/#([^?#]+)/);
-      if (anchorMatch) {
-        const anchorId = anchorMatch[1];
-        
-        // For same-page anchors, check if ID exists
-        if (url.startsWith('#')) {
-          if (!ids.has(anchorId)) {
-            results.missingAnchors.push({
-              file: relativePath,
-              anchor: anchorId,
-              attribute: ref.type,
-              tag: ref.tag
-            });
-          }
-        }
-        // For cross-page anchors (/#section), we can't easily verify
-        // but we'll note them for manual review if needed
-      }
-      continue;
+    const resolved = resolveReference(url, filePath);
+    const resolvedPath = resolved.path;
+    if (resolved.anchor && fs.existsSync(resolvedPath) && /\.html?$/.test(resolvedPath)) {
+      const targetIds = resolvedPath === filePath ? ids : extractIds(fs.readFileSync(resolvedPath, 'utf8'));
+      if (!targetIds.has(resolved.anchor)) results.missingAnchors.push({file: relativePath, anchor: resolved.anchor, target: path.relative(PROJECT_ROOT, resolvedPath), attribute: ref.type, tag: ref.tag});
     }
-    
-    // Handle file references
-    const resolvedPath = resolvePath(url, filePath);
-    
+
     // Check if file exists
     if (!fs.existsSync(resolvedPath)) {
       results.missingFiles.push({
@@ -254,6 +236,7 @@ function runAudit() {
     try {
       auditFile(file);
     } catch (error) {
+      results.invalidStructure.push({file:path.relative(PROJECT_ROOT,file),issues:[error.message]});
       console.error(`❌ Error auditing ${path.relative(PROJECT_ROOT, file)}:`, error.message);
     }
   }
@@ -314,5 +297,6 @@ function runAudit() {
 }
 
 // Run audit
-runAudit();
+if (require.main === module) runAudit();
+module.exports = {resolvePath, resolveReference, shouldIgnore};
 

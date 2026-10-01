@@ -1,3 +1,4 @@
+import {canonicalProjects, canonicalSelectionId, safeSelection as canonicalSelection} from '../catalog-core.mjs';
 /** Pure catalogue expansion helpers. No auth, network writes or commercial activation. */
 export const MARKETS=Object.freeze({phuket:{name:'Пхукет',country:'Таиланд',path:'/mira/catalog/'},bali:{name:'Бали',country:'Индонезия',path:'/mira/catalog/bali/'},dubai:{name:'Дубай',country:'ОАЭ',path:'/mira/catalog/dubai/'},vietnam:{name:'Вьетнам',country:'Вьетнам',path:'/mira/catalog/vietnam/'},montenegro:{name:'Черногория',country:'Черногория',path:'/mira/catalog/montenegro/'}});
 export const PROPERTY_TYPES=Object.freeze({apartment:'Апартаменты',studio:'Студии',villa:'Виллы',townhouse:'Таунхаусы',penthouse:'Пентхаусы',duplex:'Дуплексы',hotel_suite:'Гостиничные номера',serviced_apartment:'Сервисные апартаменты'});
@@ -42,11 +43,11 @@ export function validateDiscovery(d){
 }
 export function combineProjects(base,extra,discovery=null){
  if(!Array.isArray(base)||base.length!==618)throw Error('Phuket source not reconciled');
- const all=[...base.map(p=>({...p,market:'phuket'})),...validateExpansion(extra).projects,...(discovery?validateDiscovery(discovery).projects:[])];
+ const all=[...canonicalProjects(base).map(p=>({...p,market:'phuket'})),...validateExpansion(extra).projects,...(discovery?validateDiscovery(discovery).projects:[])];
  if(new Set(all.map(p=>p.id)).size!==all.length)throw Error('Duplicate cross-market identifier');return all;
 }
 export function marketProjects(all,market){if(!own(MARKETS,market))return [];return all.filter(p=>(p.market||'phuket')===market);}
 export function filterProjects(all,state={}){const words=normalize(state.q).split(/\s+/).filter(Boolean);return all.filter(p=>(!state.district||p.district===state.district)&&(!state.family||p.family===state.family)&&(!state.kind||(['vietnam','montenegro'].includes(p.market)?p.kind===state.kind:(p.propertyTypes?p.propertyTypes.includes(state.kind):p.kind===state.kind)))&&words.every(w=>normalize([p.name,p.district,p.family,p.summary].filter(Boolean).join(' ')).includes(w)));}
 export function paginate(all,n=1){const pages=Math.max(1,Math.ceil(all.length/PAGE_SIZE)),page=Math.max(1,Math.min(pages,Math.floor(Number(n)||1)));return {items:all.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE),page,pages,total:all.length};}
-export function safeSelection(value,all){if(!Array.isArray(value))return [];const valid=new Set(all.map(p=>p.id));return [...new Set(value.filter(id=>typeof id==='string'&&valid.has(id)))].slice(0,MAX_SELECTION);}
-export function toggleSelection(selection,id,all){const s=safeSelection(selection,all);if(s.includes(id))return s.filter(x=>x!==id);if(s.length>=MAX_SELECTION||!all.some(p=>p.id===id))return s;return [...s,id];}
+export function safeSelection(value,all){return canonicalSelection(value,all);}
+export function toggleSelection(selection,id,all){const s=safeSelection(selection,all);id=canonicalSelectionId(id,all);if(s.includes(id))return s.filter(x=>x!==id);if(s.length>=MAX_SELECTION||!all.some(p=>p.id===id))return s;return [...s,id];}

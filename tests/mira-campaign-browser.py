@@ -3,6 +3,7 @@
 Only an owner's known host or loopback may be used. Negative response fixtures are
 explicitly labelled. A closed registration gate is tested, not called registration.
 """
+from mira_browser_network import fixture_analytics
 from pathlib import Path
 from urllib.parse import urlsplit
 import argparse, json, os
@@ -42,10 +43,14 @@ def run(base,out):
             context=browser.new_context(viewport={'width':1440,'height':1000},accept_downloads=True,reduced_motion='reduce')
             def guard(route):
                 req=route.request
+                if fixture_analytics(route):return
                 if req.method not in ['GET','HEAD'] or urlsplit(req.url).netloc!=urlsplit(base).netloc:
                     report['unexpected_requests'].append({'method':req.method,'url':req.url.split('?')[0]});route.abort()
                 else:route.continue_()
             context.route('**/*',guard)
+            feed=context.request.get(base+'/mira/catalog/data.json').json()
+            expected={p['id'] for p in feed['projects'] if not p.get('canonicalId')}
+            villas={p['id'] for p in feed['projects'] if not p.get('canonicalId') and p['kind']=='villa'}
             page=context.new_page()
             page.on('pageerror',lambda e:report['page_errors'].append(str(e)))
             page.on('console',lambda m:report['csp_errors'].append(m.text) if m.type=='error' and ('Content Security Policy' in m.text or 'violates' in m.text) else None)
@@ -74,17 +79,34 @@ def run(base,out):
                 mark('funnel_'+route,widths=WIDTHS,required_choices=True,inline_plan=True,change_invalidates=True)
             page.set_viewport_size({'width':1440,'height':1000});goto('/mira/catalog/')
             page.wait_for_function("document.querySelector('#search').disabled===false")
-            assert '618' in page.locator('#result-count').inner_text()
+            assert str(len(expected)) in page.locator('#result-count').inner_text()
             seen=set();pages=0
             while True:
                 seen.update(page.locator('#cards [data-add]').evaluate_all('(els)=>els.map(e=>e.dataset.add)'))
                 pages+=1
                 if page.locator('#next').is_disabled():break
                 assert pages<30;page.locator('#next').click()
-            assert len(seen)==618 and pages==26,(len(seen),pages)
+            assert seen==expected and pages==(len(expected)+23)//24,(len(seen),pages)
             mark('catalogue_every_record_reachable',unique_records=len(seen),pages=pages)
             page.locator('#filters-reset').click();page.locator('#kind').select_option('villa');page.wait_for_timeout(130)
-            assert '143' in page.locator('#result-count').inner_text()
+            assert str(len(villas)) in page.locator('#result-count').inner_text()
+            filtered=set()
+            while True:
+                filtered.update(page.locator('#cards [data-add]').evaluate_all('(els)=>els.map(e=>e.dataset.add)'))
+                if page.locator('#next').is_disabled():break
+                page.locator('#next').click()
+            assert filtered==villas,(filtered^villas)
+            mark('villa_filter_exact_project_set',count=len(villas))
+            page.evaluate("localStorage.setItem('mira-research-selection-v1',JSON.stringify(['botanika-montazur','botanica-montazure']))")
+            goto('/mira/catalog/projects/botanika-montazur/')
+            page.wait_for_selector('[data-add]:not([disabled])')
+            assert page.locator('[data-add]').get_attribute('data-add')=='botanica-montazure'
+            assert page.locator('[data-add]').get_attribute('aria-pressed')=='true'
+            page.locator('#shortlist-open').click()
+            assert page.locator('#shortlist-items [data-remove]').count()==1
+            page.locator('#shortlist-clear').click();page.keyboard.press('Escape')
+            mark('legacy_alias_link_and_saved_shortlist_restore_one_project')
+            goto('/mira/catalog/');page.wait_for_function("document.querySelector('#search').disabled===false")
             page.locator('#filters-reset').click();page.locator('#search').fill('TITLE VIVI');page.wait_for_timeout(200)
             assert page.locator('#cards .project-card').count()==1
             page.locator('#cards [data-add]').click();page.locator('#shortlist-open').click()
@@ -138,14 +160,14 @@ def run(base,out):
             mark('motion_controls')
             plain=browser.new_context(java_script_enabled=False);plain.route('**/*',guard)
             p2=plain.new_page();r=p2.goto(base+'/mira/catalog/list.html',wait_until='networkidle');assert r and r.ok
-            assert p2.locator('.all-projects a').count()==618
+            assert p2.locator('.all-projects a').count()==len(expected)
             r=p2.goto(base+'/mira/go/',wait_until='networkidle');assert r and r.ok
             assert p2.locator('h1').is_visible(), 'No-JS heading must remain visible'
             assert p2.locator('fieldset').get_attribute('disabled') is not None, 'No-JS fieldset attribute'
             assert p2.locator('fieldset select').count() == 3
             assert all(p2.locator('fieldset select').nth(i).is_disabled() for i in range(3)), 'No-JS choices must be disabled'
             assert p2.locator('#prepare').is_disabled(), 'No-JS submit must be disabled'
-            plain.close();mark('no_javascript_routes',all_records=618)
+            plain.close();mark('no_javascript_routes',all_records=len(expected))
             assert not report['page_errors'],report['page_errors']
             assert not report['csp_errors'],report['csp_errors']
             assert not report['unexpected_requests'],report['unexpected_requests']

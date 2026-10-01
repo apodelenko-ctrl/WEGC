@@ -2,6 +2,7 @@
 Use --base for own live domain. Run from localhost before public verification.
 """
 import argparse,json,os,time
+from mira_browser_network import fixture_analytics
 from pathlib import Path
 from urllib.parse import urlsplit
 from playwright.sync_api import sync_playwright
@@ -17,6 +18,7 @@ def run(base,out):
   context=browser.new_context(viewport={'width':1440,'height':1000},accept_downloads=True,reduced_motion='reduce')
   def guard(route):
    req=route.request
+   if fixture_analytics(route):return
    if req.method not in ['GET','HEAD'] or urlsplit(req.url).netloc!=urlsplit(base).netloc:
     blocked.append({'method':req.method,'url':req.url.split('?')[0]});route.abort()
    else:route.continue_()
@@ -29,6 +31,7 @@ def run(base,out):
    goto(f'/mira/{route}/');assert page.locator('h1').count()==1
    for width in [320,360,390,768,1024,1440]:
     page.set_viewport_size({'width':width,'height':1000});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(route,width)
+    if width==320:page.screenshot(path=str(out/f'{route}-320px.png'))
    page.screenshot(path=str(out/f'{route}-desktop.png'))
    page.locator('#brief-form button[type=submit]').click();page.locator('#brief-result').wait_for(state='visible')
    assert page.locator('#plan-apply').get_attribute('href')=='https://pilot.wegc.fund/mira/request/'

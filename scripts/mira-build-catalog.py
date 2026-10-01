@@ -60,11 +60,22 @@ def load(root):
               researchReviewedAt=b['reviewedAt'],image=b['gallery'][0]['path'],
               imageCaption='Botanica · '+b['gallery'][0]['caption'],imageStatus='reviewed_project_media',
               metadataStatus='source_linked_project_description')
+    # Keep source coverage and old URLs, but show each reviewed project once.
+    by_id={p['id']:p for p in projects}
+    for b in botanica:
+        present=[key for key in [b['id'],*b['aliases']] if key in by_id]
+        if not present: continue
+        canonical=present[0]
+        by_id[canonical]['aliases']=present[1:]
+        for alias in present[1:]: by_id[alias]['canonicalId']=canonical
     projects.sort(key=lambda p:(not bool(p['image']),-sum(bool(p[k]) for k in ('district','kind','family')),p['name'].casefold(),p['id']))
     return {'schemaVersion':1,'mode':'public_research','source':{'path':SOURCE,
       'sha256':hashlib.sha256(raw).hexdigest(),'recordCount':len(rows),
       'metadataNotice':'Район, тип и группа — сведения исходного каталога, не новая проверка.',
       'commerciallyEnabled':0,'commercialVerificationDate':None},'projects':projects}
+
+def canonical_projects(projects):
+    return [p for p in projects if not p.get('canonicalId')]
 
 def header(title, description='Полный исследовательский каталог Пхукета для агентств недвижимости.'):
     return '<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; style-src \'self\'; img-src \'self\'; connect-src \'self\'; object-src \'none\'; base-uri \'none\'; form-action \'none\'"><title>'+esc(title)+' — МИРА</title><meta name="description" content="'+esc(description)+'"><link rel="stylesheet" href="/mira/catalog/catalog.css"><script type="module" src="/mira/catalog/catalog.mjs"></script></head><body><a class="skip" href="#main">К содержанию</a><header class="top"><a class="brand" href="/mira/go/">МИРА<span>Международное направление вашего агентства</span></a><nav><a href="/mira/catalog/">Каталог</a><a href="/mira/documents/">Документы</a><a class="button small" href="https://pilot.wegc.fund/mira/request/">Подать заявку</a></nav></header>'
@@ -100,15 +111,18 @@ def detail(p):
 def build(root=ROOT):
     data=load(root); out=root/'mira/catalog';out.mkdir(parents=True,exist_ok=True)
     (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n','utf-8')
-    rows=data['projects']; intro='<main id="main"><section class="catalog-hero"><div><p class="eyebrow">МИРА / ПХУКЕТ</p><h1>Найдите проект<br>под запрос клиента.</h1><p>Виллы и кондоминиумы Пхукета. Выберите район, найдите свой проект и сохраните лучшие варианты.</p></div><div class="catalog-total"><strong>'+str(len(rows))+'</strong><span>проектов в каталоге<br>виллы и кондоминиумы</span></div></section><p class="catalog-note">Наличие и условия — по запросу. <span class="sort-note">Сначала — проекты с визуализациями и наиболее полным описанием.</span></p>'
+    rows=canonical_projects(data['projects']); intro='<main id="main"><section class="catalog-hero"><div><p class="eyebrow">МИРА / ПХУКЕТ</p><h1>Найдите проект<br>под запрос клиента.</h1><p>Виллы и кондоминиумы Пхукета. Выберите район, найдите свой проект и сохраните лучшие варианты.</p></div><div class="catalog-total"><strong>'+str(len(rows))+'</strong><span>проектов в каталоге<br>виллы и кондоминиумы</span></div></section><p class="catalog-note">Наличие и условия — по запросу. <span class="sort-note">Сначала — проекты с визуализациями и наиболее полным описанием.</span></p>'
     controls='''<section aria-label="Фильтры каталога" class="filter-bar"><label class="search-label">Поиск<input id="search" type="search" maxlength="120" placeholder="Название проекта или район" autocomplete="off" disabled></label><label>Район<select id="district" disabled><option value="">Все районы</option></select></label><label>Тип<select id="kind" disabled><option value="">Все типы</option></select></label><label>Группа / бренд<select id="family" disabled><option value="">Все группы</option></select></label><button id="filters-reset" class="secondary" type="button" disabled>Сбросить</button></section><div class="catalog-tools"><p id="result-count" role="status">Проекты Пхукета</p><a href="/mira/catalog/list.html">Алфавитный список всех проектов</a></div><p id="load-error" role="alert" hidden></p>'''
     pagination='''<nav class="pagination" aria-label="Страницы каталога"><button id="prev" class="secondary" type="button" disabled>← Назад</button><span id="page-status"></span><button id="next" class="secondary" type="button" disabled>Дальше →</button></nav><noscript><p>JavaScript выключен. Откройте <a href="list.html">полный алфавитный список</a> — все карточки доступны без скриптов.</p></noscript></main>'''
     (out/'index.html').write_text(header('Все проекты Пхукета')+intro+controls+'<div id="cards" class="cards">'+''.join(card(p) for p in rows[:24])+'</div>'+pagination+footer(),'utf-8')
     (out/'list.html').write_text(header('Алфавитный список Пхукета')+'<main id="main"><a href="/mira/catalog/">← Поиск и фильтры</a><h1>Все проекты Пхукета</h1><p>'+str(len(rows))+' проектов для знакомства с рынком. Наличие и условия — по запросу.</p><ul class="all-projects">'+''.join('<li><a href="projects/'+esc(p['id'])+'/">'+esc(p['name'])+'</a></li>' for p in sorted(rows,key=lambda p:p['name'].casefold()))+'</ul></main>'+footer(),'utf-8')
-    for p in rows:
+    by_id={p['id']:p for p in data['projects']}
+    for p in data['projects']:
         directory=out/'projects'/p['id'];directory.mkdir(parents=True,exist_ok=True)
-        (directory/'index.html').write_text(detail(p),'utf-8')
-    report={'source_records':len(rows),'public_cards':len(rows),'exact_image_associations':sum(bool(p['image']) for p in rows),'source_sha256':data['source']['sha256'],'commercially_enabled':0,'mode':'public_research'}
+        canonical=by_id[p.get('canonicalId',p['id'])]
+        page=detail(canonical).replace('</head>','<link rel="canonical" href="https://wegc.fund/mira/catalog/projects/'+canonical['id']+'/"></head>')
+        (directory/'index.html').write_text(page,'utf-8')
+    report={'source_records':len(data['projects']),'public_cards':len(rows),'exact_image_associations':sum(bool(p['image']) for p in rows),'source_sha256':data['source']['sha256'],'commercially_enabled':0,'mode':'public_research'}
     (out/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(report))
     if (root/'mira/catalog/botanica/projects.json').exists():

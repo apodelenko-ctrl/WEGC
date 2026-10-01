@@ -42,16 +42,16 @@ def validate_discovery(d):
   for k in ['name','developerBrand','district','summary','typeLabel']:assert isinstance(p[k],str) and 0<len(p[k])<1500
  return rows
 
-def nav(m):
- return '<nav class="market-switch" aria-label="Направления недвижимости" data-mira-markets="v1">'+''.join('<a href="'+v[2]+'"'+(' aria-current="page"' if k==m else '')+'><span><strong>'+v[0]+'</strong><small>'+v[1]+'</small></span><span class="market-count">'+str(618 if k=='phuket' else 15)+' проектов ↗</span></a>' for k,v in MARKETS.items())+'</nav>'
+def nav(m,phuket_count=618):
+ return '<nav class="market-switch" aria-label="Направления недвижимости" data-mira-markets="v1">'+''.join('<a href="'+v[2]+'"'+(' aria-current="page"' if k==m else '')+'><span><strong>'+v[0]+'</strong><small>'+v[1]+'</small></span><span class="market-count">'+str(phuket_count if k=='phuket' else 15)+' проектов ↗</span></a>' for k,v in MARKETS.items())+'</nav>'
 def market_from_path(p):
  s=str(p).replace('\\','/')
  for market,prefix in [('bali','bali'),('dubai','dubai'),('vietnam','vn'),('montenegro','me')]:
   if '/'+market+'/' in s or '/projects/'+prefix+'-' in s:return market
  return 'phuket'
-def integrate_text(text,market):
- if 'data-mira-markets="v1"' in text:text=re.sub(r'<nav\b[^>]*data-mira-markets="v1"[^>]*>.*?</nav>',nav(market),text,count=1,flags=re.S)
- else:text=text.replace('</header>','</header>'+nav(market),1)
+def integrate_text(text,market,phuket_count=618):
+ if 'data-mira-markets="v1"' in text:text=re.sub(r'<nav\b[^>]*data-mira-markets="v1"[^>]*>.*?</nav>',nav(market,phuket_count),text,count=1,flags=re.S)
+ else:text=text.replace('</header>','</header>'+nav(market,phuket_count),1)
  if '/mira/catalog/markets/markets.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/mira/catalog/markets/markets.css"></head>',1)
  text=text.replace('src="/mira/catalog/catalog.mjs"','src="/mira/catalog/markets/controller.mjs"')
  text=text.replace('src="/mira/catalog/markets/controller.mjs"','src="/mira/catalog/markets/controller.mjs?v=20260927-botanica"').replace('href="/mira/catalog/markets/markets.css"','href="/mira/catalog/markets/markets.css?v=20260927-botanica"')
@@ -92,7 +92,8 @@ def build(root=ROOT,require_images=False,integrate=True):
  (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
  if discovery:
   (out/'discovery.json').write_text(json.dumps({'schemaVersion':1,'mode':'public_research','source':{'recordCount':30,'commerciallyEnabled':0,'sourceSHA256':hashlib.sha256(discovery_file.read_bytes()).hexdigest()},'projects':[p for p in rows if p['market'] in ['vietnam','montenegro']]},ensure_ascii=False,separators=(',',':'))+'\n')
- def head(title,m,desc):return integrate_text(old.header(title,desc),m)
+ phuket_count=len(old.canonical_projects(phuket['projects']))
+ def head(title,m,desc):return integrate_text(old.header(title,desc),m,phuket_count)
  # Record exact project sources outside the sales cards.
  credits=root/'mira/catalog/photo-credits/index.html'
  credits.parent.mkdir(parents=True,exist_ok=True)
@@ -115,10 +116,10 @@ def build(root=ROOT,require_images=False,integrate=True):
  changed=[]
  if integrate:
   for f in (root/'mira/catalog').rglob('*.html'):
-   text=f.read_text();new=integrate_text(text,market_from_path('/'+f.relative_to(root).as_posix()))
+   text=f.read_text();new=integrate_text(text,market_from_path('/'+f.relative_to(root).as_posix()),phuket_count)
    if text!=new:f.write_text(new);changed.append(f.relative_to(root).as_posix())
  assert pfile.read_bytes()==before,'Phuket data changed'
- report={'newProjects':len(rows),'markets':{'phuket':618,**dict(Counter(p['market'] for p in rows))},'baselineExpansionProjects':30,'discoveryExpansionProjects':len(discovery),'combinedProjects':618+len(rows),'reviewedProjectImages':sum(bool(p['image']) for p in rows),'typographicCovers':0,'licensedDirectionPhotos':sum(not p['image'] for p in rows),'newDetailPages':len(rows),'newMarketIndexPages':2*len(set(p['market'] for p in rows)),'existingHTMLIntegrated':len(changed),'commerciallyEnabled':0,'deployed':False,'phuketDataSHA256':hashlib.sha256(before).hexdigest(),'researchSHA256':hashlib.sha256(raw).hexdigest(),'requiresMediaCompletion':any(p['image'] is None for p in rows)}
+ report={'newProjects':len(rows),'markets':{'phuket':phuket_count,**dict(Counter(p['market'] for p in rows))},'baselineExpansionProjects':30,'discoveryExpansionProjects':len(discovery),'combinedProjects':phuket_count+len(rows),'reviewedProjectImages':sum(bool(p['image']) for p in rows),'typographicCovers':0,'licensedDirectionPhotos':sum(not p['image'] for p in rows),'newDetailPages':len(rows),'newMarketIndexPages':2*len(set(p['market'] for p in rows)),'existingHTMLIntegrated':len(changed),'commerciallyEnabled':0,'deployed':False,'phuketDataSHA256':hashlib.sha256(before).hexdigest(),'researchSHA256':hashlib.sha256(raw).hexdigest(),'requiresMediaCompletion':any(p['image'] is None for p in rows)}
  (out/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report));return report
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT);p.add_argument('--require-project-images',action='store_true');p.add_argument('--no-integrate',action='store_true');a=p.parse_args();build(a.root,a.require_project_images,not a.no_integrate)

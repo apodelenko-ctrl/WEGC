@@ -1,7 +1,7 @@
 {
   "newProjects": 60,
   "markets": {
-    "phuket": 618,
+    "phuket": 614,
     "dubai": 15,
     "bali": 15,
     "vietnam": 15,
@@ -9,7 +9,7 @@
   },
   "baselineExpansionProjects": 30,
   "discoveryExpansionProjects": 30,
-  "combinedProjects": 678,
+  "combinedProjects": 674,
   "reviewedProjectImages": 60,
   "typographicCovers": 0,
   "licensedDirectionPhotos": 0,
@@ -18,7 +18,7 @@
   "existingHTMLIntegrated": 681,
   "commerciallyEnabled": 0,
   "deployed": false,
-  "phuketDataSHA256": "69d0e2b0b027bae87d4501876c6ea7b490d1fd3602e9e1aca586c169d993089e",
+  "phuketDataSHA256": "20da6e9fc8579d5d0847196a825aea4fda291f97fc7cf12d995cd945b31fb9e1",
   "researchSHA256": "abfda5bda609619d4f71b2e84c58f4087d22939dd7cfab4429e2b66856ed14bf",
   "requiresMediaCompletion": false
 }

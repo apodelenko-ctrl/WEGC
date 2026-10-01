@@ -5,14 +5,16 @@ on:
     types: [completed]
     branches: [main]
   workflow_dispatch:
+  pull_request:
+    branches: [main]
 permissions:
   contents: read
 concurrency:
-  group: mira-public-release
+  group: mira-public-release-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 jobs:
   verify:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -24,23 +26,17 @@ jobs:
           node-version: '22'
       - name: Install document builders and test tools
         run: |
-          python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3' 'playwright>=1.55,<2' 'pymupdf>=1.26,<2' 'opencv-python-headless>=4.12,<5'
+          python -m pip install 'reportlab>=4,<5' 'python-docx>=1,<2' 'qrcode[pil]>=8,<9' 'cairosvg>=2,<3' 'playwright==1.57.0' 'pymupdf>=1.26,<2' 'opencv-python-headless>=4.12,<5'
           python -m playwright install --with-deps chromium
       - name: Rebuild the exact source under test
         id: rebuild
         run: |
-          python scripts/mira-wire-landing.py
-          python scripts/mira-build-demo.py
-          python scripts/mira-build-documents.py --downloads
-          python scripts/mira-build-catalog.py
-          python scripts/mira-build-launch.py
-          python scripts/mira-build-expo.py
-          python scripts/mira-build-campaign.py
-          python scripts/mira-build-exhibition.py --downloads
+          python scripts/mira-build-public.py
       - name: Regression and synthetic API/catalogue load
         if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
         run: |
           result=0
+          node scripts/audit-site.js mira > /tmp/mira-site-audit.log 2>&1 || result=1
           node --test tests/mira-*.test.mjs > /tmp/mira-node.tap || result=1
           python -m unittest discover -s tests -p 'test_mira*.py' -v > /tmp/mira-python.txt 2>&1 || result=1
           exit "$result"
@@ -52,6 +48,7 @@ jobs:
           trap 'kill "$SERVER_PID"' EXIT
           sleep 1
           result=0
+          MIRA_BROWSER_OUTPUT=/tmp/mira-intake-browser python tests/mira-intake-browser.py > /tmp/mira-intake-browser.log 2>&1 || result=1
           python tests/mira-pilot-browser.py > /tmp/mira-pilot-browser.log 2>&1 || result=1
           python tests/mira-public-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-browser > /tmp/mira-local-browser.log 2>&1 || result=1
           python tests/mira-market-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-markets > /tmp/mira-local-markets.log 2>&1 || result=1
@@ -60,14 +57,14 @@ jobs:
           python scripts/mira-release-audit.py --base http://127.0.0.1:8765 --local-stress --out /tmp/mira-local-audit.json > /tmp/mira-local-audit.log 2>&1 || result=1
           exit "$result"
       - name: Actual domain bytes, downloads, links and bounded smoke
-        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' && github.event_name != 'pull_request' }}
         run: |
           result=0
           python scripts/mira-verify-public.py --base https://wegc.fund --load --out /tmp/mira-live-release.json > /tmp/mira-live-release.log 2>&1 || result=1
           python scripts/mira-release-audit.py --base https://wegc.fund --out /tmp/mira-live-audit.json > /tmp/mira-live-audit.log 2>&1 || result=1
           exit "$result"
       - name: Actual domain browser acceptance without personal data
-        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.rebuild.outcome == 'success' && github.event_name != 'pull_request' }}
         run: |
           result=0
           python tests/mira-public-browser.py --base https://wegc.fund --out /tmp/mira-live-browser > /tmp/mira-live-browser.log 2>&1 || result=1
@@ -103,6 +100,7 @@ jobs:
             /tmp/mira-python.txt
             /tmp/mira-*.log
             /tmp/mira-release-provenance.json
+            /tmp/mira-intake-browser/
             /tmp/mira-pilot-browser/
             /tmp/mira-local-markets/
             /tmp/mira-local-browser/

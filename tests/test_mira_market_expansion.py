@@ -15,7 +15,7 @@ class ExpansionTests(unittest.TestCase):
   (self.r/'mira/catalog/index.html').write_text('<html><head></head><body><header></header><main>Phuket</main></body></html>')
  def tearDown(self):self.temp.cleanup()
  def test_counts(self):
-  r=M.build(self.r);self.assertEqual(r['combinedProjects'],648);self.assertEqual(r['newDetailPages'],30)
+  r=M.build(self.r);self.assertEqual(r['combinedProjects'],644);self.assertEqual(r['newDetailPages'],30)
   for market in ['bali','dubai']:self.assertEqual((self.r/f'mira/catalog/{market}/index.html').read_text().count('class="project-card"'),15)
  def test_phuket_bytes_unchanged(self):
   p=self.r/'mira/catalog/data.json';b=p.read_bytes();M.build(self.r);self.assertEqual(p.read_bytes(),b)

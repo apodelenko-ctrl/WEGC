@@ -4,9 +4,9 @@ import fs from 'node:fs';
 import {validateDiscovery,combineProjects,filterProjects,marketFromPath,safeReturnPath,safeSelection} from '../mira/catalog/markets/market-core.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url)));
 const base=read('../mira/catalog/data.json').projects,old=read('../mira/catalog/markets/data.json'),fresh=read('../mira/catalog/markets/discovery.json');
-test('three cohorts remain distinct: 618 + 30 + 30 unique IDs',()=>{
+test('three cohorts preserve source coverage and unique canonical IDs',()=>{
  assert.equal(base.length,618);assert.equal(old.projects.length,30);assert.equal(validateDiscovery(fresh).projects.length,30);
- const all=combineProjects(base,old,fresh);assert.equal(all.length,678);assert.equal(new Set(all.map(p=>p.id)).size,678);
+ const all=combineProjects(base,old,fresh);assert.equal(all.length,674);assert.equal(new Set(all.map(p=>p.id)).size,674);
 });
 test('explicit mixed and hotel taxonomy does not change original formats',()=>{
  const rows=fresh.projects;assert.equal(rows.find(p=>p.id==='me-montis-mountain-resort').kind,'hotel');
