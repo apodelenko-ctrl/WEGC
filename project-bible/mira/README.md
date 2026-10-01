@@ -182,3 +182,7 @@
 [Dedicated agency funnel](https://wegc.fund/mira/agency/) → [marketplace demo](https://wegc.fund/mira/marketplace.html) → local three-question brief → owner/operator-approved pilot. The general `/mira/` page remains intact. No public intake, automatic admission or live registration is implied.
 
 Source behavior, campaign entry URLs, measurement boundaries and release checks: [agency-funnel.md](./product/agency-funnel.md).
+
+## English developer partnerships — 1 October 2026
+
+[Developer enquiry checkpoint](./operations/developer-enquiry-2026-10-01.md): supply-and-demand positioning, official market figures and an English enquiry form backed by the existing private intake queue.

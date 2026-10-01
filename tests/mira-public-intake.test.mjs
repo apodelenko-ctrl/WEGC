@@ -229,3 +229,25 @@ test('retention removes expired contact/history but preserves recent requests an
 test('public privacy notice is accessible before activation and describes the separate unverified request',async()=>{
  const s=setup();delete s.env.PUBLIC_INTAKE_ENABLED;const r=await s.handler(new Request(origin+'/mira/request/privacy'),s.env);assert.equal(r.status,200);const html=await r.text();assert.match(html,/mira-public-2026-09-24-v1/);assert.match(html,/Email в этой форме не подтверждается/);assert.match(r.headers.get('Cache-Control'),/no-store/);
 });
+
+test('developer intake saves route-specific consent, deduplicates and retains origin/challenge gates',async()=>{
+ const s=setup(),d={...data,company:'SYNTHETIC Developer',consent_version:'mira-partners-2026-10-01-v1'};
+ assert.equal((await s.call('partners/submit',d,{Origin:'https://wegc.fund'})).status,403);
+ assert.equal((await s.call('partners/submit',data)).body.error,'current_consent_required');
+ s.validation={success:false};assert.equal((await s.call('partners/submit',d)).status,400);assert.equal(n(s,'mira_intake_requests'),0);
+ s.validation={success:true,hostname:'pilot.example.test',action:'mira_intake'};
+ const a=await s.call('partners/submit',d),b=await s.call('partners/submit',d);assert.equal(a.status,201);assert.equal(b.body.id,a.body.id);assert.equal(n(s,'mira_intake_requests'),1);
+ assert.equal(s.db.db.prepare('SELECT consent_version FROM mira_intake_requests').get().consent_version,d.consent_version);
+ assert.equal((await s.call('status',{id:a.body.id})).status,200);
+ assert.equal((await s.call('submit',d)).status,400);
+});
+test('only developer page is embeddable by the marketing origin and its privacy is English',async()=>{
+ const s=setup();
+ for(const [path,frame] of [['partners/','https://wegc.fund'],['/',"'none'"]]){
+  const url=origin+'/mira/request/'+(path==='/'?'':path);const r=await s.handler(new Request(url),s.env);
+  assert.equal(r.status,200);assert.ok(r.headers.get('Content-Security-Policy').endsWith('frame-ancestors '+frame));
+  if(path==='partners/')assert.match(await r.text(),/lang="en"/);
+ }
+ const privacy=await s.handler(s.request('partners/privacy'),s.env);assert.equal(privacy.status,200);assert.match(await privacy.text(),/24 months/);
+ s.env.PUBLIC_INTAKE_SUBMISSIONS_PAUSED='true';assert.equal((await s.call('partners/submit',{...data,consent_version:'mira-partners-2026-10-01-v1'})).body.error,'intake_submissions_paused');
+});
