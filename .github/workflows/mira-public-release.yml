@@ -58,6 +58,7 @@ jobs:
           python tests/mira-campaign-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-campaign > /tmp/mira-local-campaign.log 2>&1 || result=1
           python tests/mira-editorial-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-editorial > /tmp/mira-local-editorial.log 2>&1 || result=1
           python tests/mira-navigation-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-navigation > /tmp/mira-local-navigation.log 2>&1 || result=1
+          python tests/mira-home-browser.py --base http://127.0.0.1:8765 --out /tmp/mira-local-home > /tmp/mira-local-home.log 2>&1 || result=1
           python scripts/mira-release-audit.py --base http://127.0.0.1:8765 --local-stress --out /tmp/mira-local-audit.json > /tmp/mira-local-audit.log 2>&1 || result=1
           exit "$result"
       - name: Actual domain bytes, downloads, links and bounded smoke
@@ -76,6 +77,7 @@ jobs:
           python tests/mira-campaign-browser.py --base https://wegc.fund --out /tmp/mira-live-campaign > /tmp/mira-live-campaign.log 2>&1 || result=1
           python tests/mira-editorial-browser.py --base https://wegc.fund --out /tmp/mira-live-editorial > /tmp/mira-live-editorial.log 2>&1 || result=1
           python tests/mira-navigation-browser.py --base https://wegc.fund --out /tmp/mira-live-navigation > /tmp/mira-live-navigation.log 2>&1 || result=1
+          python tests/mira-home-browser.py --base https://wegc.fund --out /tmp/mira-live-home > /tmp/mira-live-home.log 2>&1 || result=1
           exit "$result"
       - name: Record source and test environment
         if: always()
@@ -112,6 +114,7 @@ jobs:
             /tmp/mira-local-campaign/
             /tmp/mira-local-editorial/
             /tmp/mira-local-navigation/
+            /tmp/mira-local-home/
             /tmp/mira-local-audit.json
             /tmp/mira-live-release.json
             /tmp/mira-live-audit.json
@@ -120,6 +123,7 @@ jobs:
             /tmp/mira-live-campaign/
             /tmp/mira-live-editorial/
             /tmp/mira-live-navigation/
+            /tmp/mira-live-home/
             mira/go/
             mira/practical/
             mira/corporate/

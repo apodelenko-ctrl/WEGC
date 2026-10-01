@@ -9,7 +9,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = {'go', 'start', 'agency', 'design', 'business', 'growth', 'practical',
-            'corporate', 'access', 'phuket', 'catalog', 'documents', 'en'}
+            'corporate', 'access', 'payments', 'phuket', 'catalog', 'documents', 'en'}
 CSS = '<link rel="stylesheet" href="/mira/navigation.css?v=20261001">'
 MARKER = re.compile(r'<!-- mira-navigation -->.*?<!-- /mira-navigation -->', re.S)
 
@@ -18,6 +18,8 @@ def navigation(path):
     current = '/mira/'
     if path != 'index.html':
         current = '/mira/catalog/' if section in {'catalog', 'phuket'} else '/mira/documents/' if section == 'documents' else '/mira/go/'
+    if section == 'payments':
+        current = '/mira/#payments'
     items = [('/mira/', 'О МИРА'), ('/mira/go/', 'Начать работу'),
              ('/mira/catalog/', 'Каталог'), ('/mira/documents/', 'Документы'),
              ('/mira/go/#payments' if section == 'go' else '/mira/#payments', 'Оплата')]
