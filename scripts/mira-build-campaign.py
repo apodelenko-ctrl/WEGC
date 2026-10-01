@@ -21,6 +21,8 @@ def apply_go_offer(text):
     if 'id="income"' in text:
         return text
     replacements = [
+        ('<div class="project-picture"><img src="/images/the-modeva-exterior-4-1.webp" alt="Архивная визуализация The Modeva" loading="lazy" width="900" height="560"><span>Архивная визуализация · The Modeva</span></div>',
+         '<div class="project-picture"><a href="/mira/catalog/botanica/" aria-label="Посмотреть Botanica MontAzure"><img src="/images/projects/botanica/montazure-1.jpg" alt="Botanica MontAzure — визуализация виллы Type 4C с бассейном в Камале" loading="lazy" width="1600" height="1060"></a><span>Botanica MontAzure · визуализация застройщика</span></div>'),
         ('Не отдавайте зарубежный запрос другому брокеру. Добавьте Пхукет в предложение своего агентства — клиент и ваш бренд остаются с вами.',
          'Откройте зарубежное направление в вашем агентстве. Проекты, работа с застройщиками, документы и помощь с оплатой — с поддержкой МИРА. Ваш клиент и ваш бренд остаются с вами.'),
         ('>Проекты Пхукета</a>', '>Маркетплейс</a>'),
@@ -28,7 +30,7 @@ def apply_go_offer(text):
         ('<a class="button" href="/mira/catalog/">Посмотреть проекты ↗</a><a class="text-link" href="https://pilot.wegc.fund/mira/request/">Подать заявку →</a>',
          '<a class="button" href="#start">Начать работу с МИРА ↗</a><a class="text-link" href="/mira/catalog/">Объекты в маркетплейсе →</a>'),
         ('<p class="hero-fine">Выберите проекты. Сохраните подборку. Обсудите следующий шаг.</p>',
-         '<p class="hero-fine"><a class="go-income-teaser" href="#income">Комиссия застройщика 5–12% — ваш доход ↗</a></p>'),
+         ''),
         ('Клиент спросил о Пхукете.<br>У вас есть следующий шаг.', 'От первого запроса<br>до зарубежной сделки.'),
         ('Изучите каталог Пхукета, отберите подходящие направления и сформируйте предварительную подборку.',
          'Посмотрите проекты по разным направлениям. Мы поможем уточнить наличие, цены и условия застройщика под запрос вашего клиента.'),
@@ -46,11 +48,12 @@ def apply_go_offer(text):
             raise ValueError(f'Go offer source changed: {before[:70]}')
         text = text.replace(before, after)
     opening = '<section class="impact"><div class="wrap"><h2>Клиент остаётся вашим.<br><span>География — меняется.</span></h2><a href="#how" class="round-arrow" aria-label="Как это работает">↓</a></div></section>'
-    income = '''<section class="impact go-income" id="income" aria-labelledby="income-title"><div class="wrap"><div class="go-income-copy"><p class="go-income-label">ВАШ КЛИЕНТ. ВАШ БРЕНД. ВАШ ДОХОД.</p><h2 id="income-title">Комиссия застройщика&nbsp;—<br>ваш доход.</h2><p class="go-income-note">Размер комиссии зависит от проекта. Условия вознаграждения и выплаты согласуем до сделки.</p></div><div class="go-income-number"><strong>5–12%</strong><span>комиссия от стоимости объекта</span></div></div></section>'''
+    income = '''<section class="impact go-income" id="income" aria-labelledby="income-title"><div class="wrap"><div class="go-income-copy"><p class="go-income-label">ВАШ КЛИЕНТ. ВАШ БРЕНД. ВАШ ДОХОД.</p><h2 id="income-title">Комиссия застройщика&nbsp;—<br>ваш доход.</h2><p class="go-income-note">Размер комиссии зависит от проекта. Условия вознаграждения и выплаты согласуем до сделки.</p></div><div class="go-income-number"><strong class="go-income-value" role="img" aria-label="От 5 до 12 процентов"><span class="go-stencil" aria-hidden="true">5</span><span class="go-rate-divider" aria-hidden="true"></span><span class="go-stencil" aria-hidden="true">12</span><span class="go-stencil go-percent" aria-hidden="true">%</span></strong><span class="go-income-caption">комиссия от стоимости объекта</span></div></div></section>'''
     if opening not in text:
         raise ValueError('Missing Go impact section')
     text = text.replace(opening, income)
-    text = text.replace('</head>', '<link rel="stylesheet" href="/mira/campaign/go-offer.css?v=20261001"></head>', 1)
+    text = text.replace('<section class="project-strip wrap">', '<section class="project-strip wrap" id="phuket">', 1)
+    text = text.replace('</head>', '<link rel="stylesheet" href="/mira/campaign/go-offer.css?v=20261001b"></head>', 1)
     return text
 
 def build(root=ROOT):
