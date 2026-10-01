@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 ROOT = Path(__file__).resolve().parents[1]
 LOCKUP = '<b class="mira-lockup">МИРА<i aria-hidden="true">↗</i></b>'
-CSS = '<link rel="stylesheet" href="/mira/brand.css?v=20261001">'
+CSS = '<link rel="stylesheet" href="/mira/brand.css?v=20261001b">'
 ANCHOR = re.compile(r'(<a\b[^>]*class="([^"]*)"[^>]*>)(.*?)(</a>)', re.S)
 
 def wire(text, relative=False):
@@ -31,6 +31,9 @@ def build():
     changed = 0
     for path in sorted((ROOT/'mira').rglob('*.html')):
         before = path.read_text(encoding='utf-8'); after = wire(before, relative=path == ROOT/'mira/library.html')
+        if path == ROOT/'mira/go/index.html':
+            after = after.replace('<span>Ваш клиент. Ваш бренд.</span>', '<span class="mira-descriptor">B2B Marketplace<br>зарубежной недвижимости</span>', 1)
+            after = after.replace('class="brand" href="/mira/go/"', 'class="brand mira-marketplace-brand" href="/mira/go/"', 1)
         if before != after:
             path.write_text(after, encoding='utf-8'); changed += 1
     print(f'MIRA shared wordmark: {changed} pages updated')
