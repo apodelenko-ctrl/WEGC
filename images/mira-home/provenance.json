@@ -1,0 +1,16 @@
+{
+  "created": "2026-10-01",
+  "tool": "built-in imagegen",
+  "type": "architectural illustrations, not named project offers",
+  "assets": [
+    {
+      "file": "villa-coast.jpg",
+      "prompt": "Photorealistic tropical seaside modern limestone villa, Phuket-inspired coast, glass living room, terraces and infinity pool; architecture fills right two thirds, coconut palm and sea, warm afternoon light, shaded foliage at left. No people, text, logos or real developer branding. 1536x1024 landscape."
+    },
+    {
+      "file": "waterfront-residences.jpg",
+      "prompt": "Photorealistic contemporary Dubai-inspired waterfront apartment residence, pale limestone stepped terraces and glass balustrades, rooftop greenery, lagoon swimming pool and palms, distant restrained skyline. Architecture fills 60 percent of frame, warm afternoon light. No people, logos, text or real developer branding. 1536x1024 landscape."
+    }
+  ],
+  "processing": "JPEG export for website delivery; composition preserved"
+}

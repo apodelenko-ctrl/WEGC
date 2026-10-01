@@ -8,7 +8,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--base',default='http://127.0.0.1:8765')
 parser.add_argument('--out',default='/tmp/mira-navigation')
 args=parser.parse_args(); base=args.base.rstrip('/'); out=pathlib.Path(args.out);out.mkdir(parents=True,exist_ok=True)
-routes=['/mira/','/mira/go/','/mira/catalog/','/mira/catalog/dubai/',
+routes=['/mira/','/mira/payments/','/mira/go/','/mira/catalog/','/mira/catalog/dubai/',
         '/mira/catalog/projects/botanica-montazure/','/mira/catalog/botanica/',
         '/mira/documents/','/mira/documents/payment-support.html','/mira/start/',
         '/mira/agency/','/mira/design/','/mira/access/','/mira/phuket/',

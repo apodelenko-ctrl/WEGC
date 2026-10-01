@@ -9,7 +9,9 @@ def feature(english=False,compact=False):
     title='Botanica. A different way to live in Phuket.' if english else 'Botanica. Свой ритм жизни на Пхукете.'
     copy=('Explore pool villas and Hythe residences. Compare locations, architecture and layouts — our team can arrange current offers and a viewing.' if english else 'Виллы с собственными бассейнами и резиденции Hythe. Сравните районы, архитектуру и планировки — мы поможем запросить предложение и организовать просмотр.')
     button='Explore five projects' if english else 'Посмотреть 5 проектов'
-    return '<!-- BOTANICA-FEATURE --><section id="botanica" class="botanica-feature'+(' botanica-feature--compact' if compact else '')+'" aria-label="Botanica"><a class="botanica-feature__image" href="/mira/catalog/botanica/"><img src="/images/projects/botanica/grand-avenue-3.jpg" alt="Botanica Grand Avenue · Zone C1" width="1600" height="880" loading="lazy" decoding="async"><span>Grand Avenue · Zone C1</span></a><div class="botanica-feature__copy"><p class="botanica-eyebrow">BOTANICA / PHUKET</p><h2>'+title+'</h2><p>'+copy+'</p><a class="botanica-link" href="/mira/catalog/botanica/">'+button+' ↗</a></div></section><!-- /BOTANICA-FEATURE -->'
+    eyebrow = 'BOTANICA / PHUKET' if english else 'BOTANICA / ПХУКЕТ'
+    zone = 'Zone C1' if english else 'зона C1'
+    return '<!-- BOTANICA-FEATURE --><section id="botanica" class="botanica-feature'+(' botanica-feature--compact' if compact else '')+'" aria-label="Botanica"><a class="botanica-feature__image" href="/mira/catalog/botanica/"><img src="/images/projects/botanica/grand-avenue-3.jpg" alt="Botanica Grand Avenue · '+zone+'" width="1600" height="880" loading="lazy" decoding="async"><span>Grand Avenue · '+zone+'</span></a><div class="botanica-feature__copy"><p class="botanica-eyebrow">'+eyebrow+'</p><h2>'+title+'</h2><p>'+copy+'</p><a class="botanica-link" href="/mira/catalog/botanica/">'+button+' ↗</a></div></section><!-- /BOTANICA-FEATURE -->'
 
 def insert_feature(path,anchor,english=False,compact=False):
     text=path.read_text()
