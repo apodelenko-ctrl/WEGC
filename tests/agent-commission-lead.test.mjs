@@ -106,3 +106,52 @@ test('frontend retains fields on errors and prevents simultaneous duplicate subm
   assert.match(status.textContent, /Не удалось подтвердить/);
   assert.equal(button.disabled, false);
 });
+
+test('Charter Capital origin accepts USDT and THB, with server-controlled source and original receiver', async () => {
+  const previous = globalThis.fetch;
+  const calls = [];
+  globalThis.fetch = async (url, options) => { calls.push({ url, options }); return new Response('Thank you', { status: 200 }); };
+  try {
+    for (const payout of ['USDT', 'Наличные THB']) {
+      const response = await handler(request({ ...valid, payout }, 'https://ccapital.pro'));
+      assert.equal(response.status, 200);
+      assert.equal(response.headers.get('access-control-allow-origin'), 'https://ccapital.pro');
+      const data = await response.json();
+      const forwarded = new URLSearchParams(calls.at(-1).options.body);
+      assert.equal(forwarded.get('source'), 'https://ccapital.pro/pay_commission/');
+      assert.equal(forwarded.get('payout'), payout);
+      assert.match(forwarded.get('subject'), /^Charter Capital/);
+      assert.equal(forwarded.get('reference'), data.reference);
+      assert.equal(forwarded.get('to'), null);
+      assert.equal(calls.at(-1).url, 'https://bespoke-elf-196a9d1.netlify.app/7718426309/lead-receiver.html');
+    }
+    assert.equal(calls.length, 2);
+    for (const origin of ['https://www.ccapital.pro', 'https://www.wet-hk.pro', 'https://ccapital.pro.untrusted.example']) {
+      assert.equal((await handler(request(valid, origin))).status, 403);
+    }
+    for (const injected of [{ source: 'https://untrusted.example' }, { subject: 'Spoofed' }, { to: 'other@example.invalid' }]) {
+      assert.equal((await handler(request({ ...valid, ...injected }, 'https://ccapital.pro'))).status, 422);
+    }
+    assert.equal(calls.length, 2);
+  } finally { globalThis.fetch = previous; }
+});
+
+test('native Charter response links back to Charter; all original WEGC origins retain source and brand', async () => {
+  const previous = globalThis.fetch;
+  const calls = [];
+  globalThis.fetch = async (url, options) => { calls.push({ url, options }); return new Response('Thank you', { status: 200 }); };
+  try {
+    const native = request({ ...valid, payout: 'USDT' }, 'https://ccapital.pro');
+    native.headers.set('accept', 'text/html');
+    const html = await (await handler(native)).text();
+    assert.match(html, /Charter Capital/);
+    assert.ok(html.includes('https://ccapital.pro/pay_commission/#lead'));
+    for (const origin of ['https://wegc.fund', 'https://www.wegc.fund', 'https://bespoke-elf-196a9d1.netlify.app']) {
+      const response = await handler(request(valid, origin));
+      assert.equal(response.status, 200);
+      const forwarded = new URLSearchParams(calls.at(-1).options.body);
+      assert.equal(forwarded.get('source'), 'https://wegc.fund/7718426309/');
+      assert.match(forwarded.get('subject'), /^WEGC/);
+    }
+  } finally { globalThis.fetch = previous; }
+});

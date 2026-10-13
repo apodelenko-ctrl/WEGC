@@ -3,17 +3,25 @@ import { randomUUID } from 'node:crypto';
 const SITE = 'https://bespoke-elf-196a9d1.netlify.app';
 const FORM_NAME = 'wegc-agent-commission';
 const PAGE = 'https://wegc.fund/7718426309/';
-const ALLOWED_ORIGINS = new Set(['https://wegc.fund', 'https://www.wegc.fund', SITE]);
+const CC_PAGE = 'https://ccapital.pro/pay_commission/';
+const PAGE_BY_ORIGIN = new Map([
+  ['https://wegc.fund', PAGE], ['https://www.wegc.fund', PAGE], [SITE, PAGE],
+  ['https://ccapital.pro', CC_PAGE],
+]);
+const ALLOWED_ORIGINS = new Set(PAGE_BY_ORIGIN.keys());
 const MAX_BYTES = 16384;
 const FIELDS = { name: 120, contact: 240, project: 240, commission: 120, comment: 2000 };
 const CHOICES = {
   profile: ['Независимый агент-физлицо', 'Тайская компания / агентство', 'Иностранный агент / иностранная компания'],
-  payout: ['Криптовалюта', 'Наличные', 'Обсудить варианты'],
+  payout: ['Криптовалюта', 'USDT', 'Наличные', 'Наличные THB', 'Обсудить варианты'],
   stage: ['Есть клиент / готов регистрировать', 'Клиент выбирает объект', 'Планирую следующие сделки'],
 };
 
 function reply(request, status, data) {
   const origin = request.headers.get('origin');
+  const page = PAGE_BY_ORIGIN.get(origin) || PAGE;
+  const brand = page === CC_PAGE ? 'Charter Capital' : 'WEGC';
+  const backLabel = page === CC_PAGE ? 'Вернуться к странице Charter Capital' : 'Вернуться к странице WEGC';
   const headers = { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', Vary: 'Origin' };
   if (ALLOWED_ORIGINS.has(origin)) {
     headers['Access-Control-Allow-Origin'] = origin;
@@ -26,7 +34,7 @@ function reply(request, status, data) {
     headers['Content-Security-Policy'] = "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'";
     const title = data.ok ? 'Запрос передан' : 'Не удалось отправить запрос';
     const message = data.ok ? 'Заявка передана системе приёма. После проверки мы свяжемся с вами по указанному контакту.' : 'Приём заявки не подтверждён. Вернитесь к форме и проверьте данные. Если ошибка повторяется, напишите на post@wegc.fund.';
-    return new Response(`<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} · WEGC</title><style>body{max-width:640px;margin:10vh auto;padding:24px;font:18px/1.6 system-ui;color:#0f172a}a{color:#80603c}</style><h1>${title}</h1><p>${message}</p><a href="${PAGE}#lead">Вернуться к странице WEGC</a></html>`, { status, headers });
+    return new Response(`<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} · ${brand}</title><style>body{max-width:640px;margin:10vh auto;padding:24px;font:18px/1.6 system-ui;color:#0f172a}a{color:#80603c}</style><h1>${title}</h1><p>${message}</p><a href="${page}#lead">${backLabel}</a></html>`, { status, headers });
   }
   headers['Content-Type'] = 'application/json; charset=utf-8';
   return new Response(JSON.stringify(data), { status, headers });
@@ -86,9 +94,11 @@ export default async function handler(request) {
   }
 
   const reference = randomUUID();
+  const source = PAGE_BY_ORIGIN.get(origin);
+  const brand = source === CC_PAGE ? 'Charter Capital' : 'WEGC';
   const payload = new URLSearchParams({
     'form-name': FORM_NAME, 'bot-field': '', ...clean,
-    reference, source: PAGE, subject: `WEGC — заявка агента — ${reference}`,
+    reference, source, subject: `${brand} — заявка агента — ${reference}`,
   });
   try {
     const upstream = await fetch(`${SITE}/7718426309/lead-receiver.html`, {
